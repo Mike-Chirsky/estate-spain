@@ -156,9 +156,9 @@ $RECYCLE.BIN/
 
 .vs/
 
-VirtoCommerce.Storefront/Areas/*
-VirtoCommerce.Storefront/App_Data/blogs/*
-VirtoCommerce.Storefront/App_Data/Pages/*
-VirtoCommerce.Storefront/App_Data/Themes/*
+!VirtoCommerce.Storefront/Areas/*
+!VirtoCommerce.Storefront/App_Data/blogs/*
+!VirtoCommerce.Storefront/App_Data/Pages/*
+!VirtoCommerce.Storefront/App_Data/Themes/*
 !VirtoCommerce.Storefront/App_Data/Themes/default/*
 artifacts/*
