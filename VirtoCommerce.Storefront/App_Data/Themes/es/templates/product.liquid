@@ -1,0 +1,224 @@
+﻿<div class="row">   
+    <div class="rightmargin full_width_prop">
+        <div class="theme_slider_wrapper theme_slider_2 theme_slider_extended  slick-initialized slick-slider slick-dotted" role="toolbar">
+            <div aria-live="polite" class="slick-list draggable">
+                <div class="slick-track">
+                    {% for image in product.images %}
+                    {% if forloop.index > 3 %}
+                    {% break %}
+                    {% endif %}
+                    <div class="item_type2 slick-slide slick-cloned" style="background-image: url(&quot;{{ image.src }}&quot;); width: 33%;"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'breadcrumb' %}
+    <div class="col-md-9 rightmargin full_width_prop">
+        <h1 class="entry-title entry-prop">
+            {% for property in product.properties %}
+                {% if property.name == 'outer_type' %}
+                    {{ property.value }}
+                {% endif%}
+            {% endfor %}
+            {% for property in product.properties %}
+                {% if property.name == 'data-tilda-project-id' %}
+                    {{ property.value }}
+                {% endif%}
+            {% endfor %}
+            {% for property in product.properties %}
+                {% if property.name == 'totalsquare' %}
+                    {{ property.value }}
+                {% endif%}
+            {% endfor %}
+            {{ 'product.square' | t }}
+            {{ 'product.in-city' | t }}
+            {% for property in product.properties %}
+                {% if property.name == 'city' %}
+                    {{ property.value }}
+                {% endif%}
+            {% endfor %}
+        </h1>
+        <span class="price_area"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
+        <div class="single-content listing-content">
+            <div class="notice_area">
+                <div class="property_categs">
+                    <a href="{{ collection.handle }}" rel="tag">{{ collection.title }}</a>,
+                    {% for property in product.properties %}
+                    {% if property.name == 'city' %}
+                    {{ property.value}}
+                    {%endif%}
+                    {% endfor %}
+                    {% for property in product.properties %}
+                    {% if property.name == 'region' %}
+                    {{ property.value}}
+                    {%endif%}
+                    {% endfor %}
+                </div>
+                <div id="add_favorites" class="isnotfavorite" data-postid="139">add to favorites</div>
+                <div class="download_pdf"></div>
+                <div class="prop_social">
+                    <div class="no_views dashboad-tooltip" data-original-title="Number of Page Views"><i class="fa fa-eye-slash "></i>8</div>
+                    <i class="fa fa-print" id="print_page" data-propid="139"></i>
+                    <a href="http://www.facebook.com/sharer.php?u=http://localhost:8081/properties/villa-on-washington-ave/&amp;t=Villa+On+Washington+Ave" target="_blank" class="share_facebook"><i class="fa fa-facebook fa-2"></i></a>
+                    <a href="http://twitter.com/home?status=Villa+On+Washington+Ave+http%3A%2F%2Flocalhost%3A8081%2Fproperties%2Fvilla-on-washington-ave%2F" class="share_tweet" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+                    <a href="https://plus.google.com/share?url=http://localhost:8081/properties/villa-on-washington-ave/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" class="share_google"><i class="fa fa-google-plus fa-2"></i></a>
+                    <a href="http://pinterest.com/pin/create/button/?url=http://localhost:8081/properties/villa-on-washington-ave/&amp;media=http://localhost:8081/wp-content/uploads/2014/05/demo81-8-1-19-13.jpg&amp;description=Villa+On+Washington+Ave" target="_blank" class="share_pinterest"><i class="fa fa-pinterest fa-2"></i></a>
+                </div>
+            </div>
+            <div class="wpestate_property_description">
+                {{ product.description }}
+            </div>
+
+            <div class="panel-group property-panel" id="accordion_prop_details">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                            <h4 class="panel-title" id="prop_det">{{ 'product.details' | t }}</h4>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            {% for property in product.properties %}
+                            <div class="listing_detail col-md-4"><strong>{{ 'product.' | append: property.name | t }}:</strong> {{ property.value }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group property-panel" id="accordion_prop_details">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                            <h4 class="panel-title" id="prop_det">{{ 'product.map' | t }}</h4>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            карта тело
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group property-panel" id="accordion_prop_details">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                            <h4 class="panel-title" id="prop_det">{{ 'product.interactive' | t }}</h4>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            Интерактивные видео
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    {% for img in product.images %}
+                    {% if forloop.first %}
+                    <div class="item active">
+                        {% else %}
+                        <div class="item">
+                            {% endif %}
+                            <a href="{{ img.src }}" title="" rel="prettyPhoto" class="prettygalery">
+                                <img src="{{ img.src }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="{{ img.alt }}" class="img-responsive lightbox_trigger">
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Indicators -->
+                    <div class="carusel-back"></div>
+                    <ol class="carousel-indicators">
+                        {% for img in product.images %}
+                        {% if forloop.first %}
+                        <li data-target="#carousel-listing" data-slide-to="0" class="active">
+                            <img src="{{ img.src }}" alt="slider">
+                        </li>
+                        {% else %}
+                        <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
+                            <img src="{{ img.src }}" alt="slider">
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                    <ol class="carousel-round-indicators">
+                        {% for img in product.images %}
+                        {% if forloop.first %}
+                        <li data-target="#carousel-listing" data-slide-to="0" class="active"></li>
+                        {% else %}
+                        <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class=""></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                    <div class="caption-wrapper">
+                        {% for img in product.images %}
+                        {% if forloop.first %}
+                        <span data-slide-to="0" class="active"></span>
+                        {% else %}
+                        <span data-slide-to="{{ forloop.index | minus: 1 }}" class=""></span>
+                        {% endif %}
+                        {% endfor %}
+                        <div class="caption_control"></div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-listing" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="agent_contanct_form addition-form">
+                <h4 id="show_contact">{{ 'request-form.header2' | t }}</h4>
+                <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
+                <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
+                <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
+                <span class="request-from-license"> {{ 'request-form.license' | t }} </span>
+                <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+            </div>
+        </div>
+    <!-- end single content -->
+    <!--Side bar-->
+    <div class="col-xs-12 col-md-3 widget-area-sidebar" id="primary">
+            <div class="agent_contanct_form_sidebar">
+                <div class="agent_unit" data-link="">
+                    <div class="agent-unit-img-wrapper">
+                        <div class="prop_new_details_back"></div>
+                        <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
+                    </div>
+                    <div class="">
+                        <h4> <a href="">Maria Barlow</a></h4>
+                        <div class="agent_position">sales executive</div><div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div><div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div><div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div><div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
+                    </div>
+                    <div class="agent_unit_social">
+                        <div class="social-wrapper">
+                            <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div>    -->
+                <div class="agent_contanct_form ">
+                    <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
+                    <div class="alert-box error">
+                        <div class="alert-message" id="alert-agent-contact"></div>
+                    </div>
+                    <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                    <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
+                    <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
+                    <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
+                    <span> {{ 'request-form.license' | t }} </span>
+                    <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Side bar-->
+    
+</div>
