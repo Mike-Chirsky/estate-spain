@@ -1,0 +1,11 @@
+﻿/* custom styles */
+.request-from-license {
+    margin-left: 25px;
+    margin-top: auto;
+}
+
+@media (max-width:1024px) {
+    .addition-form {
+        display: none;
+    }
+}

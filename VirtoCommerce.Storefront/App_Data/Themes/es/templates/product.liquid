@@ -1,14 +1,16 @@
-﻿<div class="row">   
-    <div class="rightmargin full_width_prop">
-        <div class="theme_slider_wrapper theme_slider_2 theme_slider_extended  slick-initialized slick-slider slick-dotted" role="toolbar">
-            <div aria-live="polite" class="slick-list draggable">
-                <div class="slick-track">
-                    {% for image in product.images %}
-                    {% if forloop.index > 3 %}
-                    {% break %}
-                    {% endif %}
-                    <div class="item_type2 slick-slide slick-cloned" style="background-image: url(&quot;{{ image.src }}&quot;); width: 33%;"></div>
-                    {% endfor %}
+﻿<div class="row">
+    <div class="header_media">
+        <div class="rightmargin full_width_prop">
+            <div class="theme_slider_wrapper theme_slider_2 theme_slider_extended  slick-initialized slick-slider slick-dotted" role="toolbar">
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track">
+                        {% for image in product.images %}
+                        {% if forloop.index > 3 %}
+                        {% break %}
+                        {% endif %}
+                        <div class="item_type2 slick-slide slick-cloned" style="background-image: url(&quot;{{ image.src }}&quot;); width: 33%;"></div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -16,28 +18,7 @@
     {% include 'breadcrumb' %}
     <div class="col-md-9 rightmargin full_width_prop">
         <h1 class="entry-title entry-prop">
-            {% for property in product.properties %}
-                {% if property.name == 'outer_type' %}
-                    {{ property.value }}
-                {% endif%}
-            {% endfor %}
-            {% for property in product.properties %}
-                {% if property.name == 'data-tilda-project-id' %}
-                    {{ property.value }}
-                {% endif%}
-            {% endfor %}
-            {% for property in product.properties %}
-                {% if property.name == 'totalsquare' %}
-                    {{ property.value }}
-                {% endif%}
-            {% endfor %}
-            {{ 'product.square' | t }}
-            {{ 'product.in-city' | t }}
-            {% for property in product.properties %}
-                {% if property.name == 'city' %}
-                    {{ property.value }}
-                {% endif%}
-            {% endfor %}
+           {% include 'product_name' %}
         </h1>
         <span class="price_area"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
         <div class="single-content listing-content">
@@ -69,15 +50,14 @@
             <div class="wpestate_property_description">
                 {{ product.description }}
             </div>
-
             <div class="panel-group property-panel" id="accordion_prop_details">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseProperties">
                             <h4 class="panel-title" id="prop_det">{{ 'product.details' | t }}</h4>
                         </a>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseProperties" class="panel-collapse collapse in">
                         <div class="panel-body">
                             {% for property in product.properties %}
                             <div class="listing_detail col-md-4"><strong>{{ 'product.' | append: property.name | t }}:</strong> {{ property.value }}</div>
@@ -86,94 +66,135 @@
                     </div>
                 </div>
             </div>
+            <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    {% for image in product.images %}
+                    {% if forloop.first %}
+                    <div class="item active">
+                    {% else %}
+                    <div class="item">
+                    {% endif %}
+                        <a href="{{ image.src }}" title="" rel="prettyPhoto" class="prettygalery">
+                            <img src="{{ image.src }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
 
-            <div class="panel-group property-panel" id="accordion_prop_details">
+                <!-- Indicators -->
+                <div class="carusel-back"></div>
+                <ol class="carousel-indicators">
+                    {% for image in product.images %}
+                    {% if forloop.first %}
+                    <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="active">
+                    {% else %}
+                    <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
+                    {% endif %}
+                        <img src="{{ image.src }}" alt="slider">
+                    </li>
+                    {% endfor %}
+                </ol>
+
+                <ol class="carousel-round-indicators">
+                    {% for image in product.images %}
+                    {% if forloop.first %}
+                    <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="active"></li>
+                    {% else %}
+                    <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class=""></li>
+                    {% endif %}
+                    {% endfor %}
+                </ol>
+
+                <div class="caption-wrapper">
+                    <div class="caption_control"></div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="right carousel-control" href="#carousel-listing" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+            {% for property in product.properties %}
+                {% if property.name == 'geopoints' %}
+                    {% assign values = property.value | split: ','  %}
+                    {% for degree in values %}
+                        {% if forloop.first %}
+                            {% assign lat = degree %}
+                        {% else %}
+                            {% assign lon = degree %}
+                        {% endif %}
+                    {% endfor %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            <div class="panel-group property-panel" id="accordion_map">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                        <a data-toggle="collapse" data-parent="#accordion_map" href="#collapseMap">
                             <h4 class="panel-title" id="prop_det">{{ 'product.map' | t }}</h4>
                         </a>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseMap" class="panel-collapse collapse in">
                         <div class="panel-body">
-                            карта тело
+                            <!-- Google Map -->
+                            <div id="gmap_wrapper" data-post_id="" data-cur_lat="{{ lon }}" data-cur_long="{{ lat }}" style="height:400px">
+                                <div id="googleMap" style="height:400px">
+                                </div>
+                                <div class="tooltip"> {{ 'map.enable-zoom' | t }}</div>
+                                <div id="gmap-loading">
+                                    {{ 'map.loading' | t }}
+                                    <div class="spinner map_loader" id="listing_loader_maps">
+                                        <div class="rect1"></div>
+                                        <div class="rect2"></div>
+                                        <div class="rect3"></div>
+                                        <div class="rect4"></div>
+                                        <div class="rect5"></div>
+                                    </div>
+                                </div>
+                                <div id="gmap-noresult">
+                                    {{ 'map.no-result' | t }}
+                                </div>
+                                <div class="gmap-controls">
+                                  <!--  <div id="gmap-control">
+                                        <span id="map-view"><i class="fa fa-picture-o"></i>{{ 'map.view' | t }}</span>
+                                        <span id="map-view-roadmap" class="map-type">{{ 'map.roadmap' | t }}</span>
+                                        <span id="map-view-satellite" class="map-type">{{ 'map.satellite' | t }}</span>
+                                        <span id="map-view-hybrid" class="map-type">{{ 'map.hybrid' | t }}</span>
+                                        <span id="map-view-terrain" class="map-type">{{ 'map.terrain' | t }}</span>
+                                        <span id="geolocation-button"><i class="fa fa-map-marker"></i>{{ 'map.my-location' | t }}</span>
+                                        <span id="gmap-full"><i class="fa fa-arrows-alt"></i>{{ 'map.fullscreen' | t }}</span>
+                                        <span id="gmap-prev"><i class="fa fa-chevron-left"></i>{{ 'map.prev' | t }}</span>
+                                        <span id="gmap-next">{{ 'map.next' | t }}<i class="fa fa-chevron-right"></i></span>
+                                    </div>-->
+                                    <div id="gmapzoomplus"><i class="fa fa-plus"></i> </div>
+                                    <div id="gmapzoomminus"><i class="fa fa-minus"></i></div>
+                                    <!--<div id="street-view"><i class="fa fa-location-arrow"></i> {{ 'map.streetview' | t }} </div>-->
+                                </div>
+                            </div>
+                            <!-- END Google Map -->
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="panel-group property-panel" id="accordion_prop_details">
+            <div class="panel-group property-panel" id="accordion_iteractive">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseOne">
+                        <a data-toggle="collapse" data-parent="#accordion_iteractive" href="#collapseIteractive">
                             <h4 class="panel-title" id="prop_det">{{ 'product.interactive' | t }}</h4>
                         </a>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseIteractive" class="panel-collapse collapse in">
                         <div class="panel-body">
                             Интерактивные видео
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    {% for img in product.images %}
-                    {% if forloop.first %}
-                    <div class="item active">
-                        {% else %}
-                        <div class="item">
-                            {% endif %}
-                            <a href="{{ img.src }}" title="" rel="prettyPhoto" class="prettygalery">
-                                <img src="{{ img.src }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="{{ img.alt }}" class="img-responsive lightbox_trigger">
-                            </a>
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <!-- Indicators -->
-                    <div class="carusel-back"></div>
-                    <ol class="carousel-indicators">
-                        {% for img in product.images %}
-                        {% if forloop.first %}
-                        <li data-target="#carousel-listing" data-slide-to="0" class="active">
-                            <img src="{{ img.src }}" alt="slider">
-                        </li>
-                        {% else %}
-                        <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
-                            <img src="{{ img.src }}" alt="slider">
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ol>
-                    <ol class="carousel-round-indicators">
-                        {% for img in product.images %}
-                        {% if forloop.first %}
-                        <li data-target="#carousel-listing" data-slide-to="0" class="active"></li>
-                        {% else %}
-                        <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class=""></li>
-                        {% endif %}
-                        {% endfor %}
-                    </ol>
-                    <div class="caption-wrapper">
-                        {% for img in product.images %}
-                        {% if forloop.first %}
-                        <span data-slide-to="0" class="active"></span>
-                        {% else %}
-                        <span data-slide-to="{{ forloop.index | minus: 1 }}" class=""></span>
-                        {% endif %}
-                        {% endfor %}
-                        <div class="caption_control"></div>
-                    </div>
-                    <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-listing" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-            </div>
+            
             <div class="agent_contanct_form addition-form">
                 <h4 id="show_contact">{{ 'request-form.header2' | t }}</h4>
                 <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
@@ -184,41 +205,65 @@
                 <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
             </div>
         </div>
-    <!-- end single content -->
+        <!-- end single content -->
+    </div>
     <!--Side bar-->
     <div class="col-xs-12 col-md-3 widget-area-sidebar" id="primary">
-            <div class="agent_contanct_form_sidebar">
-                <div class="agent_unit" data-link="">
-                    <div class="agent-unit-img-wrapper">
-                        <div class="prop_new_details_back"></div>
-                        <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
-                    </div>
-                    <div class="">
-                        <h4> <a href="">Maria Barlow</a></h4>
-                        <div class="agent_position">sales executive</div><div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div><div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div><div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div><div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
-                    </div>
-                    <div class="agent_unit_social">
-                        <div class="social-wrapper">
-                            <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-pinterest"></i></a>
-                        </div>
+        <div class="agent_contanct_form_sidebar">
+            <div class="agent_unit" data-link="">
+                <div class="agent-unit-img-wrapper">
+                    <div class="prop_new_details_back"></div>
+                    <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
+                </div>
+                <div class="">
+                    <h4> <a href="">Maria Barlow</a></h4>
+                    <div class="agent_position">sales executive</div>
+                    <div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div>
+                    <div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div>
+                    <div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div>
+                    <div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
+                </div>
+                <div class="agent_unit_social">
+                    <div class="social-wrapper">
+                        <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-pinterest"></i></a>
                     </div>
                 </div>
-                <!-- </div>    -->
-                <div class="agent_contanct_form ">
-                    <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
-                    <div class="alert-box error">
-                        <div class="alert-message" id="alert-agent-contact"></div>
-                    </div>
-                    <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                    <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
-                    <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
-                    <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
-                    <span> {{ 'request-form.license' | t }} </span>
-                    <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+            </div>
+            <!-- </div>    -->
+            <div class="agent_contanct_form ">
+                <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
+                <div class="alert-box error">
+                    <div class="alert-message" id="alert-agent-contact"></div>
                 </div>
+                <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
+                <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
+                <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
+                <span> {{ 'request-form.license' | t }} </span>
+                <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
             </div>
         </div>
     </div>
     <!--end Side bar-->
-    
 </div>
+<!--Scripts-->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var googlecode_property_vars = {"general_latitude":"{{ lat }}","general_longitude":"{{ lot }}","path":"{{ 'css-images/' | assets_url }}","markers":"[]","camera_angle":"0","idx_status":"0","page_custom_zoom":"16","current_id":"154","generated_pins":"1","small_map":"0","type":"ROADMAP"};
+var googlecode_property_vars2 = {"markers2":"[[\"{% include 'product_name' | replace : '\n', '' | replace: '\r', '' %}\",{{ lat }},{{ lon }},1,\"%3Cimg%20width%3D%22400%22%20height%3D%22161%22%20src%3D%22{{ product.featured_image.src }}%22%20class%3D%22attachment-property_map1%20size-property_map1%20wp-post-image%22%20alt%3D%22%22%20%2F%3E\",\"%3Cspan%20class%3D%22infocur%20infocur_first%22%3E%3C%2Fspan%3E1.500.000%20%E2%82%AC%3Cspan%20class%3D%22infocur%22%3E%3C%2Fspan%3E\",\"retail\",\"sales\",\"retailsales\",\"{{ product.url | absolute_url }}\",154,1500000,\"2\",\"2\",\"700\",\"Retail\",\"Sales\"]]"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mapfunctions_vars = {"path":"{{ 'css-images/' | assets_url }}","pin_images":"{\"idxpin\":\"\",\"userpin\":\"\"}","geolocation_radius":"1000","adv_search":"2","in_text":" in ","zoom_cluster":"13","user_cluster":"yes","open_close_status":"1","open_height":"450","closed_height":"580","generated_pins":"1","geo_no_pos":"The browser couldn't detect your position!","geo_no_brow":"Geolocation is not supported by this browser.","geo_message":"m radius","show_adv_search":"yes","custom_search":"yes","listing_map":"top","slugs":["title-keyword","advanced_city","advanced_area","adv_actions","adv_categ","available-from","property_price",""],"hows":["like","equal","equal","equal","equal","date bigger","greater","equal"],"measure_sys":"m","close_map":"close map","show_g_search_status":"no","slider_price":"yes","slider_price_position":"7","adv_search_type":"2","is_half":"0","map_style":"[{\"featureType\":\"administrative\",\"elementType\":\"labels.text.fill\",\"stylers\":[{\"color\":\"#444444\"}]},{\"featureType\":\"landscape\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#f2f2f2\"}]},{\"featureType\":\"poi\",\"elementType\":\"all\",\"stylers\":[{\"visibility\":\"off\"}]},{\"featureType\":\"road\",\"elementType\":\"all\",\"stylers\":[{\"saturation\":-100},{\"lightness\":45}]},{\"featureType\":\"road.highway\",\"elementType\":\"all\",\"stylers\":[{\"visibility\":\"simplified\"}]},{\"featureType\":\"road.arterial\",\"elementType\":\"labels.icon\",\"stylers\":[{\"visibility\":\"off\"}]},{\"featureType\":\"transit\",\"elementType\":\"all\",\"stylers\":[{\"visibility\":\"off\"}]},{\"featureType\":\"water\",\"elementType\":\"all\",\"stylers\":[{\"color\":\"#46bcec\"},{\"visibility\":\"on\"}]}]","small_slider_t":"horizontal","is_prop_list":"0","is_tax":"0","half_no_results":"No results found!","fields_no":"6","type":"ROADMAP"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var control_vars = {"morg1":"Amount Financed:","morg2":"Mortgage Payments:","morg3":"Annual cost of Loan:","searchtext":"SEARCH","searchtext2":"Search here...","path":"http:\/\/localhost:8081\/wp-content\/themes\/wpresidence","search_room":"Type Bedrooms No.","search_bath":"Type Bathrooms No.","search_min_price":"Type Min. Price","search_max_price":"Type Max. Price","contact_name":"Your Name","contact_email":"Your Email","contact_phone":"Your Phone","contact_comment":"Your Message","zillow_addres":"Your Address","zillow_city":"Your City","zillow_state":"Your State Code (ex CA)","adv_contact_name":"Your Name","adv_email":"Your Email","adv_phone":"Your Phone","adv_comment":"Your Message","adv_search":"Send Message","admin_url":"http:\/\/localhost:8081\/wp-admin\/","login_redirect":"http:\/\/localhost:8081\/my-profile\/","login_loading":"Sending user info, please wait...","street_view_on":"Street View","street_view_off":"Close Street View","userid":"0","show_adv_search_map_close":"yes","close_map":"close map","open_map":"open map","fullscreen":"Fullscreen","default":"Default","addprop":"Please wait while we are processing your submission!","deleteconfirm":"Are you sure you wish to delete?","terms_cond":"You need to agree with terms and conditions !","procesing":"Processing...","slider_min":"0","slider_max":"5600000","curency":"\u20ac","where_curency":"after","submission_curency":"USD","to":"to","direct_pay":"","send_invoice":"Send me the invoice","direct_title":"Direct payment instructions","direct_thx":"Thank you. Please check your email for payment instructions.","direct_price":"To be paid","price_separator":".","plan_title":"Plan Title","plan_image":"Plan Image","plan_desc":"Plan Description","plan_size":"Plan Size","plan_rooms":"Plan Rooms","plan_bathrooms":"Plan Bathrooms","plan_price":"Plan Price","readsys":"no","datepick_lang":"en-GB","deleting":"deleting...","captchakey":"","usecaptcha":"no","scroll_trigger":"100","adv6_taxonomy_term":["35","38"],"adv6_max_price":["7000","1500000"],"adv6_min_price":["0","0"],"is_rtl":"0"};
+/* ]]> */
+</script>
+{{ '//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAezOvbdi_AopToL4h8xUYdxBLExUHAK54&ver=1.0' | script_tag }}
+{{ '~/theme-bundler/scripts/map' | script_bundle_tag }}
+
+<!--End scripts-->

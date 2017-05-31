@@ -162,3 +162,4 @@ $RECYCLE.BIN/
 !VirtoCommerce.Storefront/App_Data/Themes/*
 !VirtoCommerce.Storefront/App_Data/Themes/default/*
 artifacts/*
+/VirtoCommerce.Storefront/App_Data/Themes/es/.vscode

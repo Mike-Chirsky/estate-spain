@@ -86,7 +86,7 @@ html, body {
 body {
     color: #757575;
     background-color: #f3f3f3;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 
 .row{
@@ -2673,8 +2673,8 @@ input.form-control::-moz-placeholder {
     display: block;
     position: relative;
     background-color: #000000;
-    min-height: 550px;
-   display:inline-block;
+    min-height: 350px;
+    display:inline-block;
     max-width:33.33%;
     background-size: cover;
     background-position: center;
@@ -9070,8 +9070,8 @@ table tbody tr td {
     height: 100%;
     width: 100%;
     top: 0px;
-    left: 50%;
-    margin-left: -600px;
+    /*left: 50%;*/
+    /*margin-left: -600px;*/
     pointer-events:none;
 }
 .has_header_type4  .gmap-controls{
@@ -18412,17 +18412,3 @@ span.property_details_type1_id,
 .yelp_icon .fa-bus{
     background-color: #DD5539;  
 }
-
-/* custom styles */
-.request-from-license {
-    margin-left: 25px;
-    margin-top: auto;
-}
-
-@media (max-width:1024px) {
-    .addition-form {
-        display: none;
-    }
-}
-
-

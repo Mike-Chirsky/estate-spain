@@ -478,7 +478,7 @@
     <Content Include="App_Data\Themes\es\assets\js\account\account-subscriptions.js" />
     <Content Include="App_Data\Themes\es\assets\js\account\accountApi.js" />
     <Content Include="App_Data\Themes\es\assets\js\app.js" />
-    <Content Include="App_Data\Themes\es\assets\js\bootstrap.min.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\bootstrap.js" />
     <Content Include="App_Data\Themes\es\assets\js\cart.js" />
     <Content Include="App_Data\Themes\es\assets\js\checkout\checkout-coupon.js" />
     <Content Include="App_Data\Themes\es\assets\js\checkout\checkout-email.js" />
@@ -503,6 +503,29 @@
     <Content Include="App_Data\Themes\es\assets\js\recommendations.js" />
     <Content Include="App_Data\Themes\es\assets\js\services.js" />
     <Content Include="App_Data\Themes\es\assets\js\slider.min.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.ui.core.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\dense.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\encoder.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\control.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\map\infobox.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.lazyload.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.nicescroll.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.ui.touch-punch.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\map\google_map_code_listing.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\map\mapfunctions.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\map\markerclusterer.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\map\oms.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\menu.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\modernizr.custom.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\mouse.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\owl.carousel.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\placeholders.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\position.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\property.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\retina-1.1.0.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\slick.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\slider.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\widget.js" />
     <Content Include="App_Data\Themes\es\assets\klarna-big.png" />
     <Content Include="App_Data\Themes\es\assets\laser.svg" />
     <Content Include="App_Data\Themes\es\assets\litecoin.svg" />
@@ -541,7 +564,9 @@
     <Content Include="App_Data\Themes\es\assets\storefront.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\custom-style.css" />
     <Content Include="App_Data\Themes\es\assets\styles\my_media.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\orange-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\style.css" />
     <Content Include="App_Data\Themes\es\assets\thumbs-bar.gif" />
     <Content Include="App_Data\Themes\es\assets\unionpay.svg" />
@@ -900,6 +925,10 @@
     <Content Include="App_Data\Themes\es\assets\shop.js.liquid" />
     <Content Include="App_Data\Themes\es\assets\style.css.liquid" />
     <Content Include="App_Data\Themes\es\locales\ru-RU.default.json" />
+    <Content Include="App_Data\Themes\es\layout\es.liquid">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Themes\es\snippets\product_name.liquid" />
     <None Include="AutoRestClients\!readme.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
