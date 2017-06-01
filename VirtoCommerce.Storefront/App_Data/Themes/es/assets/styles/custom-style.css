@@ -10,6 +10,33 @@
     }
 }
 
-.contact-sidebar-call-back input[type=submit], .contact-sidebar-request input[type=submit] {
+.contact-sidebar-call-back input[type=submit], 
+.contact-sidebar-request input[type=submit] {
     width: 250px;
+}
+
+.header-social-icons {
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: 20px;
+    width: 100%;
+    background-color: #f2f2e9;
+    display: block;
+}
+.header_wrapper.customnav .header-social-icons {
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: 0;
+}
+.wide .header_wrapper {
+    height: 110px !important;
+}
+.has_header_type3 .header_media {
+    padding-top: 111px;
+}
+.header_wrapper.customnav {
+    height: 90px !important;
+}
+.header_wrapper .header_wrapper_inside {
+    height: 90px !important;
 }
