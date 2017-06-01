@@ -607,6 +607,7 @@
         "map": "Карта",
         "interactive": "Виртуальный тур",
         "square": "м<sup>2</sup>",
+        "square2": "м2",
         "in-city": "в"
     },
     "request-form": {

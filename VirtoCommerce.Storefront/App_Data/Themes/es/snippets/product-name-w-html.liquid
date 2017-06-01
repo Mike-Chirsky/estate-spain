@@ -1,0 +1,17 @@
+﻿{%- for property in product.properties -%}
+    {%- if property.name == 'outer_type' -%}
+        {{- property.value | capitalize | append: ' ' -}}
+    {%- endif-%}
+{%- endfor -%}
+{{- product.first_available_variant.sku | append: ' '-}}
+{%- for property in product.properties -%}
+    {%- if property.name == 'totalsquare' -%}
+        {{- property.value | append: ' '-}}
+    {%- endif-%}
+{%- endfor -%}
+{{- 'product.square2' | t | append: ' ' -}} {{- 'product.in-city' | t | append: ' '-}}
+{%- for property in product.properties -%}
+    {%- if property.name == 'city' -%}
+        {{- property.value -}}
+    {%- endif-%}
+{%- endfor -%}

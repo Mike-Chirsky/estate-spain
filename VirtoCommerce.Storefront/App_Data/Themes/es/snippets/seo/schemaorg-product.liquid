@@ -1,0 +1,78 @@
+﻿{%- case template -%}
+{% when 'product' %}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "{% include 'product-name-w-html' %}",
+    "sku" : "{{ product.first_available_variant.sku }}",
+    "category": "{{ collection.title }}",
+    "image": "{{ product.featured_image.src | size_image_link: 'large' }}",
+    "description": "{{ product.description | strip_html | strip | slice: 0, 255 | append: '...' }}",
+    "url" : "{{ product.url | full_url }}",
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "{{ shop.currency }}",
+        "price": "{{ product.price | divided_by: 100 }}", 
+        "itemCondition": "http://schema.org/NewCondition",
+        {%- if product.available -%}
+        "availability": "http://schema.org/LimitedAvailability",
+        {%- else -%}
+        "availability": "http://schema.org/SoldOut",
+        {%- endif -%}
+        availableAtOrFrom":{
+            "@type":"Place",
+            "address":{
+                "@type":"PostalAddress",
+                "streetAddress":"",
+                "addressLocality":"{%- for item in product.properties -%}
+                {%- if item.name == 'city' -%}
+                {{- item.value -}}
+                {%- endif -%}
+                {%-endfor-%}",
+                "addressRegion": "{%- for item in product.properties -%}
+                {%- if item.name == 'region' -%}
+                {{- item.value -}}
+                {%- endif -%}
+                {%-endfor-%}",
+                "addressCountry":"Испания"
+            }
+        }
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {%- if collection.parents -%}
+        {%- for parent in collection.parents -%}
+        {%- if parent.url -%}
+        {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "item": {
+                "@id": "{{ parent.url | absolute_url }}",
+                "name": "{{ parent.title }}"
+            }
+        },
+        {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+    {%- if collection -%}
+        {%- if collection.url -%}
+        {
+            "@type": "ListItem",
+            "position": {{ collection.parents.size | plus:1 }},
+            "item": {
+                "@id": "{{ collection.url | absolute_url }}",
+                "name": "{{ collection.title }}"
+            }
+        }
+        {%- endif -%}
+    {%- endif -%}
+    ]
+}
+</script>
+{%- endcase -%}
