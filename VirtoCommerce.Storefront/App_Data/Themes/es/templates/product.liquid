@@ -1,5 +1,17 @@
 ﻿<div class="row">
-    <div class="header_media">
+  <div class="header_media">
+    <div class="product-preview">
+        {% for image in product.images %}
+        {% if forloop.index > 3 %}
+        {% break %}
+        {% endif %}
+        <div class="preview-item" >
+          <div style="background-image: url('{{ image.src }}');" class="preview-inner"></div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+    <!--<div class="header_media">
         <div class="rightmargin full_width_prop">
             <div class="theme_slider_wrapper theme_slider_2 theme_slider_extended  slick-initialized slick-slider slick-dotted" role="toolbar">
                 <div aria-live="polite" class="slick-list draggable">
@@ -14,8 +26,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
+    <div class="row">
     {% include 'breadcrumb' %}
+    </div>
     <div class="col-md-9 rightmargin full_width_prop">
         <h1 class="entry-title entry-prop">
            {% include 'product_name' %}
@@ -197,12 +211,33 @@
             
             <div class="agent_contanct_form addition-form">
                 <h4 id="show_contact">{{ 'request-form.header2' | t }}</h4>
-                <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
-                <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
-                <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
-                <span class="request-from-license"> {{ 'request-form.license' | t }} </span>
-                <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="phone" class="form-control"  placeholder="{{ 'request-form.phone' | t }}">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="email" class="form-control" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <span class="license"> {{ 'request-form.license' | t }} </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+                    </div>
+                </div>                
             </div>
         </div>
         <!-- end single content -->
@@ -239,7 +274,7 @@
                 <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
                 <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
                 <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
-                <span> {{ 'request-form.license' | t }} </span>
+                <span class="license"> {{ 'request-form.license' | t }} </span>
                 <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
             </div>
         </div>

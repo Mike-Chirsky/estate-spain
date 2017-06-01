@@ -1,484 +1,204 @@
-﻿.ll-skin-melon td .ui-state-active,
-.ll-skin-melon td .ui-state-hover,
-.adv_search_tab_item.active,
-button.slick-prev.slick-arrow,
-button.slick-next.slick-arrow,
-.wpresidence_button,
-.comment-form #submit,
-#adv-search-header-3,
-#tab_prpg>ul,
-.wpcf7-form input[type="submit"],
-.adv_results_wrapper #advanced_submit_2,
-.wpb_btn-info,
-#slider_enable_map:hover,
-#slider_enable_street:hover,
-#slider_enable_slider:hover,
-#colophon .social_sidebar_internal a:hover,
-#primary .social_sidebar_internal a:hover,
-.ui-widget-header,
-.slider_control_left,
-.slider_control_right,
-.single-content input[type="submit"],
-#slider_enable_slider.slideron,
-#slider_enable_street.slideron,
-#slider_enable_map.slideron,
-.comment-form #submit,
-#add_favorites.isfavorite:hover,
-#add_favorites:hover,
-.carousel-control-theme-prev,
-.carousel-control-theme-next,
-#primary .social_sidebar_internal a:hover,
-#adv-search-header-mobile,
-#adv-search-header-1,
-.featured_second_line,
-.wpb_btn-info,
-.agent_contanct_form input[type="submit"] {
-    background-color: #FF9800!important;
+﻿.ll-skin-melon td .ui-state-active, .ll-skin-melon td .ui-state-hover, .adv_search_tab_item.active, button.slick-prev.slick-arrow, button.slick-next.slick-arrow, .wpresidence_button, .comment-form #submit, #adv-search-header-3, #tab_prpg > ul, .wpcf7-form input[type="submit"], .adv_results_wrapper #advanced_submit_2, .wpb_btn-info, #slider_enable_map:hover, #slider_enable_street:hover, #slider_enable_slider:hover, #colophon .social_sidebar_internal a:hover, #primary .social_sidebar_internal a:hover, .ui-widget-header, .slider_control_left, .slider_control_right, .single-content input[type="submit"], #slider_enable_slider.slideron, #slider_enable_street.slideron, #slider_enable_map.slideron, .comment-form #submit, #add_favorites.isfavorite:hover, #add_favorites:hover, .carousel-control-theme-prev, .carousel-control-theme-next, #primary .social_sidebar_internal a:hover, #adv-search-header-mobile, #adv-search-header-1, .featured_second_line, .wpb_btn-info, .agent_contanct_form input[type="submit"] {
+    background-color: #FF9800 !important;
 }
+
 .wpresidence_button {
     border: none;
 }
-.comment-form #submit,
-.blog_unit_image img,
-.blog2v img,
-.single-content input[type="submit"],
-.agentpict,
-.featured_property img,
-.agent_unit img {
-    border-bottom: 3px solid #FF9800!important;
+
+.comment-form #submit, .blog_unit_image img, .blog2v img, .single-content input[type="submit"], .agentpict, .featured_property img, .agent_unit img {
+    border-bottom: 3px solid #FF9800 !important;
 }
-.single-content p a:hover,
-.agent_unit_social a:hover,
-.featured_prop_price .price_label,
-.featured_prop_price .price_label_before,
-.compare_item_head .property_price,
-#grid_view:hover,
-#list_view:hover,
-#primary a:hover,
-.front_plan_row:hover,
-.adv_extended_options_text,
-.slider-content h3 a:hover,
-.agent_unit_social_single a:hover,
-.adv_extended_options_text:hover,
-.breadcrumb a:hover,
-.property-panel h4:hover,
-.featured_article:hover .featured_article_right,
-.info_details .prop_pricex,
-.info_details .infocur,
-#contactinfobox,
-.featured_property:hover h2 a,
-.blog_unit:hover h3 a,
-.blog_unit_meta .read_more:hover,
-.blog_unit_meta a:hover,
-.agent_unit:hover h4 a,
-.listing_filter_select.open .filter_menu_trigger,
-.wpestate_accordion_tab .ui-state-active a,
-.wpestate_accordion_tab .ui-state-active a:link,
-.wpestate_accordion_tab .ui-state-active a:visited,
-.theme-slider-price,
-.agent_unit:hover h4 a,
-.meta-info a:hover,
-.widget_latest_price,
-#colophon a:hover,
-#colophon li a:hover,
-.price_area,
-.property_listing:hover h4 a,
-.listing_unit_price_wrapper,
-a:hover,
-a:focus,
-.top_bar .social_sidebar_internal a:hover,
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus,
-.featured_prop_price,
-.user_menu,
-.user_loged i,
-#access .current-menu-item >a,
-#access .current-menu-parent>a,
-#access .current-menu-ancestor>a,
-#access .menu li:hover>a,
-#access .menu li:hover>a:active,
-#access .menu li:hover>a:focus {
+
+.single-content p a:hover, .agent_unit_social a:hover, .featured_prop_price .price_label, .featured_prop_price .price_label_before, .compare_item_head .property_price, #grid_view:hover, #list_view:hover, #primary a:hover, .front_plan_row:hover, .adv_extended_options_text, .slider-content h3 a:hover, .agent_unit_social_single a:hover, .adv_extended_options_text:hover, .breadcrumb a:hover, .property-panel h4:hover, .featured_article:hover .featured_article_right, .info_details .prop_pricex, .info_details .infocur, #contactinfobox, .featured_property:hover h2 a, .blog_unit:hover h3 a, .blog_unit_meta .read_more:hover, .blog_unit_meta a:hover, .agent_unit:hover h4 a, .listing_filter_select.open .filter_menu_trigger, .wpestate_accordion_tab .ui-state-active a, .wpestate_accordion_tab .ui-state-active a:link, .wpestate_accordion_tab .ui-state-active a:visited, .theme-slider-price, .agent_unit:hover h4 a, .meta-info a:hover, .widget_latest_price, .pack-listing-title, #colophon a:hover, #colophon li a:hover, .price_area, .property_listing:hover h4 a, .listing_unit_price_wrapper, a:hover, a:focus, .top_bar .social_sidebar_internal a:hover, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .featured_prop_price, .user_menu, .user_loged i, #access .current-menu-item > a, #access .current-menu-parent > a, #access .current-menu-ancestor > a, #access .menu li:hover > a, #access .menu li:hover > a:active, #access .menu li:hover > a:focus {
     color: #FF9800;
 }
-#amount_wd,
-#amount,
-#amount_mobile,
-#amount_sh,
-.mobile-trigger-user:hover i,
-.mobile-trigger:hover i,
-.mobilemenu-close-user:hover,
-.mobilemenu-close:hover {
-    color: #FF9800!important;
+
+#amount_wd, #amount, #amount_mobile, #amount_sh {
+    color: #FF9800 !important;
 }
+
 .featured_article_title {
-    border-top: 3px solid #FF9800!important;
+    border-top: 3px solid #FF9800 !important;
 }
-.adv_search_tab_item.active,
-.scrollon {
+
+.adv_search_tab_item.active, .scrollon {
     border: 1px solid #FF9800;
 }
-body,
-.wide {
+
+body, .wide {
     background-color: #FAFAFA;
 }
+
 .content_wrapper {
     background-color: #FAFAFA;
 }
-.fixed_header.header_transparent .header_wrapper,
-.header_transparent .header_wrapper.navbar-fixed-top.customnav,
-.header_wrapper,
-.master_header,
-#access ul ul,
-.customnav {
-    background-color: #FAFAFA
-}
-.featured_article_righ,
-.featured_article_secondline,
-.property_location .inforoom,
-.property_location .infobath,
-.agent_meta,
-.blog_unit_meta a,
-.property_location .infosize,
-.sale_line,
-.meta-info a,
-.breadcrumb > li + li:before,
-.blog_unit_meta,
-.meta-info,
-.agent_position,
-.breadcrumb a {
+
+.featured_article_righ, .featured_article_secondline, .property_location .inforoom, .property_location .infobath, .agent_meta, .blog_unit_meta a, .property_location .infosize, .sale_line, .meta-info a, .breadcrumb > li + li:before, .blog_unit_meta, .meta-info, .agent_position, .breadcrumb a {
     color: #768082;
 }
-#header4_footer,
-#header4_footer .widget-title-header4,
-#header4_footer a,
-.submit_action,
-#access ul.menu >li>a {
+
+#header4_footer, #header4_footer .widget-title-header4, #header4_footer a, .submit_action, #access ul.menu > li > a {
     color: #323a45;
 }
+
 .menu_user_picture {
     border-color: #323a45;
 }
-.navicon:before,
-.navicon:after,
-.navicon {
+
+.navicon:before, .navicon:after, .navicon {
     background: #323a45;
 }
-#user_menu_open > li > a:hover,
-#user_menu_open > li > a:focus,
-.filter_menu li:hover,
-.sub-menu li:hover,
-#access .menu li:hover>a,
-#access .menu li:hover>a:active,
-#access .menu li:hover>a:focus {
+
+.alalx223, .header_type3_menu_sidebar .menu > li:hover, .hover_type_3 #access .menu > li:hover > a, .hover_type_4 #access .menu > li:hover > a {
+    background: #FF9800 !important;
+}
+
+.customnav .submit_action, .customnav #access ul.menu > li > a {
+    color: #323a45;
+}
+
+.customnav .menu_user_picture {
+    border-color: #323a45;
+}
+
+.customnav .navicon:before, .customnav .navicon:after, .customnav .navicon {
+    background: #323a45;
+}
+
+#user_menu_open > li > a:hover, #user_menu_open > li > a:focus, .filter_menu li:hover, .sub-menu li:hover, #access .menu li:hover > a, #access .menu li:hover > a:active, #access .menu li:hover > a:focus {
     background-color: #FF9800;
 }
-.form-control.open .filter_menu_trigger,
-.menu_user_tools {
+
+.form-control.open .filter_menu_trigger, .menu_user_tools {
     color: #FF9800;
 }
+
 .menu_user_picture {
     border: 1px solid #FF9800;
 }
-#access .menu ul li:hover>a,
-#access .sub-menu li:hover>a,
-#access .sub-menu li:hover>a:active,
-#access .sub-menu li:hover>a:focus {
+
+#access .menu ul li:hover > a, #access .sub-menu li:hover > a, #access .sub-menu li:hover > a:active, #access .sub-menu li:hover > a:focus {
     color: #ffffff;
 }
-#access a,
-#access ul ul a,
-#access ul ul li.wpestate_megamenu_col_1,
-#access ul ul li.wpestate_megamenu_col_2,
-#access ul ul li.wpestate_megamenu_col_3,
-#access ul ul li.wpestate_megamenu_col_4,
-#access ul ul li.wpestate_megamenu_col_5,
-#access ul ul li.wpestate_megamenu_col_6,
-#access ul ul li.wpestate_megamenu_col_1 a,
-#access ul ul li.wpestate_megamenu_col_2 a,
-#access ul ul li.wpestate_megamenu_col_3 a,
-#access ul ul li.wpestate_megamenu_col_4 a,
-#access ul ul li.wpestate_megamenu_col_5 a,
-#access ul ul li.wpestate_megamenu_col_6 a {
-    color: #FF9800;
-}
-#access ul ul li.wpestate_megamenu_col_1 .megamenu-title:hover a,
-#access ul ul li.wpestate_megamenu_col_2 .megamenu-title:hover a,
-#access ul ul li.wpestate_megamenu_col_3 .megamenu-title:hover a,
-#access ul ul li.wpestate_megamenu_col_4 .megamenu-title:hover a,
-#access ul ul li.wpestate_megamenu_col_5 .megamenu-title:hover a,
-#access ul ul li.wpestate_megamenu_col_6 .megamenu-title:hover a,
-#access .with-megamenu .sub-menu li:hover>a,
-#access .with-megamenu .sub-menu li:hover>a:active,
-#access .with-megamenu .sub-menu li:hover>a:focus,
-#access .current-menu-item >a,
-#access .current-menu-parent>a,
-#access .current-menu-ancestor>a,
-#access .menu li:hover>a,
-#access .menu li:hover>a:active,
-#access .menu li:hover>a:focus {
-    color: #FF9800;
-}
-body,
-a,
-label,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=number],
-textarea,
-.slider-content,
-.listing-details,
-.form-control,
-#user_menu_open i,
-#grid_view,
-#list_view,
-.listing_details a,
-.notice_area,
-.social-agent-page a,
-.prop_detailsx,
-#reg_passmail_topbar,
-#reg_passmail,
-.testimonial-text,
-.wpestate_tabs .ui-widget-content,
-.wpestate_tour .ui-widget-content,
-.wpestate_accordion_tab .ui-widget-content,
-.wpestate_accordion_tab .ui-state-default,
-.wpestate_accordion_tab .ui-widget-content .ui-state-default,
-.wpestate_accordion_tab .ui-widget-header .ui-state-default,
-.filter_menu {
-    color: #757575;
-}
-.caret,
-.caret_sidebar,
-.advanced_search_shortcode .caret_filter {
-    border-top-color: #757575;
-}
-.pagination > li > a,
-.pagination > li > span,
-.single-content p a,
-.featured_article:hover h2 a,
-.user_dashboard_listed a,
-.blog_unit_meta .read_more,
-.slider-content .read_more,
-.blog2v .read_more,
-.breadcrumb .active,
-.unit_more_x a,
-.unit_more_x {
+
+.pagination > li > a, .pagination > li > span, .single-content p a, .featured_article:hover h2 a, .user_dashboard_listed a, .blog_unit_meta .read_more, .slider-content .read_more, .blog2v .read_more, .breadcrumb .active, .unit_more_x a, .unit_more_x {
     color: #5F6768;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-.featured_property h2 a,
-.featured_property h2,
-.blog_unit h3,
-.blog_unit h3 a,
-.submit_container_header,
-.info_details #infobox_title {
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .featured_property h2 a, .featured_property h2, .blog_unit h3, .blog_unit h3 a, .submit_container_header, .info_details #infobox_title {
     color: #323a45;
 }
+
 #colophon {
     background-color: #282D33;
 }
-#colophon,
-#colophon a,
-#colophon li a,
-#colophon .widget-title-footer {
-    /*color: #72777F;*/
-    color: #e9e9e9;
+
+    #colophon, #colophon a, #colophon li a, #colophon .widget-title-footer {
+        color: #72777F;
+    }
+
+.sub_footer, .subfooter_menu a, .subfooter_menu li a {
+    color: #72777F !important;
 }
-.sub_footer,
-.subfooter_menu a,
-.subfooter_menu li a {
-    color: #72777F!important;
-}
-.top_bar_wrapper {
-    background-color: #FAFAFA;
-}
-.top_bar,
-.top_bar a {
-    color: #f0f0f0;
-}
-#advanced_submit_3,
-#search_wrapper,
-.adv-search-1 .wpresidence_button {
-    background-color: #fdfdfd!important;
-}
-.advanced_search_shortcode .caret_filter,
-.advanced_search_shortcode .form-control,
-.advanced_search_shortcode input[type=text],
-.advanced_search_shortcode .form-control::-webkit-input-placeholder,
-.adv-search-1 .caret_filter,
-.adv-search-1 .form-control,
-.adv-search-3 .caret_filter,
-.adv-search-3 .form-control,
-.adv-search-1 input[type=text],
-.adv-search-3 input[type=text],
-.adv-search-1 .form-control::-webkit-input-placeholder,
-.adv-search-3 .form-control::-webkit-input-placeholder {
+
+.advanced_search_shortcode .caret_filter, .advanced_search_shortcode .form-control, .advanced_search_shortcode input[type=text], .advanced_search_shortcode .form-control::-webkit-input-placeholder, .adv-search-1 .caret_filter, .adv-search-1 .form-control, .adv-search-3 .caret_filter, .adv-search-3 .form-control, .adv-search-1 input[type=text], .adv-search-3 input[type=text], .adv-search-1 .form-control::-webkit-input-placeholder, .adv-search-3 .form-control::-webkit-input-placeholder {
     color: #768082;
 }
-.featured_article_title,
-.testimonial-text,
-.adv1-holder,
-.advanced_search_shortcode,
-.featured_secondline,
-.property_listing,
-.agent_unit,
-.blog_unit {
+
+.featured_article_title, .testimonial-text, .adv1-holder, .advanced_search_shortcode, .featured_secondline, .property_listing, .agent_unit, .blog_unit {
     background-color: #ffffff;
 }
-.featured_article,
-.mortgage_calculator_div,
-.loginwd_sidebar,
-.advanced_search_sidebar,
-.advanced_search_shortcode,
-#access ul ul,
-.testimonial-text,
-.submit_container,
-.zillow_widget,
-.featured_property,
-.property_listing,
-.agent_unit,
-.blog_unit,
-property_listing {
+
+.featured_article, .mortgage_calculator_div, .loginwd_sidebar, .advanced_search_sidebar, .advanced_search_shortcode, #access ul ul, .testimonial-text, .submit_container, .zillow_widget, .featured_property, .property_listing, .agent_unit, .blog_unit, property_listing {
     border-color: #e9e9e9;
 }
-.company_headline,
-.loginwd_sidebar .widget-title-sidebar,
-.advanced_search_sidebar .widget-title-footer,
-.advanced_search_sidebar .widget-title-sidebar,
-.zillow_widget .widget-title-footer,
-.zillow_widget .widget-title-sidebar,
-.adv1-holder,
-.notice_area,
-.top_bar_wrapper,
-.master_header,
-#access ul ul a,
-.listing_filters_head,
-.listing_filters {
-    border-bottom: 1px solid #e9e9e9;
-}
-.notice_area,
-.listing_filters_head,
-.listing_filters {
+
+    .company_headline, .loginwd_sidebar .widget-title-sidebar, .advanced_search_sidebar .widget-title-footer, .advanced_search_sidebar .widget-title-sidebar, .zillow_widget .widget-title-footer, .zillow_widget .widget-title-sidebar, .adv1-holder, .notice_area, .top_bar_wrapper, .master_header, #access ul ul a, .listing_filters_head, .listing_filters {
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+.notice_area, .listing_filters_head, .listing_filters {
     border-top: 1px solid #e9e9e9;
 }
+
 .adv1-holder {
     border-left: 1px solid #e9e9e9;
 }
+
 #search_wrapper {
     border-bottom: 3px solid #e9e9e9;
 }
-.wpresidence_button:hover,
-.twitter_wrapper,
-.slider_control_right:hover,
-.slider_control_left:hover,
-.comment-form #submit:hover,
-.carousel-control-theme-prev:hover,
-.carousel-control-theme-next:hover,
-.wpb_btn-info:hover,
-#advanced_submit_2:hover,
-#agent_submit:hover {
-    background-color: #F57C00!important;
+
+.wpresidence_button:hover, .twitter_wrapper, .slider_control_right:hover, .slider_control_left:hover, .comment-form #submit:hover, .carousel-control-theme-prev:hover, .carousel-control-theme-next:hover, .wpb_btn-info:hover, #advanced_submit_2:hover, #agent_submit:hover {
+    background-color: #F57C00 !important;
 }
-.icon_selected,
-.featured_prop_label {
-    color: #F57C00!important;
+
+.icon_selected, .featured_prop_label {
+    color: #F57C00 !important;
 }
+
 #tab_prpg li {
     border-right: 1px solid #F57C00;
 }
+
 .ribbon-wrapper-hot-offer {
     background: #FB6A5C;
 }
+
+.mobile-logo img {
+    margin-top: 9px;
+}
+
 .hot-offer {
-    font-size: 15px!important;
-    padding: 12px 30px;
     color: #fff;
-    text-align: center;
-    margin: 0px auto;
 }
-.featured_property .hot-offer,
-.property_listing .hot-offer {
-    font-size: 12px!important;
-    padding: 7px 0px;
-}
+
 .ribbon-wrapper-new-offer {
     background: #FF9800;
+    padding: 0px 4px;
 }
+
 .new-offer {
-    font-size: 15px!important;
-    padding: 12px 30px;
     color: #fff;
-    text-align: center;
-    margin: 0px auto;
 }
-.featured_property .new-offer,
-.property_listing .new-offer {
-    font-size: 12px!important;
-    padding: 7px 0px;
-}
+
 .ribbon-wrapper-open-house {
     background: #FF9800;
 }
+
 .open-house {
-    font-size: 15px!important;
-    padding: 12px 30px;
     color: #fff;
-    text-align: center;
-    margin: 0px auto;
 }
-.featured_property .open-house,
-.property_listing .open-house {
-    font-size: 12px!important;
-    padding: 7px 0px;
-}
+
 .ribbon-wrapper-sold {
     background: #282D33;
 }
+
 .sold {
-    font-size: 15px!important;
-    padding: 12px 30px;
     color: #fff;
-    text-align: center;
-    margin: 0px auto;
 }
-.featured_property .sold,
-.property_listing .sold {
-    font-size: 12px!important;
-    padding: 7px 0px;
-}
+
 .adv_results_wrapper .adv1-holder {
     background: #fdfdfd;
 }
+
 .filter_menu li:hover {
-    color: #ffffff!important;
+    color: #ffffff !important;
 }
+
 .login_form label {
     margin-bottom: 11px;
 }
+
 #collapseThree fa fa-times {
     color: #F57C00;
 }
-.listing_detail col-md-4 .fa fa-times,
-.featured_prop_price .price_label {
+
+.listing_detail col-md-4 .fa fa-times, .featured_prop_price .price_label {
     color: #FF9800;
 }
+
 @media only screen and (max-width: 1150px) {
     #access a {
         font-size: 14px;
@@ -486,38 +206,41 @@ property_listing {
         padding-right: 12px;
     }
 }
+
 @media only screen and (max-width: 1024px) and (min-width: 992px) {
     #access {
         max-width: 629px;
     }
 }
-.header_media {
-    background-color: #FAFAFA;
+
+.listing_details {
+    margin: 5px 0px 0px 0px;
 }
-.adv_results_wrapper .adv1-holder,
-.adv_results_wrapper .adv-search-1 {
-    background: #FAFAFA;
+
+.adv-search-1 {
+    border-top: 0px solid #e9e9e9;
 }
-#primary .agent_contanct_form,
-#primary .widget-container.boxed_widget {
+
+#access .menu li:hover > a:focus {
+    color: #ffffff !important;
+}
+
+#primary .agent_contanct_form, #primary .widget-container.boxed_widget {
     background-color: #f0f0f0;
 }
-.boxed_widget .widget-title-sidebar,
-.agent_contanct_form_sidebar #show_contact {
+
+.boxed_widget .widget-title-sidebar, .agent_contanct_form_sidebar #show_contact {
     color: #323a45;
 }
+
 .widget-title-sidebar {
     color: #323a45;
 }
-#primary,
-#primary a,
-#primary label,
-.advanced_search_sidebar .form-control::-webkit-input-placeholder {
+
+#primary, #primary a, #primary label, .advanced_search_sidebar .form-control::-webkit-input-placeholder {
     color: #888C8E;
 }
-#primary .boxed_widget,
-#primary .boxed_widget a,
-#primary .boxed_widget label,
-.boxed_widget .advanced_search_sidebar .form-control::-webkit-input-placeholder {
+
+#primary .boxed_widget, #primary .boxed_widget a, #primary .boxed_widget label, .boxed_widget .advanced_search_sidebar .form-control::-webkit-input-placeholder {
     color: #;
 }

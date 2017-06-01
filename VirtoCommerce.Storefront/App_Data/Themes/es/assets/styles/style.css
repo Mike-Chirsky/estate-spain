@@ -10,8 +10,6 @@ Tags: white, one-column, two-columns,left-sidebar, right-sidebar, fluid-layout ,
 License:  
 License URI:
 -------------------------------------------------------------- */
-@import url('bootstrap.css');
-@import url('bootstrap-theme.css');
 
 html, body, div, span, applet, object, iframe,.advanced_search_map
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -35,6 +33,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     background: #fff;
     line-height: 1;
+    font-family: "Open Sans", sans-serif;
 }
 
 ul {
@@ -84,7 +83,7 @@ html, body {
 }
 
 body {
-    color: #757575;
+    color: #8593a9;
     background-color: #f3f3f3;
     /*font-family: 'Open Sans', sans-serif;*/
 }
@@ -220,6 +219,7 @@ small, .small {
     width:100%;
     float:left;
 }
+
 
 #google_map_prop_list_sidebar .entry-title {
     margin: -7px 0px 13px 7px;

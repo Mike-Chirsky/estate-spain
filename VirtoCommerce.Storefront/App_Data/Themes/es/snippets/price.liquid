@@ -1,4 +1,4 @@
-
+﻿
 {% assign formatted_price = price | money %}
 {% if settings.remove_dollar_symbol %}
   {% assign formatted_price = formatted_price | remove: '$' %}
@@ -19,4 +19,4 @@
   {% endif %}
 {% endunless %}
 
-<small>{{ formatted_price }}</small>
+{{ formatted_price }}

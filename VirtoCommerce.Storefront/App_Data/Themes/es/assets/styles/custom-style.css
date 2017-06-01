@@ -40,3 +40,44 @@
 .header_wrapper .header_wrapper_inside {
     height: 90px !important;
 }
+.entry-title:first-letter {
+    text-transform: uppercase;
+}
+
+.product-preview {
+    word-spacing: -6px;
+    margin: 10px -5px 5px;
+}
+.preview-item {
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 5px;
+    display: inline-block;
+}
+.preview-inner {
+    box-sizing: border-box;
+    height: 300px;
+    background-size: cover;
+    background-position: 50%;
+    border: #FAFAFA 2px solid;
+    box-shadow: 0 0 3px rgba(0,0,0,.25);
+}
+
+span.license {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    display: block;
+}
+.agent_contanct_form_sidebar #show_contact {
+    text-align: center;
+}
+.single-content .addition-form .row {
+    margin-left: -7px;
+    margin-right: -7px
+}
+.single-content .addition-form .col-md-4, .single-content .addition-form .col-md-12 {
+    padding-left: 7px;
+    padding-right: 7px
+}
