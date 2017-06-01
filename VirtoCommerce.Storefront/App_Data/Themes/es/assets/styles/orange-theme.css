@@ -298,7 +298,8 @@ h6 a,
 #colophon a,
 #colophon li a,
 #colophon .widget-title-footer {
-    color: #72777F;
+    /*color: #72777F;*/
+    color: #e9e9e9;
 }
 .sub_footer,
 .subfooter_menu a,

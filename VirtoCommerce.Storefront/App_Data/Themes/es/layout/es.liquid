@@ -63,19 +63,79 @@
          <footer id="colophon" role="contentinfo" class="  footer_back_repeat  ">
             <div id="footer-widget-area" class="row ">
                <div id="first" class="widget-area col-md-3 ">
-                  
+                  <ul class="xoxo">
+                       <li id="text-10" class="widget-container widget_text">
+                           <h3 class="widget-title-footer">{{ 'footer.about' | t | upcase }}</h3>
+                           <div class="textwidget">
+                               WP RESIDENCE is committed to delivering a high level of expertise, customer service, and attention to detail to the marketing and sales of luxury real estate, and rental properties.
+                           </div>
+		               </li>
+                       <li id="social_widget-1" class="widget-container social_sidebar">
+                           <div class="social_sidebar_internal">
+                               <a href="#" target="_blank"><i class="fa fa-rss  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-facebook  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-twitter  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-dribbble  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-linkedin  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-tumblr  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-pinterest  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-youtube  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-vimeo-square  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa fa-instagram  fa-fw"></i></a>
+                               <a href="#" target="_blank"><i class="fa  fa-foursquare  fa-fw"></i></a>
+                           </div>
+                       </li>
+                   </ul>
                </div>
                <!-- #first .widget-area -->
                <div id="second" class="widget-area col-md-3">
-                  
+                   <ul class="xoxo">
+                       <li id="contact_widget-1" class="widget-container contact_sidebar">
+                           <h3 class="widget-title-footer">{{ 'footer.contacts' | t | upcase }}</h3>
+                           <div class="contact_sidebar_wrap">
+                               <p class="widget_contact_addr">
+                                   <i class="fa fa-building-o"></i>3755 Commercial St SE Salem, Corner with Sunny Boulevard, 3755 Commercial OR 97302
+                               </p>
+                               <p class="widget_contact_phone">
+                                   <i class="fa fa-phone"></i><a href="tel:%28305%29+555-4446">(305) 555-4446</a>
+                               </p>
+                               <p class="widget_contact_fax">
+                                   <i class="fa fa-print"></i>(305) 555-4446
+                               </p>
+                           </div>
+                       </li>
+                      <li class="widget-container contact_sidebar">
+                          <div class="contact_sidebar_wrap">
+                              <p class="contact-sidebar-request">
+                                  <input type="submit" class="wpresidence_button" value="{{ 'request-form.send-request' | t | upcase }}"/>
+                              </p>
+                              <p class="contact-sidebar-call-back">
+                                  <input type="submit" class="wpresidence_button"  value="{{ 'request-form.callback' | t | upcase }}"/>
+                              </p>
+                          </div>
+                      </li>
+                   </ul>
                </div>
                <!-- #second .widget-area -->
                <div id="third" class="widget-area col-md-3">
-                  
+                  <div class="textwidget">
+                       <ul class="xoxo">
+                           {% for item in collections %}
+                           <li><a href="{{ item.url | absolute_url }}"> {{ item.title }}</a></li>
+                           {% endfor %}
+                       </ul>
+                   </div>
                </div>
                <!-- #third .widget-area -->
                <div id="fourth" class="widget-area col-md-3">
-                  
+                  <div class="textwidget">
+                       <ul class="xoxo">
+                           {% for page in pages %}
+                           <li><a href="{{ item.url | absolute_url }}"> {{ item.title }}</a></li>
+                           {% endfor %}
+                       </ul>
+                   </div> 
                </div>
                <!-- #fourth .widget-area -->
             </div>

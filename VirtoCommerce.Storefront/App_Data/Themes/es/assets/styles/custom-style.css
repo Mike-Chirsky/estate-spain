@@ -9,3 +9,7 @@
         display: none;
     }
 }
+
+.contact-sidebar-call-back input[type=submit], .contact-sidebar-request input[type=submit] {
+    width: 250px;
+}
