@@ -1,0 +1,67 @@
+﻿{%- for property in product.properties -%}
+    {%- if property.name == 'other_type' -%}
+        {% assign other_type = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'propertysquare' -%}
+        {% assign propertysquare = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'landsquare' -%}
+        {% assign landsquare = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'seaview' -%}
+         {% if property.value %}
+            {% assign seaview = 'yes' %}
+        {% else %}
+            {% assign seaview = 'no' %}
+        {% endif %}
+    {%- endif -%}
+    {%- if property.name == 'distancetosea' -%}
+        {% assign distancetosea = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'distanceairport' -%}
+        {% assign distanceairport = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'bath' -%}
+        {% assign bath = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'rooms' -%}
+        {% assign rooms = property.value %}
+    {%- endif -%}
+     {%- if property.name == 'bedrooms' -%}
+        {% assign bedrooms = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'condition' -%}
+        {% assign condition = property.value %}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if other_type -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.other_type' | t }}:</strong> {{ other_type | capitalize }}</div>
+{%- endif -%}
+{%- if propertysquare -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.propertysquare' | t }}:</strong> {{ propertysquare | capitalize }}</div>
+{%- endif -%}
+{%- if landsquare -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.landsquare' | t }}:</strong> {{ landsquare | capitalize }}</div>
+{%- endif -%}
+{%- if seaview -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.seaview' | t }}:</strong> {{ seaview | t | capitalize }} </div>
+{%- endif -%}
+{%- if distancetosea -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.distancetosea' | t }}:</strong> {{ distancetosea | capitalize }} {{ 'product.m' | t }}</div>
+{%- endif -%}
+{%- if distanceairport -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.distanceairport' | t }}:</strong> {{ distanceairport | capitalize }} {{ 'product.km' | t }}</div>
+{%- endif -%}
+{%- if bath -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.bath' | t }}:</strong> {{ bath | capitalize }}</div>
+{%- endif -%}
+{%- if rooms -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.rooms' | t }}:</strong> {{ rooms | capitalize }}</div>
+{%- endif -%}
+{%- if property.name == 'bedrooms' -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.bedrooms' | t }}:</strong> {{ bedrooms | capitalize }}</div>
+{%- endif -%}
+{%- if property.name == 'condition' -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.condition' | t }}:</strong> {{ condition | capitalize }}</div>
+{%- endif -%}

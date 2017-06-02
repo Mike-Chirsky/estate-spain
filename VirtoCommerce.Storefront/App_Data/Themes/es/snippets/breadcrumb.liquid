@@ -17,7 +17,7 @@
       {% endif %}
     {% endif %}
     <span class="divider" aria-hidden="true">&rsaquo;</span>
-    <span class="breadcrumb--truncate">{{ product.title }}</span>
+    <span class="breadcrumb--truncate">{% include 'product_name' %}</span>
 
   {% elsif template contains 'collection' and collection.handle %}
 

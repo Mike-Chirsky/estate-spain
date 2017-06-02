@@ -24,17 +24,35 @@
         <div class="single-content listing-content">
             <div class="notice_area">
                 <div class="property_categs">
-                    <a href="{{ collection.handle }}" rel="tag">{{ collection.title }}</a>,
+                  <div>
+
+                    {% for property in product.properties %}
+                    {% if property.name == 'region' %}
+                    {{ property.value}}
+                    <span class="divider" >›</span>
+                    {%endif%}
+                    {% endfor %}
+
+                    {% for property in product.properties %}
+                    {% if property.name == 'district' %}
+                    {{ property.value}}
+                    <span class="divider" >›</span>
+                    {%endif%}
+                    {% endfor %}
+                    
                     {% for property in product.properties %}
                     {% if property.name == 'city' %}
                     {{ property.value}}
                     {%endif%}
                     {% endfor %}
+                  </div>
+                  <div>
                     {% for property in product.properties %}
-                    {% if property.name == 'region' %}
+                    {% if property.name == 'h2' %}
                     {{ property.value}}
                     {%endif%}
                     {% endfor %}
+                  </div>
                 </div>
                 <!--<div id="add_favorites" class="isnotfavorite" data-postid="139">add to favorites</div>
                 <div class="download_pdf"></div>-->
@@ -47,21 +65,32 @@
                 </div>
             </div>
             <div class="wpestate_property_description">
-                <h4>{{ product.title }}</h4>
                 <p>{{ product.description }}</p>
             </div>
             <div class="panel-group property-panel" id="accordion_prop_details">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseProperties">
-                            <h4 class="panel-title" id="prop_det">{{ 'product.details' | t }}</h4>
+                            <h4 class="panel-title" id="prop_det">{{ 'product.description' | t }}</h4>
                         </a>
                     </div>
                     <div id="collapseProperties" class="panel-collapse collapse in">
                         <div class="panel-body">
-                            {% for property in product.properties %}
-                            <div class="listing_detail col-md-4"><strong>{{ 'product.' | append: property.name | t }}:</strong> {{ property.value }}</div>
-                            {% endfor %}
+                            {% include 'properties/detail' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group property-panel" id="accordion_prop_full_details">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_full_details" href="#collapseFullDeatils">
+                            <h4 class="panel-title" id="prop_det">{{ 'product.full-info' | t }}</h4>
+                        </a>
+                    </div>
+                    <div id="collapseFullDeatils" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            {% include 'properties/info' %}
                         </div>
                     </div>
                 </div>
