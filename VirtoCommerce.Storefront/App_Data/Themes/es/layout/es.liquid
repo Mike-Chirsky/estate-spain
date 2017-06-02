@@ -38,6 +38,15 @@
       <div class="website-wrapper" id="all_wrapper">
          <div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
             <div class="master_header wide">
+                <div class="top_bar_wrapper">
+                <div class="top_bar">
+                <div class="right-top-widet">
+                <ul class="xoxo">
+                <li id="social_widget_top-2" class="widget-container social_sidebar"><div class="social_sidebar_internal"><a href="#" target="_blank"><div class="social-facebook"></div></a><a href="#" target="_blank"><div class="social-twitter"></div></a><a href="#" target="_blank"><div class="social-google"></div></a><a href="#" target="_blank"><div class="social-linkedIn"></div></a><a href="#" target="_blank"><div class="social-pinterest"></div></a><a href="#" target="_blank"><div class="social-youtube"></div></a><a href="#" target="_blank"><div class="social-vimeo"></div></a><a href="#" target="_blank"><div class="social-instagram"></div></a><a href="#" target="_blank"><div class="social-foursquare"></div></a></div></li> </ul>
+                </div>
+ 
+                </div>
+                </div>
                <div class="mobile_header">
                   <div class="mobile-trigger"><i class=" fa fa-bars"></i></div>
                   <div class="mobile-logo">
@@ -49,37 +58,67 @@
                      <i class=" fa fa-cogs"></i>           
                   </div>
                </div>
-               <div class="header_wrapper  header_type1 header_left hover_type_4 header_alignment_text_">
-                  <div class="header-social-icons"></div>
-                  <div class="header_wrapper_inside " data-logo="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" data-sticky-logo="">
-                     <div class="logo">
-                        <a href="{{ '/' | absolute_url }}">
-                        <img id="logo_image" style="margin-top:0px; height: 48px;" src="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" class="img-responsive retina_ready" alt="logo">
-                        </a>
+               <div class="header_wrapper  header_type2 header_left hover_type_ header_alignment_text_left">
+                 <div class="header_wrapper_inside " data-logo="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" data-sticky-logo="">
+                      <div class="logo">
+                         <a href="{{ '/' | absolute_url}}">
+                         <img id="logo_image" style="margin-top:100px; width: 100px;" src="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" class="img-responsive retina_ready" alt="logo">                    </a>
+                      </div>
+                     <div class="phone-list">
+                         <div class="phone-item">
+                             <a href="tel:88003332887">
+                             <i class="fa fa-phone"></i> 8 800 333 28 87
+                             <div>{{ 'menu.phone' | t }}</div>
+                            </a>
+                         </div>
+                         <div class="phone-item">
+                             <a href="tel:+74951342387">
+                             <i class="fa fa-phone"></i> +7 495 134 23 87
+                             <div>{{ 'menu.phone2' | t }}</div>
+                             </a>
+                         </div>
                      </div>
-                  </div>
-                  <!--<nav id="access">
-                     <div class="menu-main-menu-demo-1-container">
-                        <ul id="menu-main-menu-demo-1" class="menu">
-                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                              <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.home' | t }}</a>
-                           </li>
-                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                              <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.regions' | t }}</a>
-                           </li>
-                           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                              <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.sale' | t }}</a>
-                              <ul class="submenu">
-                                 {% for item in collections %}
-                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a class="menu-item-link" href="{{ item.url | absolte_url }}">{{ item.title }}</a>
-                                 </li>
-                                 {% endfor %}
-                              </ul>
-                           </li>
-                        </ul>
+                     <div class="header-actions">
+                         <div class="action-item">
+                             <button class="wpresidence_button">{{ 'request-form.callback' | t }}</button>
+                         </div>
+                         <div class="action-item">
+                             <button class="wpresidence_button">{{ 'request-form.send-request' | t }}</button>
+                         </div>
                      </div>
-                  </nav>-->
+                      <nav id="access">
+                         <div class="menu-main-menu-container">
+                            <ul id="menu-main-menu-1" class="menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.regions' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.sale' | t }}</a>
+                                    <ul class="sub-menu">
+                                        {% for item in collections %}
+                                        <li id="menu-item-18251" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="menu-item-link" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>            
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.tenancy' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.directory' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.news' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.about' | t }}</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </nav>
+                      <!-- #access -->
+                   </div> 
                </div>
             </div>
             <main class="container content_wrapper" role="main">

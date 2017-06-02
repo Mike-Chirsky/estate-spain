@@ -5,28 +5,14 @@
         {% if forloop.index > 3 %}
         {% break %}
         {% endif %}
-        <div class="preview-item" >
-          <div style="background-image: url('{{ image.src }}');" class="preview-inner"></div>
+        <div class="preview-item">
+          <div class="preview-inner">
+            <div class="preview-inner-image" style="background-image: url('{{ image.src | img_url: 'thumb' }}');"></div>
+          </div>
         </div>
         {% endfor %}
     </div>
   </div>
-    <!--<div class="header_media">
-        <div class="rightmargin full_width_prop">
-            <div class="theme_slider_wrapper theme_slider_2 theme_slider_extended  slick-initialized slick-slider slick-dotted" role="toolbar">
-                <div aria-live="polite" class="slick-list draggable">
-                    <div class="slick-track">
-                        {% for image in product.images %}
-                        {% if forloop.index > 3 %}
-                        {% break %}
-                        {% endif %}
-                        <div class="item_type2 slick-slide slick-cloned" style="background-image: url(&quot;{{ image.src }}&quot;); width: 33%;"></div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
     <div class="row">
     {% include 'breadcrumb' %}
     </div>
@@ -62,7 +48,7 @@
                 </div>
             </div>
             <div class="wpestate_property_description">
-                {{ product.description }}
+                <p>{{ product.description }}</p>
             </div>
             <div class="panel-group property-panel" id="accordion_prop_details">
                 <div class="panel panel-default">
@@ -90,7 +76,7 @@
                     <div class="item">
                     {% endif %}
                         <a href="{{ image.src }}" title="" rel="prettyPhoto" class="prettygalery">
-                            <img src="{{ image.src }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                            <img src="{{ image.src | img_url: 'thumb' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
                         </a>
                     </div>
                     {% endfor %}
@@ -105,7 +91,7 @@
                     {% else %}
                     <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
                     {% endif %}
-                        <img src="{{ image.src }}" alt="slider">
+                        <img src="{{ image.src | img_url: 'thumb' }}" alt="slider">
                     </li>
                     {% endfor %}
                 </ol>

@@ -7,7 +7,8 @@ jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;
     var scroll = jQuery(window).scrollTop();
-    if (scroll >= control_vars.scroll_trigger) {
+    // Disable resize header
+    /*if (scroll >= control_vars.scroll_trigger) {
         if (!Modernizr.mq('only all and (max-width: 1023px)')) {
             
             jQuery(".master_header").addClass("master_header_sticky");
@@ -44,7 +45,7 @@ jQuery(window).scroll(function () {
             switch_logo = jQuery('.header_wrapper_inside').attr('data-logo');
             jQuery('#logo_image').attr('src',switch_logo);
         }
-    }
+    }*/
 });
 
 
@@ -1375,8 +1376,11 @@ jQuery(document).ready(function ($) {
     $(document).click(function(event) {
        
         var clicka  =   event.target.id;
-        var clicka2 =   $(event.target).attr('share_unit');
-        
+        var clicka2 = $(event.target).attr('share_unit');
+        if (clicka === '')
+        {
+            return;
+        }
         if ( !$('#'+clicka).parents('.topmenux').length) {
             $('#user_menu_open').removeClass('iosfixed').hide(400); 
             $('#user_menu_u .navicon-button').removeClass('open');
