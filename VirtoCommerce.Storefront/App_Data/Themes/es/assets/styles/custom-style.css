@@ -134,6 +134,7 @@ span.license {
 
 .header_type2 #access {
     position: relative;
+    margin-left: 230px;
 }
 
 .header_type2 .logo {
@@ -144,7 +145,7 @@ span.license {
     min-height: 140px;
 }
 .header_type2 .logo img {
-    margin-top: 0px !important;
+    margin-top: 15px !important;
 }
 
 .wpestate_property_description div {
