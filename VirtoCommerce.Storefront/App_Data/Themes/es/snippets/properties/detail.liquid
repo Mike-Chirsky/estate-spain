@@ -9,11 +9,7 @@
         {% assign landsquare = property.value %}
     {%- endif -%}
     {%- if property.name == 'seaview' -%}
-         {% if property.value %}
-            {% assign seaview = 'yes' %}
-        {% else %}
-            {% assign seaview = 'no' %}
-        {% endif %}
+         {% assign seaview = property.value %}
     {%- endif -%}
     {%- if property.name == 'distancetosea' -%}
         {% assign distancetosea = property.value %}
@@ -59,9 +55,9 @@
 {%- if rooms -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.rooms' | t }}:</strong> {{ rooms | capitalize }}</div>
 {%- endif -%}
-{%- if property.name == 'bedrooms' -%}
+{%- if bedrooms -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.bedrooms' | t }}:</strong> {{ bedrooms | capitalize }}</div>
 {%- endif -%}
-{%- if property.name == 'condition' -%}
+{%- if condition -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.condition' | t }}:</strong> {{ condition | capitalize }}</div>
 {%- endif -%}

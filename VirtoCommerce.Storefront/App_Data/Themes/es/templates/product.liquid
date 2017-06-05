@@ -105,7 +105,7 @@
                     <div class="item">
                     {% endif %}
                         <a href="{{ image.src }}" title="" rel="prettyPhoto" class="prettygalery">
-                            <img src="{{ image.src | img_url: 'thumb' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                            <img src="{{ image.src | img_url: 'large' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
                         </a>
                     </div>
                     {% endfor %}
@@ -120,7 +120,7 @@
                     {% else %}
                     <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
                     {% endif %}
-                        <img src="{{ image.src | img_url: 'thumb' }}" alt="slider">
+                        <img src="{{ image.src | img_url: 'small' }}" alt="slider">
                     </li>
                     {% endfor %}
                 </ol>
