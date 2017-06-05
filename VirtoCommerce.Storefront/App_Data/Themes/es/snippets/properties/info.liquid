@@ -40,6 +40,9 @@
     {%- if property.name == 'floors' -%}
         {% assign floors = property.value %}
     {%- endif -%}
+    {%- if property.name == 'propertyfloors' -%}
+        {% assign propertyfloors = property.value %}
+    {%- endif -%}
     {%- if property.name == 'lift' -%}
         {% if property.value %}
             {% assign lift = 'yes' %}
@@ -112,7 +115,7 @@
     <div class="listing_detail col-md-4"><strong>{{ 'product.month' | t }}:</strong> {{ month | capitalize }}</div>
 {%- endif -%}
 {%- if year -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.year' | t }}:</strong> {{ year | capitalize }}</div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.year' | t }}:</strong> {{ year | capitalize | replace: ".00", "" }}</div>
 {%- endif -%}
 {%- if repairneeds -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.repairneeds' | t  }}:</strong> {{ repairneeds | t | capitalize }} </div>
@@ -127,10 +130,13 @@
     <div class="listing_detail col-md-4"><strong>{{ 'product.decoration' | t }}:</strong> {{ decoration | capitalize }}</div>
 {%- endif -%}
 {%- if floor -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.floor' | t }}:</strong> {{ floor | capitalize }}</div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.floor' | t }}:</strong> {{ floor | capitalize | replace: ".00", "" }}</div>
 {%- endif -%}
 {%- if floors -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.floors' | t }}:</strong> {{ floors | capitalize }}</div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.floors' | t }}:</strong> {{ floors | capitalize | replace: ".00", "" }}</div>
+{%- endif -%}
+{%- if propertyfloors -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.propertyfloors' | t }}:</strong> {{ propertyfloors | capitalize | replace: ".00", "" }}</div>
 {%- endif -%}
 {%- if lift -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.lift' | t }}:</strong> {{ lift | t | capitalize }} </div>

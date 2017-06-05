@@ -421,7 +421,6 @@ input.form-control::-moz-placeholder {
 #access {
     display: inline-block;
     height: 100%;
-    float: right;
     margin: 0px 185px 0px 0px;
     max-width: 800px;
 }
@@ -1187,7 +1186,6 @@ input.form-control::-moz-placeholder {
 .header_type2 #access {
     display: inline-block;
     height: 59px;
-    float: left;
     margin: -20px 28px 0px 45px;
     position: absolute;
     left: 0px;
@@ -1197,11 +1195,10 @@ input.form-control::-moz-placeholder {
 .customnav.header_type2.header_type2 #access{
     display: inline-block;
     height: 70px;
-    float: left;
     margin: 0px 230px 0px 45px;
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: 10px;
     width: auto;
 }
 
@@ -1390,8 +1387,8 @@ input.form-control::-moz-placeholder {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     padding-top: 30px;
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
+    /*-webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;*/
 }
 
 .container.main_wrapper.has_header_type3{
@@ -1399,8 +1396,8 @@ input.form-control::-moz-placeholder {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
+    /*-webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;*/
 }
 
 .container.main_wrapper.fixed_header.has_header_type3{
@@ -15132,7 +15129,7 @@ span.wpcf7-form-control-wrap {
 }
 
 .header_wrapper.header_type2.header_left.navbar-fixed-top.customnav #access {
-    padding-left: 190px;
+    margin-left: 190px;
 }
 
 .header_wrapper.header_type2.header_center.navbar-fixed-top.customnav #access {

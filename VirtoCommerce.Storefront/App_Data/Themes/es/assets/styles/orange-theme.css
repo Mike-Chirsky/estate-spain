@@ -57,6 +57,9 @@ body, .wide {
 .customnav .submit_action, .customnav #access ul.menu > li > a {
     color: #323a45;
 }
+.customnav #access ul.menu > li > a:hover {
+    color: #FF9800;
+}
 
 .customnav .menu_user_picture {
     border-color: #323a45;

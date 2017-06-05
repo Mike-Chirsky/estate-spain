@@ -8,6 +8,14 @@
     .addition-form {
         display: none;
     }
+    .backtop, .contact-box
+    {
+        display: none;
+    }
+    .contactformwrapper{
+        display: none;
+    }
+
 }
 
 .contact-sidebar-call-back input[type=submit], 
@@ -32,7 +40,7 @@
     height: 110px !important;
 }
 .has_header_type3 .header_media {
-    padding-top: 192px;
+    padding-top: 148px;
 }
 .header_wrapper.customnav {
     height: 90px !important;
@@ -103,6 +111,10 @@ span.license {
     height: 100%;
     width: 30%;
     text-align: center;
+    display: block;
+}
+.customnav .header_wrapper_inside .phone-list {
+    display: none;
 }
 
 .phone-list .phone-item {
@@ -119,6 +131,10 @@ span.license {
     height: 100%;
     width: 33%;
     text-align: center;
+    display: block;
+}
+.customnav .header_wrapper_inside .header-actions {
+    display: none;
 }
 
 .header-actions .action-item {
@@ -151,4 +167,28 @@ span.license {
 .wpestate_property_description div {
     margin-bottom: 13px;
 }
+.deal-type{
+    color: #fff;
+    border-radius: 3px;
+    background-color: #FF9800;
+    padding: 5px;
+    margin-left: 5px;
+}
 
+#logo_image{
+    transition: width 0.7s ease-out;
+}
+.lightbox_property_sidebar .lightbox_property_header h3{
+    text-align: center;
+}
+.full-carusel{
+    height: 100%;
+    width: 100%;
+}
+
+.lightbox_property_slider .carousel-control i{
+    color: #7f7e77;
+}
+.contactformwrapper{
+    width: 400px;
+}

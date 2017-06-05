@@ -7,17 +7,12 @@ jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;
     var scroll = jQuery(window).scrollTop();
-    // Disable resize header
-    /*if (scroll >= control_vars.scroll_trigger) {
+    if (scroll >= control_vars.scroll_trigger) {
         if (!Modernizr.mq('only all and (max-width: 1023px)')) {
             
             jQuery(".master_header").addClass("master_header_sticky");
             jQuery('.logo').addClass('miclogo');
-            switch_logo = jQuery('.header_wrapper_inside').attr('data-sticky-logo');
-           
-            if( switch_logo!=='' ){
-                jQuery('#logo_image').attr('src',switch_logo);
-            }
+            jQuery('#logo_image').css('width','90px');
 
             if( !jQuery(".header_wrapper").hasClass('header_type4') ){
                 jQuery(".header_wrapper").addClass("navbar-fixed-top");
@@ -39,13 +34,13 @@ jQuery(window).scroll(function () {
         jQuery('.barlogo').hide();
         jQuery('#user_menu_open').hide();
         jQuery('.logo').removeClass('miclogo');
-        
-        switch_logo = jQuery('.header_wrapper_inside').attr('data-sticky-logo');
+        jQuery('#logo_image').css('width','150px');
+        /*switch_logo = jQuery('.header_wrapper_inside').attr('data-sticky-logo');
         if( switch_logo!=='' ){
             switch_logo = jQuery('.header_wrapper_inside').attr('data-logo');
             jQuery('#logo_image').attr('src',switch_logo);
-        }
-    }*/
+        }*/
+    }
 });
 
 
@@ -2337,7 +2332,7 @@ function estate_start_lightbox(){
             jump_slide=parseInt( jQuery(this).attr('data-slider-no') );
             var owl = jQuery("#owl-demo").data('owlCarousel');
           
-            owl.jumpTo(jump_slide-1);
+            /*owl.jumpTo(jump_slide-1);*/
         });
                 
         jQuery('.lighbox-image-close').click(function(event){
@@ -2358,7 +2353,6 @@ function estate_start_lightbox(){
             responsive:false
            
         });
-      
           
 }
    

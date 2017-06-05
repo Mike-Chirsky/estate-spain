@@ -40,8 +40,8 @@ function wpestate_map_featured_shortcode_function(){
         scrollwheel: false,
         draggable: true,
         center: new google.maps.LatLng(curent_gview_lat,curent_gview_long ),
-        streetViewControl:false,
-        disableDefaultUI: true,
+        streetViewControl: true,
+        disableDefaultUI: false,
         mapTypeId: mapfunctions_vars.type.toLowerCase(),
     };
     consoole.log(googlecode_regular_vars.type.toLowerCase());
@@ -190,8 +190,8 @@ function wpestate_map_shortcode_function(){
         scrollwheel: false,
         draggable: true,
         center: new google.maps.LatLng(curent_gview_lat,curent_gview_long ),
-        streetViewControl:false,
-        disableDefaultUI: true,
+        streetViewControl:true,
+        disableDefaultUI: false,
         mapTypeId: mapfunctions_vars.type.toLowerCase(),
     };
 

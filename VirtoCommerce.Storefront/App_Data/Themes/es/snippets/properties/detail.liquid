@@ -44,10 +44,10 @@
     <div class="listing_detail col-md-4"><strong>{{ 'product.seaview' | t }}:</strong> {{ seaview | t | capitalize }} </div>
 {%- endif -%}
 {%- if distancetosea -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.distancetosea' | t }}:</strong> {{ distancetosea | capitalize }} {{ 'product.m' | t }}</div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.distancetosea' | t }}:</strong> {{ distancetosea | capitalize | replace: ".00", "" }} {{ 'product.m' | t }}</div>
 {%- endif -%}
 {%- if distanceairport -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.distanceairport' | t }}:</strong> {{ distanceairport | capitalize }} {{ 'product.km' | t }}</div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.distanceairport' | t }}:</strong> {{ distanceairport | capitalize | replace: ".00", "" }} {{ 'product.km' | t }}</div>
 {%- endif -%}
 {%- if bath -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.bath' | t }}:</strong> {{ bath | capitalize }}</div>
