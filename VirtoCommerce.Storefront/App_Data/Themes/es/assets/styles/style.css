@@ -296,7 +296,6 @@ small, .small {
 }
 
 .header_media{
-    background-color: #fdfdfd;
     position: relative;  
     min-height:90px;
 }
@@ -17800,7 +17799,9 @@ span.property_details_type1_id,
     visibility: visible;
 }
 .lightbox_property_content.row{
-        margin: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
 }
 .lightbox_property_wrapper_floorplans .lightbox_property_content.row{
     height:100%;
