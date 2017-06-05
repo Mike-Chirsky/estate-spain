@@ -2168,6 +2168,7 @@ function show_capture(){
     
     jQuery("#carousel-listing  .caption-wrapper span[data-slide-to='"+position+"'] ").addClass('active');
     jQuery("#carousel-listing  .carousel-round-indicators li[data-slide-to='"+position+"'] ").addClass('active');
+    jQuery("#carousel-full").carousel(position);
     slideno=position+1;
 
     slidedif=slideno*146;
