@@ -3,22 +3,22 @@
         {% assign sealine = property.value %}
     {%- endif -%}
     {%- if property.name == 'windowview' -%}
-        {% assign sealine = property.value %}
+        {% assign windowview = property.value %}
     {%- endif -%}
     {%- if property.name == 'tags' -%}
-        {% assign sealine = property.value %}
+        {% assign tags = property.value %}
     {%- endif -%}
     {%- if property.name == 'month' -%}
-        {% assign sealine = property.value %}
+        {% assign month = property.value %}
     {%- endif -%}
     {%- if property.name == 'year' -%}
-        {% assign sealine = property.value %}
+        {% assign year = property.value %}
     {%- endif -%}
     {%- if property.name == 'repairneeds' -%}
         {% if property.value %}
-            {% assign sealine = 'yes' %}
+            {% assign repairneeds = 'yes' %}
         {% else %}
-            {% assign sealine = 'no' %}
+            {% assign repairneeds = 'no' %}
         {% endif %}
     {%- endif -%}
     {%- if property.name == 'airconditioner' -%}
@@ -29,7 +29,16 @@
         {% endif %}
     {%- endif -%}
     {%- if property.name == 'furniture' -%}
-        {% assign sealine = property.value %}
+        {% assign furniture = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'decoration' -%}
+        {% assign decoration = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'floor' -%}
+        {% assign floor = property.value %}
+    {%- endif -%}
+    {%- if property.name == 'floors' -%}
+        {% assign floors = property.value %}
     {%- endif -%}
     {%- if property.name == 'lift' -%}
         {% if property.value %}
@@ -76,10 +85,10 @@
         {% endif %}
     {%- endif -%}
     {%- if property.name == 'terrace' -%}
-        {% assign solarium = property.value %}
+        {% assign terrace = property.value %}
     {%- endif -%}
     {%- if property.name == 'terracesquare' -%}
-        {% assign solarium = property.value %}
+        {% assign terracesquare = property.value %}
     {%- endif -%}
     {%- if property.name == 'license' -%}
         {% if property.value %}
@@ -114,6 +123,15 @@
 {%- if furniture -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.furniture' | t }}:</strong> {{ furniture | capitalize }}</div>
 {%- endif -%}
+{%- if decoration -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.decoration' | t }}:</strong> {{ decoration | capitalize }}</div>
+{%- endif -%}
+{%- if floor -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.floor' | t }}:</strong> {{ floor | capitalize }}</div>
+{%- endif -%}
+{%- if floors -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.floors' | t }}:</strong> {{ floors | capitalize }}</div>
+{%- endif -%}
 {%- if lift -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.lift' | t }}:</strong> {{ lift | t | capitalize }} </div>
 {%- endif -%}
@@ -123,8 +141,11 @@
 {%- if parkingplaces -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.parkingplaces' | t }}:</strong> {{ parkingplaces | capitalize }} </div>
 {%- endif -%}
+{%- if pools -%}
+    <div class="listing_detail col-md-4"><strong>{{ 'product.pools' | t }}:</strong> {{ pools | capitalize }} </div>
+{%- endif -%}
 {%- if pooltype -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.pooltype' | t }}:</strong> {{ pools | capitalize }} </div>
+    <div class="listing_detail col-md-4"><strong>{{ 'product.pooltype' | t }}:</strong> {{ pooltype | capitalize }} </div>
 {%- endif -%}
 {%- if security -%}
     <div class="listing_detail col-md-4"><strong>{{ 'product.security' | t }}:</strong> {{ security | t | capitalize }} </div>
