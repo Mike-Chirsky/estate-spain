@@ -46,7 +46,7 @@
     height: 90px !important;
 }
 .header_wrapper .header_wrapper_inside {
-    height: 100px !important;
+    height: 90px !important;
 }
 .entry-title:first-letter {
     text-transform: uppercase;
@@ -191,4 +191,85 @@ span.license {
 }
 .contactformwrapper{
     width: 400px;
+}
+
+#carousel-full > div > div.item.active > a > img
+{
+    max-height: 515px;
+}
+
+.pagination-custom
+{
+    display: inline-flex;
+}
+
+ul.pagination-custom
+{
+    list-style: none;
+    align-content: center;
+    margin: 0 0 0 15px;
+}
+
+ul.pagination-custom li
+{
+    width: 79.3px;
+    border: 1px solid #8F9EB6;
+    background: #FAFAFA;
+    text-align: center;
+    height: 40px;
+    margin: 0 5px;
+    transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+}
+ul.pagination-custom li.more-page{
+    border: none;
+}
+ul.pagination-custom li.more-page:hover{
+    background: #FAFAFA;
+    color:#8593a9;
+}
+ul.pagination-custom li.active,ul.pagination-custom li:hover
+{
+    background: #8F9EB6;
+    color: #fff;
+
+}
+ul.pagination-custom li:first-child
+{
+    margin-left: 0; 
+}
+.pagination-custom li a
+{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+}
+.pagination-custom li span
+{
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+}
+.pagination-custom li a:hover
+{
+    color: #fff;
+}
+.slider-information
+{
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px 10px;
+    background: rgba(0,0,0,.5);
+
 }

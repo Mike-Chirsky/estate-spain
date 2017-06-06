@@ -1225,7 +1225,7 @@ input.form-control::-moz-placeholder {
 }
 
 .header_type2 #access ul li:hover > ul {
-    top: 59px;
+    top: 70px;
 }
 
 .customnav.header_type2 #access ul ul li:hover > ul,
@@ -1244,12 +1244,12 @@ input.form-control::-moz-placeholder {
 }
 
 .header_type2 .menu > li {
-    line-height: 53px;
+    line-height: 70px;
 }
 
 .customnav.header_type2 .menu > li,
 .customnav.header_type2.hover_type_4  .menu > li{
-    line-height: 70px;
+    line-height: 80px;
 }
 
 .header_type2.hover_type_4 .menu > li{
@@ -6797,16 +6797,16 @@ iframe .player .video-wrapper{
 .carusel-back,
 #carousel-listing .carousel-indicators {
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     float: left;
-    display: inline;
+    /*display: inline;*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     margin: 1px 0px 0px 0px;
     left: 0px;
     bottom: auto;
     height: 83px;
-    bottom: 39px;
+    /*bottom: 39px;*/
     padding-top: 1px;
     z-index:10;
     transition: all .4s ease-in-out;
@@ -15142,7 +15142,7 @@ span.wpcf7-form-control-wrap {
 .customnav #access ul li.with-megamenu:hover>ul.sub-menu,
 .full_width_header .header_type1.header_left.customnav #access ul li.with-megamenu>ul.sub-menu,
 .full_width_header .header_type1.header_left.customnav #access ul li.with-megamenu:hover>ul.sub-menu {
-    top: 70px;
+    top: 80px;
 }
 
 .header_type2.customnav.header_left.customnav #access ul ul li:hover > ul,
@@ -17802,6 +17802,7 @@ span.property_details_type1_id,
     margin: 0px;
     display: flex;
     align-items: center;
+    max-height: 523px;
 }
 .lightbox_property_wrapper_floorplans .lightbox_property_content.row{
     height:100%;

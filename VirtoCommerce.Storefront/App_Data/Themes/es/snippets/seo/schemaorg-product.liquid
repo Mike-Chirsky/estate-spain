@@ -1,10 +1,11 @@
 ﻿{%- case template -%}
 {% when 'product' %}
 <script type="application/ld+json">
+
 {
     "@context": "http://schema.org/",
     "@type": "Product",
-    "name": "{% include 'product-name-w-html' %}",
+    "name": "{{ product.custom_title_without_html }}",
     "sku" : "{{ product.first_available_variant.sku }}",
     "category": "{{ collection.title }}",
     "image": "{{ product.featured_image.src | size_image_link: 'large' }}",

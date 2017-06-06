@@ -7,6 +7,10 @@ jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;
     var scroll = jQuery(window).scrollTop();
+    if(!control_vars)
+    {
+        return;
+    }
     if (scroll >= control_vars.scroll_trigger) {
         if (!Modernizr.mq('only all and (max-width: 1023px)')) {
             
@@ -2170,6 +2174,7 @@ function show_capture(){
     jQuery("#carousel-listing  .carousel-round-indicators li[data-slide-to='"+position+"'] ").addClass('active');
     jQuery("#carousel-full").carousel(position);
     slideno=position+1;
+    jQuery("#current-main-slide").html(slideno);
 
     slidedif=slideno*146;
     if( slidedif > 810){
