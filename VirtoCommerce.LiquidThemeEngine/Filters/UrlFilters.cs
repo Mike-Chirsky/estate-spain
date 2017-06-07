@@ -87,11 +87,6 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
                 if (!string.IsNullOrEmpty(type))
                 {
                     retVal = retVal.AddSuffixToFileUrl(string.Format("_{0}", type));
-                    // TODO: remove after upload correct images 
-                    if (!string.IsNullOrEmpty(type))
-                    {
-                        retVal = retVal.Replace("png", "jpg");
-                    }
                 }
 
                 retVal = retVal.RemoveLeadingUriScheme();

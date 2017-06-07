@@ -12,7 +12,7 @@
     {% if collection %}
       <span class="divider" aria-hidden="true">&rsaquo;</span>
       {% if collection.handle %}
-        {% capture url %}{{ collection.handle | absolute_url }}{% endcapture %}
+        {% capture url %}{{ collection.url | absolute_url }}{% endcapture %}
         {{ collection.title | link_to: url }}
       {% endif %}
     {% endif %}
