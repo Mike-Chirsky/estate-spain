@@ -577,7 +577,7 @@
     <Content Include="App_Data\Themes\es\snippets\footer\contact-us.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\about.liquid" />
     <None Include="App_Data\Themes\es\snippets\headers\header-about.liquid" />
-    <None Include="App_Data\Themes\es\snippets\product-link-list.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\product-link-list.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
     <Content Include="App_Data\Themes\default\assets\active-bg.png" />
