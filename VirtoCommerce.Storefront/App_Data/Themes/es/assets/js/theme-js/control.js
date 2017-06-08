@@ -1355,6 +1355,18 @@ jQuery(document).ready(function ($) {
         window.open(link, '_self');
     });
 
+    jQuery("#advantagesId").click(function () {
+        slideToBlock("#advantages");
+    });
+
+    jQuery("#approachId").click(function () {
+        slideToBlock("#approach");
+    });
+
+    jQuery("#coastId").click(function () {
+        slideToBlock("#coast");
+    });
+
     ////////////////////////////////////////////////////////////////////////////////////////////
     /// user menu
     ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1387,8 +1399,8 @@ jQuery(document).ready(function ($) {
       
         $('.share_unit').hide();
      
-        
-        if (event.target.id == "header_type3_wrapper" || $(event.target).parents("#header_type3_wrapper").size()) { 
+
+        if (event.target.id == "header_type3_wrapper" || ($(event.target).parents("#header_type3_wrapper").length && $(event.target).parents("#header_type3_wrapper").size())) { 
          
         } else { 
             var css_right   = parseFloat( $('.header_type3_menu_sidebar').css('right') );

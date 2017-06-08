@@ -12,6 +12,17 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     {
 
         /// <summary>
+        /// Get deal type 
+        /// </summary>
+        public string DealType
+        {
+            get
+            {
+                return GetPropertyByName("dealtype")?.Value;
+            }
+        }
+
+        /// <summary>
         /// Get other type 
         /// </summary>
         public string OtherType

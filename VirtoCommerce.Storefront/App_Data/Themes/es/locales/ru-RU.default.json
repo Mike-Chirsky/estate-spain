@@ -125,7 +125,7 @@
         "loading": "Working...",
         "meta": {
             "tags": "Tagged \"{{ tags }}\"",
-            "page": "Page {{ page }}"
+            "page": "Страница {{ page }}"
         },
         "404": {
             "title": "404 Page Not Found",
@@ -675,7 +675,8 @@
     },
     "footer": {
         "about": "Об агентстве",
-        "contacts": "Контакты"
+        "contacts": "Контакты",
+        "contact-us-header":"Интересует недвижимость в Испании? Свяжитесь с нами, мы расскажем подробнее!"
     },
     "menu": {
         "home": "Главная",
@@ -691,7 +692,36 @@
     },
     "collection": {
         "read-more": "читать дальше",
-        "full-info": "подробно"
+        "full-info": "подробно",
+        "about-region":"О регионе",
+        "advantages": "Преимущества",
+        "approach":"Кому подойдет",
+        "coast": "Стоимость",
+        "detail": "Подробно"
+    },
+    "filter":{
+        "min-price":"Цена от",
+        "max-price":"Цена до",
+        "action": "Подобрать объект",
+        "dispatch": "Хочу<br/>получать рассылку<br/>по выбранны<br/>свойствам",
+        "flat":"Квартира",
+        "bed-count": "Количество спален",
+        "bath-count":"Количество санузлов",
+        "square":"Площадь объекта",
+        "landsquare":"Площадь участка",
+        "terrace":"Терраса",
+        "parking":"Парковка",
+        "security":"Охрана",
+        "seaview":"Вид на море",
+        "solarium": "Солярий",
+        "pool":"Бассейн",
+        "lift":"Лифт",
+        "garden":"Сад",
+        "furniture":"Меблировка",
+        "order": "Сортировать по:",
+        "price": "Цене",
+        "meters": "Метражу",
+        "is-new": "Новизне"
     },
     "yes": "Да",
     "no": "Нет"

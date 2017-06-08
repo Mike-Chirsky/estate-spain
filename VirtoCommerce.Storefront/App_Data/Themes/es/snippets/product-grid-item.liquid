@@ -1,4 +1,4 @@
-﻿<div class="col-md-12 has_prop_slider  listing_wrapper">
+﻿<div class="col-md-4 has_prop_slider  listing_wrapper">
 <div class="property_listing">
    <div class="listing-unit-img-wrapper">
       <div class="prop_new_details">
@@ -6,12 +6,13 @@
          <div class="property_media"><i class="fa fa-camera" aria-hidden="true"></i> {{ product.images.size }}</div>
          <div class="property_location_image">
             <span class="property_marker"></span>
-            {{ product.region }}, {{- product.city -}}
+            {{ product.region }},&nbsp;{{- product.city -}}
             {%- if (product.city and product.district) -%}
             ,
             {% endif %}
             {{- product.district -}}
          </div>
+         <div class="bg-transparent"></div>
       </div>
       <div id="property_unit_carousel_{{product.id}}" class="carousel property_unit_carousel slide " data-ride="carousel" data-interval="false">
          <div class="carousel-inner">
@@ -36,6 +37,7 @@
             </a>
          </div>
       </div>
+    <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
     <h4><a href="{{ product.url | absolute_url }}">{{ product.custom_title }}</a></h4>
     <div class="listing_unit_price_wrapper">
         <span class="price_label price_label_before"> {% include 'price' with product.price %}</span>

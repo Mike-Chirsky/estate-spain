@@ -1,0 +1,51 @@
+﻿<div class="row contact-us-footer">
+   <div class="col-md-3">
+      <div class="agent_unit" data-link="">
+         <div class="agent-unit-img-wrapper">
+            <div class="prop_new_details_back"></div>
+            <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
+         </div>
+         <div class="">
+            <h4> <a href="">Maria Barlow</a></h4>
+            <div class="agent_position">sales executive</div>
+            <div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div>
+            <div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div>
+            <div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div>
+            <div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-9">
+      <div class="row">
+         <h4>{{ 'footer.contact-us-header' | t }}</h4>
+         <div class="row">
+            <div class="row">
+               <div class="col-md-4">
+                  <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+               </div>
+               <div class="col-md-4">
+                  <input type="text" name="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+               </div>
+               <div class="col-md-4">
+                  <input type="text" name="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control">
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <textarea cols="45" rows="8" aria-required="true" class="form-control">{{ 'request-form.message' | t }}</textarea>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-10">
+                  <span class="license"> {{ 'request-form.license' | t }} </span>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-10">
+                  <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,94 @@
+﻿<form role="search" method="get" action="">
+   <div class="col-md-3 categories">
+      <div class="dropdown form-control ">
+         <div data-toggle="dropdown" id="adv_categ" class=" filter_menu_trigger  " xx="" data-value="all">
+            {{ 'product.region' | t }}
+            <span class="caret  caret_filter "></span>
+         </div>
+         <input type="hidden" name="filter_search_type[]" value="">
+         <ul id="categlist" class="dropdown-menu filter_menu" role="menu" aria-labelledby="adv_categ">
+            <li role="presentation" data-value="all">All Types</li>
+         </ul>
+      </div>
+   </div>
+   <div class="col-md-3 cities">
+      <div class="dropdown form-control ">
+         <div data-toggle="dropdown" id="advanced_city" class=" filter_menu_trigger  " xx="" data-value="all">
+            {{ 'product.city' | t }}
+            <span class="caret  caret_filter "></span>
+         </div>
+         <input type="hidden" name="advanced_city" value="">
+         <ul id="adv-search-city" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_city">
+            <li role="presentation" data-value="all" data-value2="all">All Cities</li>
+         </ul>
+      </div>
+   </div>
+   <div class="col-md-3 areas">
+      <div class="dropdown form-control ">
+         <div data-toggle="dropdown" id="advanced_area" class=" filter_menu_trigger  " xx="" data-value="all">
+            {{ 'product.other_type' | t }}
+            <span class="caret  caret_filter "></span>
+         </div>
+         <input type="hidden" name="advanced_area" value="">
+         <ul id="adv-search-area" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_area">
+            <li role="presentation" data-value="all">All Areas</li>
+         </ul>
+      </div>
+   </div>
+   <div class="col-md-3 property-date">
+      <div class="dropdown form-control ">
+         <div data-toggle="dropdown" id="advanced_area" class=" filter_menu_trigger  " xx="" data-value="all">
+            {{ 'product.condition' | t }}
+            <span class="caret  caret_filter "></span>
+         </div>
+         <input type="hidden" name="advanced_area" value="">
+         <ul id="adv-search-area" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_area">
+            <li role="presentation" data-value="all">All Areas</li>
+         </ul>
+      </div>
+   </div>
+   <div class="col-md-3 property_bedrooms">
+      <div class="dropdown form-control ">
+         <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
+            {{ 'product.distancetosea' | t }}
+            <span class="caret  caret_filter "></span>
+         </div>
+         <input type="hidden" name="min-beds" value="">
+         <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
+            <li data-value="1" value="1">1</li>
+         </ul>
+      </div>
+   </div>
+   <div class="col-md-3 property_bedrooms">
+      <div class="col-xs-6 nopadding">
+         <div class="dropdown form-control ">
+            <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
+               {{ 'filter.min-price' | t }}
+               <span class="caret  caret_filter "></span>
+            </div>
+            <input type="hidden" name="min-beds" value="">
+            <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
+               <li data-value="1" value="1">1</li>
+            </ul>
+         </div>
+      </div>
+      <div class="col-xs-6 nopadding">
+         <div class="dropdown form-control ">
+            <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
+               {{ 'filter.max-price' | t }}
+               <span class="caret  caret_filter "></span>
+            </div>
+            <input type="hidden" name="min-beds" value="">
+            <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
+               <li data-value="1" value="1">1</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-3 property_bedrooms">
+      <input type="text" />
+   </div>
+   <div class="col-md-3">
+      <input name="submit" type="submit" class="wpresidence_button" value="{{ 'filter.action' | t }}">
+   </div>
+</form>
