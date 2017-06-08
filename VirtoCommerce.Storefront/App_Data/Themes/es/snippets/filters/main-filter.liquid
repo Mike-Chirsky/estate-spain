@@ -1,94 +1,208 @@
-﻿<form role="search" method="get" action="">
+﻿<div>
    <div class="col-md-3 categories">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" id="adv_categ" class=" filter_menu_trigger  " xx="" data-value="all">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.region' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" name="filter_search_type[]" value="">
-         <ul id="categlist" class="dropdown-menu filter_menu" role="menu" aria-labelledby="adv_categ">
-            <li role="presentation" data-value="all">All Types</li>
+         <input type="hidden" id="region-value" value="">
+         <ul class="dropdown-menu filter_menu">
+            {% for item in collection.region_filter %}
+                <li data-value="{{ item.value }}">{{ item.value }}</li>
+            {% endfor %}
          </ul>
       </div>
    </div>
    <div class="col-md-3 cities">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" id="advanced_city" class=" filter_menu_trigger  " xx="" data-value="all">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.city' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" name="advanced_city" value="">
-         <ul id="adv-search-city" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_city">
-            <li role="presentation" data-value="all" data-value2="all">All Cities</li>
+         <input type="hidden" id="city-value" value="">
+         <ul class="dropdown-menu filter_menu">
+            {% for item in collection.city_filter %}
+                <li data-value="{{ item.value }}">{{ item.value }}</li>
+            {% endfor %}
          </ul>
       </div>
    </div>
    <div class="col-md-3 areas">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" id="advanced_area" class=" filter_menu_trigger  " xx="" data-value="all">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.other_type' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" name="advanced_area" value="">
-         <ul id="adv-search-area" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_area">
-            <li role="presentation" data-value="all">All Areas</li>
+         <input type="hidden" id="other-type-value" value="">
+         <ul class="dropdown-menu filter_menu">
+            {% for item in collection.other_type_filter %}
+                <li data-value="{{ item.value }}">{{ item.value }}</li>
+            {% endfor %}
          </ul>
       </div>
    </div>
    <div class="col-md-3 property-date">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" id="advanced_area" class=" filter_menu_trigger  " xx="" data-value="all">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.condition' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" name="advanced_area" value="">
-         <ul id="adv-search-area" class="dropdown-menu filter_menu" role="menu" aria-labelledby="advanced_area">
-            <li role="presentation" data-value="all">All Areas</li>
+         <input type="hidden" id="condition-value" value="">
+         <ul class="dropdown-menu filter_menu">
+            {% for item in collection.condit_filter %}
+                <li data-value="{{ item.value }}">{{ item.value }}</li>
+            {% endfor %}
          </ul>
       </div>
    </div>
    <div class="col-md-3 property_bedrooms">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.distancetosea' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" name="min-beds" value="">
-         <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
-            <li data-value="1" value="1">1</li>
+         <input type="hidden" id="distancetosea-range" value="">
+         <ul class="dropdown-menu filter_menu">
+            <li data-value="300" value="300">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
+            <li data-value="300-500" value="300-500">300 - 500 {{'filter.m' | t }}</li>
+            <li data-value="500-1000" value="500-1000">500 - 1000 {{'filter.m' | t }}</li>
+            <li data-value="1000-2000" value="1000-2000">1000 - 2000 {{'filter.m' | t }}</li>
+            <li data-value="2000-5000" value="2000-5000">2000 - 5000 {{'filter.m' | t }}</li>
+            <li data-value="5000" value="5000">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
          </ul>
       </div>
    </div>
    <div class="col-md-3 property_bedrooms">
-      <div class="col-xs-6 nopadding">
-         <div class="dropdown form-control ">
-            <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
-               {{ 'filter.min-price' | t }}
-               <span class="caret  caret_filter "></span>
+    <div class="col-xs-6 nopadding">
+        <div class="dropdown form-control ">
+            <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+                {{ 'filter.min-price' | t }}
+                <span class="caret  caret_filter "></span>
             </div>
-            <input type="hidden" name="min-beds" value="">
-            <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
-               <li data-value="1" value="1">1</li>
+            <input type="hidden" id="min-price-value" value="">
+            <ul class="dropdown-menu filter_menu">
+                <li data-value="100000" value="100000">{{ 'filter.from' | t }} 100 000 {{ current_currency.symbol }}</li>
+                <li data-value="150000" value="150000">{{ 'filter.from' | t }} 150 000 {{ current_currency.symbol }}</li>
+                <li data-value="200000" value="200000">{{ 'filter.from' | t }} 200 000 {{ current_currency.symbol }}</li>
+                <li data-value="500000" value="500000">{{ 'filter.from' | t }} 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="1000000" value="1000000">{{ 'filter.from' | t }} 1 000 000 {{ current_currency.symbol }}</li>
+                <li data-value="1500000" value="1500000">{{ 'filter.from' | t }} 1 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="2000000" value="2000000">{{ 'filter.from' | t }} 2 000 000  {{ current_currency.symbol }}</li>
             </ul>
-         </div>
-      </div>
-      <div class="col-xs-6 nopadding">
-         <div class="dropdown form-control ">
-            <div data-toggle="dropdown" id="min-beds" class=" filter_menu_trigger  " xx="" data-value="all">
-               {{ 'filter.max-price' | t }}
-               <span class="caret  caret_filter "></span>
+        </div>
+    </div>
+    <div class="col-xs-6 nopadding">
+        <div class="dropdown form-control ">
+            <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+                {{ 'filter.max-price' | t }}
+                <span class="caret  caret_filter "></span>
             </div>
-            <input type="hidden" name="min-beds" value="">
-            <ul id="search-min-beds" class="dropdown-menu filter_menu" role="menu" aria-labelledby="min-beds">
-               <li data-value="1" value="1">1</li>
+            <input type="hidden" id="max-price-value" value="">
+            <ul class="dropdown-menu filter_menu">
+                <li data-value="100000" value="100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+                <li data-value="150000" value="150000">{{ 'filter.to' | t }} 150 000 {{ current_currency.symbol }}</li>
+                <li data-value="200000" value="200000">{{ 'filter.to' | t }} 200 000 {{ current_currency.symbol }}</li>
+                <li data-value="500000" value="500000">{{ 'filter.to' | t }} 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="1000000" value="1000000">{{ 'filter.to' | t }} 1 000 000 {{ current_currency.symbol }}</li>
+                <li data-value="1500000" value="1500000">{{ 'filter.to' | t }} 1 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="2000000" value="2000000">{{ 'filter.to' | t }} 2 000 000  {{ current_currency.symbol }}</li>
             </ul>
-         </div>
-      </div>
+        </div>
+    </div>
    </div>
    <div class="col-md-3 property_bedrooms">
-      <input type="text" />
+      <input type="text" id="price-value" />
    </div>
    <div class="col-md-3">
-      <input name="submit" type="submit" class="wpresidence_button" value="{{ 'filter.action' | t }}">
+      <button id="send-main-filter" type="submit" class="wpresidence_button">{{ 'filter.action' | t }}</button>
    </div>
-</form>
+</div>
+
+<script>
+// set price from range
+jQuery("#min-price-value, #max-price-value").change(function () {
+    var price = "";
+    var minPriceVl = jQuery("#min-price-value").val();
+    var maxPriceVl = jQuery("#max-price-value").val();
+    if(minPriceVl && maxPriceVl)
+    {
+        price = formatPrice(minPriceVl) + ' - ' + formatPrice(maxPriceVl);
+    }
+    else if(minPriceVl)
+    {
+        price = formatPrice(minPriceVl);
+    }
+    else if(maxPriceVl)
+    {
+        price = formatPrice(maxPriceVl);
+    }
+    jQuery("#price-value").val(price + " {{ current_currency.symbol}}");
+});
+jQuery("#price-value").change(function(){
+    var prices = jQuery("#price-value").val().replace('{{ current_currency.symbol}}', "").replace(/ /g,"").trim().split('-');
+    if(prices.length > 1 && prices[1] != '') {
+        price = formatPrice(prices[0])+' - '+ formatPrice(prices[1]);
+    }
+    else {
+        price = formatPrice(prices[0]) + (event.keyCode === 109? ' - ' : '');
+    }
+    price += " {{ current_currency.symbol}}";
+    jQuery("#price-value").val(price);
+});
+/*document.getElementById("price-value").addEventListener ("keyup", function (event) {
+    if(event.keyCode === 37 || event.keyCode === 38 || event.keyCode === 39 || event.keyCode === 40)
+        return;
+    var thisPos = this.selectionStart;
+    var prices = jQuery("#price-value").val().replace('{{ current_currency.symbol}}', "").replace(/ /g,"").trim().split('-');
+    var price = "";
+    if(prices.length > 1 && prices[1] != '') {
+        price = formatPrice(prices[0])+' - '+ formatPrice(prices[1]);
+    }
+    else {
+        price = formatPrice(prices[0]) + (event.keyCode === 109? ' - ' : '');
+    }
+    price += " {{ current_currency.symbol}}";
+    jQuery("#price-value").val(price);
+    this.setSelectionRange(thisPos + 1, thisPos + 1);
+});*/
+
+jQuery("#price-value").keyup(function(value){
+    
+});
+function formatPrice(price) {
+    if(!price)
+    {
+        return "";
+    }
+    price = parseInt(price);
+    return price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ");
+}
+jQuery("#send-main-filter").click(function(){
+    var queryString = "";
+    if(jQuery("#region-value").val())
+    {
+        queryString+="region:" + jQuery("#region-value").val() + ";";
+    }
+    if(jQuery("#city-value").val())
+    {
+        queryString+="city:" + jQuery("#city-value").val() + ";";
+    }
+    if(jQuery("#other-type-value").val())
+    {
+        queryString+="other_type:" + jQuery("#other-type-value").val() + ";";
+    }
+    if(jQuery("#condition-value").val())
+    {
+        queryString+="condition:" + jQuery("#condition-value").val() + ";";
+    }
+    if(jQuery("#distancetosea-range").val())
+    {
+        queryString+="distancetosea:" + jQuery("#distancetosea-range").val() + ";";
+    }
+    if(jQuery("#price-value").val())
+    {
+        queryString+="price:" + jQuery("#price-value").val().replace(/ |{{current_currency.symbol}}/g,"") + ";";
+    }
+    window.location.href = '{{ collection.url | full_url }}'+ '?terms=' + encodeURIComponent(queryString.trim(";"));
+});
+</script>

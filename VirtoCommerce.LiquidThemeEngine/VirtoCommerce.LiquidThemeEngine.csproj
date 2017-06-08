@@ -186,6 +186,7 @@
     <Compile Include="Objects\Description.cs" />
     <Compile Include="Objects\Descriptions.cs" />
     <Compile Include="Objects\Discount.cs" />
+    <Compile Include="Objects\Extensions\Collection.cs" />
     <Compile Include="Objects\Extensions\Paginate.cs" />
     <Compile Include="Objects\Extensions\Product.cs" />
     <Compile Include="Objects\Form.cs" />

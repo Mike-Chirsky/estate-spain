@@ -1,7 +1,7 @@
 ﻿/*global $, jQuery, ajaxcalls_vars, document, control_vars, window*/
 var width,height;
 width   = jQuery(window).width();
-height  = jQuery(window).height();
+height = jQuery(window).height();
 
 jQuery(window).scroll(function () {
     "use strict";
@@ -1510,8 +1510,8 @@ jQuery(document).ready(function ($) {
             pick = $(this).text();
             value = $(this).attr('data-value');
             parent = $(this).parent().parent();  
-            parent.find(parent_replace).text(pick).append('<span class="caret caret_filter"></span>').attr('data-value',value);
-           parent.find('input').val(value);    
+            parent.find(parent_replace).text(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);
+            parent.find('input').val(value).trigger('change');    
         });
     });
  
