@@ -2746,7 +2746,7 @@ input.form-control::-moz-placeholder {
     padding: 9px 12px;
     font-size: 13px;
     line-height: 1.428571429;
-    color: #8593a9;
+    color: #999;
     vertical-align: middle;
     background-color: #ffffff;
     background-image: none;
@@ -2760,7 +2760,7 @@ input.form-control::-moz-placeholder {
 }
 
 .form-control::-webkit-input-placeholder {
-    color: #8593a9;
+    color: #999;
 }
 
 .dropdown-menu{
