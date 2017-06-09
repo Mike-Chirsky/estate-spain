@@ -941,6 +941,7 @@
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\main-filter.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\additional-filter.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\headers\city-header.liquid" />
     <None Include="App_Data\Themes\es\snippets\headers\header-name.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-list.liquid" />
     <None Include="AutoRestClients\!readme.txt" />

@@ -510,3 +510,54 @@ body{
     padding-bottom: 0;
     min-height: 340px;
 }
+.city-tails .col-md-4, .city-tails .col-md-9, .city-tails .col-md-3{
+    padding: 0;
+    margin: 0;
+    min-height: 300px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.city-tails .block-inner{
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    min-height: 300px;
+    padding: 30px;
+    padding-bottom: 2px;
+    color: #fff;
+}
+
+.city-tails .block-inner h4
+{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.city-tails .block-inner ul{
+    list-style: none;
+}
+.city-tails .block-inner li{
+    color: #fff;
+    padding: 3px;
+}
+.city-tails .block-inner li a{
+    color: #fff;
+}
+.city-tails .block-inner.center{
+    text-align: center;
+}
+
+.city-header h2{
+    width: 100%;
+    text-align: center;
+}
+
+.city-tails .block-inner .bottom
+{
+    position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 14%;
+    width: 100%;
+}
+
