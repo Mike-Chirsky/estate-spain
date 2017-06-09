@@ -1,5 +1,5 @@
 ﻿<div>
-   <div class="col-md-3 categories">
+   <div class="col-md-3">
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.region' | t }}
@@ -13,7 +13,7 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3 cities">
+   <div class="col-md-3">
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.city' | t }}
@@ -27,7 +27,7 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3 areas">
+   <div class="col-md-3">
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.other_type' | t }}
@@ -41,7 +41,7 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3 property-date">
+   <div class="col-md-3">
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.condition' | t }}
@@ -55,7 +55,7 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3 property_bedrooms">
+   <div class="col-md-3">
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
             {{ 'product.distancetosea' | t }}
@@ -72,46 +72,26 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3 property_bedrooms">
-    <div class="col-xs-6 nopadding">
+   <div class="col-md-3">
         <div class="dropdown form-control ">
             <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
-                {{ 'filter.min-price' | t }}
+                {{ 'filter.price2' | t }}
                 <span class="caret  caret_filter "></span>
             </div>
-            <input type="hidden" id="min-price-value" value="">
+            <input type="hidden" id="price-value" value="">
             <ul class="dropdown-menu filter_menu">
-                <li data-value="100000" value="100000">{{ 'filter.from' | t }} 100 000 {{ current_currency.symbol }}</li>
-                <li data-value="150000" value="150000">{{ 'filter.from' | t }} 150 000 {{ current_currency.symbol }}</li>
-                <li data-value="200000" value="200000">{{ 'filter.from' | t }} 200 000 {{ current_currency.symbol }}</li>
-                <li data-value="500000" value="500000">{{ 'filter.from' | t }} 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="1000000" value="1000000">{{ 'filter.from' | t }} 1 000 000 {{ current_currency.symbol }}</li>
-                <li data-value="1500000" value="1500000">{{ 'filter.from' | t }} 1 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="2000000" value="2000000">{{ 'filter.from' | t }} 2 000 000  {{ current_currency.symbol }}</li>
+                <li data-value="price-under-100000" value="price-under-100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-100000-150000" value="price-100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-150000-200000" value="price-150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-200000-500000" value="price-200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-500000-1000000" value="price-500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-1000000-1500000" value="price-1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-over-2000000" value="price-over-2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
             </ul>
-        </div>
-    </div>
-    <div class="col-xs-6 nopadding">
-        <div class="dropdown form-control ">
-            <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
-                {{ 'filter.max-price' | t }}
-                <span class="caret  caret_filter "></span>
-            </div>
-            <input type="hidden" id="max-price-value" value="">
-            <ul class="dropdown-menu filter_menu">
-                <li data-value="100000" value="100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
-                <li data-value="150000" value="150000">{{ 'filter.to' | t }} 150 000 {{ current_currency.symbol }}</li>
-                <li data-value="200000" value="200000">{{ 'filter.to' | t }} 200 000 {{ current_currency.symbol }}</li>
-                <li data-value="500000" value="500000">{{ 'filter.to' | t }} 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="1000000" value="1000000">{{ 'filter.to' | t }} 1 000 000 {{ current_currency.symbol }}</li>
-                <li data-value="1500000" value="1500000">{{ 'filter.to' | t }} 1 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="2000000" value="2000000">{{ 'filter.to' | t }} 2 000 000  {{ current_currency.symbol }}</li>
-            </ul>
-        </div>
     </div>
    </div>
    <div class="col-md-3 property_bedrooms">
-      <input type="text" id="price-value" />
+      
    </div>
    <div class="col-md-3">
       <button id="send-main-filter" type="submit" class="wpresidence_button">{{ 'filter.action' | t }}</button>
@@ -119,6 +99,7 @@
 </div>
 
 <script>
+{% comment %}
 // set price from range
 jQuery("#min-price-value, #max-price-value").change(function () {
     var price = "";
@@ -177,6 +158,7 @@ function formatPrice(price) {
     price = parseInt(price);
     return price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ");
 }
+{% endcomment %}
 jQuery("#send-main-filter").click(function(){
     var queryString = "";
     if(jQuery("#region-value").val())
@@ -201,7 +183,7 @@ jQuery("#send-main-filter").click(function(){
     }
     if(jQuery("#price-value").val())
     {
-        queryString+="price:" + jQuery("#price-value").val().replace(/ |{{current_currency.symbol}}/g,"") + ";";
+        queryString+="price:" + jQuery("#price-value").val();
     }
     window.location.href = '{{ collection.url | full_url }}'+ '?terms=' + encodeURIComponent(queryString.trim(";"));
 });

@@ -3,6 +3,15 @@ var width,height;
 width   = jQuery(window).width();
 height = jQuery(window).height();
 
+/** 
+ * Product slider
+ */
+jQuery("#slider-product-prev").click(function(){
+    
+});
+jQuery("#slider-product-next").click(function(){
+
+});
 jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;

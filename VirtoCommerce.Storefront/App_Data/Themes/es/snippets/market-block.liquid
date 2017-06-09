@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="product-slider-header">
+        <a id="slider-product-prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a id="slider-product-next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+    <div class="row product-slider">
+    <div class="product-slider-inner">
+        {% for product in collection.products %}
+            {% if forloop.index > 6 %}
+                {% break %}
+            {% endif %}
+            {% include 'product-grid-item' with product %}
+        {% endfor %}
+    </div>       
+    </div>
+    </div>
+</div>
