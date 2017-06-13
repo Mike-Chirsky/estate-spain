@@ -504,6 +504,9 @@
     <Content Include="App_Data\Themes\es\assets\js\services.js" />
     <Content Include="App_Data\Themes\es\assets\js\slider.min.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\custom-js.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.contentcarousel.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.easing.1.3.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.mousewheel.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\jquery.ui.core.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\dense.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\encoder.js" />
@@ -565,7 +568,9 @@
     <Content Include="App_Data\Themes\es\assets\storefront.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\ca-style.css" />
     <Content Include="App_Data\Themes\es\assets\styles\custom-style.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\jquery.jscrollpane.css" />
     <Content Include="App_Data\Themes\es\assets\styles\my_media.css" />
     <Content Include="App_Data\Themes\es\assets\styles\orange-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\style.css" />

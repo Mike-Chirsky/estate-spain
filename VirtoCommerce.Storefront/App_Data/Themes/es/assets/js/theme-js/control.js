@@ -1516,7 +1516,7 @@ jQuery(document).ready(function ($) {
                 parent_replace='.sidebar_filter_menu';      
             }
             
-            pick = $(this).text();
+            pick = $(this).attr('data-value')!="*" ? $(this).text() : $(this).attr('value');
             value = $(this).attr('data-value');
             parent = $(this).parent().parent();  
             parent.find(parent_replace).text(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);

@@ -199,6 +199,7 @@ namespace VirtoCommerce.Storefront.Services
 
             var searchCriteria = criteria.ToProductSearchDto(workContext);
             var result = await _searchApi.SearchApiModule.SearchProductsAsync(workContext.CurrentStore.Id, searchCriteria);
+            await LoadAllValuesForSelectedTerms(criteria, workContext, result);
             var products = result.Products?.Select(x => x.ToProduct(workContext.CurrentLanguage, workContext.CurrentCurrency, workContext.CurrentStore)).ToList() ?? new List<Product>();
 
             if (products.Any())
@@ -239,6 +240,40 @@ namespace VirtoCommerce.Storefront.Services
                 Products = new StaticPagedList<Product>(products, criteria.PageNumber, criteria.PageSize, (int?)result.TotalCount ?? 0),
                 Aggregations = !result.Aggregations.IsNullOrEmpty() ? result.Aggregations.Select(x => x.ToAggregation(workContext.CurrentLanguage.CultureName)).ToArray() : new Aggregation[] { }
             };
+        }
+
+        private async Task LoadAllValuesForSelectedTerms(ProductSearchCriteria criteria, WorkContext workContext, AutoRestClients.SearchApiModuleApi.Models.ProductSearchResult result)
+        {
+            if (criteria.Terms != null && criteria.Terms.Any())
+            {
+                var tasks = new List<Task>();
+
+                foreach (var termName in criteria.Terms.Select(s => s.Name).Distinct())
+                {
+                    // Load Only Aggregations without Selected Term and Products
+                    var allAggrSearchCriteria = criteria.ToProductSearchDto(workContext);
+                    allAggrSearchCriteria.Take = 0;
+                    var updatedTerms = allAggrSearchCriteria.Terms.Where(i => !i.StartsWith(termName + ":")).ToList();
+                    allAggrSearchCriteria.Terms = updatedTerms;
+
+                    var task = _searchApi.SearchApiModule.SearchProductsAsync(workContext.CurrentStore.Id, allAggrSearchCriteria).
+                        ContinueWith((t) => CopyAggregations(t.Result.Aggregations?.FirstOrDefault(i => i.Field == termName), result.Aggregations?.FirstOrDefault(i => i.Field == termName)));
+
+                    tasks.Add(task);
+                }
+
+                await Task.WhenAll(tasks);
+            }
+        }
+
+        private void CopyAggregations(AutoRestClients.SearchApiModuleApi.Models.Aggregation srcAggregation, AutoRestClients.SearchApiModuleApi.Models.Aggregation destAggregation)
+        {
+            if (srcAggregation == null || destAggregation == null)
+                return;
+
+            var newItems = srcAggregation.Items.Where(i => destAggregation.Items.FirstOrDefault(j => string.Equals(j.Value as string, i.Value as string)) == null);
+
+            destAggregation.Items.AddRange(newItems);
         }
 
         protected virtual async Task LoadProductVendorsAsync(List<Product> products, WorkContext workContext)

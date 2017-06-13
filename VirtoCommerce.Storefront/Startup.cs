@@ -69,6 +69,8 @@ using VirtoCommerce.Storefront.Services;
 using VirtoCommerce.Tools;
 using VirtoCommerce.Storefront.Model.Recommendations;
 using VirtoCommerce.Storefront.Services.Recommendations;
+using VirtoCommerce.LiquidThemeEngine.Converters;
+using VirtoCommerce.LiquidThemeEngine.Converters.Extentsions;
 
 [assembly: OwinStartup(typeof(Startup))]
 [assembly: PreApplicationStartMethod(typeof(Startup), "PreApplicationStart")]
@@ -258,6 +260,9 @@ namespace VirtoCommerce.Storefront
             container.RegisterType<IAsyncObserver<QuoteRequestUpdatedEvent>, CustomerServiceImpl>("Invalidate customer cache when quote request was updated");
             container.RegisterType<IAsyncObserver<UserLoginEvent>, CartBuilder>("Merge anonymous cart with loggined user cart");
             container.RegisterType<IAsyncObserver<UserLoginEvent>, QuoteRequestBuilder>("Merge anonymous quote request with loggined user quote");
+
+            // custom register
+            container.RegisterType<ShopifyModelConverter, EsShopifyModelConverter>();
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
             var themesBasePath = cmsContentConnectionString.RootPath.TrimEnd('/') + "/" + "Themes";

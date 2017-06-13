@@ -1,12 +1,13 @@
 ﻿<div>
    <div class="col-md-3">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
             {{ 'product.region' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="region-value" value="">
+         <input type="hidden" id="region-value" value="{{ collection.current_region_filter.value }}">
          <ul class="dropdown-menu filter_menu">
+            <li data-value="*" value="{{ 'product.region' | t }}">{{ 'filter.any' | t }}</li>
             {% for item in collection.region_filter %}
                 <li data-value="{{ item.value }}">{{ item.value }}</li>
             {% endfor %}
@@ -15,12 +16,13 @@
    </div>
    <div class="col-md-3">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_city_filter.value }}">
             {{ 'product.city' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="city-value" value="">
+         <input type="hidden" id="city-value" value="{{ collection.current_city_filter.value }}">
          <ul class="dropdown-menu filter_menu">
+            <li data-value="*" value="{{ 'product.city' | t }}">{{ 'filter.any' | t }}</li>
             {% for item in collection.city_filter %}
                 <li data-value="{{ item.value }}">{{ item.value }}</li>
             {% endfor %}
@@ -29,12 +31,13 @@
    </div>
    <div class="col-md-3">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}">
             {{ 'product.other_type' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="other-type-value" value="">
+         <input type="hidden" id="other-type-value" value="{{ collection.current_other_type_filter.value }}">
          <ul class="dropdown-menu filter_menu">
+            <li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any2' | t }}</li>
             {% for item in collection.other_type_filter %}
                 <li data-value="{{ item.value }}">{{ item.value }}</li>
             {% endfor %}
@@ -43,12 +46,13 @@
    </div>
    <div class="col-md-3">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_condit_filter.value }}">
             {{ 'product.condition' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="condition-value" value="">
+         <input type="hidden" id="condition-value" value="{{ collection.current_condit_filter.value }}">
          <ul class="dropdown-menu filter_menu">
+            <li data-value="*" value="{{ 'product.condition' | t }}">{{ 'filter.any2' | t }}</li>
             {% for item in collection.condit_filter %}
                 <li data-value="{{ item.value }}">{{ item.value }}</li>
             {% endfor %}
@@ -57,41 +61,42 @@
    </div>
    <div class="col-md-3">
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_sea_distance_filter.value }}">
             {{ 'product.distancetosea' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="distancetosea-range" value="">
+         <input type="hidden" id="distancetosea-range" value="{{ collection.current_sea_distance_filter.value }}">
          <ul class="dropdown-menu filter_menu">
-            <li data-value="distancetosea-under-300" value="distancetosea-under-300">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
-            <li data-value="distancetosea-300-500" value="distancetosea-300-500">300 - 500 {{'filter.m' | t }}</li>
-            <li data-value="distancetosea-500-1000" value="distancetosea-500-1000">500 - 1000 {{'filter.m' | t }}</li>
-            <li data-value="distancetosea-1000-2000" value="distancetosea-1000-2000">1000 - 2000 {{'filter.m' | t }}</li>
-            <li data-value="distancetosea-2000-5000" value="distancetosea-2000-5000">2000 - 5000 {{'filter.m' | t }}</li>
-            <li data-value="distancetosea-over-5000" value="distancetosea-over-5000">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
+            <li data-value="*" value="{{ 'product.distancetosea' | t }}">{{ 'filter.any2' | t }}</li>
+            <li data-value="distancetosea-under-300">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
+            <li data-value="distancetosea-300-500">300 - 500 {{'filter.m' | t }}</li>
+            <li data-value="distancetosea-500-1000">500 - 1000 {{'filter.m' | t }}</li>
+            <li data-value="distancetosea-1000-2000">1000 - 2000 {{'filter.m' | t }}</li>
+            <li data-value="distancetosea-2000-5000">2000 - 5000 {{'filter.m' | t }}</li>
+            <li data-value="distancetosea-over-5000">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
          </ul>
       </div>
    </div>
    <div class="col-md-3">
         <div class="dropdown form-control ">
-            <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="">
+            <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_price_range_filter.value }}">
                 {{ 'filter.price2' | t }}
                 <span class="caret  caret_filter "></span>
             </div>
-            <input type="hidden" id="price-value" value="">
+            <input type="hidden" id="price-value" value="{{ collection.current_price_range_filter.value }}">
             <ul class="dropdown-menu filter_menu">
-                <li data-value="price-under-100000" value="price-under-100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-100000-150000" value="price-100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-150000-200000" value="price-150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-200000-500000" value="price-200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-500000-1000000" value="price-500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-1000000-1500000" value="price-1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
-                <li data-value="price-over-2000000" value="price-over-2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
+                <li data-value="*" value="{{ 'filter.price2' | t }}">{{ 'filter.any3' | t }}</li>
+                <li data-value="price-under-100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
+                <li data-value="price-over-2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
             </ul>
     </div>
    </div>
-   <div class="col-md-3 property_bedrooms">
-      
+   <div class="col-md-3">
    </div>
    <div class="col-md-3">
       <button id="send-main-filter" type="submit" class="wpresidence_button">{{ 'filter.action' | t }}</button>
@@ -99,6 +104,20 @@
 </div>
 
 <script>
+jQuery(document).ready(function(){
+    // region
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_region_filter.value}}');
+    // city
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_city_filter.value}}');
+    //other types
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_other_type_filter.value}}');
+    //condition
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_condit_filter.value}}');
+    //distance to sea
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_sea_distance_filter.value}}');
+    // price range
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_price_range_filter.value}}');
+});
 {% comment %}
 // set price from range
 jQuery("#min-price-value, #max-price-value").change(function () {
@@ -161,27 +180,27 @@ function formatPrice(price) {
 {% endcomment %}
 jQuery("#send-main-filter").click(function(){
     var queryString = "";
-    if(jQuery("#region-value").val())
+    if(jQuery("#region-value").val() && jQuery("#region-value").val() !="*")
     {
         queryString+="region:" + jQuery("#region-value").val() + ";";
     }
-    if(jQuery("#city-value").val())
+    if(jQuery("#city-value").val() && jQuery("#city-value").val() != "*")
     {
         queryString+="city:" + jQuery("#city-value").val() + ";";
     }
-    if(jQuery("#other-type-value").val())
+    if(jQuery("#other-type-value").val() && jQuery("#other-type-value").val() != "*")
     {
         queryString+="other_type:" + jQuery("#other-type-value").val() + ";";
     }
-    if(jQuery("#condition-value").val())
+    if(jQuery("#condition-value").val() && jQuery("#condition-value").val() != "*")
     {
         queryString+="condition:" + jQuery("#condition-value").val() + ";";
     }
-    if(jQuery("#distancetosea-range").val())
+    if(jQuery("#distancetosea-range").val() && jQuery("#distancetosea-range").val() != "*")
     {
         queryString+="distancetosea:" + jQuery("#distancetosea-range").val() + ";";
     }
-    if(jQuery("#price-value").val())
+    if(jQuery("#price-value").val() && jQuery("#price-value").val() != "*")
     {
         queryString+="price:" + jQuery("#price-value").val();
     }
