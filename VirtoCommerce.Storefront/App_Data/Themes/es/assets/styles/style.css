@@ -2980,6 +2980,7 @@ input.form-control::-moz-placeholder {
 
 .search_wr_6 .adv-search-1{
     border:none;
+    z-index: 12;
 }
 
 .search_wr_6 .nav-tabs{

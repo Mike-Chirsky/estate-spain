@@ -1,4 +1,4 @@
-﻿<div>
+﻿<div style="z-index: 10000">
    <div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
@@ -96,10 +96,29 @@
             </ul>
     </div>
    </div>
+   {%- if region_product == null or city_product == null or type_product == null  -%}
+        {%- if region_product -%}
+        <div class="col-md-3">
+        </div>
+        {%- endif -%}
+        {%- if city_product -%}
+        <div class="col-md-3">
+        </div>
+        {%- endif -%}
+        {%- if type_product -%}
+        <div class="col-md-3">
+        </div>
+        {%- endif -%}
+   {%- endif -%}
    <div class="col-md-3">
    </div>
    <div class="col-md-3">
       <button id="send-main-filter" type="submit" class="wpresidence_button">{{ 'filter.action' | t }}</button>
+   </div>
+   <div class="adv_extended_options_text" id="adv_extended_options_text_adv">{{ 'filter.addition-options' | t }}</div>
+   <div class="extended_search_check_wrapper" style="display: none;">
+        <span id="adv_extended_close_adv" class="adv_extended_close_button" style="display: none;"><i class="fa fa-times"></i></span>
+        {% include 'filters/additional-filter' %}
    </div>
 </div>
 
