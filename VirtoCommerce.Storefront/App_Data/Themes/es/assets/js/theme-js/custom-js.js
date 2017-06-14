@@ -46,5 +46,7 @@ function setFilter(mainUrl) {
             queryString += jQuery(item).val() + ",";
         });
     }
-    window.location.href = mainUrl + '?terms=' + encodeURIComponent(queryString.trim(";"));
+    if (queryString.length > 0) {
+        window.location.href = mainUrl + '?terms=' + encodeURIComponent(queryString.substr(0, queryString.length - 1));
+    }
 }

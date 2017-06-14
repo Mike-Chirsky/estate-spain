@@ -436,7 +436,7 @@ body{
 
 .link-list{
     background: #f3f3f3 !important;
-    height: 300px !important;
+    /*height: 300px !important;*/
     width: 100%;
 }
 .property_listing.link-list .col-md-6{

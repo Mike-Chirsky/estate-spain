@@ -21,6 +21,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         private const string BathRoomsKey = "bath";
         private const string LandSquareKey = "landsquare";
         private const string PropertySquareKey = "propertysquare";
+        private const string SysFilterKey = "sys_filter";
 
 
         #endregion
@@ -28,6 +29,14 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         public TagCollection CurrentTagCollection { set; get; }
 
         #region Current filters select
+
+        public string CurrentSysFilterValue
+        {
+            get
+            {
+                return string.Join(",", CurrentTagCollection.Where(x => x.GroupName.Equals(SysFilterKey, StringComparison.InvariantCultureIgnoreCase)).Select(x => x.Value));
+            }
+        }
 
         public Tag CurrentPropertySquareFilter
         {
