@@ -32,14 +32,14 @@
    </div> 
    <div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
-         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}">
+         <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
             {{ 'product.other_type' | t }}
             <span class="caret  caret_filter "></span>
          </div>
-         <input type="hidden" id="other-type-value" value="{{ collection.current_other_type_filter.value }}">
+         <input type="hidden" id="other-type-value" value="{{ collection.current_estate_type_filter.value }}">
          <ul class="dropdown-menu filter_menu">
             <li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any2' | t }}</li>
-            {% for item in collection.other_type_filter %}
+            {% for item in collection.estate_type_filter %}
                 <li data-value="{{ item.value }}">{{ item.value }}</li>
             {% endfor %}
          </ul>

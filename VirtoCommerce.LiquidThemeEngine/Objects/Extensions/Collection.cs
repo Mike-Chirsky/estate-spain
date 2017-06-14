@@ -16,12 +16,22 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         private const string ConditionKey = "condition";
         private const string SeaDistanceKey = "distancetosea";
         private const string PriceRangeKey = "price";
+        private const string EstateTypeKey = "estatetype";
 
         #endregion
 
         public TagCollection CurrentTagCollection { set; get; }
 
         #region Current filters select
+
+        public Tag CurrentEstateTypeFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(EstateTypeKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
         public Tag CurrentRegionFilter
         {
             get
@@ -72,6 +82,15 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
 
         #region Filter values
+
+        public ICollection<Tag> EstateTypeFilter
+        {
+            get
+            {
+                return GetFiltersByGroupName(EstateTypeKey);
+            }
+        }
+
         public ICollection<Tag> RegionFilter
         {
             get
@@ -103,6 +122,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetFiltersByGroupName(ConditionKey);
             }
         }
+
         #endregion
         /// <summary>
         /// Get list filters by group name
