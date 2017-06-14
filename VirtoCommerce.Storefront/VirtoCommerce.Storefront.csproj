@@ -1035,6 +1035,7 @@
     <Compile Include="JsonConverters\MoneyJsonConverter.cs" />
     <Compile Include="JsonConverters\CurrencyJsonConverter.cs" />
     <Compile Include="Owin\StorefrontUrlRewriterOwinMiddleware.cs" />
+    <Compile Include="Routing\Extensions\EsSeoRouteService.cs" />
     <Compile Include="Routing\ISeoRouteService.cs" />
     <Compile Include="Routing\SeoEntity.cs" />
     <Compile Include="Routing\SeoRouteResponse.cs" />

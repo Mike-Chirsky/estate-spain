@@ -1,5 +1,5 @@
 ﻿<div>
-   <div class="col-md-3">
+   <div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
             {{ 'product.region' | t }}
@@ -14,7 +14,7 @@
          </ul>
       </div>
    </div>
-   <div class="col-md-3">
+   <div class="col-md-3" {%- if city_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_city_filter.value }}">
             {{ 'product.city' | t }}
@@ -28,8 +28,8 @@
             {% endfor %}
          </ul>
       </div>
-   </div>
-   <div class="col-md-3">
+   </div> 
+   <div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}">
             {{ 'product.other_type' | t }}

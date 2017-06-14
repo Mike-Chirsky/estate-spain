@@ -71,6 +71,7 @@ using VirtoCommerce.Storefront.Model.Recommendations;
 using VirtoCommerce.Storefront.Services.Recommendations;
 using VirtoCommerce.LiquidThemeEngine.Converters;
 using VirtoCommerce.LiquidThemeEngine.Converters.Extentsions;
+using VirtoCommerce.Storefront.Routing.Extensions;
 
 [assembly: OwinStartup(typeof(Startup))]
 [assembly: PreApplicationStartMethod(typeof(Startup), "PreApplicationStart")]
@@ -238,7 +239,8 @@ namespace VirtoCommerce.Storefront
             container.RegisterType<IPricingService, PricingServiceImpl>();
             container.RegisterType<ICustomerService, CustomerServiceImpl>();
             container.RegisterType<IMenuLinkListService, MenuLinkListServiceImpl>();
-            container.RegisterType<ISeoRouteService, SeoRouteService>();
+            //container.RegisterType<ISeoRouteService, SeoRouteService>();
+            container.RegisterType<ISeoRouteService, EsSeoRouteService>();
             container.RegisterType<IProductAvailabilityService, ProductAvailabilityService>();
 
             container.RegisterType<ICartBuilder, CartBuilder>();

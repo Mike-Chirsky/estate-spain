@@ -106,6 +106,7 @@
     <Compile Include="Common\NameValueCollectionExtensions.cs" />
     <Compile Include="Common\SortInfo.cs" />
     <Compile Include="Common\TypeExtensions.cs" />
+    <Compile Include="Extensions\EsWorkContext.cs" />
     <Compile Include="Interaction\UserEvent.cs" />
     <Compile Include="Customer\VendorSearchCriteria.cs" />
     <Compile Include="EditorialReview.cs" />

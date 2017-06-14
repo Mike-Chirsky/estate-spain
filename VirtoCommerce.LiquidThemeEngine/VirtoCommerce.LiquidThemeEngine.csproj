@@ -122,6 +122,7 @@
     <Compile Include="Binders\ShopifyModelBinderProvider.cs" />
     <Compile Include="Converters\BlogSearchConverter.cs" />
     <Compile Include="Converters\Extentsions\EsShopifyModelConverter.cs" />
+    <Compile Include="Converters\Extentsions\ShopifyContextConverter.cs" />
     <Compile Include="Converters\Extentsions\ShopifyModelCollectionConverter.cs" />
     <Compile Include="Converters\TransactionConverter.cs" />
     <Compile Include="Converters\ArticleConverter.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="Objects\Extensions\Collection.cs" />
     <Compile Include="Objects\Extensions\Paginate.cs" />
     <Compile Include="Objects\Extensions\Product.cs" />
+    <Compile Include="Objects\Extensions\ShopifyThemeWorkContext.cs" />
     <Compile Include="Objects\Form.cs" />
     <Compile Include="Objects\FormErrors.cs" />
     <Compile Include="Objects\Fulfillment.cs" />
