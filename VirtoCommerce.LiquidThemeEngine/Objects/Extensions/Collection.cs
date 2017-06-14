@@ -17,12 +17,49 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         private const string SeaDistanceKey = "distancetosea";
         private const string PriceRangeKey = "price";
         private const string EstateTypeKey = "estatetype";
+        private const string BedRoomsKey = "bedrooms";
+        private const string BathRoomsKey = "bath";
+        private const string LandSquareKey = "landsquare";
+        private const string PropertySquareKey = "propertysquare";
+
 
         #endregion
 
         public TagCollection CurrentTagCollection { set; get; }
 
         #region Current filters select
+
+        public Tag CurrentPropertySquareFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(PropertySquareKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
+        public Tag CurrentLandSquareFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(LandSquareKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
+        public Tag CurrentBathRoomsFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(BathRoomsKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
+        public Tag CurrentBedRoomsFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(BedRoomsKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
 
         public Tag CurrentEstateTypeFilter
         {
@@ -82,6 +119,38 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
 
         #region Filter values
+
+        public ICollection<Tag> PropertySquareFilter
+        {
+            get
+            {
+                return GetFiltersByGroupName(PropertySquareKey)?.OrderBy(x => x.Value).ToList();
+            }
+        }
+
+        public ICollection<Tag> LandSquareFilter
+        {
+            get
+            {
+                return GetFiltersByGroupName(LandSquareKey)?.OrderBy(x => x.Value).ToList();
+            }
+        }
+
+        public ICollection<Tag> BathRoomsFilter
+        {
+            get
+            {
+                return GetFiltersByGroupName(BathRoomsKey);
+            }
+        }
+
+        public ICollection<Tag> BedRoomsFilter
+        {
+            get
+            {
+                return GetFiltersByGroupName(BedRoomsKey);
+            }
+        }
 
         public ICollection<Tag> EstateTypeFilter
         {

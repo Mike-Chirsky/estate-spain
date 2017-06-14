@@ -1,121 +1,146 @@
 ﻿<div class="row additional-filters">
    <div class="col-md-12 filters">
     <div class="row">
-      <div class="listing_filters_head">
+      <div class="listing_filters_head" id="addition-filter-controls">
          <div class="dropdown listing_filter_select">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
-            {{ 'filter.flat' | t }} <span class="caret caret_filter"></span>
+             {%- if collection.current_other_type_filter -%}
+                {{ collection.current_other_type_filter.value }}
+             {%-else-%} 
+                {{ 'product.other_type' | t }}
+             {%-endif-%}
+             <span class="caret caret_filter"></span>
             </div>
+            <input property-name="other_type" type="hidden" id="other_type" value="{{- collection.current_other_type_filter.value -}}">
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li role="presentation" data-value="all">
-                  All Actions
-               </li>
-               <li role="presentation" data-value="rentals">Rentals (15)</li>
-               <li role="presentation" data-value="sales">Sales (10)</li>
+               <li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any' | t }}</li>
+                {% for item in collection.other_type_filter %}
+                    <li data-value="{{ item.value }}">{{ item.value }}</li>
+                {% endfor %}
             </ul>
          </div>
          <div class="dropdown listing_filter_select">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
-            {{ 'filter.bed-count' | t }} <span class="caret caret_filter"></span>
+             {%- if collection.current_bed_rooms_filter -%}
+                {{ collection.current_bed_rooms_filter.value }}
+             {%-else-%} 
+                {{ 'filter.bed-count' | t }}
+             {%-endif-%}
+             <span class="caret caret_filter"></span>
             </div>
+            <input type="hidden" id="bed-count" value="{{- collection.current_bed_rooms_filter.value -}}" property-name="bedrooms">
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li role="presentation" data-value="all">
-                  All Actions
-               </li>
-               <li role="presentation" data-value="rentals">Rentals (15)</li>
-               <li role="presentation" data-value="sales">Sales (10)</li>
+               <li data-value="*" value="{{ 'filter.bed-count' | t }}">{{ 'filter.any2' | t }}</li>
+                {% for item in collection.bed_rooms_filter %}
+                    <li data-value="{{ item.value }}">{{ item.value }}</li>
+                {% endfor %}
             </ul>
          </div>
          <div class="dropdown listing_filter_select">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
-            {{ 'filter.bath-count' | t }} <span class="caret caret_filter"></span>
+             {%- if collection.current_bath_rooms_filter -%}
+                {{ collection.current_bath_rooms_filter.value }}
+             {%-else-%} 
+                {{ 'filter.bath-count' | t }}
+             {%-endif-%}
+             <span class="caret caret_filter"></span>
             </div>
+            <input type="hidden" id="bath-count" property-name="bath" value="{{- collection.current_bath_rooms_filter.value -}}">
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li role="presentation" data-value="all">
-                  All Actions
-               </li>
-               <li role="presentation" data-value="rentals">Rentals (15)</li>
-               <li role="presentation" data-value="sales">Sales (10)</li>
+               <li data-value="*" value="{{ 'filter.bath-count' | t }}">{{ 'filter.any2' | t }}</li>
+                {% for item in collection.bath_rooms_filter %}
+                    <li data-value="{{ item.value }}">{{ item.value }}</li>
+                {% endfor %}
             </ul>
          </div>
          <div class="dropdown listing_filter_select">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
-            {{ 'filter.square' | t }} <span class="caret caret_filter"></span>
+             {%- if collection.current_property_square_filter -%}
+                {{ collection.current_property_square_filter.value }}
+             {%-else-%} 
+                {{ 'filter.square' | t }}
+             {%-endif-%}
+             <span class="caret caret_filter"></span>
             </div>
+            <input type="hidden" id="property-square" value="{{- collection.current_property_square_filter.value -}}" property-name="propertysquare">
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li role="presentation" data-value="all">
-                  All Actions
-               </li>
-               <li role="presentation" data-value="rentals">Rentals (15)</li>
-               <li role="presentation" data-value="sales">Sales (10)</li>
+               <li data-value="*" value="{{ 'filter.square' | t }}">{{ 'filter.any' | t }}</li>
+                {% for item in collection.property_square_filter %}
+                    <li data-value="{{ item.value }}">{{ item.value }}</li>
+                {% endfor %}
             </ul>
          </div>
          <div class="dropdown listing_filter_select order_filter">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
-            {{ 'filter.landsquare' | t }} <span class="caret caret_filter"></span>
+            {%- if collection.current_land_square_filter -%}
+                {{ collection.current_land_square_filter.value }}
+             {%-else-%} 
+                {{ 'filter.landsquare' | t }}
+             {%-endif-%}
+             <span class="caret caret_filter"></span>
             </div>
+            <input type="hidden" id="land-square" value="{{- collection.current_land_square_filter.value -}}" property-name="landsquare">
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li role="presentation" data-value="all">
-                  All Actions
-               </li>
-               <li role="presentation" data-value="rentals">Rentals (15)</li>
-               <li role="presentation" data-value="sales">Sales (10)</li>
+               <li data-value="*" value="{{ 'filter.landsquare' | t }}">{{ 'filter.any' | t }}</li>
+                {% for item in collection.land_square_filter %}
+                    <li data-value="{{ item.value }}">{{ item.value }}</li>
+                {% endfor %}
             </ul>
          </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="filter-checks">
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="terrace">
                 {{ 'filter.terrace' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="parking">
                 {{ 'filter.parking' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="security">
                 {{ 'filter.security' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="seaview">
                 {{ 'filter.seaview' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="solarium">
                 {{ 'filter.solarium' | t }}
             </label>    
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="pool">
                 {{ 'filter.pool' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="lift">
                 {{ 'filter.lift' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="garden">
                 {{ 'filter.garden' | t }}
             </label>
         </div>
         <div class="col-md-2">
             <label>
-                <input type="checkbox">
+                <input type="checkbox" value="furniture">
                 {{ 'filter.furniture' | t }}
             </label>
         </div>
