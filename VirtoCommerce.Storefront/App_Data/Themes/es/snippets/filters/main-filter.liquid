@@ -1,4 +1,5 @@
 ﻿<div style="z-index: 10000">
+   <div class="main-filter-container">
    <div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
       <div class="dropdown form-control ">
          <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
@@ -95,6 +96,7 @@
                 <li data-value="price-over-2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
             </ul>
     </div>
+   </div>
    </div>
    {%- if region_product == null or city_product == null or type_product == null  -%}
         {%- if region_product -%}

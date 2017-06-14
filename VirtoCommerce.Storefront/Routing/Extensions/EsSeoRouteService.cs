@@ -37,6 +37,10 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
             {
                 var all = GetAllSeoRecords(part);
                 var seo = all.FirstOrDefault(x => x.ObjectType == "CatalogProduct");
+                if (seo == null)
+                {
+                    return null;
+                }
                 var product = _cacheManager.Get($"Product{seo.ObjectId}", "SeoProducts", () => _catalogApiFactory()
                                                                                                 .CatalogModuleProducts.GetProductById(seo.ObjectId)
                                                                                                 ?.ToProduct(workContext.CurrentLanguage,

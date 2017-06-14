@@ -367,9 +367,9 @@ ul.pagination-custom li:first-child
     padding: 0;
     margin: 0;
     margin-bottom: 15px;
-    margin-right: 15px;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+    padding: 0 15px; 
     padding-top: 15px;
     padding-bottom: 5px;
 background: rgba(250,250,250,1);
@@ -687,4 +687,23 @@ body{
     position:relative;
     cursor: pointer;
 
+}
+.form-control{
+    color: #7f7f7f;
+}
+.adv-search-1 .extended_search_check_wrapper
+{
+    margin: 0;
+    padding:0; 
+}
+
+.adv-search-1  .adv_extended_options_text
+{
+    margin-left: 15px; 
+}
+.main-filter-container{
+    margin:0 7px; 
+}
+.dropdown.listing_filter_select .filter_menu_trigger{
+    margin-top: 3px;
 }

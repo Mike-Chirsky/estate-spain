@@ -105,9 +105,9 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .featured_property h
     color: #72777F !important;
 }
 
-.advanced_search_shortcode .caret_filter, .advanced_search_shortcode .form-control, .advanced_search_shortcode input[type=text], .advanced_search_shortcode .form-control::-webkit-input-placeholder, .adv-search-1 .caret_filter, .adv-search-1 .form-control, .adv-search-3 .caret_filter, .adv-search-3 .form-control, .adv-search-1 input[type=text], .adv-search-3 input[type=text], .adv-search-1 .form-control::-webkit-input-placeholder, .adv-search-3 .form-control::-webkit-input-placeholder {
+/*.advanced_search_shortcode .caret_filter, .advanced_search_shortcode .form-control, .advanced_search_shortcode input[type=text], .advanced_search_shortcode .form-control::-webkit-input-placeholder, .adv-search-1 .caret_filter, .adv-search-1 .form-control, .adv-search-3 .caret_filter, .adv-search-3 .form-control, .adv-search-1 input[type=text], .adv-search-3 input[type=text], .adv-search-1 .form-control::-webkit-input-placeholder, .adv-search-3 .form-control::-webkit-input-placeholder {
     color: #768082;
-}
+}*/
 
 .featured_article_title, .testimonial-text, .adv1-holder, .advanced_search_shortcode, .featured_secondline, .property_listing, .agent_unit, .blog_unit {
     background-color: #ffffff;

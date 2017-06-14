@@ -2746,7 +2746,7 @@ input.form-control::-moz-placeholder {
     padding: 9px 12px;
     font-size: 13px;
     line-height: 1.428571429;
-    color: #999;
+    /*color: #999;*/
     vertical-align: middle;
     background-color: #ffffff;
     background-image: none;
@@ -2759,9 +2759,9 @@ input.form-control::-moz-placeholder {
     margin-bottom: 13px;
 }
 
-.form-control::-webkit-input-placeholder {
+/*.form-control::-webkit-input-placeholder {
     color: #999;
-}
+}*/
 
 .dropdown-menu{
     font-size:13px;
@@ -2998,6 +2998,8 @@ input.form-control::-moz-placeholder {
 .adv6-holder{
     padding: 13px 7px 0px 7px;
     float: left;
+    padding-left: 0;
+    padding-right: 0;
     width:100%;
 }
 
@@ -4504,7 +4506,7 @@ input.form-control::-moz-placeholder {
 .listing_filters{
     border-top:1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
-    height: 60px;
+    /*height: 57px;*/
     margin: 0px;
     margin-bottom: 30px;
     float: left;
@@ -9665,7 +9667,7 @@ table tbody tr td {
     margin: 0px 13px 13px 0px;
     padding:0px;
     font-size:13px;
-    color: #8593a9;
+    /*color: #8593a9;*/
 }
 
 .advanced_search_shortcode .col-md-2,
