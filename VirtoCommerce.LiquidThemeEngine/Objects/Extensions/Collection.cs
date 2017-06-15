@@ -202,6 +202,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         }
 
         #endregion
+
         /// <summary>
         /// Get list filters by group name
         /// </summary>

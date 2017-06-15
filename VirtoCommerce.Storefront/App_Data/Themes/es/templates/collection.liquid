@@ -2,14 +2,25 @@
     <div class="col-xs-12 col-md-12 breadcrumb_container">
       {% include 'breadcrumb' %}
     </div>
-    {% include 'market-block' %} 
-    {% include 'headers/header-about' %}
-    {% include 'headers/region-header' %}
-    {% include 'headers/header-name' %}
-    {% include 'footer/region' %}
-    {% include 'headers/city-header' %}
     
+    {% include 'headers/header-about' %}
+    {%- if collection_type == 'region' -%}
+    {% include 'headers/region-header' %}
+    {%- endif -%}
+    {% include 'headers/header-name' %}
+    
+    {%- if collection_type == 'city' -%}
+      {% include 'headers/city-header' %}
+    {%- endif -%}
+    {%- if collection_type == 'region' -%}
+      {% include 'market-block' %} 
+    {%- endif -%}
+
     {% include 'product-list' %}
+
+    {%- if collection_type == 'region' -%}
+      {% include 'footer/region' %}
+    {%- endif -%}
     
     {% include 'footer/contact-us' %}
     {% include 'footer/about' %}

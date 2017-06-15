@@ -9497,7 +9497,7 @@ table tbody tr td {
     position: absolute;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    bottom: 21px;
+    bottom: 51px;
     left: 50%;
 /*    margin-left: -555px;*/
 /*    -webkit-transform: translate(-50%,0);
@@ -12699,7 +12699,7 @@ blockquote cite, blockquote small {
     text-align: center;
     color: #fff;
     text-decoration: none;
-    font-size: 55px;
+    font-size: 45px;
     width: 100%;
 }
 
@@ -15707,6 +15707,7 @@ span.wpcf7-form-control-wrap {
 
 .breadcrumb_container{
     min-height:40px;
+    padding-left: 0;
 }
 
 #primary .social_sidebar_internal a {

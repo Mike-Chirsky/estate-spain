@@ -1,9 +1,16 @@
-﻿<div class="row header-about header-container">
-  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies egestas velit. Curabitur tristique arcu ac tortor maximus, quis commodo est bibendum. Vivamus sem massa, posuere at tempus at, egestas dapibus tellus. Donec sollicitudin ipsum vitae quam malesuada, eget consectetur libero accumsan. Pellentesque hendrerit pharetra turpis eget pulvinar. Mauris sit amet cursus felis. Aenean rhoncus pretium sem at vulputate. Duis et nunc sit amet justo dictum volutpat eu id quam.</span>
+﻿<h2>{{- meta_info_product.h21 -}}</h2>
+<div class="row header-about header-container">
+  <span>{{-meta_info_product.seotext_up-}}</span>
   <div class="link-list-about">
     {{-'collection.detail' | t -}}:
-    <a id="advantagesId">{{'collection.advantages' | t }}</a>,
-    <a id="approachId">{{'collection.approach' | t }}</a>,
-    <a id="coastId">{{'collection.coast' | t }}</a>
-  </div>
+    {%- if meta_info_product.seotext_down1 -%}
+    <a id="advantagesId">{{-meta_info_product.h3_seotext_down1-}}</a>,
+    {% endif %}
+    {%- if meta_info_product.seotext_down2 -%}
+    <a id="approachId">{{-meta_info_product.h3_seotext_down2-}}</a>,
+    {% endif %}
+    {%- if meta_info_product.seotext_down3 -%}
+    <a id="coastId">{{-meta_info_product.h3_seotext_down3-}}</a>
+    {% endif %}
+  </div> 
 </div>

@@ -11,5 +11,40 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         public Product RegionProduct { set; get; }
         public Product CityProduct { set; get; }
         public Product TypeProduct { set; get; }
+
+        public Product MetaInfoProduct
+        {
+            get
+            {
+                if (TypeProduct != null)
+                {
+                    return TypeProduct;
+                }
+                if (CityProduct != null)
+                {
+                    return CityProduct;
+                }
+                return RegionProduct;
+            }
+        }
+
+        public string CollectionType {
+            get
+            {
+                if (TypeProduct != null)
+                {
+                    return "type";
+                }
+                if (CityProduct!=null)
+                {
+                    return "city";
+                }
+                if (RegionProduct!=null)
+                {
+                    return "region";
+                }
+                return null;
+            }
+        }
     }
 }

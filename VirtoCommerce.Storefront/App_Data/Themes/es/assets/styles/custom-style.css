@@ -316,7 +316,7 @@ ul.pagination-custom li:first-child
 .description-header{
     width: 1110px;
     top: 95px;
-    height: 170px;
+    height: 120px;
     margin: 0 auto;
     position: absolute;
     margin-left: auto;
@@ -324,6 +324,8 @@ ul.pagination-custom li:first-child
     left: 0px;
     right: 0px;
     background: rgba(0,0,0,.1);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .header_media .nopadding.col-xs-6:first-child{
@@ -357,6 +359,7 @@ ul.pagination-custom li:first-child
 .header-about .link-list-about a{
     border-bottom: #8593a9 1px dashed;
     text-transform: lowercase;
+    cursor: pointer;
 }
 .header-about .link-list-about a:hover{
     border-bottom: #FF9800 1px dashed;
@@ -709,4 +712,12 @@ body{
 }
 #results {
     transition: all 0.7s ease-in;
+}
+.row.header-about.header-container
+{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
 }

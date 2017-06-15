@@ -11,6 +11,135 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     public partial class Product
     {
 
+        #region Info property
+        public string H1
+        {
+            get
+            {
+                return GetPropertyByName("h1")?.Value;
+            }
+        }
+        public string H2Listing
+        {
+            get
+            {
+                return GetPropertyByName("h2-listing")?.Value;
+            }
+        }
+        public string H2Tip
+        {
+            get
+            {
+                return GetPropertyByName("h2-tip")?.Value;
+            }
+        }
+        public string H21
+        {
+            get
+            {
+                return GetPropertyByName("h2-1")?.Value;
+            }
+        }
+        public string H3SeotextDown1
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down1")?.Value;
+            }
+        }
+        public string H3SeotextDown2
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down2")?.Value;
+            }
+        }
+        public string H3SeotextDown3
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down3")?.Value;
+            }
+        }
+        public string SeotextUp
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-up");
+            }
+        }
+
+        public string SeotextDown1
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down1");
+            }
+        }
+
+        public string SeotextDown2
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down2");
+            }
+        }
+
+        public string SeotextDown3
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down3");
+            }
+        }
+
+        public string LinkBlockType1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type1");
+            }
+        }
+        public string LinkBlockType2
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type2");
+            }
+        }
+        public string LinkBlockType3
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type3");
+            }
+        }
+
+        public string LinkBlockRight
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-right");
+            }
+        }
+
+        public string LinkBlockLeft
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-left");
+            }
+        }
+        public string LinkBlockCentr
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-centr");
+            }
+        }
+
+        #endregion
+
         /// <summary>
         /// Get deal type 
         /// </summary>
@@ -269,6 +398,18 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
             var roundedValue = RoundValue(propertySquare.Value);
             return roundedValue.HasValue ? roundedValue.ToString() : null;
+        }
+
+        /// <summary>
+        /// Get description content by description type
+        /// </summary>
+        private string GetDescriptionByType(string type)
+        {
+            if (string.IsNullOrEmpty(type))
+            {
+                return string.Empty;
+            }
+            return Descriptions.FirstOrDefault(x => type.Equals(x.Type, StringComparison.InvariantCultureIgnoreCase))?.Content;
         }
     }
 }
