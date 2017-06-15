@@ -209,6 +209,9 @@ function formatPrice(price) {
 }
 {% endcomment %}
    jQuery("#send-main-filter").click(function () {
-       setFilter('{{ collection.url | full_url }}');
+       var termStr = getTermsString();
+       if(termStr.length > 0){
+            window.location.href = '{{ collection.url | full_url }}?terms=' + encodeURIComponent(termStr);
+       }
    });
 </script>

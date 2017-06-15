@@ -707,3 +707,6 @@ body{
 .dropdown.listing_filter_select .filter_menu_trigger{
     margin-top: 3px;
 }
+#results {
+    transition: all 0.7s ease-in;
+}

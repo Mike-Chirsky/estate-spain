@@ -5,11 +5,15 @@
          <div class="tax_tagline">Белые песчаные пляжи на морском берегу, испанское мягкое солнце, обилие развлечений и достопремечательностей - какие еще нужны причины чтобы купить танхаус в Аликанте на побережье Коста Бланки</div>
       </div>
    </div>
+   
    <div class="search_wrapper search_wr_6  " id="search_wrapper">
       <div class="adv-search-1  adv_extended_class" id="adv-search-6">
          <div class="adv6-holder">
             <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
                <div class="tab-content">
+                <div id="results" style="opacity: 0;display: block;">
+                    {{'found' | t}} <span id="results_no" style="display: inline;"></span> {{'objects' | t}}.
+                </div>
                   <div role="tabpanel" class="tab-pane active">
                      {% include 'filters\main-filter' %}
                   </div> 

@@ -10,28 +10,31 @@ function setCurrentValueDd(items, value) {
         }
     });
 }
+var ids_container_controls = ["#main-filter-controls input", "#addition-filter-controls input"];
+function getTerms() {
+    var terms = [];
+    ids_container_controls.forEach(function (key) {
+        $.each(jQuery(key), function (index, item) {
+            if (jQuery(item).val() && jQuery(item).val() != "*") {
+                terms.push({
+                    name: jQuery(item).attr("property-name"), value: jQuery(item).val()
+                });
+            }
+        });
+    });
 
-function setFilter(mainUrl) {
+    if (jQuery("#filter-checks input:checked").length > 0) {
+        var sysfilterItem = { name: "sys_filter:", value: "" };
+        $.each(jQuery("#filter-checks input:checked"), function (index, item) {
+            sysfilterItem.value += jQuery(item).val() + ",";
+        });
+        terms.push(sysfilterItem);
+    }
+    return terms;
+}
+
+function getTermsString() {
     var queryString = "";
-    /*if (jQuery("#region-value").val() && jQuery("#region-value").val() != "*") {
-        queryString += "region:" + jQuery("#region-value").val() + ";";
-    }
-    if (jQuery("#city-value").val() && jQuery("#city-value").val() != "*") {
-        queryString += "city:" + jQuery("#city-value").val() + ";";
-    }
-    if (jQuery("#estate-type-value").val() && jQuery("#estate-type-value").val() != "*") {
-        queryString += "estatetype:" + jQuery("#estate-type-value").val() + ";";
-    }
-    if (jQuery("#condition-value").val() && jQuery("#condition-value").val() != "*") {
-        queryString += "condition:" + jQuery("#condition-value").val() + ";";
-    }
-    if (jQuery("#distancetosea-range").val() && jQuery("#distancetosea-range").val() != "*") {
-        queryString += "distancetosea:" + jQuery("#distancetosea-range").val() + ";";
-    }
-    if (jQuery("#price-value").val() && jQuery("#price-value").val() != "*") {
-        queryString += "price:" + jQuery("#price-value").val() + ";";
-    }*/
-    var ids_container_controls = ["#main-filter-controls input", "#addition-filter-controls input"];
     ids_container_controls.forEach(function (key) {
         $.each(jQuery(key), function (index, item) {
             if (jQuery(item).val() && jQuery(item).val() != "*") {
@@ -47,6 +50,28 @@ function setFilter(mainUrl) {
         });
     }
     if (queryString.length > 0) {
-        window.location.href = mainUrl + '?terms=' + encodeURIComponent(queryString.substr(0, queryString.length - 1));
+        return queryString.substr(0, queryString.length - 1);
     }
+    return "";
+}
+
+function getFoundResults() {
+    var terms = getTerms();
+    if (terms.length === 0) {
+        return;
+    }
+    
+    jQuery.ajax({
+        url: "/storefrontapi/catalog/search",
+        data: JSON.stringify({ mutableTerms: terms }),
+        success: function (data) {
+            jQuery("#results_no").html(data.metaData.totalItemCount);
+            jQuery("#results").css("opacity", "1");
+            setTimeout(function () {
+                jQuery("#results").css("opacity", "0");
+            }, 4000);
+        },
+        method: "POST",
+        contentType: "application/json"
+    });
 }

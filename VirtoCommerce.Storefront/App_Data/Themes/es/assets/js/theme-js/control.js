@@ -1520,7 +1520,14 @@ jQuery(document).ready(function ($) {
             value = $(this).attr('data-value');
             parent = $(this).parent().parent();  
             parent.find(parent_replace).text(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);
-            parent.find('input').val(value).trigger('change');    
+            parent.find('input').val(value).trigger('change'); 
+            getFoundResults();
+        });
+    });
+
+    $.each(jQuery("#filter-checks input"), function (index, item) {
+        jQuery(item).change(function () {
+            getFoundResults();
         });
     });
  
