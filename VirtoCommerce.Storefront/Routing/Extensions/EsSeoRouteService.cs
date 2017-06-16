@@ -31,7 +31,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 return existSeo;
             }
             
-            var pathParts = seoPath.Split(' ');
+            var pathParts = seoPath.Split('/');
 
             foreach (var part in pathParts)
             {
@@ -65,7 +65,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         workContext.TypeProduct = product;
                         workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
                         {
-                            Name = "other_type",
+                            Name = "estatetype",
                             Value = product.Name
                         });
                         break;

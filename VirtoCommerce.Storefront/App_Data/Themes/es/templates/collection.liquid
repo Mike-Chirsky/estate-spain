@@ -4,7 +4,7 @@
     </div>
     
     {% include 'headers/header-about' %}
-    {%- if collection_type == 'region' -%}
+    {%- if collection_type == 'region' or collection_type == 'type' -%}
     {% include 'headers/region-header' %}
     {%- endif -%}
     {% include 'headers/header-name' %}
@@ -12,13 +12,13 @@
     {%- if collection_type == 'city' -%}
       {% include 'headers/city-header' %}
     {%- endif -%}
-    {%- if collection_type == 'region' -%}
+    {%- if collection_type == 'region' or collection_type == 'type' -%}
       {% include 'market-block' %} 
     {%- endif -%}
 
     {% include 'product-list' %}
 
-    {%- if collection_type == 'region' -%}
+    {%- if collection_type == 'region' or collection_type == 'type'-%}
       {% include 'footer/region' %}
     {%- endif -%}
     
