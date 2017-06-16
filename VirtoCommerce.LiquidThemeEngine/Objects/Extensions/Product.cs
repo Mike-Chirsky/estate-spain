@@ -138,6 +138,14 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
         }
 
+        public string LinkBlockCentr1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-centr1");
+            }
+        }
+
         #endregion
 
         /// <summary>

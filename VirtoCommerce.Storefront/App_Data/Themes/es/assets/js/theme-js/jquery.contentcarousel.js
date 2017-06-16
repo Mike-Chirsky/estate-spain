@@ -225,7 +225,7 @@
 						});
 						
 						// adds events to the mouse
-						$el.bind('mousewheel.contentcarousel', function(e, delta) {
+						/*$el.bind('mousewheel.contentcarousel', function(e, delta) {
 							if(delta > 0) {
 								if( cache.isAnimating ) return false;
 								cache.isAnimating	= true;
@@ -237,7 +237,7 @@
 								aux.navigate( 1, $el, $wrapper, settings, cache );
 							}	
 							return false;
-						});
+						});*/
 						
 					});
 				}

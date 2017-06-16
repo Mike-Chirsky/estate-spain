@@ -44,14 +44,33 @@
 					{%- if collection.current_estate_type_filter -%}
 					{{ collection.current_estate_type_filter.value }}
 					{%-else-%} 
-					{{ 'product.other_type' | t }}
+					{{ 'filter.category' | t }}
 					{%-endif-%}
 					<span class="caret  caret_filter "></span>
 				</div>
 				<input type="hidden" property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
 				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any2' | t }}</li>
+					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
 					{% for item in collection.estate_type_filter %}
+					<li data-value="{{ item.value }}">{{ item.value }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="dropdown form-control ">
+				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
+					{%- if collection.current_other_type_filter -%}
+					{{ collection.current_other_type_filter.value }}
+					{%-else-%} 
+					{{ 'product.other_type' | t }}
+					{%-endif-%}
+					<span class="caret  caret_filter "></span>
+				</div>
+				<input property-name="other_type" type="hidden" id="other_type" value="{{- collection.current_other_type_filter.value -}}">
+				<ul class="dropdown-menu filter_menu">
+					<li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any' | t }}</li>
+					{% for item in collection.other_type_filter %}
 					<li data-value="{{ item.value }}">{{ item.value }}</li>
 					{% endfor %}
 				</ul>
@@ -114,23 +133,28 @@
 			</div>
 		</div>
 		{%- if region_product == null or city_product == null or type_product == null  -%}
-		{%- if region_product -%}
+			{%- if region_product -%}
 		<div class="col-md-3">
 		</div>
-		{%- endif -%}
-		{%- if city_product -%}
+			{%- endif -%}
+			{%- if city_product -%}
 		<div class="col-md-3">
 		</div>
-		{%- endif -%}
-		{%- if type_product -%}
+			{%- endif -%}
+			{%- if type_product -%}
 		<div class="col-md-3">
 		</div>
-		{%- endif -%}
+			{%- endif -%}
 		{%- endif -%}
 		<div class="col-md-3">
-		</div>
-		<div class="col-md-3">
-			<button id="send-main-filter" type="submit" class="wpresidence_button">{{ 'filter.action' | t }}</button>
+			<button id="send-main-filter" class="wpresidence_button">
+				<span id="no-filter">{{ 'filter.action' | t }}</span>
+				<span style="display:none" id="count-objects">
+					{{ 'filter.show-result' | t }} 
+					<span id="result-count"></span>
+					{{ 'objects' | t }}
+				</span>
+			</button>
 		</div>
 	</div>
 	<div class="adv_extended_options_text" id="adv_extended_options_text_adv">{{ 'filter.addition-options' | t }}</div>

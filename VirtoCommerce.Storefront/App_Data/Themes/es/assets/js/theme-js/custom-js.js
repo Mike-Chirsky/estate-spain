@@ -65,11 +65,14 @@ function getFoundResults() {
         url: "/storefrontapi/catalog/search",
         data: JSON.stringify({ mutableTerms: terms }),
         success: function (data) {
-            jQuery("#results_no").html(data.metaData.totalItemCount);
+            $("#no-filter").hide();
+            $("#count-objects").show();
+            $("#result-count").text(data.metaData.totalItemCount);
+            /*jQuery("#results_no").html(data.metaData.totalItemCount);
             jQuery("#results").css("opacity", "1");
             setTimeout(function () {
                 jQuery("#results").css("opacity", "0");
-            }, 4000);
+            }, 4000);*/
         },
         method: "POST",
         contentType: "application/json"
