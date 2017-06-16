@@ -38,5 +38,30 @@ namespace VirtoCommerce.Storefront.Model.Catalog
 
             return result;
         }
+        /// <summary>
+        /// Converts each term to a string:
+        /// name1:value1,value2,value3
+        /// </summary>
+        /// <param name="terms"></param>
+        /// <returns></returns>
+        public static List<string> ToStringsDontGroup(this IEnumerable<Term> terms)
+        {
+            List<string> result = null;
+
+            if (terms != null)
+            {
+                var strings = terms
+                    .OrderBy(t => t.Name)
+                    .Select(t => string.Join(":", t.Name, t.Value))
+                    .ToList();
+
+                if (strings.Any())
+                {
+                    result = strings;
+                }
+            }
+
+            return result;
+        }
     }
 }

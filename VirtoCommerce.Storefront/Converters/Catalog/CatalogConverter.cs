@@ -227,7 +227,7 @@ namespace VirtoCommerce.Storefront.Converters
                 SearchPhrase = criteria.Keyword,
                 Outline = criteria.Outline,
                 Currency = criteria.Currency == null ? workContext.CurrentCurrency.Code : criteria.Currency.Code,
-                Terms = criteria.Terms.ToStrings(),
+                Terms = criteria.Terms.ToStringsDontGroup(),
                 PriceLists = workContext.CurrentPricelists.Where(p => p.Currency.Equals(workContext.CurrentCurrency)).Select(p => p.Id).ToList(),
                 Skip = criteria.Start,
                 Take = criteria.PageSize,
