@@ -722,7 +722,7 @@ body{
     margin:0 7px; 
 }
 .dropdown.listing_filter_select .filter_menu_trigger{
-    margin-top: 3px;
+    margin-top: 4px;
 }
 #results {
     transition: all 0.7s ease-in;
