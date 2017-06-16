@@ -1516,15 +1516,16 @@ jQuery(document).ready(function ($) {
                 parent_replace='.sidebar_filter_menu';      
             }
             
-            pick = $(this).attr('data-value') != "*" ? $(this).text() : $(this).attr('value');
             if ($(this).attr('data-value') == "*") {
                 pick = $(this).attr('value');
             }
             else if ($(this).attr('display-header')) {
                 pick = $(this).attr('display-header') + ' : <span class="dd-select-value">' + $(this).text() + '</span>';
             }
-            else
-            {
+            else if ($(this).attr('formated-value')) {
+                pick = $(this).attr('formated-value');
+            }
+            else {
                 pick = $(this).text();
             }
             
