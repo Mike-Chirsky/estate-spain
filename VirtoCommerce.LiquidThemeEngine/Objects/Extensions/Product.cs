@@ -19,6 +19,13 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetPropertyByName("h1")?.Value;
             }
         }
+        public string H11
+        {
+            get
+            {
+                return GetPropertyByName("h1-1")?.Value;
+            }
+        }
         public string H2Listing
         {
             get

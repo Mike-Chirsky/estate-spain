@@ -83,7 +83,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 {
                     return null;
                 }
-                existSeo = new SeoEntity { ObjectType = seo.ObjectType, ObjectId = seo.ObjectId, SeoPath = seo.SemanticUrl };
+                existSeo = new SeoEntity { ObjectType = seo.ObjectType, ObjectId = seo.ObjectId, SeoPath = seoPath };
             }
             return existSeo;
         }

@@ -752,3 +752,11 @@ body{
 {
     color:#fff;
 }
+.block-inner h1,
+.block-inner h2,
+.block-inner h3,
+.block-inner h4,
+.block-inner h5
+{
+    color: #fff;
+}
