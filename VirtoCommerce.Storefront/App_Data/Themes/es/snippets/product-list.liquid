@@ -39,7 +39,7 @@
         {% assign link_index = collection.products.size | divided_by: 2 %}
         {% for product in collection.products %}
             {% include 'product-grid-item', product: product %}
-            {% if  forloop.index == link_index %}
+            {% if  forloop.index == link_index and type_product != null %}
                 {% include 'product-link-list' %}
             {% endif %}
         {% endfor %}
