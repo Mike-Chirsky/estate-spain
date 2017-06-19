@@ -30,17 +30,18 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             var foundProductsCity = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
-                Outline = ConfigurationManager.AppSettings["RegionCategoryId"]
+                Outline = ConfigurationManager.AppSettings["CityCategoryId"],
+                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations
             });
             var foundProductsRegion = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
-                Outline = ConfigurationManager.AppSettings["CityCategoryId"]
+                Outline = ConfigurationManager.AppSettings["RegionCategoryId"],
+                ResponseGroup = ItemResponseGroup.Seo
             });
-            var productIds = foundProductsCity.Products.Select(x => x.Id).ToList();
-            productIds.AddRange(foundProductsRegion.Products.Select(x => x.Id));
-            var products = await _catalogSearchService.GetProductsAsync(productIds.ToArray(), ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations);
-
+            var products = foundProductsCity.Products.ToList();
+            products.AddRange(foundProductsRegion.Products);
+            products = products.OrderBy(x => x.Name).ToList();
             var result = new LocationSearchResult();
             result.Items.AddRange(products.Select(x => x.ToLocationItem()));
             //result.Items.AddRange(GetMockData());
