@@ -1,6 +1,9 @@
 ﻿<div style="z-index: 10000">
 	<div class="main-filter-container" id="main-filter-controls">
-		<div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
+		<div class="col-md-6">
+			{% include 'filters/location' %}
+		</div>
+		<!--<div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
 			<div class="dropdown form-control ">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
 					{%- if collection.current_region_filter -%}
@@ -37,7 +40,7 @@
 					{% endfor %}
 				</ul>
 			</div>
-		</div>
+		</div>-->
 		<div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
 			<div class="dropdown form-control ">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
@@ -233,8 +236,9 @@ function formatPrice(price) {
 {% endcomment %}
    jQuery("#send-main-filter").click(function () {
        var termStr = getTermsString();
-       if(termStr.length > 0){
-            window.location.href = '{{ collection.url | full_url }}?terms=' + encodeURIComponent(termStr);
+       var location = '{{'/' | full_url }}' + jQuery('#location-path').val();
+       if(jQuery('#location-path').val() && jQuery('#location-path').val().length > 0){
+            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) : "");
        }
    });
 </script>

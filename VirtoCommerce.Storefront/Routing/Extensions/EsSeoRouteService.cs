@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -16,6 +17,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
     {
         private readonly Func<ICatalogModuleApiClient> _catalogApiFactory;
         private readonly ILocalCacheManager _cacheManager;
+
         public EsSeoRouteService(Func<ICoreModuleApiClient> coreApiFactory, Func<ICatalogModuleApiClient> catalogApiFactory, ILocalCacheManager cacheManager) 
             : base(coreApiFactory, catalogApiFactory, cacheManager)
         {
@@ -50,33 +52,32 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 {
                     return null;
                 }
-                // TODO: move id to settings
-                switch (product.CategoryId)
+                if (product.CategoryId == ConfigurationManager.AppSettings["RegionCategoryId"])
                 {
-                    case "654dbd245eb2484fa5ccd8ffd69387da":
-                        workContext.RegionProduct = product;
-                        workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
-                        {
-                            Name = "region",
-                            Value = product.Name
-                        });
-                        break;
-                    case "2036643b08794d149e1722adbe0230e8":
-                        workContext.TypeProduct = product;
-                        workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
-                        {
-                            Name = "estatetype",
-                            Value = product.Name
-                        });
-                        break;
-                    case "06d09840154341a4b4564aa9b94b06b3":
-                        workContext.CityProduct = product;
-                        workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
-                        {
-                            Name = "city",
-                            Value = product.Name
-                        });
-                        break;
+                    workContext.RegionProduct = product;
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "region",
+                        Value = product.Name
+                    });
+                }
+                else if (product.CategoryId == ConfigurationManager.AppSettings["TypeCategoryId"])
+                {
+                    workContext.TypeProduct = product;
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "estatetype",
+                        Value = product.Name
+                    });
+                }
+                else if (product.CategoryId == ConfigurationManager.AppSettings["CityCategoryId"])
+                {
+                    workContext.CityProduct = product;
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "city",
+                        Value = product.Name
+                    });
                 }
                 seo = all.FirstOrDefault(x => x.ObjectType == "Category");
                 if (seo == null)

@@ -1,0 +1,6 @@
+﻿<div class="dropdown form-control location-search">
+    <input data-ignore type="text" id="location-value" value="{%- include 'location-name' -%}">
+    <input data-ignore data-city="{%- if city_product -%}{{- city_product.title -}} {%- endif -%}" data-region="{%- if region_product -%}{{- region_product.title -}} {%- endif -%}" type="hidden" id="location-path" value="{%- include 'location-path' -%}">
+    <ul class="dropdown-menu filter_menu list"> 
+    </ul>
+</div>

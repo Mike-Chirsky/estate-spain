@@ -587,6 +587,9 @@
     <Content Include="App_Data\Themes\es\snippets\market-block.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-link-list.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-count.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\filters\location.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\location-name.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\location-path.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
@@ -1020,11 +1023,13 @@
     <Compile Include="Controllers\Api\ApiPricingController.cs" />
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
     <Compile Include="Controllers\BulkOrderController.cs" />
     <Compile Include="Controllers\SitemapController.cs" />
     <Compile Include="Controllers\StaticContentController.cs" />
     <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Controllers\QuoteRequestController.cs" />
+    <Compile Include="Converters\Es\ProductToLocationItem.cs" />
     <Compile Include="Converters\Recommendations\CognitiveRecommendationConverter.cs" />
     <Compile Include="Converters\SettingConverter.cs" />
     <Compile Include="Converters\Pricing\PricingConverter.cs" />

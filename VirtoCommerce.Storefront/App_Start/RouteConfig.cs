@@ -101,6 +101,10 @@ namespace VirtoCommerce.Storefront
             // Blog API
             routes.AddStorefrontRoute("API.Blog.Search", "storefrontapi/blog/{blogName}/search", defaults: new { controller = "ApiBlog", action = "Search" });
 
+            #region Estate spain API
+            routes.AddStorefrontRoute("API.Es.Location.Search", "storefrontapi/location/search", defaults: new { controller = "ApiLocationSearch", action = "Search" }, constraints: new { httpMethod = new HttpMethodConstraint("POST") });
+            #endregion
+
             #endregion
 
             // Account

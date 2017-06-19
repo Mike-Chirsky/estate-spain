@@ -1,0 +1,9 @@
+﻿{%- if city_product -%}
+    {{- city_product.title -}}
+{%- endif -%}
+{%- if region_product -%}
+    {%- if city_product -%}
+        {{- ', ' -}}
+    {%- endif -%}
+    {{- region_product.title -}}
+{%- endif -%}

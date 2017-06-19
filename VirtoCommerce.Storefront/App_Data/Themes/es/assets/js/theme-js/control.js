@@ -1537,6 +1537,12 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    $("#location-value").keyup(function (e) {
+        if (e.which <= 90 && e.which >= 48) {
+            loadSearchData("/storefrontapi/location/search", $("#location-value").val(), ".location-search");
+        }
+    });
+
     $.each(jQuery("#filter-checks input"), function (index, item) {
         jQuery(item).change(function () {
             getFoundResults();
