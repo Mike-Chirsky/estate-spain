@@ -1528,35 +1528,7 @@ jQuery(document).ready(function ($) {
     var elems = ['.search_wrapper' , '#advanced_search_shortcode', '#advanced_search_shortcode_2', '.adv-search-mobile','.advanced_search_sidebar'];
  
     $.each( elems, function( i, elem ) {
-      
-        $(elem+' li').click(function (event) {
-            event.preventDefault();
-            var pick, value, parent,parent_replace;
-            
-            parent_replace='.filter_menu_trigger';
-            if(elem === '.advanced_search_sidebar'){
-                parent_replace='.sidebar_filter_menu';      
-            }
-            
-            if ($(this).attr('data-value') == "*") {
-                pick = $(this).attr('value');
-            }
-            else if ($(this).attr('display-header')) {
-                pick = $(this).attr('display-header') + ' : <span class="dd-select-value">' + $(this).text() + '</span>';
-            }
-            else if ($(this).attr('formated-value')) {
-                pick = $(this).attr('formated-value');
-            }
-            else {
-                pick = $(this).text();
-            }
-            
-            value = $(this).attr('data-value');
-            parent = $(this).parent().parent();  
-            parent.find(parent_replace).html(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);
-            parent.find('input').val(value).trigger('change'); 
-            getFoundResults();
-        });
+        setClickDdElement(elem);
     });
 
     $("#location-value").keyup(function (e) {

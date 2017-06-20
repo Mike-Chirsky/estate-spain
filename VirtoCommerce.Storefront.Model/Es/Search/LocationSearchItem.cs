@@ -43,6 +43,24 @@ namespace VirtoCommerce.Storefront.Model.Es.Search
             }
         }
 
+        public string Seo {
+            get {
+                if(!string.IsNullOrEmpty(DistrictSeo))
+                {
+                    return  $"{CitySeo}/{DistrictSeo}";
+                }
+                if (!string.IsNullOrEmpty(CitySeo))
+                {
+                    return CitySeo;
+                }
+                if (!string.IsNullOrEmpty(RegionSeo))
+                {
+                    return RegionSeo;
+                }
+                return string.Empty;
+            }
+        }
+
         public string Name
         {
             get

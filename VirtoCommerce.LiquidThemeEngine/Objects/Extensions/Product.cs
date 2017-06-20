@@ -215,6 +215,30 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
         }
 
+        public string InfoBlockListing1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing1");
+            }
+        }
+
+        public string InfoBlockListing2
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing2");
+            }
+        }
+
+        public string InfoBlockListing3
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing3");
+            }
+        }
+
         #endregion
 
         #region Properties

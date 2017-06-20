@@ -80,21 +80,104 @@ function getFoundResults() {
             $("#no-filter").hide();
             $("#count-objects").show();
             $("#result-count").text(data.metaData.totalItemCount);
-            /*jQuery("#results_no").html(data.metaData.totalItemCount);
-            jQuery("#results").css("opacity", "1");
-            setTimeout(function () {
-                jQuery("#results").css("opacity", "0");
-            }, 4000);*/
+            fillElement("#estate-type-value", data.aggregations, "estatetype");
+            fillElement("#other_type", data.aggregations, "other_type");
+            fillElement("#condition-value", data.aggregations, "condition");
+            
+
         },
         method: "POST",
         contentType: "application/json"
     });
 }
 
+function fillElement(id, aggregations, field) {
+    // remove old values
+    $(id).parent().find("ul.dropdown-menu li:not(:first)").remove();
+    var currentValue = $(id).val();
+    var list = $(id).parent().find("ul.dropdown-menu");
+    var types = getValues(aggregations, field);
+    var setToDefault = true;
+    types.forEach(function (item) {
+        if (item.value === currentValue) {
+            setToDefault = false;
+        }
+        list.append('<li data-value="' + item.value + '">' + item.value + '</li>');
+    });
+    if (setToDefault) {
+        setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false);
+    }
+    setClickDdElement(".search_wrapper");
+}
+
+function getValues(aggregations, type)
+{
+    var result = [];
+    aggregations.forEach(function (agg) {
+        if (agg.field === type)
+        {
+            result = agg.items;
+        }
+    });
+    return result;
+}
+
+function setClickDdElement(elem)
+{
+    $(elem + ' li').click(function (event) {
+        event.preventDefault();
+        setDdValue(this, true, true);
+    });
+}
+
+function setDdValue(element, changeNotif, loadResult)
+{
+    var pick, value, parent, parent_replace;
+
+    parent_replace = '.filter_menu_trigger';
+    /*if (elem === '.advanced_search_sidebar') {
+        parent_replace = '.sidebar_filter_menu';
+    }*/
+
+    if ($(element).attr('data-value') == "*") {
+        pick = $(element).attr('value');
+    }
+    else if ($(element).attr('display-header')) {
+        pick = $(element).attr('display-header') + ' : <span class="dd-select-value">' + $(element).text() + '</span>';
+    }
+    else if ($(element).attr('formated-value')) {
+        pick = $(element).attr('formated-value');
+    }
+    else {
+        pick = $(element).text();
+    }
+
+    value = $(element).attr('data-value');
+    parent = $(element).parent().parent();
+    // set select
+    if ($(element).attr('data-value') != "*") {
+        parent.addClass("selected");
+    } else {
+        parent.removeClass("selected");
+    }
+
+    parent.find(parent_replace).html(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);
+    if (changeNotif) {
+        parent.find('input').val(value).trigger('change');
+    }
+    else {
+        parent.find('input').val(value);
+    }
+    if (loadResult) {
+        getFoundResults();
+    }
+}
+
 function loadSearchData(url, search, element) {
     if (!search || !url) {
         return;
     }
+    jQuery(element + " input[type=text]").removeClass("selected");
     jQuery.ajax({
         url: url,
         data: JSON.stringify({ search: search }),
@@ -104,7 +187,7 @@ function loadSearchData(url, search, element) {
                 jQuery(element + " .list").html('');
                 for (var i = 0; i < data.items.length; i++) {
                     var item = data.items[i];
-                    jQuery(element + " .list").append('<li data-seo-path="' + item.fullSeo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
+                    jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
                 }
                 jQuery.each(jQuery(element + " .list li"), function (index, item) {
                     jQuery(item).click(function () {
@@ -124,6 +207,7 @@ function selectSearchItem(item, element) {
     jQuery(element + " input[type=hidden]").val(jQuery(item).attr("data-seo-path"));
     jQuery(element + " input[type=hidden]").attr("data-region", jQuery(item).attr("data-region"));
     jQuery(element + " input[type=hidden]").attr("data-city", jQuery(item).attr("data-city"));
+    jQuery(element + " input[type=text]").addClass("selected");
     getFoundResults();
 }
 

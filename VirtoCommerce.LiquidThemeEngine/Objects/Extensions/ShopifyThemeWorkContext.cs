@@ -28,23 +28,26 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
         }
 
-        public string CollectionType {
+        public string CollectionType
+        {
             get
             {
                 if (TypeProduct != null)
                 {
                     return "type";
                 }
-                if (CityProduct!=null)
+                if (CityProduct != null)
                 {
                     return "city";
                 }
-                if (RegionProduct!=null)
+                if (RegionProduct != null)
                 {
                     return "region";
                 }
                 return null;
             }
         }
+
+        public bool FromFilter { set; get; }
     }
 }

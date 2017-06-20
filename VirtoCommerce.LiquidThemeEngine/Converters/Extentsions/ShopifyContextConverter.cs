@@ -28,7 +28,10 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             {
                 result.TypeProduct = workContext.TypeProduct.ToShopifyModel();
             }
-
+            if (workContext.QueryString.AllKeys.FirstOrDefault(x => x.Equals("from_filter", StringComparison.InvariantCultureIgnoreCase)) != null)
+            {
+                result.FromFilter = true;
+            }
             return result;
         }
     }

@@ -761,5 +761,10 @@ body{
     color: #fff;
 }
 .adv-search-1 input[type=text]{
-color: #7f7f7f;
+    color: #7f7f7f;
+}
+.dropdown.selected .filter_menu_trigger,
+.dropdown.location-search input[type=text].selected
+{
+    color: #FF9800;
 }

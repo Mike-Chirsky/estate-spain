@@ -3,46 +3,10 @@
 		<div class="col-md-6">
 			{% include 'filters/location' %}
 		</div>
-		<!--<div class="col-md-3" {%- if region_product -%} style="display: none;" {%-endif-%}>
-			<div class="dropdown form-control ">
-				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_region_filter.value }}">
-					{%- if collection.current_region_filter -%}
-						{{ collection.current_region_filter.value }}
-					{%-else-%} 
-						{{ 'product.region' | t }}
-					{%-endif-%}
-					<span class="caret  caret_filter "></span>
-				</div>
-				<input type="hidden" property-name="region" id="region-value" value="{{ collection.current_region_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.region' | t }}">{{ 'filter.any' | t }}</li>
-					{% for item in collection.region_filter %}
-					<li data-value="{{ item.value }}">{{ item.value }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-3" {%- if city_product -%} style="display: none;" {%-endif-%}>
-			<div class="dropdown form-control ">
-				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_city_filter.value }}">
-					{%- if collection.current_city_filter -%}
-						{{ collection.current_city_filter.value }}
-					{%-else-%} 
-						{{ 'product.city' | t }}
-					{%-endif-%}
-					<span class="caret  caret_filter "></span>
-				</div>
-				<input type="hidden" property-name="city" id="city-value" value="{{ collection.current_city_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.city' | t }}">{{ 'filter.any' | t }}</li>
-					{% for item in collection.city_filter %}
-					<li data-value="{{ item.value }}">{{ item.value }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>-->
 		<div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
-			<div class="dropdown form-control ">
+			<div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
 					{%- if collection.current_estate_type_filter -%}
 					{{ collection.current_estate_type_filter.value }}
@@ -61,7 +25,9 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown form-control ">
+			<div class="dropdown form-control {%- if collection.current_other_type_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}"> 
 					{%- if collection.current_other_type_filter -%}
 					{{ collection.current_other_type_filter.value }}
@@ -80,7 +46,9 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown form-control ">
+			<div class="dropdown form-control {%- if collection.current_condit_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_condit_filter.value }}">
 					{%- if collection.current_condit_filter -%}
 					{{ collection.current_condit_filter.value }}
@@ -99,7 +67,9 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown form-control ">
+			<div class="dropdown form-control {%- if collection.current_sea_distance_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_sea_distance_filter.value }}">
 					{{ 'product.distancetosea' | t }}
 					<span class="caret  caret_filter "></span>
@@ -117,7 +87,9 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown form-control ">
+			<div class="dropdown form-control {%- if collection.current_price_range_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
 				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_price_range_filter.value }}">
 					{{ 'filter.price2' | t }}
 					<span class="caret  caret_filter "></span>
@@ -151,10 +123,10 @@
 		{%- endif -%}
 		<div class="col-md-3">
 			<button id="send-main-filter" class="wpresidence_button">
-				<span id="no-filter">{{ 'filter.action' | t }}</span>
-				<span style="display:none" id="count-objects">
+				{% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
+				<span id="count-objects">
 					{{ 'filter.show-result' | t }} 
-					<span id="result-count"></span>
+					<span id="result-count">{%- include 'product-count' -%}</span>
 					{{ 'objects' | t }}
 				</span>
 			</button>
@@ -238,7 +210,7 @@ function formatPrice(price) {
        var termStr = getTermsString();
        var location = '{{'/' | full_url }}' + jQuery('#location-path').val();
        if(jQuery('#location-path').val() && jQuery('#location-path').val().length > 0){
-            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) : "");
-       }
+            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+	   }
    });
 </script>

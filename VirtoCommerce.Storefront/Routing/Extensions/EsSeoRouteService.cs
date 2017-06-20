@@ -44,7 +44,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                     return null;
                 }
                 var product = _cacheManager.Get($"Product{seo.ObjectId}", "SeoProducts", () => _catalogApiFactory()
-                                                                                                .CatalogModuleProducts.GetProductById(seo.ObjectId)
+                                                                                                .CatalogModuleProducts.GetProductById(seo.ObjectId, ItemResponseGroup.ItemMedium.ToString())
                                                                                                 ?.ToProduct(workContext.CurrentLanguage,
                                                                                                             workContext.CurrentCurrency,
                                                                                                             workContext.CurrentStore));
@@ -78,6 +78,17 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         Name = "city",
                         Value = product.Name
                     });
+                    // link to region
+                    var regionAssociationId = product.Associations.OfType<ProductAssociation>().FirstOrDefault(x => x.Type == "Regions")?.ProductId;
+                    if (!string.IsNullOrEmpty(regionAssociationId))
+                    {
+                        var regionProduct = _cacheManager.Get($"Product{regionAssociationId}", "SeoProducts", () => _catalogApiFactory()
+                                                                                                .CatalogModuleProducts.GetProductById(regionAssociationId, ItemResponseGroup.ItemAssociations.ToString())
+                                                                                                ?.ToProduct(workContext.CurrentLanguage,
+                                                                                                            workContext.CurrentCurrency,
+                                                                                                            workContext.CurrentStore));
+                        workContext.RegionProduct = regionProduct;
+                    }
                 }
                 seo = all.FirstOrDefault(x => x.ObjectType == "Category");
                 if (seo == null)
