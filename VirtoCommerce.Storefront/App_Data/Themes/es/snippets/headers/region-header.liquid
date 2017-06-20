@@ -1,26 +1,53 @@
 ﻿<div class="row region-header">
    <h2>{{- meta_info_product.h2_tip -}}</h2>
    <div class="row region-tails">
-      <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+      {%- if meta_info_product.link_block_type1 -%}
+      <div class="col-md-{%- if meta_info_product.link_block_type2 and meta_info_product.link_block_type3 -%}
+          {{-4-}}
+          {%- elseif meta_info_product.link_block_type2 == null or meta_info_product.link_block_type3 == null -%}
+          {{-6-}}
+          {%- else -%}
+          {{-12-}}
+          {%- endif -%}"
+           style="background-image: url({{meta_info_product.link_block_type1_image}})">
          <div class="block-inner">
             <div class="bottom">
                {{- meta_info_product.link_block_type1 -}}
             </div>
          </div>
       </div>
-      <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+      {%- endif -%}
+      {%- if meta_info_product.link_block_type2 -%}
+      <div class="col-md-{%- if meta_info_product.link_block_type1 and meta_info_product.link_block_type3 -%}
+          {{-4-}}
+          {%- elseif meta_info_product.link_block_type1 == null or meta_info_product.link_block_type3 == null -%}
+          {{-6-}}
+          {%- else -%}
+          {{-12-}}
+          {%- endif -%}" 
+          style="background-image: url({{meta_info_product.link_block_type2_image}})">
          <div class="block-inner">
             <div class="bottom">
                {{- meta_info_product.link_block_type2 -}}
             </div>
          </div>
       </div>
-      <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+      {%- endif -%}
+      {%- if meta_info_product.link_block_type3 -%}
+      <div class="col-md-{%- if meta_info_product.link_block_type1 and meta_info_product.link_block_type2 -%}
+          {{-4-}}
+          {%- elseif meta_info_product.link_block_type1 == null or meta_info_product.link_block_type2 == null -%}
+          {{-6-}}
+          {%- else -%}
+          {{-12-}}
+          {%- endif -%}" 
+          style="background-image: url({{meta_info_product.link_block_type3_image}})">
          <div class="block-inner">
             <div class="bottom">
                {{- meta_info_product.link_block_type3 -}}
             </div>
          </div>
       </div>
+      {%- endif -%}
    </div>
 </div>

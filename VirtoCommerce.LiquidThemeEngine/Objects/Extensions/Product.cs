@@ -11,6 +11,68 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     public partial class Product
     {
 
+        #region Images
+        public string HeaderImage
+        {
+            get
+            {
+                return GetImageSrcByType("Header");
+            }
+        }
+        public string LinkBlockType1Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type1");
+            }
+        }
+        public string LinkBlockType2Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type2");
+            }
+        }
+        public string LinkBlockType3Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type3");
+            }
+        }
+
+        public string LinkBlockRightImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-right");
+            }
+        }
+
+        public string LinkBlockLeftImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-left");
+            }
+        }
+        public string LinkBlockCentrImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-centr");
+            }
+        }
+
+        public string LinkBlockCentr1Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-centr1");
+            }
+        }
+        #endregion
+
         #region Info property
         public string H1
         {
@@ -155,6 +217,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         #endregion
 
+        #region Properties
         /// <summary>
         /// Get deal type 
         /// </summary>
@@ -281,6 +344,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetPropertyByName("district")?.Value;
             }
         }
+        #endregion
 
         /// <summary>
         /// Custom title
@@ -425,6 +489,11 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return string.Empty;
             }
             return Descriptions.FirstOrDefault(x => type.Equals(x.Type, StringComparison.InvariantCultureIgnoreCase))?.Content;
+        }
+
+        private string GetImageSrcByType(string type)
+        {
+            return "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
         }
     }
 }
