@@ -5,7 +5,7 @@
       </div>
       <div class="col-md-9 order-by">   
         <div class="dropdown listing_filter_select">
-            <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
+            <div data-toggle="dropdown" id="sortByPrice" class="filter_menu_trigger" aria-expanded="false"> 
                 {{ 'filter.price' | t }} 
                 <span>
                     <a class="caret caret_filter top"></a>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="dropdown listing_filter_select">
-            <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
+            <div data-toggle="dropdown" id="sortBySquare" class="filter_menu_trigger" aria-expanded="false"> 
                 {{ 'filter.meters' | t }} 
                 <span>
                     <a class="caret caret_filter top"></a>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="dropdown listing_filter_select order_filter">
-            <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
+            <div data-toggle="dropdown" id="sortByDate" class="filter_menu_trigger" aria-expanded="false"> 
                 {{ 'filter.is-new' | t }}
                 <span>
                     <a class="caret caret_filter top"></a>

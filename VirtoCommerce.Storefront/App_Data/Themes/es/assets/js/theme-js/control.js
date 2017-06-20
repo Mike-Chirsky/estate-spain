@@ -3,15 +3,6 @@ var width,height;
 width   = jQuery(window).width();
 height = jQuery(window).height();
 
-/** 
- * Product slider
- */
-jQuery("#slider-product-prev").click(function(){
-    
-});
-jQuery("#slider-product-next").click(function(){
-
-});
 jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;
@@ -160,7 +151,38 @@ jQuery(document).ready(function ($) {
       
       
 jQuery(document).ready(function ($) {
-   "use strict";
+    "use strict";
+    /* sorting controls*/
+
+    jQuery("#sortByPrice").click(function () {
+        if (window.location.href.indexOf("price-ascending")!== -1) {
+            sortBy("price-descending");
+        }
+        else {
+            sortBy("price-ascending");
+        }
+    });
+
+    jQuery("#sortBySquare").click(function () {
+        if (window.location.href.indexOf("propertysquare-ascending") !== -1) {
+            sortBy("propertysquare-descending");
+        }
+        else {
+            sortBy("propertysquare-ascending");
+        }
+    });
+
+    jQuery("#sortByDate").click(function () {
+        if (window.location.href.indexOf("created-ascending") !== -1) {
+            sortBy("created-descending");
+        }
+        else {
+            sortBy("created-ascending");
+        }
+    });
+
+    
+
     var screen_width,screen_height,map_tab;
     if($.datepicker)
     {
@@ -1540,6 +1562,16 @@ jQuery(document).ready(function ($) {
     $("#location-value").keyup(function (e) {
         if (e.which <= 90 && e.which >= 48) {
             loadSearchData("/storefrontapi/location/search", $("#location-value").val(), ".location-search");
+        }
+        
+    });
+
+    $("#location-value").click(function () {
+        if ($(".location-search .list").css("display") !== 'none') {
+            $(".location-search .list").css("display", 'none');
+        }
+        else if ($(".location-search .list li").length > 0) {
+            $(".location-search .list").css("display", 'block');
         }
     });
 
