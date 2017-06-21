@@ -35,6 +35,10 @@ function getTerms() {
         }
     }
 
+    if ($("#estate-type-value").val()) {
+        terms.push({ name: "estatetype", value: $("#estate-type-value").val() });
+    }
+
     if (jQuery("#filter-checks input:checked").length > 0) {
         var sysfilterItem = { name: "sys_filter:", value: "" };
         $.each(jQuery("#filter-checks input:checked"), function (index, item) {
