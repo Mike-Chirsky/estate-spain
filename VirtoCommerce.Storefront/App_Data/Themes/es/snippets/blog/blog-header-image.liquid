@@ -1,0 +1,10 @@
+﻿{%- if article -%}
+    {{- article.image_url | absolute_url -}}
+{%- else -%}
+    {%- if blog.handle == 'news' -%}
+        {{- 'images/news_blog_header_img.jpg' | asset_url -}}
+    {%- endif -%}
+    {%- if blog.handle == 'reviews' -%}
+        {{- 'images/reviews_blog_header_img.jpg' | asset_url -}}
+    {%- endif -%}
+{%- endif -%}

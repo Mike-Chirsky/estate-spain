@@ -768,3 +768,35 @@ body{
 {
     color: #FF9800;
 }
+
+.blog-header,
+.blog-header-title{
+    text-align: center;
+    color: #fff;
+    background-color: rgba(50, 56, 64, 0.9);
+    padding: 0px;
+    margin: 0px;
+}
+h4.blog-header
+{
+    padding-top: 15px;
+    color: #EAFFEC;
+}
+h2.blog-header
+{
+    padding-bottom: 15px;
+}
+.blog-header-container{
+    top: 130px;
+}
+
+.blog-preview-text{
+    padding-bottom: 15px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.padding15
+{
+    padding: 15px;
+}

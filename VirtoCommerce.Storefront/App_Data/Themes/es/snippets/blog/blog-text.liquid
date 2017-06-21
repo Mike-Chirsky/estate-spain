@@ -1,0 +1,10 @@
+{%- if blog.handle == 'news' -%}
+    <div class="row blog-preview-text">{{'blog.news.header-title' | t }}</div>
+{%- endif -%}
+{%- if blog.handle == 'reviews' -%}
+    <h2 class="text-center">{{ 'blog.reviews.header-title' | t }}</h2>
+    <div class="row blog-preview-text">
+        <div class="col-md-6">{{'blog.reviews.preview-text' | t }}</div>
+        <div class="col-md-6">{{'blog.reviews.preview-text2' | t }}</div>
+    </div>
+{%- endif -%}

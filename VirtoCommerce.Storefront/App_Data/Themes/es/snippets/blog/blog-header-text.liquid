@@ -1,0 +1,12 @@
+{%- if article -%}
+    <h1 class="blog-header padding15">{{- article.title -}}</h1>
+{%- else -%}
+    {%- if blog.handle == 'news'-%}
+        <h4 class="blog-header">{{'blog.news.header' | t }}</h3>
+        <h1 class="blog-header">{{'blog.news.header1' | t | upcase }}</h1>
+        <h2 class="blog-header">{{'blog.news.header2' | t }}</h2>
+    {%- endif -%}
+    {%- if blog.handle == 'reviews'-%}
+        <h1 class="blog-header">{{'blog.reviews.header' | t }}</h1>
+    {%- endif -%}
+{%- endif -%}

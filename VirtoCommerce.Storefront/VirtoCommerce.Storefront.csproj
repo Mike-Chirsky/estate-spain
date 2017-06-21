@@ -271,6 +271,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\cms-content\Pages\demo\assets\news\images\dijest_news.jpg" />
+    <Content Include="App_Data\cms-content\Pages\demo\assets\reviews\images\first.jpg" />
     <Content Include="App_Data\countries.json" />
     <Content Include="App_Data\Themes\es\assets\account-bootstrap.css" />
     <Content Include="App_Data\Themes\es\assets\active-bg.png" />
@@ -464,6 +466,8 @@
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider-default-theme.css" />
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider.css" />
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider.min.js" />
+    <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\women.jpg" />
     <Content Include="App_Data\Themes\es\assets\informer-loader.gif" />
     <Content Include="App_Data\Themes\es\assets\interactor.js" />
@@ -590,6 +594,19 @@
     <Content Include="App_Data\Themes\es\snippets\filters\location.liquid" />
     <Content Include="App_Data\Themes\es\snippets\location-name.liquid" />
     <Content Include="App_Data\Themes\es\snippets\location-path.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\news.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\first.md" />
+    <Content Include="App_Data\Themes\es\snippets\headers\blog-header.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-item.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\two.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\three.md" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-header-image.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-header-text.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-text.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\reviews.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\first.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\three.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\two.md" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
