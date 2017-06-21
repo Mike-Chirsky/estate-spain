@@ -517,7 +517,8 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         private string GetImageSrcByType(string type)
         {
-            return "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
+            var img = Images.FirstOrDefault(x => x.Name.StartsWith(type, StringComparison.InvariantCultureIgnoreCase));
+            return img != null ? img.Src : "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
         }
     }
 }
