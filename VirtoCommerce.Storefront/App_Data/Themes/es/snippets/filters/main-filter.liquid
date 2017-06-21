@@ -1,4 +1,20 @@
-﻿<div style="z-index: 10000">
+﻿<script>
+	var seoLinks = [];
+	seoLinks["estatetype"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'estatetype' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: '{{- seo.value_filter -}}', seoLink: '{{- seo.seo_link -}}'}
+					{%- else -%}
+					{value: '{{- seo.value_filter -}}', seoLink: '{{- seo.seo_link -}}'},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	]; 
+</script>
+<div style="z-index: 10000">
 	<div class="main-filter-container" id="main-filter-controls">
 		<div class="col-md-6">
 			{% include 'filters/location' %}
@@ -15,11 +31,11 @@
 					{%-endif-%}
 					<span class="caret  caret_filter "></span>
 				</div>
-				<input type="hidden" property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
+				<input data-ignore type="hidden" data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}" property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
 				<ul class="dropdown-menu filter_menu">
 					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
 					{% for item in collection.estate_type_filter %}
-					<li data-value="{{ item.value }}">{{ item.value }}</li>
+					<li data-value="{{ item.value }}" data-seo-path="{{ item.value | filter_seo_link: 'estatetype': filter_seo_links}}">{{ item.value }}</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -28,7 +44,7 @@
 			<div class="dropdown form-control {%- if collection.current_other_type_filter -%}
 					{{- ' selected' -}}
 					{%-endif-%}">
-				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}"> 
+				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_other_type_filter.value }}">
 					{%- if collection.current_other_type_filter -%}
 					{{ collection.current_other_type_filter.value }}
 					{%-else-%} 
@@ -107,19 +123,17 @@
 				</ul>
 			</div>
 		</div>
-		{%- if region_product == null or city_product == null or type_product == null  -%}
-			{%- if region_product -%}
+		{%- if region_product -%}
 		<div class="col-md-3">
 		</div>
-			{%- endif -%}
-			{%- if city_product -%}
+		{%- endif -%}
+		{%- if city_product -%}
 		<div class="col-md-3">
 		</div>
-			{%- endif -%}
-			{%- if type_product -%}
+		{%- endif -%}
+		{%- if type_product -%}
 		<div class="col-md-3">
 		</div>
-			{%- endif -%}
 		{%- endif -%}
 		<div class="col-md-3">
 			<button id="send-main-filter" class="wpresidence_button">
@@ -208,9 +222,7 @@ function formatPrice(price) {
 {% endcomment %}
    jQuery("#send-main-filter").click(function () {
        var termStr = getTermsString();
-       var location = '{{'/' | full_url }}' + jQuery('#location-path').val();
-       if(jQuery('#location-path').val() && jQuery('#location-path').val().length > 0){
-            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
-	   }
+       var location = '{{'/' | full_url }}' + getRequestSeoPath();
+		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
    });
 </script>

@@ -33,7 +33,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 return existSeo;
             }
             
-            var pathParts = seoPath.Split('/');
+            var pathParts = seoPath.Trim('/').Split('/');
 
             foreach (var part in pathParts)
             {

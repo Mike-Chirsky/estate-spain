@@ -124,6 +124,7 @@
     <Compile Include="Converters\Extentsions\EsShopifyModelConverter.cs" />
     <Compile Include="Converters\Extentsions\ShopifyContextConverter.cs" />
     <Compile Include="Converters\Extentsions\ShopifyModelCollectionConverter.cs" />
+    <Compile Include="Converters\FilterSoeLinksConverter.cs" />
     <Compile Include="Converters\TransactionConverter.cs" />
     <Compile Include="Converters\ArticleConverter.cs" />
     <Compile Include="Converters\AttachmentConverter.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Filters\DateFilters.cs" />
     <Compile Include="Filters\HtmlFilters.cs" />
     <Compile Include="Filters\MoneyFilters.cs" />
+    <Compile Include="Filters\SeoFilter.cs" />
     <Compile Include="Filters\StringFilters.cs" />
     <Compile Include="Filters\UrlFilters.cs" />
     <Compile Include="Filters\TranslationFilter.cs" />
@@ -193,6 +195,9 @@
     <Compile Include="Objects\Extensions\Paginate.cs" />
     <Compile Include="Objects\Extensions\Product.cs" />
     <Compile Include="Objects\Extensions\ShopifyThemeWorkContext.cs" />
+    <Compile Include="Objects\FilterLink.cs" />
+    <Compile Include="Objects\FilterSeoLinkCollection.cs" />
+    <Compile Include="Objects\FilterSeoLinkCollections.cs" />
     <Compile Include="Objects\Form.cs" />
     <Compile Include="Objects\FormErrors.cs" />
     <Compile Include="Objects\Fulfillment.cs" />

@@ -102,7 +102,18 @@ function fillElement(id, aggregations, field) {
         if (item.value === currentValue) {
             setToDefault = false;
         }
-        list.append('<li data-value="' + item.value + '">' + item.value + '</li>');
+        if (seoLinks && seoLinks[field]) {
+            var seoPath = "";
+            seoLinks[field].forEach(function (seo) {
+                if (seo.value === item.value) {
+                    seoPath = seo.seoLink;
+                }
+            });
+            list.append('<li data-value="' + item.value + '" data-seo-path="' + seoPath + '">' + item.value + '</li>');
+        }
+        else {
+            list.append('<li data-value="' + item.value + '">' + item.value + '</li>');
+        }
     });
     if (setToDefault) {
         setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false);
@@ -154,20 +165,25 @@ function setDdValue(element, changeNotif, loadResult)
 
     value = $(element).attr('data-value');
     parent = $(element).parent().parent();
+    if ($(element).attr('data-seo-path'))
+    {
+        parent.find("input").attr('data-seo-path', $(element).attr('data-seo-path'));
+    }
     // set select
     if ($(element).attr('data-value') != "*") {
         parent.addClass("selected");
     } else {
         parent.removeClass("selected");
     }
-
     parent.find(parent_replace).html(pick).append('<span class="caret caret_filter"></span>').attr('data-value', value);
+
     if (changeNotif) {
         parent.find('input').val(value).trigger('change');
     }
     else {
         parent.find('input').val(value);
     }
+
     if (loadResult) {
         getFoundResults();
     }
@@ -227,4 +243,27 @@ function sortBy(value) {
         paramsStr += "sort_by=" + value;
         window.location.href = locationParts[0] + "?" + paramsStr;
     }
+}
+function getRequestSeoPath() {
+    var locationPath = jQuery('#location-path').val();
+    if (locationPath === undefined)
+    {
+        locationPath = "";
+    }
+    var typePath = jQuery('#estate-type-value').attr('data-seo-path');
+    if (typePath === undefined)
+    {
+        typePath = "";
+    }
+    if (locationPath !== "" && typePath !== "") {
+        return locationPath + "/" + typePath;
+    }
+    else if (locationPath !== "") {
+        return locationPath;
+    }
+    else if (typePath !== "")
+    {
+        return typePath;
+    }
+    return "";
 }

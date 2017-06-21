@@ -49,5 +49,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         }
 
         public bool FromFilter { set; get; }
+
+        public FilterSeoLinkCollections FilterSeoLinks { set; get; }
     }
 }

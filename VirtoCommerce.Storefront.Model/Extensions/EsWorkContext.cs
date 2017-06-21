@@ -23,5 +23,10 @@ namespace VirtoCommerce.Storefront.Model
         /// Info for type product
         /// </summary>
         public Product TypeProduct { set; get; }
+
+        /// <summary>
+        /// List filter seo keywords
+        /// </summary>
+        public Dictionary<string, List<Tuple<string, string>>> FilterSeoLinks { get; set; }
     }
 }

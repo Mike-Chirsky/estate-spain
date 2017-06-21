@@ -45,9 +45,15 @@ namespace VirtoCommerce.Storefront.Owin
         protected static readonly RequireHttps RequireHttps = GetRequireHttps();
         protected static readonly PathString[] OwinIgnorePathsStrings = GetOwinIgnorePathStrings();
         protected static readonly Country[] AllCountries = GetAllCounries();
+        /// <summary>
+        /// Containts all seo keywords for filters
+        /// </summary>
+        protected static Dictionary<string, List<Tuple<string, string>>> FilterSeo;
 
         protected UnityContainer Container { get; }
         protected ILocalCacheManager CacheManager { get; }
+
+        protected ICatalogSearchService CatalogSearchService { get; }
 
         public WorkContextOwinMiddleware(OwinMiddleware next, UnityContainer container)
             : base(next)
@@ -56,6 +62,7 @@ namespace VirtoCommerce.Storefront.Owin
             // Don't store any instances which depend on WorkContext because it has a per request lifetime.
             Container = container;
             CacheManager = container.Resolve<ILocalCacheManager>();
+            CatalogSearchService = container.Resolve<ICatalogSearchService>();
         }
 
         public override async Task Invoke(IOwinContext context)
@@ -133,7 +140,6 @@ namespace VirtoCommerce.Storefront.Owin
         protected virtual async Task HandleStorefrontRequest(IOwinContext context)
         {
             var workContext = Container.Resolve<WorkContext>();
-
             // Initialize common properties
             var qs = HttpUtility.ParseQueryString(context.Request.Uri.Query);
             workContext.RequestUrl = context.Request.Uri;
@@ -270,10 +276,14 @@ namespace VirtoCommerce.Storefront.Owin
                     }).ToList();
 
                     workContext.ApplicationSettings = GetApplicationSettings();
-
+                    if (FilterSeo == null)
+                    {
+                        FilterSeo = GetAllFilterSeo(workContext);
+                    }
                     //Do not load shopping cart and other for resource requests
                     if (!IsAssetRequest(context.Request))
                     {
+                        workContext.FilterSeoLinks = FilterSeo;
                         await HandleNonAssetRequest(context, workContext);
                     }
                 }
@@ -672,6 +682,31 @@ namespace VirtoCommerce.Storefront.Owin
             }
 
             return country;
+        }
+
+        private Dictionary<string, List<Tuple<string, string>>> GetAllFilterSeo(WorkContext wc)
+        {
+            var oldCurrentStore = wc.CurrentStore;
+            wc.CurrentStore = wc.AllStores.FirstOrDefault(x => x.Id == ConfigurationManager.AppSettings["MasterStoreId"]);
+            var products = CatalogSearchService.SearchProducts(new ProductSearchCriteria
+            {
+                Outline = ConfigurationManager.AppSettings["EstateTypeCategoryId"],
+                PageSize = int.MaxValue
+            });
+            wc.CurrentStore = oldCurrentStore;
+            var result = new Dictionary<string, List<Tuple<string, string>>>();
+            foreach (var item in products.Products)
+            {
+                if (item.SeoInfo != null)
+                {
+                    if (!result.ContainsKey("estatetype"))
+                    {
+                        result.Add("estatetype", new List<Tuple<string, string>>());
+                    }
+                    result["estatetype"].Add(new Tuple<string, string>(item.Name, item.SeoInfo?.Slug));
+                }
+            }
+            return result;
         }
     }
 }
