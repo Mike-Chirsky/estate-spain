@@ -218,13 +218,21 @@
                      <ul class="xoxo">
                         <li class="row subscribe-header">
                             <h4>{{'subscribe.header' | t }}</h4>
-                            <div>{{'subscribe.title' | t }}</div>
                         </li>
                         <li class="subscribe-body">
-                            <form action="" method="post">
-                                <input typ="email" class="form-control"  name="email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
-                                <input type="submit" value="{{ 'subscribe.subscribe' | t }}" class="wpresidence_button" />
-                            </form>
+                            <div class="spinner" id="subscribe-spinner" style="display: none;">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+                            <div id="subscribe-form">
+                                <input type="email" class="form-control"  id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
+                                <button id="subcribe-action" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+                            </div>
+                            <div id="subscribe-ok" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}</div>
+                            <div id="subscribe-fail" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}</div>
                         </li>
                         <li class="subscribe-footer">
                             <p>

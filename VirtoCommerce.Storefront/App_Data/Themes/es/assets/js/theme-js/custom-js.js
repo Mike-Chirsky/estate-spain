@@ -78,7 +78,7 @@ function getFoundResults() {
     }
     
     jQuery.ajax({
-        url: "/storefrontapi/catalog/search",
+        url: "storefrontapi/catalog/search",
         data: JSON.stringify({ mutableTerms: terms }),
         success: function (data) {
             $("#no-filter").hide();
@@ -271,3 +271,32 @@ function getRequestSeoPath() {
     }
     return "";
 }
+
+function subscribe()
+{
+    jQuery.post('storefrontapi/getresponse/subscribe', { email: email }, function (data) {
+    });
+}
+
+jQuery(document).ready(function () {
+    jQuery("#subcribe-action").click(function () {
+        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (re.test(jQuery("#subscribe-email").val())) {
+            jQuery("#subscribe-email").removeClass("error");
+            jQuery("#subscribe-form").hide();
+            jQuery("#subscribe-spinner").show();
+            jQuery.post('storefrontapi/getresponse/subscribe', { email: jQuery("#subscribe-email").val() }, function (data) {
+                jQuery("#subscribe-spinner").hide();
+                jQuery("#subscribe-ok").show();
+            }).fail(function () {
+                jQuery("#subscribe-spinner").hide();
+                jQuery("#subscribe-fail").show();
+            });
+        }
+        else
+        {
+            jQuery("#subscribe-email").addClass("error");
+        }
+        return false;
+    });
+});

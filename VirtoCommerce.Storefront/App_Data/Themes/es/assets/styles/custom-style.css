@@ -877,18 +877,17 @@ h2.blog-header
 }
 
 .subscribe-header,
-.subscribe-header h4,
-.subscribe-footer h5
+.subscribe-header h4
 {
     color:#C3C3C3;
     padding: 0;
     margin: 0;
 }
+
 .subscribe-footer h5
 {
-    text-align: center;
+    color: #C3C3C3;
 }
-
 .subscribe-body
 {
     padding-top: 15px;
@@ -924,4 +923,22 @@ h2.blog-header
 {
     font-size: 18px;
     line-height: 31px;
+}
+
+.form-control.error
+{
+    border: 1px solid red;
+}
+#subscribe-spinner
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#subscribe-ok
+{
+    color: #FF9800;
+}
+#subscribe-fail
+{
+    color: #BF4600;
 }
