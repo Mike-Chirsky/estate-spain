@@ -617,6 +617,8 @@
     <Content Include="App_Data\Themes\es\assets\downloads\Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-category.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\handbook-page.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-related-category.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-related-item.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

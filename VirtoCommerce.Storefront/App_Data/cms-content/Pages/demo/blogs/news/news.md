@@ -1,5 +1,5 @@
 ﻿---
 layout: es
 title: 'Новости'
-permalink: news
+permalink: blogs/news
 ---

@@ -24,6 +24,8 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
 
         public bool IsTrending { get; set; }
 
+        public IList<string> SliderImages { set; get; } = new List<string>();
+
         public override void LoadContent(string content, IDictionary<string, IEnumerable<string>> metaInfoMap)
         {
             var parts = content.Split(new[] { _excerpToken }, StringSplitOptions.None);
@@ -62,6 +64,10 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
                 IsTrending = isTrending;
             }
 
+            if (metaInfoMap.ContainsKey("slider-images"))
+            {
+                SliderImages = metaInfoMap["slider-images"].ToList();
+            }
             base.LoadContent(content, metaInfoMap);
         }
     }

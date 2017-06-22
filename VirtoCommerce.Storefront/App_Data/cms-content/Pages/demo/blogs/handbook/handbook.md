@@ -1,7 +1,7 @@
 ﻿---
 layout: es
 title: 'Справочник покупателя испанской недвижимости'
-permalink: handbook
+permalink: blogs/handbook
 categories:
   - pay
   - coasts

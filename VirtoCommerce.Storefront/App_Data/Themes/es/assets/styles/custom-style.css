@@ -849,6 +849,8 @@ h2.blog-header
 .blog-preview-text
 {
     margin: 0px;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 .blog-download
 {
@@ -859,4 +861,8 @@ h2.blog-header
 .handbook-main-container
 {
     padding-bottom: 15px;
+}
+.handbook-list-article.blog2v .read_more
+{
+    position: static;
 }
