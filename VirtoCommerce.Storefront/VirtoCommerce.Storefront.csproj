@@ -811,9 +811,6 @@
     <Content Include="App_Data\Themes\es\layout\account_layout.liquid" />
     <Content Include="App_Data\Themes\es\layout\checkout_layout.liquid" />
     <Content Include="App_Data\Themes\es\layout\empty.liquid" />
-    <Content Include="App_Data\Themes\es\layout\theme.liquid">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\Themes\es\locales\de.json" />
     <Content Include="App_Data\Themes\es\locales\en.json" />
     <Content Include="App_Data\Themes\es\locales\es.json" />
@@ -972,7 +969,7 @@
     <Content Include="App_Data\Themes\es\assets\shop.js.liquid" />
     <Content Include="App_Data\Themes\es\assets\style.css.liquid" />
     <Content Include="App_Data\Themes\es\locales\ru-RU.default.json" />
-    <Content Include="App_Data\Themes\es\layout\es.liquid">
+    <Content Include="App_Data\Themes\es\layout\theme.liquid">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Themes\es\snippets\product_name.liquid" />

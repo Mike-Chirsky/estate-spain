@@ -128,8 +128,10 @@
             "page": "Страница {{ page }}"
         },
         "404": {
-            "title": "404 Page Not Found",
-            "subtext_html": "The page you requested does not exist. Click <a href=\"collections/all\">here</a> to continue shopping."
+            "title": "Страница не найдена - Ошибка 404",
+            "subtext_html": "Да, я мексиканец, но мои предки - выходцы из Испании, поэтому меня поместили на этот сайт.",
+            "subtext_html2": "Запрашиваемая страница не найдена на сайте. Амиго, не расстраивайся - у нас на сайте много других полезных страниц!",
+            "slogan":"Tiempo para relajarse!"
         },
         "breadcrumbs": {
             "home": "Home",
@@ -764,6 +766,14 @@
         },
         "publish-date":"Дата публикации:",
         "associated-posts": "Читайте так же"
+    },
+    "subscribe":{
+        "header":"Подпишитесь на рассылку",
+        "title": "агенства недвижимости Estate Spain!",
+        "email-placeholder": "Ваш email...",
+        "subscribe":"ПОДПИСАТЬСЯ",
+        "footer":"<ul><li><h5>Не более одного письма в неделю, без спама</h5></li><li>Только полезные статьи о покупке жилья в Испании и всем, что с этим связано.</li></ul>",
+        "footer2":"<ul><li>- Новые объекты;</li><li>- Процесс покупки и подводные камни;</li><li>- Информация о содержании жилья;</li><li>- Как получить ипотеку;</li></ul>"
     },
     "yes": "Да",
     "no": "Нет",

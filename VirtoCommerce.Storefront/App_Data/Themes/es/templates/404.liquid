@@ -1,12 +1,15 @@
-{% include 'breadcrumb' %}
-
-<div class="grid">
-
-  <div class="grid-item large--two-thirds push--large--one-sixth text-center">
-
+<div class="header_media with_search_6">
+</div>
+<div class="row not-found text-center">
+  <div class="col-md-6"><img src="{{ 'images/notfound.jpg' | absolute_url }}" width="560px;"/></div>
+  <div class="col-md-6">
     <h1>{{ 'general.404.title' | t }}</h1>
-    <p>{{ 'general.404.subtext_html' | t }}</p>
-
+    <div>{{ 'general.404.subtext_html' | t }}</div>
+    <div class="not-found-hr"></div>
+    <div class="not-found-text-message"> 
+      {{'general.404.subtext_html2' | t }}
+      <br/><br/>
+      <strong>{{ 'general.404.slogan' | t }}</strong>
+    </div>
   </div>
-
 </div>

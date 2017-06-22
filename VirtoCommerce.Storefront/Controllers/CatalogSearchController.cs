@@ -89,8 +89,7 @@ namespace VirtoCommerce.Storefront.Controllers
             {
                 return View("collection.list", WorkContext);
             }
-            // TODO: remove after create default layout
-            return View("collection", "es", WorkContext);
+            return View("collection", WorkContext);
         }
     }
 }

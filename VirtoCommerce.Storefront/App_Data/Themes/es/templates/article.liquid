@@ -7,7 +7,51 @@
    </div>
    <div class="single-content single-blog">
       {{ article.content }}
+      {% if article.slider_images.size > 0 %}
+      <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
+          <div>
+          <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                  {% for image in article.slider_images %}
+                  {% if forloop.first %}
+                  <div class="item active">
+                  {% else %}
+                  <div class="item">
+                  {% endif %}
+                      <a href="{{ image }}" title="" rel="prettyPhoto" class="prettygalery">
+                          <img src="{{ image | absolute_url }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                      </a>
+                  </div>
+                  {% endfor %}
+              </div>
+
+              <div class="slider-information">
+                  <div><span id="current-main-slide">1</span> / {{ article.slider_images.size }}</div>
+              </div>    
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+              </a>
+              <a class="right carousel-control" href="#carousel-listing" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+              </a>
+          </div>
+          <!-- Indicators -->
+          <div class="carusel-back"></div>
+          <ol class="carousel-indicators">
+              {% for image in article.slider_images %}
+              {% if forloop.first %}
+              <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="active">
+              {% else %}
+              <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
+              {% endif %}
+                  <img src="{{ image | absolute_url }}" alt="slider">
+              </li>
+              {% endfor %}
+          </ol>
+      </div>
    </div>
+   {% endif %}
 </div>
 <div class="row">
   <div class="vc_column-inner">
