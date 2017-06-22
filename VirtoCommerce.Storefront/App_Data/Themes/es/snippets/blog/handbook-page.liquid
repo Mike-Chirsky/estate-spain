@@ -1,0 +1,79 @@
+<div class="row handbook-main-container">
+   <div class="col-md-6">
+      <div class="row blog-preview-text">
+         <p>{{ 'blog.handbook.preview-text' | t }}</p>
+         <br/>
+         <p>{{ 'blog.handbook.preview-text2' | t }}</p>
+      </div>
+      <div class="row blog-download">
+         <div class="download-handbook-container" style="background-image: url('{{- 'images/handbook_download_img.jpg' | asset_url -}}')">
+            <div><a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url}}" target="_blank" class="wpresidence_button">{{ 'blog.handbook.download' | t }}</a></div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-6">
+      <div class="panel-group" id="accordion">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  {{ 'blog.handbook.pay' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+               <div class="panel-body">
+                    {% assign category_type = 'pay' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  {{ 'blog.handbook.coasts' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+               <div class="panel-body">
+                    {% assign category_type = 'coasts' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                  {{ 'blog.handbook.mortgage' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+               <div class="panel-body">
+                    {% assign category_type = 'mortgage' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                  {{ 'blog.handbook.visa' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse in">
+               <div class="panel-body">
+                    {% assign category_type = 'visa' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="row blog-related">
+    <h2>{{ 'blog.handbook.related-header' | t }}</h2>
+    {% assign related_category = "news" %}
+    {% include 'blog/blog-related-category', related_category %}
+</div>

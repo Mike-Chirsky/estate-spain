@@ -1,0 +1,11 @@
+{% for blog in blogs %}
+    {% if blog.handle != related_category %}
+        {% continue %}
+    {% endif %}
+    {% for item in blog.articles %}
+        {% if forloop.index == 4 %}
+            {% break %}
+        {% endif %}
+        {% include 'blog/blog-related-item', item %}
+    {% endfor %}
+{% endfor %}

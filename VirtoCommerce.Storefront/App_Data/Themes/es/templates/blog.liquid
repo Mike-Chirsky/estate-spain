@@ -2,18 +2,21 @@
     {% include 'breadcrumb' %}
 </div>
 {%- include 'blog/blog-text' -%}
-{% paginate blog.articles by 36 %}
+{% if blog.handle != 'handbook' %}
+  {% paginate blog.articles by 36 %}
 
-<div class="row">
-  {% for article in blog.articles  %}
-    {% include 'blog/blog-item', article: article %}
-  {% endfor %}
-  
-</div>
-<div class="row">
-  {% if paginate.pages > 1 %}
-      {% include 'pagination-custom' %}
-  {% endif %}
-</div>
-
-{% endpaginate %}
+  <div class="row">
+    {% for article in blog.articles  %}
+      {% include 'blog/blog-item', article: article %}
+    {% endfor %}
+    
+  </div>
+  <div class="row">
+    {% if paginate.pages > 1 %}
+        {% include 'pagination-custom' %}
+    {% endif %}
+  </div>
+  {% endpaginate %}
+{% else %}
+  {% include 'blog/handbook-page' %}
+{% endif %}

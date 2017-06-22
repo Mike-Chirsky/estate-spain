@@ -1,0 +1,9 @@
+{% for article in blog.articles %}
+    {% if article.category != category_type %}
+        {% continue %}
+    {% endif %}
+    <div class="row handbook-list-article">
+            <h4><a href="{{article.url | absolute_url }}">{{ article.title }}</a></h4>
+            <div> {{ article.description }} </div>
+    </div>
+{% endfor %}

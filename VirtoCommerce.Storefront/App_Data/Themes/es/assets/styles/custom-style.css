@@ -792,11 +792,71 @@ h2.blog-header
 
 .blog-preview-text{
     padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     line-height: 1.5;
-    font-size: 18px;
+}
+
+.col-md-6 .blog-preview-text
+{
+    padding: 0;
+    padding-bottom: 15px;
 }
 
 .padding15
 {
     padding: 15px;
+}
+
+.download-handbook-container
+{
+    height: 350px;
+    width: 100%;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.download-handbook-container div
+{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+.download-handbook-container div a
+{
+    float: none;
+}
+
+.download-handbook-container div a:hover
+{
+    color: #fff;
+}
+
+.handbook-list-article h4
+{
+    padding-bottom: 0px;
+    margin-bottom: 1px;
+
+}
+
+.blog-related h2{
+    padding-left: 15px;
+}
+
+.blog-preview-text
+{
+    margin: 0px;
+}
+.blog-download
+{
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.handbook-main-container
+{
+    padding-bottom: 15px;
 }

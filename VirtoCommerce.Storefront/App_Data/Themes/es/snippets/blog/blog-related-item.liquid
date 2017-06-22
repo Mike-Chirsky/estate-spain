@@ -1,0 +1,15 @@
+<div class="col-md-3 shortcode-col  listing_wrapper blog2v">
+    <div class="property_listing" data-link="{{ item.url | absolute_url }}" style="height: 470px;">
+        <div class="blog_unit_image"><img width="525" height="328" src="{{ item.image_url | absolute_url }}" class="lazyload img-responsive wp-post-image" alt=""></div>
+        <h4>
+            <a href="{{item.url | absolute_url}}">{{ item.title }}</a>
+        </h4>
+        <div class="blog_unit_meta">
+            <time pubdate datetime="{{ item.published_at | date: '%Y-%m-%d' }}">{{ item.published_at | date: format: 'month_day_year' }}</time>
+        </div>
+        <div class="listing_details the_grid_view">
+            {{ item.description }}
+        </div>
+        <a class="read_more" href="{{item.url | absolute_url}}">{{'blog.read-more' | t  }}<i class="fa fa-angle-right"></i> </a>
+    </div>
+</div>

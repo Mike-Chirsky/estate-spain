@@ -9,4 +9,8 @@
     {%- if blog.handle == 'reviews'-%}
         <h1 class="blog-header">{{'blog.reviews.header' | t }}</h1>
     {%- endif -%}
+    {%- if blog.handle == 'handbook'-%}
+        <h1 class="blog-header">{{'blog.handbook.header' | t }}</h1>
+        <h2 class="blog-header">{{'blog.handbook.header1' | t }}</h1>
+    {%- endif -%}
 {%- endif -%}

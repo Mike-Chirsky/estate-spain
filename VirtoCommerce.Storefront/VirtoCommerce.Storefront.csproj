@@ -607,6 +607,12 @@
     <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\first.md" />
     <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\three.md" />
     <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\two.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\handbook.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\first.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\three.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\two.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\four.md" />
+    <Content Include="App_Data\Themes\es\assets\downloads\Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
@@ -1261,6 +1267,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\cms-content\Pages\demo\assets\handbook\images\" />
     <Folder Include="App_Data\Pages\" />
   </ItemGroup>
   <ItemGroup>
