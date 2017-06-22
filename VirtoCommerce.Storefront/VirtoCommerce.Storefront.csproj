@@ -473,6 +473,7 @@
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\women.jpg" />
     <Content Include="App_Data\Themes\es\assets\informer-loader.gif" />
