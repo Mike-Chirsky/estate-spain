@@ -192,6 +192,10 @@
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
       <Private>True</Private>
@@ -1052,6 +1056,7 @@
     <Compile Include="Controllers\Api\ApiPricingController.cs" />
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
     <Compile Include="Controllers\BulkOrderController.cs" />
     <Compile Include="Controllers\SitemapController.cs" />
