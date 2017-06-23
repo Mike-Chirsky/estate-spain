@@ -942,3 +942,65 @@ h2.blog-header
 {
     color: #BF4600;
 }
+.widget-container h4{
+    color: #C3C3C3;
+}
+
+.full-img-bg
+{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.full-img-bg .container
+{
+    position: relative;
+    top: 250px;
+}
+.container.content_wrapper.full-width
+{
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+.container.welcom
+{
+    text-align: center;
+    padding-top: 90px;
+}
+.container.unsubscribe
+{
+    text-align: center;
+    padding-top: 140px;
+}
+.container.unsubscribe h1
+{
+    color: #fff;
+    padding: 15px 0;
+}
+.unsubscribe .text{
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+}
+.unsubscribe .form
+{
+    width: 600px;
+    margin: 0 auto;
+}
+.unsubscribe .form input[type=email]{
+    width: 400px;
+}
+.unsubscribe .form button
+{
+    float: right;
+}
+
+.full-img-bg .bg-overview
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4)
+}

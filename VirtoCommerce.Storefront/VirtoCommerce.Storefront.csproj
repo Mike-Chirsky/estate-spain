@@ -475,6 +475,10 @@
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\we-text1.png" />
+    <Content Include="App_Data\Themes\es\assets\images\we-text2.png" />
+    <Content Include="App_Data\Themes\es\assets\images\we.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\women.jpg" />
     <Content Include="App_Data\Themes\es\assets\informer-loader.gif" />
     <Content Include="App_Data\Themes\es\assets\interactor.js" />
@@ -614,6 +618,12 @@
     <Content Include="App_Data\Themes\es\snippets\blog\handbook-page.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-related-category.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-related-item.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\unsubscribe.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\unsubscribe.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\welcome-email01.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\welcome-email02.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\welcome-email02.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

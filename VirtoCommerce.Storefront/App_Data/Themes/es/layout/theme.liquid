@@ -118,15 +118,20 @@
              {% if template contains 'blog' or template contains 'article' %}
                 {% include 'headers/blog-header' %}
             {% endif %}
+            {% if template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
             <main class="container content_wrapper" role="main">
                 {{ content_for_layout }}
-                <script type="text/javascript">
-                /* <![CDATA[ */
-                var control_vars = {"morg1":"Amount Financed:","morg2":"Mortgage Payments:","morg3":"Annual cost of Loan:","searchtext":"SEARCH","searchtext2":"Search here...","path":"http:\/\/localhost:8081\/wp-content\/themes\/wpresidence","search_room":"Type Bedrooms No.","search_bath":"Type Bathrooms No.","search_min_price":"Type Min. Price","search_max_price":"Type Max. Price","contact_name":"Your Name","contact_email":"Your Email","contact_phone":"Your Phone","contact_comment":"Your Message","zillow_addres":"Your Address","zillow_city":"Your City","zillow_state":"Your State Code (ex CA)","adv_contact_name":"Your Name","adv_email":"Your Email","adv_phone":"Your Phone","adv_comment":"Your Message","adv_search":"Send Message","admin_url":"http:\/\/localhost:8081\/wp-admin\/","login_redirect":"http:\/\/localhost:8081\/my-profile\/","login_loading":"Sending user info, please wait...","street_view_on":"Street View","street_view_off":"Close Street View","userid":"0","show_adv_search_map_close":"yes","close_map":"close map","open_map":"open map","fullscreen":"Fullscreen","default":"Default","addprop":"Please wait while we are processing your submission!","deleteconfirm":"Are you sure you wish to delete?","terms_cond":"You need to agree with terms and conditions !","procesing":"Processing...","slider_min":"0","slider_max":"5600000","curency":"\u20ac","where_curency":"after","submission_curency":"USD","to":"to","direct_pay":"","send_invoice":"Send me the invoice","direct_title":"Direct payment instructions","direct_thx":"Thank you. Please check your email for payment instructions.","direct_price":"To be paid","price_separator":".","plan_title":"Plan Title","plan_image":"Plan Image","plan_desc":"Plan Description","plan_size":"Plan Size","plan_rooms":"Plan Rooms","plan_bathrooms":"Plan Bathrooms","plan_price":"Plan Price","readsys":"no","datepick_lang":"en-GB","deleting":"deleting...","captchakey":"","usecaptcha":"no","scroll_trigger":"100","adv6_taxonomy_term":["35","38"],"adv6_max_price":["7000","1500000"],"adv6_min_price":["0","0"],"is_rtl":"0"};
-                /* ]]> */
-                </script>
+                
             </main>
+            {% else %}
+            {{ content_for_layout }}
+            {% endif %}
          </div>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var control_vars = {"morg1":"Amount Financed:","morg2":"Mortgage Payments:","morg3":"Annual cost of Loan:","searchtext":"SEARCH","searchtext2":"Search here...","path":"http:\/\/localhost:8081\/wp-content\/themes\/wpresidence","search_room":"Type Bedrooms No.","search_bath":"Type Bathrooms No.","search_min_price":"Type Min. Price","search_max_price":"Type Max. Price","contact_name":"Your Name","contact_email":"Your Email","contact_phone":"Your Phone","contact_comment":"Your Message","zillow_addres":"Your Address","zillow_city":"Your City","zillow_state":"Your State Code (ex CA)","adv_contact_name":"Your Name","adv_email":"Your Email","adv_phone":"Your Phone","adv_comment":"Your Message","adv_search":"Send Message","admin_url":"http:\/\/localhost:8081\/wp-admin\/","login_redirect":"http:\/\/localhost:8081\/my-profile\/","login_loading":"Sending user info, please wait...","street_view_on":"Street View","street_view_off":"Close Street View","userid":"0","show_adv_search_map_close":"yes","close_map":"close map","open_map":"open map","fullscreen":"Fullscreen","default":"Default","addprop":"Please wait while we are processing your submission!","deleteconfirm":"Are you sure you wish to delete?","terms_cond":"You need to agree with terms and conditions !","procesing":"Processing...","slider_min":"0","slider_max":"5600000","curency":"\u20ac","where_curency":"after","submission_curency":"USD","to":"to","direct_pay":"","send_invoice":"Send me the invoice","direct_title":"Direct payment instructions","direct_thx":"Thank you. Please check your email for payment instructions.","direct_price":"To be paid","price_separator":".","plan_title":"Plan Title","plan_image":"Plan Image","plan_desc":"Plan Description","plan_size":"Plan Size","plan_rooms":"Plan Rooms","plan_bathrooms":"Plan Bathrooms","plan_price":"Plan Price","readsys":"no","datepick_lang":"en-GB","deleting":"deleting...","captchakey":"","usecaptcha":"no","scroll_trigger":"100","adv6_taxonomy_term":["35","38"],"adv6_max_price":["7000","1500000"],"adv6_min_price":["0","0"],"is_rtl":"0"};
+        /* ]]> */
+        </script>
          <!--End scripts-->
         <a href="#" class="backtop  islive"><i class="fa fa-chevron-up"></i></a>
         <a href="#" class="contact-box  islive"><i class="fa fa-envelope-o"></i></a>
@@ -161,7 +166,7 @@
                <div id="first" class="widget-area col-md-3 ">
                   <ul class="xoxo">
                     <li id="contact_widget-1" class="widget-container contact_sidebar">
-                        <h3 class="widget-title-footer">{{ 'footer.contacts' | t | upcase }}</h3>
+                        <h4>{{ 'footer.contacts' | t | upcase }}</h4>
                         <div class="contact_sidebar_wrap">
                            <p class="widget_contact_addr">
                               <i class="fa fa-building-o"></i>3755 Commercial St SE Salem, Corner with Sunny Boulevard, 3755 Commercial OR 97302
