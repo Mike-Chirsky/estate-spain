@@ -470,6 +470,12 @@
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider-default-theme.css" />
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider.css" />
     <Content Include="App_Data\Themes\es\assets\ideal-image-slider.min.js" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-blanka-s.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-brava-map.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-de-sol.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-dorada-map.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\dict_city_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
@@ -479,6 +485,7 @@
     <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_icon_male.png" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_img_women.png" />
+    <Content Include="App_Data\Themes\es\assets\images\valensia-map.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\we-text1.png" />
     <Content Include="App_Data\Themes\es\assets\images\we-text2.png" />
     <Content Include="App_Data\Themes\es\assets\images\we.jpg" />
@@ -627,10 +634,12 @@
     <Content Include="App_Data\cms-content\Pages\demo\welcome-email02.md" />
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email02.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\goroda-ispanii.md" />
     <None Include="App_Data\cms-content\Pages\demo\opros.md" />
     <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\thankyou.md" />
     <Content Include="App_Data\Themes\es\snippets\static\thankyou.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\static\goroda-ispanii.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
