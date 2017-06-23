@@ -299,4 +299,7 @@ jQuery(document).ready(function () {
         }
         return false;
     });
+    jQuery("#to-parthner-form").click(function () {
+        slideToBlock("#form-parthner");
+    });
 });

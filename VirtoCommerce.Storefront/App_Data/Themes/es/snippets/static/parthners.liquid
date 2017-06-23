@@ -1,0 +1,49 @@
+﻿<div class="container content_wrapper full-width" role="main">
+  <div class="full-img-bg" style="background-image: url('{{- 'images/parthner_header_img.jpg' | asset_url -}}')">
+    <div class="bg-overview">
+      <div class="container unsubscribe">
+          <h1>{{ 'parthners.header' | t }}</h1>
+          <div class="button-parthner text-center"> 
+              <a id="to-parthner-form" class="wpresidence_button">{{ 'parthners.form-button' | t }}</a> 
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="container content_wrapper parthner" role="main">
+    <div class="row text-center block">
+        Испанское агентство недвижимости Estate Spain специализируется на продаже жилой и коммерческой недвижимости на лучших побережьях Испании клиентам из России, Украины, Казахстана и других стран. Профессиональный штат агентов, защита интересов клиентов, и юридическая чистота проводимых сделок позволяет компании занимать лидирующие позиции на рынке. 
+    </div>
+    <div class="row" style="background-image: url('{{- 'images/parthners_slide_1.jpg' | asset_url -}}')">
+        <div class="pathner-slide">
+            <div class="text">
+                Помимо стандартных услуг, которые оказывает каждое большое агентство недвижимости (покупка, продажа, обмен, аренда жилых и коммерческих объектов), Spantao развивает направления консалтинга и девелопмента. 
+            </div>
+        </div>
+    </div>
+    <div class="row text-center block">
+        База объектов Estate Spain — одна из наиболее актуальных, в ней представлены объекты всех сегментов рынка. Активно развивается партнерская сеть отделений по всей Испании, работающих по единым высоким профессиональным стандартам.
+        <br/>
+        Приглашаем к сотрудничеству риелторов, застройщиков из всех регионов Испании, таких как Коста Брава, Коста Маресме, Коста дель Соль, Коста Дорада, Балеарских и Канарских островов на условиях выгодного комиссионного вознаграждения. 
+        <br/>
+        Также будем рады принять на публикацию и продажу объекты недвижимости от частных лиц.         
+    </div>
+    <div class="row" style="background-image: url('{{- 'images/parthners_slide_2.jpg' | asset_url -}}')">
+        <div class="pathner-slide">
+            <div class="text text-center">
+                Присоединяйтесь к нашей партнерской программе и 
+                <br/>
+                получайте доход от продажи ваших объектов уже сегодня!
+            </div>
+        </div>
+    </div>
+    <div class="row block" id="form-parthner">
+        <h2 class="text-center">{{ 'parthners.form-header' | t }}</h2>
+        <div class="form col-md-12">
+            <input type="email" class="form-control" placeholder="{{ 'parthners.email' | t }}"/>
+            <input type="text" class="form-control" placeholder="{{ 'parthners.name' | t }}"/>
+            <textarea rows="15" cols="45" class="form-control" placeholder="{{ 'parthners.text' | t }}"/></textarea>
+            <button class="wpresidence_button form-control">{{ 'parthners.send' | t }}</button>
+        </div>
+    </div>
+</main>

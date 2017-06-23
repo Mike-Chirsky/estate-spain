@@ -1099,3 +1099,61 @@ h2.blog-header
 {
     background-color: #fff;
 }
+.button-parthner
+{
+    width: 100%;
+}
+
+.button-parthner a
+{
+    float: none;
+}
+.button-parthner a:hover
+{
+     color: #fff;
+}
+.pathner-slide
+{
+    height: 400px;
+    background-position: center;
+    line-height: 1.4;
+}
+.pathner-slide .text
+{ 
+    background: #FF9800;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    top: 50%;
+    position: relative;
+}
+
+.pathner-slide .text.no-bg
+{
+    background: none;
+}
+
+.container.content_wrapper.parthner .row
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.parthner
+{
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.container.content_wrapper.parthner .row.block
+{
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.wpresidence_button.form-control
+{
+    color: #fff;
+}

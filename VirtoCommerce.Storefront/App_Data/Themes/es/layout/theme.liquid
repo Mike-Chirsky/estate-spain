@@ -120,8 +120,7 @@
             {% endif %}
             {% if template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
             <main class="container content_wrapper" role="main">
-                {{ content_for_layout }}
-                
+                {{ content_for_layout }}    
             </main>
             {% else %}
             {{ content_for_layout }}
