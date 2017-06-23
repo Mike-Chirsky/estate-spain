@@ -311,16 +311,15 @@ ul.pagination-custom li:first-child
 {
     position: relative;
     top: -18px;
-    color: #000;
+    
 }
 .description-header .entry-title
 {
-    color: #000;
+    
 }
 .description-header{
     width: 1110px;
-    top: 95px;
-    height: 120px;
+    top: 65px;
     margin: 0 auto;
     position: absolute;
     margin-left: auto;
@@ -329,6 +328,8 @@ ul.pagination-custom li:first-child
     right: 0px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
 }
 .search_wrapper .adv-search-1{
     background-color: #EDEDED;
