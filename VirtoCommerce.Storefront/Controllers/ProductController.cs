@@ -66,7 +66,7 @@ namespace VirtoCommerce.Storefront.Controllers
                 }
             }
 
-            return View("product", "es", WorkContext);
+            return View("product", WorkContext);
         }
 
         [HttpGet]

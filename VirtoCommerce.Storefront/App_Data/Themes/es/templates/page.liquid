@@ -1,15 +1,21 @@
-{% include 'breadcrumb' %}
-
+{% if page.handle == 'unsubscribe'  %}
+  {% include 'static/unsubscribe' %}
+{% elseif page.handle == 'welcome-email01' %}
+  {% include 'static/welcome-email01' %}
+{% elseif page.handle == 'welcome-email02' %}
+  {% include 'static/welcome-email02' %}
+{% elseif page.handle == 'opros' %}
+  {% include 'static/opros' %}
+{% else %}
+<div class="header_media with_search_6">
+</div>
 <div class="grid">
-
   <div class="grid-item large--two-thirds push--large--one-sixth">
-
     <h1>{{ page.title }}</h1>
-
     <div class="rte">
       {{ page.content }}
     </div>
-
   </div>
-
 </div>
+{% endif %}
+

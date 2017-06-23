@@ -1,188 +1,260 @@
 ﻿<!DOCTYPE html>
 <html class="no-touch no-js">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    {% if settings.favicon_enable %}
-    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
-    {% endif %}
-
-    <title>
-        {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
-    </title>
-    {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}" />
-    {% endif %}
-    {% include 'google-tag-manager-head' %}
-    {% include 'open-graph-tags' %}
-    <!--{% include 'twitter-card' %}-->
-    
-    <link rel="canonical" href="{{ canonical_url }}" />
-
-    <base href="{{ '/' | absolute_url }}" />
-
-    {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
-    {{ 'default.scss.css' | asset_url | stylesheet_tag }}
-    {{ '/styles/style.css' | asset_url | stylesheet_tag }}
-    {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
-    {{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
-    {{ '~/default-theme/css' | stylesheet_bundle_tag }}
-    
-    {% include 'google-fonts' %}
-
-    {{ content_for_header }}
-
-	{% include 'oldIE-js' %}
-
-	{{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
-
-	
-    {{ '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js' | script_tag }}
-    {{ '//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js' | script_tag }}
-    {{ '//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js' | script_tag }}
-    {{ '//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js' | script_tag }}
-	{{ '~/default-theme/scripts' | script_bundle_tag }}
-    
-    {{ 'shop.js' | asset_url | script_tag }}
-    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
-    {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
-</head>
-<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
-    {% include 'google-tag-manager-body' %}
-    {% include 'notification' %}
-    {% include 'recently-added-cart-item-dialog' %}
-    {% include 'recently-added-actual-quote-request-item-dialog' %}
-        {% if settings.store_selector_enable %}
-        {% include 'top-header-selector' %}
-        {% endif %}
-        <header class="site-header" role="banner">
-            <div class="wrapper">
-                <div class="grid--full">
-                    <div class="grid-item large--one-third">
-                        {% if template == 'index' %}
-                        <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
-                            {% else %}
-                            <div class="h1 header-logo" itemscope itemtype="http://schema.org/Organization">
-                                {% endif %}
-                                {% if settings.logo_use_image %}
-                                <a href="{{ '/' | absolute_url }}" itemprop="url">
-                                    <img alt="{{ shop.name }}" src="{{ 'logo.png' | asset_url }}" itemprop="logo" />
-                                </a>
-                                {% else %}
-                                <a href="{{ '/' | absolute_url }}" itemprop="url">{{ shop.name }}</a>
-                                {% endif %}
-                                {% if template == 'index' %}
-                        </h1>
-                        {% else %}
-                    </div>
-                    {% endif %}
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {% if settings.favicon_enable %}
+      <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+      {% endif %}
+      <title>
+         {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
+      </title>
+      {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}" />
+      {% endif %}
+      {% include 'google-tag-manager-head' %}
+      {% include 'open-graph-tags' %}
+      <!--{% include 'twitter-card' %}-->
+      <link rel="canonical" href="{{ canonical_url }}" />
+      <base href="{{ '/' | absolute_url }}" />
+      {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
+      {{ '/styles/bootstrap-theme.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/bootstrap.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/style.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/custom-style.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/orange-theme.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
+      {% include 'google-fonts' %}
+      {{ content_for_header }}
+      {% include 'oldIE-js' %}
+      {{ '//code.jquery.com/jquery-3.2.1.min.js' | script_tag }}
+      {{ '~/theme-bundler/scripts' | script_bundle_tag }}
+      {% if product %}
+        {% include 'seo/schemaorg-product' %}
+      {% endif %}
+   </head>
+   <body id="{{ page_title | handle }}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
+      <div class="website-wrapper" id="all_wrapper">
+         <div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
+            <div class="master_header wide">
+               <div class="mobile_header">
+                  <div class="mobile-trigger"><i class=" fa fa-bars"></i></div>
+                  <div class="mobile-logo">
+                     <a href="{{ '/' | absolute_url }}">
+                     <img class="img-responsive retina_ready" src="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" alt="logo">        
+                     </a>
+                  </div>
+                  <div class="mobile-trigger-user">
+                     <i class=" fa fa-cogs"></i>           
+                  </div>
+               </div>
+               <div class="header_wrapper  header_type2 header_left hover_type_ header_alignment_text_left">
+                 <div class="header_wrapper_inside " data-logo="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" data-sticky-logo="">
+                      <div class="logo">
+                         <a href="{{ '/' | absolute_url}}">
+                         <img id="logo_image" style="width: 150px;" src="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" class="img-responsive retina_ready" alt="logo">                    </a>
+                      </div>
+                     <div class="phone-list">
+                         <div class="phone-item">
+                             <a href="tel:88003332887">
+                             <i class="fa fa-phone"></i> 8 800 333 28 87
+                             <div>{{ 'menu.phone' | t }}</div>
+                            </a>
+                         </div>
+                         <div class="phone-item">
+                             <a href="tel:+74951342387">
+                             <i class="fa fa-phone"></i> +7 495 134 23 87
+                             <div>{{ 'menu.phone2' | t }}</div>
+                             </a>
+                         </div>
+                     </div>
+                     <div class="header-actions">
+                         <div class="action-item">
+                             <button class="wpresidence_button">{{ 'request-form.callback' | t }}</button>
+                         </div>
+                         <div class="action-item">
+                             <button class="wpresidence_button">{{ 'request-form.send-request' | t }}</button>
+                         </div>
+                     </div>
+                      <nav id="access">
+                         <div class="menu-main-menu-container">
+                            <ul id="menu-main-menu-1" class="menu">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.regions' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.sale' | t }}</a>
+                                    <ul class="sub-menu">
+                                        {% for item in collections %}
+                                        <li id="menu-item-18251" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a class="menu-item-link" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>            
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.tenancy' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.directory' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.news' | t }}</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
+                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.about' | t }}</a>
+                                </li>
+                            </ul>
+                         </div>
+                      </nav>
+                      <!-- #access -->
+                   </div> 
+               </div>
+            </div>
+            {% if template contains 'collection' %}
+                {% include 'filters/header-filters' %}
+            {% endif %}
+             {% if template contains 'blog' or template contains 'article' %}
+                {% include 'headers/blog-header' %}
+            {% endif %}
+            {% if template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
+            <main class="container content_wrapper" role="main">
+                {{ content_for_layout }}
+                
+            </main>
+            {% else %}
+            {{ content_for_layout }}
+            {% endif %}
+         </div>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var control_vars = {"morg1":"Amount Financed:","morg2":"Mortgage Payments:","morg3":"Annual cost of Loan:","searchtext":"SEARCH","searchtext2":"Search here...","path":"http:\/\/localhost:8081\/wp-content\/themes\/wpresidence","search_room":"Type Bedrooms No.","search_bath":"Type Bathrooms No.","search_min_price":"Type Min. Price","search_max_price":"Type Max. Price","contact_name":"Your Name","contact_email":"Your Email","contact_phone":"Your Phone","contact_comment":"Your Message","zillow_addres":"Your Address","zillow_city":"Your City","zillow_state":"Your State Code (ex CA)","adv_contact_name":"Your Name","adv_email":"Your Email","adv_phone":"Your Phone","adv_comment":"Your Message","adv_search":"Send Message","admin_url":"http:\/\/localhost:8081\/wp-admin\/","login_redirect":"http:\/\/localhost:8081\/my-profile\/","login_loading":"Sending user info, please wait...","street_view_on":"Street View","street_view_off":"Close Street View","userid":"0","show_adv_search_map_close":"yes","close_map":"close map","open_map":"open map","fullscreen":"Fullscreen","default":"Default","addprop":"Please wait while we are processing your submission!","deleteconfirm":"Are you sure you wish to delete?","terms_cond":"You need to agree with terms and conditions !","procesing":"Processing...","slider_min":"0","slider_max":"5600000","curency":"\u20ac","where_curency":"after","submission_curency":"USD","to":"to","direct_pay":"","send_invoice":"Send me the invoice","direct_title":"Direct payment instructions","direct_thx":"Thank you. Please check your email for payment instructions.","direct_price":"To be paid","price_separator":".","plan_title":"Plan Title","plan_image":"Plan Image","plan_desc":"Plan Description","plan_size":"Plan Size","plan_rooms":"Plan Rooms","plan_bathrooms":"Plan Bathrooms","plan_price":"Plan Price","readsys":"no","datepick_lang":"en-GB","deleting":"deleting...","captchakey":"","usecaptcha":"no","scroll_trigger":"100","adv6_taxonomy_term":["35","38"],"adv6_max_price":["7000","1500000"],"adv6_min_price":["0","0"],"is_rtl":"0"};
+        /* ]]> */
+        </script>
+         <!--End scripts-->
+        <a href="#" class="backtop  islive"><i class="fa fa-chevron-up"></i></a>
+        <a href="#" class="contact-box  islive"><i class="fa fa-envelope-o"></i></a>
+        <div class="contactformwrapper hidden"> 
+            <div id="footer-contact-form">
+                <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
+                <div class="alert-box error">
+                    <div class="alert-message"></div>
                 </div>
-                <div class="grid-item large--two-third text-center large--text-right">
-                    {% if settings.header_message != blank or shop.customer_accounts_enabled %}
-                    <div class="site-header--text-links{% if settings.header_message == blank %} medium-down--hide{% endif %}">
-                        {% if settings.header_message != blank %}
-                        {{ settings.header_message }}
-                        {% endif %}
-                        {% comment %}
-                        {% if shop.customer_accounts_enabled %}
-                        <span class="site-header--meta-links medium-down--hide">
-                            {% if customer %}
-                            {% capture first_name %}
-                            <a href="{{ '/account' | absolute_url }}">{{ customer.first_name }}</a>
-                            {% endcapture %}
-                            {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }} &middot; {{ 'layout.customer.log_out' | t | customer_logout_link }}
-                            {% else %}
-                            {{ 'layout.customer.sign_in' | t | customer_login_link }}
-                            {% if shop.customer_accounts_optional %}
-                            <span class="site-header--spacer">{{ 'layout.customer.or' | t }}</span>
-                            {{ 'layout.customer.create_account' | t | customer_register_link }}
-                            {% endif %}
-                            {% endif %}
-                        </span>
-                        {% endif %}
-                        {% endcomment %}
-
-                        <span class="site-header--meta-links medium-down--hide">
-                            <span ng-if="customer && customer.isRegisteredUser && customer.operatorUserName" ng-cloak>
-                                {{ 'layout.customer.logged_in_on_behalf_of_label' | t }} <a href="{{ 'account' | absolute_url }}" ng-bind="customer.firstName || customer.userName"></a> &middot; {{ 'layout.customer.log_out' | t | customer_logout_link }}
-                            </span>
-                            <span ng-if="customer && customer.isRegisteredUser && !customer.operatorUserName" ng-cloak>
-                                {{ 'layout.customer.logged_in_as_label' | t }} <a href="{{ 'account' | absolute_url }}" ng-bind="customer.firstName || customer.userName"></a> &middot; {{ 'layout.customer.log_out' | t | customer_logout_link }}
-                            </span>
-                            <span ng-if="customer && !customer.isRegisteredUser" ng-cloak>
-                                {{ 'layout.customer.sign_in' | t | customer_login_link }}
-                                <span class="site-header--spacer">{{ 'layout.customer.or' | t }}</span>
-                                {{ 'layout.customer.create_account' | t | customer_register_link }}
-                            </span>
-                        </span>
-
-                    </div>
-                    <br class="medium-down--hide" />
-                    {% endif %}
-                    {% include 'search-bar' %}
-                    {% if settings.product_compare_enabled %}
-                        <a class="header-cart-btn cart-toggle" href="{{ 'compare' | absolute_url }}" ng-controller="productCompareListBarController" ng-show="itemsCount > 0">
-                            <span class="fa fa-bar-chart"></span>
-                            {{ 'products.compare_list.compare' | t }} <span class="visible-count" id="productCompareListCount" ng-bind="itemsCount"></span>
-                        </a>
-                    {% endif %}
-                    {% if shop.quotes_enabled %}
-                    <a class="header-cart-btn cart-toggle" ng-controller="actualQuoteRequestBarController" ng-click="outerRedirect(baseUrl + 'quoterequest/#/' + actualQuoteRequest.number)">
-                        <span class="fa fa-calculator"></span>
-                        Quote <span id="quoteRequestCount" ng-class="{ 'visible-count': actualQuoteRequest.itemsCount > 0 }" ng-bind="actualQuoteRequest.itemsCount" ng-cloak></span>
-                    </a>
-                    {% endif %}
-                    <a class="header-cart-btn cart-toggle" href="{{ 'cart' | absolute_url }}" ng-controller="cartBarController">
-                        <span class="icon icon-cart"></span>
-                        {{ 'layout.cart.cart' | t }} <span id="cartCount" ng-class="{ 'visible-count': cartItemsCount > 0 }" ng-bind="cartItemsCount" ng-cloak></span>
-                    </a>
+                <div class="row">
+                    <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
                 </div>
-            </div>
-        </header>
-        <nav class="nav-bar" role="navigation">
-            <div class="wrapper">
-                {% include 'search-bar' %}
-                {% include 'site-nav' %}
-            </div>
-        </nav>
-        <div id="mobileNavBar">
-            <div class="display-table-cell">
-                <a class="menu-toggle mobileNavBar-link">{{ 'layout.navigation.mobile_menu' | t }}</a>
-            </div>
-            <div class="display-table-cell">
-            <a class="cart-toggle mobileNavBar-link" href="{{ 'cart' | absolute_url }}" ng-click="toggleCartModal(isCartModalVisible)">
-                    <span class="icon icon-cart"></span>
-                    {{ 'layout.cart.cart' | t }} <span class="cartCount" ng-bind="cart.ItemsCount" ng-if="cart.ItemsCount > 0"></span>
-                </a>
+                <div class="row">
+                    <input type="text" name="phone" class="form-control"  placeholder="{{ 'request-form.phone' | t }}">
+                </div>
+                <div class="row">
+                    <input type="text" name="email" class="form-control"  aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
+                </div>
+                <div class="row">
+                    <textarea name="comment" class="form-control" cols="14" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
+                </div>
+                <div class="row">
+                    <span class="license"> {{ 'request-form.license' | t }} </span>
+                </div>
+                <div class="row">
+                    <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}"> 
+                </div>
             </div>
         </div>
-        <main class="container content_wrapper" role="main">
-            {{ content_for_layout }}
-        </main>
-        {% if settings.product_compare_enabled %}
-            {% include 'product-compare-list-dialog' %}
-        {% endif %}
-        {% include 'footer' %}
-    <script>
-        window.quotesEnabled = {{ shop.quotes_enabled }};
-        window.productCompareListCapacity = {{ settings.product_compare_list_capacity }};
-        window.startRecordInteraction = function()
-        {
-            {% if settings.collect_user_events_enabled %}
-			// An example instantiation with custom arguments
-			var interactions = new Interactor({
-				interactions            : true,
-				interactionElements     : ["Click", "AddShopCart", "RemoveShopCart", "RecommendationClick"],
-				interactionEvents       : ["mouseup", "touchend"],
-				endpoint                : "{{ '/storefrontapi/useractions/eventinfo' | absolute_url }}",
-				async                   : true,
-				debug                   : false
-			});
-            {% endif %}
-        }
-        window.startRecordInteraction();
-    </script>
-</body>
+         <footer id="colophon" role="contentinfo" class="  footer_back_repeat  ">
+            <div id="footer-widget-area" class="row ">
+               <div id="first" class="widget-area col-md-3 ">
+                  <ul class="xoxo">
+                    <li id="contact_widget-1" class="widget-container contact_sidebar">
+                        <h4>{{ 'footer.contacts' | t | upcase }}</h4>
+                        <div class="contact_sidebar_wrap">
+                           <p class="widget_contact_addr">
+                              <i class="fa fa-building-o"></i>3755 Commercial St SE Salem, Corner with Sunny Boulevard, 3755 Commercial OR 97302
+                           </p>
+                        </div>
+                     </li>   
+                     <li class="widget-container contact_sidebar">
+                        <div class="contact_sidebar_wrap">
+                           <p class="contact-sidebar-call-back">
+                              <input type="submit" class="wpresidence_button"  value="{{ 'request-form.callback' | t | upcase }}"/>
+                           </p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="contact_sidebar_wrap">
+                            <p class="widget_contact_phone">
+                                <i class="fa fa-phone"></i><a href="tel:%28305%29+555-4446">(305) 555-4446</a>
+                            </p>
+                            <p class="widget_contact_fax">
+                                <i class="fa fa-print"></i>(305) 555-4446
+                            </p>
+                        </div>
+                     </li>
+                     <li id="social_widget-1" class="widget-container social_sidebar">
+                        <div class="social_sidebar_internal">
+                           <a href="#" target="_blank"><i class="fa fa-odnoklassniki  fa-fw"></i></a>
+                           <a href="#" target="_blank"><i class="fa fa-vk  fa-fw"></i></a>
+                           <a href="#" target="_blank"><i class="fa fa-facebook  fa-fw"></i></a>
+                           <a href="#" target="_blank"><i class="fa fa-twitter  fa-fw"></i></a>
+                           <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <!-- #first .widget-area -->
+               <div id="second" class="widget-area col-md-3">
+                  <ul class="xoxo">
+                     
+                  </ul>
+               </div>
+               <!-- #second .widget-area -->
+               <div id="third" class="widget-area col-md-3">
+                  <div class="textwidget">
+                     <ul class="xoxo">
+                        {% for item in collections %}
+                        <li><a href="{{ item.url | absolute_url }}"> {{ item.title }}</a></li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+               <!-- #third .widget-area -->
+               <div id="fourth" class="widget-area col-md-3">
+                  <div class="textwidget">
+                     <ul class="xoxo">
+                        <li class="row subscribe-header">
+                            <h4>{{'subscribe.header' | t }}</h4>
+                        </li>
+                        <li class="subscribe-body">
+                            <div class="spinner" id="subscribe-spinner" style="display: none;">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+                            <div id="subscribe-form">
+                                <input type="email" class="form-control"  id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
+                                <button id="subcribe-action" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+                            </div>
+                            <div id="subscribe-ok" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}</div>
+                            <div id="subscribe-fail" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}</div>
+                        </li>
+                        <li class="subscribe-footer">
+                            <p>
+                                {{ 'subscribe.footer' | t }}
+                            </p>
+                            <p>
+                                {{ 'subscribe.footer2' | t }}
+                            </p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- #fourth .widget-area -->
+            </div>
+            <div class="sub_footer">
+            </div>
+         </footer>
+      </div>
+   </body>
 </html>

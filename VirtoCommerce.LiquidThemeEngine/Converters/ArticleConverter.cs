@@ -29,6 +29,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
             retVal.PublishedAt = article.PublishedDate ?? article.CreatedDate;
             retVal.Tags = article.Tags != null ? article.Tags.OrderBy(t => t).Select(t => t.Handelize()).ToArray() : null;
             retVal.Comments = new MutablePagedList<Comment>(new List<Comment>());
+            retVal.SliderImages = article.SliderImages;
             if (article.Category != null)
             {
                 retVal.Category = article.Category.Handelize();

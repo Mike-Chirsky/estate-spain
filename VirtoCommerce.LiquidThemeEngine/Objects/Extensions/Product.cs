@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -517,7 +518,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         private string GetImageSrcByType(string type)
         {
-            var img = Images.FirstOrDefault(x => x.Name?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false);
+            var img = Images.FirstOrDefault(x => Path.GetFileName(x.Src)?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false);
             return img != null ? img.Src : "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
         }
     }

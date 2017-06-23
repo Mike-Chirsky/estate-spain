@@ -1,5 +1,5 @@
 ﻿---
-layout: es
+layout: theme
 title: 'Новости'
 permalink: blogs/news
 ---

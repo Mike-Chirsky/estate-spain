@@ -473,7 +473,15 @@
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\opros-header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\user_default_icon_male.png" />
+    <Content Include="App_Data\Themes\es\assets\images\user_default_img_women.png" />
+    <Content Include="App_Data\Themes\es\assets\images\we-text1.png" />
+    <Content Include="App_Data\Themes\es\assets\images\we-text2.png" />
+    <Content Include="App_Data\Themes\es\assets\images\we.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\women.jpg" />
     <Content Include="App_Data\Themes\es\assets\informer-loader.gif" />
     <Content Include="App_Data\Themes\es\assets\interactor.js" />
@@ -601,28 +609,26 @@
     <Content Include="App_Data\Themes\es\snippets\location-name.liquid" />
     <Content Include="App_Data\Themes\es\snippets\location-path.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\blogs\news\news.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\first.md" />
     <Content Include="App_Data\Themes\es\snippets\headers\blog-header.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-item.liquid" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\two.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\news\three.md" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-header-image.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-header-text.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-text.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\reviews.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\first.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\three.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\two.md" />
     <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\handbook.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\first.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\three.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\two.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\four.md" />
     <Content Include="App_Data\Themes\es\assets\downloads\Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-category.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\handbook-page.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-related-category.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-related-item.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\unsubscribe.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\unsubscribe.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\welcome-email01.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\welcome-email02.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\welcome-email02.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
+    <None Include="App_Data\cms-content\Pages\demo\opros.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
@@ -815,9 +821,6 @@
     <Content Include="App_Data\Themes\es\layout\account_layout.liquid" />
     <Content Include="App_Data\Themes\es\layout\checkout_layout.liquid" />
     <Content Include="App_Data\Themes\es\layout\empty.liquid" />
-    <Content Include="App_Data\Themes\es\layout\theme.liquid">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="App_Data\Themes\es\locales\de.json" />
     <Content Include="App_Data\Themes\es\locales\en.json" />
     <Content Include="App_Data\Themes\es\locales\es.json" />
@@ -976,7 +979,7 @@
     <Content Include="App_Data\Themes\es\assets\shop.js.liquid" />
     <Content Include="App_Data\Themes\es\assets\style.css.liquid" />
     <Content Include="App_Data\Themes\es\locales\ru-RU.default.json" />
-    <Content Include="App_Data\Themes\es\layout\es.liquid">
+    <Content Include="App_Data\Themes\es\layout\theme.liquid">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Themes\es\snippets\product_name.liquid" />
