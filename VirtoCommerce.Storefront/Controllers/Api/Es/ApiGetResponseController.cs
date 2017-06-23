@@ -1,7 +1,10 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Newtonsoft.Json;
 using RestSharp;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Common;
@@ -22,56 +25,82 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         [HttpPost]
         public async Task<ActionResult> Subscribe(string email)
         {
-            var apiKey = ConfigurationManager.AppSettings["GetResponse.ApiKey"];
-            if(string.IsNullOrEmpty(apiKey))
-                throw new StorefrontException("No API key provided");
-
             var campaignTokenId = ConfigurationManager.AppSettings["GetResponse.CampaignToken"];
-            if (string.IsNullOrEmpty(apiKey))
+
+            if (string.IsNullOrEmpty(campaignTokenId))
                 throw new StorefrontException("No Campaign Token Id provided");
 
             var client = new RestClient(ServerUrl);
-            var request = new RestRequest("contacts", Method.POST)
+            var subscribeRequest = CreateJsonRequest("contacts", Method.POST);
+
+            var contact = new RequestContact
+            {
+                email = email,
+                dayOfCycle = 0,
+                campaign = new RequestCampaign { campaignId = campaignTokenId } 
+            };
+
+            subscribeRequest.AddBody(contact);
+            IRestResponse subscribeResponse = await client.ExecuteTaskAsync(subscribeRequest);
+
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
+        }
+
+        // POST: /storefrontapi/getresponse/unsubscribe
+        [HttpPost]
+        public async Task<ActionResult> Unsubscribe(string email)
+        {
+            var client = new RestClient(ServerUrl);
+
+            var getContactRequest = CreateJsonRequest("contacts", Method.GET);
+            getContactRequest.AddQueryParameter("query[email]", email);
+            IRestResponse getContactResponse = await client.ExecuteTaskAsync(getContactRequest);
+
+            if (getContactResponse.ResponseStatus == ResponseStatus.Completed)
+            {
+                var contact = JsonConvert.DeserializeObject<IList<ResponseContact>>(getContactResponse.Content).FirstOrDefault();
+                if (!string.IsNullOrEmpty(contact?.contactId))
+                {
+                    var unsubsrcibeRequest = CreateJsonRequest($"contacts/{contact.contactId}", Method.DELETE);
+                    IRestResponse unsubsrcibeResponse = await client.ExecuteTaskAsync(unsubsrcibeRequest);
+                }
+            }
+
+            return new HttpStatusCodeResult(HttpStatusCode.OK);
+        }
+
+        private IRestRequest CreateJsonRequest(string resource, Method method)
+        {
+            var apiKey = ConfigurationManager.AppSettings["GetResponse.ApiKey"];
+            if (string.IsNullOrEmpty(apiKey))
+                throw new StorefrontException("No API key provided");
+
+            var request = new RestRequest(resource, method)
             {
                 RequestFormat = DataFormat.Json
             };
             request.AddHeader("X-Auth-Token", $"api-key {apiKey}");
 
-            var contact = new GetResponseContact
-            {
-                email = email,
-                dayOfCycle = 0,
-                campaign = new GetResponseCampaign { campaignId = campaignTokenId } 
-            };
-
-            request.AddBody(contact);
-            IRestResponse response = await client.ExecuteTaskAsync(request);
-
-            return new HttpStatusCodeResult(HttpStatusCode.OK);
+            return request;
         }
     }
 
-    public class ResponseContact
-    {
-        public string httpStatus { get; set; }
-        public string code { get; set; }
-        public string codeDescription { get; set; }
-        public string message { get; set; }
-        public string moreInfo { get; set; }
-        public object context { get; set; }
-        public string uuid { get; set; }
-    }
 
-    public class GetResponseContact
+    public class RequestContact
     {
         public int dayOfCycle;
         public string email;
 
-        public GetResponseCampaign campaign { get; set; }
+        public RequestCampaign campaign { get; set; }
     }
 
-    public class GetResponseCampaign
+    public class RequestCampaign
     {
         public string campaignId { get; set; }
+    }
+
+    public class ResponseContact
+    {
+        public string contactId { get; set; }
     }
 }
