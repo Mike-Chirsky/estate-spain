@@ -474,8 +474,11 @@
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\opros-header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\user_default_icon_male.png" />
+    <Content Include="App_Data\Themes\es\assets\images\user_default_img_women.png" />
     <Content Include="App_Data\Themes\es\assets\images\we-text1.png" />
     <Content Include="App_Data\Themes\es\assets\images\we-text2.png" />
     <Content Include="App_Data\Themes\es\assets\images\we.jpg" />
@@ -624,6 +627,8 @@
     <Content Include="App_Data\cms-content\Pages\demo\welcome-email02.md" />
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email02.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
+    <None Include="App_Data\cms-content\Pages\demo\opros.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
