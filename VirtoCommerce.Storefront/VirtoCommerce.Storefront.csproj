@@ -629,6 +629,8 @@
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
     <None Include="App_Data\cms-content\Pages\demo\opros.md" />
     <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\thankyou.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\thankyou.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
