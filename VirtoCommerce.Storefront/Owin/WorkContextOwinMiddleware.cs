@@ -154,11 +154,13 @@ namespace VirtoCommerce.Storefront.Owin
                 workContext.CurrentLanguage = GetLanguage(context, workContext.AllStores, workContext.CurrentStore);
                 // Initialize request specific properties
                 workContext.CurrentStore = GetStore(context, workContext.AllStores);
+                #if DEBUG
                 //TODO: REMOVE WHEN MERGE WITH DEV
                 if (ConfigurationManager.AppSettings["forceStoreRedirect"] != null)
                 {
                     workContext.CurrentStore.Url = ConfigurationManager.AppSettings["forceStoreRedirect"];
                 }
+                #endif
                 if (!IsStaticAssetRequest(context.Request))
                 {
                     var commerceApi = Container.Resolve<ICoreModuleApiClient>();
