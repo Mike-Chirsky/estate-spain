@@ -1,6 +1,13 @@
 <div class="header_media with_search_6">
-   <video style="width:100%; height: 400px" height="400" autoplay loop muted plays-inline src="//ak5.picdn.net/shutterstock/videos/1047205/preview/stock-footage-wind-gently-brings-the-curtains-of-an-open-bungalow-terrace-door-in-movement.mp4" class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
-   </video>
+  <!--<video style="width:100%; height: 400px" height="400" autoplay loop muted plays-inline src="//ak5.picdn.net/shutterstock/videos/1047205/preview/stock-footage-wind-gently-brings-the-curtains-of-an-open-bungalow-terrace-door-in-movement.mp4" class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
+  </video>-->
+  <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
+      <div class="description-header">
+         <h1 class="entry-title entry-tax">
+            {{'index.h1.header' | t }}
+         </h1>
+      </div>
+  </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">
       <div class="adv-search-1  adv_extended_class" id="adv-search-6">
          <div class="adv6-holder">
@@ -19,17 +26,16 @@
    </div>
 </div>
 <main class="container content_wrapper main-page" role="main">
-   <div>
-      <h1 class="text-center">{{'index.h1.header' | t}}</h1>
+   <div class="row">
       <div class="text-center">
          {{ 'index.h1.title' | t }}
       </div>
-      <div class="row">
+      <div>
          <div class="col-md-6">{{ 'index.h1.col1' | t }}</div>
          <div class="col-md-6">{{ 'index.h1.col2' | t }}</div>
       </div>
    </div>
-   <div>
+   <div class="row">
       <h2 class="text-center">{{'index.city-region.header' | t}}</h2>
       <div>
          {{ 'index.city-region.text' | t }}
@@ -89,12 +95,12 @@
          </div>
       </div>
    </div>
-   <div>
+   <div class="row">
       <h2 class="text-center">{{'index.type.header' | t}}</h2>
       <div>
          {{ 'index.type.text' | t }}
       </div>
-      <div class="row city-tails">
+      <div class="city-tails">
          <div class="col-md-4" style="background-image: url({{'images/index/kvartiri.jpg' | assets_url }})">
           <div class="block-inner">
               <ul>
@@ -133,9 +139,18 @@
       <div>
         <h3>{{ 'index.info.header' | t }}</h3>
         <div>
-          {% assign related_category = "reviews" %}
-          {% include 'blog/blog-related-category', related_category %}
+            <div class="carusel">
+              <div id="reviews-slider" class="ca-container">
+                <div class="ca-wrapper" style="overflow: hidden">
+                    <!--<div class="ca-item ca ca-item-{{ forloop.index }}">
+                    </div>-->
+                </div>
+              </div>
+          </div>
         </div>
+        <script>
+          jQuery("#reviews-slider").contentcarousel();
+        </script>
       </div>
       <h3 class="text-center">{{'index.hot-deal.header' | t}}</h3>
       <div>
