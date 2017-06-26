@@ -52,13 +52,14 @@
                     {{ property.value}}
                     {%endif%}
                     {% endfor %}
-                    <span class="deal-type">
+                    
                     {% for property in product.properties %}
                     {% if property.name == 'dealtype' %}
+                    <span class="deal-type">
                     {{ property.value}}
+                    </span>
                     {%endif%}
                     {% endfor %}
-                    </span>
                   </div>
                 </div>
                 <!--<div id="add_favorites" class="isnotfavorite" data-postid="139">add to favorites</div>

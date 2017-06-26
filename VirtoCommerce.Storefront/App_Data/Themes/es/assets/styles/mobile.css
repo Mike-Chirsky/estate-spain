@@ -1,1 +1,38 @@
-﻿
+﻿.mobile-logo img
+{
+	max-height: 55px;
+}
+
+@media (max-width: 992px) {
+	.breadcrumb
+	{
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 640px) {
+	.slider-information
+	{
+		bottom: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.notice_area
+	{
+		height: 150px;
+	}
+
+	.prop_social
+	{
+		float: left;
+		margin: 25px 0 0;
+		position: static;
+		width: 100%;
+	}
+
+	.product-preview
+	{
+		display: none;
+	}
+}

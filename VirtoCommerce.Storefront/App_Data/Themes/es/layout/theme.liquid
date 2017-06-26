@@ -22,8 +22,8 @@
       {{ '/styles/bootstrap-theme.css' | asset_url | stylesheet_tag }}
       {{ '/styles/bootstrap.css' | asset_url | stylesheet_tag }}
       {{ '/styles/style.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/custom-style.css' | asset_url | stylesheet_tag }}|
-      {{ '/styles/mobile.css' | asset_url | stylesheet_tag }}|
+      {{ '/styles/custom-style.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/mobile.css' | asset_url | stylesheet_tag }}
       {{ '/styles/orange-theme.css' | asset_url | stylesheet_tag }}
       {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
       {% include 'google-fonts' %}
@@ -43,7 +43,7 @@
                   <div class="mobile-trigger"><i class=" fa fa-bars"></i></div>
                   <div class="mobile-logo">
                      <a href="{{ '/' | absolute_url }}">
-                     <img class="img-responsive retina_ready" src="https://static.tildacdn.com/tild6236-6133-4462-a335-306337653633/estate_fix.jpg" alt="logo">        
+                     <img class="img-responsive retina_ready" src="{{ 'images/logo.png' | asset_url }}" alt="logo">        
                      </a>
                   </div>
                   <div class="mobile-trigger-user">
