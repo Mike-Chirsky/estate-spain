@@ -556,10 +556,11 @@
         padding:0px;
     }
     
-    .row {
+    /*.row {
         margin-left: 0px;
         margin-right: 0px;
-    }
+    }*/
+
     .customnav.header_type2.header_center .logo img,
     .logo.miclogo img{
         margin-left: 15px;
@@ -3564,7 +3565,7 @@
 
 
 
-@media only screen and (max-width: 500px){  
+@media only screen and (max-width: 500px){
      .owl-carousel .owl-item .item{
         height: 300px;
     }   
@@ -3899,7 +3900,7 @@
     }
     
     .notice_area{
-        height: 200px;   
+        height: 150px;   
     }
     
     #add_favorites{
@@ -3917,9 +3918,8 @@
     .prop_social{
         position: relative;
         top: auto;
-        float: left;
         width: 100%;
-        display: inline;
+        display: block;
         margin-top: 35px;
     }
     
