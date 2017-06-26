@@ -1178,3 +1178,7 @@ h2.blog-header
     margin: 0 auto;
     background-color: #FF9800;
 }
+.main-page
+{
+    line-height: 1.4;
+}

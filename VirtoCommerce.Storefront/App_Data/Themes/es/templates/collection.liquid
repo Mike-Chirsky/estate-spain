@@ -21,7 +21,7 @@
     {%- endif -%}
     
     {%- if collection_type == 'region' or collection_type == 'type' -%}
-      {% include 'market-block' %} 
+      {% include 'market-block', collection.products %} 
     {%- endif -%}
     
     {%- if collection_type == 'city' or (collection_type == 'type' and (region_product or city_product))  -%}

@@ -21,8 +21,15 @@ namespace VirtoCommerce.Storefront.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            var productSearchResult = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria()
+            {
+                ResponseGroup = ItemResponseGroup.ItemSmall | ItemResponseGroup.ItemWithPrices 
+            });
+            _workContext.Aggregations = new MutablePagedList<Aggregation>(productSearchResult.Aggregations);
+            _workContext.CurrentCategory = new Category();
+            _workContext.Products = new MutablePagedList<Product>(productSearchResult.Products);
             return View("index", _workContext);
         }
     }
