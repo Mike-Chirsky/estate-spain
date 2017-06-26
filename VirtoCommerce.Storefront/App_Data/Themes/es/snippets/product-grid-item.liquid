@@ -1,5 +1,4 @@
-﻿<div class="col-md-4 has_prop_slider  listing_wrapper">
-<div class="property_listing">
+﻿<div class="property_listing">
    <div class="listing-unit-img-wrapper">
       <div class="prop_new_details">
          <div class="prop_new_details_back"></div>
@@ -43,8 +42,8 @@
         <span class="price_label price_label_before"> {% include 'price' with product.price %}</span>
     </div>
     <div class="listing_details the_list_view" style="display: block">
-        {{- product.description | strip_html | slice: 0, 180 | strip -}}
-        {%- if product.description.size > 180 -%}
+        {{- product.product_description | strip_html | slice: 0, 180 | strip -}}
+        {%- if product.product_description.size > 180 -%}
            ... <a href="{{product.url | absolute_url}}">[{{ 'collection.read-more' | t }}]</a>
         {%- endif -%}
     </div>
@@ -55,4 +54,3 @@
         <a href="{{ product.url | absolute_url }}" class="unit_details_x">{{ 'collection.full-info' | t }}</a> 
     </div>
    </div>
-</div>

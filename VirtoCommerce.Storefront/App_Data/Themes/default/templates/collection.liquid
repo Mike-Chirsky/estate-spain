@@ -53,7 +53,9 @@
         {% else %}
           {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
         {% endif %}
-        {% include 'product-grid-item', product: product %}
+        <div class="col-md-4 has_prop_slider  listing_wrapper">
+		{% include 'product-grid-item', product: product %}
+		</div>
 
       {% else %}
 

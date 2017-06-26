@@ -299,6 +299,21 @@ jQuery(document).ready(function () {
         }
         return false;
     });
+
+    jQuery('.js-show-filters').on('click', function () {
+        var self = $(this);
+        var selfBlock = self.parent();
+
+        if(!selfBlock.hasClass('opened')) {
+            selfBlock.addClass('opened');
+            self.text('Скрыть фильтры');
+        }
+        else {
+            selfBlock.removeClass('opened');
+            self.text('Показать фильтры');
+        }
+    });
+
     jQuery("#to-parthner-form").click(function () {
         slideToBlock("#form-parthner");
     });
