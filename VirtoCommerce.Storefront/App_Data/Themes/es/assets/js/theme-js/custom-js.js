@@ -79,7 +79,7 @@ function getFoundResults() {
     
     jQuery.ajax({
         url: "storefrontapi/catalog/search",
-        data: JSON.stringify({ mutableTerms: terms }),
+        data: JSON.stringify({ mutableTerms: terms, responseGroup: 'ItemInfo' }),
         success: function (data) {
             $("#no-filter").hide();
             $("#count-objects").show();

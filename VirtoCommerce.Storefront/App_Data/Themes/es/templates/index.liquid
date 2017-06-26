@@ -36,13 +36,13 @@
       </div>
    </div>
    <div class="row">
-      <h2 class="text-center">{{'index.city-region.header' | t}}</h2>
+      <h2 class="text-center padding15">{{'index.city-region.header' | t}}</h2>
       <div>
          {{ 'index.city-region.text' | t }}
       </div>
       <div class="row region-tails">
-         <div class="col-md-4" style="background-image: url({{'images/index/costa-brava.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner"  style="background-image: url({{'images/index/costa-brava.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-brava">
                   <h4>Коста брава</h4>
@@ -50,15 +50,15 @@
               </div>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/maresme.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4" >
+          <div class="block-inner" style="background-image: url({{'images/index/maresme.jpg' | assets_url }})">
               <div class="bottom">
                   <h4>Коста марисме</h4>
               </div>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/costa-dorada.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4" >
+          <div class="block-inner" style="background-image: url({{'images/index/costa-dorada.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-dorada">
                 <h4>Коста дорада</h4>
@@ -68,8 +68,8 @@
          </div>
       </div>
       <div class="row region-tails">
-         <div class="col-md-4" style="background-image: url({{'images/index/costa-blanka.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner"  style="background-image: url({{'images/index/costa-blanka.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-blanca">
                   <h4>Коста бланка</h4>
@@ -77,8 +77,8 @@
               </div>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/del-sol.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner"  style="background-image: url({{'images/index/del-sol.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-del-sol">
                   <h4>Коста дель соль</h4>
@@ -86,8 +86,8 @@
               </div>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/catalonia.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner"  style="background-image: url({{'images/index/catalonia.jpg' | assets_url }})">
               <div class="bottom">
                 <h4>Каталония</h4>
               </div>
@@ -96,13 +96,13 @@
       </div>
    </div>
    <div class="row">
-      <h2 class="text-center">{{'index.type.header' | t}}</h2>
+      <h2 class="text-center padding15">{{'index.type.header' | t}}</h2>
       <div>
          {{ 'index.type.text' | t }}
       </div>
-      <div class="city-tails">
-         <div class="col-md-4" style="background-image: url({{'images/index/kvartiri.jpg' | assets_url }})">
-          <div class="block-inner">
+      <div class="row city-tails">
+         <div class="col-md-4">
+          <div class="block-inner" style="background-image: url({{'images/index/kvartiri.jpg' | assets_url }})">
               <ul>
                 <li><a href="/townhouse">Таунхаусы, бунгало, смежные дома</a></li>
                 <li><a href="/kvartiry-apartamenty/na-more">Квартиры и апартаменты на море</a></li>
@@ -112,8 +112,8 @@
               </ul>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/commerical.jpg' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner" style="background-image: url({{'images/index/commerical.jpg' | assets_url }})">
               <ul>
                 <li><a href="/elitnaya">Элитная недвижимость в Испании</a></li>
                 <li><a href="/novostroyki">Каталог новостроек Испании</a></li>
@@ -123,8 +123,8 @@
               </ul>
           </div>
          </div>
-         <div class="col-md-4" style="background-image: url({{'images/index/elitnaya.png' | assets_url }})">
-          <div class="block-inner">
+         <div class="col-md-4">
+          <div class="block-inner"  style="background-image: url({{'images/index/elitnaya.png' | assets_url }})">
               <ul>
                 <li><a href="/ot-bankov">Недвижимость в Испании от банков</a></li>
                 <li><a href="/na-more">Недвижимость у моря</a></li>
@@ -159,7 +159,7 @@
       {% include 'market-block', products %} 
    </div>
    <div class="row">
-      <h2 class="text-center">{{'index.about.header' | t}}</h2>
+      <h2 class="text-center padding15">{{'index.about.header' | t}}</h2>
       <div>
          <div class="col-md-6">{{ 'index.about.text' | t }}</div>
          <div class="col-md-6">{{ 'index.about.video' | t }}</div>
@@ -171,7 +171,7 @@
       </div>
    </div>
    <div class="row">
-      <h2 class="text-center">{{'index.price.header' | t}}</h2>
+      <h2 class="text-center padding15">{{'index.price.header' | t}}</h2>
       <div>
          <div class="col-md-6">{{ 'index.price.col1' | t }}</div>
          <div class="col-md-6">{{ 'index.price.col2' | t }}</div>
