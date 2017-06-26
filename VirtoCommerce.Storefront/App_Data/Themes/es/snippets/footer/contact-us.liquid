@@ -16,35 +16,31 @@
       </div>
    </div>
    <div class="col-md-9">
+      <h4>{{ 'footer.contact-us-header' | t }}</h4>
       <div class="row">
-         <h4>{{ 'footer.contact-us-header' | t }}</h4>
-         <div class="row">
-            <div class="row">
-               <div class="col-md-4">
-                  <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-               </div>
-               <div class="col-md-4">
-                  <input type="text" name="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
-               </div>
-               <div class="col-md-4">
-                  <input type="text" name="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control">
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <textarea cols="45" rows="8" aria-required="true" class="form-control">{{ 'request-form.message' | t }}</textarea>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10">
-                  <span class="license"> {{ 'request-form.license' | t }} </span>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10">
-                  <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
-               </div>
-            </div>
+         <div class="col-md-4">
+            <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+         </div>
+         <div class="col-md-4">
+            <input type="text" name="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+         </div>
+         <div class="col-md-4">
+            <input type="text" name="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control">
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <textarea cols="45" rows="8" aria-required="true" class="form-control">{{ 'request-form.message' | t }}</textarea>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-10">
+            <span class="license"> {{ 'request-form.license' | t }} </span>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-10">
+            <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
          </div>
       </div>
    </div>

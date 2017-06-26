@@ -38,7 +38,9 @@
     {% paginate collection.products by 36 %}
         {% assign link_index = collection.products.size | divided_by: 2 %}
         {% for product in collection.products %}
+            <div class="col-md-4 has_prop_slider  listing_wrapper">
             {% include 'product-grid-item', product: product %}
+            </div>
             {% if  forloop.index == link_index and type_product != null %}
                 {% include 'product-link-list' %}
             {% endif %}
