@@ -27,18 +27,24 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         public async Task<ActionResult> Search(string search)
         {
             WorkContext.CurrentStore = WorkContext.AllStores.FirstOrDefault(x => x.Id == ConfigurationManager.AppSettings["MasterStoreId"]);
-            var foundProductsCity = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
+            var foundProductsCityTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
                 Outline = ConfigurationManager.AppSettings["CityCategoryId"],
                 ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations
             });
-            var foundProductsRegion = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
+            var foundProductsRegionTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
                 Outline = ConfigurationManager.AppSettings["RegionCategoryId"],
                 ResponseGroup = ItemResponseGroup.Seo
             });
+
+            await Task.WhenAll(foundProductsCityTask, foundProductsRegionTask);
+
+            var foundProductsCity = foundProductsCityTask.Result;
+            var foundProductsRegion = foundProductsRegionTask.Result;
+
             var products = foundProductsCity.Products.ToList();
             products.AddRange(foundProductsRegion.Products);
             products = products.OrderBy(x => x.Name).ToList();
