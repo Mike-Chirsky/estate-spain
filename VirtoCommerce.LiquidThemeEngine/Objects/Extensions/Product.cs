@@ -372,6 +372,17 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         #endregion
 
         /// <summary>
+        /// Get detail product description
+        /// </summary>
+        public string ProductDescription
+        {
+            get
+            {
+                return GetDescriptionByType("full-description");
+            }
+        }
+
+        /// <summary>
         /// Custom title
         /// </summary>
         public string CustomTitle
