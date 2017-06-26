@@ -1,0 +1,104 @@
+<script>
+	var seoLinks = [];
+	seoLinks["estatetype"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'estatetype' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: '{{- seo.value_filter -}}', seoLink: '{{- seo.seo_link -}}'}
+					{%- else -%}
+					{value: '{{- seo.value_filter -}}', seoLink: '{{- seo.seo_link -}}'},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	]; 
+</script>
+<div style="z-index: 10000">
+	<div class="main-filter-container" id="main-filter-controls">
+		<div class="col-md-6">
+			{% include 'filters/location' %}
+		</div>
+		<div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
+			<div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
+					{{- ' selected' -}}
+					{%-endif-%}">
+				<div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
+					{%- if collection.current_estate_type_filter -%}
+					{{ collection.current_estate_type_filter.value }}
+					{%-else-%} 
+					{{ 'filter.category' | t }}
+					{%-endif-%}
+					<span class="caret  caret_filter "></span>
+				</div>
+				<input data-ignore type="hidden" data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}" property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
+				<ul class="dropdown-menu filter_menu">
+					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
+					{% for item in collection.estate_type_filter %}
+					<li data-value="{{ item.value }}" data-seo-path="{{ item.value | filter_seo_link: 'estatetype': filter_seo_links}}">{{ item.value }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<button id="send-main-filter" class="wpresidence_button">
+				<span>{{ 'filter.action' | t }}</span>
+			</button>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script>
+jQuery(document).ready(function(){
+    //distance to sea
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_sea_distance_filter.value}}');
+    // price range
+    setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_price_range_filter.value}}');
+});
+{% comment %}
+// set price from range
+jQuery("#min-price-value, #max-price-value").change(function () {
+    var price = "";
+    var minPriceVl = jQuery("#min-price-value").val();
+    var maxPriceVl = jQuery("#max-price-value").val();
+    if(minPriceVl && maxPriceVl)
+    {
+        price = formatPrice(minPriceVl) + ' - ' + formatPrice(maxPriceVl);
+    }
+    else if(minPriceVl)
+    {
+        price = formatPrice(minPriceVl);
+    }
+    else if(maxPriceVl)
+    {
+        price = formatPrice(maxPriceVl);
+    }
+    jQuery("#price-value").val(price + " {{ current_currency.symbol}}");
+});
+jQuery("#price-value").change(function(){
+    var prices = jQuery("#price-value").val().replace('{{ current_currency.symbol}}', "").replace(/ /g,"").trim().split('-');
+    if(prices.length > 1 && prices[1] != '') {
+        price = formatPrice(prices[0])+' - '+ formatPrice(prices[1]);
+    }
+    else {
+        price = formatPrice(prices[0]) + (event.keyCode === 109? ' - ' : '');
+    }
+    price += " {{ current_currency.symbol}}";
+    jQuery("#price-value").val(price);
+});
+function formatPrice(price) {
+    if(!price)
+    {
+        return "";
+    }
+    price = parseInt(price);
+    return price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ");
+}
+{% endcomment %}
+   jQuery("#send-main-filter").click(function () {
+       var termStr = getTermsString();
+       var location = '{{'/' | full_url }}' + getRequestSeoPath();
+		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+   });
+</script>

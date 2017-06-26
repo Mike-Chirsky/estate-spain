@@ -599,6 +599,7 @@
     <Content Include="App_Data\Themes\es\assets\styles\ca-style.css" />
     <Content Include="App_Data\Themes\es\assets\styles\custom-style.css" />
     <Content Include="App_Data\Themes\es\assets\styles\jquery.jscrollpane.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\mobile.css" />
     <Content Include="App_Data\Themes\es\assets\styles\my_media.css" />
     <Content Include="App_Data\Themes\es\assets\styles\orange-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\style.css" />
@@ -645,6 +646,7 @@
     <Content Include="App_Data\Themes\es\snippets\static\goroda-ispanii.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\parthners.md" />
     <Content Include="App_Data\Themes\es\snippets\static\parthners.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
