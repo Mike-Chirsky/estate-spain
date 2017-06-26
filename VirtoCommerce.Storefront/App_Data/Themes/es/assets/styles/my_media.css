@@ -1994,6 +1994,21 @@
         width:100%;
         display: none;
     }
+
+    .show-filters
+    {
+        display: block;
+    }
+
+    .show-filters.opened .adv-search-1
+    {
+        display: block;
+    }
+
+    .search_wrapper.search_wr_6.opened
+    {
+        margin: 460px 0 0;
+    }
     
     #google_map_prop_list_wrapper #gmapzoomplus {
         top:60px;
@@ -4309,3 +4324,4 @@
         min-width: 200px;    
     }
 }
+

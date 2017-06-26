@@ -1,23 +1,25 @@
 ﻿<div class="row about-footer">
-    <div class="col-md-9 about">
-        {%- if meta_info_product.seotext_down1 -%}
-        <div class="row text">
-            <a id="advantages"></a>
-            {{- meta_info_product.seotext_down1 -}}
+    <div class="col-md-9">
+        <div class="about">
+            {%- if meta_info_product.seotext_down1 -%}
+            <div class="row text">
+                <a id="advantages"></a>
+                {{- meta_info_product.seotext_down1 -}}
+            </div>
+            {%- endif -%}
+            {%- if meta_info_product.seotext_down2 -%}
+            <div class="row text">
+                <a id="approach"></a>
+                {{- meta_info_product.seotext_down2 -}}
+            </div>
+            {%- endif -%}
+            {%- if meta_info_product.seotext_down3 -%}
+            <div class="row text">
+                <a id="coast"></a>
+                {{- meta_info_product.seotext_down3 -}}
+            </div>
+            {%- endif -%}
         </div>
-        {%- endif -%}
-        {%- if meta_info_product.seotext_down2 -%}
-        <div class="row text">
-            <a id="approach"></a>
-            {{- meta_info_product.seotext_down2 -}}
-        </div>
-        {%- endif -%}
-        {%- if meta_info_product.seotext_down3 -%}
-        <div class="row text">
-            <a id="coast"></a>
-            {{- meta_info_product.seotext_down3 -}}
-        </div>
-        {%- endif -%}
     </div>
     <div class="col-md-3">
         <div class="link-list-footer">
