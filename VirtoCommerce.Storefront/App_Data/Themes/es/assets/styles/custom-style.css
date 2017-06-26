@@ -1158,3 +1158,11 @@ h2.blog-header
 {
     color: #fff;
 }
+
+.index-hr
+{
+    width: 150px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #FF9800;
+}

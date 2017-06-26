@@ -1,225 +1,161 @@
-<vc-content-place id="BenefitsBanner"></vc-content-place>
-<vc-content-place id="HomePageSlider"></vc-content-place>
-
-{% unless settings.home_content == blank or pages[settings.home_content].empty? or pages[settings.home_content].content == blank %}
-  {% assign page = pages[settings.home_content] %}
-  <div class="rte">
-    {{ page.content }}
-  </div>
-  <hr>
-{% endunless %}
-
-{% if settings.home_featured_collections_enable %}
-  <div class="section-header">
-    <h2 class="h1 section-header--left">{{ 'homepage.featured_collections.heading' | t }}</h2>
-    <div class="section-header--right">
-      <a href="{{ '/collections' | absolute_url }}">{{ 'homepage.featured_collections.more_categories' | t }} &rsaquo;</a>
-    </div>
-  </div>
-  <div class="grid-uniform text-center row-negative-bottom">
-
-    {% assign index = 0 %}
-
-    {% if settings.home_featured_collections_sort == 'manual' %}
-      {% if settings.collection_1 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-      {% if settings.collection_2 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-      {% if settings.collection_3 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-      {% if settings.collection_4 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-      {% if settings.collection_5 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-      {% if settings.collection_6 != blank %}{% assign index = index | plus: 1 %}{% endif %}
-    {% else %}
-      {% for collection in collections limit:7 %}
-        {% unless index >= 6 %}
-          {% unless collection.handle == 'frontpage' %}
-            {% assign index = index | plus: 1 %}
-          {% endunless %}
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
-
-    {% case index %}
-      {% when 1 %}
-        {% assign featured_collection_width = 'one-half' %}
-        {% assign featured_collection_size = 'large' %}
-      {% when 2 %}
-        {% assign featured_collection_width = 'one-half' %}
-        {% assign featured_collection_size = 'large' %}
-      {% when 3 %}
-        {% assign featured_collection_width = 'small--one-half one-third' %}
-      {% when 4 %}
-        {% assign featured_collection_width = 'small--one-half one-quarter' %}
-      {% when 5 %}
-        {% assign featured_collection_width = 'small--one-half medium--one-third large--one-fifth' %}
-      {% when 6 %}
-        {% assign featured_collection_width = 'small--one-half medium--one-third large--one-sixth' %}
-    {% endcase %}
-
-    {% if settings.home_featured_collections_sort == 'manual' %}
-      {% if settings.collection_1 != blank %}
-        {% assign featured = settings.collection_1 %}
-        {% include 'featured-collection' %}
-      {% endif %}
-      {% if settings.collection_2 != blank %}
-        {% assign featured = settings.collection_2 %}
-        {% include 'featured-collection'%}
-      {% endif %}
-      {% if settings.collection_3 != blank %}
-        {% assign featured = settings.collection_3 %}
-        {% include 'featured-collection' %}
-      {% endif %}
-      {% if settings.collection_4 != blank %}
-        {% assign featured = settings.collection_4 %}
-        {% include 'featured-collection' %}
-      {% endif %}
-      {% if settings.collection_5 != blank %}
-        {% assign featured = settings.collection_5 %}
-        {% include 'featured-collection' %}
-      {% endif %}
-      {% if settings.collection_6 != blank %}
-        {% assign featured = settings.collection_6 %}
-        {% include 'featured-collection' %}
-      {% endif %}
-    {% else %}
-      {% assign index = 0 %}
-      {% for collection in collections limit:7 %}
-        {% unless index >= 6 %}
-          {% unless collection.handle == 'frontpage' %}
-            {% assign featured = collection.handle %}
-            {% include 'featured-collection' %}
-            {% assign index = index | plus: 1 %}
-          {% endunless %}
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
-
-    {% if index == 0 %}
-      <div class="grid-item text-center">
-        <p>{{ 'homepage.featured_collections.no_collections_html' | t }}</p>
+<div class="header_media with_search_6">
+   <video style="width:100%; height: 400px" height="400" autoplay loop muted plays-inline src="//ak5.picdn.net/shutterstock/videos/1047205/preview/stock-footage-wind-gently-brings-the-curtains-of-an-open-bungalow-terrace-door-in-movement.mp4" class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
+   </video>
+   <div class="search_wrapper search_wr_6  " id="search_wrapper">
+      <div class="adv-search-1  adv_extended_class" id="adv-search-6">
+         <div class="adv6-holder">
+            <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
+               <div class="tab-content">
+                  <div id="results" style="opacity: 0;display: block;">
+                     {{'found' | t}} <span id="results_no" style="display: inline;"></span> {{'objects' | t}}.
+                  </div>
+                  <div role="tabpanel" class="tab-pane active">
+                     {% include 'filters\short-main-filter' %}
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="grid-item">
-        <div class="grid-uniform">
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+   </div>
+</div>
+<main class="container content_wrapper" role="main">
+   <div>
+      <h1 class="text-center">{{'index.h1.header' | t}}</h1>
+      <div>
+         <div class="index-hr"></div>
+      </div>
+      <div class="text-center">
+         {{ 'index.h1.title' | t }}
+      </div>
+      <div class="row text-center">
+         <div class="col-md-6">{{ 'index.h1.col1' | t }}</div>
+         <div class="col-md-6">{{ 'index.h1.col2' | t }}</div>
+      </div>
+   </div>
+   <div>
+      <h2 class="text-center">{{'index.city-region.header' | t}}</h2>
+      <div>
+         <div class="index-hr"></div>
+      </div>
+      <div class="text-center">
+         {{ 'index.city-region.text' | t }}
+      </div>
+      <div class="row region-footer">
+         <div class="col-md-3"
+            style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+         </div>
+         <div class="col-md-8" 
+            style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+         </div>
+      </div>
+      <div class="row region-tails">
+         <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+         </div>
+         <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+         </div>
+         <div class="col-md-4" style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
-          <div class="grid-item small--one-half medium--one-third large--one-sixth text-center">
-            <div class="demo-image">
-              {{ 'homepage.featured_collections.collection_image' | t }}
+         </div>
+      </div>
+   </div>
+   <div>
+      <h2 class="text-center">{{'index.type.header' | t}}</h2>
+      <div>
+         <div class="index-hr"></div>
+      </div>
+      <div class="text-center">
+         {{ 'index.type.text' | t }}
+      </div>
+      <div class="row region-footer">
+         <div class="col-md-3"
+              style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
             </div>
-            <p><a href="admin/custom_collections">{{ 'homepage.featured_collections.example_collection' | t }}</a></p>
-          </div>
+         </div>
+         <div class="col-md-8"
+              style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
+            </div>
+         </div>
+        <div class="row region-tails">
+         <div class="col-md-4"
+              style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
+            </div>
+         </div>
+         <div class="col-md-4"
+              style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
+            </div>
+         </div>
+         <div class="col-md-4"
+              style="background-image: url(http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg)">
+            <div class="block-inner center" >
+               asdas das dasd
+            </div>
+         </div>
         </div>
       </div>
-    {% endif %}
-  </div>
-
-{% endif %}
-
-{% unless settings.home_featured_row1_enable == false or settings.home_featured_row1 == blank or collections[settings.home_featured_row1].empty? %}
-  {% if settings.home_featured_collections_enable %}
-  <hr>
-    {% endif %}
-    {% assign featured_row = settings.home_featured_row1 %}
-    {% assign row_limit_setting = settings.home_featured_row1_number %}
-    {% if collections[featured_row].all_products_count == 0 %}
-    <div class="section-header">
-      <p class="h1">{{ 'homepage.featured_collection_rows.heading' | t }}</p>
-      <div class="section-header--right"> 
-        <a href="{{ collections[featured_row].url }}">{{ 'homepage.featured_collection_rows.more' | t }} &rsaquo;</a>
+   </div>
+   <div>
+      <h2 class="text-center">{{'index.hot-deal.header' | t}}</h2>
+      <div>
+         <div class="index-hr"></div>
       </div>
-    </div>
-
-    <div class="grid text-center row-negative-bottom">
-      <div class="grid-item">
-        {% capture collection_title %}<strong>{{ collections[featured_row].title }}</strong>{% endcapture %}
-        {% capture collection_admin_url %}/admin/collections/{{ collections[featured_row].id }}{% endcapture %}
-        <p>{{ 'homepage.featured_collection_rows.no_products_in_collection_html' | t: collection_title: collection_title }}</p>
-        <p>{{ 'homepage.featured_collection_rows.instructions_to_add_products_to_collection_html' | t: collection_admin_url: collection_admin_url }}</p>
+      <div class="text-center">
+         {{ 'index.hot-deal.text' | t }}
       </div>
-
-      <div class="grid-item">
-        <div class="grid-uniform">
-          <div class="grid-item large--one-fifth medium--one-third text-center">
-            <a href="admin/products" class="demo-image">
-              {{ 'homepage.featured_collection_rows.add_a_product' | t }}
-            </a>
-            <p><a href="admin/products">{{ 'homepage.featured_collection_rows.example_product_title' | t }}</a> $19.99</p>
-          </div>
-          <div class="grid-item large--one-fifth medium--one-third text-center">
-            <a href="admin/products" class="demo-image">
-              {{ 'homepage.featured_collection_rows.add_a_product' | t }}
-            </a>
-            <p><a href="admin/products">{{ 'homepage.featured_collection_rows.example_product_title' | t }}</a> $19.99</p>
-          </div>
-          <div class="grid-item large--one-fifth medium--one-third text-center">
-            <a href="admin/products" class="demo-image">
-              {{ 'homepage.featured_collection_rows.add_a_product' | t }}
-            </a>
-            <p><a href="admin/products">{{ 'homepage.featured_collection_rows.example_product_title' | t }}</a> $19.99</p>
-          </div>
-          <div class="grid-item large--one-fifth medium--one-third text-center">
-            <a href="admin/products" class="demo-image">
-              {{ 'homepage.featured_collection_rows.add_a_product' | t }}
-            </a>
-            <p><a href="admin/products">{{ 'homepage.featured_collection_rows.example_product_title' | t }}</a> $19.99</p>
-          </div>
-          <div class="grid-item large--one-fifth medium--one-third text-center">
-            <a href="admin/products" class="demo-image">
-              {{ 'homepage.featured_collection_rows.add_a_product' | t }}
-            </a>
-            <p><a href="admin/products">{{ 'homepage.featured_collection_rows.example_product_title' | t }}</a> $19.99</p>
-          </div>
+      {% include 'market-block' %} 
+      <div class="row">
+        <h3>{{ 'index.info.header' | t }}</h3>
+        <div>
+          {% assign related_category = "reviews" %}
+          {% include 'blog/blog-related-category', related_category %}
         </div>
       </div>
-    </div>
-  {% else %}
-    {% include 'featured-row' %}
-  {% endif %}
-{% endunless %}
-
-{% if settings.home_featured_row2_enable and settings.home_featured_row2 != blank %}
-  <hr>
-  {% assign featured_row = settings.home_featured_row2 %}
-  {% assign row_limit_setting = settings.home_featured_row2_number %}
-  {% include 'featured-row' %}
-{% endif %}
-
-{% if settings.home_featured_row3_enable and settings.home_featured_row3 != blank %}
-  <hr>
-  {% assign featured_row = settings.home_featured_row3 %}
-  {% assign row_limit_setting = settings.home_featured_row3_number %}
-  {% include 'featured-row' %}
-{% endif %}
-
-{% if settings.home_featured_row4_enable and settings.home_featured_row4 != blank %}
-  <hr>
-  {% assign featured_row = settings.home_featured_row4 %}
-  {% assign row_limit_setting = settings.home_featured_row4_number %}
-  {% include 'featured-row' %}
-{% endif %}
+   </div>
+   <div>
+      <h2 class="text-center">{{'index.about.header' | t}}</h2>
+      <div>
+         <div class="index-hr"></div>
+      </div>
+      <div>
+         <div class="col-md-6">{{ 'index.about.text' | t }}</div>
+         <div class="col-md-6">{{ 'index.about.video' | t }}</div>
+      </div>
+      <div>
+         <h3>{{ 'index.last-news' | t }}</h3>
+         {% assign related_category = "news" %}
+         {% include 'blog/blog-related-category', related_category %}
+      </div>
+   </div>
+   <div>
+      <h2 class="text-center">{{'index.price.header' | t}}</h2>
+      <div>
+         <div class="index-hr"></div>
+      </div>
+      <div class="row text-center">
+         <div class="col-md-6">{{ 'index.price.col1' | t }}</div>
+         <div class="col-md-6">{{ 'index.price.col2' | t }}</div>
+      </div>
+   </div>
+   {% include 'footer/contact-us' %}
+</main>

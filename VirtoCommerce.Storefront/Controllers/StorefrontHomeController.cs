@@ -1,5 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading.Tasks;
+using System.Web.Mvc;
+using PagedList;
 using VirtoCommerce.Storefront.Model;
+using VirtoCommerce.Storefront.Model.Catalog;
+using VirtoCommerce.Storefront.Model.Common;
+using VirtoCommerce.Storefront.Model.Services;
 
 namespace VirtoCommerce.Storefront.Controllers
 {
@@ -7,25 +12,17 @@ namespace VirtoCommerce.Storefront.Controllers
     public class StorefrontHomeController : Controller
     {
         private readonly WorkContext _workContext;
+        private readonly ICatalogSearchService _catalogSearchService;
 
-        public StorefrontHomeController(WorkContext context)
+        public StorefrontHomeController(WorkContext context, ICatalogSearchService catalogSearchService)
         {
             _workContext = context;
+            _catalogSearchService = catalogSearchService;
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            //Load categories for main page (may be removed if it not necessary)
-            //var catalogSearchCriteria = new CatalogSearchCriteria()
-            //{
-            //    CatalogId = _workContext.CurrentStore.Catalog,
-            //    ResponseGroup = CatalogSearchResponseGroup.WithCategories,
-            //    SortBy = "Priority",
-            //    SearchInChildren = false
-            //};
-
-            // _workContext.CurrentCatalogSearchResult = await _catalogSearchService.SearchAsync(catalogSearchCriteria);
             return View("index", _workContext);
         }
     }

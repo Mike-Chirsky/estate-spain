@@ -24,7 +24,7 @@
       {% include 'market-block' %} 
     {%- endif -%}
     
-    {%- if collection_type == 'city' or (city_product and type_product)  -%}
+    {%- if collection_type == 'city' or (collection_type == 'type' and (region_product or city_product))  -%}
       <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
       {% include 'product-list' %}
     {%endif%}
