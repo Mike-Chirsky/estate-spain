@@ -88,11 +88,11 @@ body {
     /*font-family: 'Open Sans', sans-serif;*/
 }
 
-.row{
+/*.row{
     margin-left: 15px;
     margin-right: 15px;
 }
-
+*/
 .rightmargin{
     /*padding-right: 30px;*/
 }
@@ -4738,6 +4738,7 @@ input.form-control::-moz-placeholder {
     border-radius: 3px;
     font-size: 13px;
     background-color: #ffffff;
+    height: 485px;
     max-width: 525px;
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
@@ -9492,7 +9493,7 @@ table tbody tr td {
 .adv-search-1{
     z-index:1;
     background-color: #fff;
-    width: 1110px;
+    width: 1170px;
     margin: 0px auto;
     position: absolute;
     border-bottom-left-radius: 3px;

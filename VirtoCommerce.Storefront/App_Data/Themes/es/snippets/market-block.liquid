@@ -17,7 +17,9 @@
                 {% break %}
             {% endif %}
             <div class="ca-item ca ca-item-{{ forloop.index }}">
-            {% include 'product-grid-item' with product %}
+            <div class="col-md-4 has_prop_slider  listing_wrapper">
+              {% include 'product-grid-item' with product %}
+            </div>
             </div>
          {% endfor %}
       </div>

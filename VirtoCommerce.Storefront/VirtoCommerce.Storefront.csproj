@@ -513,6 +513,7 @@
     <Content Include="App_Data\Themes\es\assets\styles\mobile.css" />
     <Content Include="App_Data\Themes\es\assets\styles\my_media.css" />
     <Content Include="App_Data\Themes\es\assets\styles\orange-theme.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\static.css" />
     <Content Include="App_Data\Themes\es\assets\styles\style.css" />
     <Content Include="App_Data\Themes\es\snippets\footer\contact-us.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\about.liquid" />

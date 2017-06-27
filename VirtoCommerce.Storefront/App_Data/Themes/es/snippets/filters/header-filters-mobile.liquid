@@ -1,5 +1,5 @@
-<div class="container content_wrapper">
-  <div class="show-filters">
+<div class="">
+  <div class="clearfix show-filters">
     <a class="wpresidence_button js-show-filters">Показать фильтры</a>
 	  <div class="adv-search-1">
 	  	<div class="main-filter-container" id="main-filter-controls">
@@ -118,6 +118,10 @@
 		<div class="col-md-3">
 		</div>
 		{%- endif -%}
+		<div class="extended_search_check_wrapper" style="display: none;">
+		<span id="adv_extended_close_adv" class="adv_extended_close_button" style="display: none;"><i class="fa fa-times"></i></span>
+		{% include 'filters/additional-filter' %}
+		</div>
 		<div class="col-md-3">
 			<button id="send-main-filter" class="wpresidence_button">
 				{% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
@@ -130,10 +134,6 @@
 		</div>
 	</div>
 	<div class="adv_extended_options_text" id="adv_extended_options_text_adv">{{ 'filter.addition-options' | t }}</div>
-	<div class="extended_search_check_wrapper" style="display: none;">
-	<span id="adv_extended_close_adv" class="adv_extended_close_button" style="display: none;"><i class="fa fa-times"></i></span>
-	{% include 'filters/additional-filter' %}
-	</div>
 	  </div>
 	</div>
 </div>
