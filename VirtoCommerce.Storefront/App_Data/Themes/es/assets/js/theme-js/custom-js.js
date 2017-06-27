@@ -293,18 +293,22 @@ jQuery(document).ready(function () {
                 jQuery("#subscribe-fail").show();
             });
         }
-        else
-        {
+        else {
             jQuery("#subscribe-email").addClass("error");
         }
         return false;
     });
-
+    jQuery("#request-callback-button").click(function () {
+        slideToBlock("#callback-form");
+    });
+    jQuery("#contact-us-button").click(function () {
+        slideToBlock("#contact-us-form");
+    });
     jQuery('.js-show-filters').on('click', function () {
         var self = $(this);
         var selfBlock = self.parent();
 
-        if(!selfBlock.hasClass('opened')) {
+        if (!selfBlock.hasClass('opened')) {
             selfBlock.addClass('opened');
             self.text('Скрыть фильтры');
         }
@@ -314,9 +318,45 @@ jQuery(document).ready(function () {
         }
     });
 
-    slideToBlock("#list-products");
+    if (window.location.href.indexOf("from_filter") > -1) {
+        slideToBlock("#list-products");
+    }
 
     jQuery("#to-parthner-form").click(function () {
         slideToBlock("#form-parthner");
+    });
+
+    jQuery("#callback-send").click(function () {
+        // get fields
+        var inputs = jQuery("#callback-form").find("input");
+        var params = {};
+        var isError = false;
+        jQuery.each(inputs, function (index, item) {
+            var el = jQuery(item);
+            var property = el.attr('data-property');
+            if (el.val() === '' && property === 'phone') {
+                el.addClass("error");
+                isError = true;
+            }
+            else {
+                el.removeClass("error");
+                params[property] = el.val();
+            }
+        });
+        if (isError) {
+            return;
+        }
+        jQuery("#callback-form").hide();
+        jQuery("#callback-spinner").show();
+        var succes = function () {
+            jQuery("#callback-spinner").hide();
+            jQuery("#callback-succes").show();
+        };
+
+        var fail = function () {
+            jQuery("#callback-spinner").hide();
+            jQuery("#callback-fail").show();
+        };
+        succes();
     });
 });

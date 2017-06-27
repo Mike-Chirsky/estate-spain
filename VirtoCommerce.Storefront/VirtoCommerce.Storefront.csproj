@@ -557,6 +557,7 @@
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\about.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\footer\request-call.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

@@ -1,0 +1,35 @@
+﻿<div class="callback-form">
+    <h3 class="text-center">{{ 'callback-form.header' | t }}</h3>
+    <h4 class="text-center">{{ 'callback-form.text' | t }}</h4>
+    <div class="spinner" id="callback-spinner" style="display: none;">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+    <div id="callback-form">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input data-property="name" type="text" class="form-control" placeholder="{{'callback-form.name-ph' | t}}"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input data-property="phone" type="text" class="form-control" placeholder="{{'callback-form.phone-ph' | t}}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="wpresidence_button form-control" id="callback-send">{{'callback-form.send' | t}}</button>
+            </div>
+        </div>
+        <div class="light-text text-center">{{ 'callback-form.personal-data' | t }}</div>
+    </div>
+    <div id="callback-succes" class="text-center" style="display: none">    
+        <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+    </div>
+    <div id="callback-fail" class="text-center" style="display: none">    
+        <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+    </div>
+</div>
