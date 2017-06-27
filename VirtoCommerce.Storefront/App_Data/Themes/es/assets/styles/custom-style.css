@@ -651,8 +651,6 @@ body{
     transition: background-color .3s ease-in;
 }
 
-
-
 .region-footer .block-inner:hover::after,
 .region-tails .block-inner:hover::after,
 .city-tails .block-inner:hover::after{
@@ -665,6 +663,21 @@ body{
     position: relative;
     z-index: 50;
 }
+
+.region-footer .block-inner a,
+.region-tails .block-inner a,
+.city-tails .block-inner a
+{
+    color: #fff;
+}
+
+.region-footer .block-inner a:hover,
+.region-tails .block-inner a:hover,
+.city-tails .block-inner a:hover
+{
+    color: #ff9800;
+}
+
 .region-footer .block-inner h4, 
 .region-tails .block-inner h4,
 .city-tails .block-inner h4
@@ -707,6 +720,7 @@ body{
 .region-tails .block-inner .bottom,
 .city-tails .block-inner .bottom
 {
+    color: #fff;
     position: absolute;
     left: 0;
     text-align: center;
