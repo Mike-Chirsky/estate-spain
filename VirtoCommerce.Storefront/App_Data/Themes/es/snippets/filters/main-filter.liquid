@@ -19,7 +19,7 @@
 		<div class="col-md-6">
 			{% include 'filters/location' %}
 		</div>
-		<div class="col-md-3" {%- if type_product -%} style="display: none;" {%-endif-%}>
+		<div class="col-md-3 {% if collection.current_estate_type_filter %} disabled {% endif %}">
 			<div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
 					{{- ' selected' -}}
 					{%-endif-%}">

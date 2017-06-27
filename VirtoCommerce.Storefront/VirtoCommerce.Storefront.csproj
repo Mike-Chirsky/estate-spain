@@ -427,6 +427,7 @@
     <Content Include="App_Data\Themes\es\assets\images\index\elitnaya.png" />
     <Content Include="App_Data\Themes\es\assets\images\index\kvartiri.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\maresme.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\logo.png" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\opros-header.jpg" />

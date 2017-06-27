@@ -1276,3 +1276,7 @@ h2.blog-header
 {
     line-height: 1.4;
 }
+.disabled{
+    pointer-events: none;
+    opacity: .5;
+}

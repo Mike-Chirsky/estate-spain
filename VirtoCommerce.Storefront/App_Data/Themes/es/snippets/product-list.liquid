@@ -1,6 +1,6 @@
 ﻿<div class="row order">
    <div class="listing_filters_head">
-      <div class="col-md-2 order-text">
+      <div class="col-md-2 order-text" id="list-products">
         {{ 'filter.order' | t }}
       </div>
       <div class="col-md-9 order-by">   
@@ -34,7 +34,7 @@
       </div>
    </div>
 </div>
-<div class="row product-list">
+<div class="row product-list" >
     {% paginate collection.products by 36 %}
         {% assign link_index = collection.products.size | divided_by: 2 %}
         {% for product in collection.products %}

@@ -314,6 +314,8 @@ jQuery(document).ready(function () {
         }
     });
 
+    slideToBlock("#list-products");
+
     jQuery("#to-parthner-form").click(function () {
         slideToBlock("#form-parthner");
     });
