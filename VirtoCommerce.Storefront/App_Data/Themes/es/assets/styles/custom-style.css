@@ -691,6 +691,10 @@ body{
 .city-tails .block-inner li a{
     color: #fff;
 }
+.region-footer .block-inner li a:hover,
+.city-tails .block-inner li a:hover{
+    color: #ff9800;
+}
 .region-footer .block-inner.center,
 .city-tails .block-inner.center{
     text-align: center;
