@@ -1,4 +1,4 @@
-﻿<div class="container content_wrapper full-width" role="main">
+﻿<!-- <div class="container content_wrapper full-width" role="main">
   <div class="full-img-bg" style="background-image: url('{{- 'images/unsubscribe_header.jpg' | asset_url -}}')">
     <div class="bg-overview">
       <div class="container unsubscribe">
@@ -11,4 +11,15 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="static" data-name="unsubscribe">
+    <div class="static-inner">
+        <h1 class="static-t">{{ 'unsubscribe.title' | t }}</h1>
+        <div class="static-descr">{{ 'unsubscribe.text' | t }}</div>
+        <div class="form"> 
+            <input type="email" placeholder="{{ 'unsubscribe.email-placeholder' | t }}"/> 
+            <button class="wpresidence_button">{{ 'unsubscribe.button' | t }}</button> 
+        </div>
+    </div>
 </div>

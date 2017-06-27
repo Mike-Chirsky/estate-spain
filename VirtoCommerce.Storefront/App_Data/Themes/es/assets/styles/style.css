@@ -4738,6 +4738,8 @@ input.form-control::-moz-placeholder {
     border-radius: 3px;
     font-size: 13px;
     background-color: #ffffff;
+    height: 485px;
+    padding: 0 15px;
     max-width: 525px;
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;

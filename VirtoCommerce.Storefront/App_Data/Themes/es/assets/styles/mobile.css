@@ -3,6 +3,23 @@
 	max-height: 55px;
 }
 
+@media (max-width: 1024px) {
+	.static
+	{
+		padding: 70px 0 0;
+	}
+
+	.static .opros-inner
+	{
+		width: 80%;
+	}
+
+	.opros-reviews .list-item
+	{
+		width: 100%;
+	}
+}
+
 @media (max-width: 992px) {
 	.breadcrumb
 	{
@@ -47,5 +64,23 @@
 	.product-preview
 	{
 		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.static .form
+	{
+		-webkit-flex-direction: column;
+				flex-direction: column;
+	}
+
+	.static .form input
+	{
+		margin: 0 0 10px;
+	}
+
+	.static .form button
+	{
+		width: 100%;
 	}
 }
