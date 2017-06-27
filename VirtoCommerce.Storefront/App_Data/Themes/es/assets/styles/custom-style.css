@@ -135,6 +135,10 @@ span.license {
     font-size: 15px;
     margin-top: 22px;
 }
+.phone-item a
+{
+    color:  #323a45;
+}
 
 .header_wrapper_inside .header-actions {
     float: left;
@@ -1279,4 +1283,64 @@ h2.blog-header
 .disabled{
     pointer-events: none;
     opacity: .5;
+}
+.callbackform
+{
+    text-align: center;
+    padding: 30px;
+}
+.text-left
+{
+    text-align: left;
+}
+.text-right
+{
+    text-align: right;
+}
+
+.callbackform input[type=text]{
+    width: 300px;
+}
+
+.about-hr{
+    width: 30%;
+    height: 1px;
+    background-color: #FF7F27;
+}
+.margin-auto
+{
+    margin: 0 auto;
+}
+.about-carusel a.carousel-control{
+ color: #d2d2d2
+}
+.about-carusel .carousel-indicators,
+.about-carusel a.carousel-control:hover{
+ color: #3C90BE
+}
+
+.about-carusel .carousel-indicators li
+{
+    border-color: #3C90BE;
+}
+
+.about-carusel .carousel-indicators .active
+{
+    background-color: #3C90BE;
+}
+
+.about-carusel .carousel-indicators{
+    bottom: -30px;
+}
+
+.list-contacts ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.hr-contacts
+{
+    width: 100%;
+    height: 1px;
+    background-color: #E9E9E9;
 }

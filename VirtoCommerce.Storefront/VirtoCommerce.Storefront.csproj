@@ -544,6 +544,7 @@
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email02.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\goroda-ispanii.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\about.md" />
     <None Include="App_Data\cms-content\Pages\demo\opros.md" />
     <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\thankyou.md" />
@@ -553,6 +554,7 @@
     <Content Include="App_Data\Themes\es\snippets\static\parthners.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\static\about.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
