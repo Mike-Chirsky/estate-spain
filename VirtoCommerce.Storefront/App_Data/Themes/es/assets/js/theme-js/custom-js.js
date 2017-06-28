@@ -10,21 +10,22 @@ function setCurrentValueDd(items, value) {
         }
     });
 }
-var ids_container_controls = ["#main-filter-controls input", "#addition-filter-controls input"];
-function getTerms() {
+function getTerms(rootElement) {
     var terms = [];
-    ids_container_controls.forEach(function (key) {
-        $.each(jQuery(key), function (index, item) {
-            if (jQuery(item).val() && jQuery(item).val() != "*" && jQuery(item).attr("data-ignore") === undefined) {
+    var key = rootElement + " input";
+    $.each(jQuery(key), function (index, item) {
+        if (jQuery(item).val() && jQuery(item).val() != "*" && jQuery(item).attr("data-ignore") === undefined) {
+            var propAttr = jQuery(item).attr("property-name");
+            if (propAttr && propAttr != '') {
                 terms.push({
-                    name: jQuery(item).attr("property-name"), value: jQuery(item).val()
+                    name: propAttr, value: jQuery(item).val()
                 });
             }
-        });
+        }
     });
 
     // filter by location
-    var regionElementData = jQuery("#location-path");
+    var regionElementData = jQuery(rootElement + " #location-path");
     if (regionElementData.val()) {
 
         if (regionElementData.attr("data-region") && regionElementData.attr("data-region") !== "") {
@@ -35,13 +36,13 @@ function getTerms() {
         }
     }
 
-    if ($("#estate-type-value").val()) {
-        terms.push({ name: "estatetype", value: $("#estate-type-value").val() });
+    if ($(rootElement + " #estate-type-value").val()) {
+        terms.push({ name: "estatetype", value: $(rootElement + " #estate-type-value").val() });
     }
 
-    if (jQuery("#filter-checks input:checked").length > 0) {
+    if (jQuery(rootElement + " #filter-checks input:checked").length > 0) {
         var sysfilterItem = { name: "sys_filter:", value: "" };
-        $.each(jQuery("#filter-checks input:checked"), function (index, item) {
+        $.each(jQuery(rootElement + " #filter-checks input:checked"), function (index, item) {
             sysfilterItem.value += jQuery(item).val() + ",";
         });
         terms.push(sysfilterItem);
@@ -49,19 +50,18 @@ function getTerms() {
     return terms;
 }
 
-function getTermsString() {
+function getTermsString(rootElement) {
     var queryString = "";
-    ids_container_controls.forEach(function (key) {
-        $.each(jQuery(key), function (index, item) {
-            if (jQuery(item).val() && jQuery(item).val() != "*" && jQuery(item).attr("data-ignore") === undefined) {
-                queryString += jQuery(item).attr("property-name") + ":" + jQuery(item).val() + ";";
-            }
-        });
+    var key = rootElement + " input";
+    $.each(jQuery(key), function (index, item) {
+        if (jQuery(item).val() && jQuery(item).val() != "*" && jQuery(item).attr("data-ignore") === undefined) {
+            queryString += jQuery(item).attr("property-name") + ":" + jQuery(item).val() + ";";
+        }
     });
 
-    if (jQuery("#filter-checks input:checked").length > 0) {
+    if (jQuery(rootElement + " #filter-checks input:checked").length > 0) {
         queryString += "sys_filter:";
-        $.each(jQuery("#filter-checks input:checked"), function (index, item) {
+        $.each(jQuery(rootElement + " #filter-checks input:checked"), function (index, item) {
             queryString += jQuery(item).val() + ",";
         });
     }
@@ -71,8 +71,8 @@ function getTermsString() {
     return "";
 }
 
-function getFoundResults() {
-    var terms = getTerms();
+function getFoundResults(rootElement, fillElements) {
+    var terms = getTerms(rootElement);
     if (terms.length === 0) {
         return;
     }
@@ -81,14 +81,14 @@ function getFoundResults() {
         url: "storefrontapi/catalog/search",
         data: JSON.stringify({ mutableTerms: terms, responseGroup: 'ItemInfo' }),
         success: function (data) {
-            $("#no-filter").hide();
-            $("#count-objects").show();
-            $("#result-count").text(data.metaData.totalItemCount);
-            fillElement("#estate-type-value", data.aggregations, "estatetype");
-            fillElement("#other_type", data.aggregations, "other_type");
-            fillElement("#condition-value", data.aggregations, "condition");
-            
-
+            fillElements.forEach(function (element) {
+                $(element + " #no-filter").hide();
+                $(element + " #count-objects").show();
+                $(element + " #result-count").text(data.metaData.totalItemCount);
+                fillElement(element + " #estate-type-value", data.aggregations, "estatetype");
+                fillElement(element + " #other_type", data.aggregations, "other_type");
+                fillElement(element + " #condition-value", data.aggregations, "condition");
+            });
         },
         method: "POST",
         contentType: "application/json"
@@ -139,9 +139,12 @@ function getValues(aggregations, type)
 
 function setClickDdElement(elem)
 {
-    $(elem + ' li').click(function (event) {
-        event.preventDefault();
-        setDdValue(this, true, true);
+    $.each(jQuery(elem + ' li'), function (index, el) {
+        jQuery(el).off('click');
+        jQuery(el).click(function () {
+            event.preventDefault();
+            setDdValue(this, true, true);
+        });
     });
 }
 
@@ -189,45 +192,88 @@ function setDdValue(element, changeNotif, loadResult)
     }
 
     if (loadResult) {
-        getFoundResults();
+        var rootElemet = '';
+        var el = jQuery(element);
+        while (true) {
+            var el = jQuery(el.parent());
+            if (el[0].id != '' && ( el[0].id === 'main-filter-controls' || el[0].id === 'main-filter-controls-mobile'))
+            {
+                rootElemet = el[0].id;
+                break;
+            }
+        }
+        setRelativeValue(rootElemet, parent.find('input').attr('property-name'), value);
+        getFoundResults('#' + rootElemet, ["#main-filter-controls", "#main-filter-controls-mobile"]);
     }
 }
-
-function loadSearchData(url, search, element) {
-    if (!search || !url) {
-        return;
+// set relative element value for other filter
+function setRelativeValue(rootElement, propertyName, value)
+{
+    var prefix = '';
+    if (rootElement === 'main-filter-controls') {
+        prefix = '-mobile';
     }
-    jQuery(element + " input[type=text]").removeClass("selected");
-    jQuery.ajax({
-        url: url,
-        data: JSON.stringify({ search: search }),
-        method: "POST",
-        success: function (data) {
-            if (data.items && data.items.length) {
-                jQuery(element + " .list").html('');
-                for (var i = 0; i < data.items.length; i++) {
-                    var item = data.items[i];
-                    jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
-                }
-                jQuery.each(jQuery(element + " .list li"), function (index, item) {
-                    jQuery(item).click(function () {
-                        selectSearchItem(item, element);
-                    });
-                });
-                jQuery(element + " .list").css("display", "block");
-            }
-        },
-        contentType: "application/json"
+    var el = jQuery("#main-filter-controls" + prefix + " input[property-name='" + propertyName + "']").parent();
+    $.each(el.children("ul").children("li"), function (index, item) {
+        var element = jQuery(item);
+        if (element.attr('data-value') === value)
+        {
+            setDdValue(item, false, false);
+        }
     });
 }
 
-function selectSearchItem(item, element) {
-    jQuery(element + " .list").css("display", "none");
-    jQuery(element + " input[type=text]").val(jQuery(item).attr("data-value"));
-    jQuery(element + " input[type=hidden]").val(jQuery(item).attr("data-seo-path"));
-    jQuery(element + " input[type=hidden]").attr("data-region", jQuery(item).attr("data-region"));
-    jQuery(element + " input[type=hidden]").attr("data-city", jQuery(item).attr("data-city"));
-    jQuery(element + " input[type=text]").addClass("selected");
+function setRelativeCheckbox(rootElement, value, isSet) {
+    var prefix = '';
+    if (rootElement === 'main-filter-controls') {
+        prefix = '-mobile';
+    }
+    var el = jQuery("#main-filter-controls" + prefix + " input[value='" + value + "'][type=checkbox]");
+    el.prop("checked", isSet);
+}
+
+
+
+function loadSearchData(url, search, elements) {
+    if (!search || !url) {
+        return;
+    }
+    elements.forEach(function (element) {
+        jQuery(element + " input[type=text]").removeClass("selected");
+        jQuery.ajax({
+            url: url,
+            data: JSON.stringify({ search: search }),
+            method: "POST",
+            success: function (data) {
+                if (data.items && data.items.length) {
+                    jQuery(element + " .list").html('');
+                    for (var i = 0; i < data.items.length; i++) {
+                        var item = data.items[i];
+                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
+                    }
+                    jQuery.each(jQuery(element + " .list li"), function (index, item) {
+                        jQuery(item).click(function () {
+                            selectSearchItem(item, elements);
+                        });
+                    });
+                    jQuery(element + " .list").css("display", "block");
+                }
+            },
+            contentType: "application/json"
+        });
+    });
+}
+
+function selectSearchItem(item, elements) {
+    elements.forEach(function (element) {
+        jQuery(element + " .list").css("display", "none");
+        jQuery(element + " input[type=text]").val(jQuery(item).attr("data-value"));
+        jQuery(element + " input[type=hidden]").val(jQuery(item).attr("data-seo-path"));
+        jQuery(element + " input[type=hidden]").attr("data-region", jQuery(item).attr("data-region"));
+        jQuery(element + " input[type=hidden]").attr("data-city", jQuery(item).attr("data-city"));
+        jQuery(element + " input[type=text]").addClass("selected");
+    });
+    
     getFoundResults();
 }
 
@@ -326,7 +372,7 @@ jQuery(document).ready(function () {
     jQuery("#to-parthner-form").click(function () {
         slideToBlock("#form-parthner");
     });
-
+    // forms
     jQuery("#callback-send").click(function () {
         // get fields
         var inputs = jQuery("#callback-form").find("input");
@@ -404,4 +450,53 @@ jQuery(document).ready(function () {
         };
         succes();
     }
+    // end forms
+
+    // filter events
+    $("#main-filter-controls #location-value").keyup(function (e) {
+        if (e.which <= 90 && e.which >= 48) {
+            ("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+        }
+
+    });
+
+    $("#main-filter-controls #location-value").click(function () {
+        if ($(".location-search .list").css("display") !== 'none') {
+            $(".location-search .list").css("display", 'none');
+        }
+        else if ($(".location-search .list li").length > 0) {
+            $(".location-search .list").css("display", 'block');
+        }
+    });
+    // mobile
+    $("#main-filter-controls-mobile #location-value").keyup(function (e) {
+        if (e.which <= 90 && e.which >= 48) {
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+        }
+
+    });
+
+    $("#main-filter-controls-mobile #location-value").click(function () {
+        if ($(".location-search .list").css("display") !== 'none') {
+            $(".location-search .list").css("display", 'none');
+        }
+        else if ($(".location-search .list li").length > 0) {
+            $(".location-search .list").css("display", 'block');
+        }
+    });
+    // end mobile
+    $.each(jQuery("#main-filter-controls-mobile #filter-checks input"), function (index, item) {
+        jQuery(item).change(function () {
+            getFoundResults("#main-filter-controls-mobile", ["#main-filter-controls", "#main-filter-controls-mobile"]);
+            setRelativeCheckbox("main-filter-controls-mobile", jQuery(item).val(), jQuery(item).prop('checked'));
+        });
+    });
+
+    $.each(jQuery("#main-filter-controls #filter-checks input"), function (index, item) {
+        jQuery(item).change(function () {
+            getFoundResults("#main-filter-controls", ["#main-filter-controls", "#main-filter-controls-mobile"]);
+            setRelativeCheckbox("main-filter-controls", jQuery(item).val(), jQuery(item).prop('checked'));
+        });
+    });
+    // end filter events
 });

@@ -1387,3 +1387,9 @@ h2.blog-header
 #footer-contact-form{
     min-height: 408px;
 }
+@media(max-width: 992px)
+{
+    .adv-search-1 .filter_menu{
+        left: 0;
+    }
+}

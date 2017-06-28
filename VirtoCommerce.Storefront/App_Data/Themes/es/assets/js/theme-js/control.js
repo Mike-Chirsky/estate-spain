@@ -1530,32 +1530,7 @@ jQuery(document).ready(function ($) {
     $.each( elems, function( i, elem ) {
         setClickDdElement(elem);
     });
-
-    $("#location-value").keyup(function (e) {
-        if (e.which <= 90 && e.which >= 48) {
-            loadSearchData("storefrontapi/location/search", $("#location-value").val(), ".location-search");
-        }
-        
-    });
-
-    $("#location-value").click(function () {
-        if ($(".location-search .list").css("display") !== 'none') {
-            $(".location-search .list").css("display", 'none');
-        }
-        else if ($(".location-search .list li").length > 0) {
-            $(".location-search .list").css("display", 'block');
-        }
-    });
-
-    $.each(jQuery("#filter-checks input"), function (index, item) {
-        jQuery(item).change(function () {
-            getFoundResults();
-        });
-    });
- 
-    
- 
- 
+      
     jQuery('.search_wrapper li, .extended_search_check_wrapper input[type="checkbox"]').click(function () {
          if (typeof (wpestate_show_pins) !== "undefined") {    
             first_time_wpestate_show_inpage_ajax_half=1
