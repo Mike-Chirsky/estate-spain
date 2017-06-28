@@ -97,7 +97,7 @@
     -o-transition: all 0.7s ease-out;
     -webkit-transition: all 0.7s ease-out;
 }
-span.license {
+.license {
     font-size: 13px;
     color: #999;
     line-height: 1.4;
@@ -1033,11 +1033,17 @@ h2.blog-header
     margin-top: 0;
     margin-bottom: 0;
 }
+#contact-us-form-succes-footer i,
+#contact-us-form-succes-sidebar i,
+#contact-us-form-succes i,
 #callback-succes i,
 #subscribe-ok
 {
     color: #FF9800;
 }
+#contact-us-form-fail-footer i,
+#contact-us-form-fail-sidebar i,
+#contact-us-form-fail i,
 #callback-fail i,
 #subscribe-fail
 {
@@ -1372,9 +1378,12 @@ h2.blog-header
 }
 .callback-form
 {
-    background-color: #E9E9E9;
-    border: 1px solid #E1E1E1;
+    background-color: #EDEDED;
+    border: 1px solid #E9E9E9;
     padding: 15px;
     margin-top: 25px;
     border-radius: 3px;
+}
+#footer-contact-form{
+    min-height: 408px;
 }

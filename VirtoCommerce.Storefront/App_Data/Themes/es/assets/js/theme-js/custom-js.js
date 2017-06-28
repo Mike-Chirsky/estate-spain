@@ -1,5 +1,5 @@
 ﻿function slideToBlock(selector) {
-    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - 150 }, 500);
+    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - 200 }, 500);
     return false;
 }
 
@@ -272,16 +272,17 @@ function getRequestSeoPath() {
     return "";
 }
 
-function subscribe()
+function valideEmail(str)
 {
-    jQuery.post('storefrontapi/getresponse/subscribe', { email: email }, function (data) {
-    });
+    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    return re.test(str);
 }
+
 
 jQuery(document).ready(function () {
     jQuery("#subcribe-action").click(function () {
-        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        if (re.test(jQuery("#subscribe-email").val())) {
+
+        if (valideEmailjQuery("#subscribe-email").val()) {
             jQuery("#subscribe-email").removeClass("error");
             jQuery("#subscribe-form").hide();
             jQuery("#subscribe-spinner").show();
@@ -359,4 +360,48 @@ jQuery(document).ready(function () {
         };
         succes();
     });
+
+    jQuery("#request-form-submit").click(function () {
+        sendContactUsForm();
+    });
+    jQuery("#request-form-submit-sidebar").click(function () {
+        sendContactUsForm('-sidebar');
+    });
+    jQuery("#contact-us-form-footer-submit").click(function () {
+        sendContactUsForm("-footer");
+    })
+
+    function sendContactUsForm(prefix) {
+        var inputs = jQuery("#contact-us-form" + prefix).find("input");
+        var data = {};
+        var isError = false;
+        jQuery.each(inputs, function (index, item) {
+            var el = jQuery(item);
+            var prData = el.attr('data-property');
+            var prRequaired = el.attr("required");
+            if (prRequaired && (el.val() === '' || (el.attr('type') === 'email' && !valideEmail(el.val())))) {
+                el.addClass('error');
+                isError = true;
+            }
+            else {
+                el.removeClass('error');
+                data[prData] = el.data;
+            }
+        });
+        if (isError) {
+            return;
+        }
+        jQuery("#contact-us-form-spinner" + prefix).show();
+        jQuery("#contact-us-form" + prefix).hide();
+        var succes = function () {
+            jQuery("#contact-us-form-spinner" + prefix).hide();
+            jQuery("#contact-us-form-succes" + prefix).show();
+        };
+
+        var fail = function () {
+            jQuery("#contact-us-form-spinner" + prefix).hide();
+            jQuery("#contact-us-form-fail" + prefix).show();
+        };
+        succes();
+    }
 });

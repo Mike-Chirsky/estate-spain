@@ -156,26 +156,32 @@
         <div class="contactformwrapper hidden"> 
             <div id="footer-contact-form">
                 <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
-                <div class="alert-box error">
-                    <div class="alert-message"></div>
+                <div class="spinner" id="contact-us-form-spinner-footer" style="display: none;">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
                 </div>
-                <div class="row">
-                    <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                <div id="contact-us-form-succes-footer" class="text-center" style="display: none">    
+                    <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
                 </div>
-                <div class="row">
-                    <input type="text" name="phone" class="form-control"  placeholder="{{ 'request-form.phone' | t }}">
+                <div id="contact-us-form-fail-footer" class="text-center" style="display: none">    
+                    <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
                 </div>
-                <div class="row">
-                    <input type="text" name="email" class="form-control"  aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
-                </div>
-                <div class="row">
-                    <textarea name="comment" class="form-control" cols="14" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
-                </div>
-                <div class="row">
-                    <span class="license"> {{ 'request-form.license' | t }} </span>
-                </div>
-                <div class="row">
-                    <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}"> 
+                <div id="contact-us-form-footer">
+                    <input type="text" data-property="name"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                    <input type="text" data-property="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                    <input type="email" data-property="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+                    <textarea cols="45" rows="8" data-property="message" aria-required="true" class="form-control">
+                    {%- if template contains 'product' -%}
+                    {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
+                    {%- else -%}
+                    {{- 'request-form.message' | t -}}
+                    {%- endif -%}
+                    </textarea>
+                    <span class="license light-text"> {{ 'request-form.license' | t }} </span>
+                    <button class="wpresidence_button form-control" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
                 </div>
             </div>
         </div>
