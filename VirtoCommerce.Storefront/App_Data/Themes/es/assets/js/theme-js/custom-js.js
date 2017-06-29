@@ -455,7 +455,7 @@ jQuery(document).ready(function () {
     // filter events
     $("#main-filter-controls #location-value").keyup(function (e) {
         if (e.which <= 90 && e.which >= 48) {
-            ("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
         }
 
     });
