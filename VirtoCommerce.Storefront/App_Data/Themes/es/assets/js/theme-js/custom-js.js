@@ -36,7 +36,7 @@ function getTerms(rootElement) {
         }
     }
 
-    if ($(rootElement + " #estate-type-value").val()) {
+    if ($(rootElement + " #estate-type-value").val() && $(rootElement + " #estate-type-value").val()!= "*") {
         terms.push({ name: "estatetype", value: $(rootElement + " #estate-type-value").val() });
     }
 
@@ -78,7 +78,7 @@ function getFoundResults(rootElement, fillElements) {
     }
     
     jQuery.ajax({
-        url: "storefrontapi/catalog/search",
+        url: "storefrontapi/product/filter",
         data: JSON.stringify({ mutableTerms: terms, responseGroup: 'ItemInfo' }),
         success: function (data) {
             fillElements.forEach(function (element) {

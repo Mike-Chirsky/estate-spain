@@ -996,6 +996,7 @@
     <Compile Include="Controllers\Api\ApiPricingController.cs" />
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiFilterProductController.cs" />
     <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />

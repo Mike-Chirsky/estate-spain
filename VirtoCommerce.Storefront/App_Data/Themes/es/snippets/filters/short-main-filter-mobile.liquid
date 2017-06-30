@@ -1,0 +1,44 @@
+<div class="search_wrapper">
+   <div class="clearfix show-filters">
+      <a class="wpresidence_button js-show-filters">Показать фильтры</a>
+      <div class="adv-search-1">
+         <div class="main-filter-container" id="main-filter-controls-mobile">
+            <div class="col-md-6">
+               {% include 'filters/location' %}
+            </div>
+            <div class="col-md-3 {% if collection.current_estate_type_filter %} disabled {% endif %}">
+               <div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
+                  {{- ' selected' -}}
+                  {%-endif-%}">
+                  <div data-toggle="dropdown" class=" filter_menu_trigger  " xx="" data-value="{{ collection.current_estate_type_filter.value }}">
+                     {%- if collection.current_estate_type_filter -%}
+                     {{ collection.current_estate_type_filter.value }}
+                     {%-else-%} 
+                     {{ 'filter.category' | t }}
+                     {%-endif-%}
+                     <span class="caret  caret_filter "></span>
+                  </div>
+                  <input data-ignore type="hidden" data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}" property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
+                  <ul class="dropdown-menu filter_menu">
+                     <li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
+                     {% for item in collection.estate_type_filter %}
+                     <li data-value="{{ item.value }}" data-seo-path="{{ item.value | filter_seo_link: 'estatetype': filter_seo_links}}">{{ item.value }}</li>
+                     {% endfor %}
+                  </ul>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <button id="send-main-filter" class="wpresidence_button">
+               {% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
+               <span id="count-objects">
+               {{ 'filter.show-result' | t }} 
+               <span id="result-count">{%- include 'product-count' -%}</span>
+               {{ 'objects' | t }}
+               </span>
+               </button>
+            </div>
+         </div>
+         <div class="adv_extended_options_text" id="adv_extended_options_text_adv">{{ 'filter.addition-options' | t }}</div>
+      </div>
+   </div>
+</div>

@@ -8,31 +8,12 @@
         {{'index.h1.header' | t }}
       </h1>
       <div class="adv-search-1">
-        {% include 'filters\short-main-filter' %}
+        {% include 'filters/short-main-filter' %}
       </div>
     </div>
   </div>
-  <!-- <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
-      <div class="description-header">
-         <h1 class="entry-title entry-tax">
-            {{'index.h1.header' | t }}
-         </h1>
-      </div>
-  </div> -->
-   <!-- <div class="search_wrapper search_wr_6  " id="search_wrapper">
-      <div class="adv-search-1  adv_extended_class" id="adv-search-6">
-         <div class="adv6-holder">
-            <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
-               <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active">
-                     {% include 'filters\short-main-filter' %}
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div> -->
 </div>
+{% include 'filters/short-main-filter-mobile' %}
 <main class="container content_wrapper main-page" role="main">
    <div class="row">
       <div class="text-center">
