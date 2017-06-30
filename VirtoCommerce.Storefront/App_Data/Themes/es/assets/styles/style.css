@@ -1236,7 +1236,7 @@ input.form-control::-moz-placeholder {
 .header_type2 #access {
     display: inline-block;
     height: 59px;
-    margin: -20px 28px 0px 45px;
+    margin: -10px 0 0;
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -2254,7 +2254,6 @@ input.form-control::-moz-placeholder {
 /* =Mobile Header
 ----------------------------------------------- */
 .mobile_header{
-    background-color: #282D33;
     height: 70px;
     width: 100%;
     float: left;
@@ -2263,7 +2262,7 @@ input.form-control::-moz-placeholder {
 }
 
 .mobile_header i{
-    color: #fff;
+    color: #000;
     font-size: 17px;
     margin: 26px;
 }
@@ -13693,7 +13692,7 @@ ul.wpb_thumbnails-fluid > li,
 .wpresidence_button{
     color: #ffffff;
     float: left;
-    padding: 14px 26px 13px;
+    padding: 14px 20px 13px;
     font-size: 13px;
     background-color: #3C90BE;
     webkit-transition: background-color 0.1s linear;
@@ -15144,10 +15143,11 @@ span.wpcf7-form-control-wrap {
 }
 
 .header_type2 #access ul li.with-megamenu:hover>ul.sub-menu {
-    top: 59px;
+    top: 140px;
     left: 0px;
     right: 0px;
-    max-width: 1100px;
+    max-width: 100%;
+    width: 100% !important;
 }
 
 .header_type2.header_right #access ul li.with-megamenu:hover>ul.sub-menu {

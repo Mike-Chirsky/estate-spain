@@ -117,10 +117,9 @@
 }
 
 .header_wrapper_inside .phone-list {
-    float: left;
-    margin-left: 90px;
+    float: right;
     height: 100%;
-    width: 30%;
+    margin: 0 20px 0 0;
     text-align: center;
     display: block;
 }
@@ -130,10 +129,9 @@
 
 .phone-list .phone-item {
     float: left;
-    width: 50%;
     line-height: 1.4;
-    font-size: 15px;
-    margin-top: 22px;
+    font-size: 14px;
+    margin: 22px 0 0 10px;
 }
 .phone-item a
 {
@@ -141,10 +139,9 @@
 }
 
 .header_wrapper_inside .header-actions {
-    float: left;
-    margin-left: 15px;
+    float: right;
+    margin-right: 15px;
     height: 100%;
-    width: 33%;
     text-align: center;
     display: block;
 }
@@ -154,18 +151,17 @@
 
 .header-actions .action-item {
     float: left;
-    width: 50%;
     line-height: 1.4;
     font-size: 15px;
-    margin-top: 22px;
+    margin: 20px 0 0 10px;
 }
 .post-carusel {
     margin-bottom: 13px;
 }
 
 .header_type2 #access {
-    position: relative;
-    margin-left: 230px;
+    float: right;
+    position: static;
 }
 
 .header_type2 .logo {
