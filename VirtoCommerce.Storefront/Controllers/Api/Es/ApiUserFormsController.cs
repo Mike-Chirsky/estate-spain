@@ -26,6 +26,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         // POST: storefrontapi/forms
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ActionResult> UserForm(CallbackUserRequest request)
         {
             if (await _ammoService.Auth(_ammoUserName, _ammoApiKey, _ammoSubdomain))
