@@ -412,8 +412,10 @@
     <Content Include="App_Data\Themes\es\assets\css-images\yahoo_login_favorite.png" />
     <Content Include="App_Data\Themes\es\assets\images\about_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-blanka-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-s.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-brava-map.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\costa-brava-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-de-sol.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-dorada-map.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\dict_city_header.jpg" />
@@ -558,6 +560,12 @@
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\about.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\request-call.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\about.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\cities.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\helpful.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\interesting.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\realty.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\regions.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

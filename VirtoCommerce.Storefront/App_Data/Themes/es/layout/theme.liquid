@@ -82,30 +82,29 @@
                       <nav id="access">
                          <div class="menu-main-menu-container">
                             <ul id="menu-main-menu-1" class="menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.regions' | t }}</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link" href="#">{{ 'menu.regions.header' | t }}</a>
+                                    {% include 'menu/regions' %}
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.sale' | t }}</a>
-                                    <ul class="sub-menu">
-                                        {% for item in collections %}
-                                        <li id="menu-item-18251" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                            <a class="menu-item-link" href="{{ item.url | absolute_url }}">{{ item.title }}</a>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                                    {% include 'menu/cities' %}
                                 </li>            
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.tenancy' | t }}</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                                    {% include 'menu/realty' %}
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.directory' | t }}</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                                    {% include 'menu/helpful' %}
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.news' | t }}</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                                    {% include 'menu/interesting' %}
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-megamenu">
-                                    <a class="menu-item-link" href="{{ '/' | absolute_url }}">{{ 'menu.about' | t }}</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                    <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                                    {% include 'menu/about' %}
                                 </li>
                             </ul>
                          </div>
