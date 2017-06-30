@@ -40,7 +40,7 @@
     height: 110px !important;
 }
 .has_header_type3 .header_media {
-    padding-top: 148px;
+    padding-top: 140px;
 }
 .header_wrapper.customnav {
     height: 90px !important;
@@ -420,6 +420,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', end
 }
 .filters .row{
     margin: 0;
+}
+.filters label
+{
+    margin: 0;
+    padding: 8px 0;
 }
 .row.additional-filters .info{
     border: solid 1px #eeeeee;

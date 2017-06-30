@@ -1,14 +1,25 @@
 ﻿<div class="header_media with_search_6">
-  <!--<video style="width:100%; height: 400px" height="400" autoplay loop muted plays-inline src="//ak5.picdn.net/shutterstock/videos/1047205/preview/stock-footage-wind-gently-brings-the-curtains-of-an-open-bungalow-terrace-door-in-movement.mp4" class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
-  </video>-->
-  <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
+  <div class="video">
+    <video autoplay loop>
+      <source src="//ak1.picdn.net/shutterstock/videos/1047151/preview/stock-footage-relaxing-couch-outside-seen-through-terrace-doors-with-flying-curtains.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+    </video>
+    <div class="video-inner">
+      <h1 class="entry-tax">
+        {{'index.h1.header' | t }}
+      </h1>
+      <div class="adv-search-1">
+        {% include 'filters\short-main-filter' %}
+      </div>
+    </div>
+  </div>
+  <!-- <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
       <div class="description-header">
          <h1 class="entry-title entry-tax">
             {{'index.h1.header' | t }}
          </h1>
       </div>
-  </div>
-   <div class="search_wrapper search_wr_6  " id="search_wrapper">
+  </div> -->
+   <!-- <div class="search_wrapper search_wr_6  " id="search_wrapper">
       <div class="adv-search-1  adv_extended_class" id="adv-search-6">
          <div class="adv6-holder">
             <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
@@ -20,7 +31,7 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> -->
 </div>
 <main class="container content_wrapper main-page" role="main">
    <div class="row">
