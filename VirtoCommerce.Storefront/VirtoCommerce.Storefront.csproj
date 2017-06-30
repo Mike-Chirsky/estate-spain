@@ -411,6 +411,8 @@
     <Content Include="App_Data\Themes\es\assets\css-images\yahoo_login.png" />
     <Content Include="App_Data\Themes\es\assets\css-images\yahoo_login_favorite.png" />
     <Content Include="App_Data\Themes\es\assets\images\about_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\arenda-preview.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\bg-pattern.png" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-s.jpg" />
@@ -431,6 +433,7 @@
     <Content Include="App_Data\Themes\es\assets\images\index\kvartiri.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\maresme.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\logo.png" />
+    <Content Include="App_Data\Themes\es\assets\images\mortgage-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\opros-header.jpg" />
@@ -566,6 +569,12 @@
     <Content Include="App_Data\Themes\es\snippets\menu\interesting.liquid" />
     <Content Include="App_Data\Themes\es\snippets\menu\realty.liquid" />
     <Content Include="App_Data\Themes\es\snippets\menu\regions.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\about-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\cities-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\helpful-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\interesting-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\realty-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\regions-mobile.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
