@@ -42,6 +42,20 @@ namespace VirtoCommerce.Storefront.Controllers
                 return View("article", layout, WorkContext);
             }
 
+            var blog = page as Blog;
+            if (blog != null)
+            {
+                WorkContext.CurrentBlog = blog;
+                WorkContext.CurrentPageSeo = new SeoInfo
+                {
+                    Language = WorkContext.CurrentBlog.Language,
+                    MetaDescription = WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
+                    Title = WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
+                    Slug = WorkContext.RequestUrl.AbsolutePath
+                };
+                return View("blog", WorkContext.CurrentBlog.Layout, WorkContext);
+            }
+
             var contentPage = page as ContentPage;
             SetCurrentPage(contentPage);
             return View("page", page.Layout, WorkContext);
