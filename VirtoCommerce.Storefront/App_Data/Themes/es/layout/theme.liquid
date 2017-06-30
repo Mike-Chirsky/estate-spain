@@ -37,6 +37,39 @@
       {% endif %}
    </head>
    <body id="{{ page_title | handle }}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
+      <div class="mobilewrapper" style="display: block; transform: translate(0px, 0px);">
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div class="mobilemenu-close"><i class="fa fa-times"></i></div>
+                <ul id="menu-main-menu" class="mobilex-menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
+                        {% include 'menu/regions-mobile' %}
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                        {% include 'menu/cities-mobile' %}
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                        {% include 'menu/realty-mobile' %}
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                        {% include 'menu/helpful-mobile' %}
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                        {% include 'menu/interesting-mobile' %}
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                        {% include 'menu/about-mobile' %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
       <div class="website-wrapper" id="all_wrapper">
          <div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
             <div class="master_header wide">
@@ -80,7 +113,7 @@
                          <div class="menu-main-menu-container">
                             <ul id="menu-main-menu-1" class="menu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link" href="#">{{ 'menu.regions.header' | t }}</a>
+                                    <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
                                     {% include 'menu/regions' %}
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">

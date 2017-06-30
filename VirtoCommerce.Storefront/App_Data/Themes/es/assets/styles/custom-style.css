@@ -1394,3 +1394,23 @@ h2.blog-header
         left: 0;
     }
 }
+
+.snap-drawer{    
+    background-color: #f3f3f3;
+}
+
+.mobilex-menu{
+
+    background-color:#f3f3f3; 
+}
+.mobilex-menu .sub-menu li:hover,
+.mobilex-menu li
+{
+    border-bottom: 1px solid #e3e3e3;
+}
+.mobilemenu-close,
+.mobilex-menu li a,
+.mobilex-menu li:hover a
+{
+    color: #7f7f7f;
+}
