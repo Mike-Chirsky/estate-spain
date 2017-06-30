@@ -105,6 +105,7 @@ namespace VirtoCommerce.Storefront
             routes.AddStorefrontRoute("API.Es.Location.Search", "storefrontapi/location/search", defaults: new { controller = "ApiLocationSearch", action = "Search" }, constraints: new { httpMethod = new HttpMethodConstraint("POST") });
             routes.AddStorefrontRoute("API.Es.GetResponse.Subscribe", "storefrontapi/getresponse/subscribe", defaults: new { controller = "ApiGetResponse", action = "Subscribe" }, constraints: new { httpMethod = new HttpMethodConstraint("POST") });
             routes.AddStorefrontRoute("API.Es.GetResponse.Unsubscribe", "storefrontapi/getresponse/unsubscribe", defaults: new { controller = "ApiGetResponse", action = "Unsubscribe" }, constraints: new { httpMethod = new HttpMethodConstraint("POST") });
+            routes.AddStorefrontRoute("API.Es.Forms.CallBack", "storefrontapi/forms", defaults: new { controller = "ApiUserForms", action = "UserForm" }, constraints: new { httpMethod = new HttpMethodConstraint("POST") });
             #endregion
 
             #endregion

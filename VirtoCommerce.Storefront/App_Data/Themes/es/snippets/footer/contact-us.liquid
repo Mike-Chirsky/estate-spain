@@ -43,18 +43,24 @@
       <div id="contact-us-form">
       <div class="row">
          <div class="col-md-4">
-            <input type="text" data-property="name"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+            <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
          </div>
          <div class="col-md-4">
-            <input type="text" data-property="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+            <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
          </div>
          <div class="col-md-4">
-            <input type="email" data-property="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+            <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
          </div>
+         {% if product %}
+            <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+            <input type="hidden" data-property="formType" value="3" />
+        {% else %}
+            <input type="hidden" data-property="formType" value="4" />
+        {% endif %}
       </div>
       <div class="row">
          <div class="col-md-12">
-            <textarea cols="45" rows="8" data-property="message" aria-required="true" class="form-control">
+            <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
             {%- if template contains 'product' -%}
                 {{- 'request-form.message-object' | t : sku: product.first_available_variant.sku -}}
             {%- else -%}

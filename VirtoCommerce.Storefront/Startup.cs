@@ -72,6 +72,7 @@ using VirtoCommerce.Storefront.Services.Recommendations;
 using VirtoCommerce.LiquidThemeEngine.Converters;
 using VirtoCommerce.LiquidThemeEngine.Converters.Extentsions;
 using VirtoCommerce.Storefront.Routing.Extensions;
+using VirtoCommerce.Storefront.Model.AmmoCrm.Services;
 
 [assembly: OwinStartup(typeof(Startup))]
 [assembly: PreApplicationStartMethod(typeof(Startup), "PreApplicationStart")]
@@ -265,6 +266,8 @@ namespace VirtoCommerce.Storefront
 
             // custom register
             container.RegisterType<ShopifyModelConverter, EsShopifyModelConverter>();
+            // ammo crm service
+            container.RegisterType<IAmmoService, AmmoService>();
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
             var themesBasePath = cmsContentConnectionString.RootPath.TrimEnd('/') + "/" + "Themes";

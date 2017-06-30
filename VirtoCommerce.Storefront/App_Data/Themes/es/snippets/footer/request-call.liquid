@@ -13,11 +13,17 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-6">
-                        <input data-property="name" type="text" class="form-control" placeholder="{{'callback-form.name-ph' | t}}"/>
+                        <input data-property="userName" type="text" class="form-control" placeholder="{{'callback-form.name-ph' | t}}"/>
                     </div>
                     <div class="col-md-6">
-                        <input data-property="phone" type="text" class="form-control" placeholder="{{'callback-form.phone-ph' | t}}"/>
+                        <input data-property="userPhone" type="text" class="form-control" placeholder="{{'callback-form.phone-ph' | t}}"/>
                     </div>
+                    {% if product %}
+                        <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                        <input type="hidden" data-property="formType" value="1" />
+                    {% else %}
+                        <input type="hidden" data-property="formType" value="2" />
+                    {% endif %}
                 </div>
             </div>
             <div class="col-md-4">

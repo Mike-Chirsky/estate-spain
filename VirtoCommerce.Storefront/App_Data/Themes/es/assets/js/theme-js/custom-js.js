@@ -390,21 +390,27 @@ jQuery(document).ready(function () {
                 params[property] = el.val();
             }
         });
+        params['fromUrl'] = window.location.href;
         if (isError) {
             return;
         }
         jQuery("#callback-form").hide();
         jQuery("#callback-spinner").show();
-        var succes = function () {
-            jQuery("#callback-spinner").hide();
-            jQuery("#callback-succes").show();
-        };
-
-        var fail = function () {
-            jQuery("#callback-spinner").hide();
-            jQuery("#callback-fail").show();
-        };
-        succes();
+        jQuery.ajax({
+            type: 'POST',
+            url: 'storefrontapi/forms',
+            data: JSON.stringify(params),
+            success: function (data) {
+                jQuery("#callback-spinner").hide();
+                jQuery("#callback-succes").show();
+            },
+            error: function (err) {
+                jQuery("#callback-spinner").hide();
+                jQuery("#callback-fail").show();
+            },
+            contentType: "application/json",
+            dataType: 'json'
+        });
     });
 
     jQuery("#request-form-submit").click(function () {
@@ -418,7 +424,11 @@ jQuery(document).ready(function () {
     })
 
     function sendContactUsForm(prefix) {
-        var inputs = jQuery("#contact-us-form" + prefix).find("input");
+        if (!prefix)
+        {
+            prefix = "";
+        }
+        var inputs = jQuery("#contact-us-form" + prefix).find(":input");
         var data = {};
         var isError = false;
         jQuery.each(inputs, function (index, item) {
@@ -431,24 +441,30 @@ jQuery(document).ready(function () {
             }
             else {
                 el.removeClass('error');
-                data[prData] = el.data;
+                data[prData] = el.val();
             }
         });
         if (isError) {
             return;
         }
+        data['fromUrl'] = window.location.href;
         jQuery("#contact-us-form-spinner" + prefix).show();
         jQuery("#contact-us-form" + prefix).hide();
-        var succes = function () {
-            jQuery("#contact-us-form-spinner" + prefix).hide();
-            jQuery("#contact-us-form-succes" + prefix).show();
-        };
-
-        var fail = function () {
-            jQuery("#contact-us-form-spinner" + prefix).hide();
-            jQuery("#contact-us-form-fail" + prefix).show();
-        };
-        succes();
+        jQuery.ajax({
+            type: 'POST',
+            url: 'storefrontapi/forms',
+            data: JSON.stringify(data),
+            success: function (data) {
+                jQuery("#contact-us-form-spinner" + prefix).hide();
+                jQuery("#contact-us-form-succes" + prefix).show();
+            },
+            error: function (err) {
+                jQuery("#contact-us-form-spinner" + prefix).hide();
+                jQuery("#contact-us-form-fail" + prefix).show();
+            },
+            contentType: "application/json",
+            dataType: 'json'
+        });
     }
     // end forms
 

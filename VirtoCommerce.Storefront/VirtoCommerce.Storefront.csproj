@@ -979,6 +979,7 @@
     <Compile Include="Controllers\Api\ApiPricingController.cs" />
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
     <Compile Include="Controllers\BulkOrderController.cs" />
@@ -1003,6 +1004,7 @@
     <Compile Include="Routing\SeoEntity.cs" />
     <Compile Include="Routing\SeoRouteResponse.cs" />
     <Compile Include="Routing\SeoRouteService.cs" />
+    <Compile Include="Services\AmmoService.cs" />
     <Compile Include="Services\ChangesTrackingService.cs" />
     <Compile Include="Services\ContentBlobProviders\AzureBlobContentProvider.cs" />
     <Compile Include="Services\ContentBlobProviders\FileSystemContentBlobProvider.cs" />

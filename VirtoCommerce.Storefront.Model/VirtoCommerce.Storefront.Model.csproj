@@ -61,6 +61,10 @@
     </Compile>
     <Compile Include="Address.cs" />
     <Compile Include="AddressType.cs" />
+    <Compile Include="AmmoCrm\AmmoCreateUnsortedRequest.cs" />
+    <Compile Include="AmmoCrm\AmmoUnsortedModel.cs" />
+    <Compile Include="AmmoCrm\FormTypes.cs" />
+    <Compile Include="AmmoCrm\Services\IAmmoService.cs" />
     <Compile Include="AmountType.cs" />
     <Compile Include="Attachment.cs" />
     <Compile Include="BankCardInfo.cs" />
@@ -240,6 +244,8 @@
     <Compile Include="Stores\Store.cs" />
     <Compile Include="Tax\TaxDetail.cs" />
     <Compile Include="Customer\Vendor.cs" />
+    <Compile Include="UserForms\CallbackUserRequest.cs" />
+    <Compile Include="UserForms\ContactUserRequest.cs" />
     <Compile Include="WorkContext.cs" />
   </ItemGroup>
   <ItemGroup>

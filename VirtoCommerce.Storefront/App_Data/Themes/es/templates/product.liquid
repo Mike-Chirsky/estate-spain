@@ -187,20 +187,8 @@
                                     {{ 'map.no-result' | t }}
                                 </div>
                                 <div class="gmap-controls">
-                                  <!--  <div id="gmap-control">
-                                        <span id="map-view"><i class="fa fa-picture-o"></i>{{ 'map.view' | t }}</span>
-                                        <span id="map-view-roadmap" class="map-type">{{ 'map.roadmap' | t }}</span>
-                                        <span id="map-view-satellite" class="map-type">{{ 'map.satellite' | t }}</span>
-                                        <span id="map-view-hybrid" class="map-type">{{ 'map.hybrid' | t }}</span>
-                                        <span id="map-view-terrain" class="map-type">{{ 'map.terrain' | t }}</span>
-                                        <span id="geolocation-button"><i class="fa fa-map-marker"></i>{{ 'map.my-location' | t }}</span>
-                                        <span id="gmap-full"><i class="fa fa-arrows-alt"></i>{{ 'map.fullscreen' | t }}</span>
-                                        <span id="gmap-prev"><i class="fa fa-chevron-left"></i>{{ 'map.prev' | t }}</span>
-                                        <span id="gmap-next">{{ 'map.next' | t }}<i class="fa fa-chevron-right"></i></span>
-                                    </div>-->
                                     <div id="gmapzoomplus"><i class="fa fa-plus"></i> </div>
                                     <div id="gmapzoomminus"><i class="fa fa-minus"></i></div>
-                                    <!--<div id="street-view"><i class="fa fa-location-arrow"></i> {{ 'map.streetview' | t }} </div>-->
                                 </div>
                             </div>
                             <!-- END Google Map -->
@@ -226,34 +214,6 @@
             <div class="agent_contanct_form addition-form">
                 {% include 'footer/contact-us' %}
                 {% include 'footer/request-call' %}
-                <!--<h4 id="show_contact">{{ 'request-form.header2' | t }}</h4>
-                <div class="row">
-                    <div class="col-md-4">
-                        <input name="contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" name="phone" class="form-control"  placeholder="{{ 'request-form.phone' | t }}">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" name="email" class="form-control" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>    
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                      <span class="license"> {{ 'request-form.license' | t }} </span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        
-                        <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
-                    </div>
-                </div>                -->
             </div>
         </div>
         <!-- end single content -->
@@ -297,10 +257,16 @@
                     <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
                 </div>
                 <div id="contact-us-form-sidebar">
-                    <input type="text" data-property="name"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                    <input type="text" data-property="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
-                    <input type="email" data-property="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
-                    <textarea cols="45" rows="8" data-property="message" aria-required="true" class="form-control">
+                    <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                    <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                    <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+                    {% if product %}
+                        <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                        <input type="hidden" data-property="formType" value="3" />
+                    {% else %}
+                        <input type="hidden" data-property="formType" value="4" />
+                    {% endif %}
+                    <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
                     {%- if template contains 'product' -%}
                     {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
                     {%- else -%}
