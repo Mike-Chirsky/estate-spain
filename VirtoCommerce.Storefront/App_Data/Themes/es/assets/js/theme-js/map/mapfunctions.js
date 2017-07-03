@@ -1,4 +1,4 @@
-var pin_images=mapfunctions_vars.pin_images;
+﻿var pin_images=mapfunctions_vars.pin_images;
 var images = jQuery.parseJSON(pin_images);
 var ipad_time=0;
 var infobox_id=0;
@@ -404,7 +404,7 @@ function createMarker_sh (infoBox_sh,gmarkers_sh,map2,county_state, size, i,id,l
                title=title+"...";
            }
         
-            infoBox_sh.setContent('<div class="info_details"><span id="infocloser" onClick=\'javascript:infoBox_sh.close();\' ></span><a href="'+this.link+'">'+info_image+'</a><a href="'+this.link+'" id="infobox_title">'+title+'</a><div class="prop_detailsx">'+category_name+" "+in_type+" "+action_name+'</div><div class="prop_pricex">'+this.price+infosize+infobaths+inforooms+'</div></div>' );
+            infoBox_sh.setContent('<div class="info_details"><span id="infocloser" onClick=\'javascript:infoBox_sh.close();\' ></span><a href="'+this.link+'">'+info_image+'</a><a href="'+this.link+'" id="infobox_title">'+title+'</a><div class="prop_pricex">'+this.price+infosize+infobaths+inforooms+'</div></div>' );
             infoBox_sh.open(map2, this);    
             map2.setCenter(this.position);   
 
@@ -677,7 +677,7 @@ function   createMarker ( size, i,id,lat,lng,pin,title,counter,image,price,singl
             title=title+"...";
         }
         
-        infoBox.setContent('<div class="info_details"><span id="infocloser" onClick=\'javascript:infoBox.close();\' ></span><a href="'+this.link+'">'+info_image+'</a><a href="'+this.link+'" id="infobox_title">'+title+'</a><div class="prop_detailsx">'+category_name+" "+in_type+" "+action_name+'</div><div class="prop_pricex">'+this.price+infosize+infobaths+inforooms+'</div></div>' );
+        infoBox.setContent('<div class="info_details"><span id="infocloser" onClick=\'javascript:infoBox.close();\' ></span><a href="'+this.link+'">'+info_image+'</a><a href="'+this.link+'" id="infobox_title">'+title+'</a><div class="prop_pricex">'+this.price+infosize+infobaths+inforooms+'</div></div>' );
         infoBox.open(map, this);    
         map.setCenter(this.position);   
 

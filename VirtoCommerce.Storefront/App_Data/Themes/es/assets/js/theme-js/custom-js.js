@@ -422,6 +422,9 @@ jQuery(document).ready(function () {
     jQuery("#request-form-submit-sidebar").click(function () {
         sendContactUsForm('-sidebar');
     });
+    jQuery("#request-form-submit-image").click(function () {
+        sendContactUsForm('-image');
+    });
     jQuery("#contact-us-form-footer-submit").click(function () {
         sendContactUsForm("-footer");
     })

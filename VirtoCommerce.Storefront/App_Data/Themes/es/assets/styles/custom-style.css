@@ -1038,6 +1038,7 @@ h2.blog-header
     margin-top: 0;
     margin-bottom: 0;
 }
+#contact-us-form-succes-image i,
 #contact-us-form-succes-footer i,
 #contact-us-form-succes-sidebar i,
 #contact-us-form-succes i,
@@ -1046,6 +1047,7 @@ h2.blog-header
 {
     color: #FF9800;
 }
+#contact-us-form-fail-image i,
 #contact-us-form-fail-footer i,
 #contact-us-form-fail-sidebar i,
 #contact-us-form-fail i,
@@ -1428,4 +1430,14 @@ h2.blog-header
 .wpresidence_button.gray:hover
 {
     color:#fff !important;
+}
+.agent_contanct_form h4#show_contact{
+    margin-bottom: 15px;
+}
+.font-size-30{
+    font-size: 30px;
+}
+.description-header.blog-header-container
+{
+    padding: 0px;
 }

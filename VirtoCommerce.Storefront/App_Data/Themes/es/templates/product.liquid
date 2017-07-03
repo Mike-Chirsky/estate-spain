@@ -17,10 +17,10 @@
         {% include 'breadcrumb' %}
     </div>
     <div class="col-md-9 rightmargin full_width_prop">
-        <h1 class="entry-title entry-prop">
+        <h1 class="entry-title entry-prop font-size-30">
            {{ product.custom_title }}
         </h1>
-        <span class="price_area"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
+        <span class="price_area font-size-30"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
         <div class="single-content listing-content">
             <div class="notice_area">
                 <div class="property_categs">
@@ -80,7 +80,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <a data-toggle="collapse" data-parent="#accordion_prop_details" href="#collapseProperties">
-                            <h4 class="panel-title" id="prop_det">{{ 'product.product_description' | t }}</h4>
+                            <h4 class="panel-title" id="prop_det">{{ 'product.description' | t }}</h4>
                         </a>
                     </div>
                     <div id="collapseProperties" class="panel-collapse collapse in">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel-group property-panel" id="accordion_iteractive">
+            {% comment %}<div class="panel-group property-panel" id="accordion_iteractive">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <a data-toggle="collapse" data-parent="#accordion_iteractive" href="#collapseIteractive">
@@ -209,7 +209,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>{% endcomment %}
             
             <div class="agent_contanct_form addition-form">
                 {% include 'footer/contact-us' %}
@@ -315,18 +315,40 @@
             <div class="lightbox_property_header">
                <h3>{{ 'request-form.header' | t }}</h3>
             </div>
-            <div class="agent_contanct_form">
-               <div class="agent_contanct_form ">
-                <div class="alert-box error">
-                    <div class="alert-message" id="alert-agent-contact"></div>
+            <div>
+                <div class="spinner" id="contact-us-form-spinner-image" style="display: none;">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
                 </div>
-                <input name="contact_name" id="agent_contact_name" type="text" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                <input type="text" name="phone" class="form-control" id="agent_phone" placeholder="{{ 'request-form.phone' | t }}">
-                <input type="text" name="email" class="form-control" id="agent_user_email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}">
-                <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true">{{ 'request-form.message' | t }}</textarea>
-                <span class="license"> {{ 'request-form.license' | t }} </span>
-                <input type="submit" class="wpresidence_button agent_submit_class" id="agent_submit" value="{{ 'request-form.send' | t }}">
-            </div>
+                <div id="contact-us-form-succes-iamge" class="text-center" style="display: none">    
+                    <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+                </div>
+                <div id="contact-us-form-fail-image" class="text-center" style="display: none">    
+                    <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+                </div>
+                <div id="contact-us-form-image">
+                    <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                    <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                    <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+                    {% if product %}
+                        <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                        <input type="hidden" data-property="formType" value="3" />
+                    {% else %}
+                        <input type="hidden" data-property="formType" value="4" />
+                    {% endif %}
+                    <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
+                    {%- if template contains 'product' -%}
+                    {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
+                    {%- else -%}
+                    {{- 'request-form.message' | t -}}
+                    {%- endif -%}
+                    </textarea>
+                    <span class="license light-text"> {{ 'request-form.license' | t }} </span>
+                    <button class="wpresidence_button form-control" id="request-form-submit-image" >{{ 'request-form.send' | t }}</button>
+                </div>
             </div>
          </div>
       </div>
