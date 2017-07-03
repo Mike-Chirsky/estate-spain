@@ -28,7 +28,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
         protected override SeoEntity FindEntityBySeoPath(string seoPath, WorkContext workContext)
         {
             var existSeo = base.FindEntityBySeoPath(seoPath, workContext);
-            if (existSeo != null && (existSeo.ObjectType == "CatalogProduct" || existSeo.ObjectType == "Page"))
+            if (existSeo != null && (existSeo.ObjectType == "CatalogProduct" || existSeo.ObjectType == "Page" || existSeo.SeoPath.Equals("arenda", StringComparison.InvariantCultureIgnoreCase)))
             {
                 return existSeo;
             }

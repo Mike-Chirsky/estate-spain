@@ -413,6 +413,7 @@
     <Content Include="App_Data\Themes\es\assets\images\about_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\arenda-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\bg-pattern.png" />
+    <Content Include="App_Data\Themes\es\assets\images\blog_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-s.jpg" />
@@ -421,6 +422,7 @@
     <Content Include="App_Data\Themes\es\assets\images\costa-de-sol.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-dorada-map.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\dict_city_header.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\handbook-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\catalonia.jpg" />
@@ -434,13 +436,17 @@
     <Content Include="App_Data\Themes\es\assets\images\index\maresme.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\logo.png" />
     <Content Include="App_Data\Themes\es\assets\images\mortgage-preview.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\news-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\news_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\notfound.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\opros-header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\parthners_slide_1.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\parthners_slide_2.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\parthner_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\reviews-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\style-blog-preview.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\style_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_icon_male.png" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_img_women.png" />
@@ -537,8 +543,8 @@
     <Content Include="App_Data\Themes\es\snippets\blog\blog-header-image.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-header-text.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-text.liquid" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\reviews\reviews.md" />
-    <Content Include="App_Data\cms-content\Pages\demo\blogs\handbook\handbook.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\obzory\obzory.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\info\info.md" />
     <Content Include="App_Data\Themes\es\assets\downloads\Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-category.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\handbook-page.liquid" />
@@ -552,6 +558,8 @@
     <Content Include="App_Data\Themes\es\snippets\static\welcome-email01.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\goroda-ispanii.md" />
     <Content Include="App_Data\cms-content\Pages\demo\about.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\blogs\blog\blog.md" />
+    <None Include="App_Data\cms-content\Pages\demo\blogs\style\style.md" />
     <None Include="App_Data\cms-content\Pages\demo\opros.md" />
     <Content Include="App_Data\Themes\es\snippets\static\opros.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\thankyou.md" />
@@ -577,6 +585,7 @@
     <Content Include="App_Data\Themes\es\snippets\menu\regions-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\menu\footer-menu.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-page.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

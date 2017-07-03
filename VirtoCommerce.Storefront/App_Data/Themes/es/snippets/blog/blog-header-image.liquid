@@ -10,4 +10,10 @@
     {%- if blog.handle == 'info' -%}
         {{- 'images/handbook_blog_header_img.jpg' | asset_url -}}
     {%- endif -%}
+    {%- if blog.handle == 'blog' -%}
+        {{- 'images/blog_blog_header_img.jpg' | asset_url -}}
+    {%- endif -%}
+    {%- if blog.handle == 'style' -%}
+        {{- 'images/style_blog_header_img.jpg' | asset_url -}}
+    {%- endif -%}
 {%- endif -%}

@@ -1,38 +1,42 @@
-﻿
-  <div class="col-xs-12 col-md-12 breadcrumb_container">
-    {% include 'breadcrumb' %} 
+﻿<div class="col-xs-12 col-md-12 breadcrumb_container">
+  {% include 'breadcrumb' %} 
+</div>
+{%- if from_filter == true and (collection_type == "region" or (collection_type == "type" and city_product == null and region_product == null)) -%}
+  <div class="row">
+    <h2 class="text-center">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
   </div>
-  {%- if from_filter == true and (collection_type == "region" or (collection_type == "type" and city_product == null and region_product == null)) -%}
-    <div class="row">
-      <h2 class="text-center">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
-    </div>
-    {% include 'product-list' %}
-  {%endif%}
+  {% include 'product-list' %}
+{%endif%}
 
-  {% include 'headers/header-about' %}
-  {%- if collection_type == 'region' or collection_type == 'type' -%}
-  {% include 'headers/region-header' %}
-  {%- endif -%}
-  
+{% if collection.handle != 'arenda' %}
+{% include 'headers/header-about' %}
+{% endif %}
+{%- if collection_type == 'region' or collection_type == 'type' -%}
+{% include 'headers/region-header' %}
+{%- endif -%}
+
+{% if collection.handle != 'arenda' %}
   {% include 'headers/header-name' %}
+{% endif %}
 
-  {%- if collection_type == 'city' -%}
-    {% include 'headers/city-header' %}
-  {%- endif -%}
-  
-  {%- if collection_type == 'region' or collection_type == 'type' -%}
-    {% include 'market-block', collection.products %} 
-  {%- endif -%}
-  
-  {%- if collection_type == 'city' or (collection_type == 'type' and (region_product or city_product))  -%}
-    <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
-    {% include 'product-list' %}
-  {%endif%}
+{%- if collection_type == 'city' -%}
+  {% include 'headers/city-header' %}
+{%- endif -%}
 
-  {%- if collection_type == 'region' or collection_type == 'type'-%}
-    {% include 'footer/region' %}
-  {%- endif -%}
+{%- if collection_type == 'region' or collection_type == 'type' -%}
+  {% include 'market-block', collection.products %} 
+{%- endif -%}
 
-  {% include 'footer/about' %}
-  {% include 'footer/contact-us' %}
-  {% include 'footer/request-call' %}
+{%- if collection_type == 'city' or collection.handle == 'arenda' or (collection_type == 'type' and (region_product or city_product))  -%}
+  <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
+  {% include 'product-list' %}
+{%endif%}
+
+{%- if collection_type == 'region' or collection_type == 'type'-%}
+  {% include 'footer/region' %}
+{%- endif -%}
+{% if collection.handle != 'arenda' %}
+{% include 'footer/about' %}
+{% endif %}
+{% include 'footer/contact-us' %}
+{% include 'footer/request-call' %}

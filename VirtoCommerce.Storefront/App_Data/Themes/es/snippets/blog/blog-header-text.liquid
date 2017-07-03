@@ -13,4 +13,7 @@
         <h1 class="blog-header">{{'blog.handbook.header' | t }}</h1>
         <h2 class="blog-header">{{'blog.handbook.header1' | t }}</h1>
     {%- endif -%}
+    {%- if blog.handle == 'blog' -%}
+        <h1 class="blog-header">{{ 'blog.blog.header' | t }}<h1>
+    {%- endif -%}
 {%- endif -%}

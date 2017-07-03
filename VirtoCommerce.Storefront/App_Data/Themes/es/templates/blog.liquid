@@ -2,7 +2,9 @@
     {% include 'breadcrumb' %}
 </div>
 {%- include 'blog/blog-text' -%}
-{% if blog.handle != 'info' %}
+{% if blog.handle == 'blog' %}
+  {% include 'blog/blog-page' %}
+{% elseif blog.handle != 'info' %}
   {% paginate blog.articles by 36 %}
 
   <div class="row">
@@ -17,6 +19,7 @@
     {% endif %}
   </div>
   {% endpaginate %}
+
 {% else %}
   {% include 'blog/handbook-page' %}
 {% endif %}
