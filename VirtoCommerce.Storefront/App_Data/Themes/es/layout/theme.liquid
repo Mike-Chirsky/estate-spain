@@ -225,20 +225,8 @@
                <div id="first" class="widget-area col-md-3 ">
                   <ul class="xoxo">
                     <li id="contact_widget-1" class="widget-container contact_sidebar">
-                        <h4>{{ 'footer.contacts' | t | upcase }}</h4>
-                        <div class="contact_sidebar_wrap">
-                           <p class="widget_contact_addr">
-                              <i class="fa fa-building-o"></i>3755 Commercial St SE Salem, Corner with Sunny Boulevard, 3755 Commercial OR 97302
-                           </p>
-                        </div>
+                        <h4><i class="fa fa-building-o"></i> {{ 'footer.contacts' | t }}</h4>
                      </li>   
-                     <li class="widget-container contact_sidebar">
-                        <div class="contact_sidebar_wrap">
-                           <p class="contact-sidebar-call-back">
-                              <input type="submit" class="wpresidence_button"  value="{{ 'request-form.callback' | t | upcase }}"/>
-                           </p>
-                        </div>
-                     </li>
                      <li>
                         <div class="contact_sidebar_wrap">
                             <p class="widget_contact_phone">
@@ -247,6 +235,7 @@
                             <p class="widget_contact_fax">
                                 <i class="fa fa-print"></i>(305) 555-4446
                             </p>
+                            <p>{{ 'footer.work-time' | t }}</p>
                         </div>
                      </li>
                      <li id="social_widget-1" class="widget-container social_sidebar">
@@ -258,21 +247,27 @@
                            <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
                         </div>
                      </li>
+                     <li class="widget-container contact_sidebar">
+                        <div class="contact_sidebar_wrap">
+                           <p class="contact-sidebar-call-back">
+                              <p>{{ 'footer.office' | t }}</p>
+                              <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url }}" target="_blank" class="wpresidence_button gray">{{ 'footer.download' | t }}</a>
+                           </p>
+                        </div>
+                     </li>
                   </ul>
                </div>
                <!-- #first .widget-area -->
                <div id="second" class="widget-area col-md-3">
                   <ul class="xoxo">
-                     
+                     {% include 'menu/footer-menu' %}
                   </ul>
                </div>
                <!-- #second .widget-area -->
                <div id="third" class="widget-area col-md-3">
                   <div class="textwidget">
                      <ul class="xoxo">
-                        {% for item in collections %}
-                        <li><a href="{{ item.url | absolute_url }}"> {{ item.title }}</a></li>
-                        {% endfor %}
+                        {% include 'menu/footer-menu' %}
                      </ul>
                   </div>
                </div>
@@ -305,6 +300,14 @@
                             <p>
                                 {{ 'subscribe.footer2' | t }}
                             </p>
+                            <p>
+                                {{ 'subscribe.license' | t }}
+                            </p>
+                        </li>
+                        <li class="subscribe-footer">
+                            <p>
+                                {{ 'subscribe.license' | t }}
+                            </p>
                         </li>
                      </ul>
                   </div>
@@ -312,6 +315,9 @@
                <!-- #fourth .widget-area -->
             </div>
             <div class="sub_footer">
+                <div class="col-md-4 text-center">2017 &copy; | Estate Spain</div>
+                <div class="col-md-4 text-center"><a href="">{{ 'footer.user-accept' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="">{{ 'footer.user-personal' | t }}</a></div>
+                <div class="col-md-4"><a href="/parthners">{{ 'footer.parthners' | t }}&nbsp;&nbsp;&nbsp;<a href="/about">{{ 'footer.about' | t }}</a></div>
             </div>
          </footer>
       </div>

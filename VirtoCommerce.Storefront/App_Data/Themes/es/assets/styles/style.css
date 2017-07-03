@@ -8056,9 +8056,9 @@ div.comment {
 
 /*=social_sidebar_internal
 -------------------------------------------------*/
-.social_sidebar{
+/*.social_sidebar{
     margin-bottom: 18px;
-}
+}*/
 
 .social_sidebar_internal img{
     margin: 0px 9px 9px 0px;
@@ -8071,9 +8071,9 @@ div.comment {
 
 #colophon .social_sidebar_internal a,
 #primary .social_sidebar_internal a {
-    width: 41px;
-    height: 41px;
-    padding: 11px 0px;
+    width: 35px;
+    height: 35px;
+    padding: 7px 0px;
     background-color: #f0f0f0;
     margin: 0px 10px 10px 0px;
     text-align: center;

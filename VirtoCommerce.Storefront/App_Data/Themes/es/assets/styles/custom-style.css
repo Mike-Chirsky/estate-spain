@@ -1414,3 +1414,13 @@ h2.blog-header
 {
     color: #7f7f7f;
 }
+.wpresidence_button.gray
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #e3e3e3 !important; 
+}
+.wpresidence_button.gray:hover
+{
+    color:#fff !important;
+}

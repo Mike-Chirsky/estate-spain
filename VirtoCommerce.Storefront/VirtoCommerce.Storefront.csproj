@@ -576,6 +576,7 @@
     <Content Include="App_Data\Themes\es\snippets\menu\realty-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\menu\regions-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter-mobile.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\menu\footer-menu.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
