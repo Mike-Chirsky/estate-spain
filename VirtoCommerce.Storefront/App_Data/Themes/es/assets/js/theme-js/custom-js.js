@@ -55,7 +55,10 @@ function getTermsString(rootElement) {
     var key = rootElement + " input";
     $.each(jQuery(key), function (index, item) {
         if (jQuery(item).val() && jQuery(item).val() != "*" && jQuery(item).attr("data-ignore") === undefined) {
-            queryString += jQuery(item).attr("property-name") + ":" + jQuery(item).val() + ";";
+            var propAttr = jQuery(item).attr("property-name");
+            if (propAttr && propAttr != '') {
+                queryString += jQuery(item).attr("property-name") + ":" + jQuery(item).val() + ";";
+            }
         }
     });
 

@@ -681,7 +681,7 @@
         "about": "Об агентстве",
         "contacts": "Контакты",
         "contact-us-header":"Интересует недвижимость в Испании? Свяжитесь с нами, мы расскажем подробнее!",
-        "office": "Центральный офис: +34 627 713 505 - Calle Cervantes 50, Rojales, Cuidad Quesada, Alicante, 03170, Испания",
+        "office": "Центральный офис: <a href=\"tel:+34627713505\">+34 627 713 505</a> - Calle Cervantes 50, Rojales, Cuidad Quesada, Alicante, 03170, Испания",
         "work-time": "Рабочие время: ПН-ПТ с 10:00 до 20:00(время МСК)",
         "download": "Скачать справочник покупателя",
         "user-accept": "Пользовательское соглашение",

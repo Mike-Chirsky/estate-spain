@@ -201,7 +201,7 @@ function formatPrice(price) {
 }
 {% endcomment %}
    jQuery("#send-main-filter").click(function () {
-       var termStr = getTermsString();
+       var termStr = getTermsString('#main-filter-controls');
        var location = '{{'/' | full_url }}' + getRequestSeoPath();
 		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
    });

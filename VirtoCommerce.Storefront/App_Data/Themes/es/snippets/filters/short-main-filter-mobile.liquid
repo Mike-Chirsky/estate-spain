@@ -28,7 +28,7 @@
                </div>
             </div>
             <div class="col-md-3">
-               <button id="send-main-filter" class="wpresidence_button">
+               <button id="send-main-filter-mobile" class="wpresidence_button">
                {% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
                <span id="count-objects">
                {{ 'filter.show-result' | t }} 
@@ -41,3 +41,10 @@
       </div>
    </div>
 </div>
+<script>
+    jQuery("#send-main-filter-mobile").click(function () {
+       var termStr = getTermsString('#main-filter-controls-mobile');
+       var location = '{{'/' | full_url }}' + getRequestSeoPath();
+		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+   });
+</script>
