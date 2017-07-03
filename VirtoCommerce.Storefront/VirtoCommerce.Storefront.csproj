@@ -412,6 +412,7 @@
     <Content Include="App_Data\Themes\es\assets\css-images\yahoo_login_favorite.png" />
     <Content Include="App_Data\Themes\es\assets\images\about_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\arenda-preview.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\arenda_category_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\bg-pattern.png" />
     <Content Include="App_Data\Themes\es\assets\images\blog_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />

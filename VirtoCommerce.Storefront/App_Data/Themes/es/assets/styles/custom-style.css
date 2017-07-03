@@ -889,6 +889,10 @@ h2.blog-header
 .blog-header-container{
     top: 130px;
 }
+.blog-header-container h1
+{
+    color: #fff;
+}
 
 .blog-preview-text{
     padding-bottom: 15px;
