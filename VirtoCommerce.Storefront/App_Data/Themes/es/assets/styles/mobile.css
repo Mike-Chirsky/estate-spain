@@ -2,7 +2,43 @@
 {
 	max-height: 55px;
 }
+/* displays */
+.display-mobile{
+    display: none;
+}
+.no-display-mobile{
+    display: block;
+}
 
+.list-image-gellery
+{
+	display: block;
+}
+.mobile-list-image
+{
+	display: none;
+}
+.mobile-list-image ul
+{
+	margin: 0px;
+	list-style: none;
+}
+.mobile-list-image li
+{
+	margin-bottom: 10px;
+}
+.mobile-list-image ul img
+{
+	width: 100%;
+}
+.display-price-normal
+{
+	display: block;
+}
+.display-price-top
+{
+	display: none;
+}
 @media (max-width: 1024px) {
 	.static
 	{
@@ -25,6 +61,53 @@
 	{
 		padding: 0 15px;
 	}
+	.display-mobile{
+        display: block;
+    }
+    .no-display-mobile{
+        display: none;
+    }
+    .container.content_wrapper
+    {
+        padding: 0px;
+    }
+    .product-preview
+    {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .product-preview .preview-item
+    {
+        width: 100%;
+    }
+	.property-panel .panel-body
+	{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.sub_footer *
+	{
+		text-align: center;
+	}
+	.agent_unit {
+		width: 50%;
+		height: 527.5px;
+	}
+	.agent_contanct_form_sidebar .agent_contanct_form
+	{
+		margin-top: 0px;
+		margin-left: 5px;
+		width: 48.99999%;
+		height: 527.5px;
+	}
+	#footer-widget-area
+	{
+		display: flex;
+	}
+	.widget-area
+	{
+		width: 50%;
+	}
 }
 
 @media (max-width: 800px) {
@@ -40,6 +123,24 @@
 	}
 }
 
+@media (max-width: 664px)
+{
+	.agent_unit {
+		width: 100%;
+		height: auto;
+	}
+	.agent_unit .agent_unit_social
+	{
+		position: relative;
+	}
+	.agent_contanct_form_sidebar .agent_contanct_form
+	{
+		margin-top: 30px;
+		margin-left: 0px;
+		width: 100%;
+	}
+}
+
 @media (max-width: 640px) {
 	.slider-information
 	{
@@ -48,11 +149,6 @@
 }
 
 @media (max-width: 600px) {
-	.notice_area
-	{
-		height: 150px;
-	}
-
 	.prop_social
 	{
 		float: left;
@@ -60,13 +156,42 @@
 		position: static;
 		width: 100%;
 	}
-
-	.product-preview
+	.notice_area
 	{
+		height: 150px;
+	}
+	.display-price-normal{
 		display: none;
+	}
+	.display-price-top{
+		display: block;
+	}
+	.display-price-top .price_area{
+		float: none;
+		text-align: center;
 	}
 }
 
+@media(max-width: 500px)
+{
+	.entry-title.entry-prop
+	{
+		text-align: center;
+	}
+	.price_area
+	{
+		width: 100%;
+		text-align: center;
+	}
+	.list-image-gellery
+	{
+		display: none;
+	}
+	.mobile-list-image
+	{
+		display: block;
+	}
+}
 @media (max-width: 480px) {
 	.static .form
 	{
@@ -83,4 +208,12 @@
 	{
 		width: 100%;
 	}
+	#footer-widget-area
+	{
+		display: block;
+	}
+	.widget-area
+	{
+		width: 100%;
+	}	
 }

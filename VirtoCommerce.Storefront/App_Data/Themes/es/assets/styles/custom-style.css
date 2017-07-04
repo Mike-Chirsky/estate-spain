@@ -493,20 +493,20 @@ body{
     padding-right: 0px;
 }
 
-.contact-us-footer,
+/*.contact-us-footer,
 .about-footer
 {
     margin-top: 30px;
-}
+}*/
 
-.row.contact-us-footer .col-md-9 {
+/*.row.contact-us-footer .col-md-9 {
     padding: 0px;
 }
 
 .row.contact-us-footer .row{
     padding: 0px;
     margin: 0px;
-}
+}*/
 
 .row.about-footer .col-md-9
 {
@@ -1440,4 +1440,7 @@ h2.blog-header
 .description-header.blog-header-container
 {
     padding: 0px;
+}
+.margin-top-0{
+    margin-top: 0px !important;
 }

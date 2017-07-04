@@ -1,5 +1,4 @@
-﻿
-    <div class="header_media">
+﻿    <div class="header_media">
         <div class="product-preview">
             {% for image in product.images %}
             {% if forloop.index > 3 %}
@@ -20,57 +19,90 @@
         <h1 class="entry-title entry-prop font-size-30">
            {{ product.custom_title }}
         </h1>
-        <span class="price_area font-size-30"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
         <div class="single-content listing-content">
             <div class="notice_area">
-                <div class="property_categs">
-                  <div>
+				<div class="display-price-top">
+					<div class="price_area font-size-30"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </div>
+					<div class="property_categs">
+					  <div>
+						{% for property in product.properties %}
+						{% if property.name == 'region' %}
+						{{ property.value}}
+						<span class="divider" >›</span>
+						{%endif%}
+						{% endfor %}
 
-                    {% for property in product.properties %}
-                    {% if property.name == 'region' %}
-                    {{ property.value}}
-                    <span class="divider" >›</span>
-                    {%endif%}
-                    {% endfor %}
+						{% for property in product.properties %}
+						{% if property.name == 'district' %}
+						{{ property.value}}
+						<span class="divider" >›</span>
+						{%endif%}
+						{% endfor %}
+						
+						{% for property in product.properties %}
+						{% if property.name == 'city' %}
+						{{ property.value}}
+						{%endif%}
+						{% endfor %}
+					  </div>
+					  <div>
+						{% for property in product.properties %}
+						{% if property.name == 'h2' %}
+						{{ property.value}}
+						{%endif%}
+						{% endfor %}
+						
+						{% for property in product.properties %}
+						{% if property.name == 'dealtype' %}
+						<span class="deal-type">
+						{{ property.value}}
+						</span>
+						{%endif%}
+						{% endfor %}
+					  </div>
+					</div>
+				</div>
+				<div class="display-price-normal">
+					<div class="property_categs">
+					  <div>
+						{% for property in product.properties %}
+						{% if property.name == 'region' %}
+						{{ property.value}}
+						<span class="divider" >›</span>
+						{%endif%}
+						{% endfor %}
 
-                    {% for property in product.properties %}
-                    {% if property.name == 'district' %}
-                    {{ property.value}}
-                    <span class="divider" >›</span>
-                    {%endif%}
-                    {% endfor %}
-                    
-                    {% for property in product.properties %}
-                    {% if property.name == 'city' %}
-                    {{ property.value}}
-                    {%endif%}
-                    {% endfor %}
-                  </div>
-                  <div>
-                    {% for property in product.properties %}
-                    {% if property.name == 'h2' %}
-                    {{ property.value}}
-                    {%endif%}
-                    {% endfor %}
-                    
-                    {% for property in product.properties %}
-                    {% if property.name == 'dealtype' %}
-                    <span class="deal-type">
-                    {{ property.value}}
-                    </span>
-                    {%endif%}
-                    {% endfor %}
-                  </div>
-                </div>
-                <!--<div id="add_favorites" class="isnotfavorite" data-postid="139">add to favorites</div>
-                <div class="download_pdf"></div>-->
-                <div class="prop_social">
-                    <a href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl={{ product.url | full_url }}" target="blank" class="share_ok"><i class="fa fa-odnoklassniki fa-2"></i></a>
-                    <a href="https://vk.com/share.php?url={{ product.url | full_url }}" target="blank" class="share_vk"><i class="fa fa-vk fa-2"></i></a>
-                    <a href="http://www.facebook.com/sharer.php?u={{ product.url | full_url }}" target="_blank" class="share_facebook"><i class="fa fa-facebook fa-2"></i></a>
-                    <a href="http://twitter.com/home?status={{ product.url | full_url }}" class="share_tweet" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
-                    <a href="https://plus.google.com/share?url={{ product.url | full_url }}" target="_blank" class="share_google"><i class="fa fa-google-plus fa-2"></i></a>
-                </div>
+						{% for property in product.properties %}
+						{% if property.name == 'district' %}
+						{{ property.value}}
+						<span class="divider" >›</span>
+						{%endif%}
+						{% endfor %}
+						
+						{% for property in product.properties %}
+						{% if property.name == 'city' %}
+						{{ property.value}}
+						{%endif%}
+						{% endfor %}
+					  </div>
+					  <div>
+						{% for property in product.properties %}
+						{% if property.name == 'h2' %}
+						{{ property.value}}
+						{%endif%}
+						{% endfor %}
+						
+						{% for property in product.properties %}
+						{% if property.name == 'dealtype' %}
+						<span class="deal-type">
+						{{ property.value}}
+						</span>
+						{%endif%}
+						{% endfor %}
+					  </div>
+					</div>
+					<span class="price_area font-size-30"><span class="price_label price_label_before"></span>{% include 'price' with product.price %} </span>
+				</div>
             </div>
             <div class="wpestate_property_description">
                 <p>{{ product.title }}</p>
@@ -104,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
+            <div id="carousel-listing" class="carousel slide post-carusel list-image-gellery" data-ride="carousel" data-interval="false">
                 <div>
                 <!-- Wrapper for slides -->
                     <div class="carousel-inner">
@@ -141,10 +173,17 @@
                     {% else %}
                     <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
                     {% endif %}
-                        <img src="{{ image.src | img_url: 'small' }}" alt="slider">
+                        <img src="{{ image.src | img_url: 'small' }}" alt="">
                     </li>
                     {% endfor %}
                 </ol>
+            </div>
+            <div class="mobile-list-image">
+                <ul>
+                    {%- for image in product.images -%}
+                        <li><img src="{{ image.src | img_url: 'large' }}" alt=""></li>
+                    {%- endfor -%}
+                </ul>
             </div>
             {% for property in product.properties %}
                 {% if property.name == 'geopoints' %}
@@ -210,36 +249,35 @@
                     </div>
                 </div>
             </div>{% endcomment %}
-            
-            <div class="agent_contanct_form addition-form">
+            {%- if product.small_description -%}
+            <div class="panel-group property-panel" id="accordion_small_description">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion_prop_full_details" href="#collapseSmallDescription">
+                            <h4 class="panel-title" id="prop_det">{{ 'product.small-description' | t }}</h4>
+                        </a>
+                    </div>
+                    <div id="collapseSmallDescription" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            {{ product.small_description }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%- endif -%}
+            <div class="agent_contanct_form margin-top-0">
+                <div class="no-display-mobile">
                 {% include 'footer/contact-us' %}
+                </div>
                 {% include 'footer/request-call' %}
             </div>
         </div>
         <!-- end single content -->
     </div>
     <!--Side bar-->
-    <div class="col-xs-12 col-md-3 widget-area-sidebar" id="primary">
+    <div class="col-xs-12 col-md-3 widget-area-sidebar">
         <div class="agent_contanct_form_sidebar">
-            <div class="agent_unit" data-link="">
-                <div class="agent-unit-img-wrapper">
-                    <div class="prop_new_details_back"></div>
-                    <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
-                </div>
-                <div class="">
-                    <h4> <a href="">Maria Barlow</a></h4>
-                    <div class="agent_position">sales executive</div>
-                    <div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div>
-                    <div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div>
-                    <div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div>
-                    <div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
-                </div>
-                <div class="agent_unit_social">
-                    <div class="social-wrapper">
-                        <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i class="fa fa-pinterest"></i></a>
-                    </div>
-                </div>
-            </div>
+            {% include 'contact' %}
             <!-- </div>    -->
             <div class="agent_contanct_form ">
                 <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
@@ -268,7 +306,7 @@
                     {% endif %}
                     <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
                     {%- if template contains 'product' -%}
-                    {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
+                    {{- 'request-form.message-object' | t: name: product.custom_title -}}
                     {%- else -%}
                     {{- 'request-form.message' | t -}}
                     {%- endif -%}
@@ -341,7 +379,7 @@
                     {% endif %}
                     <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
                     {%- if template contains 'product' -%}
-                    {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
+                    {{- 'request-form.message-object' | t: name: product.custom_title -}}
                     {%- else -%}
                     {{- 'request-form.message' | t -}}
                     {%- endif -%}

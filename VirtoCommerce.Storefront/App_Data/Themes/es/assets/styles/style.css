@@ -3497,7 +3497,7 @@ input.form-control::-moz-placeholder {
     padding: 0px;
     margin-bottom: 17px;
     font-size: 12px; 
-    margin-left:0px;
+    margin-left:15px;
 }
 .breabcrumb_dashboard {
     display: none;
@@ -5770,20 +5770,20 @@ listing_actions a{
     float:left;
     padding-right: 0px;
     padding-left: 0px;  
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     border: 1px solid #dde4e9;
     border-radius: 3px;
     min-height: 352px;
     position: relative;
     overflow: hidden;
     background-color: #fff;
-    max-width: 525px;
+    /*max-width: 525px;*/
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
     cursor: pointer;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 }
 
 #primary .agent_unit{
@@ -7267,7 +7267,7 @@ iframe .player .video-wrapper{
 .price_area {
     color: #FF9800;
     font-size: 22px;
-    padding: 0px 0px 3px 0px;
+    padding: 30px 0px 3px 0px;
     float: right;
 }
 

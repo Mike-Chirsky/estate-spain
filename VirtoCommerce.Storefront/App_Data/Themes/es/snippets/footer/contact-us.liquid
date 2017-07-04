@@ -1,20 +1,7 @@
 ﻿<div class="row contact-us-footer">
    {% if product == null %}
    <div class="col-md-3">
-      <div class="agent_unit" data-link="">
-         <div class="agent-unit-img-wrapper">
-            <div class="prop_new_details_back"></div>
-            <img width="525" height="328" src="{{ 'images/women.jpg' | asset_url }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ 'images/women.jpg' | asset_url }}">
-         </div>
-         <div class="">
-            <h4> <a href="">Maria Barlow</a></h4>
-            <div class="agent_position">sales executive</div>
-            <div class="agent_detail"><i class="fa fa-phone"></i>(305) 555-4555</div>
-            <div class="agent_detail"><i class="fa fa-mobile"></i>(305) 555-4555</div>
-            <div class="agent_detail"><i class="fa fa-envelope-o"></i>maria@wpresidence.net</div>
-            <div class="agent_detail"><i class="fa fa-skype"></i>maria.barlow</div>
-         </div>
-      </div>
+      {% include 'contact' %}
    </div>
    {% endif %}
    {% if product == null %}
@@ -23,9 +10,9 @@
    <div class="col-md-12" >
    {% endif %}
       {% if template contains 'product' %}
-        <h4>{{ 'request-form.header2' | t }}</h4>
+        <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
       {% else %}
-        <h4>{{ 'request-form.header3' | t }}</h4>
+        <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
       {% endif %}
       <div class="spinner" id="contact-us-form-spinner" style="display: none;">
             <div class="rect1"></div>
@@ -62,7 +49,7 @@
          <div class="col-md-12">
             <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
             {%- if template contains 'product' -%}
-                {{- 'request-form.message-object' | t : sku: product.first_available_variant.sku -}}
+                {{- 'request-form.message-object' | t : name: product.custom_title -}}
             {%- else -%}
                 {{- 'request-form.message' | t -}}
             {%- endif -%}
@@ -70,15 +57,17 @@
          </div>
       </div>
       <div class="row">
-         <div class="col-md-10">
-            <span class="license light-text"> {{ 'request-form.license' | t }} </span>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-8">
+                    <span class="license light-text"> {{ 'request-form.license' | t }} </span>
+                </div>
+                <div class="col-md-4">
+                    <button class="wpresidence_button form-control" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                </div>
+            </div>
          </div>
-      </div>
-      <div class="row">
-         <div class="col-md-12">
-            <button class="wpresidence_button form-control" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
-         </div>
-      </div>
+        </div>
       </div>
    </div>
 </div>

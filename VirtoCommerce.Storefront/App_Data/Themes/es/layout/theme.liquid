@@ -220,9 +220,9 @@
                 </div>
             </div>
         </div>
-         <footer id="colophon" role="contentinfo" class="  footer_back_repeat  ">
-            <div id="footer-widget-area" class="row ">
-               <div id="first" class="widget-area col-md-3 ">
+         <footer id="colophon" role="contentinfo" class="footer_back_repeat">
+            <div id="footer-widget-area" class="row">
+               <div id="first" class="widget-area col-md-3">
                   <ul class="xoxo">
                     <li id="contact_widget-1" class="widget-container contact_sidebar">
                         <h4><i class="fa fa-building-o"></i> {{ 'footer.contacts' | t }}</h4>
@@ -254,20 +254,20 @@
                         <div class="contact_sidebar_wrap">
                            <p class="contact-sidebar-call-back">
                               <p>{{ 'footer.office' | t }}</p>
-                              <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url }}" target="_blank" class="wpresidence_button gray">{{ 'footer.download' | t }}</a>
+                              <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url }}" target="_blank" class="wpresidence_button text-center gray">{{ 'footer.download' | t }}</a>
                            </p>
                         </div>
                      </li>
                   </ul>
                </div>
                <!-- #first .widget-area -->
-               <div id="second" class="widget-area col-md-3">
+               <div id="second" class="widget-area col-md-3 no-display-mobile">
                   <ul class="xoxo">
                      {% include 'menu/footer-menu' %}
                   </ul>
                </div>
                <!-- #second .widget-area -->
-               <div id="third" class="widget-area col-md-3">
+               <div id="third" class="widget-area col-md-3 no-display-mobile">
                   <div class="textwidget">
                      <ul class="xoxo">
                         {% include 'menu/footer-menu' %}

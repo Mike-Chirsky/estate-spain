@@ -513,7 +513,6 @@
     <Content Include="App_Data\Themes\es\assets\js\theme-js\placeholders.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\position.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\property.js" />
-    <Content Include="App_Data\Themes\es\assets\js\theme-js\retina-1.1.0.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slick.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\widget.js" />

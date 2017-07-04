@@ -1,6 +1,6 @@
 <ul class="sub-menu wpestate_megamenu_col_4">
     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_4 wpestate_megamenu_first_element  mega_menu_border ">
-        <div class="megamenu-title"><a href="#">{{ 'menu.interesting.cat' | t }}</a></div>
+        <div class="megamenu-title">{{ 'menu.interesting.cat' | t }}</div>
         <ul class="sub-menu wpestate_megamenu_col_4">
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/news">Дайджейст новостей</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/obzory">Обзоры испанских городов </a></li>
@@ -9,7 +9,7 @@
         </ul>
     </li>
     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_4   ">
-        <div class="megamenu-title"><a href="#">{{ 'menu.interesting.cat2' | t }}</a></div>
+        <div class="megamenu-title">{{ 'menu.interesting.cat2' | t }}</div>
         <ul class="sub-menu wpestate_megamenu_col_4">
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/info/obrazovanie-v-ispanii">Образование в Испании</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/obzory/leto-v-ispanii-raspisanie-sobytij-2017">Испанские праздники</a></li>
@@ -17,36 +17,29 @@
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/style">Дизайн и интерьер</a></li>
         </ul>
     </li>
-    {% comment %}
-    <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
-        <div class="megamenu-widgets-container">
-            <ul>
-                <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
-                    <div class="textwidget">
-                        <div class="megamenu-demos">
-                            <a href="/info/skloko-mozhno-zarabotat-na-arende-ispania"><img src="{{ 'images/arenda-preview.jpg' | assets_url }}" alt="demo">
-                            </a>
-                        </div>
-                        <a href="/info/skloko-mozhno-zarabotat-na-arende-ispania">Можно ли заработать на аренде</a> 
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </li>
-    <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
-        <div class="megamenu-widgets-container">
-            <ul>
-            <li id="text-12" class="widget widget-container sbg_widget blog2 widget_text">
-                <div class="textwidget">
-                    <div class="megamenu-demos">
-                        <a href="/info/ipoteka-v-ispanii-dlya-rossiyan"><img src="{{'images/mortgage-preview.jpg' | assets_url}}" alt="demo">
-                        </a>
-                    </div>
-                    <a href="/info/ipoteka-v-ispanii-dlya-rossiyan">Все про ипотеку</a> 
+    {%- for blog in blogs -%}
+        {%- if blog.handle != 'blog' -%}
+            {%- continue -%}
+        {%- endif -%}
+        {%- for article in blog.article -%}
+            {%- if forloop.index > 2 -%}
+                {%- break -%}
+            {%- endif -%}
+            <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
+                <div class="megamenu-widgets-container">
+                    <ul>
+                        <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
+                            <div class="textwidget">
+                                <div class="megamenu-demos">
+                                    <a href="{{article.handle}}"><img src="{{ article.image_url | absolute_url }}" alt="{{article.title}}">
+                                    </a>
+                                </div>
+                                <a href="{{ article.handle }}">{{ article.title }}</a> 
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </li>
-            </ul>
-        </div>
-    </li>
-    {% endcomment %}
+        {%- endfor -%}   
+    {% endfor %}
 </ul>
