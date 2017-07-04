@@ -2227,11 +2227,11 @@
         box-sizing: border-box;
     }
     
-    #colophon #second ul,
+    /*#colophon #second ul,
     #colophon #third ul,
     #colophon #fourth ul{
         padding-top: 0px;
-    }
+    }*/
     
     #listing_ajax_container_agent.ajax12, .col-md-12 #listing_ajax_container.ajax12 {
     }

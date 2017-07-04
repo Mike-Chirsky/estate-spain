@@ -1444,3 +1444,11 @@ h2.blog-header
 .margin-top-0{
     margin-top: 0px !important;
 }
+.btn-std{
+    max-width: 240px;
+    float: none;
+}
+.user-text
+{
+    padding-top: 15px;
+}
