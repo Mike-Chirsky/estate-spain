@@ -1,0 +1,25 @@
+<div class="">
+    {%- for blog in blogs-%}
+        {%- if blog.handle == 'blog' -%}
+            {%- for article in blog.articles -%}
+                {%- assign blog_first_article = article -%}
+                {% break %}
+            {%- endfor -%}
+        {%- elseif blog.handle == 'news' -%}
+            {%- for article in blog.articles -%}
+                {%- if forloop.index > 2-%}
+                    {%- break -%}    
+                {%- endif -%}
+                {%- if forloop.index == 1 -%}
+                    {%- assign news_first_article = article -%}
+                {%- else -%}
+                    {%- assign news_two_article = article -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- endfor -%}
+
+    {%- include 'blog/blog-item', article: news_first_article -%}
+    {%- include 'blog/blog-item', article: blog_first_article -%}
+    {%- include 'blog/blog-item', article: news_two_article -%}
+</div>
