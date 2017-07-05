@@ -146,11 +146,10 @@
 	{
 		display: block;
 		overflow: hidden;
+		text-align: center;
 		width: 100%;
 	}
-
-	ul.pagination-custom-mobile,
-	ul.pagination-custom
+	ul.pagination-custom-mobile
 	{
 		margin: 0;
 	}
