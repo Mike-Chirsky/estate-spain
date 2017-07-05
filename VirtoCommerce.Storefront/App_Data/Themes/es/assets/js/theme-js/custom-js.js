@@ -367,12 +367,15 @@ jQuery(document).ready(function () {
     });
     jQuery("#request-callback-button").click(function () {
         slideToBlock("#callback-form");
+        jQuery(".mobilemenu-close").click();
     });
     jQuery("#contact-us-button").click(function () {
         slideToBlock("#contact-us-form");
+        jQuery(".mobilemenu-close").click();
     });
     jQuery("#contact-us-button-product").click(function () {
         slideToBlock("#show_contact", 0);
+        jQuery(".mobilemenu-close").click();
     });
     jQuery('.js-show-filters').on('click', function () {
         var self = $(this);
@@ -388,7 +391,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    if (window.location.href.indexOf("from_filter") > -1) {
+    if (window.location.href.indexOf("from_filter") > -1 || window.location.href.indexOf("page") > -1) {
         slideToBlock("#list-products");
     }
 
