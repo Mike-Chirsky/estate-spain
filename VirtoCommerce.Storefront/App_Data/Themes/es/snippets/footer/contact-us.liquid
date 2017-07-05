@@ -47,13 +47,7 @@
       </div>
       <div class="row">
          <div class="col-md-12">
-            <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
-            {%- if template contains 'product' -%}
-                {{- 'request-form.message-object' | t : name: product.custom_title -}}
-            {%- else -%}
-                {{- 'request-form.message' | t -}}
-            {%- endif -%}
-            </textarea>
+            <textarea cols="45" rows="11" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
          </div>
       </div>
       <div class="row">
@@ -63,7 +57,7 @@
                     <span class="license light-text"> {{ 'request-form.license' | t }} </span>
                 </div>
                 <div class="col-md-4">
-                    <button class="wpresidence_button form-control w400" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                    <button class="wpresidence_button form-control btn-std margin-auto" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
                 </div>
             </div>
          </div>

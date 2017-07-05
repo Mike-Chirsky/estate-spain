@@ -241,7 +241,7 @@ function setRelativeCheckbox(rootElement, value, isSet) {
 
 
 
-function loadSearchData(url, search, elements) {
+function loadSearchData(url, search, elements, listElement, rootElement) {
     if (!search || !url) {
         return;
     }
@@ -256,11 +256,19 @@ function loadSearchData(url, search, elements) {
                     jQuery(element + " .list").html('');
                     for (var i = 0; i < data.items.length; i++) {
                         var item = data.items[i];
-                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
+                        var infoRegion = "";
+                        var infoCity = "";
+                        if (item.regionName) {
+                            infoRegion = 'data-region="' + item.regionName + '"';
+                        }
+                        if (item.cityName) {
+                            infoCity = 'data-region="' + item.cityName + '"';
+                        }
+                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + '" ' + infoCity + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
                     }
                     jQuery.each(jQuery(element + " .list li"), function (index, item) {
                         jQuery(item).click(function () {
-                            selectSearchItem(item, elements);
+                            selectSearchItem(item, elements, listElement, rootElement);
                         });
                     });
                     jQuery(element + " .list").css("display", "block");
@@ -271,7 +279,7 @@ function loadSearchData(url, search, elements) {
     });
 }
 
-function selectSearchItem(item, elements) {
+function selectSearchItem(item, elements, listElements, rootElement) {
     elements.forEach(function (element) {
         jQuery(element + " .list").css("display", "none");
         jQuery(element + " input[type=text]").val(jQuery(item).attr("data-value"));
@@ -280,8 +288,8 @@ function selectSearchItem(item, elements) {
         jQuery(element + " input[type=hidden]").attr("data-city", jQuery(item).attr("data-city"));
         jQuery(element + " input[type=text]").addClass("selected");
     });
-    
-    getFoundResults();
+
+    getFoundResults(rootElement, listElements);
 }
 
 function sortBy(value) {
@@ -484,7 +492,7 @@ jQuery(document).ready(function () {
     // filter events
     $("#main-filter-controls #location-value").keyup(function (e) {
         if (e.which <= 90 && e.which >= 48) {
-            loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls");
         }
 
     });
@@ -500,7 +508,7 @@ jQuery(document).ready(function () {
     // mobile
     $("#main-filter-controls-mobile #location-value").keyup(function (e) {
         if (e.which <= 90 && e.which >= 48) {
-            loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls-mobile");
         }
 
     });

@@ -1,5 +1,7 @@
-﻿<div class="row about-footer">
+﻿{% if meta_info_product.seotext_down1 or meta_info_product.seotext_down2 or meta_info_product.seotext_down3 %}
+<div class="row about-footer">
     <div class="col-md-9">
+        
         <div class="about">
             {%- if meta_info_product.seotext_down1 -%}
             <div class="text">
@@ -21,20 +23,10 @@
             {%- endif -%}
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="link-list-footer">
-            <div class="row">
-                {{- meta_info_product.link_block_left -}}
-            </div>
-            <div class="row">
-                {{- meta_info_product.link_block_right -}}
-            </div>
-            <div class="row">
-                {{- meta_info_product.link_block_centr -}}
-            </div>
-        </div>
-        <div class="row banner">
+    <div class="col-md-3 no-display-mobile">
+        <div class="banner">
             Баннер
         </div>
     </div>
 </div>
+{% endif %}

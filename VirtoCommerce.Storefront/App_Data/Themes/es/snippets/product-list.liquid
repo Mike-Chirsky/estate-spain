@@ -1,38 +1,40 @@
-﻿<div class="row order">
-   <div class="listing_filters_head">
-      <div class="col-md-2 order-text" id="list-products">
-        {{ 'filter.order' | t }}
-      </div>
-      <div class="col-md-9 order-by">   
-        <div class="dropdown listing_filter_select">
-            <div data-toggle="dropdown" id="sortByPrice" class="filter_menu_trigger" aria-expanded="false"> 
-                {{ 'filter.price' | t }} 
-                <span>
-                    <a class="caret caret_filter top"></a>
-                    <a class="caret caret_filter bottom"></a>
-                </span>
+﻿<div class="order row">
+    <ul>
+        <li class="text">{{ 'filter.order' | t }}</li>
+        <li>
+            <div class="dropdown listing_filter_select">
+                <div data-toggle="dropdown" id="sortByPrice" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.price' | t }} 
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="dropdown listing_filter_select">
-            <div data-toggle="dropdown" id="sortBySquare" class="filter_menu_trigger" aria-expanded="false"> 
-                {{ 'filter.meters' | t }} 
-                <span>
-                    <a class="caret caret_filter top"></a>
-                    <a class="caret caret_filter bottom"></a>
-                </span>
+        </li>
+        <li>
+            <div class="dropdown listing_filter_select">
+                <div data-toggle="dropdown" id="sortBySquare" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.meters' | t }} 
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
             </div>
-        </div>
-        <div class="dropdown listing_filter_select order_filter">
-            <div data-toggle="dropdown" id="sortByDate" class="filter_menu_trigger" aria-expanded="false"> 
-                {{ 'filter.is-new' | t }}
-                <span>
-                    <a class="caret caret_filter top"></a>
-                    <a class="caret caret_filter bottom"></a>
-                </span>
+        </li>
+        <li>
+            <div class="dropdown listing_filter_select order_filter">
+                <div data-toggle="dropdown" id="sortByDate" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.is-new' | t }}
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
             </div>
-        </div>
-      </div>
-   </div>
+        </li>
+    </ul>
 </div>
 <div class="row product-list" >
     {% paginate collection.products by 36 %}

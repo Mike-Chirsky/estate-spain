@@ -136,6 +136,7 @@
                     </div>
                 </div>
             </div>
+            {% if product.images.size > 0 %}
             <div id="carousel-listing" class="carousel slide post-carusel list-image-gellery" data-ride="carousel" data-interval="false">
                 <div>
                 <!-- Wrapper for slides -->
@@ -185,6 +186,7 @@
                     {%- endfor -%}
                 </ul>
             </div>
+            {% endif %}
             {% for property in product.properties %}
                 {% if property.name == 'geopoints' %}
                     {% assign values = property.value | split: ','  %}
