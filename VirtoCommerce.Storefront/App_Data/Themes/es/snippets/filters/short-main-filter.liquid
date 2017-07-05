@@ -15,7 +15,7 @@
 	]; 
 </script>
 <div style="z-index: 10000">
-	<div class="main-filter-container clearfix" id="main-filter-controls-short">
+	<div class="main-filter-container clearfix" id="main-filter-controls">
 		<div class="col-md-6">
 			{% include 'filters/location' %}
 		</div>
@@ -96,7 +96,7 @@ function formatPrice(price) {
 }
 {% endcomment %}
    jQuery("#send-main-filter").click(function () {
-       var termStr = getTermsString('#main-filter-controls-short');
+       var termStr = getTermsString('#main-filter-controls');
        var location = '{{'/' | full_url }}' + getRequestSeoPath();
 		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
    });

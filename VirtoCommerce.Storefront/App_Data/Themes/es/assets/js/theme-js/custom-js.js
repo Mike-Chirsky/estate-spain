@@ -3,7 +3,12 @@
     {
         offest = 200;
     }
-    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - offest }, 500);
+    var el = jQuery(selector);
+    if (!el || !el.offset())
+    {
+        return false;
+    }
+    $('html, body').animate({ scrollTop: el.offset().top - offest }, 500);
     return false;
 }
 
