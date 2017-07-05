@@ -218,6 +218,7 @@
 ul.pagination-custom-mobile,
 ul.pagination-custom
 {
+    float: left;
     list-style: none;
     align-content: center;
     margin: 0 0 0 15px;
