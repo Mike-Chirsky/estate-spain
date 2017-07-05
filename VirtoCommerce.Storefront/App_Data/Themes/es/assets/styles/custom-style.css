@@ -1452,3 +1452,9 @@ h2.blog-header
 {
     padding-top: 15px;
 }
+
+button.wpresidence_button.m-button
+{
+    margin: 10px 5px 5px 5px;
+    width: 97%;
+}

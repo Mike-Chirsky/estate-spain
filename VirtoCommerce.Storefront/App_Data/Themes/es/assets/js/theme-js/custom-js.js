@@ -1,5 +1,9 @@
-﻿function slideToBlock(selector) {
-    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - 200 }, 500);
+﻿function slideToBlock(selector, offest) {
+    if (offest === undefined)
+    {
+        offest = 200;
+    }
+    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - offest }, 500);
     return false;
 }
 
@@ -353,6 +357,9 @@ jQuery(document).ready(function () {
     });
     jQuery("#contact-us-button").click(function () {
         slideToBlock("#contact-us-form");
+    });
+    jQuery("#contact-us-button-product").click(function () {
+        slideToBlock("#show_contact", 0);
     });
     jQuery('.js-show-filters').on('click', function () {
         var self = $(this);
