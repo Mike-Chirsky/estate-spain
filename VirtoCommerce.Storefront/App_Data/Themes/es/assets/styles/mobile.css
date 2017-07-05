@@ -145,6 +145,14 @@
 	.pagination-custom-mobile
 	{
 		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	ul.pagination-custom-mobile,
+	ul.pagination-custom
+	{
+		margin: 0;
 	}
 }
 @media (max-width: 800px) {
