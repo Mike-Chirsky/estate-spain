@@ -20,12 +20,12 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             _catalogSearchService = catalogSearchService;
         }
 
-        // GET: storefrontapi/market/{type}/{id}/{page}
+        // GET: storefrontapi/market/{type}/{id}/{page}/{pageSize}
         [HttpGet]
-        public ActionResult GetMarketPage(string type, string id, int page)
+        public ActionResult GetMarketPage(string type, string id, int page, int pageSize)
         {
             WorkContext.CurrentProductSearchCriteria.PageNumber = page;
-            WorkContext.CurrentProductSearchCriteria.PageSize = 3;
+            WorkContext.CurrentProductSearchCriteria.PageSize = pageSize;
             type = type.ToLower();
             switch (type)
             {
@@ -33,10 +33,10 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
                 case "city":
                 case "type":
                 case "main":
-                    SearchProduct(type, id, page);
+                    SearchProduct(type, id, page, pageSize);
                     return View("market-block/market-block-partial-product", "empty", WorkContext);
                 case "blog":
-                    SearchBlog(id, page);
+                    SearchBlog(id, page, pageSize);
                     return View("market-block/market-block-partial-blog", "empty", WorkContext);
                 default:
                     return null;
@@ -44,12 +44,12 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         
         }
 
-        private void SearchBlog(string id, int page)
+        private void SearchBlog(string id, int page, int pageSize)
         {
 
         }
 
-        private void SearchProduct(string type, string id, int page)
+        private void SearchProduct(string type, string id, int page, int pageSize)
         {
             switch (type)
             {
@@ -81,17 +81,17 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
                     };
                     break;
             }
-            WorkContext.Products = new MutablePagedList<Product>((pageNumber, pageSize, sortInfos) =>
+            WorkContext.Products = new MutablePagedList<Product>((pageNumber, pSize, sortInfos) =>
             {
                 var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
                 criteria.PageNumber = pageNumber;
-                criteria.PageSize = pageSize;
+                criteria.PageSize = pSize;
                 if (string.IsNullOrEmpty(criteria.SortBy) && !sortInfos.IsNullOrEmpty())
                 {
                     criteria.SortBy = SortInfo.ToString(sortInfos);
                 }
                 return _catalogSearchService.SearchProducts(criteria).Products;
-            }, page, 3);
+            }, page, pageSize);
         }
     }
 }

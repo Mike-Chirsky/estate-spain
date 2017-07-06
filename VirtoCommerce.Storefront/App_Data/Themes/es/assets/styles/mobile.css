@@ -292,6 +292,13 @@
 		padding-right: 15px;
 	}
 }
+@media (max-width: 525px)
+{
+	.custom-slider-mobile .col-xs-6
+	{
+		width: 100%;
+	}
+}
 @media(max-width: 500px)
 {
 	.entry-title.entry-prop

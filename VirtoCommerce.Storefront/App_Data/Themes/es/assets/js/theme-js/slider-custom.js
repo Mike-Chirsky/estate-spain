@@ -6,7 +6,7 @@
     var next = jQuery(contentId + " .next");
     var prev = jQuery(contentId + " .prev");
     function loadData() {
-        jQuery.get(url + '/' + marketId + '/' + page, function (data) {
+        jQuery.get(url + '/' + marketId + '/' + page + '/3', function (data) {
             spinner.hide();
             content.html(data);
             content.show();
@@ -38,7 +38,7 @@ function createCustomSliderMobile(contentId, marketId, url) {
     var content = jQuery(contentId + " .market-block-content");
     var more = jQuery(contentId + " .more-button button");
     function loadData() {
-        jQuery.get(url + '/' + marketId + '/' + page, function (data) {
+        jQuery.get(url + '/' + marketId + '/' + page +'/4', function (data) {
             spinner.hide();
             content.append(data);
         }).fail(function () {
