@@ -588,6 +588,7 @@
     <Content Include="App_Data\Themes\es\snippets\blog\blog-page.liquid" />
     <Content Include="App_Data\Themes\es\snippets\contact.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-collection-list.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-linked-article.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

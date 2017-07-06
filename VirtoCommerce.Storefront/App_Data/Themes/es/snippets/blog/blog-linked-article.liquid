@@ -1,0 +1,9 @@
+{%- for blog in blogs -%}
+    {%- if blog.handle == 'info' -%}
+        {%- for article in blog.articles -%}
+            {% if article.handle == 'info/process-pokupki-kak-kupit-nedvizhimost-v-ispanii' %}
+                {%- include 'blog/blog-item', article, add_class -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor -%}

@@ -10,6 +10,15 @@
     display: block;
 }
 
+.display-mobile-1200
+{
+	display: none;
+}
+.no-display-mobile-1200
+{
+	display: block;
+}
+/* end displays */
 .list-image-gellery
 {
 	display: block;
@@ -43,6 +52,21 @@
 .pagination-custom-mobile
 { 
 	display: none;
+}
+@media(max-width: 1200px)
+{
+	.display-mobile-1200
+	{
+		display: block;
+	}
+	.no-display-mobile-1200
+	{
+		display: none;
+	}
+	.about-footer .col-md-8
+	{
+		width: 100%;
+	}
 }
 @media(max-width: 1100px)
 {

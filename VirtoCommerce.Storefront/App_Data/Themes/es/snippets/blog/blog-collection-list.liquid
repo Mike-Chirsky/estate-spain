@@ -1,4 +1,4 @@
-<div class="">
+<div class="row padding0-15">
     {%- for blog in blogs-%}
         {%- if blog.handle == 'blog' -%}
             {%- for article in blog.articles -%}
@@ -22,4 +22,5 @@
     {%- include 'blog/blog-item', article: news_first_article -%}
     {%- include 'blog/blog-item', article: blog_first_article -%}
     {%- include 'blog/blog-item', article: news_two_article -%}
+    {%- include 'blog/blog-linked-article', add_class: 'display-mobile-1200' -%}
 </div>

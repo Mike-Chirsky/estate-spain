@@ -542,7 +542,7 @@ body{
     margin: 0px;
 }*/
 
-.row.about-footer .col-md-9
+.row.about-footer .col-md-8
 {
     margin: 0 0 15px;
 }
@@ -639,6 +639,7 @@ body{
     .city-tails .col-md-4,
     .region-tails .col-md-4,
     .region-footer .col-md-8,
+    .region-footer .col-md-4,
     .region-footer .col-md-12 {
         padding: 0 15px 15px;
     }
@@ -667,7 +668,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    min-height: 355px;
+    min-height: 400px;
     overflow: hidden;
     position: relative;
     z-index: 50;
