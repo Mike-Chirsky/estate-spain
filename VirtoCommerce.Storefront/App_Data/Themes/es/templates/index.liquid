@@ -25,7 +25,7 @@
       </div>
    </div>
    <div class="row">
-      <h2 class="text-center padding15">{{'index.city-region.header' | t}}</h2>
+      <h2 class="text-center padding15-0">{{'index.city-region.header' | t}}</h2>
       <div>
          {{ 'index.city-region.text' | t }}
       </div>
@@ -34,7 +34,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/costa-brava.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-brava">
-                  <h4>Коста брава</h4>
+                  <h3>Коста брава</h3>
                 </a>
               </div>
           </div>
@@ -42,7 +42,7 @@
          <div class="col-md-4" >
           <div class="block-inner" style="background-image: url({{'images/index/maresme.jpg' | assets_url }})">
               <div class="bottom">
-                  <h4>Коста марисме</h4>
+                  <h3>Коста марисме</h3>
               </div>
           </div>
          </div>
@@ -50,7 +50,7 @@
           <div class="block-inner" style="background-image: url({{'images/index/costa-dorada.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-dorada">
-                <h4>Коста дорада</h4>
+                <h3>Коста дорада</h3>
                 </a>
               </div>
           </div>
@@ -61,7 +61,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/costa-blanka.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-blanca">
-                  <h4>Коста бланка</h4>
+                  <h3>Коста бланка</h3>
                 </a>
               </div>
           </div>
@@ -70,7 +70,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/del-sol.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-del-sol">
-                  <h4>Коста дель соль</h4>
+                  <h3>Коста дель соль</h3>
                 </a>
               </div>
           </div>
@@ -78,18 +78,18 @@
          <div class="col-md-4">
           <div class="block-inner"  style="background-image: url({{'images/index/catalonia.jpg' | assets_url }})">
               <div class="bottom">
-                <h4>Каталония</h4>
+                <h3>Каталония</h3>
               </div>
           </div>
          </div>
       </div>
    </div>
-   <div class="row">
+   <div>
       <h2 class="text-center padding15">{{'index.type.header' | t}}</h2>
       <div>
          {{ 'index.type.text' | t }}
       </div>
-      <div class="row city-tails">
+      <div class="row city-tails ">
          <div class="col-md-4">
           <div class="block-inner" style="background-image: url({{'images/index/kvartiri.jpg' | assets_url }})">
               <ul>
@@ -124,9 +124,9 @@
          </div>
       </div>
    </div>
-   <div class="row">
+   <div>
       <div>
-        <h3>{{ 'index.info.header' | t }}</h3>
+        <h2 class="text-center padding15-0">{{ 'index.info.header' | t }}</h2>
         <div>
             <div class="carusel">
               <div id="reviews-slider" class="ca-container">
@@ -141,7 +141,7 @@
           jQuery("#reviews-slider").contentcarousel();
         </script>
       </div>
-      <h3 class="text-center">{{'index.hot-deal.header' | t}}</h3>
+      <h2 class="text-center">{{'index.hot-deal.header' | t}}</h2>
       <div>
          {{ 'index.hot-deal.text' | t }}
       </div>
@@ -150,11 +150,13 @@
    <div class="row">
       <h2 class="text-center padding15">{{'index.about.header' | t}}</h2>
       <div>
-         <div class="col-md-6">{{ 'index.about.text' | t }}</div>
+         <div class="col-md-6 text-center padding-bottom-15"><span>{{ 'index.about.text' | t }}</span></div>
          <div class="col-md-6">{{ 'index.about.video' | t }}</div>
       </div>
+    </div>
+    <div>
       <div>
-         <h3>{{ 'index.last-news' | t }}</h3>
+         <h2 class="text-center padding15">{{ 'index.last-news' | t }}</h2>
          {% assign related_category = "news" %}
          {% include 'blog/blog-related-category', related_category %}
       </div>

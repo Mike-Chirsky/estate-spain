@@ -1515,3 +1515,11 @@ blockquote
 {
     padding: 0 15px;
 }
+.padding15-0
+{
+    padding: 15px 0;
+}
+.padding-bottom-15
+{
+    padding-bottom: 15px;
+}
