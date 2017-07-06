@@ -23,11 +23,11 @@
   {% include 'headers/header-name' %}
   {% case collection_type %}
     {% when 'type' %}
-      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/type/', block_id: collection.handle %}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/type', block_id: collection.handle %}
     {% when 'region'%}
-      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/region/', block_id: collection.handle %}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/region', block_id: collection.handle %}
     {% when 'city'%}
-      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/city/', block_id: collection.handle %}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/city', block_id: collection.handle %}
   {% endcase%}
   
 {%- endif -%}

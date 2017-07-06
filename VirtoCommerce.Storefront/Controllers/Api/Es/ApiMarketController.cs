@@ -8,6 +8,7 @@ using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Services;
+using VirtoCommerce.Storefront.Model.StaticContent;
 
 namespace VirtoCommerce.Storefront.Controllers.Api.Es
 {
@@ -46,7 +47,21 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         private void SearchBlog(string id, int page, int pageSize)
         {
-
+            var listBlogLinks = new[] { "info/process-pokupki-kak-kupit-nedvizhimost-v-ispanii", "info/soderzhanie-nedvizhimosti", "info/nalogi-na-nedvizhimost", "info/ipoteka-v-ispanii-dlya-rossiyan", "info/vnzh-v-ispanii-nedvizhimost" };
+            var blog = new Blog()
+            {
+                Name = "listArticleMainPage"
+            };
+            var articles = WorkContext.Blogs.Where(x => x.Articles != null).SelectMany(x => x.Articles).Where(x => listBlogLinks.Contains(x.Permalink)).ToList();
+            var resultArticles = new List<BlogArticle>();
+            for (int i = (page - 1) * pageSize; i < articles.Count && i < page * pageSize; i++)
+            {
+                resultArticles.Add(articles[i]);
+            }
+            blog.Articles = new MutablePagedList<BlogArticle>(resultArticles);
+            var blogs = WorkContext.Blogs.ToList();
+            blogs.Add(blog);
+            WorkContext.Blogs = new MutablePagedList<Blog>(blogs);
         }
 
         private void SearchProduct(string type, string id, int page, int pageSize)

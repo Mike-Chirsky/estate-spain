@@ -8,7 +8,10 @@
     function loadData() {
         jQuery.get(url + '/' + marketId + '/' + page + '/3', function (data) {
             spinner.hide();
-            content.html(data);
+            if (data !== '')
+            {
+                content.html(data);
+            }
             content.show();
         }).fail(function () {
             el.hide();
