@@ -325,45 +325,17 @@ small, .small {
 
 .header_media .video .scroll-btn
 {
-    border-color: rgba(255, 255, 255, 0.5);
-    border-radius: 23px;
-    border-style: solid;
-    border-width: 1px;
+    background: url(../images/scroll-btn.png) no-repeat scroll 0 0;
     bottom: 40px;
-    box-sizing: border-box;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 100;
-    letter-spacing: 0;
-    line-height: 14px;
+    height: 39px;
     left: 50%;
-    margin: 0;
-    max-height: 55px;
-    max-width: 35px;
-    min-height: 55px;
-    min-width: 35px;
-    opacity: 1;
-    padding: 0;
     position: absolute;
-    text-align: left;
-    white-space: nowrap;
+    width: 40px;
     z-index: 9;
 
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-}
-
-.header_media .video .scroll-btn span
-{
-    background: #ffffff none repeat scroll 0 0;
-    border-radius: 50%;
-    display: block;
-    height: 8px;
-    left: 50%;
-    margin: -4px 0 0 -4px;
-    position: absolute;
-    top: 29%;
-    width: 8px;
 }
 
 .header_media .video-inner
