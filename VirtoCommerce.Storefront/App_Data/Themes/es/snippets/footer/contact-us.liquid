@@ -9,11 +9,6 @@
    {% else %}
    <div class="col-md-12" >
    {% endif %}
-      {% if template contains 'product' %}
-        <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
-      {% else %}
-        <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
-      {% endif %}
       <div class="spinner" id="contact-us-form-spinner" style="display: none;">
             <div class="rect1"></div>
             <div class="rect2"></div>
@@ -28,7 +23,12 @@
             <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
         </div>
       <div id="contact-us-form">
-      <div class="row">
+        {% if template contains 'product' %}
+          <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
+        {% else %}
+          <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
+        {% endif %}
+        <div class="row">
          <div class="col-md-4">
             <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
          </div>

@@ -161,6 +161,7 @@
 
 .header_type2 #access {
     float: right;
+    margin: -8px 5px 0 0;
     position: static;
 }
 
@@ -533,14 +534,16 @@ body{
     padding-right: 15px; 
 }
 
-/*.row.contact-us-footer .col-md-9 {
+.row.contact-us-footer
+{
+    margin-top: 20px;
     padding: 0px;
 }
 
 .row.contact-us-footer .row{
     padding: 0px;
     margin: 0px;
-}*/
+}
 
 .row.about-footer .col-md-8
 {
@@ -1359,6 +1362,7 @@ h2.blog-header
 .main-page 
 {
     line-height: 1.4;
+    padding-top: 30px;
 }
 .disabled{
     pointer-events: none;
@@ -1523,6 +1527,13 @@ blockquote
 {
     padding-bottom: 15px;
 }
+
+#contact-us-form
+{
+    background: #f2f2f2;
+    padding: 15px;
+}
+
 .padding0-30
 {
     padding: 0 30px;

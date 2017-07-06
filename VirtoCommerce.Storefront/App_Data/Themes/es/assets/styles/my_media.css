@@ -779,7 +779,22 @@
         height: 0px;
     }
         
+    .header_media video
+    {
+        display: none;
+    }
 
+    .header_media .video
+    {
+        background: url(../images/header-index.png) no-repeat scroll 0 0;
+        height: 300px;
+    }
+
+    .header_media .video .entry-tax
+    {
+        margin: 0;
+        padding: 0;
+    }
     
     .top_bar .multiple_currency_widget {
         display: inline-block;
