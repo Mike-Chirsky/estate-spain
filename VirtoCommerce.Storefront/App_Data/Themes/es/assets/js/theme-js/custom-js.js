@@ -346,6 +346,11 @@ function valideEmail(str)
 
 
 jQuery(document).ready(function () {
+
+    $('.scroll-btn').on('click', function () {
+        slideToBlock('.region-tails');
+    });
+
     jQuery("#subcribe-action").click(function () {
 
         if (valideEmailjQuery("#subscribe-email").val()) {

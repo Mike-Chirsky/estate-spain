@@ -671,7 +671,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    min-height: 400px;
+    min-height: 430px;
     overflow: hidden;
     position: relative;
     z-index: 50;
@@ -724,12 +724,6 @@ body{
     color: #ff9800;
 }
 
-.city-tails .block-inner h3
-{
-    font-size: 14px;
-    font-weight: bold;
-}
-
 .region-footer .block-inner h4, 
 .region-tails .block-inner h4,
 .city-tails .block-inner h4
@@ -759,9 +753,9 @@ body{
     margin: 0;
     padding: 0;
 }
-.city-tails .block-inner ul
+.city-tails .block-inner ul + ul
 {
-    margin: 0 0 20px;
+    margin: 10px 0 0;
 }
 .city-tails .block-inner ul li
 {
@@ -770,7 +764,7 @@ body{
 .region-footer .block-inner br,
 .city-tails .block-inner br
 {
-    margin: 7px;
+    margin: 0;
 }
 
 .region-footer .block-inner li a,
