@@ -1523,3 +1523,40 @@ blockquote
 {
     padding-bottom: 15px;
 }
+.padding0-30
+{
+    padding: 0 30px;
+}
+/* slider */
+.custom-slider
+{
+    height: 560px;
+}
+.custom-slider .navigation .controls
+{
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.custom-slider .navigation .controls button
+{
+    background: #C52529;
+	border-radius: 3px;
+	width: 30px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 5px;
+	color: #fff;
+    border: none;
+}
+
+/* mobile */
+.custom-slider-mobile .more-button button
+{
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+/* end slider */

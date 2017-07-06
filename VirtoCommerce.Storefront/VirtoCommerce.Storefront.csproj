@@ -532,7 +532,7 @@
     <Content Include="App_Data\Themes\es\snippets\footer\region.liquid" />
     <Content Include="App_Data\Themes\es\snippets\headers\header-about.liquid" />
     <Content Include="App_Data\Themes\es\snippets\headers\region-header.liquid" />
-    <Content Include="App_Data\Themes\es\snippets\market-block.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-link-list.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-count.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\location.liquid" />
@@ -590,6 +590,8 @@
     <Content Include="App_Data\Themes\es\snippets\contact.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-collection-list.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-linked-article.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-product.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
@@ -1012,6 +1014,7 @@
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiFilterProductController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiMarketController.cs" />
     <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
