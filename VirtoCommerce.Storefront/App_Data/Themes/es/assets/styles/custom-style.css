@@ -724,6 +724,12 @@ body{
     color: #ff9800;
 }
 
+.city-tails .block-inner h3
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .region-footer .block-inner h4, 
 .region-tails .block-inner h4,
 .city-tails .block-inner h4
@@ -736,7 +742,8 @@ body{
 }
 
 .region-footer .block-inner ul,
-.city-tails .block-inner ul{
+.city-tails .block-inner ul
+{
     list-style: none;
     padding: 15px;
     margin: 0;
@@ -745,6 +752,20 @@ body{
 .city-tails .block-inner li{
     color: #fff;
     padding: 7px;
+}
+.city-tails .block-inner ul,
+.city-tails .block-inner ul li
+{
+    margin: 0;
+    padding: 0;
+}
+.city-tails .block-inner ul
+{
+    margin: 0 0 20px;
+}
+.city-tails .block-inner ul li
+{
+    padding: 5px 0;
 }
 .region-footer .block-inner br,
 .city-tails .block-inner br
