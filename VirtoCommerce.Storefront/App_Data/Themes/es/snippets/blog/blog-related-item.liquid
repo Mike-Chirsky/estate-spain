@@ -1,4 +1,5 @@
-<div class="col-md-4 shortcode-col  listing_wrapper blog2v">
+<div class="blog-item">
+<div class="col-md-4 col-xs-6 col-sm-6 shortcode-col {{ add_class }} blog2v">
     <div class="property_listing" data-link="{{ item.url | absolute_url }}" style="height: 470px;">
         <div class="blog_unit_image"><img width="525" height="328" src="{{ item.image_url | absolute_url }}" class="lazyload img-responsive wp-post-image" alt=""></div>
         <h4>
@@ -12,4 +13,5 @@
         </div>
         <a class="read_more" href="{{item.url | absolute_url}}">{{'blog.read-more' | t  }}<i class="fa fa-angle-right"></i> </a>
     </div>
+</div>
 </div>

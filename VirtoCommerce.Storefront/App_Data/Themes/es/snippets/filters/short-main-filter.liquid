@@ -15,7 +15,7 @@
 	]; 
 </script>
 <div style="z-index: 10000">
-	<div class="main-filter-container clearfix" id="main-filter-controls">
+	<div class="main-filter-container search_wrapper clearfix" id="main-filter-controls">
 		<div class="col-md-6">
 			{% include 'filters/location' %}
 		</div>
@@ -55,49 +55,9 @@ jQuery(document).ready(function(){
     // price range
     setCurrentValueDd(jQuery(".search_wrapper li"),'{{collection.current_price_range_filter.value}}');
 });
-{% comment %}
-// set price from range
-jQuery("#min-price-value, #max-price-value").change(function () {
-    var price = "";
-    var minPriceVl = jQuery("#min-price-value").val();
-    var maxPriceVl = jQuery("#max-price-value").val();
-    if(minPriceVl && maxPriceVl)
-    {
-        price = formatPrice(minPriceVl) + ' - ' + formatPrice(maxPriceVl);
-    }
-    else if(minPriceVl)
-    {
-        price = formatPrice(minPriceVl);
-    }
-    else if(maxPriceVl)
-    {
-        price = formatPrice(maxPriceVl);
-    }
-    jQuery("#price-value").val(price + " {{ current_currency.symbol}}");
+jQuery("#send-main-filter").click(function () {
+	var termStr = getTermsString('#main-filter-controls');
+	var location = '{{'/' | full_url }}' + getRequestSeoPath();
+	window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
 });
-jQuery("#price-value").change(function(){
-    var prices = jQuery("#price-value").val().replace('{{ current_currency.symbol}}', "").replace(/ /g,"").trim().split('-');
-    if(prices.length > 1 && prices[1] != '') {
-        price = formatPrice(prices[0])+' - '+ formatPrice(prices[1]);
-    }
-    else {
-        price = formatPrice(prices[0]) + (event.keyCode === 109? ' - ' : '');
-    }
-    price += " {{ current_currency.symbol}}";
-    jQuery("#price-value").val(price);
-});
-function formatPrice(price) {
-    if(!price)
-    {
-        return "";
-    }
-    price = parseInt(price);
-    return price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1 ");
-}
-{% endcomment %}
-   jQuery("#send-main-filter").click(function () {
-       var termStr = getTermsString('#main-filter-controls');
-       var location = '{{'/' | full_url }}' + getRequestSeoPath();
-		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
-   });
 </script>

@@ -3,9 +3,13 @@
         {% continue %}
     {% endif %}
     {% for item in blog.articles %}
-        {% if forloop.index == 4 %}
+        {% if forloop.index == 5 %}
             {% break %}
         {% endif %}
-        {% include 'blog/blog-related-item', item %}
+        {% if forloop.index == 4 %}
+            {% include 'blog/blog-related-item', item, add_class: 'display-mobile' %}
+        {% else %}
+            {% include 'blog/blog-related-item', item %}
+        {% endif %}
     {% endfor %}
 {% endfor %}

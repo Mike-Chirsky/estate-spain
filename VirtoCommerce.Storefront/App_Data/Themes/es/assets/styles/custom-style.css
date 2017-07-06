@@ -1545,7 +1545,8 @@ blockquote
 
 #contact-us-form
 {
-    background: #f2f2f2;
+    background: #EDEDED;
+    border: 1px solid #E9E9E9;
     padding: 15px;
 }
 
