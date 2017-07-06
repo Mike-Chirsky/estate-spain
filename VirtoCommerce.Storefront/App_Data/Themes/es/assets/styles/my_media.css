@@ -786,8 +786,19 @@
 
     .header_media .video
     {
-        background: url(../images/header-index.png) no-repeat scroll 0 0;
+        background: url(../images/header-index.png) no-repeat scroll 50% 0;
         height: 300px;
+    }
+
+    .header_media .video::after
+    {
+        display: none;
+    }
+
+    .header_media .video-inner
+    {
+        background: rgba(0,0,0,.5);
+        padding: 10px 25px;
     }
 
     .header_media .video .entry-tax
