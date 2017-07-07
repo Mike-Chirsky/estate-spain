@@ -109,10 +109,10 @@
     .no-display-mobile{
         display: none;
     }
-    .container.content_wrapper
+    /*.container.content_wrapper
     {
         padding: 0px;
-    }
+    }*/
 	.property-panel .panel-body
 	{
 		padding-left: 0px;
