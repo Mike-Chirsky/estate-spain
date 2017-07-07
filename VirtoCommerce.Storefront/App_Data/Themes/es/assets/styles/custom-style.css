@@ -803,9 +803,9 @@ body{
     padding: 0 15px;
 }
 
-.row.product-list
+.product-list
 {
-    margin: 15px 0 0;
+    margin: 15px 0 0 0;
 }
 
 /*.row.product-list
@@ -1553,6 +1553,10 @@ blockquote
 .padding0-30
 {
     padding: 0 30px;
+}
+.margin-top-25
+{
+    margin-top: 25px;
 }
 /* slider */
 .custom-slider

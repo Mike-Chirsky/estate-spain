@@ -37,7 +37,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/costa-brava.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-brava">
-                  <h3>Коста брава</h3>
+                  <h3>КОСТА БРАВА</h3>
                 </a>
               </div>
           </div>
@@ -45,7 +45,7 @@
          <div class="col-md-4" >
           <div class="block-inner" style="background-image: url({{'images/index/maresme.jpg' | assets_url }})">
               <div class="bottom">
-                  <h3>Коста марисме</h3>
+                  <h3>КОСТА МАРИСМЕ</h3>
               </div>
           </div>
          </div>
@@ -53,7 +53,7 @@
           <div class="block-inner" style="background-image: url({{'images/index/costa-dorada.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-dorada">
-                <h3>Коста дорада</h3>
+                <h3>КОСТА ДОРАДА</h3>
                 </a>
               </div>
           </div>
@@ -64,7 +64,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/costa-blanka.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-blanca">
-                  <h3>Коста бланка</h3>
+                  <h3>КОСТА БЛАНКА</h3>
                 </a>
               </div>
           </div>
@@ -73,7 +73,7 @@
           <div class="block-inner"  style="background-image: url({{'images/index/del-sol.jpg' | assets_url }})">
               <div class="bottom">
                 <a href="/costa-del-sol">
-                  <h3>Коста дель соль</h3>
+                  <h3>КОСТА ДЕЛЬ СОЛЬ</h3>
                 </a>
               </div>
           </div>
@@ -81,7 +81,7 @@
          <div class="col-md-4">
           <div class="block-inner"  style="background-image: url({{'images/index/catalonia.jpg' | assets_url }})">
               <div class="bottom">
-                <h3>Каталония</h3>
+                <h3>КАТАЛОНИЯ</h3>
               </div>
           </div>
          </div>
@@ -138,11 +138,8 @@
    </div>
    <div>
       <div>
-        <h2 class="text-center padding15-0">{{ 'index.info.header' | t }}</h2>
+        <h2 class="text-center padding15-0 margin-top-25 no-margin-top-mobile">{{ 'index.info.header' | t }}</h2>
         {% include 'market-block/market-block', market_id: 'main-blog', market_url: 'storefrontapi/market/blog', block_id: 'main-blog' %}
-        <script>
-          jQuery("#reviews-slider").contentcarousel();
-        </script>
       </div>
       <h2 class="text-center">{{'index.hot-deal.header' | t}}</h2>
       <div>
@@ -150,7 +147,7 @@
       </div>
       {% include 'market-block/market-block', market_id: 'hot-deal', market_url: 'storefrontapi/market/main', block_id: 'main' %}
    </div>
-   <div class="row">
+   <div class="row about-text">
       <h2 class="text-center padding15">{{'index.about.header' | t}}</h2>
       <div>
          <div class="col-md-6 text-center padding-bottom-15"><span>{{ 'index.about.text' | t }}</span></div>
@@ -158,7 +155,7 @@
       </div>
     </div>
     <div>
-      <div>
+      <div class="margin-top-25 no-margin-top-mobile">
          <h2 class="text-center padding15">{{ 'index.last-news' | t }}</h2>
          {% assign related_category = "news" %}
          {% include 'blog/blog-related-category', related_category %}
