@@ -150,8 +150,13 @@
    <div class="row about-text">
       <h2 class="text-center padding15">{{'index.about.header' | t}}</h2>
       <div>
-         <div class="col-md-6 text-center padding-bottom-15"><span>{{ 'index.about.text' | t }}</span></div>
-         <div class="col-md-6">{{ 'index.about.video' | t }}</div>
+        <div class="col-md-6 text-center padding-bottom-15">
+          <div>{{ 'index.about.text' | t }}</div>
+          <div class="padding15-0">
+            {{ 'index.about.text2' | t}}
+          </div>
+        </div>
+        <div class="col-md-6">{{ 'index.about.video' | t }}</div>
       </div>
     </div>
     <div>
@@ -163,7 +168,7 @@
    </div>
    <div class="row">
       <h2 class="text-center padding15">{{'index.price.header' | t}}</h2>
-      <div>
+      <div class="row padding30-0">
          <div class="col-md-6">{{ 'index.price.col1' | t }}</div>
          <div class="col-md-6">{{ 'index.price.col2' | t }}</div>
       </div>

@@ -1,4 +1,5 @@
-﻿function slideToBlock(selector, offest) {
+﻿var ignoredKeyCodes = [9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 91, 92, 93, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145, 186, 187, 190, 191, 192, 219, 220, 221];
+function slideToBlock(selector, offest) {
     if (offest === undefined)
     {
         offest = 200;
@@ -504,7 +505,7 @@ jQuery(document).ready(function () {
 
     // filter events
     $("#main-filter-controls #location-value").keyup(function (e) {
-        if (e.which <= 90 && e.which >= 48) {
+        if (ignoredKeyCodes.indexOf(e.which) === -1) {
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls");
         }
 
@@ -520,7 +521,7 @@ jQuery(document).ready(function () {
     });
     // mobile
     $("#main-filter-controls-mobile #location-value").keyup(function (e) {
-        if (e.which <= 90 && e.which >= 48) {
+        if(ignoredKeyCodes.indexOf(e.which) === -1) {
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls-mobile");
         }
 
