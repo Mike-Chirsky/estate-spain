@@ -14,6 +14,10 @@ namespace VirtoCommerce.Storefront.Model.Es.Search
         public string CitySeo { set; get; }
         public string RegionSeo { set; get; }
         public string DistrictSeo { set; get; }
+        /// <summary>
+        /// Parent region name for region
+        /// </summary>
+        public string ParentRegionName { set; get; }
         public string FullSeo
         {
             get
@@ -97,6 +101,10 @@ namespace VirtoCommerce.Storefront.Model.Es.Search
                         name += ", ";
                     }
                     name += RegionName;
+                    if (!string.IsNullOrEmpty(ParentRegionName))
+                    {
+                        name += ", " + ParentRegionName;
+                    }
                 }
                 
                 return name;

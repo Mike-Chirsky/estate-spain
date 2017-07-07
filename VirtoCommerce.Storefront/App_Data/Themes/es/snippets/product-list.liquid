@@ -36,7 +36,7 @@
         </li>
     </ul>
 </div>
-<div class="product-list" id="list-products">
+<div class="product-list row" id="list-products">
     {% paginate collection.products by 36 %}
         {% assign link_index = collection.products.size | divided_by: 2 %}
         {% for product in collection.products %}

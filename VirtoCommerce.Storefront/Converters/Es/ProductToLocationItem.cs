@@ -17,6 +17,11 @@ namespace VirtoCommerce.Storefront.Converters.Es
             {
                 result.RegionName = product.Name;
                 result.RegionSeo = product.SeoInfo?.Slug;
+                var regionProduct = product.Associations.OfType<ProductAssociation>().FirstOrDefault(x => x.Type == "Regions")?.Product;
+                if (regionProduct != null)
+                {
+                    result.ParentRegionName = regionProduct.Name;
+                }
             }
             if (product.CategoryId == ConfigurationManager.AppSettings["CityCategoryId"])
             {
