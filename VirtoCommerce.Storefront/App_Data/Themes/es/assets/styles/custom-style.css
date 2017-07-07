@@ -601,16 +601,24 @@ body{
 
 .region-footer .col-md-4, .region-footer .col-md-8, .region-footer .col-md-3,.region-footer .col-md-12,.region-footer .col-md-9,
 .region-tails .col-md-4,
-.city-tails .col-md-4, .city-tails .col-md-8, .city-tails .col-md-3{
+.region-tails .col-md-12,
+.city-tails .col-md-4, .city-tails .col-md-8, .city-tails .col-md-3
+{
     min-height: 300px;
     padding: 15px;
     border-radius: 3px;
 }
-.row.region-tails
+
+.region-tails.info .col-md-12,
+.region-tails.info .block-inner
+{
+    min-height: 0;
+}
+/*.row.region-tails
 {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 /*.region-footer > .row
 {
     margin: 0;
@@ -939,7 +947,6 @@ body{
 .blog-header-title{
     text-align: center;
     color: #fff;
-    background-color: rgba(50, 56, 64, 0.9);
     padding: 0px;
     margin: 0px;
 }
@@ -962,8 +969,6 @@ h2.blog-header
 
 .blog-preview-text{
     padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
     line-height: 1.5;
 }
 
@@ -1005,6 +1010,11 @@ h2.blog-header
     color: #fff;
 }
 
+.handbook-list-article + .handbook-list-article
+{
+    margin: 30px 0 0;
+}
+
 .handbook-list-article h4
 {
     padding-bottom: 0px;
@@ -1018,7 +1028,6 @@ h2.blog-header
 
 .blog-preview-text
 {
-    margin: 0px;
     margin-bottom: 30px;
     margin-top: 15px;
 }
