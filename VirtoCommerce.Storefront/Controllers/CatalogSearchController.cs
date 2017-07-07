@@ -25,10 +25,13 @@ namespace VirtoCommerce.Storefront.Controllers
         /// GET search
         /// This method used for search products by given criteria 
         /// <returns></returns>
-        public ActionResult SearchProducts()
+        public ActionResult SearchProducts(string search)
         {
             //All resulting categories, products and aggregations will be lazy evaluated when view will be rendered. (workContext.Products, workContext.Categories etc) 
             //All data will loaded using by current search criteria taken from query string
+            WorkContext.CurrentProductSearchCriteria.Keyword = search;
+            //For set filters value in UI
+            WorkContext.CurrentCategory = new Category();
             return View("search", WorkContext);
         }
 

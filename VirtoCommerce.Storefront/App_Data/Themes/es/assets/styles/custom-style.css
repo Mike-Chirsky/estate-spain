@@ -448,6 +448,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', end
     border: 1px solid #eeeeee;
     background: #fff;
 }
+.row.additional-filters .listing_filters_head .listing_filter_select
+{
+    float: left;
+}
 
 /* order block */
 .order .text{
@@ -1526,10 +1530,10 @@ blockquote
     background: #fff;
     border: 1px solid #E5E5E5;
 }
-.listing_filters_head{
+/*.listing_filters_head{
     margin-left: 15px;
     margin-right: 15px;
-}
+}*/
 .padding0-15
 {
     padding: 0 15px;

@@ -339,6 +339,19 @@ function getRequestSeoPath() {
     return "";
 }
 
+function getSearchPath() {
+    var locationValue = jQuery("#location-value").val();
+    if (locationValue === undefined) {
+        locationValue = "";
+    }
+    if (locationValue === "") {
+        return "search?"
+    }
+    else {
+        return "search?search=" + locationValue+"&";
+    }
+}
+
 function valideEmail(str)
 {
     var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -504,14 +517,17 @@ jQuery(document).ready(function () {
     // end forms
 
     // filter events
-    $("#main-filter-controls #location-value").keyup(function (e) {
+    jQuery("#main-filter-controls #location-value").keyup(function (e) {
         if (ignoredKeyCodes.indexOf(e.which) === -1) {
+            jQuery("#main-filter-controls-mobile #location-value").val(jQuery("#main-filter-controls #location-value").val());
+            jQuery("#main-filter-controls-mobile #location-path").val('');
+            jQuery("#main-filter-controls #location-path").val('');
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls");
         }
 
     });
 
-    $("#main-filter-controls #location-value").click(function () {
+    jQuery("#main-filter-controls #location-value").click(function () {
         if ($(".location-search .list").css("display") !== 'none') {
             $(".location-search .list").css("display", 'none');
         }
@@ -520,14 +536,17 @@ jQuery(document).ready(function () {
         }
     });
     // mobile
-    $("#main-filter-controls-mobile #location-value").keyup(function (e) {
-        if(ignoredKeyCodes.indexOf(e.which) === -1) {
+    jQuery("#main-filter-controls-mobile #location-value").keyup(function (e) {
+        if (ignoredKeyCodes.indexOf(e.which) === -1) {
+            jQuery("#main-filter-controls #location-value").val(jQuery("#main-filter-controls-mobile #location-value").val());
+            jQuery("#main-filter-controls-mobile #location-path").val('');
+            jQuery("#main-filter-controls #location-path").val('');
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls-mobile");
         }
 
     });
 
-    $("#main-filter-controls-mobile #location-value").click(function () {
+    jQuery("#main-filter-controls-mobile #location-value").click(function () {
         if ($(".location-search .list").css("display") !== 'none') {
             $(".location-search .list").css("display", 'none');
         }
@@ -536,14 +555,14 @@ jQuery(document).ready(function () {
         }
     });
     // end mobile
-    $.each(jQuery("#main-filter-controls-mobile #filter-checks input"), function (index, item) {
+    jQuery.each(jQuery("#main-filter-controls-mobile #filter-checks input"), function (index, item) {
         jQuery(item).change(function () {
             getFoundResults("#main-filter-controls-mobile", ["#main-filter-controls", "#main-filter-controls-mobile"]);
             setRelativeCheckbox("main-filter-controls-mobile", jQuery(item).val(), jQuery(item).prop('checked'));
         });
     });
 
-    $.each(jQuery("#main-filter-controls #filter-checks input"), function (index, item) {
+    jQuery.each(jQuery("#main-filter-controls #filter-checks input"), function (index, item) {
         jQuery(item).change(function () {
             getFoundResults("#main-filter-controls", ["#main-filter-controls", "#main-filter-controls-mobile"]);
             setRelativeCheckbox("main-filter-controls", jQuery(item).val(), jQuery(item).prop('checked'));

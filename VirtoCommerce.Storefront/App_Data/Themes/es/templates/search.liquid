@@ -1,69 +1,57 @@
-{% assign grid_results = true %}
-
-{% assign respond_js_secret_key = shop.domain | md5 %}
-{% unless search.terms == respond_js_secret_key %}
-
-  <div class="grid">
-    <div class="grid-item">
-
-      <hr class="hr--clear hr--small">
-
-      {% if search.performed %}
-
-        {% paginate search.results by 20 %}
-
-          {% if search.results_count == 0 %}
-
-            <h2 class="text-center">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h2>
-            {% include 'search-bar' %}
-
-          {% else %}
-
-            <h2 class="text-center">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h2>
-            {% include 'search-bar' %}
-            <hr class="hr--clear">
-
-            {% if grid_results == false %}
-
-              {% for item in search.results %}
-                {% include 'search-result' %}
-              {% endfor %}
-
-            {% else %}
-
-              <div class="grid-uniform">
-                {% for item in search.results %}
-                  {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
-                  {% include 'search-result-grid' %}
-                {% endfor %}
-              </div>
-
-            {% endif %}
-
-          {% endif %}
-
-          {% if paginate.pages > 1 %}
-            <div class="text-center">
-              {% include 'pagination-custom' %}
+<div class="col-xs-12 col-md-12 breadcrumb_container">
+  {% include 'breadcrumb' %} 
+</div>
+<div class="order row">
+    <ul>
+        <li class="text">{{ 'filter.order' | t }}</li>
+        <li>
+            <div class="dropdown listing_filter_select">
+                <div data-toggle="dropdown" id="sortByPrice" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.price' | t }} 
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
             </div>
-          {% endif %}
-
-        {% endpaginate %}
-
-      {% else %}
-
-        {% comment %}
-          If search.performed is false, someone either accessed the page without the q parameter, or it was blank.
-        {% endcomment %}
-        <h2 class="text-center">{{ 'general.search.title' | t }}</h2>
-        {% include 'search-bar' %}
-
-      {% endif %}
-
-    </div>
-  </div>
-
-{% else %}
-  {% include 'respond' %}
-  {% layout none %}
-{% endunless %}
+        </li>
+        <li>
+            <div class="dropdown listing_filter_select">
+                <div data-toggle="dropdown" id="sortBySquare" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.meters' | t }} 
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown listing_filter_select order_filter">
+                <div data-toggle="dropdown" id="sortByDate" class="filter_menu_trigger" aria-expanded="false"> 
+                    {{ 'filter.is-new' | t }}
+                    <span>
+                        <a class="caret caret_filter top"></a>
+                        <a class="caret caret_filter bottom"></a>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product-list row" id="list-products">
+    {% paginate products by 36 %}
+        {% assign link_index = products.size | divided_by: 2 %}
+        {% for product in products %}
+            <div class="col-md-4 has_prop_slider  listing_wrapper">
+            {% include 'product-grid-item', product: product %}
+            </div>
+            {% if  forloop.index == link_index and type_product != null %}
+                {% include 'product-link-list' %}
+            {% endif %}
+        {% endfor %}
+        {% if paginate.pages > 1 %}
+            {% include 'pagination-custom' %}
+        {% endif %}
+    {% endpaginate %}
+</div>

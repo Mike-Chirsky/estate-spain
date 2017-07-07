@@ -43,8 +43,24 @@
 </div>
 <script>
     jQuery("#send-main-filter-mobile").click(function () {
-       var termStr = getTermsString('#main-filter-controls-mobile');
-       var location = '{{'/' | full_url }}' + getRequestSeoPath();
-		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+        var locationPath = jQuery("#location-path").val();
+        var locationValue = jQuery("#location-value").val();
+        var esTypeVl = jQuery("#estate-type-value").val();
+        if((locationPath === undefined || locationPath ==="") && locationValue!== undefined && locationValue !=='')
+        {
+            var termStr = getTermsString('#main-filter-controls-mobile');
+            var location = '{{'/' | full_url }}' + getSearchPath();
+            if(esTypeVl !== undefined && esTypeVl !=="")
+            {
+                termStr+= (termStr.length > 0 ? ';':'') + "estatetype:"+esTypeVl;
+            }
+            window.location.href = location + (termStr.length > 0 ? 'terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+        }
+        else
+        {
+            var termStr = getTermsString('#main-filter-controls-mobile');	
+            var location = '{{'/' | full_url }}' + getRequestSeoPath();
+            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+        }
    });
 </script>
