@@ -145,7 +145,12 @@
     <Compile Include="ConcurrentAsyncLockTests.cs" />
     <Compile Include="CssUrlTransformTests.cs" />
     <Compile Include="CommonTests.cs" />
+    <Compile Include="ESCategoryTreeServiceTests.cs" />
     <Compile Include="MutablePagedListTests.cs" />
+    <None Include="JsonMoq\ESCategoryTreeService\06d09840154341a4b4564aa9b94b06b3.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\2036643b08794d149e1722adbe0230e8.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\654dbd245eb2484fa5ccd8ffd69387da.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\d6cce7c7d9854f609ab3fd5109d79a57.json" />
     <None Include="Pages\StoreWithInvalidPages\valid.md" />
     <None Include="Pages\StoreWithInvalidPages\invalid.md" />
     <None Include="Pages\TestStore\blogs\news\default.md" />

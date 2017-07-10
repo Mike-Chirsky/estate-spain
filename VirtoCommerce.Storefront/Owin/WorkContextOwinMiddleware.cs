@@ -18,12 +18,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi;
 using VirtoCommerce.Storefront.AutoRestClients.PricingModuleApi;
+using VirtoCommerce.Storefront.AutoRestClients.SearchApiModuleApi;
 using VirtoCommerce.Storefront.AutoRestClients.StoreModuleApi;
 using VirtoCommerce.Storefront.Common;
 using VirtoCommerce.Storefront.Converters;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Cart.Services;
 using VirtoCommerce.Storefront.Model.Catalog;
+using VirtoCommerce.Storefront.Model.Catalog.Es;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Customer;
 using VirtoCommerce.Storefront.Model.Customer.Services;
@@ -302,6 +304,8 @@ namespace VirtoCommerce.Storefront.Owin
         {
             await InitializeShoppingCart(context, workContext);
 
+            //await LoadCategoryTree(workContext);
+
             if (workContext.CurrentStore.QuotesEnabled)
             {
                 var quoteRequestBuilder = Container.Resolve<IQuoteRequestBuilder>();
@@ -375,6 +379,12 @@ namespace VirtoCommerce.Storefront.Owin
                 return vendors;
             }, 1, VendorSearchCriteria.DefaultPageSize);
         }
+
+        //private Task LoadCategoryTree(WorkContext workContext)
+        //{
+        //    return (new Services.Es.ESCategoryTreeService(Container.Resolve<ISearchApiModuleApiClient>()), workContext.CurrentLanguage, workContext.CurrentCurrency, workContext.CurrentStore).GetTree();
+        //}
+        
 
         protected virtual async Task InitializeShoppingCart(IOwinContext context, WorkContext workContext)
         {

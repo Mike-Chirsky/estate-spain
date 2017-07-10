@@ -1038,6 +1038,10 @@
     <Compile Include="Services\ContentBlobProviders\AzureBlobContentProvider.cs" />
     <Compile Include="Services\ContentBlobProviders\FileSystemContentBlobProvider.cs" />
     <Compile Include="Services\CustomerServiceImpl.cs" />
+    <Compile Include="Services\Es\ConverterContext.cs" />
+    <Compile Include="Services\Es\Converters\DefaultCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\ESCategoryTreeService.cs" />
+    <Compile Include="Services\Es\ICategoryTreeConverter.cs" />
     <Compile Include="Services\IChangesTrackingService.cs" />
     <Compile Include="Services\LinkListServiceImpl.cs" />
     <Compile Include="Services\PricingServiceImpl.cs" />
