@@ -391,7 +391,6 @@ ul.pagination-custom li.more-page:hover
 
 .header-about
 {
-    padding: 15px;
     line-height: 1.5;
 }
 .header-about .link-list-about a{
@@ -532,11 +531,11 @@ body{
     padding-right: 0px;
 }
 
-.about-footer
+/*.about-footer
 {
     padding-left: 15px;
     padding-right: 15px; 
-}
+}*/
 
 .row.contact-us-footer
 {
