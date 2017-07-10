@@ -63,9 +63,9 @@ namespace VirtoCommerce.Storefront.Test
 
         private static Microsoft.Rest.HttpOperationResponse<T> LoadFromJsonFile<T>(string fileName)
         {
-            var filePath = Path.Combine(@"..\..\JsonMoq","ESCategoryTreeService", fileName); 
+            var filePath = Path.Combine(@"..\..\JsonMoq", "ESCategoryTreeService", fileName);
 
-            return new Microsoft.Rest.HttpOperationResponse<T> { Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<T>(File.ReadAllText(filePath))};
+            return new Microsoft.Rest.HttpOperationResponse<T> { Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<T>(File.ReadAllText(filePath)) };
         }
 
         private static Store CreateStore(string storeId, string catalogId, SeoLinksType linksType, params string[] cultureNames)
@@ -85,11 +85,20 @@ namespace VirtoCommerce.Storefront.Test
 
         public ESCategoryTreeService CreateService()
         {
-            var language = new Language("ru-RU");
-            var currency = new Currency(new Language("en-US"), "USD");
 
-            var service = new ESCategoryTreeService(CreateMockApiClient(), language, currency, CreateStore("Demo", "Demo", SeoLinksType.Short, "ru-RU"));
+            // TODO: Create mock chache manager, 
+            var service = new ESCategoryTreeService(CreateMockApiClient(), CreateWorkContext);
             return service;
+        }
+
+        public WorkContext CreateWorkContext()
+        {
+            return new WorkContext
+            {
+                CurrentLanguage = new Language("ru-RU"),
+                CurrentStore = CreateStore("Demo", "Demo", SeoLinksType.Short, "ru-RU"),
+                CurrentCurrency = new Currency(new Language("en-US"), "USD")
+            };
         }
 
         [Fact]
