@@ -8,6 +8,7 @@ using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Services;
+using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Controllers
 {
@@ -15,10 +16,11 @@ namespace VirtoCommerce.Storefront.Controllers
     public class CatalogSearchController : StorefrontControllerBase
     {
         private readonly ICatalogSearchService _searchService;
-
-        public CatalogSearchController(WorkContext workContext, IStorefrontUrlBuilder urlBuilder, ICatalogSearchService searchService)
+        private readonly ICategoryTreeService _categoryTreeService;
+        public CatalogSearchController(WorkContext workContext, IStorefrontUrlBuilder urlBuilder, ICatalogSearchService searchService, ICategoryTreeService categoryTreeService)
             : base(workContext, urlBuilder)
         {
+            _categoryTreeService = categoryTreeService;
             _searchService = searchService;
         }
 
@@ -44,7 +46,11 @@ namespace VirtoCommerce.Storefront.Controllers
         /// <returns></returns>
         public async Task<ActionResult> CategoryBrowsing(string categoryId, string view)
         {
-            var category = (await _searchService.GetCategoriesAsync(new[] { categoryId }, CategoryResponseGroup.Full)).FirstOrDefault();
+            var category = _categoryTreeService.FindByPath(categoryId);
+            if (category == null)
+            {
+                category = (await _searchService.GetCategoriesAsync(new[] { categoryId }, CategoryResponseGroup.Full)).FirstOrDefault();
+            }
             if(category == null)
             {
                 throw new HttpException(404, String.Format("Category {0} not found.", categoryId));

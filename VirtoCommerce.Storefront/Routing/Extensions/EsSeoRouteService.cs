@@ -10,6 +10,7 @@ using VirtoCommerce.Storefront.Converters;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
 using VirtoCommerce.Storefront.Model.Common;
+using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Routing.Extensions
 {
@@ -17,10 +18,12 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
     {
         private readonly Func<ICatalogModuleApiClient> _catalogApiFactory;
         private readonly ILocalCacheManager _cacheManager;
+        private readonly ICategoryTreeService _categoryTreeService;
 
-        public EsSeoRouteService(Func<ICoreModuleApiClient> coreApiFactory, Func<ICatalogModuleApiClient> catalogApiFactory, ILocalCacheManager cacheManager) 
+        public EsSeoRouteService(Func<ICoreModuleApiClient> coreApiFactory, Func<ICatalogModuleApiClient> catalogApiFactory, ILocalCacheManager cacheManager, ICategoryTreeService categoryTreeService) 
             : base(coreApiFactory, catalogApiFactory, cacheManager)
         {
+            _categoryTreeService = categoryTreeService;
             _catalogApiFactory = catalogApiFactory;
             _cacheManager = cacheManager;
         }
@@ -32,7 +35,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
             {
                 return existSeo;
             }
-            
+
             var pathParts = seoPath.Trim('/').Split('/');
 
             foreach (var part in pathParts)
@@ -90,14 +93,19 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         workContext.RegionProduct = regionProduct;
                     }
                 }
-                seo = all.FirstOrDefault(x => x.ObjectType == "Category");
+                /*seo = all.FirstOrDefault(x => x.ObjectType == "Category");
                 if (seo == null)
                 {
                     return null;
                 }
-                existSeo = new SeoEntity { ObjectType = seo.ObjectType, ObjectId = seo.ObjectId, SeoPath = seoPath };
+                existSeo = new SeoEntity { ObjectType = seo.ObjectType, ObjectId = seo.ObjectId, SeoPath = seoPath };*/
             }
-            return existSeo;
+            return new SeoEntity
+            {
+                ObjectType = "Category",
+                ObjectId = seoPath,
+                SeoPath = seoPath
+            };
         }
 
         private Term[] AddTerm(Term[] terms, Term added)

@@ -36,6 +36,7 @@ using VirtoCommerce.Storefront.Model.StaticContent;
 using VirtoCommerce.Storefront.Model.StaticContent.Services;
 using VirtoCommerce.Storefront.Model.Stores;
 using VirtoCommerce.Storefront.Services;
+using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Owin
 {
@@ -304,7 +305,7 @@ namespace VirtoCommerce.Storefront.Owin
         {
             await InitializeShoppingCart(context, workContext);
 
-            //await LoadCategoryTree(workContext);
+            await LoadCategoryTree(workContext);
 
             if (workContext.CurrentStore.QuotesEnabled)
             {
@@ -380,11 +381,14 @@ namespace VirtoCommerce.Storefront.Owin
             }, 1, VendorSearchCriteria.DefaultPageSize);
         }
 
-        //private Task LoadCategoryTree(WorkContext workContext)
-        //{
-        //    return (new Services.Es.ESCategoryTreeService(Container.Resolve<ISearchApiModuleApiClient>()), workContext.CurrentLanguage, workContext.CurrentCurrency, workContext.CurrentStore).GetTree();
-        //}
-        
+
+        private Task LoadCategoryTree(WorkContext workContext)
+        {
+            var searchService = Container.Resolve<ICategoryTreeService>();
+            //var searchClient = Container.Resolve<ISearchApiModuleApiClient>();
+            return searchService.GetTree();
+        }
+
 
         protected virtual async Task InitializeShoppingCart(IOwinContext context, WorkContext workContext)
         {
