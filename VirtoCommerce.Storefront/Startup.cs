@@ -270,7 +270,7 @@ namespace VirtoCommerce.Storefront
             // ammo crm service
             container.RegisterType<IAmmoService, AmmoService>();
             // tree category service
-            container.RegisterInstance<ICategoryTreeService>(new ESCategoryTreeService(container.Resolve<ISearchApiModuleApiClient>(), workContextFactory, container.Resolve<ILocalCacheManager>(), container.Resolve<ICoreModuleApiClient>(), container.Resolve<ICatalogModuleApiClient>()));
+            container.RegisterInstance<ICategoryTreeService>(new ESCategoryTreeService(container.Resolve<ISearchApiModuleApiClient>(), workContextFactory));
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
             var themesBasePath = cmsContentConnectionString.RootPath.TrimEnd('/') + "/" + "Themes";

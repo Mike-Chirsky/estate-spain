@@ -24,22 +24,16 @@ namespace VirtoCommerce.Storefront.Services.Es
         private readonly SemaphoreSlim _lockObject = new SemaphoreSlim(1);
         private readonly ISearchApiModuleApiClient _searchApi;
         private readonly Func<WorkContext> _workContextFactory;
-        private readonly ILocalCacheManager _cacheManager;
-        private readonly ICoreModuleApiClient _coreApi;
-        private readonly ICatalogModuleApiClient _catalogApi;
         private static Category _loadedCategory;
         private static Dictionary<string, Category> _seoCategoryDict = new Dictionary<string, Category>();
         private Language _language;
         private Currency _currency;
         private Store _store;
 
-        public ESCategoryTreeService(ISearchApiModuleApiClient searchApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager, ICoreModuleApiClient coreApi, ICatalogModuleApiClient catalogApi)
+        public ESCategoryTreeService(ISearchApiModuleApiClient searchApi, Func<WorkContext> workContextFactory)
         {
             _searchApi = searchApi;
-            _cacheManager = cacheManager;
             _workContextFactory = workContextFactory;
-            _coreApi = coreApi;
-            _catalogApi = catalogApi;
         }
 
         public async Task<Category> GetTree()
@@ -145,8 +139,9 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
             return category;
         }
+        // TODO: Get data from category product
 
-        private void FillInfoPropertyForCategory(string seoPath, Category category)
+       /* private void FillInfoPropertyForCategory(string seoPath, Category category)
         {
             if (seoPath == null)
             {
@@ -205,7 +200,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
 
             return result;
-        }
+        }*/
 
         private ICategoryTreeConverter GetConverterByPath(string path)
         {

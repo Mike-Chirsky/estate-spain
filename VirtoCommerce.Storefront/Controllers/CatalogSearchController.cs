@@ -46,6 +46,7 @@ namespace VirtoCommerce.Storefront.Controllers
         /// <returns></returns>
         public async Task<ActionResult> CategoryBrowsing(string categoryId, string view)
         {
+            categoryId = categoryId.Trim('/');
             var category = _categoryTreeService.FindByPath(categoryId);
             if (category == null)
             {
