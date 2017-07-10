@@ -384,17 +384,26 @@ jQuery(document).ready(function () {
         }
         return false;
     });
-    jQuery("#request-callback-button").click(function () {
+    jQuery("#request-callback-button-mobile").click(function () {
         slideToBlock("#callback-form");
         jQuery(".mobilemenu-close").click();
     });
-    jQuery("#contact-us-button").click(function () {
+    jQuery("#contact-us-button-mobile").click(function () {
         slideToBlock("#contact-us-form");
         jQuery(".mobilemenu-close").click();
     });
-    jQuery("#contact-us-button-product").click(function () {
+    jQuery("#contact-us-button-product-mobile").click(function () {
         slideToBlock("#show_contact", 0);
         jQuery(".mobilemenu-close").click();
+    });
+    jQuery("#request-callback-button").click(function () {
+        slideToBlock("#callback-form");
+    });
+    jQuery("#contact-us-button").click(function () {
+        slideToBlock("#contact-us-form");
+    });
+    jQuery("#contact-us-button-product").click(function () {
+        slideToBlock("#show_contact", 0);
     });
     jQuery('.js-show-filters').on('click', function () {
         var self = $(this);
