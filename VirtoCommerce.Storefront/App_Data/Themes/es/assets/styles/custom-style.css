@@ -938,7 +938,7 @@ body{
 .block-inner h4,
 .block-inner h5
 {
-    color: #fff;
+    color: inherit;
 }
 .adv-search-1 input[type=text]{
     color: #7f7f7f;

@@ -595,6 +595,7 @@
     <Content Include="App_Data\Themes\es\snippets\blog\blog-linked-article.liquid" />
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-product.liquid" />
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
+    <Content Include="App_Data\Themes\es\assets\header-video.webm" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
