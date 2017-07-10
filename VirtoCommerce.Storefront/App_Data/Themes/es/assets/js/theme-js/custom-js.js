@@ -279,6 +279,10 @@ function loadSearchData(url, search, elements, listElement, rootElement) {
                     });
                     jQuery(element + " .list").css("display", "block");
                 }
+                else
+                {
+                    jQuery(element + " .list").html('');
+                }
             },
             contentType: "application/json"
         });
