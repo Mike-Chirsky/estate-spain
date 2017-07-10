@@ -37,7 +37,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             {
                 Keyword = search,
                 Outline = ConfigurationManager.AppSettings["RegionCategoryId"],
-                ResponseGroup = ItemResponseGroup.Seo
+                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations
             });
 
             await Task.WhenAll(foundProductsCityTask, foundProductsRegionTask);

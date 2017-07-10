@@ -15,22 +15,29 @@
 {% include 'headers/region-header' %}
 {%- endif -%}
 
-{% if collection.handle != 'arenda' %}
-  {% include 'headers/header-name' %}
-{% endif %}
-
 {%- if collection_type == 'city' -%}
   {% include 'headers/city-header' %}
 {%- endif -%}
 
 {%- if collection_type == 'region' or collection_type == 'type' -%}
-  {% include 'market-block', collection.products %} 
+  {% include 'headers/header-name' %}
+  <div class="padding0-15">
+  {% case collection_type %}
+    {% when 'type' %}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/type', block_id: collection.handle %}
+    {% when 'region'%}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/region', block_id: collection.handle %}
+    {% when 'city'%}
+      {% include 'market-block/market-block', market_id: meta_info_product.title, market_url: 'storefrontapi/market/city', block_id: collection.handle %}
+  {% endcase%}
+  </div>
 {%- endif -%}
 
-{%- if collection_type == 'city' or collection.handle == 'arenda' or (collection_type == 'type' and (region_product or city_product))  -%}
+{%- if collection_type == 'city' or collection.handle == 'arenda' or (collection_type == 'type' and (region_product or city_product)) -%}
+  <h2 class="header-name text-center">{{- meta_info_product.h2_listing -}}</h2>
   <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
   {% include 'product-list' %}
-{%endif%}
+{%- endif -%}
 
 {%- if collection_type == 'region' or collection_type == 'type'-%}
   {% include 'footer/region' %}
@@ -38,5 +45,10 @@
 {% if collection.handle != 'arenda' %}
 {% include 'footer/about' %}
 {% endif %}
+{% include 'blog/blog-collection-list' %}
+<div class="padding15">
 {% include 'footer/contact-us' %}
+</div>
+<div class=padding15>
 {% include 'footer/request-call' %}
+</div>

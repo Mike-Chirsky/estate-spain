@@ -1,5 +1,15 @@
-﻿function slideToBlock(selector) {
-    $('html, body').animate({ scrollTop: jQuery(selector).offset().top - 200 }, 500);
+﻿var ignoredKeyCodes = [9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 91, 92, 93, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145, 186, 187, 190, 191, 192, 219, 220, 221];
+function slideToBlock(selector, offest) {
+    if (offest === undefined)
+    {
+        offest = 200;
+    }
+    var el = jQuery(selector);
+    if (!el || !el.offset())
+    {
+        return false;
+    }
+    $('html, body').animate({ scrollTop: el.offset().top - offest }, 500);
     return false;
 }
 
@@ -237,7 +247,7 @@ function setRelativeCheckbox(rootElement, value, isSet) {
 
 
 
-function loadSearchData(url, search, elements) {
+function loadSearchData(url, search, elements, listElement, rootElement) {
     if (!search || !url) {
         return;
     }
@@ -252,14 +262,26 @@ function loadSearchData(url, search, elements) {
                     jQuery(element + " .list").html('');
                     for (var i = 0; i < data.items.length; i++) {
                         var item = data.items[i];
-                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" data-region="' + item.regionName + '" data-city="' + item.cityName + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
+                        var infoRegion = "";
+                        var infoCity = "";
+                        if (item.regionName) {
+                            infoRegion = 'data-region="' + item.regionName + '"';
+                        }
+                        if (item.cityName) {
+                            infoCity = 'data-region="' + item.cityName + '"';
+                        }
+                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + '" ' + infoCity + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
                     }
                     jQuery.each(jQuery(element + " .list li"), function (index, item) {
                         jQuery(item).click(function () {
-                            selectSearchItem(item, elements);
+                            selectSearchItem(item, elements, listElement, rootElement);
                         });
                     });
                     jQuery(element + " .list").css("display", "block");
+                }
+                else
+                {
+                    jQuery(element + " .list").html('');
                 }
             },
             contentType: "application/json"
@@ -267,7 +289,7 @@ function loadSearchData(url, search, elements) {
     });
 }
 
-function selectSearchItem(item, elements) {
+function selectSearchItem(item, elements, listElements, rootElement) {
     elements.forEach(function (element) {
         jQuery(element + " .list").css("display", "none");
         jQuery(element + " input[type=text]").val(jQuery(item).attr("data-value"));
@@ -276,8 +298,8 @@ function selectSearchItem(item, elements) {
         jQuery(element + " input[type=hidden]").attr("data-city", jQuery(item).attr("data-city"));
         jQuery(element + " input[type=text]").addClass("selected");
     });
-    
-    getFoundResults();
+
+    getFoundResults(rootElement, listElements);
 }
 
 function sortBy(value) {
@@ -321,6 +343,19 @@ function getRequestSeoPath() {
     return "";
 }
 
+function getSearchPath() {
+    var locationValue = jQuery("#location-value").val();
+    if (locationValue === undefined) {
+        locationValue = "";
+    }
+    if (locationValue === "") {
+        return "search?"
+    }
+    else {
+        return "search?search=" + locationValue+"&";
+    }
+}
+
 function valideEmail(str)
 {
     var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -329,6 +364,11 @@ function valideEmail(str)
 
 
 jQuery(document).ready(function () {
+
+    $('.scroll-btn').on('click', function () {
+        slideToBlock('.region-tails');
+    });
+
     jQuery("#subcribe-action").click(function () {
 
         if (valideEmailjQuery("#subscribe-email").val()) {
@@ -348,11 +388,26 @@ jQuery(document).ready(function () {
         }
         return false;
     });
+    jQuery("#request-callback-button-mobile").click(function () {
+        slideToBlock("#callback-form");
+        jQuery(".mobilemenu-close").click();
+    });
+    jQuery("#contact-us-button-mobile").click(function () {
+        slideToBlock("#contact-us-form");
+        jQuery(".mobilemenu-close").click();
+    });
+    jQuery("#contact-us-button-product-mobile").click(function () {
+        slideToBlock("#show_contact", 0);
+        jQuery(".mobilemenu-close").click();
+    });
     jQuery("#request-callback-button").click(function () {
         slideToBlock("#callback-form");
     });
     jQuery("#contact-us-button").click(function () {
         slideToBlock("#contact-us-form");
+    });
+    jQuery("#contact-us-button-product").click(function () {
+        slideToBlock("#show_contact", 0);
     });
     jQuery('.js-show-filters').on('click', function () {
         var self = $(this);
@@ -368,7 +423,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    if (window.location.href.indexOf("from_filter") > -1) {
+    if (window.location.href.indexOf("from_filter") > -1 || window.location.href.indexOf("page") > -1) {
         slideToBlock("#list-products");
     }
 
@@ -475,14 +530,17 @@ jQuery(document).ready(function () {
     // end forms
 
     // filter events
-    $("#main-filter-controls #location-value").keyup(function (e) {
-        if (e.which <= 90 && e.which >= 48) {
-            loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+    jQuery("#main-filter-controls #location-value").keyup(function (e) {
+        if (ignoredKeyCodes.indexOf(e.which) === -1) {
+            jQuery("#main-filter-controls-mobile #location-value").val(jQuery("#main-filter-controls #location-value").val());
+            jQuery("#main-filter-controls-mobile #location-path").val('');
+            jQuery("#main-filter-controls #location-path").val('');
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls");
         }
 
     });
 
-    $("#main-filter-controls #location-value").click(function () {
+    jQuery("#main-filter-controls #location-value").click(function () {
         if ($(".location-search .list").css("display") !== 'none') {
             $(".location-search .list").css("display", 'none');
         }
@@ -491,14 +549,17 @@ jQuery(document).ready(function () {
         }
     });
     // mobile
-    $("#main-filter-controls-mobile #location-value").keyup(function (e) {
-        if (e.which <= 90 && e.which >= 48) {
-            loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"]);
+    jQuery("#main-filter-controls-mobile #location-value").keyup(function (e) {
+        if (ignoredKeyCodes.indexOf(e.which) === -1) {
+            jQuery("#main-filter-controls #location-value").val(jQuery("#main-filter-controls-mobile #location-value").val());
+            jQuery("#main-filter-controls-mobile #location-path").val('');
+            jQuery("#main-filter-controls #location-path").val('');
+            loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls-mobile");
         }
 
     });
 
-    $("#main-filter-controls-mobile #location-value").click(function () {
+    jQuery("#main-filter-controls-mobile #location-value").click(function () {
         if ($(".location-search .list").css("display") !== 'none') {
             $(".location-search .list").css("display", 'none');
         }
@@ -507,14 +568,14 @@ jQuery(document).ready(function () {
         }
     });
     // end mobile
-    $.each(jQuery("#main-filter-controls-mobile #filter-checks input"), function (index, item) {
+    jQuery.each(jQuery("#main-filter-controls-mobile #filter-checks input"), function (index, item) {
         jQuery(item).change(function () {
             getFoundResults("#main-filter-controls-mobile", ["#main-filter-controls", "#main-filter-controls-mobile"]);
             setRelativeCheckbox("main-filter-controls-mobile", jQuery(item).val(), jQuery(item).prop('checked'));
         });
     });
 
-    $.each(jQuery("#main-filter-controls #filter-checks input"), function (index, item) {
+    jQuery.each(jQuery("#main-filter-controls #filter-checks input"), function (index, item) {
         jQuery(item).change(function () {
             getFoundResults("#main-filter-controls", ["#main-filter-controls", "#main-filter-controls-mobile"]);
             setRelativeCheckbox("main-filter-controls", jQuery(item).val(), jQuery(item).prop('checked'));

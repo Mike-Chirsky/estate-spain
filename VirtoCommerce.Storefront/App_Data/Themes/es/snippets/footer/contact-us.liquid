@@ -9,11 +9,6 @@
    {% else %}
    <div class="col-md-12" >
    {% endif %}
-      {% if template contains 'product' %}
-        <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
-      {% else %}
-        <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
-      {% endif %}
       <div class="spinner" id="contact-us-form-spinner" style="display: none;">
             <div class="rect1"></div>
             <div class="rect2"></div>
@@ -28,7 +23,12 @@
             <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
         </div>
       <div id="contact-us-form">
-      <div class="row">
+        {% if template contains 'product' %}
+          <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
+        {% else %}
+          <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
+        {% endif %}
+        <div class="row">
          <div class="col-md-4">
             <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
          </div>
@@ -47,13 +47,7 @@
       </div>
       <div class="row">
          <div class="col-md-12">
-            <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
-            {%- if template contains 'product' -%}
-                {{- 'request-form.message-object' | t : name: product.custom_title -}}
-            {%- else -%}
-                {{- 'request-form.message' | t -}}
-            {%- endif -%}
-            </textarea>
+            <textarea cols="45" rows="9" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
          </div>
       </div>
       <div class="row">
@@ -63,7 +57,7 @@
                     <span class="license light-text"> {{ 'request-form.license' | t }} </span>
                 </div>
                 <div class="col-md-4">
-                    <button class="wpresidence_button form-control" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                    <button class="wpresidence_button form-control btn-std margin-auto" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
                 </div>
             </div>
          </div>

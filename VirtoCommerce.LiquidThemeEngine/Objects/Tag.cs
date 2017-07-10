@@ -21,6 +21,11 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         public override string ToString()
         {
+            // TODO: Check why context is null for search action
+            // TODO: Temp solution
+            if (Context == null)
+                return Id;
+
             var filters = (Context["collection_sidebar_filters"] ?? string.Empty).ToString();
 
             if (filters == "groups")

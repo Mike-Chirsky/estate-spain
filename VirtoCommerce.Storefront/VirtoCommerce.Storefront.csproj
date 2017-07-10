@@ -426,6 +426,7 @@
     <Content Include="App_Data\Themes\es\assets\images\handbook-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\header-index.png" />
     <Content Include="App_Data\Themes\es\assets\images\index\catalonia.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\commerical.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\costa-blanka.jpg" />
@@ -446,6 +447,7 @@
     <Content Include="App_Data\Themes\es\assets\images\parthner_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\reviews_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\scroll-btn.png" />
     <Content Include="App_Data\Themes\es\assets\images\style-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\style_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
@@ -514,6 +516,7 @@
     <Content Include="App_Data\Themes\es\assets\js\theme-js\position.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\property.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slick.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\slider-custom.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\widget.js" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap-theme.css" />
@@ -531,7 +534,7 @@
     <Content Include="App_Data\Themes\es\snippets\footer\region.liquid" />
     <Content Include="App_Data\Themes\es\snippets\headers\header-about.liquid" />
     <Content Include="App_Data\Themes\es\snippets\headers\region-header.liquid" />
-    <Content Include="App_Data\Themes\es\snippets\market-block.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-link-list.liquid" />
     <Content Include="App_Data\Themes\es\snippets\product-count.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\location.liquid" />
@@ -586,6 +589,11 @@
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\menu\footer-menu.liquid" />
     <Content Include="App_Data\Themes\es\snippets\blog\blog-page.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\contact.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-collection-list.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\blog\blog-linked-article.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-product.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
@@ -1008,6 +1016,7 @@
     <Compile Include="Controllers\Api\ApiMarketingController.cs" />
     <Compile Include="Controllers\Api\ApiUserActionsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiFilterProductController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiMarketController.cs" />
     <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />

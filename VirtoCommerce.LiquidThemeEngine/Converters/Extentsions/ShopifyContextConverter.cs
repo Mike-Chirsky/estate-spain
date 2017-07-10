@@ -36,6 +36,10 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             {
                 result.FilterSeoLinks = FilterSoeLinksConverter.ToSeoLinksCollections(workContext.FilterSeoLinks);
             }
+            if (workContext.CurrentProductSearchCriteria != null && !string.IsNullOrEmpty(workContext.CurrentProductSearchCriteria.Keyword))
+            {
+                result.Keyword = workContext.CurrentProductSearchCriteria.Keyword;
+            }
             return result;
         }
     }

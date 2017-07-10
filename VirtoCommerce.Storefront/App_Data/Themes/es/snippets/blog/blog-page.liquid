@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-<div class="row region-tails">
+<div class="row region-tails info">
     <div class="col-md-12">
         <div class="block-inner" style="background-image: url({{'images/handbook-blog-preview.jpg' | assets_url}})">
             <div class="col-md-6">
@@ -70,7 +70,7 @@
 <!-- end tiles -->
 
 {% paginate blog.articles by 36 %}
-  <div class="row">
+  <div class="row region-tails">
     {% for article in blog.articles  %}
       {% include 'blog/blog-item', article: article %}
     {% endfor %}

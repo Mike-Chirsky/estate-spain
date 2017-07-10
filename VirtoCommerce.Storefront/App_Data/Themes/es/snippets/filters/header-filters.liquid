@@ -6,6 +6,30 @@
       </div>
    </div>
 </div>
+{% elseif template contains 'search' %}
+<div class="header_media with_search_6">
+    <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | assets_url}})">
+      <div class="description-header">
+         <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{ products.size }}&nbsp;{{'objects' | t }} </h1>
+      </div>
+   </div>
+   <div class="search_wrapper search_wr_6  " id="search_wrapper">
+      <div class="adv-search-1  adv_extended_class" id="adv-search-6">
+         <div class="adv6-holder">
+            <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
+               <div class="tab-content">
+                <div id="results" style="opacity: 0;display: block;">
+                    {{'found' | t}} <span id="results_no" style="display: inline;"></span> {{'objects' | t}}.
+                </div>
+                  <div role="tabpanel" class="tab-pane active">
+                     {% include 'filters\main-filter' %}
+                  </div> 
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 {% else %}
 <div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
