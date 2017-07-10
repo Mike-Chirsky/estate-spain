@@ -7,9 +7,13 @@
             {% break %}
         {% endif %}
         {% if forloop.index == 4 %}
-            {% include 'blog/blog-related-item', item, add_class: 'display-mobile' %}
+            <div class="row blog-item">
+                {% include 'blog/blog-related-item', item, add_class: 'display-mobile' %}
+            </div>
         {% else %}
-            {% include 'blog/blog-related-item', item %}
+            <div class="row blog-item">
+                {% include 'blog/blog-related-item', item %}
+            </div>
         {% endif %}
     {% endfor %}
 {% endfor %}

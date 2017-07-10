@@ -74,6 +74,11 @@ footer, header, hgroup, menu, nav, section {
     margin-bottom:20px;
 }
 
+img
+{
+    max-width: 100%;
+}
+
 /* =Structure
 ----------------------------------------------- */
 
@@ -302,7 +307,7 @@ small, .small {
 
 .header_media .video
 {
-    height: calc(100vh - 140px);
+    height: 400px;
     overflow: hidden;
     position: relative;
 }
@@ -402,7 +407,7 @@ small, .small {
 }
 
 #footer-widget-area{
-    padding: 0px 30px 15px 30px;
+    padding: 0 0 15px;
     max-width: 1200px;
     width:100%;
     margin: 0px auto;

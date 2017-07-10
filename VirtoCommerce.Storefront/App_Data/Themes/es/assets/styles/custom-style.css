@@ -712,7 +712,7 @@ body{
 .region-footer .block-inner:hover::after,
 .region-tails .block-inner:hover::after,
 .city-tails .block-inner:hover::after{
-    background: none;
+    background: rgba(0,0,0,.3);
 }
 .region-footer .block-inner > *,
 .region-tails .block-inner > *,
@@ -767,7 +767,7 @@ body{
 }
 .city-tails .block-inner ul + ul
 {
-    margin: 10px 0 0;
+    margin: 5px 0 0;
 }
 .city-tails .block-inner ul li
 {
@@ -853,6 +853,13 @@ body{
 {
     position: relative;
     left: -250px;
+}
+
+.about-text .about
+{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
 }
 
 .product-slider-header {
