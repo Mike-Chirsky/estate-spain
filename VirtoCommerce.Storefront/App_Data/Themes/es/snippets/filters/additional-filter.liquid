@@ -14,7 +14,7 @@
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
                <li data-value="*" value="{{ 'filter.bed-count' | t }}">{{ 'filter.any2' | t }}</li>
                 {% for item in collection.bed_rooms_filter %}
-                    <li display-header="{{ 'product.bed-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
+                    <li display-header="{{ 'filter.bed-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}
             </ul>
          </div>
@@ -30,7 +30,7 @@
             <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
                <li data-value="*" value="{{ 'filter.bath-count' | t }}">{{ 'filter.any2' | t }}</li>
                 {% for item in collection.bath_rooms_filter %}
-                    <li display-header="{{ 'product.bath-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
+                    <li display-header="{{ 'filter.bath-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}
             </ul>
          </div>

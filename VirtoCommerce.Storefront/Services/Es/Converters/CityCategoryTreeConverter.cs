@@ -20,5 +20,10 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             category.CityName = product.Name;
             return category;
         }
+
+        protected override string CreateFullName(ConverterContext context, Product product)
+        {
+            return $"Недвижимость в {product.Name}";
+        }
     }
 }
