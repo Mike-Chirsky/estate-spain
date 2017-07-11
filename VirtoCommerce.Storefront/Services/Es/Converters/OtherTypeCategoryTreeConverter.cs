@@ -6,15 +6,14 @@ using VirtoCommerce.Storefront.Model.Catalog;
 
 namespace VirtoCommerce.Storefront.Services.Es.Converters
 {
-    public class TagCategoryTreeConverter: DefaultCategoryTreeConverter
+    public class OtherTypeCategoryTreeConverter: DefaultCategoryTreeConverter
     {
         public override Category ToCategory(ConverterContext context, Product product)
         {
             var category = base.ToCategory(context, product);
-            category.Type = "tag";
             if (!string.IsNullOrEmpty(context.Parent.Type))
             {
-                category.Type = "tag_add";
+                category.Type = "other_type_add";
                 // TODO: For not display info from main category
                 category.Properties = new CatalogProperty[0];
                 category.Description = string.Empty;
@@ -26,7 +25,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             }
             else
             {
-                category.Type = "tag";
+                category.Type = "other_type";
             }
             return category;
         }

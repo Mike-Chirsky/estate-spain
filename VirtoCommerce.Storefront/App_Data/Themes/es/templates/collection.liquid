@@ -11,15 +11,15 @@
 {% if collection.handle != 'arenda' %}
   {% include 'headers/header-about' %}
 {% endif %}
-{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' -%}
+{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' or collection.type == 'tag' or collection.type == 'other_type' or collection.type == 'condition' -%}
   {% include 'headers/region-header' %}
 {%- endif -%}
 
-{%- if collection.type == 'city' or collection.type == 'tag' -%}
+{%- if collection.type == 'city' -%}
   {% include 'headers/city-header' %}
 {%- endif -%}
 
-{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' -%}
+{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' or collection.type == 'tag' or collection.type == 'other_type' or collection.type == 'condition' -%}
   {% include 'headers/header-name' %}
   {% case collection.type %}
     {% when 'type_add' %}
@@ -39,7 +39,7 @@
   {% include 'product-list' %}
 {%- endif -%}
 
-{%- if collection.type == 'region' or collection.type == 'type'-%}
+{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'tag'  or collection.type == 'other_type' or collection.type == 'condition'-%}
   {% include 'footer/region' %}
 {%- endif -%}
 {% if collection.handle != 'arenda' %}

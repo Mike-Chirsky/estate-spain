@@ -1050,7 +1050,9 @@
     <Compile Include="Services\CustomerServiceImpl.cs" />
     <Compile Include="Services\Es\ConverterContext.cs" />
     <Compile Include="Services\Es\Converters\CityCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\ConditionCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\DefaultCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\OtherTypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\RegionCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TagCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TypeCategoryTreeConverter.cs" />

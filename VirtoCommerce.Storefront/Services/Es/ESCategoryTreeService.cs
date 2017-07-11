@@ -11,9 +11,7 @@ using VirtoCommerce.Storefront.Model.Stores;
 using VirtoCommerce.Storefront.Model;
 using System.Threading;
 using System.Configuration;
-using VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi;
 using VirtoCommerce.Storefront.AutoRestClients.CatalogModuleApi;
-using coreDto = VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi.Models;
 
 namespace VirtoCommerce.Storefront.Services.Es
 {
@@ -49,25 +47,38 @@ namespace VirtoCommerce.Storefront.Services.Es
             _language = wc.CurrentLanguage;
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
+            // Load links for regions
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions");
+            // Load region and regio + estate type
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes"));
+            // Load region + tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags"));
+            // Load region + condition
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Conditions"));
+            // Load region + estate type + tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Tags")));
+            // Load region + estate type + condition
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")));
 
-            // Step 1. Load Regions
-            // Step 1.1 Load Regions/Estatetypes
-            // Step 1.2 Load Regions/Estatetypes/Tags
-            await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Regions")
-                    .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
-                        .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
+            // Load cities + estate type + tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags"))));
 
-            // Step 2. Load Cities
-            await LoadCities(_loadedCategory.Categories.Where(x => x.ProductType == "Regions").ToArray())
-                    .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
-                        .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
+            // Load cities + tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
+
+            // Load cities + estate type + conditions
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Conditions"))));
 
             // Step 2. Load Estatetypes
-            await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Estatetypes");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Estatetypes");
 
             // Step 3. Load Tags
-            await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Tags");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Tags");
 
+            // Step 4. Load Conditions
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions");
+            // Step 5. Load Other type
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");
             _lockObject.Release();
             return _loadedCategory;
         }
@@ -105,20 +116,24 @@ namespace VirtoCommerce.Storefront.Services.Es
 
         private async Task<Category[]> LoadCities(Category[] parents)
         {
-            var resultCities = await _searchApi.SearchApiModule.SearchProductsAsync(_storeId,
-                new AutoRestClients.SearchApiModuleApi.Models.ProductSearch
-                {
-                    ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString(),
-                    Outline = ProductTypeToOutline("Cities"),
-                    Take = int.MaxValue,
-                    Skip = 0
-                });
+            var resultCities = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+               new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
+               {
+                   CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
+                   ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString(),
+                   Outline = ProductTypeToOutline("Cities"),
+                   Take = 10000,
+                   Skip = 0
+               });
             foreach (var parent in parents)
             {
                 var categories = new List<Category>();
 
-                var children = resultCities.Products.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p));
-                categories.AddRange(children);
+                if (resultCities.Items != null)
+                {
+                    var children = resultCities.Items.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p));
+                    categories.AddRange(children);
+                }
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
             return parents.SelectMany(x => x.Categories).ToArray();
@@ -136,6 +151,10 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["TagCategoryId"];
                 case "Cities":
                     return ConfigurationManager.AppSettings["CityCategoryId"];
+                case "Conditions":
+                    return ConfigurationManager.AppSettings["ConditionCategoryId"];
+                case "OtherType":
+                    return ConfigurationManager.AppSettings["OtherTypeCategoryId"];
             }
             return string.Empty;
         }
@@ -165,21 +184,29 @@ namespace VirtoCommerce.Storefront.Services.Es
         
         private ICategoryTreeConverter GetConverterByPath(string path)
         {
-            if (path.Contains("Tag"))
+            if (path.EndsWith("Tag"))
             {
                 return new TagCategoryTreeConverter();
             }
-            else if (path.Contains("Estatetype"))
+            else if (path.EndsWith("Estatetypes"))
             {
                 return new TypeCategoryTreeConverter();
             }
-            else if (path.Contains("Cities"))
+            else if (path.EndsWith("Cities"))
             {
                 return new CityCategoryTreeConverter();
             }
-            else if (path.Contains("Regions"))
+            else if (path.EndsWith("Regions"))
             {
                 return new RegionCategoryTreeConverter();
+            }
+            else if (path.EndsWith("OtherType"))
+            {
+                return new OtherTypeCategoryTreeConverter();
+            }
+            else if (path.EndsWith("Conditions"))
+            {
+                return new ConditionCategoryTreeConverter();
             }
             return new DefaultCategoryTreeConverter();
         }
