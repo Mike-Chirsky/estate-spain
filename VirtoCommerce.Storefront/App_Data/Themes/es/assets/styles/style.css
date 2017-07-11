@@ -357,9 +357,15 @@ small, .small {
 
 .header_media video
 {
+    left: 50%;
     min-height: 100%;
     min-width: 100%;
     max-width: none;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .header_media .video .entry-tax,
