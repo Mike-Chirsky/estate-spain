@@ -11,7 +11,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
         {
         }
 
-        public Category ToCategory(ConverterContext context, Product product)
+        public virtual Category ToCategory(ConverterContext context, Product product)
         {
             if (context == null)
                 throw new ArgumentNullException("context");

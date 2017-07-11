@@ -1,22 +1,22 @@
-﻿{%- if meta_info_product.h21 -%}
-<h2 class="text-center padding0-15">{{- meta_info_product.h21 -}}</h2>
+﻿{%- if collection.h21 -%}
+<h2 class="text-center padding15-0">{{- meta_info_product.h21 -}}</h2>
 {%- endif -%}
 <div class="header-about header-container">
-  <span>{{-meta_info_product.seotext_up-}}</span>
-  {% if meta_info_product.seotext_down1 or meta_info_product.seotext_down2 or meta_info_product.seotext_down3 %}
+  <span>{{-collection.seotext_up-}}</span>
+  {% if collection.seotext_down1 or collection.seotext_down2 or collection.seotext_down3 %}
   <br/>
   <div class="link-list-about">
     {{-'collection.detail' | t -}}:
-    {%- if meta_info_product.seotext_down1 -%}
-    <a id="advantagesId">{{-meta_info_product.h3_seotext_down1-}}</a>
-    {%- if meta_info_product.h3_seotext_down2 or meta_info_product.h3_seotext_down3 -%},{%- endif -%}
+    {%- if collection.seotext_down1 -%}
+    <a id="advantagesId">{{-collection.h3_seotext_down1-}}</a>
+    {%- if collection.h3_seotext_down2 or collection.h3_seotext_down3 -%},{%- endif -%}
     {% endif %}
-    {%- if meta_info_product.seotext_down2 -%}
-    <a id="approachId">{{-meta_info_product.h3_seotext_down2-}}</a>
-    {%- if meta_info_product.h3_seotext_down3 -%},{%- endif -%}
+    {%- if collection.seotext_down2 -%}
+    <a id="approachId">{{-collection.h3_seotext_down2-}}</a>
+    {%- if collection.h3_seotext_down3 -%},{%- endif -%}
     {% endif %}
-    {%- if meta_info_product.seotext_down3 -%}
-    <a id="coastId">{{-meta_info_product.h3_seotext_down3-}}</a>
+    {%- if collection.seotext_down3 -%}
+    <a id="coastId">{{-collection.h3_seotext_down3-}}</a>
     {% endif %}
   </div> 
   {% endif %}

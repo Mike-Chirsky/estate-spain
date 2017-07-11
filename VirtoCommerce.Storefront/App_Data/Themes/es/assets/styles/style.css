@@ -542,10 +542,10 @@ input.form-control::-moz-placeholder {
     border-top: 1px solid #f0f0f0;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;  
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
     line-height: 0px;
 }
 
@@ -5799,7 +5799,7 @@ listing_actions a{
     /*margin-bottom: 30px;*/
     border: 1px solid #dde4e9;
     border-radius: 3px;
-    min-height: 367px;
+    min-height: 335px;
     position: relative;
     overflow: hidden;
     background-color: #fff;
@@ -10571,6 +10571,14 @@ input[type="checkbox"]:checked:before {
     border-radius: 3px;
     background-color: #fff;
     padding: 15px;
+}
+
+.contactformwrapper [data-name="contact-close"]
+{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
 .contactformwrapper:before{

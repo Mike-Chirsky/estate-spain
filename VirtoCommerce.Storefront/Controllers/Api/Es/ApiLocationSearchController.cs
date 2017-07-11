@@ -26,6 +26,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         [HttpPost]
         public async Task<ActionResult> Search(string search)
         {
+            var oldCurrentStore = WorkContext.CurrentStore;
             WorkContext.CurrentStore = WorkContext.AllStores.FirstOrDefault(x => x.Id == ConfigurationManager.AppSettings["MasterStoreId"]);
             var foundProductsCityTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
@@ -41,7 +42,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             });
 
             await Task.WhenAll(foundProductsCityTask, foundProductsRegionTask);
-
+            WorkContext.CurrentStore = oldCurrentStore;
             var foundProductsCity = foundProductsCityTask.Result;
             var foundProductsRegion = foundProductsRegionTask.Result;
 

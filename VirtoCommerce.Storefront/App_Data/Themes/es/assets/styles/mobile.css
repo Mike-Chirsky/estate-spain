@@ -120,6 +120,7 @@
 	}
 	.sub_footer *
 	{
+		padding: 5px;
 		text-align: center;
 	}
 	.agent_unit {
@@ -302,12 +303,7 @@
 }
 @media (max-width: 540px)
 {
-	.row.product-list
-	{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-}
+	
 @media (max-width: 525px)
 {
 	.blog-item .col-xs-6,

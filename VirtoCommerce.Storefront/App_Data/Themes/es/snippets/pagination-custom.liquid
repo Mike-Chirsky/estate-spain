@@ -1,4 +1,4 @@
-<div class="pagination-container">
+<div class="pagination-container clearfix">
   <ul class="pagination-custom">
     {% if paginate.previous %}
       <li><a href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}">&larr;</a></li>
@@ -34,7 +34,7 @@
       <li><a href="{{ paginate.next.url }}" title="{{ paginate.next.title }}">&rarr;</a></li>
     {% endif %}
   </ul>
-  <div class="social">
+  <!-- <div class="social">
     <ul>
       <li>
         <a href="#"><i class="fa fa-odnoklassniki"></i></a>
@@ -52,5 +52,5 @@
         <a href="#"><i class="fa fa-google-plus"></i></a>
       </li>
     </ul>
-  </div>
+  </div> -->
 </div>

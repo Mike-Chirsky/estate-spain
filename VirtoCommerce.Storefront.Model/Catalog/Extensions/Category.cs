@@ -19,19 +19,12 @@ namespace VirtoCommerce.Storefront.Model.Catalog
 
         public string FullName { get; set; }
 
-        /// <summary>
-        /// Info for seo Region
-        /// </summary>
-        public Product RegionProduct { set; get; }
+        public string Type { set; get; }
 
-        /// <summary>
-        /// Info for seo City
-        /// </summary>
-        public Product CityProduct { set; get; }
+        public string CityUrl { set; get; }
+        public string RegionUrl { set; get; }
+        public string CityName { set; get; }
+        public string RegionName { set; get; }
 
-        /// <summary>
-        /// Info for type product
-        /// </summary>
-        public Product TypeProduct { set; get; }
     }
 }
