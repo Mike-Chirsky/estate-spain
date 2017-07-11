@@ -1628,3 +1628,26 @@ blockquote
 }
 
 /* end slider */
+
+.list-social
+{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    word-spacing: -6px;
+}
+
+.list-social .list-item
+{
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
+    word-spacing: 0;
+}
+
+.list-social .list-link
+{
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+}

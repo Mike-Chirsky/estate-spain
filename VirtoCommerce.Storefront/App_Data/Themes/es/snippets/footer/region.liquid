@@ -1,5 +1,5 @@
 ﻿<div class="region-footer">
-   <div>
+   <div class="row">
      {%- if collection.link_block_left or collection.link_block_right -%}
      {%- if collection.link_block_left -%}
         <div class="col-md-{%-if collection.link_block_left and collection.link_block_right-%}8{%-else-%}12{%-endif-%}">
@@ -17,7 +17,7 @@
         {%- endif -%}
      {%- endif -%}
    </div>
-   <div>
+   <div class="row">
      {%- if collection.link_block_centr or collection.link_block_centr1 -%}
      <div class="col-md-12">
          <div class="block-inner" style="background-image: url({{-collection.link_block_centr_image-}})">

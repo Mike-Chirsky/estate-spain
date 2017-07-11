@@ -1827,6 +1827,12 @@ jQuery(document).ready(function ($) {
         $('.contactformwrapper').toggleClass('hidden');
         contact_footer_starter();
     });
+
+    $('[data-name="contact-close"]').click(function(event){
+        event.preventDefault();
+        $('.contactformwrapper').addClass('hidden');
+        contact_footer_starter();
+    });
          
    
          
