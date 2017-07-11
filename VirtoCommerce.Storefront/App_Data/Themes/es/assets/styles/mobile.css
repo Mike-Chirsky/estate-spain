@@ -120,6 +120,7 @@
 	}
 	.sub_footer *
 	{
+		padding: 5px;
 		text-align: center;
 	}
 	.agent_unit {

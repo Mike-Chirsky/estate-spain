@@ -1,5 +1,5 @@
 ﻿<div class="region-footer">
-   <div>
+   <div class="row">
      {%- if meta_info_product.link_block_left or meta_info_product.link_block_right -%}
      {%- if meta_info_product.link_block_left -%}
         <div class="col-md-{%-if meta_info_product.link_block_left and meta_info_product.link_block_right-%}8{%-else-%}12{%-endif-%}">
@@ -17,7 +17,7 @@
         {%- endif -%}
      {%- endif -%}
    </div>
-   <div>
+   <div class="row">
      {%- if meta_info_product.link_block_centr or meta_info_product.link_block_centr1 -%}
      <div class="col-md-12">
          <div class="block-inner" style="background-image: url({{-meta_info_product.link_block_centr_image-}})">
