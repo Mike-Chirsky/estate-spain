@@ -436,21 +436,14 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         private string GetImageSrcWithTypeCollection(string type)
         {
-            if (Type != "city")
+            var imgUrl = GetImageSrcByType(type);
+            if (string.IsNullOrEmpty(imgUrl))
             {
-                return GetImageSrcByType(type);
+                return GetImageSrcFromParentByType(type);
             }
             else
             {
-                var imgUrl = GetImageSrcByType(type);
-                if (string.IsNullOrEmpty(imgUrl))
-                {
-                    return GetImageSrcFromParentByType(type);
-                }
-                else
-                {
-                    return imgUrl;
-                }
+                return imgUrl;
             }
         }
 
