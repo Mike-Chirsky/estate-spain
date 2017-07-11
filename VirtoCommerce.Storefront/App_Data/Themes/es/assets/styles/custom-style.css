@@ -222,7 +222,7 @@ ul.pagination-custom
     float: left;
     list-style: none;
     align-content: center;
-    margin: 0 0 0 15px;
+    margin: 0 0 30px;
 }
 
 ul.pagination-custom-mobile li,
@@ -462,7 +462,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', end
 {
     border-top: 1px solid #e3e3e3;
     border-bottom: 1px solid #e3e3e3;
-    margin: 0 15px;
+    margin: 0 0 15px;
 }
 .order ul
 {
@@ -516,7 +516,6 @@ body{
 
 .pagination-container .social{
     float: right;
-    padding-right: 15px;
 }
 
 .pagination-container .social ul{
@@ -752,28 +751,35 @@ body{
 }
 
 .region-footer .block-inner ul,
-.city-tails .block-inner ul
+.city-tails .block-inner ul,
+.region-tails .block-inner ul
 {
     list-style: none;
     padding: 15px;
     margin: 0;
 }
 .region-footer .block-inner li,
-.city-tails .block-inner li{
+.city-tails .block-inner li,
+.region-tails .block-inner li
+{
     color: #fff;
     padding: 7px;
 }
 .city-tails .block-inner ul,
-.city-tails .block-inner ul li
+.region-tails .block-inner ul,
+.city-tails .block-inner ul li,
+.region-tails .block-inner ul li
 {
     margin: 0;
     padding: 0;
 }
-.city-tails .block-inner ul + ul
+.city-tails .block-inner ul + ul,
+.region-tails .block-inner ul + ul
 {
     margin: 5px 0 0;
 }
-.city-tails .block-inner ul li
+.city-tails .block-inner ul li,
+.region-tails .block-inner ul li
 {
     padding: 5px 0;
 }
@@ -816,12 +822,6 @@ body{
 /*.region-header,
 .region-footer*/{
     margin: 15px 0;
-    padding: 0 15px;
-}
-
-.product-list
-{
-    margin: 15px 0 0 0;
 }
 
 /*.row.product-list
@@ -1530,6 +1530,10 @@ h2.blog-header
 }
 .margin-top-0{
     margin-top: 0px !important;
+}
+.margin-bot-0
+{
+    margin-bottom: 0 !important;
 }
 .btn-std{
     max-width: 240px;

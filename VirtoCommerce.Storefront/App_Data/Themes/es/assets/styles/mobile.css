@@ -302,12 +302,7 @@
 }
 @media (max-width: 540px)
 {
-	.row.product-list
-	{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-}
+	
 @media (max-width: 525px)
 {
 	.blog-item .col-xs-6,

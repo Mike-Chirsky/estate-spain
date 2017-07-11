@@ -3,7 +3,7 @@
 </div>
 {%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "type_add") -%}
   <div class="row">
-    <h2 class="text-center">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
+    <h2 class="text-center padding15-0">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
   </div>
   {% include 'product-list' %}
 {%endif%}
@@ -34,7 +34,7 @@
 {%- endif -%}
 
 {%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == 'tag' -%}
-  <h2 class="header-name text-center">{{- collection.h2_listing -}}</h2>
+  <h2 class="header-name text-center margin-bot-0">{{- meta_info_product.h2_listing -}}</h2>
   <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
   {% include 'product-list' %}
 {%- endif -%}

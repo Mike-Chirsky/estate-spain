@@ -542,10 +542,10 @@ input.form-control::-moz-placeholder {
     border-top: 1px solid #f0f0f0;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;  
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
     line-height: 0px;
 }
 
