@@ -50,22 +50,29 @@ namespace VirtoCommerce.Storefront.Services.Es
             _language = wc.CurrentLanguage;
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
-
+            // load links for regions
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Conditions"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1=> LoadChildrenFromCategory(t1.Result, "Tags")));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")));
+            /*
             // Step 1. Load Regions
             // Step 1.1 Load Regions/Estatetypes
             // Step 1.2 Load Regions/Estatetypes/Tags
             await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Regions")
                     .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
-                        //.ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")
-                          //  .ContinueWith(t3 => LoadChildrenFromCategory(t3.Result, "OtherType")
-                                .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
-
+                        .ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")
+                            .ContinueWith(t3 => LoadChildrenFromCategory(t3.Result, "OtherType")
+                                .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")))));
+                                */
             // Step 2. Load Cities
-            await LoadCities(_loadedCategory.Categories.Where(x => x.ProductType == "Regions").ToArray())
+            await LoadCities(_seoCategoryDict.Values.Where(x => x.ProductType == "Regions").ToArray())
                     .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
-                        //.ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")
-                          // .ContinueWith(t3 => LoadChildrenFromCategory(t3.Result, "OtherType")
-                                .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
+                        .ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")
+                           .ContinueWith(t3 => LoadChildrenFromCategory(t3.Result, "OtherType")
+                                .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")))));
 
             // Step 2. Load Estatetypes
             await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Estatetypes");
@@ -76,7 +83,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Step 4. Load Conditions
             await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Conditions");
             // Step 5. Load Other type
-            //await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "OtherType");
+            await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "OtherType");
             _lockObject.Release();
             return _loadedCategory;
         }
@@ -191,6 +198,14 @@ namespace VirtoCommerce.Storefront.Services.Es
             else if (path.Contains("Regions"))
             {
                 return new RegionCategoryTreeConverter();
+            }
+            else if (path.Contains("OtherType"))
+            {
+                return new OtherTypeCategoryTreeConverter();
+            }
+            else if (path.Contains("Condition"))
+            {
+                return new ConditionCategoryTreeConverter();
             }
             return new DefaultCategoryTreeConverter();
         }
