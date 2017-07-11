@@ -391,7 +391,6 @@ ul.pagination-custom li.more-page:hover
 
 .header-about
 {
-    padding: 15px;
     line-height: 1.5;
 }
 .header-about .link-list-about a{
@@ -532,11 +531,11 @@ body{
     padding-right: 0px;
 }
 
-.about-footer
+/*.about-footer
 {
     padding-left: 15px;
     padding-right: 15px; 
-}
+}*/
 
 .row.contact-us-footer
 {
@@ -689,7 +688,12 @@ body{
     z-index: 50;
     padding: 30px;
 }
-
+.region-footer .block-inner ul,
+.region-tails .block-inner ul,
+.city-tails .block-inner ul
+{
+    list-style: none;
+}
 .region-footer .block-inner::after,
 .region-tails .block-inner::after,
 .city-tails .block-inner::after {
@@ -712,7 +716,7 @@ body{
 .region-footer .block-inner:hover::after,
 .region-tails .block-inner:hover::after,
 .city-tails .block-inner:hover::after{
-    background: none;
+    background: rgba(0,0,0,.3);
 }
 .region-footer .block-inner > *,
 .region-tails .block-inner > *,
@@ -767,7 +771,7 @@ body{
 }
 .city-tails .block-inner ul + ul
 {
-    margin: 10px 0 0;
+    margin: 5px 0 0;
 }
 .city-tails .block-inner ul li
 {
@@ -855,6 +859,13 @@ body{
     left: -250px;
 }
 
+.about-text .about
+{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
 .product-slider-header {
     display: flex;
     justify-content: flex-end;
@@ -932,7 +943,7 @@ body{
 .block-inner h4,
 .block-inner h5
 {
-    color: #fff;
+    color: inherit;
 }
 .adv-search-1 input[type=text]{
     color: #7f7f7f;

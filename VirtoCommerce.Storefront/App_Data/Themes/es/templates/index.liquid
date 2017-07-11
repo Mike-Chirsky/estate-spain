@@ -1,9 +1,11 @@
-﻿<div class="header_media with_search_6">
-  <div class="video">
-    <video src="//ak1.picdn.net/shutterstock/videos/1047151/preview/stock-footage-relaxing-couch-outside-seen-through-terrace-doors-with-flying-curtains.mp4" autoplay="true" loop="true">
-      <!-- <source src="//ak1.picdn.net/shutterstock/videos/1047151/preview/stock-footage-relaxing-couch-outside-seen-through-terrace-doors-with-flying-curtains.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' /> -->
-    </video>
-    <div class="video-inner">
+﻿<div class="header_media">
+  <div class="header-bg">
+    <div class="header-video">
+      <video src="{{ 'header-video.webm' | assets_url}}" autoplay="true" loop="true">
+        <!-- <source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' /> -->
+      </video>
+    </div>
+    <div class="header-inner">
       <h1 class="entry-tax">
         {{'index.h1.header' | t }}
       </h1>
@@ -11,9 +13,7 @@
         {% include 'filters/short-main-filter' %}
       </div>
     </div>
-    <div class="scroll-btn">
-      <span></span>
-    </div>
+    <a class="scroll-btn"></a>
   </div>
 </div>
 {% include 'filters/short-main-filter-mobile' %}
@@ -45,7 +45,9 @@
          <div class="col-md-4" >
           <div class="block-inner" style="background-image: url({{'images/index/maresme.jpg' | assets_url }})">
               <div class="bottom">
-                  <h3>КОСТА МАРИСМЕ</h3>
+                  <a href="/costa-maresme">
+                    <h3>КОСТА МАРЕСМЕ</h3>
+                  </a>
               </div>
           </div>
          </div>
@@ -81,7 +83,9 @@
          <div class="col-md-4">
           <div class="block-inner"  style="background-image: url({{'images/index/catalonia.jpg' | assets_url }})">
               <div class="bottom">
-                <h3>КАТАЛОНИЯ</h3>
+                <a href="/catalonia">
+                  <h3>КАТАЛОНИЯ</h3>
+                </a>
               </div>
           </div>
          </div>
@@ -106,7 +110,7 @@
                 <li><a href="/kvartiry-apartamenty">ЗЕМЕЛЬНЫЕ УЧАСТКИ</a></li>
               </ul>
               <ul>
-                <li><a href="#">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</a></li>
+                <li><a href="/kommercheskaya/">КОММЕРЧЕСКАЯ НЕДВИЖИМОСТЬ</a></li>
                 <li><a href="#">офисы, рестораны, отели, складские помещения</a></li>
               </ul>
           </div>
@@ -126,7 +130,7 @@
           </div>
          </div>
          <div class="col-md-4">
-          <div class="block-inner"  style="background-image: url({{'images/index/elitnaya.png' | assets_url }})">
+          <div class="block-inner" style="background-image: url({{'images/index/elitnaya.png' | assets_url }})">
               <h3>КОМФОРТНАЯ ЖИЗНЬ <br>У МОРЯ </h3>
               <ul>
                 <li><a href="/ot-bankov">КВАРТИРЫ НА ПОБЕРЕЖЬЕ </a></li>
@@ -138,7 +142,7 @@
    </div>
    <div>
       <div>
-        <h2 class="text-center padding15-0 margin-top-25 no-margin-top-mobile">{{ 'index.info.header' | t }}</h2>
+        <h2 class="text-center padding15-0 no-margin-top-mobile">{{ 'index.info.header' | t }}</h2>
         {% include 'market-block/market-block', market_id: 'main-blog', market_url: 'storefrontapi/market/blog', block_id: 'main-blog' %}
       </div>
       <h2 class="text-center">{{'index.hot-deal.header' | t}}</h2>
@@ -151,9 +155,11 @@
       <h2 class="text-center padding15">{{'index.about.header' | t}}</h2>
       <div>
         <div class="col-md-6 text-center padding-bottom-15">
-          <div>{{ 'index.about.text' | t }}</div>
-          <div class="padding15-0">
-            {{ 'index.about.text2' | t}}
+          <div class="text-left">
+            <div class="padding-bottom-15">{{ 'index.about.text' | t }}</div>
+            <div class="about">
+              {{ 'index.about.text2' | t}}
+            </div>
           </div>
         </div>
         <div class="col-md-6">{{ 'index.about.video' | t }}</div>
@@ -168,9 +174,16 @@
    </div>
    <div class="row">
       <h2 class="text-center padding15">{{'index.price.header' | t}}</h2>
-      <div class="row padding30-0">
-         <div class="col-md-6">{{ 'index.price.col1' | t }}</div>
-         <div class="col-md-6">{{ 'index.price.col2' | t }}</div>
+      <div>
+         <div class="col-md-6">
+          {{ 'index.price.col1' | t }}
+          {{ 'index.price.col2' | t }}
+        </div>
+         <div class="col-md-6">
+           <div class="padding15-0">
+             <img src="{{ 'ceny-index.jpg' | assets_url }}" alt="">
+           </div>
+         </div>
       </div>
    </div>
    {% include 'footer/contact-us' %}

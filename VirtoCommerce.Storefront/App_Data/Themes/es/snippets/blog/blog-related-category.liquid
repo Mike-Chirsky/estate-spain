@@ -2,6 +2,7 @@
     {% if blog.handle != related_category %}
         {% continue %}
     {% endif %}
+    <div class="row news-item">
     {% for item in blog.articles %}
         {% if forloop.index == 5 %}
             {% break %}
@@ -12,4 +13,5 @@
             {% include 'blog/blog-related-item', item %}
         {% endif %}
     {% endfor %}
+    </div>
 {% endfor %}

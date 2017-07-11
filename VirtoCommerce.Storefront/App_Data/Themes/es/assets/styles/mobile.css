@@ -311,7 +311,8 @@
 @media (max-width: 525px)
 {
 	.blog-item .col-xs-6,
-	.custom-slider-mobile .col-xs-6
+	.custom-slider-mobile .col-xs-6,
+	.news-item .col-xs-6
 	{
 		width: 100%;
 	}

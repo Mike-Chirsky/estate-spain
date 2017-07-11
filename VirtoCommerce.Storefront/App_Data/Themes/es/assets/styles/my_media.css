@@ -788,24 +788,29 @@
         display: none;
     }
 
-    .header_media .video
+    .header_media .header-bg
     {
         background: url(../images/header-index.png) no-repeat scroll 50% 0;
         height: 300px;
     }
 
-    .header_media .video::after
+    .header_media .header-bg::after
     {
         display: none;
     }
 
-    .header_media .video-inner
+    .header_media .header-inner
     {
         background: rgba(0,0,0,.5);
         padding: 10px 25px;
     }
 
-    .header_media .video .entry-tax
+    .header_media .header-bg .scroll-btn
+    {
+        display: none;
+    }
+
+    .header_media .header-inner .entry-tax
     {
         margin: 0;
         padding: 0;

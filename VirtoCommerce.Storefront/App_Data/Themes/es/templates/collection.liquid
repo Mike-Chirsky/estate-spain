@@ -1,4 +1,4 @@
-﻿<div class="col-xs-12 col-md-12 breadcrumb_container">
+﻿<div class="breadcrumb_container">
   {% include 'breadcrumb' %} 
 </div>
 {%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "type_add") -%}
@@ -22,7 +22,6 @@
 {%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' -%}
   market
   {% include 'headers/header-name' %}
-  <div class="padding0-15">
   {% case collection.type %}
     {% when 'type_add' %}
       {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/type', block_id: collection.handle %}
@@ -33,7 +32,6 @@
     {% when 'city'%}
       {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/city', block_id: collection.handle %}
   {% endcase%}
-  </div>
 {%- endif -%}
 
 {%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' -%}
@@ -50,9 +48,9 @@
   {% include 'footer/about' %}
 {% endif %}
 {% include 'blog/blog-collection-list' %}
-<div class="padding15">
-  {% include 'footer/contact-us' %}
+<div class="row contact-us-footer">
+{% include 'footer/contact-us' %}
 </div>
-<div class=padding15>
-  {% include 'footer/request-call' %}
+<div class="callback-form">
+{% include 'footer/request-call' %}
 </div>

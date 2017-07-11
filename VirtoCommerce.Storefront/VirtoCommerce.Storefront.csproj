@@ -72,8 +72,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared\LibSassNetProxy.dll</HintPath>
     </Reference>
-    <Reference Include="Markdig, Version=0.7.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Markdig.0.7.2\lib\net40\Markdig.dll</HintPath>
+    <Reference Include="Markdig, Version=0.12.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.12.3\lib\net40\Markdig.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -415,6 +415,7 @@
     <Content Include="App_Data\Themes\es\assets\images\arenda_category_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\bg-pattern.png" />
     <Content Include="App_Data\Themes\es\assets\images\blog_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\ceny-index.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-n.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\costa-blanka-s.jpg" />
@@ -595,6 +596,7 @@
     <Content Include="App_Data\Themes\es\snippets\blog\blog-linked-article.liquid" />
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-product.liquid" />
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
+    <Content Include="App_Data\Themes\es\assets\header-video.webm" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
