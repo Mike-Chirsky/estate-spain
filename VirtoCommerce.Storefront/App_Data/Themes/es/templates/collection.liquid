@@ -15,12 +15,11 @@
   {% include 'headers/region-header' %}
 {%- endif -%}
 
-{%- if collection.type == 'city' -%}
+{%- if collection.type == 'city' or collection.type == 'tag' -%}
   {% include 'headers/city-header' %}
 {%- endif -%}
 
 {%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' -%}
-  market
   {% include 'headers/header-name' %}
   {% case collection.type %}
     {% when 'type_add' %}
@@ -34,14 +33,13 @@
   {% endcase%}
 {%- endif -%}
 
-{%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' -%}
+{%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == 'tag' -%}
   <h2 class="header-name text-center">{{- collection.h2_listing -}}</h2>
   <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
   {% include 'product-list' %}
 {%- endif -%}
 
 {%- if collection.type == 'region' or collection.type == 'type'-%}
-  footer
   {% include 'footer/region' %}
 {%- endif -%}
 {% if collection.handle != 'arenda' %}

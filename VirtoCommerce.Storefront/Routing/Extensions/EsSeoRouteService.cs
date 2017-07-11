@@ -89,6 +89,15 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                                                                                                             workContext.CurrentStore));
                     }
                 }
+                else if (product.CategoryId == ConfigurationManager.AppSettings["TagCategoryId"])
+                {
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "tags",
+                        Value = product.Name
+                    });
+                }
+
                 /*seo = all.FirstOrDefault(x => x.ObjectType == "Category");
                 if (seo == null)
                 {

@@ -34,6 +34,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             collection.CityUrl = category.CityUrl;
             collection.RegionUrl = category.RegionUrl;
             collection.CityName = category.CityName;
+            collection.ParentCollectionImages = category.Parent?.Images.Select(x => x.ToShopifyModel()).ToArray();
             collection.RegionName = category.RegionName;
             return collection;
         }

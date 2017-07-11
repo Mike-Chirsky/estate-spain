@@ -12,6 +12,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
         {
             var category = base.ToCategory(context, product);
             category.SeoPath = product.SeoInfo?.Slug;
+            category.Url = product.SeoInfo?.Slug;
             category.Type = "city";
             category.RegionUrl = context.Parent?.SeoPath;
             category.CityUrl = product.SeoInfo?.Slug;

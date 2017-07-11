@@ -34,28 +34,28 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetImageSrcByType("Header");
+                return GetImageSrcWithTypeCollection("Header");
             }
         }
         public string LinkBlockType1Image
         {
             get
             {
-                return GetImageSrcByType("linkblock-type1");
+                return GetImageSrcWithTypeCollection("linkblock-type1");
             }
         }
         public string LinkBlockType2Image
         {
             get
             {
-                return GetImageSrcByType("linkblock-type2");
+                return GetImageSrcWithTypeCollection("linkblock-type2");
             }
         }
         public string LinkBlockType3Image
         {
             get
             {
-                return GetImageSrcByType("linkblock-type3");
+                return GetImageSrcWithTypeCollection("linkblock-type3");
             }
         }
 
@@ -63,7 +63,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetImageSrcByType("linkblock-right");
+                return GetImageSrcWithTypeCollection("linkblock-right");
             }
         }
 
@@ -71,14 +71,14 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetImageSrcByType("linkblock-left");
+                return GetImageSrcWithTypeCollection("linkblock-left");
             }
         }
         public string LinkBlockCentrImage
         {
             get
             {
-                return GetImageSrcByType("linkblock-centr");
+                return GetImageSrcWithTypeCollection("linkblock-centr");
             }
         }
 
@@ -86,7 +86,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetImageSrcByType("linkblock-centr1");
+                return GetImageSrcWithTypeCollection("linkblock-centr1");
             }
         }
         #endregion
@@ -434,6 +434,26 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         #endregion
 
+        private string GetImageSrcWithTypeCollection(string type)
+        {
+            if (Type != "city")
+            {
+                return GetImageSrcByType(type);
+            }
+            else
+            {
+                var imgUrl = GetImageSrcByType(type);
+                if (string.IsNullOrEmpty(imgUrl))
+                {
+                    return GetImageSrcFromParentByType(type);
+                }
+                else
+                {
+                    return imgUrl;
+                }
+            }
+        }
+
         /// <summary>
         /// Get list filters by group name
         /// </summary>
@@ -462,8 +482,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         private string GetImageSrcByType(string type)
         {
-            var img = Images.FirstOrDefault(x => Path.GetFileName(x.Src)?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false);
-            return img != null ? img.Src : "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
+            return Images.FirstOrDefault(x => Path.GetFileName(x.Src)?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false)?.Src;
+        }
+
+        private string GetImageSrcFromParentByType(string type)
+        {
+            return ParentCollectionImages.FirstOrDefault(x => Path.GetFileName(x.Src)?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false)?.Src;
         }
 
         /// <summary>
@@ -481,7 +505,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         public string Type { set; get; }
         public string ProductType { get; set; }
-
+        public ICollection<Image> ParentCollectionImages { set; get; }
         public string CityUrl { set; get; }
         public string RegionUrl { set; get; }
         public string CityName { set; get; }
