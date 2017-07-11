@@ -688,7 +688,12 @@ body{
     z-index: 50;
     padding: 30px;
 }
-
+.region-footer .block-inner ul,
+.region-tails .block-inner ul,
+.city-tails .block-inner ul
+{
+    list-style: none;
+}
 .region-footer .block-inner::after,
 .region-tails .block-inner::after,
 .city-tails .block-inner::after {
