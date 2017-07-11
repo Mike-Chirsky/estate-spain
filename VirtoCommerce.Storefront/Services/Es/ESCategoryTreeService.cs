@@ -56,12 +56,12 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Step 1.2 Load Regions/Estatetypes/Tags
             await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Regions")
                     .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
-                        .ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Tags")));
+                        .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
 
             // Step 2. Load Cities
-            await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Cities")
-                .ContinueWith(t=> LoadChildrenFromCategory(t.Result, "Estatetypes")
-                    .ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Tags")));
+            await LoadCities(_loadedCategory.Categories.Where(x => x.ProductType == "Regions").ToArray())
+                    .ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes")
+                        .ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags")));
 
             // Step 2. Load Estatetypes
             await LoadChildrenFromCategory(new Category[] { _loadedCategory }, "Estatetypes");
@@ -97,6 +97,27 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
 
             return parents.SelectMany( p => p.Categories).ToArray();
+        }
+
+        private async Task<Category[]> LoadCities(Category[] parents)
+        {
+            var resultCities = await _searchApi.SearchApiModule.SearchProductsAsync(_storeId,
+                new AutoRestClients.SearchApiModuleApi.Models.ProductSearch
+                {
+                    ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo).ToString(),
+                    Outline = ProductTypeToOutline("Cities"),
+                    Take = int.MaxValue,
+                    Skip = 0
+                });
+            foreach (var parent in parents)
+            {
+                var categories = new List<Category>();
+
+                var children = resultCities.Products.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p));
+                categories.AddRange(children);
+                parent.Categories = new MutablePagedList<Category>(categories);
+            }
+            return parents.SelectMany(x => x.Categories).ToArray();
         }
 
         private string ProductTypeToOutline(string productType)
@@ -141,69 +162,85 @@ namespace VirtoCommerce.Storefront.Services.Es
         }
         // TODO: Get data from category product
 
-       /* private void FillInfoPropertyForCategory(string seoPath, Category category)
-        {
-            if (seoPath == null)
-            {
-                throw new ArgumentNullException($"{nameof(seoPath)} is null");
-            }
-            if (category == null)
-            {
-                throw new ArgumentNullException($"{nameof(category)} is null");
-            }
+        /* private void FillInfoPropertyForCategory(string seoPath, Category category)
+         {
+             if (seoPath == null)
+             {
+                 throw new ArgumentNullException($"{nameof(seoPath)} is null");
+             }
+             if (category == null)
+             {
+                 throw new ArgumentNullException($"{nameof(category)} is null");
+             }
 
-            var pathParts = seoPath.Split('/');
+             var pathParts = seoPath.Split('/');
 
-            foreach (var part in pathParts)
-            {
-                var seo = GetAllSeoRecords(part).FirstOrDefault(x => x.ObjectType == "CatalogProduct");
-                var product = _cacheManager.Get($"Product{seo.ObjectId}", "SeoProducts", () => _catalogApi
-                                                                                                .CatalogModuleProducts.GetProductById(seo.ObjectId, ItemResponseGroup.ItemMedium.ToString())
-                                                                                                ?.ToProduct(_language,
-                                                                                                            _currency,
-                                                                                                            _store));
-                category.RegionProduct = product;
-                if (product.CategoryId == ConfigurationManager.AppSettings["RegionCategoryId"])
-                {
-                    category.RegionProduct = product;
-                }
-                else if (product.CategoryId == ConfigurationManager.AppSettings["TypeCategoryId"])
-                {
-                    category.TypeProduct = product;
-                }
-                else if (product.CategoryId == ConfigurationManager.AppSettings["CityCategoryId"])
-                {
-                    category.CityProduct = product;
-                    // link to region
-                    var regionAssociationId = product.Associations.OfType<ProductAssociation>().FirstOrDefault(x => x.Type == "Regions")?.ProductId;
-                    if (!string.IsNullOrEmpty(regionAssociationId))
-                    {
-                        var regionProduct = _cacheManager.Get($"Product{regionAssociationId}", "SeoProducts", () => _catalogApi
-                                                                                                .CatalogModuleProducts.GetProductById(regionAssociationId, ItemResponseGroup.ItemAssociations.ToString())
-                                                                                                ?.ToProduct(_language,
-                                                                                                            _currency,
-                                                                                                            _store));
-                        category.RegionProduct = regionProduct;
-                    }
-                }
-            }
-        }
+             foreach (var part in pathParts)
+             {
+                 var seo = GetAllSeoRecords(part).FirstOrDefault(x => x.ObjectType == "CatalogProduct");
+                 var product = _cacheManager.Get($"Product{seo.ObjectId}", "SeoProducts", () => _catalogApi
+                                                                                                 .CatalogModuleProducts.GetProductById(seo.ObjectId, ItemResponseGroup.ItemMedium.ToString())
+                                                                                                 ?.ToProduct(_language,
+                                                                                                             _currency,
+                                                                                                             _store));
+                 category.RegionProduct = product;
+                 if (product.CategoryId == ConfigurationManager.AppSettings["RegionCategoryId"])
+                 {
+                     category.RegionProduct = product;
+                 }
+                 else if (product.CategoryId == ConfigurationManager.AppSettings["TypeCategoryId"])
+                 {
+                     category.TypeProduct = product;
+                 }
+                 else if (product.CategoryId == ConfigurationManager.AppSettings["CityCategoryId"])
+                 {
+                     category.CityProduct = product;
+                     // link to region
+                     var regionAssociationId = product.Associations.OfType<ProductAssociation>().FirstOrDefault(x => x.Type == "Regions")?.ProductId;
+                     if (!string.IsNullOrEmpty(regionAssociationId))
+                     {
+                         var regionProduct = _cacheManager.Get($"Product{regionAssociationId}", "SeoProducts", () => _catalogApi
+                                                                                                 .CatalogModuleProducts.GetProductById(regionAssociationId, ItemResponseGroup.ItemAssociations.ToString())
+                                                                                                 ?.ToProduct(_language,
+                                                                                                             _currency,
+                                                                                                             _store));
+                         category.RegionProduct = regionProduct;
+                     }
+                 }
+             }
+         }
 
-        protected virtual IList<coreDto.SeoInfo> GetAllSeoRecords(string slug)
-        {
-            var result = new List<coreDto.SeoInfo>();
+         protected virtual IList<coreDto.SeoInfo> GetAllSeoRecords(string slug)
+         {
+             var result = new List<coreDto.SeoInfo>();
 
-            if (!string.IsNullOrEmpty(slug))
-            {
-                var apiResult = _cacheManager.Get(string.Join(":", "Commerce.GetSeoInfoBySlug", slug), "ApiRegion", () => _coreApi.Commerce.GetSeoInfoBySlug(slug));
-                result.AddRange(apiResult);
-            }
+             if (!string.IsNullOrEmpty(slug))
+             {
+                 var apiResult = _cacheManager.Get(string.Join(":", "Commerce.GetSeoInfoBySlug", slug), "ApiRegion", () => _coreApi.Commerce.GetSeoInfoBySlug(slug));
+                 result.AddRange(apiResult);
+             }
 
-            return result;
-        }*/
+             return result;
+         }*/
 
         private ICategoryTreeConverter GetConverterByPath(string path)
         {
+            if (path.Contains("/Tag"))
+            {
+                return new TagCategoryTreeConverter();
+            }
+            else if (path.Contains("Estatetype"))
+            {
+                return new TypeCategoryTreeConverter();
+            }
+            else if (path.Contains("Cities"))
+            {
+                return new CityCategoryTreeConverter();
+            }
+            else if (path.Contains("Regions"))
+            {
+                return new RegionCategoryTreeConverter();
+            }
             return new DefaultCategoryTreeConverter();
         }
 

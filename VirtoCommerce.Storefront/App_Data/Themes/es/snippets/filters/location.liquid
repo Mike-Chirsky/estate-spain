@@ -1,13 +1,13 @@
 ﻿<div class="dropdown form-control location-search">
     <input  data-ignore
-            class="{%- if region_product or city_product -%}selected{%- endif -%}" 
+            class="{%- if collection.current_region_filter or collection.current_city_filter -%}selected{%- endif -%}" 
             type="text" 
             placeholder="{{'filter.location-placeholder' | t }}"
             id="location-value"
             value="{%- include 'location-name' -%}">
     <input  data-ignore 
-            data-city="{%- if city_product -%}{{- city_product.title -}} {%- endif -%}" 
-            data-region="{%- if region_product -%}{{- region_product.title -}} {%- endif -%}"
+            data-city="{%- if collection.current_city_filter -%}{{- collection.current_city_filter.value -}} {%- endif -%}" 
+            data-region="{%- if collection.current_region_filter -%}{{- collection.current_region_filter.value -}} {%- endif -%}"
             type="hidden" 
             id="location-path"
             value="{%- include 'location-path' -%}">

@@ -1049,7 +1049,11 @@
     <Compile Include="Services\ContentBlobProviders\FileSystemContentBlobProvider.cs" />
     <Compile Include="Services\CustomerServiceImpl.cs" />
     <Compile Include="Services\Es\ConverterContext.cs" />
+    <Compile Include="Services\Es\Converters\CityCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\DefaultCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\RegionCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\TagCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\TypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ESCategoryTreeService.cs" />
     <Compile Include="Services\Es\ICategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ICategoryTreeService.cs" />

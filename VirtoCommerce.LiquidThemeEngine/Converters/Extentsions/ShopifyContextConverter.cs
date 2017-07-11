@@ -14,20 +14,6 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
         public override ShopifyThemeWorkContext ToLiquidContext(WorkContext workContext, IStorefrontUrlBuilder urlBuilder)
         {
             var result = base.ToLiquidContext(workContext, urlBuilder);
-            if (workContext.RegionProduct != null)
-            {
-                result.RegionProduct = workContext.RegionProduct.ToShopifyModel();
-            }
-
-            if (workContext.CityProduct != null)
-            {
-                result.CityProduct = workContext.CityProduct.ToShopifyModel();
-            }
-
-            if (workContext.TypeProduct != null)
-            {
-                result.TypeProduct = workContext.TypeProduct.ToShopifyModel();
-            }
             if (workContext.QueryString.AllKeys.FirstOrDefault(x => x.Equals("from_filter", StringComparison.InvariantCultureIgnoreCase)) != null)
             {
                 result.FromFilter = true;

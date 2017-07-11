@@ -32,20 +32,21 @@
 </div>
 {% else %}
 <div class="header_media with_search_6">
-    <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{meta_info_product.header_image}})">
+    <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{collection.header_image}})">
       <div class="description-header">
          <h1 class="entry-title entry-tax">
-            
-            {%- if type == null or (region_product == null and city_product == null) -%}
-                {{- meta_info_product.h1-}}
-            {%- else -%}
-                {{- meta_info_product.h11-}}&nbsp;{{ 'on' | t }}
-                {%- if region_product != null -%}
-                    {{region_product.title}}
-                {%- elseif city_product != null -%}
-                    {{city_product.title}}
-                {%- endif -%}
+            {% if collection.h1 == null %}
+                {{ collection.full_name }}
+            {% else %}
+                {%- if collection.type == null or collection.type == 'type' -%}
+                    {{- collection.h1 -}}
+                {%- else -%}
+                    {{- collection.h11-}}&nbsp;{{ 'on' | t }}
+                    {{ collection.title }}
+                {% endif %}
             {% endif %}
+            
+            
          </h1>
          <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %}&nbsp;{{'objects' | t }} </div>
       </div>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,236 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         #endregion
 
         public TagCollection CurrentTagCollection { set; get; }
+
+        #region Images
+        public string HeaderImage
+        {
+            get
+            {
+                return GetImageSrcByType("Header");
+            }
+        }
+        public string LinkBlockType1Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type1");
+            }
+        }
+        public string LinkBlockType2Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type2");
+            }
+        }
+        public string LinkBlockType3Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-type3");
+            }
+        }
+
+        public string LinkBlockRightImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-right");
+            }
+        }
+
+        public string LinkBlockLeftImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-left");
+            }
+        }
+        public string LinkBlockCentrImage
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-centr");
+            }
+        }
+
+        public string LinkBlockCentr1Image
+        {
+            get
+            {
+                return GetImageSrcByType("linkblock-centr1");
+            }
+        }
+        #endregion
+
+        #region Info property
+        public string H1
+        {
+            get
+            {
+                return GetPropertyByName("h1")?.Value;
+            }
+        }
+        public string H11
+        {
+            get
+            {
+                return GetPropertyByName("h1-1")?.Value;
+            }
+        }
+        public string H2Listing
+        {
+            get
+            {
+                return GetPropertyByName("h2-listing")?.Value;
+            }
+        }
+        public string H2Tip
+        {
+            get
+            {
+                return GetPropertyByName("h2-tip")?.Value;
+            }
+        }
+        public string H21
+        {
+            get
+            {
+                return GetPropertyByName("h2-1")?.Value;
+            }
+        }
+        public string H3SeotextDown1
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down1")?.Value;
+            }
+        }
+        public string H3SeotextDown2
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down2")?.Value;
+            }
+        }
+        public string H3SeotextDown3
+        {
+            get
+            {
+                return GetPropertyByName("h3-seotext-down3")?.Value;
+            }
+        }
+        public string SeotextUp
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-up");
+            }
+        }
+
+        public string SeotextDown1
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down1");
+            }
+        }
+
+        public string SeotextDown2
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down2");
+            }
+        }
+
+        public string SeotextDown3
+        {
+            get
+            {
+                return GetDescriptionByType("seotext-down3");
+            }
+        }
+
+        public string LinkBlockType1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type1");
+            }
+        }
+        public string LinkBlockType2
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type2");
+            }
+        }
+        public string LinkBlockType3
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-type3");
+            }
+        }
+
+        public string LinkBlockRight
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-right");
+            }
+        }
+
+        public string LinkBlockLeft
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-left");
+            }
+        }
+        public string LinkBlockCentr
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-centr");
+            }
+        }
+
+        public string LinkBlockCentr1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-centr1");
+            }
+        }
+
+        public string InfoBlockListing1
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing1");
+            }
+        }
+
+        public string InfoBlockListing2
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing2");
+            }
+        }
+
+        public string InfoBlockListing3
+        {
+            get
+            {
+                return GetDescriptionByType("linkblock-listing3");
+            }
+        }
+
+        #endregion
 
         #region Current filters select
 
@@ -216,5 +447,44 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
             return AllTags.Where(x => x.GroupName.Equals(groupName, StringComparison.InvariantCultureIgnoreCase)).ToList();
         }
+
+        /// <summary>
+        /// Get description content by description type
+        /// </summary>
+        private string GetDescriptionByType(string type)
+        {
+            if (string.IsNullOrEmpty(type))
+            {
+                return string.Empty;
+            }
+            return Descriptions.FirstOrDefault(x => type.Equals(x.Type, StringComparison.InvariantCultureIgnoreCase))?.Content;
+        }
+
+        private string GetImageSrcByType(string type)
+        {
+            var img = Images.FirstOrDefault(x => Path.GetFileName(x.Src)?.StartsWith(type, StringComparison.InvariantCultureIgnoreCase) ?? false);
+            return img != null ? img.Src : "http://wpresidence.net/wp-content/uploads/2015/11/file112128225584523-980x777.jpg";
+        }
+
+        /// <summary>
+        /// Get property by name
+        /// </summary>
+        private ProductProperty GetPropertyByName(string propertyName)
+        {
+            return Properties.FirstOrDefault(x => x.Name.Equals(propertyName, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        public ICollection<ProductProperty> Properties { get; set; }
+
+        public Descriptions Descriptions { get; set; }
+        public string FullName { get; internal set; }
+
+        public string Type { set; get; }
+        public string ProductType { get; set; }
+
+        public string CityUrl { set; get; }
+        public string RegionUrl { set; get; }
+        public string CityName { set; get; }
+        public string RegionName { set; get; }
     }
 }

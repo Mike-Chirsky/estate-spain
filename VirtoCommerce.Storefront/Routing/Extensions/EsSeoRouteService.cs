@@ -37,7 +37,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
             }
 
             var pathParts = seoPath.Trim('/').Split('/');
-
+            // TODO: Move fill terms to Tree service
             foreach (var part in pathParts)
             {
                 var all = GetAllSeoRecords(part);
@@ -57,7 +57,6 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 }
                 if (product.CategoryId == ConfigurationManager.AppSettings["RegionCategoryId"])
                 {
-                    workContext.RegionProduct = product;
                     workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
                     {
                         Name = "region",
@@ -66,7 +65,6 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 }
                 else if (product.CategoryId == ConfigurationManager.AppSettings["TypeCategoryId"])
                 {
-                    workContext.TypeProduct = product;
                     workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
                     {
                         Name = "estatetype",
@@ -75,7 +73,6 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 }
                 else if (product.CategoryId == ConfigurationManager.AppSettings["CityCategoryId"])
                 {
-                    workContext.CityProduct = product;
                     workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
                     {
                         Name = "city",
@@ -90,7 +87,6 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                                                                                                 ?.ToProduct(workContext.CurrentLanguage,
                                                                                                             workContext.CurrentCurrency,
                                                                                                             workContext.CurrentStore));
-                        workContext.RegionProduct = regionProduct;
                     }
                 }
                 /*seo = all.FirstOrDefault(x => x.ObjectType == "Category");
