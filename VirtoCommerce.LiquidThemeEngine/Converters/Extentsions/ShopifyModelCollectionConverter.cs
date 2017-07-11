@@ -16,6 +16,26 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             var collection = base.ToLiquidCollection(category, workContext);
             collection.CurrentTagCollection = new TagCollection(
                         workContext.CurrentProductSearchCriteria.Terms.Select(t => ToLiquidTag(t)).ToList());
+            if (category.Properties != null)
+            {
+                collection.Properties = category.Properties.Select(x => x.ToShopifyModel()).ToList();
+            }
+            if (category.Descriptions != null)
+            {
+                collection.Descriptions = new Descriptions(category.Descriptions.Select(x => new Description
+                {
+                    Content = x.Value,
+                    Type = x.ReviewType
+                }));
+            }
+            collection.Type = category.Type;
+            collection.ProductType = category.ProductType;
+            collection.FullName = category.FullName;
+            collection.CityUrl = category.CityUrl;
+            collection.RegionUrl = category.RegionUrl;
+            collection.CityName = category.CityName;
+            collection.ParentCollectionImages = category.Parent?.Images.Select(x => x.ToShopifyModel()).ToArray();
+            collection.RegionName = category.RegionName;
             return collection;
         }
     }

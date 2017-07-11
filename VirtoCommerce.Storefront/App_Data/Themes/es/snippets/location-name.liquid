@@ -1,11 +1,11 @@
-﻿{%- if city_product -%}
-    {{- city_product.title -}}
+﻿{%- if collection.city_name -%}
+    {{- collection.city_name -}}
 {%- endif -%}
-{%- if region_product -%}
-    {%- if city_product -%}
+{%- if collection.region_name -%}
+    {%- if collection.city_name -%}
         {{- ', ' -}}
     {%- endif -%}
-    {{- region_product.title -}}
+    {{- collection.region_name -}}
 {%- endif -%}
 {%- if keyword != null -%}
     {{- keyword -}}

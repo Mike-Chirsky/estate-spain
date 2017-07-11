@@ -1,5 +1,5 @@
-﻿{%- if region_product and city_product == null -%}
-    {{- region_product.handle -}}
+﻿{%- if collection.region_url and collection.city_url == null -%}
+    {{- collection.region_url -}}
 {%- else -%}
-    {{- city_product.handle -}}
+    {{- collection.city_url -}}
 {%- endif -%}
