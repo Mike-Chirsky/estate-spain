@@ -1016,7 +1016,8 @@ h2.blog-header
     float: none;
 }
 
-.download-handbook-container div a:hover
+.download-handbook-container div a:hover,
+.download-handbook-container div a:focus
 {
     color: #fff;
 }

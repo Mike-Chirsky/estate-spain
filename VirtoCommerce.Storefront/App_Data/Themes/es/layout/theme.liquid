@@ -162,32 +162,59 @@
             {% if template contains 'search' or template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
             <main class="container content_wrapper" role="main">
                 {{ content_for_layout }}
-                <h2 class="text-center padding15-0">Поделиться</h2>
-                <ul class="list-social">
-                  <li class="list-item">
-                    <a href="#" class="list-link">
-                      <i class="list-ico fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="list-item">
-                    <a href="#" class="list-link">
-                      <i class="list-ico fa fa-vk"></i>
-                    </a>
-                  </li>
-                  <li class="list-item">
-                    <a href="#" class="list-link">
-                      <i class="list-ico fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-item">
-                    <a href="#" class="list-link">
-                      <i class="list-ico fa fa-google-plus"></i>
-                    </a>
-                  </li>
-                </ul>
+                <div class="padding15-0">
+                  <h4 class="text-center margin-bot-0">Поделиться</h4>
+                  <ul class="list-social">
+                    <li class="list-item">
+                      <a href="#" class="list-link">
+                        <i class="list-ico fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#" class="list-link">
+                        <i class="list-ico fa fa-vk"></i>
+                      </a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#" class="list-link">
+                        <i class="list-ico fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-item">
+                      <a href="#" class="list-link">
+                        <i class="list-ico fa fa-google-plus"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
             </main>
             {% else %}
             {{ content_for_layout }}
+            <div class="padding15-0">
+              <h4 class="text-center margin-bot-0">Поделиться</h4>
+              <ul class="list-social">
+                <li class="list-item">
+                  <a href="#" class="list-link">
+                    <i class="list-ico fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-link">
+                    <i class="list-ico fa fa-vk"></i>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-link">
+                    <i class="list-ico fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="#" class="list-link">
+                    <i class="list-ico fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
             {% endif %}
          </div>
         <script type="text/javascript">
