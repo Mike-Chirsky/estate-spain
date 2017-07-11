@@ -2,18 +2,16 @@
     {% if blog.handle != related_category %}
         {% continue %}
     {% endif %}
+    <div class="row">
     {% for item in blog.articles %}
         {% if forloop.index == 5 %}
             {% break %}
         {% endif %}
         {% if forloop.index == 4 %}
-            <div class="row blog-item">
-                {% include 'blog/blog-related-item', item, add_class: 'display-mobile' %}
-            </div>
+            {% include 'blog/blog-related-item', item, add_class: 'display-mobile' %}
         {% else %}
-            <div class="row blog-item">
-                {% include 'blog/blog-related-item', item %}
-            </div>
+            {% include 'blog/blog-related-item', item %}
         {% endif %}
     {% endfor %}
+    </div>
 {% endfor %}
