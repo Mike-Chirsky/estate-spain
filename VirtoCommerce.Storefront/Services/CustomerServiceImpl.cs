@@ -123,7 +123,7 @@ namespace VirtoCommerce.Storefront.Services
             var workContext = _workContextFactory();
             var criteria = new customerDto.MembersSearchCriteria
             {
-                Keyword = keyword,
+                SearchPhrase = keyword,
                 DeepSearch = true,
                 Skip = (pageNumber - 1) * pageSize,
                 Take = pageSize

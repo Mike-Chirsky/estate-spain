@@ -443,10 +443,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// This method used to upload files on local disk storage in special uploads
-        /// folder
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -570,9 +566,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Search asset folders and blobs
-        /// </summary>
         /// <param name='folderUrl'>
         /// </param>
         /// <param name='keyword'>
@@ -715,17 +708,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Upload assets to the folder
-        /// </summary>
-        /// <remarks>
-        /// Request body can contain multiple files.
-        /// </remarks>
         /// <param name='folderUrl'>
-        /// Parent folder url (relative or absolute).
         /// </param>
         /// <param name='url'>
-        /// Url for uploaded remote resource (optional)
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -872,9 +857,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete blobs by urls
-        /// </summary>
         /// <param name='urls'>
         /// </param>
         /// <param name='customHeaders'>
@@ -1006,9 +988,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Create new blob folder
-        /// </summary>
         /// <param name='folder'>
         /// </param>
         /// <param name='customHeaders'>
@@ -1143,10 +1122,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class AssetsExtensions
     {
-            /// <summary>
-            /// This method used to upload files on local disk storage in special uploads
-            /// folder
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1155,10 +1130,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IAssets)s).UploadAssetToLocalFileSystemAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// This method used to upload files on local disk storage in special uploads
-            /// folder
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1173,9 +1144,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Search asset folders and blobs
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1188,9 +1156,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IAssets)s).SearchAssetItemsAsync(folderUrl, keyword), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Search asset folders and blobs
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1209,40 +1174,24 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Upload assets to the folder
-            /// </summary>
-            /// <remarks>
-            /// Request body can contain multiple files.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='folderUrl'>
-            /// Parent folder url (relative or absolute).
             /// </param>
             /// <param name='url'>
-            /// Url for uploaded remote resource (optional)
             /// </param>
             public static System.Collections.Generic.IList<BlobInfo> UploadAsset(this IAssets operations, string folderUrl, string url = default(string))
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IAssets)s).UploadAssetAsync(folderUrl, url), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Upload assets to the folder
-            /// </summary>
-            /// <remarks>
-            /// Request body can contain multiple files.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='folderUrl'>
-            /// Parent folder url (relative or absolute).
             /// </param>
             /// <param name='url'>
-            /// Url for uploaded remote resource (optional)
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -1255,9 +1204,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Delete blobs by urls
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1268,9 +1214,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IAssets)s).DeleteBlobsAsync(urls), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete blobs by urls
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1284,9 +1227,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.DeleteBlobsWithHttpMessagesAsync(urls, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Create new blob folder
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1297,9 +1237,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IAssets)s).CreateBlobFolderAsync(folder), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Create new blob folder
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -1328,10 +1265,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IAssets
     {
-        /// <summary>
-        /// This method used to upload files on local disk storage in special
-        /// uploads folder
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -1345,9 +1278,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<BlobInfo>>> UploadAssetToLocalFileSystemWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Search asset folders and blobs
-        /// </summary>
         /// <param name='folderUrl'>
         /// </param>
         /// <param name='keyword'>
@@ -1365,17 +1295,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<AssetListItem>>> SearchAssetItemsWithHttpMessagesAsync(string folderUrl = default(string), string keyword = default(string), System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Upload assets to the folder
-        /// </summary>
-        /// <remarks>
-        /// Request body can contain multiple files.
-        /// </remarks>
         /// <param name='folderUrl'>
-        /// Parent folder url (relative or absolute).
         /// </param>
         /// <param name='url'>
-        /// Url for uploaded remote resource (optional)
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -1393,9 +1315,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<BlobInfo>>> UploadAssetWithHttpMessagesAsync(string folderUrl, string url = default(string), System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete blobs by urls
-        /// </summary>
         /// <param name='urls'>
         /// </param>
         /// <param name='customHeaders'>
@@ -1411,9 +1330,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> DeleteBlobsWithHttpMessagesAsync(System.Collections.Generic.IList<string> urls, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Create new blob folder
-        /// </summary>
         /// <param name='folder'>
         /// </param>
         /// <param name='customHeaders'>
@@ -1468,9 +1384,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Get object types which support dynamic properties
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -1594,9 +1507,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get dynamic properties registered for object type
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='customHeaders'>
@@ -1731,9 +1641,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Add new dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='property'>
@@ -1881,9 +1788,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Update existing dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2018,9 +1922,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2142,9 +2043,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get dictionary items
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2287,13 +2185,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Add or update dictionary items
-        /// </summary>
-        /// <remarks>
-        /// Fill item ID to update existing item or leave it empty to create a new
-        /// item.
-        /// </remarks>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2428,15 +2319,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete dictionary items
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
         /// </param>
         /// <param name='ids'>
-        /// IDs of dictionary items to delete.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -2595,9 +2482,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class DynamicPropertiesExtensions
     {
-            /// <summary>
-            /// Get object types which support dynamic properties
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2606,9 +2490,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).GetObjectTypesAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get object types which support dynamic properties
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2623,9 +2504,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get dynamic properties registered for object type
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2636,9 +2514,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).GetPropertiesAsync(typeName), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get dynamic properties registered for object type
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2655,9 +2530,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Add new dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2670,9 +2542,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).CreatePropertyAsync(typeName, property), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Add new dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2691,9 +2560,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Update existing dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2708,9 +2574,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).UpdatePropertyAsync(typeName, propertyId, property), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Update existing dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2728,9 +2591,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.UpdatePropertyWithHttpMessagesAsync(typeName, propertyId, property, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Delete dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2743,9 +2603,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).DeletePropertyAsync(typeName, propertyId), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete dynamic property
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2761,9 +2618,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.DeletePropertyWithHttpMessagesAsync(typeName, propertyId, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get dictionary items
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2776,9 +2630,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).GetDictionaryItemsAsync(typeName, propertyId), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get dictionary items
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2797,13 +2648,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Add or update dictionary items
-            /// </summary>
-            /// <remarks>
-            /// Fill item ID to update existing item or leave it empty to create a new
-            /// item.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2818,13 +2662,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).SaveDictionaryItemsAsync(typeName, propertyId, items), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Add or update dictionary items
-            /// </summary>
-            /// <remarks>
-            /// Fill item ID to update existing item or leave it empty to create a new
-            /// item.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2842,9 +2679,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.SaveDictionaryItemsWithHttpMessagesAsync(typeName, propertyId, items, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Delete dictionary items
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2853,16 +2687,12 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             /// <param name='propertyId'>
             /// </param>
             /// <param name='ids'>
-            /// IDs of dictionary items to delete.
             /// </param>
             public static void DeleteDictionaryItem(this IDynamicProperties operations, string typeName, string propertyId, System.Collections.Generic.IList<string> ids)
             {
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IDynamicProperties)s).DeleteDictionaryItemAsync(typeName, propertyId, ids), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete dictionary items
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -2871,7 +2701,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             /// <param name='propertyId'>
             /// </param>
             /// <param name='ids'>
-            /// IDs of dictionary items to delete.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -2896,9 +2725,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IDynamicProperties
     {
-        /// <summary>
-        /// Get object types which support dynamic properties
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -2912,9 +2738,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<string>>> GetObjectTypesWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get dynamic properties registered for object type
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='customHeaders'>
@@ -2933,9 +2756,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<DynamicProperty>>> GetPropertiesWithHttpMessagesAsync(string typeName, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Add new dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='property'>
@@ -2956,9 +2776,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<DynamicProperty>> CreatePropertyWithHttpMessagesAsync(string typeName, DynamicProperty property, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Update existing dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2978,9 +2795,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> UpdatePropertyWithHttpMessagesAsync(string typeName, string propertyId, DynamicProperty property, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete dynamic property
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -2998,9 +2812,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> DeletePropertyWithHttpMessagesAsync(string typeName, string propertyId, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get dictionary items
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -3021,13 +2832,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<DynamicPropertyDictionaryItem>>> GetDictionaryItemsWithHttpMessagesAsync(string typeName, string propertyId, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Add or update dictionary items
-        /// </summary>
-        /// <remarks>
-        /// Fill item ID to update existing item or leave it empty to create a
-        /// new item.
-        /// </remarks>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
@@ -3047,15 +2851,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> SaveDictionaryItemsWithHttpMessagesAsync(string typeName, string propertyId, System.Collections.Generic.IList<DynamicPropertyDictionaryItem> items, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete dictionary items
-        /// </summary>
         /// <param name='typeName'>
         /// </param>
         /// <param name='propertyId'>
         /// </param>
         /// <param name='ids'>
-        /// IDs of dictionary items to delete.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -3109,11 +2909,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Get background job status
-        /// </summary>
         /// <param name='id'>
-        /// Job ID.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -3263,28 +3059,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class JobsExtensions
     {
-            /// <summary>
-            /// Get background job status
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Job ID.
             /// </param>
             public static Job GetStatus(this IJobs operations, string id)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IJobs)s).GetStatusAsync(id), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get background job status
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Job ID.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -3312,11 +3100,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IJobs
     {
-        /// <summary>
-        /// Get background job status
-        /// </summary>
         /// <param name='id'>
-        /// Job ID.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -3373,9 +3157,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Return all available locales
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -3499,6 +3280,129 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
+        /// <param name='customHeaders'>
+        /// Headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="System.Exception">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.SerializationException">
+        /// Thrown when unable to deserialize the response
+        /// </exception>
+        /// <return>
+        /// A response object containing the response body and response headers.
+        /// </return>
+        public async System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<string>>> GetRegionalFormatsWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // Tracing
+            bool _shouldTrace = Microsoft.Rest.ServiceClientTracing.IsEnabled;
+            string _invocationId = null;
+            if (_shouldTrace)
+            {
+                _invocationId = Microsoft.Rest.ServiceClientTracing.NextInvocationId.ToString();
+                System.Collections.Generic.Dictionary<string, object> tracingParameters = new System.Collections.Generic.Dictionary<string, object>();
+                tracingParameters.Add("cancellationToken", cancellationToken);
+                Microsoft.Rest.ServiceClientTracing.Enter(_invocationId, this, "GetRegionalFormats", tracingParameters);
+            }
+            // Construct URL
+            var _baseUrl = this.Client.BaseUri.AbsoluteUri;
+            var _url = new System.Uri(new System.Uri(_baseUrl + (_baseUrl.EndsWith("/") ? "" : "/")), "api/platform/localization/regionalformats").ToString();
+            // Create HTTP transport objects
+            System.Net.Http.HttpRequestMessage _httpRequest = new System.Net.Http.HttpRequestMessage();
+            System.Net.Http.HttpResponseMessage _httpResponse = null;
+            _httpRequest.Method = new System.Net.Http.HttpMethod("GET");
+            _httpRequest.RequestUri = new System.Uri(_url);
+            // Set Headers
+            if (customHeaders != null)
+            {
+                foreach(var _header in customHeaders)
+                {
+                    if (_httpRequest.Headers.Contains(_header.Key))
+                    {
+                        _httpRequest.Headers.Remove(_header.Key);
+                    }
+                    _httpRequest.Headers.TryAddWithoutValidation(_header.Key, _header.Value);
+                }
+            }
+
+            // Serialize Request
+            string _requestContent = null;
+            // Set Credentials
+            if (this.Client.Credentials != null)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                await this.Client.Credentials.ProcessHttpRequestAsync(_httpRequest, cancellationToken).ConfigureAwait(false);
+            }
+            // Send Request
+            if (_shouldTrace)
+            {
+                Microsoft.Rest.ServiceClientTracing.SendRequest(_invocationId, _httpRequest);
+            }
+            cancellationToken.ThrowIfCancellationRequested();
+            _httpResponse = await this.Client.HttpClient.SendAsync(_httpRequest, cancellationToken).ConfigureAwait(false);
+            if (_shouldTrace)
+            {
+                Microsoft.Rest.ServiceClientTracing.ReceiveResponse(_invocationId, _httpResponse);
+            }
+            System.Net.HttpStatusCode _statusCode = _httpResponse.StatusCode;
+            cancellationToken.ThrowIfCancellationRequested();
+            string _responseContent = null;
+            if (!_httpResponse.IsSuccessStatusCode)
+            {
+                var ex = new System.Exception(string.Format("Operation returned an invalid status code '{0}'", _statusCode));
+                if (_httpResponse.Content != null) {
+                    _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                }
+                else {
+                    _responseContent = string.Empty;
+                }
+                if (!string.IsNullOrEmpty(_responseContent)){
+                    ex = new System.Exception(ex.Message +"\r\n"+ _responseContent);
+                }
+                var aB = _requestContent;
+                if (_shouldTrace)
+                {
+                    Microsoft.Rest.ServiceClientTracing.Error(_invocationId, ex);
+                }
+                _httpRequest.Dispose();
+                if (_httpResponse != null)
+                {
+                    _httpResponse.Dispose();
+                }
+                throw ex;
+            }
+            // Create Result
+            var _result = new Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<string>>();
+            _result.Request = _httpRequest;
+            _result.Response = _httpResponse;
+            // Deserialize Response
+            if ((int)_statusCode == 200)
+            {
+                _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                try
+                {
+                    _result.Body = Microsoft.Rest.Serialization.SafeJsonConvert.DeserializeObject<System.Collections.Generic.IList<string>>(_responseContent, this.Client.DeserializationSettings);
+                }
+                catch (Newtonsoft.Json.JsonException ex)
+                {
+                    _httpRequest.Dispose();
+                    if (_httpResponse != null)
+                    {
+                        _httpResponse.Dispose();
+                    }
+                    throw new Microsoft.Rest.SerializationException("Unable to deserialize the response.", _responseContent, ex);
+                }
+            }
+            if (_shouldTrace)
+            {
+                Microsoft.Rest.ServiceClientTracing.Exit(_invocationId, _result);
+            }
+            return _result;
+        }
+
     }
 }
 // Code generated by Microsoft (R) AutoRest Code Generator 0.17.0.0
@@ -3515,9 +3419,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class LocalizationExtensions
     {
-            /// <summary>
-            /// Return all available locales
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -3526,9 +3427,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ILocalization)s).GetLocalesAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Return all available locales
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -3538,6 +3436,28 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             public static async System.Threading.Tasks.Task<System.Collections.Generic.IList<string>> GetLocalesAsync(this ILocalization operations, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
             {
                 using (var _result = await operations.GetLocalesWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
+                {
+                    return _result.Body;
+                }
+            }
+
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            public static System.Collections.Generic.IList<string> GetRegionalFormats(this ILocalization operations)
+            {
+                return System.Threading.Tasks.Task.Factory.StartNew(s => ((ILocalization)s).GetRegionalFormatsAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
+            }
+
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async System.Threading.Tasks.Task<System.Collections.Generic.IList<string>> GetRegionalFormatsAsync(this ILocalization operations, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+            {
+                using (var _result = await operations.GetRegionalFormatsWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -3558,9 +3478,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface ILocalization
     {
-        /// <summary>
-        /// Return all available locales
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -3574,6 +3491,19 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<string>>> GetLocalesWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="System.Exception">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.SerializationException">
+        /// Thrown when unable to deserialize the response
+        /// </exception>
+        System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<string>>> GetRegionalFormatsWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
     }
 }
 // Code generated by Microsoft (R) AutoRest Code Generator 0.17.0.0
@@ -3613,9 +3543,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Reload  modules
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -3718,9 +3645,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get installed modules
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -3844,11 +3768,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get all dependent modules for module
-        /// </summary>
         /// <param name='moduleDescriptors'>
-        /// modules descriptors
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -3987,11 +3907,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Returns a flat expanded  list of modules that depend on passed modules
-        /// </summary>
         /// <param name='moduleDescriptors'>
-        /// modules descriptors
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -4130,9 +4046,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Upload module package for installation or update
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -4256,11 +4169,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Install modules
-        /// </summary>
         /// <param name='modules'>
-        /// modules for install
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -4399,11 +4308,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Uninstall module
-        /// </summary>
         /// <param name='modules'>
-        /// modules
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -4542,9 +4447,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Restart web application
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -4647,9 +4549,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Auto-install modules with specified groups
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -4789,9 +4688,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class ModulesExtensions
     {
-            /// <summary>
-            /// Reload  modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4800,9 +4696,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).ReloadModulesAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Reload  modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4814,9 +4707,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.ReloadModulesWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get installed modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4825,9 +4715,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).GetModulesAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get installed modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4842,28 +4729,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get all dependent modules for module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='moduleDescriptors'>
-            /// modules descriptors
             /// </param>
             public static System.Collections.Generic.IList<ModuleDescriptor> GetDependingModules(this IModules operations, System.Collections.Generic.IList<ModuleDescriptor> moduleDescriptors)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).GetDependingModulesAsync(moduleDescriptors), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get all dependent modules for module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='moduleDescriptors'>
-            /// modules descriptors
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -4876,28 +4755,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Returns a flat expanded  list of modules that depend on passed modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='moduleDescriptors'>
-            /// modules descriptors
             /// </param>
             public static System.Collections.Generic.IList<ModuleDescriptor> GetMissingDependencies(this IModules operations, System.Collections.Generic.IList<ModuleDescriptor> moduleDescriptors)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).GetMissingDependenciesAsync(moduleDescriptors), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Returns a flat expanded  list of modules that depend on passed modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='moduleDescriptors'>
-            /// modules descriptors
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -4910,9 +4781,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Upload module package for installation or update
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4921,9 +4789,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).UploadModuleArchiveAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Upload module package for installation or update
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -4938,28 +4803,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Install modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='modules'>
-            /// modules for install
             /// </param>
             public static ModulePushNotification InstallModules(this IModules operations, System.Collections.Generic.IList<ModuleDescriptor> modules)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).InstallModulesAsync(modules), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Install modules
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='modules'>
-            /// modules for install
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -4972,28 +4829,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Uninstall module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='modules'>
-            /// modules
             /// </param>
             public static ModulePushNotification UninstallModule(this IModules operations, System.Collections.Generic.IList<ModuleDescriptor> modules)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).UninstallModuleAsync(modules), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Uninstall module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='modules'>
-            /// modules
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -5006,9 +4855,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Restart web application
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -5017,9 +4863,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).RestartAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Restart web application
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -5031,9 +4874,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.RestartWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Auto-install modules with specified groups
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -5042,9 +4882,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IModules)s).TryToAutoInstallModulesAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Auto-install modules with specified groups
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -5074,9 +4911,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IModules
     {
-        /// <summary>
-        /// Reload  modules
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -5087,9 +4921,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when the operation returned an invalid status code
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> ReloadModulesWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get installed modules
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -5103,11 +4934,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<ModuleDescriptor>>> GetModulesWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get all dependent modules for module
-        /// </summary>
         /// <param name='moduleDescriptors'>
-        /// modules descriptors
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -5125,12 +4952,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<ModuleDescriptor>>> GetDependingModulesWithHttpMessagesAsync(System.Collections.Generic.IList<ModuleDescriptor> moduleDescriptors, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Returns a flat expanded  list of modules that depend on passed
-        /// modules
-        /// </summary>
         /// <param name='moduleDescriptors'>
-        /// modules descriptors
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -5148,9 +4970,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<ModuleDescriptor>>> GetMissingDependenciesWithHttpMessagesAsync(System.Collections.Generic.IList<ModuleDescriptor> moduleDescriptors, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Upload module package for installation or update
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -5164,11 +4983,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ModuleDescriptor>> UploadModuleArchiveWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Install modules
-        /// </summary>
         /// <param name='modules'>
-        /// modules for install
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -5186,11 +5001,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ModulePushNotification>> InstallModulesWithHttpMessagesAsync(System.Collections.Generic.IList<ModuleDescriptor> modules, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Uninstall module
-        /// </summary>
         /// <param name='modules'>
-        /// modules
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -5208,9 +5019,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ModulePushNotification>> UninstallModuleWithHttpMessagesAsync(System.Collections.Generic.IList<ModuleDescriptor> modules, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Restart web application
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -5221,9 +5029,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when the operation returned an invalid status code
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> RestartWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Auto-install modules with specified groups
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -5276,12 +5081,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Get all registered notification types
-        /// </summary>
-        /// <remarks>
-        /// Get all registered notification types in platform
-        /// </remarks>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -5539,11 +5338,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete notification template
-        /// </summary>
         /// <param name='id'>
-        /// Template id
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -5656,28 +5451,13 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get notification template
-        /// </summary>
-        /// <remarks>
-        /// Get notification template by notification type, objectId, objectTypeId and
-        /// language. Object id and object type id - params of object, that
-        /// initialize creating of
-        /// template. By default object id and object type id =
-        /// "Platform". For example for store with id = "SampleStore", objectId =
-        /// "SampleStore", objectTypeId = "Store".
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type of template
         /// </param>
         /// <param name='objectId'>
-        /// Object id of template
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id of template
         /// </param>
         /// <param name='language'>
-        /// Locale of template
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -5834,11 +5614,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Update notification template
-        /// </summary>
         /// <param name='notificationTemplate'>
-        /// Notification template
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -5956,25 +5732,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get notification templates
-        /// </summary>
-        /// <remarks>
-        /// Get all notification templates by notification type, objectId,
-        /// objectTypeId. Object id and object type id - params of object, that
-        /// initialize creating of
-        /// template. By default object id and object type id =
-        /// "Platform". For example for store with id = "SampleStore", objectId =
-        /// "SampleStore", objectTypeId = "Store".
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type of template
         /// </param>
         /// <param name='objectId'>
-        /// Object id of template
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id of template
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6126,15 +5888,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get testing parameters
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification properties, that defined in notification
-        /// class, this properties used in notification template.
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6268,17 +6022,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get rendered notification content
-        /// </summary>
-        /// <remarks>
-        /// Method returns rendered content, that based on notification template.
-        /// Template for rendering chosen by type, objectId, objectTypeId, language.
-        /// Parameters for template may be prepared by the method of
-        /// getTestingParameters.
-        /// </remarks>
         /// <param name='request'>
-        /// Test notification request
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6417,19 +6161,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Sending test notification
-        /// </summary>
-        /// <remarks>
-        /// Method sending notification, that based on notification template. Template
-        /// for rendering chosen by type, objectId, objectTypeId, language.
-        /// Parameters for template may be prepared by the method of
-        /// getTestingParameters. Method returns string. If sending finished with
-        /// success status
-        /// this string is empty, otherwise string contains error message.
-        /// </remarks>
         /// <param name='request'>
-        /// Test notification request
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6568,26 +6300,13 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get notification journal for object
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification journal page with array of notification, that
-        /// was send, sending or will be send in future. Result contains total count,
-        /// that can be used
-        /// for paging.
-        /// </remarks>
         /// <param name='objectId'>
-        /// Object id
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id
         /// </param>
         /// <param name='start'>
-        /// Page setting start
         /// </param>
         /// <param name='count'>
-        /// Page setting count
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6736,20 +6455,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get all notification journal
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification journal page with array of notification, that
-        /// was send, sending or will be send in future. Result contains total count,
-        /// that can be used
-        /// for paging.
-        /// </remarks>
         /// <param name='start'>
-        /// Page setting start
         /// </param>
         /// <param name='count'>
-        /// Page setting count
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -6883,11 +6591,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get sending notification
-        /// </summary>
         /// <param name='id'>
-        /// Sending notification id
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -7021,11 +6725,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Stop sending notification
-        /// </summary>
         /// <param name='ids'>
-        /// Stop sending notification ids
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -7159,12 +6859,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class NotificationsExtensions
     {
-            /// <summary>
-            /// Get all registered notification types
-            /// </summary>
-            /// <remarks>
-            /// Get all registered notification types in platform
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -7173,12 +6867,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetNotificationsAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get all registered notification types
-            /// </summary>
-            /// <remarks>
-            /// Get all registered notification types in platform
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -7219,28 +6907,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Delete notification template
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Template id
             /// </param>
             public static void DeleteNotificationTemplate(this INotifications operations, string id)
             {
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).DeleteNotificationTemplateAsync(id), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete notification template
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Template id
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7250,62 +6930,32 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.DeleteNotificationTemplateWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get notification template
-            /// </summary>
-            /// <remarks>
-            /// Get notification template by notification type, objectId, objectTypeId and
-            /// language. Object id and object type id - params of object, that
-            /// initialize creating of
-            /// template. By default object id and object type id =
-            /// "Platform". For example for store with id = "SampleStore", objectId =
-            /// "SampleStore", objectTypeId = "Store".
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type of template
             /// </param>
             /// <param name='objectId'>
-            /// Object id of template
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id of template
             /// </param>
             /// <param name='language'>
-            /// Locale of template
             /// </param>
             public static NotificationTemplate GetNotificationTemplate(this INotifications operations, string type, string objectId = default(string), string objectTypeId = default(string), string language = default(string))
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetNotificationTemplateAsync(type, objectId, objectTypeId, language), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get notification template
-            /// </summary>
-            /// <remarks>
-            /// Get notification template by notification type, objectId, objectTypeId and
-            /// language. Object id and object type id - params of object, that
-            /// initialize creating of
-            /// template. By default object id and object type id =
-            /// "Platform". For example for store with id = "SampleStore", objectId =
-            /// "SampleStore", objectTypeId = "Store".
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type of template
             /// </param>
             /// <param name='objectId'>
-            /// Object id of template
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id of template
             /// </param>
             /// <param name='language'>
-            /// Locale of template
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7318,28 +6968,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Update notification template
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='notificationTemplate'>
-            /// Notification template
             /// </param>
             public static void UpdateNotificationTemplate(this INotifications operations, NotificationTemplate notificationTemplate)
             {
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).UpdateNotificationTemplateAsync(notificationTemplate), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Update notification template
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='notificationTemplate'>
-            /// Notification template
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7349,56 +6991,28 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.UpdateNotificationTemplateWithHttpMessagesAsync(notificationTemplate, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get notification templates
-            /// </summary>
-            /// <remarks>
-            /// Get all notification templates by notification type, objectId,
-            /// objectTypeId. Object id and object type id - params of object, that
-            /// initialize creating of
-            /// template. By default object id and object type id =
-            /// "Platform". For example for store with id = "SampleStore", objectId =
-            /// "SampleStore", objectTypeId = "Store".
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type of template
             /// </param>
             /// <param name='objectId'>
-            /// Object id of template
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id of template
             /// </param>
             public static System.Collections.Generic.IList<NotificationTemplate> GetNotificationTemplates(this INotifications operations, string type, string objectId = default(string), string objectTypeId = default(string))
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetNotificationTemplatesAsync(type, objectId, objectTypeId), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get notification templates
-            /// </summary>
-            /// <remarks>
-            /// Get all notification templates by notification type, objectId,
-            /// objectTypeId. Object id and object type id - params of object, that
-            /// initialize creating of
-            /// template. By default object id and object type id =
-            /// "Platform". For example for store with id = "SampleStore", objectId =
-            /// "SampleStore", objectTypeId = "Store".
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type of template
             /// </param>
             /// <param name='objectId'>
-            /// Object id of template
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id of template
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7411,36 +7025,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get testing parameters
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification properties, that defined in notification
-            /// class, this properties used in notification template.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type
             /// </param>
             public static System.Collections.Generic.IList<NotificationParameter> GetTestingParameters(this INotifications operations, string type)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetTestingParametersAsync(type), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get testing parameters
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification properties, that defined in notification
-            /// class, this properties used in notification template.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// Notification type
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7453,40 +7051,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get rendered notification content
-            /// </summary>
-            /// <remarks>
-            /// Method returns rendered content, that based on notification template.
-            /// Template for rendering chosen by type, objectId, objectTypeId, language.
-            /// Parameters for template may be prepared by the method of
-            /// getTestingParameters.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Test notification request
             /// </param>
             public static RenderNotificationContentResult RenderNotificationContent(this INotifications operations, TestNotificationRequest request)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).RenderNotificationContentAsync(request), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get rendered notification content
-            /// </summary>
-            /// <remarks>
-            /// Method returns rendered content, that based on notification template.
-            /// Template for rendering chosen by type, objectId, objectTypeId, language.
-            /// Parameters for template may be prepared by the method of
-            /// getTestingParameters.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Test notification request
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7499,44 +7077,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Sending test notification
-            /// </summary>
-            /// <remarks>
-            /// Method sending notification, that based on notification template. Template
-            /// for rendering chosen by type, objectId, objectTypeId, language.
-            /// Parameters for template may be prepared by the method of
-            /// getTestingParameters. Method returns string. If sending finished with
-            /// success status
-            /// this string is empty, otherwise string contains error message.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Test notification request
             /// </param>
             public static SendNotificationResult SendNotification(this INotifications operations, TestNotificationRequest request)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).SendNotificationAsync(request), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Sending test notification
-            /// </summary>
-            /// <remarks>
-            /// Method sending notification, that based on notification template. Template
-            /// for rendering chosen by type, objectId, objectTypeId, language.
-            /// Parameters for template may be prepared by the method of
-            /// getTestingParameters. Method returns string. If sending finished with
-            /// success status
-            /// this string is empty, otherwise string contains error message.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Test notification request
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7549,58 +7103,32 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get notification journal for object
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification journal page with array of notification, that
-            /// was send, sending or will be send in future. Result contains total count,
-            /// that can be used
-            /// for paging.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='objectId'>
-            /// Object id
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id
             /// </param>
             /// <param name='start'>
-            /// Page setting start
             /// </param>
             /// <param name='count'>
-            /// Page setting count
             /// </param>
             public static SearchNotificationsResult GetObjectNotificationJournal(this INotifications operations, string objectId, string objectTypeId, int start, int count)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetObjectNotificationJournalAsync(objectId, objectTypeId, start, count), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get notification journal for object
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification journal page with array of notification, that
-            /// was send, sending or will be send in future. Result contains total count,
-            /// that can be used
-            /// for paging.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='objectId'>
-            /// Object id
             /// </param>
             /// <param name='objectTypeId'>
-            /// Object type id
             /// </param>
             /// <param name='start'>
-            /// Page setting start
             /// </param>
             /// <param name='count'>
-            /// Page setting count
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7613,46 +7141,24 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get all notification journal
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification journal page with array of notification, that
-            /// was send, sending or will be send in future. Result contains total count,
-            /// that can be used
-            /// for paging.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='start'>
-            /// Page setting start
             /// </param>
             /// <param name='count'>
-            /// Page setting count
             /// </param>
             public static SearchNotificationsResult GetNotificationJournal(this INotifications operations, int start, int count)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetNotificationJournalAsync(start, count), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get all notification journal
-            /// </summary>
-            /// <remarks>
-            /// Method returns notification journal page with array of notification, that
-            /// was send, sending or will be send in future. Result contains total count,
-            /// that can be used
-            /// for paging.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='start'>
-            /// Page setting start
             /// </param>
             /// <param name='count'>
-            /// Page setting count
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7665,28 +7171,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get sending notification
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Sending notification id
             /// </param>
             public static Notification GetNotification(this INotifications operations, string id)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).GetNotificationAsync(id), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get sending notification
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Sending notification id
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7699,28 +7197,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Stop sending notification
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='ids'>
-            /// Stop sending notification ids
             /// </param>
             public static void StopSendingNotifications(this INotifications operations, System.Collections.Generic.IList<string> ids)
             {
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((INotifications)s).StopSendingNotificationsAsync(ids), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Stop sending notification
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='ids'>
-            /// Stop sending notification ids
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -7745,12 +7235,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface INotifications
     {
-        /// <summary>
-        /// Get all registered notification types
-        /// </summary>
-        /// <remarks>
-        /// Get all registered notification types in platform
-        /// </remarks>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -7782,11 +7266,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<NotificationTemplate>> GetNotificationTemplateByIdWithHttpMessagesAsync(string id, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete notification template
-        /// </summary>
         /// <param name='id'>
-        /// Template id
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7801,28 +7281,13 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> DeleteNotificationTemplateWithHttpMessagesAsync(string id, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get notification template
-        /// </summary>
-        /// <remarks>
-        /// Get notification template by notification type, objectId,
-        /// objectTypeId and language. Object id and object type id - params
-        /// of object, that initialize creating of
-        /// template. By default object id and object type id =
-        /// "Platform". For example for store with id = "SampleStore",
-        /// objectId = "SampleStore", objectTypeId = "Store".
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type of template
         /// </param>
         /// <param name='objectId'>
-        /// Object id of template
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id of template
         /// </param>
         /// <param name='language'>
-        /// Locale of template
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7840,11 +7305,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<NotificationTemplate>> GetNotificationTemplateWithHttpMessagesAsync(string type, string objectId = default(string), string objectTypeId = default(string), string language = default(string), System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Update notification template
-        /// </summary>
         /// <param name='notificationTemplate'>
-        /// Notification template
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7859,25 +7320,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> UpdateNotificationTemplateWithHttpMessagesAsync(NotificationTemplate notificationTemplate, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get notification templates
-        /// </summary>
-        /// <remarks>
-        /// Get all notification templates by notification type, objectId,
-        /// objectTypeId. Object id and object type id - params of object,
-        /// that initialize creating of
-        /// template. By default object id and object type id =
-        /// "Platform". For example for store with id = "SampleStore",
-        /// objectId = "SampleStore", objectTypeId = "Store".
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type of template
         /// </param>
         /// <param name='objectId'>
-        /// Object id of template
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id of template
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7895,15 +7342,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<NotificationTemplate>>> GetNotificationTemplatesWithHttpMessagesAsync(string type, string objectId = default(string), string objectTypeId = default(string), System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get testing parameters
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification properties, that defined in
-        /// notification class, this properties used in notification template.
-        /// </remarks>
         /// <param name='type'>
-        /// Notification type
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7921,18 +7360,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<NotificationParameter>>> GetTestingParametersWithHttpMessagesAsync(string type, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get rendered notification content
-        /// </summary>
-        /// <remarks>
-        /// Method returns rendered content, that based on notification
-        /// template. Template for rendering chosen by type, objectId,
-        /// objectTypeId, language.
-        /// Parameters for template may be prepared by the method
-        /// of getTestingParameters.
-        /// </remarks>
         /// <param name='request'>
-        /// Test notification request
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7950,21 +7378,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<RenderNotificationContentResult>> RenderNotificationContentWithHttpMessagesAsync(TestNotificationRequest request, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Sending test notification
-        /// </summary>
-        /// <remarks>
-        /// Method sending notification, that based on notification template.
-        /// Template for rendering chosen by type, objectId, objectTypeId,
-        /// language.
-        /// Parameters for template may be prepared by the method
-        /// of getTestingParameters. Method returns string. If sending
-        /// finished with success status
-        /// this string is empty, otherwise string contains error
-        /// message.
-        /// </remarks>
         /// <param name='request'>
-        /// Test notification request
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -7982,26 +7396,13 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SendNotificationResult>> SendNotificationWithHttpMessagesAsync(TestNotificationRequest request, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get notification journal for object
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification journal page with array of
-        /// notification, that was send, sending or will be send in future.
-        /// Result contains total count, that can be used
-        /// for paging.
-        /// </remarks>
         /// <param name='objectId'>
-        /// Object id
         /// </param>
         /// <param name='objectTypeId'>
-        /// Object type id
         /// </param>
         /// <param name='start'>
-        /// Page setting start
         /// </param>
         /// <param name='count'>
-        /// Page setting count
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8019,20 +7420,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SearchNotificationsResult>> GetObjectNotificationJournalWithHttpMessagesAsync(string objectId, string objectTypeId, int start, int count, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get all notification journal
-        /// </summary>
-        /// <remarks>
-        /// Method returns notification journal page with array of
-        /// notification, that was send, sending or will be send in future.
-        /// Result contains total count, that can be used
-        /// for paging.
-        /// </remarks>
         /// <param name='start'>
-        /// Page setting start
         /// </param>
         /// <param name='count'>
-        /// Page setting count
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8047,11 +7437,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SearchNotificationsResult>> GetNotificationJournalWithHttpMessagesAsync(int start, int count, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get sending notification
-        /// </summary>
         /// <param name='id'>
-        /// Sending notification id
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8069,11 +7455,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<Notification>> GetNotificationWithHttpMessagesAsync(string id, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Stop sending notification
-        /// </summary>
         /// <param name='ids'>
-        /// Stop sending notification ids
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8127,9 +7509,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Get current user profile
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -8253,9 +7632,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Update current user profile
-        /// </summary>
         /// <param name='userProfile'>
         /// </param>
         /// <param name='customHeaders'>
@@ -8390,9 +7766,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class ProfilesExtensions
     {
-            /// <summary>
-            /// Get current user profile
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8401,9 +7774,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IProfiles)s).GetCurrentUserProfileAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get current user profile
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8418,9 +7788,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Update current user profile
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8431,9 +7798,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((IProfiles)s).UpdateCurrentUserProfileAsync(userProfile), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Update current user profile
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8462,9 +7826,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IProfiles
     {
-        /// <summary>
-        /// Get current user profile
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -8478,9 +7839,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<UserProfile>> GetCurrentUserProfileWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Update current user profile
-        /// </summary>
         /// <param name='userProfile'>
         /// </param>
         /// <param name='customHeaders'>
@@ -8535,11 +7893,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Search push notifications
-        /// </summary>
         /// <param name='criteria'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -8678,9 +8032,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Mark all notifications as read
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -8820,28 +8171,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class PushNotificationOperationsExtensions
     {
-            /// <summary>
-            /// Search push notifications
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='criteria'>
-            /// Search parameters.
             /// </param>
             public static PushNotificationSearchResult Search(this IPushNotificationOperations operations, PushNotificationSearchCriteria criteria)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IPushNotificationOperations)s).SearchAsync(criteria), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Search push notifications
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='criteria'>
-            /// Search parameters.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -8854,9 +8197,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Mark all notifications as read
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8865,9 +8205,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((IPushNotificationOperations)s).MarkAllAsReadAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Mark all notifications as read
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -8897,11 +8234,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface IPushNotificationOperations
     {
-        /// <summary>
-        /// Search push notifications
-        /// </summary>
         /// <param name='criteria'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -8919,9 +8252,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<PushNotificationSearchResult>> SearchWithHttpMessagesAsync(PushNotificationSearchCriteria criteria, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Mark all notifications as read
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -8974,15 +8304,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Sign in with user name and password
-        /// </summary>
-        /// <remarks>
-        /// Verifies provided credentials and if succeeded returns full user details,
-        /// otherwise returns 401 Unauthorized.
-        /// </remarks>
         /// <param name='model'>
-        /// User credentials.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -9121,9 +8443,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Sign out
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -9226,9 +8545,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get current user details
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -9352,9 +8668,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get all registered permissions
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -9478,9 +8791,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Add a new role or update an existing role
-        /// </summary>
         /// <param name='role'>
         /// </param>
         /// <param name='customHeaders'>
@@ -9620,11 +8930,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Search roles by keyword
-        /// </summary>
         /// <param name='request'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -9763,9 +9069,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete roles by ID
-        /// </summary>
         /// <param name='ids'>
         /// </param>
         /// <param name='customHeaders'>
@@ -9897,9 +9200,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get role by ID
-        /// </summary>
         /// <param name='roleId'>
         /// </param>
         /// <param name='customHeaders'>
@@ -10034,14 +9334,8 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Generate new API key
-        /// </summary>
-        /// <remarks>
-        /// Generates new key but does not save it.
-        /// </remarks>
         /// <param name='type'>
-        /// . Possible values include: 'Undefined', 'Hmac', 'Simple'
+        /// Possible values include: 'Undefined', 'Hmac', 'Simple'
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -10183,11 +9477,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Update user details by user ID
-        /// </summary>
         /// <param name='user'>
-        /// User details.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -10326,11 +9616,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Search users by keyword
-        /// </summary>
         /// <param name='request'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -10469,11 +9755,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Delete users by name
-        /// </summary>
         /// <param name='names'>
-        /// An array of user names.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -10604,9 +9886,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get user details by user name
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='customHeaders'>
@@ -10741,18 +10020,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Check specified user has passed permissions in specified scope
-        /// </summary>
         /// <param name='userName'>
-        /// security account name
         /// </param>
         /// <param name='permissions'>
-        /// checked permissions Example: ?permissions=read&amp;amp;permissions=write
         /// </param>
         /// <param name='scopes'>
-        /// security bounded scopes. Read mode:
-        /// http://docs.virtocommerce.com/display/vc2devguide/Working+with+platform+security
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -10929,9 +10201,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get user details by user ID
-        /// </summary>
         /// <param name='id'>
         /// </param>
         /// <param name='customHeaders'>
@@ -11066,11 +10335,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Create new user
-        /// </summary>
         /// <param name='user'>
-        /// User details.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -11209,13 +10474,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Change password
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='changePassword'>
-        /// Old and new passwords.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -11360,13 +10621,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Reset password
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='resetPassword'>
-        /// New password.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -11527,36 +10784,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class SecurityExtensions
     {
-            /// <summary>
-            /// Sign in with user name and password
-            /// </summary>
-            /// <remarks>
-            /// Verifies provided credentials and if succeeded returns full user details,
-            /// otherwise returns 401 Unauthorized.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='model'>
-            /// User credentials.
             /// </param>
             public static ApplicationUserExtended Login(this ISecurity operations, UserLogin model)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).LoginAsync(model), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Sign in with user name and password
-            /// </summary>
-            /// <remarks>
-            /// Verifies provided credentials and if succeeded returns full user details,
-            /// otherwise returns 401 Unauthorized.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='model'>
-            /// User credentials.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11569,9 +10810,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Sign out
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11580,9 +10818,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).LogoutAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Sign out
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11594,9 +10829,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.LogoutWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get current user details
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11605,9 +10837,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GetCurrentUserAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get current user details
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11622,9 +10851,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get all registered permissions
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11633,9 +10859,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GetPermissionsAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get all registered permissions
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11650,9 +10873,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Add a new role or update an existing role
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11663,9 +10883,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).UpdateRoleAsync(role), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Add a new role or update an existing role
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11682,28 +10899,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Search roles by keyword
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Search parameters.
             /// </param>
             public static RoleSearchResponse SearchRoles(this ISecurity operations, RoleSearchRequest request)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).SearchRolesAsync(request), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Search roles by keyword
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Search parameters.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11716,9 +10925,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Delete roles by ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11729,9 +10935,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).DeleteRolesAsync(ids), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete roles by ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11745,9 +10948,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.DeleteRolesWithHttpMessagesAsync(ids, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get role by ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11758,9 +10958,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GetRoleAsync(roleId), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get role by ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11777,34 +10974,22 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Generate new API key
-            /// </summary>
-            /// <remarks>
-            /// Generates new key but does not save it.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// . Possible values include: 'Undefined', 'Hmac', 'Simple'
+            /// Possible values include: 'Undefined', 'Hmac', 'Simple'
             /// </param>
             public static ApiAccount GenerateNewApiAccount(this ISecurity operations, string type)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GenerateNewApiAccountAsync(type), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Generate new API key
-            /// </summary>
-            /// <remarks>
-            /// Generates new key but does not save it.
-            /// </remarks>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='type'>
-            /// . Possible values include: 'Undefined', 'Hmac', 'Simple'
+            /// Possible values include: 'Undefined', 'Hmac', 'Simple'
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11817,28 +11002,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Update user details by user ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='user'>
-            /// User details.
             /// </param>
             public static SecurityResult UpdateAsync(this ISecurity operations, ApplicationUserExtended user)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).UpdateAsyncAsync(user), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Update user details by user ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='user'>
-            /// User details.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11851,28 +11028,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Search users by keyword
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Search parameters.
             /// </param>
             public static UserSearchResponse SearchUsersAsync(this ISecurity operations, UserSearchRequest request)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).SearchUsersAsyncAsync(request), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Search users by keyword
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='request'>
-            /// Search parameters.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11885,28 +11054,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Delete users by name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='names'>
-            /// An array of user names.
             /// </param>
             public static void DeleteAsync(this ISecurity operations, System.Collections.Generic.IList<string> names)
             {
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).DeleteAsyncAsync(names), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Delete users by name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='names'>
-            /// An array of user names.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11916,9 +11077,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.DeleteAsyncWithHttpMessagesAsync(names, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get user details by user name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11929,9 +11087,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GetUserByNameAsync(userName), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get user details by user name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -11948,42 +11103,28 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Check specified user has passed permissions in specified scope
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
-            /// security account name
             /// </param>
             /// <param name='permissions'>
-            /// checked permissions Example: ?permissions=read&amp;amp;permissions=write
             /// </param>
             /// <param name='scopes'>
-            /// security bounded scopes. Read mode:
-            /// http://docs.virtocommerce.com/display/vc2devguide/Working+with+platform+security
             /// </param>
             public static CheckPermissionsResult UserHasAnyPermission(this ISecurity operations, string userName, System.Collections.Generic.IList<string> permissions, System.Collections.Generic.IList<string> scopes)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).UserHasAnyPermissionAsync(userName, permissions, scopes), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Check specified user has passed permissions in specified scope
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
-            /// security account name
             /// </param>
             /// <param name='permissions'>
-            /// checked permissions Example: ?permissions=read&amp;amp;permissions=write
             /// </param>
             /// <param name='scopes'>
-            /// security bounded scopes. Read mode:
-            /// http://docs.virtocommerce.com/display/vc2devguide/Working+with+platform+security
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -11996,9 +11137,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get user details by user ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -12009,9 +11147,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).GetUserByIdAsync(id), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get user details by user ID
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -12028,28 +11163,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Create new user
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='user'>
-            /// User details.
             /// </param>
             public static SecurityResult CreateAsync(this ISecurity operations, ApplicationUserExtended user)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).CreateAsyncAsync(user), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Create new user
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='user'>
-            /// User details.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -12062,32 +11189,24 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Change password
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
             /// </param>
             /// <param name='changePassword'>
-            /// Old and new passwords.
             /// </param>
             public static SecurityResult ChangePassword(this ISecurity operations, string userName, ChangePasswordInfo changePassword)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).ChangePasswordAsync(userName, changePassword), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Change password
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
             /// </param>
             /// <param name='changePassword'>
-            /// Old and new passwords.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -12100,32 +11219,24 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Reset password
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
             /// </param>
             /// <param name='resetPassword'>
-            /// New password.
             /// </param>
             public static SecurityResult ResetPassword(this ISecurity operations, string userName, ResetPasswordInfo resetPassword)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISecurity)s).ResetPasswordAsync(userName, resetPassword), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Reset password
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='userName'>
             /// </param>
             /// <param name='resetPassword'>
-            /// New password.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -12153,15 +11264,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface ISecurity
     {
-        /// <summary>
-        /// Sign in with user name and password
-        /// </summary>
-        /// <remarks>
-        /// Verifies provided credentials and if succeeded returns full user
-        /// details, otherwise returns 401 Unauthorized.
-        /// </remarks>
         /// <param name='model'>
-        /// User credentials.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12179,9 +11282,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ApplicationUserExtended>> LoginWithHttpMessagesAsync(UserLogin model, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Sign out
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -12192,9 +11292,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when the operation returned an invalid status code
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> LogoutWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get current user details
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -12208,9 +11305,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ApplicationUserExtended>> GetCurrentUserWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get all registered permissions
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -12224,9 +11318,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<Permission>>> GetPermissionsWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Add a new role or update an existing role
-        /// </summary>
         /// <param name='role'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12245,11 +11336,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<Role>> UpdateRoleWithHttpMessagesAsync(Role role, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Search roles by keyword
-        /// </summary>
         /// <param name='request'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12267,9 +11354,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<RoleSearchResponse>> SearchRolesWithHttpMessagesAsync(RoleSearchRequest request, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete roles by ID
-        /// </summary>
         /// <param name='ids'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12285,9 +11369,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> DeleteRolesWithHttpMessagesAsync(System.Collections.Generic.IList<string> ids, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get role by ID
-        /// </summary>
         /// <param name='roleId'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12306,14 +11387,8 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<Role>> GetRoleWithHttpMessagesAsync(string roleId, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Generate new API key
-        /// </summary>
-        /// <remarks>
-        /// Generates new key but does not save it.
-        /// </remarks>
         /// <param name='type'>
-        /// . Possible values include: 'Undefined', 'Hmac', 'Simple'
+        /// Possible values include: 'Undefined', 'Hmac', 'Simple'
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12331,11 +11406,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ApiAccount>> GenerateNewApiAccountWithHttpMessagesAsync(string type, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Update user details by user ID
-        /// </summary>
         /// <param name='user'>
-        /// User details.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12353,11 +11424,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SecurityResult>> UpdateAsyncWithHttpMessagesAsync(ApplicationUserExtended user, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Search users by keyword
-        /// </summary>
         /// <param name='request'>
-        /// Search parameters.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12375,11 +11442,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<UserSearchResponse>> SearchUsersAsyncWithHttpMessagesAsync(UserSearchRequest request, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Delete users by name
-        /// </summary>
         /// <param name='names'>
-        /// An array of user names.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12394,9 +11457,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> DeleteAsyncWithHttpMessagesAsync(System.Collections.Generic.IList<string> names, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get user details by user name
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12415,19 +11475,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ApplicationUserExtended>> GetUserByNameWithHttpMessagesAsync(string userName, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Check specified user has passed permissions in specified scope
-        /// </summary>
         /// <param name='userName'>
-        /// security account name
         /// </param>
         /// <param name='permissions'>
-        /// checked permissions Example:
-        /// ?permissions=read&amp;amp;permissions=write
         /// </param>
         /// <param name='scopes'>
-        /// security bounded scopes. Read mode:
-        /// http://docs.virtocommerce.com/display/vc2devguide/Working+with+platform+security
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12445,9 +11497,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<CheckPermissionsResult>> UserHasAnyPermissionWithHttpMessagesAsync(string userName, System.Collections.Generic.IList<string> permissions, System.Collections.Generic.IList<string> scopes, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get user details by user ID
-        /// </summary>
         /// <param name='id'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12466,11 +11515,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<ApplicationUserExtended>> GetUserByIdWithHttpMessagesAsync(string id, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Create new user
-        /// </summary>
         /// <param name='user'>
-        /// User details.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12488,13 +11533,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SecurityResult>> CreateAsyncWithHttpMessagesAsync(ApplicationUserExtended user, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Change password
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='changePassword'>
-        /// Old and new passwords.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12512,13 +11553,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<SecurityResult>> ChangePasswordWithHttpMessagesAsync(string userName, ChangePasswordInfo changePassword, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Reset password
-        /// </summary>
         /// <param name='userName'>
         /// </param>
         /// <param name='resetPassword'>
-        /// New password.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -12575,9 +11612,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// </summary>
         public PlatformModuleApiClient Client { get; private set; }
 
-        /// <summary>
-        /// Get all settings
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -12701,9 +11735,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Update settings values
-        /// </summary>
         /// <param name='settings'>
         /// </param>
         /// <param name='customHeaders'>
@@ -12822,11 +11853,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get settings registered by specific module
-        /// </summary>
         /// <param name='id'>
-        /// Module ID.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -12960,11 +11987,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get setting details by name
-        /// </summary>
         /// <param name='name'>
-        /// Setting system name.
         /// </param>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
@@ -13098,9 +12121,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
             return _result;
         }
 
-        /// <summary>
-        /// Get UI customization setting
-        /// </summary>
         /// <param name='customHeaders'>
         /// Headers that will be added to request.
         /// </param>
@@ -13240,9 +12260,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public static partial class SettingOperationsExtensions
     {
-            /// <summary>
-            /// Get all settings
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13251,9 +12268,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISettingOperations)s).GetAllSettingsAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get all settings
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13268,9 +12282,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Update settings values
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13281,9 +12292,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 System.Threading.Tasks.Task.Factory.StartNew(s => ((ISettingOperations)s).UpdateAsync(settings), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None,  System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Update settings values
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13297,28 +12305,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 await operations.UpdateWithHttpMessagesAsync(settings, null, cancellationToken).ConfigureAwait(false);
             }
 
-            /// <summary>
-            /// Get settings registered by specific module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Module ID.
             /// </param>
             public static System.Collections.Generic.IList<Setting> GetModuleSettings(this ISettingOperations operations, string id)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISettingOperations)s).GetModuleSettingsAsync(id), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get settings registered by specific module
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='id'>
-            /// Module ID.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -13331,28 +12331,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get setting details by name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='name'>
-            /// Setting system name.
             /// </param>
             public static Setting GetSetting(this ISettingOperations operations, string name)
             {
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISettingOperations)s).GetSettingAsync(name), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get setting details by name
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
             /// <param name='name'>
-            /// Setting system name.
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
@@ -13365,9 +12357,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 }
             }
 
-            /// <summary>
-            /// Get UI customization setting
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13376,9 +12365,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
                 return System.Threading.Tasks.Task.Factory.StartNew(s => ((ISettingOperations)s).GetUICustomizationSettingAsync(), operations, System.Threading.CancellationToken.None, System.Threading.Tasks.TaskCreationOptions.None, System.Threading.Tasks.TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
-            /// <summary>
-            /// Get UI customization setting
-            /// </summary>
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
@@ -13408,9 +12394,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
     /// </summary>
     public partial interface ISettingOperations
     {
-        /// <summary>
-        /// Get all settings
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -13424,9 +12407,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when unable to deserialize the response
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<Setting>>> GetAllSettingsWithHttpMessagesAsync(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Update settings values
-        /// </summary>
         /// <param name='settings'>
         /// </param>
         /// <param name='customHeaders'>
@@ -13442,11 +12422,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse> UpdateWithHttpMessagesAsync(System.Collections.Generic.IList<Setting> settings, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get settings registered by specific module
-        /// </summary>
         /// <param name='id'>
-        /// Module ID.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -13464,11 +12440,7 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<Setting>>> GetModuleSettingsWithHttpMessagesAsync(string id, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get setting details by name
-        /// </summary>
         /// <param name='name'>
-        /// Setting system name.
         /// </param>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
@@ -13486,9 +12458,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi
         /// Thrown when a required parameter is null
         /// </exception>
         System.Threading.Tasks.Task<Microsoft.Rest.HttpOperationResponse<Setting>> GetSettingWithHttpMessagesAsync(string name, System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> customHeaders = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// Get UI customization setting
-        /// </summary>
         /// <param name='customHeaders'>
         /// The headers that will be added to request.
         /// </param>
@@ -14403,18 +13372,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the Notification class.
         /// </summary>
-        /// <param name="sendingGateway">Type of notificaiton sending
-        /// gateway</param>
-        /// <param name="attemptCount">Sending attempts count</param>
-        /// <param name="maxAttemptCount">Max sending attempt count, if
-        /// MaxAttemptCount less or equal AttemptCount IsActive = false and
-        /// IsSent = false, notification stop sending</param>
-        /// <param name="lastFailAttemptMessage">Last fail sending attempt
-        /// error message</param>
-        /// <param name="lastFailAttemptDate">Last fail sending attempt
-        /// date</param>
-        /// <param name="startSendingDate">Start sending date, if not null
-        /// notification will be sending after that date</param>
         public Notification(string id = default(string), string displayName = default(string), string description = default(string), bool? isEmail = default(bool?), bool? isSms = default(bool?), string type = default(string), bool? isActive = default(bool?), bool? isSuccessSend = default(bool?), string objectId = default(string), string objectTypeId = default(string), string language = default(string), string sendingGateway = default(string), string subject = default(string), string body = default(string), string sender = default(string), string recipient = default(string), int? attemptCount = default(int?), int? maxAttemptCount = default(int?), string lastFailAttemptMessage = default(string), System.DateTime? lastFailAttemptDate = default(System.DateTime?), System.DateTime? startSendingDate = default(System.DateTime?), System.DateTime? sentDate = default(System.DateTime?))
         {
             Id = id;
@@ -14497,7 +13454,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// Gets or sets type of notificaiton sending gateway
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "sendingGateway")]
         public string SendingGateway { get; set; }
@@ -14523,34 +13479,26 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string Recipient { get; set; }
 
         /// <summary>
-        /// Gets or sets sending attempts count
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "attemptCount")]
         public int? AttemptCount { get; set; }
 
         /// <summary>
-        /// Gets or sets max sending attempt count, if MaxAttemptCount less or
-        /// equal AttemptCount IsActive = false and IsSent = false,
-        /// notification stop sending
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "maxAttemptCount")]
         public int? MaxAttemptCount { get; set; }
 
         /// <summary>
-        /// Gets or sets last fail sending attempt error message
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "lastFailAttemptMessage")]
         public string LastFailAttemptMessage { get; set; }
 
         /// <summary>
-        /// Gets or sets last fail sending attempt date
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "lastFailAttemptDate")]
         public System.DateTime? LastFailAttemptDate { get; set; }
 
         /// <summary>
-        /// Gets or sets start sending date, if not null notification will be
-        /// sending after that date
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "startSendingDate")]
         public System.DateTime? StartSendingDate { get; set; }
@@ -14580,13 +13528,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the NotificationTemplate class.
         /// </summary>
-        /// <param name="objectId">Id of object, that used this template for
-        /// sending notification</param>
-        /// <param name="objectTypeId">Type id of object, that used this
-        /// template for sending notification</param>
-        /// <param name="language">Locale of template</param>
-        /// <param name="isDefault">Flag, that shows if this template is
-        /// default dor notification type</param>
         public NotificationTemplate(string id = default(string), string sender = default(string), string recipient = default(string), string subject = default(string), string body = default(string), string notificationTypeId = default(string), string objectId = default(string), string objectTypeId = default(string), string language = default(string), bool? isDefault = default(bool?))
         {
             Id = id;
@@ -14632,28 +13573,21 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string NotificationTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets id of object, that used this template for sending
-        /// notification
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "objectId")]
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// Gets or sets type id of object, that used this template for
-        /// sending notification
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "objectTypeId")]
         public string ObjectTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets locale of template
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "language")]
         public string Language { get; set; }
 
         /// <summary>
-        /// Gets or sets flag, that shows if this template is default dor
-        /// notification type
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "isDefault")]
         public bool? IsDefault { get; set; }
@@ -14678,10 +13612,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the NotificationParameter class.
         /// </summary>
-        /// <param name="parameterDescription">Parameter description, can be
-        /// used for display detailed information about parameter</param>
-        /// <param name="parameterCodeInView">Code template for notification
-        /// parameter for template resolver</param>
         /// <param name="type">Possible values include: 'String', 'Integer',
         /// 'Decimal', 'DateTime', 'Boolean'</param>
         public NotificationParameter(string parameterName = default(string), string parameterDescription = default(string), string parameterCodeInView = default(string), bool? isDictionary = default(bool?), bool? isArray = default(bool?), string type = default(string), object value = default(object))
@@ -14701,15 +13631,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string ParameterName { get; set; }
 
         /// <summary>
-        /// Gets or sets parameter description, can be used for display
-        /// detailed information about parameter
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "parameterDescription")]
         public string ParameterDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets code template for notification parameter for template
-        /// resolver
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "parameterCodeInView")]
         public string ParameterCodeInView { get; set; }
@@ -14812,7 +13738,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         /// Initializes a new instance of the RenderNotificationContentResult
         /// class.
         /// </summary>
-        /// <param name="subject">Subject</param>
         public RenderNotificationContentResult(string subject = default(string), string body = default(string))
         {
             Subject = subject;
@@ -14820,7 +13745,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         }
 
         /// <summary>
-        /// Gets or sets subject
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "subject")]
         public string Subject { get; set; }
@@ -15977,17 +14901,9 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the Setting class.
         /// </summary>
-        /// <param name="name">System name (ID) of the setting</param>
-        /// <param name="value">Current value for non-array setting</param>
         /// <param name="valueType">Possible values include: 'ShortText',
         /// 'LongText', 'Integer', 'Decimal', 'DateTime', 'Boolean',
         /// 'SecureString', 'Json'</param>
-        /// <param name="allowedValues">Predefined set of allowed values for
-        /// this setting</param>
-        /// <param name="isArray">Defines whether the setting can have
-        /// multiple values</param>
-        /// <param name="arrayValues">Current values for array setting</param>
-        /// <param name="title">User-friendly name of the setting</param>
         public Setting(string groupName = default(string), string name = default(string), string value = default(string), string valueType = default(string), System.Collections.Generic.IList<string> allowedValues = default(System.Collections.Generic.IList<string>), string defaultValue = default(string), bool? isArray = default(bool?), System.Collections.Generic.IList<string> arrayValues = default(System.Collections.Generic.IList<string>), string title = default(string), string description = default(string))
         {
             GroupName = groupName;
@@ -16008,13 +14924,11 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// Gets or sets system name (ID) of the setting
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets current value for non-array setting
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
@@ -16028,7 +14942,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string ValueType { get; set; }
 
         /// <summary>
-        /// Gets or sets predefined set of allowed values for this setting
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "allowedValues")]
         public System.Collections.Generic.IList<string> AllowedValues { get; set; }
@@ -16039,19 +14952,16 @@ namespace VirtoCommerce.Storefront.AutoRestClients.PlatformModuleApi.Models
         public string DefaultValue { get; set; }
 
         /// <summary>
-        /// Gets or sets defines whether the setting can have multiple values
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "isArray")]
         public bool? IsArray { get; set; }
 
         /// <summary>
-        /// Gets or sets current values for array setting
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "arrayValues")]
         public System.Collections.Generic.IList<string> ArrayValues { get; set; }
 
         /// <summary>
-        /// Gets or sets user-friendly name of the setting
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "title")]
         public string Title { get; set; }

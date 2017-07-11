@@ -4624,20 +4624,30 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the MembersSearchCriteria class.
         /// </summary>
-        public MembersSearchCriteria(string memberType = default(string), System.Collections.Generic.IList<string> memberTypes = default(System.Collections.Generic.IList<string>), string group = default(string), System.Collections.Generic.IList<string> groups = default(System.Collections.Generic.IList<string>), string keyword = default(string), string memberId = default(string), bool? deepSearch = default(bool?), string sort = default(string), System.Collections.Generic.IList<SortInfo> sortInfos = default(System.Collections.Generic.IList<SortInfo>), int? skip = default(int?), int? take = default(int?))
+        public MembersSearchCriteria(string objectType = default(string), string memberType = default(string), System.Collections.Generic.IList<string> memberTypes = default(System.Collections.Generic.IList<string>), string group = default(string), System.Collections.Generic.IList<string> groups = default(System.Collections.Generic.IList<string>), string memberId = default(string), bool? deepSearch = default(bool?), string responseGroup = default(string), System.Collections.Generic.IList<string> objectTypes = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<string> objectIds = default(System.Collections.Generic.IList<string>), string searchPhrase = default(string), string languageCode = default(string), string sort = default(string), System.Collections.Generic.IList<SortInfo> sortInfos = default(System.Collections.Generic.IList<SortInfo>), int? skip = default(int?), int? take = default(int?))
         {
+            ObjectType = objectType;
             MemberType = memberType;
             MemberTypes = memberTypes;
             Group = group;
             Groups = groups;
-            Keyword = keyword;
             MemberId = memberId;
             DeepSearch = deepSearch;
+            ResponseGroup = responseGroup;
+            ObjectTypes = objectTypes;
+            ObjectIds = objectIds;
+            SearchPhrase = searchPhrase;
+            LanguageCode = languageCode;
             Sort = sort;
             SortInfos = sortInfos;
             Skip = skip;
             Take = take;
         }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "objectType")]
+        public string ObjectType { get; set; }
 
         /// <summary>
         /// </summary>
@@ -4661,11 +4671,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
 
         /// <summary>
         /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "keyword")]
-        public string Keyword { get; set; }
-
-        /// <summary>
-        /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "memberId")]
         public string MemberId { get; set; }
 
@@ -4673,6 +4678,31 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "deepSearch")]
         public bool? DeepSearch { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "responseGroup")]
+        public string ResponseGroup { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "objectTypes")]
+        public System.Collections.Generic.IList<string> ObjectTypes { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "objectIds")]
+        public System.Collections.Generic.IList<string> ObjectIds { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "searchPhrase")]
+        public string SearchPhrase { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "languageCode")]
+        public string LanguageCode { get; set; }
 
         /// <summary>
         /// </summary>
@@ -4897,20 +4927,20 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
         /// <summary>
         /// Initializes a new instance of the Contact class.
         /// </summary>
-        public Contact(string firstName = default(string), string middleName = default(string), string lastName = default(string), string fullName = default(string), string timeZone = default(string), string defaultLanguage = default(string), System.DateTime? birthDate = default(System.DateTime?), string taxpayerId = default(string), string preferredDelivery = default(string), string preferredCommunication = default(string), string salutation = default(string), System.Collections.Generic.IList<string> organizations = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<ApplicationUserExtended> securityAccounts = default(System.Collections.Generic.IList<ApplicationUserExtended>), string name = default(string), string memberType = default(string), System.Collections.Generic.IList<Address> addresses = default(System.Collections.Generic.IList<Address>), System.Collections.Generic.IList<string> phones = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<string> emails = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<Note> notes = default(System.Collections.Generic.IList<Note>), System.Collections.Generic.IList<string> groups = default(System.Collections.Generic.IList<string>), string objectType = default(string), System.Collections.Generic.IList<DynamicObjectProperty> dynamicProperties = default(System.Collections.Generic.IList<DynamicObjectProperty>), System.DateTime? createdDate = default(System.DateTime?), System.DateTime? modifiedDate = default(System.DateTime?), string createdBy = default(string), string modifiedBy = default(string), string id = default(string))
+        public Contact(string salutation = default(string), string fullName = default(string), string firstName = default(string), string middleName = default(string), string lastName = default(string), System.DateTime? birthDate = default(System.DateTime?), string defaultLanguage = default(string), string timeZone = default(string), System.Collections.Generic.IList<string> organizations = default(System.Collections.Generic.IList<string>), string taxPayerId = default(string), string preferredDelivery = default(string), string preferredCommunication = default(string), System.Collections.Generic.IList<ApplicationUserExtended> securityAccounts = default(System.Collections.Generic.IList<ApplicationUserExtended>), string name = default(string), string memberType = default(string), System.Collections.Generic.IList<Address> addresses = default(System.Collections.Generic.IList<Address>), System.Collections.Generic.IList<string> phones = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<string> emails = default(System.Collections.Generic.IList<string>), System.Collections.Generic.IList<Note> notes = default(System.Collections.Generic.IList<Note>), System.Collections.Generic.IList<string> groups = default(System.Collections.Generic.IList<string>), string objectType = default(string), System.Collections.Generic.IList<DynamicObjectProperty> dynamicProperties = default(System.Collections.Generic.IList<DynamicObjectProperty>), System.DateTime? createdDate = default(System.DateTime?), System.DateTime? modifiedDate = default(System.DateTime?), string createdBy = default(string), string modifiedBy = default(string), string id = default(string))
         {
+            Salutation = salutation;
+            FullName = fullName;
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;
-            FullName = fullName;
-            TimeZone = timeZone;
-            DefaultLanguage = defaultLanguage;
             BirthDate = birthDate;
-            TaxpayerId = taxpayerId;
+            DefaultLanguage = defaultLanguage;
+            TimeZone = timeZone;
+            Organizations = organizations;
+            TaxPayerId = taxPayerId;
             PreferredDelivery = preferredDelivery;
             PreferredCommunication = preferredCommunication;
-            Salutation = salutation;
-            Organizations = organizations;
             SecurityAccounts = securityAccounts;
             Name = name;
             MemberType = memberType;
@@ -4930,6 +4960,16 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
 
         /// <summary>
         /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "salutation")]
+        public string Salutation { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "fullName")]
+        public string FullName { get; set; }
+
+        /// <summary>
+        /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "firstName")]
         public string FirstName { get; set; }
 
@@ -4945,13 +4985,8 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
 
         /// <summary>
         /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "fullName")]
-        public string FullName { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "timeZone")]
-        public string TimeZone { get; set; }
+        [Newtonsoft.Json.JsonProperty(PropertyName = "birthDate")]
+        public System.DateTime? BirthDate { get; set; }
 
         /// <summary>
         /// </summary>
@@ -4960,13 +4995,18 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
 
         /// <summary>
         /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "birthDate")]
-        public System.DateTime? BirthDate { get; set; }
+        [Newtonsoft.Json.JsonProperty(PropertyName = "timeZone")]
+        public string TimeZone { get; set; }
 
         /// <summary>
         /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "taxpayerId")]
-        public string TaxpayerId { get; set; }
+        [Newtonsoft.Json.JsonProperty(PropertyName = "organizations")]
+        public System.Collections.Generic.IList<string> Organizations { get; set; }
+
+        /// <summary>
+        /// </summary>
+        [Newtonsoft.Json.JsonProperty(PropertyName = "taxPayerId")]
+        public string TaxPayerId { get; set; }
 
         /// <summary>
         /// </summary>
@@ -4977,16 +5017,6 @@ namespace VirtoCommerce.Storefront.AutoRestClients.CustomerModuleApi.Models
         /// </summary>
         [Newtonsoft.Json.JsonProperty(PropertyName = "preferredCommunication")]
         public string PreferredCommunication { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "salutation")]
-        public string Salutation { get; set; }
-
-        /// <summary>
-        /// </summary>
-        [Newtonsoft.Json.JsonProperty(PropertyName = "organizations")]
-        public System.Collections.Generic.IList<string> Organizations { get; set; }
 
         /// <summary>
         /// </summary>

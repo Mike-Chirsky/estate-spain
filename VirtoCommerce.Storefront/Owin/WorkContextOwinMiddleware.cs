@@ -18,7 +18,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi;
 using VirtoCommerce.Storefront.AutoRestClients.PricingModuleApi;
-using VirtoCommerce.Storefront.AutoRestClients.SearchApiModuleApi;
 using VirtoCommerce.Storefront.AutoRestClients.StoreModuleApi;
 using VirtoCommerce.Storefront.Common;
 using VirtoCommerce.Storefront.Converters;
@@ -713,7 +712,7 @@ namespace VirtoCommerce.Storefront.Owin
             var products = CatalogSearchService.SearchProducts(new ProductSearchCriteria
             {
                 Outline = ConfigurationManager.AppSettings["EstateTypeCategoryId"],
-                PageSize = int.MaxValue
+                PageSize = 10000
             });
             wc.CurrentStore = oldCurrentStore;
             var result = new Dictionary<string, List<Tuple<string, string>>>();

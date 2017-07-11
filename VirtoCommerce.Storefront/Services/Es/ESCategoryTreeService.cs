@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VirtoCommerce.Storefront.Model.Catalog;
-using VirtoCommerce.Storefront.AutoRestClients.SearchApiModuleApi;
 using VirtoCommerce.Storefront.Model.Catalog.Es;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Services.Es.Converters;
@@ -22,7 +21,7 @@ namespace VirtoCommerce.Storefront.Services.Es
     {
         private const string _storeId = "MasterStore";
         private readonly SemaphoreSlim _lockObject = new SemaphoreSlim(1);
-        private readonly ISearchApiModuleApiClient _searchApi;
+        private readonly ICatalogModuleApiClient _catalogModuleApi;
         private readonly Func<WorkContext> _workContextFactory;
         private static Category _loadedCategory;
         private static Dictionary<string, Category> _seoCategoryDict = new Dictionary<string, Category>();
@@ -30,9 +29,9 @@ namespace VirtoCommerce.Storefront.Services.Es
         private Currency _currency;
         private Store _store;
 
-        public ESCategoryTreeService(ISearchApiModuleApiClient searchApi, Func<WorkContext> workContextFactory)
+        public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory)
         {
-            _searchApi = searchApi;
+            _catalogModuleApi = catalogModuleApi;
             _workContextFactory = workContextFactory;
         }
 
@@ -75,12 +74,13 @@ namespace VirtoCommerce.Storefront.Services.Es
 
         private async Task<Category[]> LoadChildrenFromCategory(Category[] parents, string productType)
         {
-            var result = await _searchApi.SearchApiModule.SearchProductsAsync(_storeId, 
-                new AutoRestClients.SearchApiModuleApi.Models.ProductSearch
+            var result = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+                new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
                 {
+                    CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
                     ResponseGroup = "1619",
                     Outline = ProductTypeToOutline(productType),
-                    Take = int.MaxValue,
+                    Take = 10000,
                     Skip = 0
                 });
 
@@ -88,10 +88,14 @@ namespace VirtoCommerce.Storefront.Services.Es
             {
                 var categories = new List<Category>();
 
-                var children = result.Products.Select(p => ConvertProductToCategory(parent, productType, p));
-                if(parent.Categories!=null)
-                    categories.AddRange(parent.Categories);
-                categories.AddRange(children);
+                if (result.Items != null)
+                {
+
+                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p));
+                    if (parent.Categories != null)
+                        categories.AddRange(parent.Categories);
+                    categories.AddRange(children);
+                }
 
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
@@ -115,7 +119,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             return string.Empty;
         }
 
-        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.SearchApiModuleApi.Models.Product dtoProduct)
+        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.CatalogModuleApi.Models.Product dtoProduct)
         {
             var path = string.Join("/", parent.Path, productType);
 
