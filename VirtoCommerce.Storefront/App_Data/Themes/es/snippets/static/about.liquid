@@ -1,55 +1,55 @@
 ﻿<div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url('{{- 'images/about_header_img.jpg' | asset_url -}}')">
-        <div class="description-header">
-            <h1 class="entry-title entry-tax">
+        <div class="description-header blog-header-container">
+            <h1 class="blog-header">
                 {{ 'about.header-main' | t }}
             </h1>
-            <div class="margin-auto">
+            <h2 class="blog-header">
                 {{ 'about.header-main-title' | t }}
-            </div>
+            </h2>
         </div>
     </div>
 </div>
 <main class="container content_wrapper about-page" role="main">   
     {% include 'breadcrumb' %}
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header2' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text2' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header3' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text3' | t }} </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header4' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text4' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>&nbsp;</h3>
             <div class="about-hr" style="background: none;"></div>
             <div> {{'about.text5' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <img src="{{ 'images/logo.png' | assets_url }}">
         </div>
     </div>
-    <div class="text-center">
+    <div class="padding15-0 text-center">
         <h3>{{ 'about.header5' | t }}</h3>
         <div class="about-hr margin-auto"></div>
         <div> {{'about.text6' | t }} </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div id="team-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -91,11 +91,11 @@
             </a>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <h3 class="text-center">{{ 'about.header6' | t }}</h3>
         <div class="about-hr margin-auto"></div>
-        <div class="text-center">{{ 'about.text7' | t }}</div>
-        <div id="review-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false" style="min-height: 400px;">
+        <div class="padding15-0 text-center">{{ 'about.text7' | t }}</div>
+        <div id="review-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false" style="min-height: 200px;">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#review-carusel" data-slide-to="0" class="active"></li>
@@ -227,7 +227,7 @@
             </a>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div class="row">
             <div class="col-md-8">
                 <h3>{{'footer.contacts' | t}}:</h3>
@@ -241,7 +241,7 @@
             </div>
         </div>
         <div class="hr-contacts"></div>
-        <div>
+        <div class="padding15-0 row">
             <div class="col-md-4 list-contacts">
                 <ul>
                     <li>
@@ -266,7 +266,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div id="map" style="width: 100%; height:500px;"></div>
         <script>
             function initMap() {

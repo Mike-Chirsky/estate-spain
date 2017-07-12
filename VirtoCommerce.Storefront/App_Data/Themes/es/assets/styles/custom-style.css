@@ -968,6 +968,7 @@ h4.blog-header
 }
 h2.blog-header
 {
+    font-size: 20px;
     padding-bottom: 15px;
 }
 .blog-header-container{
@@ -1429,11 +1430,13 @@ h2.blog-header
 .about-hr{
     width: 30%;
     height: 1px;
+    margin: -5px 0 20px;
     background-color: #FF7F27;
 }
 .margin-auto
 {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .about-carusel a.carousel-control{
  color: #d2d2d2
