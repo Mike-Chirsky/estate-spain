@@ -154,7 +154,9 @@
             </div>
             {% if template contains 'collection' or template contains 'search' %}
                 {% include 'filters/header-filters' %}
-                {% include 'filters/header-filters-mobile' %}
+                {% if collection.handle != 'arenda' %}
+                  {% include 'filters/header-filters-mobile' %}
+                {% endif %}
             {% endif %}
             {% if template contains 'blog' or template contains 'article' %}
                 {% include 'headers/blog-header' %}

@@ -1,55 +1,55 @@
 ﻿<div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url('{{- 'images/about_header_img.jpg' | asset_url -}}')">
-        <div class="description-header">
-            <h1 class="entry-title entry-tax">
+        <div class="description-header blog-header-container">
+            <h1 class="blog-header">
                 {{ 'about.header-main' | t }}
             </h1>
-            <div class="margin-auto">
+            <h2 class="blog-header">
                 {{ 'about.header-main-title' | t }}
-            </div>
+            </h2>
         </div>
     </div>
 </div>
 <main class="container content_wrapper about-page" role="main">   
     {% include 'breadcrumb' %}
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header2' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text2' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header3' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text3' | t }} </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>{{'about.header4' | t }}</h3>
             <div class="about-hr"></div>
             <div> {{'about.text4' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <h3>&nbsp;</h3>
             <div class="about-hr" style="background: none;"></div>
             <div> {{'about.text5' | t }} </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <img src="{{ 'images/logo.png' | assets_url }}">
         </div>
     </div>
-    <div class="text-center">
+    <div class="padding15-0 text-center">
         <h3>{{ 'about.header5' | t }}</h3>
         <div class="about-hr margin-auto"></div>
         <div> {{'about.text6' | t }} </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div id="team-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -91,11 +91,11 @@
             </a>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <h3 class="text-center">{{ 'about.header6' | t }}</h3>
         <div class="about-hr margin-auto"></div>
-        <div class="text-center">{{ 'about.text7' | t }}</div>
-        <div id="review-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false" style="min-height: 400px;">
+        <div class="padding15-0 text-center">{{ 'about.text7' | t }}</div>
+        <div id="review-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false" style="min-height: 200px;">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#review-carusel" data-slide-to="0" class="active"></li>
@@ -115,7 +115,7 @@
                                         <div class="vc_column-inner ">
                                             <div class="wpb_wrapper">
                                                 <div class="testimonial-container type_class_1 ">
-                                                    <div class="testimonial-image" style="background-image:url({{ 'user_default_img_women.png' | assets_url }})"></div>
+                                                    <div class="testimonial-image" style="background-image:url({{ 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p320x320/14440868_1136032339808718_6392964027877564500_n.jpg?oh=d1c780b2f7b68d45826862fa23dcf43e&oe=59FE0D83' | assets_url }})"></div>
                                                     <div class="testimonial-text">«Очень понравился внимательный подход, помощь в бронировании, подробный рассказ о выбранном месте и оперативные ответы, на все возникающие вопросы. La Zenia... Я теперь понимаю почему "Ла") Потому что спустя пару дней у тебя внутри возникает мелодия: "ла, ла, ла, ла". А ещё об этом месте можно сказать - дружелюбное, спокойное, восстанавливающее ... для уставшего тела и души»!</div>
                                                     <div class="testimonial-author-line"><span class="testimonial-author">Наталья Ф.</span>, Россия</div>
                                                 </div>
@@ -136,7 +136,7 @@
                                         <div class="vc_column-inner ">
                                             <div class="wpb_wrapper">
                                                 <div class="testimonial-container type_class_1 ">
-                                                    <div class="testimonial-image" style="background-image:url({{ 'user_default_img_women.png' | assets_url }})"></div>
+                                                    <div class="testimonial-image" style="background-image:url({{ 'https://scontent.fhen1-1.fna.fbcdn.net/v/t31.0-8/12087662_897513486964078_2229634651927500260_o.jpg?oh=cc92cd4cb6848bfcca16601b4e7832dc&oe=5A0C092C' | assets_url }})"></div>
                                                     <div class="testimonial-text">"Здравствуйте Лилия! Спасибо огромное за помощь и поддержку в столь не простой, но на отлично выполненной работе. Качеством работы компании довольны во всем. Постпродажного обслуживания пока не было, но надеемся на сотрудничество с компанией и в дальнейшем, и выражаем свою огромную благодарность за все!"</div>
                                                     <div class="testimonial-author-line"><span class="testimonial-author">Марина С.</span>, Узбекистан</div>
                                                 </div>
@@ -160,7 +160,7 @@
                                         <div class="vc_column-inner ">
                                             <div class="wpb_wrapper">
                                                 <div class="testimonial-container type_class_1 ">
-                                                    <div class="testimonial-image" style="background-image:url({{ 'user_default_img_women.png' | assets_url }})"></div>
+                                                    <div class="testimonial-image" style="background-image:url({{ 'https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/17155500_1403866816352888_170097603690044701_n.jpg?oh=761bc58d01ed359d20e0b81bbf7b70b0&oe=59CA3650' | assets_url }})"></div>
                                                     <div class="testimonial-text">«Спасибо ребятам, отдельное спасибо - Алие! Очень помогла с выбором вариантов, все решала очень быстро и оперативно. Живем в Барселоне, но подумываем о дальней даче в Торревьехе ))) Если будет покупать - советую через Estate Spain.»</div>
                                                     <div class="testimonial-author-line"><span class="testimonial-author">Анна И.</span>, Испания</div>
                                                 </div>
@@ -204,7 +204,7 @@
                                         <div class="vc_column-inner ">
                                             <div class="wpb_wrapper">
                                                 <div class="testimonial-container type_class_1 ">
-                                                    <div class="testimonial-image" style="background-image:url({{ 'user_default_img_women.png' | assets_url }})"></div>
+                                                    <div class="testimonial-image" style="background-image:url({{ 'women.jpg' | assets_url }})"></div>
                                                     <div class="testimonial-text">«Ваш отзыв может быть следующим ☺ От недвижимости в солнечно Испании вас отделяет только один звонок. Не откладывайте, обращайтесь прямо сегодня! Все контакты есть на нашем сайте».</div>
                                                     <div class="testimonial-author-line"><span class="testimonial-author">Лилия Фрейман</span>, Руководитель отдела продаж.</div>
                                                 </div>
@@ -227,7 +227,7 @@
             </a>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div class="row">
             <div class="col-md-8">
                 <h3>{{'footer.contacts' | t}}:</h3>
@@ -241,7 +241,7 @@
             </div>
         </div>
         <div class="hr-contacts"></div>
-        <div>
+        <div class="padding15-0 row">
             <div class="col-md-4 list-contacts">
                 <ul>
                     <li>
@@ -266,7 +266,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="padding15-0">
         <div id="map" style="width: 100%; height:500px;"></div>
         <script>
             function initMap() {
