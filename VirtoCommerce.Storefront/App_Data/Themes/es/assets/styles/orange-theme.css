@@ -301,6 +301,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .featured_property h
 #access ul ul li.wpestate_megamenu_col_4 a.menu-item-link
 {
     color: #323a45;
+    padding: 7px 0;
 }
 #access ul ul li.wpestate_megamenu_col_3 a.menu-item-link:hover,
 #access ul ul li.wpestate_megamenu_col_4 a.menu-item-link:hover
