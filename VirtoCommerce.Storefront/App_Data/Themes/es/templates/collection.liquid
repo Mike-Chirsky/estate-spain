@@ -1,7 +1,7 @@
 ﻿<div class="breadcrumb_container">
   {% include 'breadcrumb' %} 
 </div>
-{%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "type_add") -%}
+{%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "tag" && collection.type == "condition" && collection.type == "other_type") -%}
   <div class="row">
     <h2 class="text-center padding15-0">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
   </div>
@@ -11,15 +11,15 @@
 {% if collection.handle != 'arenda' %}
   {% include 'headers/header-about' %}
 {% endif %}
-{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' or collection.type == 'tag' or collection.type == 'other_type' or collection.type == 'condition' -%}
+{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'other_type' or collection.type == 'tag' or collection.type == 'condition' -%}
   {% include 'headers/region-header' %}
 {%- endif -%}
 
-{%- if collection.type == 'city' -%}
+{%- if collection.type == 'city' or collection.type == 'type_add' or collection.type == "tag_add" or collection.type == "condition_add"  -%}
   {% include 'headers/city-header' %}
 {%- endif -%}
 
-{%- if collection.type == 'region' or collection.type == 'type' or collection.type == 'type_add' or collection.type == 'tag' or collection.type == 'other_type' or collection.type == 'condition' -%}
+{%- if from_filter == false and (collection.type == 'region' or collection.type == 'type' or collection.type == 'other_type' or collection.type == 'tag' or collection.type == 'condition') -%}
   {% include 'headers/header-name' %}
   {% case collection.type %}
     {% when 'type_add' %}
@@ -33,8 +33,8 @@
   {% endcase%}
 {%- endif -%}
 
-{%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == 'tag' -%}
-  <h2 class="header-name text-center margin-bot-0">{{- meta_info_product.h2_listing -}}</h2>
+{%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == "tag_add" or collection.type == "condition_add" -%}
+  <h2 class="header-name text-center margin-bot-0">{{- collection.h2_listing -}}</h2>
   <h4 class="text-center">{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
   {% include 'product-list' %}
 {%- endif -%}

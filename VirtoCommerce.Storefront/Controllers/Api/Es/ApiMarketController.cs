@@ -15,7 +15,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
     public class ApiMarketController : StorefrontControllerBase
     {
         private readonly ICatalogSearchService _catalogSearchService;
-
+        private const string CustomBlogName = "listcutomarticleblog";
         public ApiMarketController(WorkContext context, IStorefrontUrlBuilder urlBuilder, ICatalogSearchService catalogSearchService) : base(context, urlBuilder)
         {
             _catalogSearchService = catalogSearchService;
@@ -47,21 +47,47 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         private void SearchBlog(string id, int page, int pageSize)
         {
-            var listBlogLinks = new[] { "info/process-pokupki-kak-kupit-nedvizhimost-v-ispanii", "info/soderzhanie-nedvizhimosti", "info/nalogi-na-nedvizhimost", "info/ipoteka-v-ispanii-dlya-rossiyan", "info/vnzh-v-ispanii-nedvizhimost" };
-            var blog = new Blog()
+            if (id == "main-blog")
             {
-                Name = "listArticleMainPage"
-            };
-            var articles = WorkContext.Blogs.Where(x => x.Articles != null).SelectMany(x => x.Articles).Where(x => listBlogLinks.Contains(x.Permalink)).ToList();
-            var resultArticles = new List<BlogArticle>();
-            for (int i = (page - 1) * pageSize; i < articles.Count && i < page * pageSize; i++)
-            {
-                resultArticles.Add(articles[i]);
+                var listBlogLinks = new[] { "info/process-pokupki-kak-kupit-nedvizhimost-v-ispanii", "info/soderzhanie-nedvizhimosti", "info/nalogi-na-nedvizhimost", "info/ipoteka-v-ispanii-dlya-rossiyan", "info/vnzh-v-ispanii-nedvizhimost" };
+                var blog = new Blog()
+                {
+                    Name = CustomBlogName
+                };
+                var articles = WorkContext.Blogs.Where(x => x.Articles != null).SelectMany(x => x.Articles).Where(x => listBlogLinks.Contains(x.Permalink)).ToList();
+                var resultArticles = new List<BlogArticle>();
+                for (int i = (page - 1) * pageSize; i < articles.Count && i < page * pageSize; i++)
+                {
+                    resultArticles.Add(articles[i]);
+                }
+                blog.Articles = new MutablePagedList<BlogArticle>(resultArticles);
+                var blogs = WorkContext.Blogs.ToList();
+                blogs.Add(blog);
+                WorkContext.Blogs = new MutablePagedList<Blog>(blogs);
             }
-            blog.Articles = new MutablePagedList<BlogArticle>(resultArticles);
-            var blogs = WorkContext.Blogs.ToList();
-            blogs.Add(blog);
-            WorkContext.Blogs = new MutablePagedList<Blog>(blogs);
+            else
+            {
+                var blog = new Blog()
+                {
+                    Name = CustomBlogName
+                };
+
+                var sourceBlog = WorkContext.Blogs.FirstOrDefault(x => x.Name == id);
+                if (sourceBlog.Articles != null)
+                {
+                    blog.Articles = new MutablePagedList<BlogArticle>(sourceBlog.Articles.Where(x => x.ShowInMarketBlock).ToList());
+                    var articles = sourceBlog.Articles.Where(x => x.ShowInMarketBlock).ToList();
+                    var resultArticles = new List<BlogArticle>();
+                    for (int i = (page - 1) * pageSize; i < articles.Count && i < page * pageSize; i++)
+                    {
+                        resultArticles.Add(articles[i]);
+                    }
+                    blog.Articles = new MutablePagedList<BlogArticle>(resultArticles);
+                }
+                var blogs = WorkContext.Blogs.ToList();
+                blogs.Add(blog);
+                WorkContext.Blogs = new MutablePagedList<Blog>(blogs);
+            }
         }
 
         private void SearchProduct(string type, string id, int page, int pageSize)

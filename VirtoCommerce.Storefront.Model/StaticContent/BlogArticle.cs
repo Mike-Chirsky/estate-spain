@@ -25,6 +25,7 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
         public bool IsTrending { get; set; }
 
         public IList<string> SliderImages { set; get; } = new List<string>();
+        public bool ShowInMarketBlock { get; set; }
 
         public override void LoadContent(string content, IDictionary<string, IEnumerable<string>> metaInfoMap)
         {
@@ -67,6 +68,12 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
             if (metaInfoMap.ContainsKey("slider-images"))
             {
                 SliderImages = metaInfoMap["slider-images"].ToList();
+            }
+            if (metaInfoMap.ContainsKey("showInMarketBlock"))
+            {
+                var isShowInMarketBlock = false;
+                bool.TryParse(metaInfoMap["showInMarketBlock"].FirstOrDefault(), out isShowInMarketBlock);
+                ShowInMarketBlock = isShowInMarketBlock;
             }
             base.LoadContent(content, metaInfoMap);
         }

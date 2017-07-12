@@ -336,7 +336,7 @@ function getRequestSeoPath(rootElement) {
     {
         locationPath = "";
     }
-    var typePath = jQuery(rootElement + '#estate-type-value').attr('data-seo-path');
+    var typePath = jQuery(rootElement + ' #estate-type-value').attr('data-seo-path');
     if (typePath === undefined)
     {
         typePath = "";

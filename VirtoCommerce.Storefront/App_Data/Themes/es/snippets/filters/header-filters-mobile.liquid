@@ -142,13 +142,18 @@
             {
                 termStr+= (termStr.length > 0 ? ';':'') + "estatetype:"+esTypeVl;
             }
-            window.location.href = location + (termStr.length > 0 ? 'terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+            window.location.href = location + (termStr.length > 0 ? 'terms=' + encodeURIComponent(termStr): ""); 
         }
         else
         {
             var termStr = getTermsString('#main-filter-controls-mobile');	
             var location = '{{'/' | full_url }}' + getRequestSeoPath('#main-filter-controls-mobile');
-            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+            var fromFilter = false;
+            if(window.location.href.split('?')[0] == location)
+            {
+                fromFilter = true;
+            }
+            window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + ( fromFilter? "&from_filter=1": "") : (fromFilter ? "?from_filter=1" : "")); 
         }
    });
 </script>

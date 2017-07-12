@@ -148,7 +148,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>()));
+                    var children = resultCities.Items.Where(x => x.Associations!= null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
