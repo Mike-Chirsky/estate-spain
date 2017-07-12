@@ -2,7 +2,7 @@
 function slideToBlock(selector, offest) {
     if (offest === undefined)
     {
-        offest = -90;
+        offest = 200;
     }
     var el = jQuery(selector);
     if (!el || !el.offset())
