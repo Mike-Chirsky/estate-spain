@@ -2,7 +2,7 @@
 function slideToBlock(selector, offest) {
     if (offest === undefined)
     {
-        offest = 200;
+        offest = -90;
     }
     var el = jQuery(selector);
     if (!el || !el.offset())
@@ -336,7 +336,7 @@ function getRequestSeoPath(rootElement) {
     {
         locationPath = "";
     }
-    var typePath = jQuery(rootElement + '#estate-type-value').attr('data-seo-path');
+    var typePath = jQuery(rootElement + ' #estate-type-value').attr('data-seo-path');
     if (typePath === undefined)
     {
         typePath = "";

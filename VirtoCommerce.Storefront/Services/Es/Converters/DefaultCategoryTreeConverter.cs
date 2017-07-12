@@ -85,12 +85,12 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                     category.Properties = exception.Properties;
                     category.Images = exception.Images;
                 }
-            }
-            else
-            {
-                category.Description = string.Empty;
-                category.Descriptions = new Model.EditorialReview[0];
-                category.Properties = new CatalogProperty[0];
+                else
+                {
+                    category.Description = string.Empty;
+                    category.Descriptions = new Model.EditorialReview[0];
+                    category.Properties = new CatalogProperty[0];
+                }
             }
             var par = context.Parent;
             while (true && category.Images.Count == 0)

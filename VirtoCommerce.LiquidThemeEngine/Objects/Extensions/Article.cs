@@ -9,5 +9,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     public partial class Article
     {
         public IList<string> SliderImages { set; get; } = new List<string>();
+
+        public bool ShowInMarketBlock { set; get; }
     }
 }
