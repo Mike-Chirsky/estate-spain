@@ -46,8 +46,6 @@ namespace VirtoCommerce.Storefront.Services.Es
             _language = wc.CurrentLanguage;
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
-            // Load links for regions
-            //await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions");
             // Load region and regio + estate type
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes"));
             // Load region + tags
@@ -109,7 +107,10 @@ namespace VirtoCommerce.Storefront.Services.Es
                             Take = 10000,
                             Skip = 0
                         });
-                    listExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                    if (resultExceptions.Items != null)
+                    {
+                        listExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                    }
                 }
             }
             foreach (var parent in parents)
@@ -221,10 +222,14 @@ namespace VirtoCommerce.Storefront.Services.Es
                     ListExceptions = listExceptions
                 }, product);
             var seoPath = category.SeoPath.Trim('/');
-            if (!_seoCategoryDict.ContainsKey(seoPath))
+            lock (_seoCategoryDict)
             {
-                _seoCategoryDict.Add(seoPath, category);
+                if (!_seoCategoryDict.ContainsKey(seoPath))
+                {
+                    _seoCategoryDict.Add(seoPath, category);
+                }
             }
+            
             return category;
         }
         

@@ -10,7 +10,9 @@
 <div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | assets_url}})">
       <div class="description-header">
-         <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{ products.size }}&nbsp;{{'objects' | t }} </h1>
+        {% paginate products by 36 %}
+            <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{- paginate.items -}}&nbsp;{{'objects' | t }} </h1>
+        {% endpaginate %}
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">
