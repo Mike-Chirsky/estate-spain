@@ -251,42 +251,49 @@ function loadSearchData(url, search, elements, listElement, rootElement) {
     if (!search || !url) {
         return;
     }
-    elements.forEach(function (element) {
-        jQuery(element + " input[type=text]").removeClass("selected");
+    if (elements.length > 0) {
+        elements.forEach(function (element) {
+            jQuery(element + " input[type=text]").removeClass("selected");
+        });
         jQuery.ajax({
             url: url,
             data: JSON.stringify({ search: search }),
             method: "POST",
             success: function (data) {
-                if (data.items && data.items.length) {
-                    jQuery(element + " .list").html('');
-                    for (var i = 0; i < data.items.length; i++) {
-                        var item = data.items[i];
-                        var infoRegion = "";
-                        var infoCity = "";
-                        if (item.regionName) {
-                            infoRegion = 'data-region="' + item.regionName + '"';
+                elements.forEach(function (element) {
+                    if (data.items && data.items.length) {
+                        jQuery(element + " .list").html('');
+                        for (var i = 0; i < data.items.length; i++) {
+                            var item = data.items[i];
+                            var infoRegion = "";
+                            var infoCity = "";
+                            if (item.regionName) {
+                                infoRegion = 'data-region="' + item.regionName + '"';
+                            }
+                            if (item.cityName) {
+                                infoCity = 'data-region="' + item.cityName + '"';
+                            }
+                            jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + '" ' + infoCity + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
                         }
-                        if (item.cityName) {
-                            infoCity = 'data-region="' + item.cityName + '"';
-                        }
-                        jQuery(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + '" ' + infoCity + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
-                    }
-                    jQuery.each(jQuery(element + " .list li"), function (index, item) {
-                        jQuery(item).click(function () {
-                            selectSearchItem(item, elements, listElement, rootElement);
+                        jQuery.each(jQuery(element + " .list li"), function (index, item) {
+                            jQuery(item).click(function () {
+                                selectSearchItem(item, elements, listElement, rootElement);
+                            });
                         });
-                    });
-                    jQuery(element + " .list").css("display", "block");
-                }
-                else
-                {
-                    jQuery(element + " .list").html('');
-                }
+                        jQuery(element + " .list").css("display", "block");
+                    }
+                    else {
+                        jQuery(element + " .list").html('');
+                        jQuery(element + " .list").hide();
+                    }
+                });
+
             },
             contentType: "application/json"
         });
-    });
+
+    }
+    
 }
 
 function selectSearchItem(item, elements, listElements, rootElement) {
@@ -319,13 +326,17 @@ function sortBy(value) {
         window.location.href = locationParts[0] + "?" + paramsStr;
     }
 }
-function getRequestSeoPath() {
-    var locationPath = jQuery('#location-path').val();
+function getRequestSeoPath(rootElement) {
+    if (rootElement === undefined)
+    {
+        rootElement = "";
+    }
+    var locationPath = jQuery(rootElement + ' #location-path').val();
     if (locationPath === undefined)
     {
         locationPath = "";
     }
-    var typePath = jQuery('#estate-type-value').attr('data-seo-path');
+    var typePath = jQuery(rootElement + '#estate-type-value').attr('data-seo-path');
     if (typePath === undefined)
     {
         typePath = "";
@@ -343,8 +354,11 @@ function getRequestSeoPath() {
     return "";
 }
 
-function getSearchPath() {
-    var locationValue = jQuery("#location-value").val();
+function getSearchPath(rootElement) {
+    if (rootElement === undefined) {
+        rootElement = "";
+    }
+    var locationValue = jQuery(rootElement + " #location-value").val();
     if (locationValue === undefined) {
         locationValue = "";
     }
@@ -352,7 +366,7 @@ function getSearchPath() {
         return "search?"
     }
     else {
-        return "search?search=" + locationValue+"&";
+        return "search?search=" + locationValue + "&";
     }
 }
 
@@ -531,6 +545,10 @@ jQuery(document).ready(function () {
 
     // filter events
     jQuery("#main-filter-controls #location-value").keyup(function (e) {
+        if (e.target.value.length < 3)
+        {
+            return;
+        }
         if (ignoredKeyCodes.indexOf(e.which) === -1) {
             jQuery("#main-filter-controls-mobile #location-value").val(jQuery("#main-filter-controls #location-value").val());
             jQuery("#main-filter-controls-mobile #location-path").val('');
@@ -550,6 +568,9 @@ jQuery(document).ready(function () {
     });
     // mobile
     jQuery("#main-filter-controls-mobile #location-value").keyup(function (e) {
+        if (e.target.value.length < 3) {
+            return;
+        }
         if (ignoredKeyCodes.indexOf(e.which) === -1) {
             jQuery("#main-filter-controls #location-value").val(jQuery("#main-filter-controls-mobile #location-value").val());
             jQuery("#main-filter-controls-mobile #location-path").val('');

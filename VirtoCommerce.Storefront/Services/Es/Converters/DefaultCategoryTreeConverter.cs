@@ -70,5 +70,41 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
             return product.Name;
         }
+
+        protected virtual void FillFromException(ConverterContext context, Category category)
+        {
+            if (context.ListExceptions != null)
+            {
+                var seoPath = category.SeoPath.Trim('/');
+                var exception = context.ListExceptions.FirstOrDefault(x => x.SeoInfo != null && category.SeoPath != null ? x.SeoInfo.Slug.Replace("-", "/") == seoPath : false);
+                if (exception != null)
+                {
+                    category.FullName = exception.Name;
+                    category.Description = exception.Description;
+                    category.Descriptions = exception.Descriptions;
+                    category.Properties = exception.Properties;
+                    category.Images = exception.Images;
+                }
+            }
+            else
+            {
+                category.Description = string.Empty;
+                category.Descriptions = new Model.EditorialReview[0];
+                category.Properties = new CatalogProperty[0];
+            }
+            var par = context.Parent;
+            while (true && category.Images.Count == 0)
+            {
+                if (par == null)
+                {
+                    break;
+                }
+                if (par.Images.Count != 0)
+                {
+                    category.Images = par.Images;
+                }
+                par = par.Parent;
+            }
+        }
     }
 }

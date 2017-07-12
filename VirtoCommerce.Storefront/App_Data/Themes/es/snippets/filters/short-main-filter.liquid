@@ -62,18 +62,18 @@ jQuery("#send-main-filter").click(function () {
 	if((locationPath === undefined || locationPath ==="") && locationValue!== undefined && locationValue !=='')
 	{
 		var termStr = getTermsString('#main-filter-controls');
-		var location = '{{'/' | full_url }}' + getSearchPath();
+		var location = '{{'/' | full_url }}' + getSearchPath('#main-filter-controls');
 		if(esTypeVl !== undefined && esTypeVl !=="")
 		{
 			termStr+= (termStr.length > 0 ? ';':'') + "estatetype:"+esTypeVl;
 		}
-		window.location.href = location + (termStr.length > 0 ? 'terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+		window.location.href = location + (termStr.length > 0 ? ('terms=' + encodeURIComponent(termStr)) : ""); 
 	}
 	else
 	{
 		var termStr = getTermsString('#main-filter-controls');	
-		var location = '{{'/' | full_url }}' + getRequestSeoPath();
-		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + "&from_filter=1" : "?from_filter=1"); 
+		var location = '{{'/' | full_url }}' + getRequestSeoPath('#main-filter-controls');
+		window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr)  : ""); 
 	}
 });
 </script>

@@ -15,9 +15,8 @@ using VirtoCommerce.Storefront.AutoRestClients.CatalogModuleApi;
 
 namespace VirtoCommerce.Storefront.Services.Es
 {
-    public class ESCategoryTreeService: ICategoryTreeService
+    public class ESCategoryTreeService : ICategoryTreeService
     {
-        private const string _storeId = "MasterStore";
         private readonly SemaphoreSlim _lockObject = new SemaphoreSlim(1);
         private readonly ICatalogModuleApiClient _catalogModuleApi;
         private readonly Func<WorkContext> _workContextFactory;
@@ -94,7 +93,25 @@ namespace VirtoCommerce.Storefront.Services.Es
                     Take = 10000,
                     Skip = 0
                 });
-
+            var listExceptions = new List<Product>();
+            var firstParent = parents.FirstOrDefault();
+            if (firstParent != null)
+            {
+                var exceptionOutline = ProductPathToOutlineException(string.Join("/", firstParent.Path, productType));
+                if (!string.IsNullOrEmpty(exceptionOutline))
+                {
+                    var resultExceptions = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+                        new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
+                        {
+                            CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
+                            ResponseGroup = "1619",
+                            Outline = exceptionOutline,
+                            Take = 10000,
+                            Skip = 0
+                        });
+                    listExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                }
+            }
             foreach (var parent in parents)
             {
                 var categories = new List<Category>();
@@ -102,7 +119,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                 if (result.Items != null)
                 {
 
-                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p));
+                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p, listExceptions));
                     if (parent.Categories != null)
                         categories.AddRange(parent.Categories);
                     categories.AddRange(children);
@@ -111,7 +128,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
 
-            return parents.SelectMany( p => p.Categories).ToArray();
+            return parents.SelectMany(p => p.Categories).ToArray();
         }
 
         private async Task<Category[]> LoadCities(Category[] parents)
@@ -131,7 +148,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p));
+                    var children = resultCities.Items.Where(x => x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>()));
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
@@ -141,7 +158,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
         private string ProductTypeToOutline(string productType)
         {
-            switch(productType)
+            switch (productType)
             {
                 case "Regions":
                     return ConfigurationManager.AppSettings["RegionCategoryId"];
@@ -159,7 +176,35 @@ namespace VirtoCommerce.Storefront.Services.Es
             return string.Empty;
         }
 
-        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.CatalogModuleApi.Models.Product dtoProduct)
+        private string ProductPathToOutlineException(string productPath)
+        {
+            switch (productPath)
+            {
+                case "/Cities/Conditions":
+                    return ConfigurationManager.AppSettings["CitiesConditionsCategoryId"];
+                case "/Cities/Estatetypes/Conditions":
+                    return ConfigurationManager.AppSettings["CitiesEstatetypesConditionsCategoryId"];
+                case "/Cities/Estatetypes/Tags":
+                    return ConfigurationManager.AppSettings["CitiesEstatetypesTagsCategoryId"];
+                case "/Cities/Tags":
+                    return ConfigurationManager.AppSettings["CitiesTagsCategoryId"];
+                case "/Estatetypes/Tags":
+                    return ConfigurationManager.AppSettings["EstatetypesTagsCategoryId"];
+                case "/Regions/Estatetypes":
+                    return ConfigurationManager.AppSettings["RegionEstatetypeCategoryId"];
+                case "/Regions/Tags":
+                    return ConfigurationManager.AppSettings["RegionTagsCategoryId"];
+                case "/Regions/Conditions":
+                    return ConfigurationManager.AppSettings["RegionsConditionsCategoryId"];
+                case "/Regions/Estatetypes/Conditions":
+                    return ConfigurationManager.AppSettings["RegionsEstatetypesConditionsCategoryId"];
+                case "/Regions/Estatetypes/Tags":
+                    return ConfigurationManager.AppSettings["RegionsEstatetypesTagsCategoryId"];
+            }
+            return string.Empty;
+        }
+
+        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.CatalogModuleApi.Models.Product dtoProduct, List<Product> listExceptions)
         {
             var path = string.Join("/", parent.Path, productType);
 
@@ -172,7 +217,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                 {
                     Parent = parent,
                     Path = path,
-                    ProductType = productType
+                    ProductType = productType,
+                    ListExceptions = listExceptions
                 }, product);
             var seoPath = category.SeoPath.Trim('/');
             if (!_seoCategoryDict.ContainsKey(seoPath))
