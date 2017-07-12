@@ -788,6 +788,11 @@
         display: none;
     }
 
+    .header_media .header-video
+    {
+        height: 300px;
+    }
+
     .header_media .header-bg
     {
         background: url(../images/header-index.png) no-repeat scroll 50% 0;
