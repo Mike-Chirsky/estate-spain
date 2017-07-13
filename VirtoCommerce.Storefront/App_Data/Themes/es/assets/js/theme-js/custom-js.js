@@ -154,8 +154,10 @@ function setClickDdElement(elem)
 {
     $.each(jQuery(elem + ' li'), function (index, el) {
         jQuery(el).off('click');
-        jQuery(el).click(function () {
-            event.preventDefault();
+        jQuery(el).click(function (event) {
+            if (event) {
+                event.preventDefault();
+            }
             setDdValue(this, true, true);
         });
     });
