@@ -1655,3 +1655,11 @@ blockquote
     font-size: 20px;
     padding: 5px;
 }
+.product-soe-text h1,
+.product-soe-text h2,
+.product-soe-text h3,
+.product-soe-text h4,
+.product-soe-text h5
+{
+    text-align: center;
+}

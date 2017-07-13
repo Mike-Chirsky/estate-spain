@@ -23,6 +23,16 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetPropertyByName("dealtype")?.Value;
             }
         }
+        /// <summary>
+        /// Get available
+        /// </summary>
+        public string AvailableProp
+        {
+            get
+            {
+                return GetPropertyByName("available")?.Value;
+            }
+        }
 
         /// <summary>
         /// Get other type 
@@ -160,6 +170,16 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             get
             {
                 return GetDescriptionByType("full-description");
+            }
+        }
+
+        /// <summary>
+        /// Get seo text down
+        /// </summary>
+        public string SeoTextDown1
+        {
+            get {
+                return GetDescriptionByType("seotext-down1");
             }
         }
 

@@ -22,6 +22,12 @@
 {%- if from_filter == false and (collection.type == 'region' or collection.type == 'type' or collection.type == 'other_type' or collection.type == 'tag' or collection.type == 'condition') -%}
   {% include 'headers/header-name' %}
   {% case collection.type %}
+    {% when 'other_type' %}
+      {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/other_type', block_id: collection.handle %}
+    {% when 'condition' %}
+      {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/condition', block_id: collection.handle %}
+    {% when 'tag' %}
+      {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/tag', block_id: collection.handle %}
     {% when 'type_add' %}
       {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/type', block_id: collection.handle %}
     {% when 'type' %}
@@ -29,7 +35,7 @@
     {% when 'region'%}
       {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/region', block_id: collection.handle %}
     {% when 'city'%}
-      {% include 'market-block/market-block', market_id: collection.title, market_url: 'storefrontapi/market/city', block_id: collection.handle %}
+      {% include 'market-block/market-block', market_id: collection.handle, market_url: 'storefrontapi/market/city', block_id: collection.handle %}
   {% endcase%}
 {%- endif -%}
 

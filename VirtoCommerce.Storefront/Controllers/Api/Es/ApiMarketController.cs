@@ -28,21 +28,16 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             WorkContext.CurrentProductSearchCriteria.PageNumber = page;
             WorkContext.CurrentProductSearchCriteria.PageSize = pageSize;
             type = type.ToLower();
-            switch (type)
+            if (type == "blog")
             {
-                case "region":
-                case "city":
-                case "type":
-                case "main":
-                    SearchProduct(type, id, page, pageSize);
-                    return View("market-block/market-block-partial-product", "empty", WorkContext);
-                case "blog":
-                    SearchBlog(id, page, pageSize);
-                    return View("market-block/market-block-partial-blog", "empty", WorkContext);
-                default:
-                    return null;
+                SearchBlog(id, page, pageSize);
+                return View("market-block/market-block-partial-blog", "empty", WorkContext);
             }
-        
+            else
+            {
+                SearchProduct(type, id, page, pageSize);
+                return View("market-block/market-block-partial-product", "empty", WorkContext);
+            }
         }
 
         private void SearchBlog(string id, int page, int pageSize)
@@ -94,7 +89,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         {
             switch (type)
             {
-                case "region":
+                case "region":                 
                     WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
                         new Term
                         {
@@ -117,6 +112,33 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
                         new Term
                         {
                             Name = "estatetype",
+                            Value = id
+                        }
+                    };
+                    break;
+                case "condition":
+                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
+                        new Term
+                        {
+                            Name = "condition",
+                            Value = id
+                        }
+                    };
+                    break;
+                case "other_type":
+                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
+                        new Term
+                        {
+                            Name = "other_type",
+                            Value = id
+                        }
+                    };
+                    break;
+                case "tag":
+                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
+                        new Term
+                        {
+                            Name = "tags",
                             Value = id
                         }
                     };
