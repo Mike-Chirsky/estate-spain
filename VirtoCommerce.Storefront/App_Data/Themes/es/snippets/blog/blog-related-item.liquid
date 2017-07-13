@@ -5,7 +5,7 @@
             <a href="{{item.url | absolute_url}}">{{ item.title }}</a>
         </h4>
         <div class="blog_unit_meta">
-            <time pubdate datetime="{{ item.published_at | date: '%Y-%m-%d' }}">{{ item.published_at | date: format: 'month_day_year' }}</time>
+            <time pubdate datetime="{{ item.published_at | date: '%d.%m.%Y' }}">{{ item.published_at | date: '%d.%m.%Y' }}</time>
         </div>
         <div class="listing_details the_grid_view">
             {{ item.description }}
