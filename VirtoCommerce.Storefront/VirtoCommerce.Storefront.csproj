@@ -570,7 +570,7 @@
     <Content Include="App_Data\cms-content\Pages\demo\thankyou.md" />
     <Content Include="App_Data\Themes\es\snippets\static\thankyou.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\goroda-ispanii.liquid" />
-    <Content Include="App_Data\cms-content\Pages\demo\parthners.md" />
+    <Content Include="App_Data\cms-content\Pages\demo\partners.md" />
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\about.liquid" />
