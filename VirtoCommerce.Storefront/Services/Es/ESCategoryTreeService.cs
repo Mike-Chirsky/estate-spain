@@ -12,6 +12,7 @@ using VirtoCommerce.Storefront.Model;
 using System.Threading;
 using System.Configuration;
 using VirtoCommerce.Storefront.AutoRestClients.CatalogModuleApi;
+using System.Diagnostics;
 
 namespace VirtoCommerce.Storefront.Services.Es
 {
@@ -61,7 +62,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags"))));
 
             // Load cities + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
+            /*await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
 
             // Load cities + estate type + conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Conditions"))));
@@ -75,7 +76,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Step 4. Load Conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions");
             // Step 5. Load Other type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");*/
             _lockObject.Release();
             return _loadedCategory;
         }
@@ -149,7 +150,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x.Associations!= null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).ToList();
+                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
