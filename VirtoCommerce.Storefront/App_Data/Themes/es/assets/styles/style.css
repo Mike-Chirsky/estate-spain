@@ -15291,7 +15291,7 @@ span.wpcf7-form-control-wrap {
 }
 
 .customnav #access ul li.with-megamenu>ul.sub-menu{
-    top: 130px;
+    top: 90px;
 } 
 
 .header_type2.customnav #access ul li.with-megamenu:hover>ul.sub-menu{
@@ -15409,14 +15409,14 @@ span.wpcf7-form-control-wrap {
     padding: 3px 0px;
 }
 
-.customnav #access ul ul li.wpestate_megamenu_col_1 li:last-of-type a,
+/*.customnav #access ul ul li.wpestate_megamenu_col_1 li:last-of-type a,
 .customnav #access ul ul li.wpestate_megamenu_col_2 li:last-of-type a,
 .customnav #access ul ul li.wpestate_megamenu_col_3 li:last-of-type a,
 .customnav #access ul ul li.wpestate_megamenu_col_4 li:last-of-type a,
 .customnav #access ul ul li.wpestate_megamenu_col_5 li:last-of-type a,
 .customnav #access ul ul li.wpestate_megamenu_col_6 li:last-of-type a{
     padding: 7px 13px 0px 13px;
-}
+}*/
 
 /*#access ul ul li.wpestate_megamenu_col_1 li:last-of-type a,
 #access ul ul li.wpestate_megamenu_col_2 li:last-of-type a,
