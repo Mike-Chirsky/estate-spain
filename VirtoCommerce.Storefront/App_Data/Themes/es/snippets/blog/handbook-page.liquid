@@ -30,27 +30,13 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                  {{ 'blog.handbook.coasts' | t }}</a>
-               </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-               <div class="panel-body">
-                    {% assign category_type = 'coasts' %}
-                    {% include 'blog/blog-category', category_type %}
-               </div>
-            </div>
-         </div>
-         <div class="panel panel-default">
-            <div class="panel-heading">
-               <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
                   {{ 'blog.handbook.mortgage' | t }}</a>
                </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
                <div class="panel-body">
-                    {% assign category_type = 'mortgage' %}
+                    {% assign category_type = 'ipoteca' %}
                     {% include 'blog/blog-category', category_type %}
                </div>
             </div>
@@ -62,15 +48,43 @@
                   {{ 'blog.handbook.visa' | t }}</a>
                </h4>
             </div>
-            <div id="collapse4" class="panel-collapse collapse in">
+            <div id="collapse4" class="panel-collapse collapse">
                <div class="panel-body">
                     {% assign category_type = 'visa' %}
                     {% include 'blog/blog-category', category_type %}
                </div>
             </div>
-            <div id="collapse4" class="panel-collapse collapse in">
+            <div id="collapse4" class="panel-collapse collapse">
                <div class="panel-body">
                     {% assign category_type = 'additional' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                  {{ 'blog.handbook.addition' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+               <div class="panel-body">
+                    {% assign category_type = 'mortgage' %}
+                    {% include 'blog/blog-category', category_type %}
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  {{ 'blog.handbook.coasts' | t }}</a>
+               </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+               <div class="panel-body">
+                    {% assign category_type = 'coasts' %}
                     {% include 'blog/blog-category', category_type %}
                </div>
             </div>
