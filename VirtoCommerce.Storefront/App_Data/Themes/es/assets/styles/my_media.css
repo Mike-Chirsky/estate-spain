@@ -737,7 +737,12 @@
     
     .mobile_header{
         display:block;
-    }  
+    } 
+
+    .product-price
+    {
+        float: none;
+    } 
 
     .header_wrapper{
         display:none;
@@ -2081,7 +2086,7 @@
     /*property list*/
     
     .breadcrumb{
-        margin-left:15px;
+        padding: 0;
     }
     
     .listing_filter_views,
