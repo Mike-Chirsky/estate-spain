@@ -529,8 +529,7 @@ input.form-control::-moz-placeholder {
     margin: 0;
     position: absolute;
     left: 0;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
     top: 120px;
     margin-left: 3px;
     padding-top: 1px;
@@ -741,9 +740,7 @@ input.form-control::-moz-placeholder {
 #access ul li.selected .sub-menu,
 #access ul li.selected .with-megamenu ul ul
 {
-    top: 0;
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 #access ul li.selected > a
@@ -15446,8 +15443,7 @@ span.wpcf7-form-control-wrap {
     border: none!important;
     box-shadow: none;
     position: static;
-    visibility: visible;
-    opacity: 1;
+    display: block;
 }
 
 #access .menu>.with-megamenu:hover   ul ul{
