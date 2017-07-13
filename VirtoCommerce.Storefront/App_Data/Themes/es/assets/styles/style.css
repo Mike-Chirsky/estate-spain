@@ -258,12 +258,11 @@ small, .small {
     height:auto!important;
 }*/
 
-.main_wrapper{
+/*.main_wrapper{
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.26);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.26);
-
-}
+}*/
 
 .content_wrapper{
     width: 1200px;
@@ -7049,6 +7048,11 @@ iframe .player .video-wrapper{
 
 .property-panel{
     margin-bottom: 13px;
+}
+
+#accordion_prop_details
+{
+    margin-top: 36px;
 }
 
 .property-panel .panel{
