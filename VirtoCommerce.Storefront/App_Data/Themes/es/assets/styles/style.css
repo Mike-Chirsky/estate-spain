@@ -142,6 +142,7 @@ h2 {
     font-size: 28px; 
     line-height: 1.3em; 
     margin-bottom: 13px;
+    margin-top: 30px;
 }
 
 h3 { 
@@ -1341,7 +1342,7 @@ input.form-control::-moz-placeholder {
 }
 
 .header_type2 .menu > li {
-    line-height: 70px;
+    line-height: 60px;
 }
 
 .customnav.header_type2 .menu > li,
@@ -10492,6 +10493,7 @@ input[type="checkbox"]:checked:before {
 #colophon a,
 #colophon li a{
     color: #72777F;
+    display: inline-block;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
