@@ -571,7 +571,6 @@
     <Content Include="App_Data\Themes\es\snippets\static\thankyou.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\goroda-ispanii.liquid" />
     <Content Include="App_Data\cms-content\Pages\demo\parthners.md" />
-    <Content Include="App_Data\Themes\es\snippets\static\parthners.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\short-main-filter.liquid" />
     <Content Include="App_Data\Themes\es\snippets\filters\header-filters-mobile.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\about.liquid" />
@@ -597,6 +596,7 @@
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-product.liquid" />
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
     <Content Include="App_Data\Themes\es\assets\header-video.webm" />
+    <Content Include="App_Data\Themes\es\snippets\static\partners.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

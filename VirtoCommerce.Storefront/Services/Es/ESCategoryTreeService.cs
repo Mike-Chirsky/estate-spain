@@ -62,7 +62,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags"))));
 
             // Load cities + tags
-            /*await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
 
             // Load cities + estate type + conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Conditions"))));
@@ -76,7 +76,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Step 4. Load Conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions");
             // Step 5. Load Other type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");*/
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");
             _lockObject.Release();
             return _loadedCategory;
         }
