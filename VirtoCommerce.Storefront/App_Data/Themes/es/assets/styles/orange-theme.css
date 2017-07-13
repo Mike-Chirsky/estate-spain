@@ -91,9 +91,9 @@ body, .wide {
     color: #768082;
 }
 
-#header4_footer, #header4_footer .widget-title-header4, #header4_footer a, .submit_action, #access ul.menu > li > a {
+/*#header4_footer, #header4_footer .widget-title-header4, #header4_footer a, .submit_action, #access ul.menu > li > a {
     color: #323a45;
-}
+}*/
 
 .menu_user_picture {
     border-color: #323a45;

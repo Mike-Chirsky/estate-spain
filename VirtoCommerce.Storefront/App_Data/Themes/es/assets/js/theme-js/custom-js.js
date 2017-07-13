@@ -383,6 +383,30 @@ jQuery(document).ready(function () {
         slideToBlock('.region-tails');
     });
 
+    $('.menu .menu-item').on('click', function () {
+        var li = $(this);
+
+        if(li.hasClass('selected')) {
+            li.removeClass('selected');
+        }
+        else {
+            li.addClass('selected').siblings().removeClass('selected');
+        }
+
+        // if(li.hasClass('selected')) {
+        //     li.removeClass('selected');
+        // }
+        // else {
+        //     li.addClass('selected');
+        // }
+    });
+
+    $(document).on('click', function (e) {
+        if($('.menu .menu-item').has(e.target).length === 0) {
+            $('.menu .menu-item').removeClass('selected');
+        }
+    });
+
     jQuery("#subcribe-action").click(function () {
 
         if (valideEmailjQuery("#subscribe-email").val()) {

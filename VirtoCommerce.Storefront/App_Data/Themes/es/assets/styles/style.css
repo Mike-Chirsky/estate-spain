@@ -737,10 +737,22 @@ input.form-control::-moz-placeholder {
     color:#fff;
 }
 
-#access ul li:hover > ul {
-    top: 90px;
+#access ul li.selected .sub-menu,
+#access ul li.selected .with-megamenu ul ul
+{
+    top: 0;
     opacity: 1;
     visibility: visible;
+}
+
+#access ul li.selected > a
+{
+    color: #ff9800;
+}
+
+#access ul li.selected .with-megamenu ul ul
+{
+    top: 0;
 }
 
 #access ul ul li:hover > ul {
@@ -15161,7 +15173,6 @@ span.wpcf7-form-control-wrap {
     padding: 13px 0px;
     width: 100%;
     margin: 0px;
-    max-width: 1110px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
@@ -15185,15 +15196,14 @@ span.wpcf7-form-control-wrap {
 
 
 .header_type2 #access ul li.with-megamenu>ul.sub-menu{
-    max-width: 100%;
+    width: 100% !important;
     top: 140px;
 }
 
-.header_type2 #access ul li.with-megamenu:hover>ul.sub-menu {
+/*.header_type2 #access ul li.with-megamenu:hover>ul.sub-menu {
     top: 140px;
     left: 0px;
     right: 0px;
-    width: 100% !important;
 }
 
 .header_type2.header_right #access ul li.with-megamenu:hover>ul.sub-menu {
@@ -15212,7 +15222,7 @@ span.wpcf7-form-control-wrap {
     top: 70px;
     left: auto;
     right: 0px;
-}
+}*/
 
 .header_type3 #access ul li.with-megamenu>ul.sub-menu{
     top: 180px;
@@ -15433,6 +15443,9 @@ span.wpcf7-form-control-wrap {
     width: 100%;
     border: none!important;
     box-shadow: none;
+    position: static;
+    visibility: visible;
+    opacity: 1;
 }
 
 #access .menu>.with-megamenu:hover   ul ul{
