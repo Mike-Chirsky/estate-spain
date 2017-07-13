@@ -1672,3 +1672,7 @@ blockquote
 {
     text-align: center;
 }
+.panel-title a
+{
+    font-size: 18px;
+}
