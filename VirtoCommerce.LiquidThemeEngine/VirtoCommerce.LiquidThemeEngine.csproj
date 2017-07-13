@@ -205,6 +205,7 @@
     <Compile Include="Objects\ILiquidContains.cs" />
     <Compile Include="Objects\Image.cs" />
     <Compile Include="Objects\ItemCollections.cs" />
+    <Compile Include="Objects\KeyValue.cs" />
     <Compile Include="Objects\Language.cs" />
     <Compile Include="Objects\LineItem.cs" />
     <Compile Include="Objects\Link.cs" />

@@ -36,6 +36,15 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             collection.CityName = category.CityName;
             collection.ParentCollectionImages = category.Parent?.Images.Select(x => x.ToShopifyModel()).ToArray();
             collection.RegionName = category.RegionName;
+            collection.Breadcrumb = new List<KeyValue<string, string>>();
+
+            var parent = category;
+            do
+            {
+                collection.Breadcrumb.Add(new KeyValue<string, string>(parent.Name, parent.SeoPath));
+                parent = parent.Parent;
+            } while (parent != null && !string.IsNullOrEmpty(parent.Id));
+            collection.Breadcrumb = collection.Breadcrumb.Reverse().ToList();
             return collection;
         }
     }

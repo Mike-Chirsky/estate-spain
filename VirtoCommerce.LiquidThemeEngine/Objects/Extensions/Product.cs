@@ -14,6 +14,16 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         #region Properties
         /// <summary>
+        /// Get estate type
+        /// </summary>
+        public string Estatetype
+        {
+            get
+            {
+                return GetPropertyByName("estatetype")?.Value;
+            }
+        }
+        /// <summary>
         /// Get deal type 
         /// </summary>
         public string DealType
@@ -124,7 +134,20 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetPropertyByName("region")?.Value;
+                var vl = GetPropertyByName("regions")?.Value;
+                if (string.IsNullOrEmpty(vl))
+                {
+                    return null;
+                }
+                var paths = vl.Split('/');
+                if (paths.Length > 1)
+                {
+                    return paths[1];
+                }
+                else
+                {
+                    return paths.FirstOrDefault();
+                }
             }
         }
 
@@ -204,6 +227,51 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetCustomTitle(false);
             }
         }
+        /// <summary>
+        /// Get breadcrumb title
+        /// </summary>
+        public string BreadcrumbTitle
+        {
+            get
+            {
+                return GetBreadcrumbTitle();
+            }
+        }
+
+        public ICollection<KeyValue<string, string>> Breadcrumb { set; get; }
+
+        /// <summary>
+        /// Get title for breadcrumb
+        /// </summary>
+        /// <returns></returns>
+        private string GetBreadcrumbTitle()
+        {
+            if (Properties.Count == 0)
+            {
+                return Title;
+            }
+            var title = GetPropertyByName("other_type")?.Value;
+            if (!string.IsNullOrEmpty(title))
+            {
+                title = $"{char.ToUpper(title.First())}{title.Substring(1)} ";
+            }
+            else
+            {
+                title = string.Empty;
+            }
+
+            if (FirstAvailableVariant != null)
+            {
+                title += $"№{FirstAvailableVariant.Sku} ";
+            }
+            var square = GetSquare();
+            if (!string.IsNullOrEmpty(square))
+            {
+                title += $"{square} м2";
+            }
+            return title;
+        }
+
 
         /// <summary>
         /// Get custom title for product

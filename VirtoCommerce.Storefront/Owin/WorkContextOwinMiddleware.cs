@@ -709,25 +709,49 @@ namespace VirtoCommerce.Storefront.Owin
         {
             var oldCurrentStore = wc.CurrentStore;
             wc.CurrentStore = wc.AllStores.FirstOrDefault(x => x.Id == ConfigurationManager.AppSettings["MasterStoreId"]);
+            var result = new Dictionary<string, List<Tuple<string, string>>>();
+            // estate types seo
+            FillSeoDictionary("estatetype", ConfigurationManager.AppSettings["EstateTypeCategoryId"], result);
+
+            // regions
+            FillSeoDictionary("region", ConfigurationManager.AppSettings["RegionCategoryId"], result);
+
+            // city 
+            FillSeoDictionary("city", ConfigurationManager.AppSettings["CityCategoryId"], result);
+
+            // tag
+            FillSeoDictionary("tag", ConfigurationManager.AppSettings["TagCategoryId"], result);
+
+            // condition
+            FillSeoDictionary("condition", ConfigurationManager.AppSettings["ConditionCategoryId"], result);
+
+            wc.CurrentStore = oldCurrentStore;
+            return result;
+        }
+
+        private void FillSeoDictionary(string key, string outlineId, Dictionary<string, List<Tuple<string, string>>> dict)
+        {
             var products = CatalogSearchService.SearchProducts(new ProductSearchCriteria
             {
-                Outline = ConfigurationManager.AppSettings["EstateTypeCategoryId"],
+                Outline = outlineId,
                 PageSize = 10000
             });
-            wc.CurrentStore = oldCurrentStore;
-            var result = new Dictionary<string, List<Tuple<string, string>>>();
+
             foreach (var item in products.Products)
             {
+                if (item == null)
+                {
+                    continue;
+                }
                 if (item.SeoInfo != null)
                 {
-                    if (!result.ContainsKey("estatetype"))
+                    if (!dict.ContainsKey(key))
                     {
-                        result.Add("estatetype", new List<Tuple<string, string>>());
+                        dict.Add(key, new List<Tuple<string, string>>());
                     }
-                    result["estatetype"].Add(new Tuple<string, string>(item.Name, item.SeoInfo?.Slug));
+                    dict[key].Add(new Tuple<string, string>(item.Name, item.SeoInfo?.Slug));
                 }
             }
-            return result;
         }
     }
 }

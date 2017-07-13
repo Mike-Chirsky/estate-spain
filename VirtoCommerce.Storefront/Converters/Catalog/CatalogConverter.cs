@@ -20,6 +20,7 @@ namespace VirtoCommerce.Storefront.Converters
 
         public static Product ToProduct(this catalogDto.Product productDto, Language currentLanguage, Currency currentCurrency, Store store)
         {
+
             return CatalogConverterInstance.ToProduct(productDto, currentLanguage, currentCurrency, store);
         }
 

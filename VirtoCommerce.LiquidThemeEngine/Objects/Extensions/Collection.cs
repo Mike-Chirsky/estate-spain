@@ -503,5 +503,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         public string RegionUrl { set; get; }
         public string CityName { set; get; }
         public string RegionName { set; get; }
+
+        public IList<KeyValue<string, string>> Breadcrumb { set; get; }
     }
 }

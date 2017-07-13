@@ -90,6 +90,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                     category.Description = string.Empty;
                     category.Descriptions = new Model.EditorialReview[0];
                     category.Properties = new CatalogProperty[0];
+                    category.Images = new Model.Image[0];
                 }
             }
             var par = context.Parent;
