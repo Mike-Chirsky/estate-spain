@@ -7,7 +7,7 @@
 {% endif %}
 {% if template contains 'product' %}
   <meta name="twitter:card" content="product">
-  <meta name="twitter:title" content="{{ product.title }}">
+  <meta name="twitter:title" content="{{ product.custom_title }}">
   <meta name="twitter:description" content="{{ product.description | strip_html | truncatewords: 140, '' | escape }}">
   <meta name="twitter:image" content="https:{{ product.featured_image.src | img_url }}">
   <meta name="twitter:image:width" content="240">
@@ -33,3 +33,4 @@
     {% endif %}
   {% endif %}
 {% endif %}
+<meta property="og:url" content="{{canonical_url | full_url}}"/>
