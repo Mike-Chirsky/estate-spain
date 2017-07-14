@@ -393,6 +393,34 @@ function valideEmail(str)
 
 jQuery(document).ready(function () {
 
+    // accordion actions on info blog page
+    $('#accordingPay').click(function () {
+        setTimeout(function () {
+            slideToBlock("#accordingPay");
+        }, 300);
+        
+    });
+    $('#accordingMortagage').click(function () {
+        setTimeout(function () {
+            slideToBlock("#accordingMortagage");
+        }, 300);
+    });
+    $('#accordingVisa').click(function () {
+        setTimeout(function () {
+            slideToBlock("#accordingVisa");
+        }, 300);
+    });
+    $('#accordingAdd').click(function () {
+        setTimeout(function () {
+            slideToBlock("#accordingAdd");
+        }, 300);
+    });
+    $('#accordingCoasts').click(function () {
+        setTimeout(function () {
+            slideToBlock("#accordingCoasts");
+        }, 300);
+    });
+    // end according
     $('.scroll-btn').on('click', function () {
         slideToBlock('.region-tails');
     });
