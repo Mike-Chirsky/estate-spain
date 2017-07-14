@@ -38,7 +38,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             product.Breadcrumb = new List<KeyValue<string, string>>();
             var region = AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["region"].FirstOrDefault(x => x.Item1 == product.Region));
             var city = AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["city"].FirstOrDefault(x => x.Item1 == product.City));
-            AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["estatetype"].FirstOrDefault(x => x.Item1 == product.Estatetype), city.Value);
+            AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["estatetype"].FirstOrDefault(x => x.Item1 == product.Estatetype), city?.Value ?? "");
             product.Breadcrumb.Add(new KeyValue<string, string>(product.BreadcrumbTitle, ""));
         }
 
