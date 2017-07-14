@@ -7,15 +7,13 @@
       {% if settings.favicon_enable %}
       <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
       {% endif %}
-      <title>
-         {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
-      </title>
+      <title>{{- page_title -}}</title>
       {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}" />
+        <meta name="description" content="{{ page_description | escape }}" />
       {% endif %}
       {% include 'google-tag-manager-head' %}
       {% include 'open-graph-tags' %}
-      <!--{% include 'twitter-card' %}-->
+      {% include 'twitter-card' %}
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
       {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
@@ -38,6 +36,9 @@
       {% if template contains 'collection' %}
         {% include 'seo/schemeorg-collection' %}
       {% endif %}
+      {% if template contains 'article' %}
+        {% include 'seo/article-micro' %}
+      {% endif %}
       <script type="application/ld+json">
         {
             "@context": "http://schema.org/",
@@ -47,7 +48,7 @@
         }
       </script>
    </head>
-   <body id="{{ page_title | handle }}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
+   <body lang="{{- current_language -}}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
       <div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left">

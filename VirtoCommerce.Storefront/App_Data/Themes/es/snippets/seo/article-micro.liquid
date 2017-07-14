@@ -1,0 +1,10 @@
+<script type="application/ld+json">
+{
+    "@type":"Article",
+    "@context": "http://schema.org",
+    "mainEntityOfPage": "{{- article.url | absolute_url -}}",
+    "image": "{{- article.image_url | absolute_url -}}",
+    "description": "{{- article.description -}}",
+    "datePublished": "{{- article.published_at | date: '%Y-%m-%d' -}}"
+}
+</script>
