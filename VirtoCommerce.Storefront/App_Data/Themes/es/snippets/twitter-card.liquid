@@ -1,4 +1,4 @@
-<meta name="twitter:card" content="summary">
+{% comment %}<meta name="twitter:card" content="summary">
 {% if settings.twittercard_handle != blank %}
   {% assign twitter_handle = settings.twittercard_handle %}
   {% unless settings.twittercard_handle contains '@' %}
@@ -33,4 +33,4 @@
     {% endif %}
   {% endif %}
 {% endif %}
-<meta property="og:url" content="{{canonical_url | full_url}}"/>
+<meta property="og:url" content="{{canonical_url | full_url}}"/>{% endcomment %}
