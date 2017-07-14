@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+    "@type": "ListItem",
+    "position": 1,
+    "item":
+    {
+        "@id": "{{ "/" | absolute_url }}",
+        "name": "{{ 'general.breadcrumbs.home' | t }}"
+        }
+    },
+    {% if template contains 'collection' %}
+        {% for item in collection.breadcrumb %}
+            {
+            "@type": "ListItem",
+            "position": {{- forloop.index | plus: 1 -}},
+            "item":
+                {
+                    "@id": "{%- if forloop.last -%}{{- collection.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
+                    "name": "{{-item.key-}}"
+                }
+            }{%- unless forloop.last -%},{% endunless %}
+        {% endfor %}
+        {% else %}
+        {% for item in product.breadcrumb %}
+            {
+            "@type": "ListItem",
+            "position": {{- forloop.index | plus: 1 -}},
+            "item":
+                {
+                    "@id": "{%- if forloop.last -%}{{- product.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
+                    "name": "{{-item.key-}}"
+                }
+            }{%- unless forloop.last -%},{% endunless %}
+        {% endfor %}
+    {% endif %}
+    ]
+}
+</script>

@@ -7,7 +7,7 @@
         {% if forloop.last %}
           {{ item.key }}
         {%else%}
-          <a href="{{item.value}}">{{item.key}}</a>
+          <a href="{{item.value | absolute_url}}">{{item.key}}</a>
         {% endif %}
       {% endfor %}
     {% elseif template contains 'product' %}
@@ -16,7 +16,7 @@
         {% if forloop.last %}
           {{ item.key }}
         {%else%}
-          <a href="{{item.value}}">{{item.key}}</a>
+          <a href="{{item.value | absolute_url}}">{{item.key}}</a>
         {% endif %}
       {% endfor %}
     {% elsif template == 'blog' %}

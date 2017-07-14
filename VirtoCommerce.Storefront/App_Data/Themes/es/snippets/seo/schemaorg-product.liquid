@@ -1,7 +1,6 @@
 ﻿{%- case template -%}
 {% when 'product' %}
 <script type="application/ld+json">
-
 {
     "@context": "http://schema.org/",
     "@type": "Product",
@@ -42,38 +41,5 @@
     }
 }
 </script>
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    {%- if collection.parents -%}
-        {%- for parent in collection.parents -%}
-        {%- if parent.url -%}
-        {
-            "@type": "ListItem",
-            "position": {{ forloop.index }},
-            "item": {
-                "@id": "{{ parent.url | absolute_url }}",
-                "name": "{{ parent.title }}"
-            }
-        },
-        {%- endif -%}
-        {%- endfor -%}
-    {%- endif -%}
-    {%- if collection -%}
-        {%- if collection.url -%}
-        {
-            "@type": "ListItem",
-            "position": {{ collection.parents.size | plus:1 }},
-            "item": {
-                "@id": "{{ collection.url | absolute_url }}",
-                "name": "{{ collection.title }}"
-            }
-        }
-        {%- endif -%}
-    {%- endif -%}
-    ]
-}
-</script>
+{% include 'seo/breadcrumb-micro' %}
 {%- endcase -%}

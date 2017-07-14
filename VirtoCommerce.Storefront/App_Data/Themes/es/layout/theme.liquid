@@ -32,9 +32,20 @@
       {% include 'oldIE-js' %}
       {{ '//code.jquery.com/jquery-3.2.1.min.js' | script_tag }}
       {{ '~/theme-bundler/scripts' | script_bundle_tag }}
-      {% if product %}
+      {% if template contains 'product' %}
         {% include 'seo/schemaorg-product' %}
       {% endif %}
+      {% if template contains 'collection' %}
+        {% include 'seo/schemeorg-collection' %}
+      {% endif %}
+      <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type" : "Organization",
+            "url" : "{{- '/' | absolute_url -}}",
+            "logo": "{{ 'images/logo.png' | asset_url }}"
+        }
+      </script>
    </head>
    <body id="{{ page_title | handle }}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
       <div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">

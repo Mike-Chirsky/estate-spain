@@ -1,0 +1,20 @@
+<script type="application/ld+json">
+[
+    {%- for item in collection.products -%}
+        {
+            "@context": "http://schema.org",
+            "@type": "Product",
+            "name": "{{- item.custom_title -}}",
+            "image": "{{- item.featured_image.src | size_image_link: 'large' -}}",
+            "url": "{{- item.handle -}}",
+            "description": "{{ item.product_description | strip_html | slice: 0, 180 | strip }}{%- if item.product_description.size > 180 -%}...{%- endif -%}",
+            "offers":{
+                "@type": "Offer",
+                "price": "{{- item.price | divided_by: 100 -}}",
+                "priceCurrency": "{{- shop.currency -}}"
+            }
+        }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+]
+</script>
+{% include 'seo/breadcrumb-micro' %}
