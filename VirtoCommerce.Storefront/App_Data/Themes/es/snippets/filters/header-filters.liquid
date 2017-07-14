@@ -11,7 +11,7 @@
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | assets_url}})">
       <div class="description-header">
         {% paginate products by 36 %}
-            <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{- paginate.items -}}&nbsp;{{'objects' | t }} </h1>
+            <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </h1>
         {% endpaginate %}
       </div>
    </div>
@@ -21,7 +21,7 @@
             <div role="tabpanel" class="adv_search_tab" id="tab_prpg_adv6">
                <div class="tab-content">
                 <div id="results" style="opacity: 0;display: block;">
-                    {{'found' | t}} <span id="results_no" style="display: inline;"></span> {{'objects' | t}}.
+                    {{'found' | t}} <span id="results_no" style="display: inline;"></span>.
                 </div>
                   <div role="tabpanel" class="tab-pane active">
                      {% include 'filters\main-filter' %}
@@ -50,7 +50,7 @@
             
             
          </h1>
-         <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %}&nbsp;{{'objects' | t }} </div>
+         <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %} </div>
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">

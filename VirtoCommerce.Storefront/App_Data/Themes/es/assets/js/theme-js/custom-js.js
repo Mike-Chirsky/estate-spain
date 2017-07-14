@@ -97,7 +97,7 @@ function getFoundResults(rootElement, fillElements) {
             fillElements.forEach(function (element) {
                 $(element + " #no-filter").hide();
                 $(element + " #count-objects").show();
-                $(element + " #result-count").text(data.metaData.totalItemCount);
+                $(element + " #result-count").text(numEnding(data.metaData.totalItemCount));
                 fillElement(element + " #estate-type-value", data.aggregations, "estatetype");
                 fillElement(element + " #other_type", data.aggregations, "other_type");
                 fillElement(element + " #condition-value", data.aggregations, "condition");
@@ -106,6 +106,18 @@ function getFoundResults(rootElement, fillElements) {
         method: "POST",
         contentType: "application/json"
     });
+}
+
+function numEnding(number)
+{
+
+    if (/1\\d$/.test(number))
+        return number + " объектов";
+    if (/1$/.test(number))
+        return number + " объект";
+    if (/(2|3|4)$/.test(number))
+        return number + " объекта";
+    return number + " объектов";
 }
 
 function fillElement(id, aggregations, field) {
@@ -468,7 +480,7 @@ jQuery(document).ready(function () {
     }
 
     jQuery("#to-parthner-form").click(function () {
-        slideToBlock("#form-parthner");
+        slideToBlock("#contact-us-form");
     });
     // forms
     jQuery("#callback-send").click(function () {

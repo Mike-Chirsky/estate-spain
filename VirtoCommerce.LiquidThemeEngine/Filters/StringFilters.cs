@@ -63,7 +63,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
                 return input;
             }
 
-           return input.Handelize();
+            return input.Handelize();
         }
 
         /// <summary>
@@ -115,6 +115,40 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
             return input.Trim();
         }
 
+        /// <summary>
+        /// Declension word after number
+        /// </summary>
+        /// <param name="input">Number</param>
+        public static string NumEnding(object input, string wordOne, string wordFour, string wordFive)
+        {
+            if (Regex.Match(input.ToString(), "1\\d$").Success)
+                return $"{input} {wordFive}";
+            if (Regex.Match(input.ToString(), "1$").Success)
+                return $"{input} {wordOne}";
+            if (Regex.Match(input.ToString(), "(2|3|4)$").Success)
+                return $"{input} {wordFour}";
+            return $"{input} {wordFive}";
+            /*
+            int number;
+            if (!int.TryParse(input.ToString(), out number))
+            {
+                return $"{input} {wordOne}";
+            }
+            number %= 100;
+            if (number > 11 && number <= 19)
+                
+            number %= 10;
+            switch (number)
+            {
+                case 1:
+                    return $"{input} {wordOne}";
+                case 2:
+                case 3:
+                case 4:
+                    return $"{input} {wordFour}";
+            }
+            return $"{input} {wordFive}";*/
+        }
     }
 
     public class RubyContractResolver : DefaultContractResolver
