@@ -37,7 +37,7 @@
          </div>
       </div>
     <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
-    <h4><a href="{{ product.url | absolute_url }}" itemprop="name">{{ product.custom_title }}</a></h4>
+    <h4><a href="{{ product.url | absolute_url }}">{{ product.custom_title }}</a></h4>
     <div class="listing_unit_price_wrapper">
         <span class="price_label price_label_before"> {% include 'price' with product.price %}</span>
     </div>
