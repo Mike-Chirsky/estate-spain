@@ -517,6 +517,7 @@
     <Content Include="App_Data\Themes\es\assets\js\theme-js\placeholders.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\position.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\property.js" />
+    <Content Include="App_Data\Themes\es\assets\js\theme-js\retina-1.1.0.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slick.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider-custom.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider.js" />
@@ -597,6 +598,8 @@
     <Content Include="App_Data\Themes\es\snippets\market-block\market-block-partial-blog.liquid" />
     <Content Include="App_Data\Themes\es\assets\header-video.webm" />
     <Content Include="App_Data\Themes\es\snippets\static\partners.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\seo\breadcrumb-micro.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\seo\schemeorg-collection.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
