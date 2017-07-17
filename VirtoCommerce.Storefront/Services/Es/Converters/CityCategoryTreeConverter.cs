@@ -18,6 +18,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             category.CityUrl = product.SeoInfo?.Slug;
             category.RegionName = context.Parent?.Name;
             category.CityName = product.Name;
+            // Generate seo
+            CustomSeoCategory(context, category);
             return category;
         }
 

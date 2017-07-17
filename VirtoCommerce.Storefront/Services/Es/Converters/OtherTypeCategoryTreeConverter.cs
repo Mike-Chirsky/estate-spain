@@ -24,6 +24,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 category.Type = "other_type";
             }
+            // Generate seo
+            CustomSeoCategory(context, category);
             return category;
         }
     }
