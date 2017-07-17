@@ -11,5 +11,6 @@ namespace VirtoCommerce.Storefront.Services.Es
     {
         Category FindByPath(string path);
         Task<Category> GetTree();
+        Dictionary<string, Category> GetSeoDict();
     }
 }

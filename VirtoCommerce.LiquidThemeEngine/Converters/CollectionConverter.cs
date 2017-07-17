@@ -42,7 +42,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
                 result.Products = new MutablePagedList<Product>((pageNumber, pageSize, sortInfos) =>
                 {
                     // fill count products in collection for metho info
-                    if (category.SeoInfo != null)
+                    if (category.SeoInfo != null && category.SeoInfo.MetaDescription != null)
                     {
                         category.SeoInfo.MetaDescription = string.Format(category.SeoInfo.MetaDescription, StringFilters.NumEnding(category.Products.Count, "объект", "объекта", "объектов"));
                     }

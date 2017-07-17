@@ -267,5 +267,10 @@ namespace VirtoCommerce.Storefront.Services.Es
         {
             return _seoCategoryDict.ContainsKey(path) ? _seoCategoryDict[path] : null;
         }
+
+        public Dictionary<string, Category> GetSeoDict()
+        {
+            return _seoCategoryDict;
+        }
     }
 }

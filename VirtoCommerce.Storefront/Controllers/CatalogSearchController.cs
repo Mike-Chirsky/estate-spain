@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using VirtoCommerce.LiquidThemeEngine.Converters.Extentsions;
 using VirtoCommerce.Storefront.Common;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
@@ -100,6 +101,21 @@ namespace VirtoCommerce.Storefront.Controllers
                 return View("collection.list", WorkContext);
             }
             return View("collection", WorkContext);
+        }
+
+        private void WriteToFile()
+        {
+            var dict = _categoryTreeService.GetSeoDict();
+            using (var file = new System.IO.StreamWriter(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "seo_dict.csv"), false, System.Text.Encoding.UTF8))
+            {
+                file.WriteLine("url;h1;description;title;seo text");
+                var converter = new EsShopifyModelConverter();
+                foreach (var key in dict.Keys)
+                {
+                    var liquidCategory = converter.ToLiquidCollection(dict[key], WorkContext);
+                    file.WriteLine($"{key};\"{(string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1).Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo.MetaDescription?.Replace("\"","\"\"")}\";\"{dict[key].SeoInfo?.Title?.Replace("\"","\"\"")}\";\"{liquidCategory.SeotextUp?.Replace("\"", "\"\"")}\"");
+                }
+            }
         }
     }
 }
