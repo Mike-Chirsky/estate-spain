@@ -353,7 +353,7 @@ ul.pagination-custom li.more-page:hover
     
 }
 .description-header{
-    top: 65px;
+    top: 50%;
     margin: 0 auto;
     padding: 10px 25px;
     position: absolute;
@@ -368,8 +368,8 @@ ul.pagination-custom li.more-page:hover
     max-width: 1170px;
     width: 100%;
 
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .search_wrapper .adv-search-1{
     background-color: #EDEDED;
@@ -972,16 +972,14 @@ body{
 }
 h4.blog-header
 {
-    padding-top: 15px;
     color: #EAFFEC;
 }
 h2.blog-header
 {
     font-size: 20px;
-    padding-bottom: 15px;
 }
 .blog-header-container{
-    top: 130px;
+    top: 50%;
 }
 .blog-header-container h1
 {
@@ -1537,10 +1535,10 @@ h2.blog-header
 .font-size-30{
     font-size: 30px;
 }
-.description-header.blog-header-container
+/*.description-header.blog-header-container
 {
-    padding: 0px;
-}
+    padding: 0 10px;
+}*/
 .margin-top-0{
     margin-top: 0px !important;
 }
