@@ -2378,18 +2378,18 @@ function estate_start_lightbox(){
         }) 
       
     
-       jQuery("#owl-demo").owlCarousel({
+       // jQuery("#owl-demo").owlCarousel({
          
-            loop:true,
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            items:1,
-            navigationText : ["<div class='nextleft'><i class='fa fa-angle-left'></i></div>","<div class='nextright'><i class='fa fa-angle-right'></i></div>"],
-            responsiveClass:true,
-            responsive:false
+       //      loop:true,
+       //      navigation : true, // Show next and prev buttons
+       //      slideSpeed : 300,
+       //      paginationSpeed : 400,
+       //      items:1,
+       //      navigationText : ["<div class='nextleft'><i class='fa fa-angle-left'></i></div>","<div class='nextright'><i class='fa fa-angle-right'></i></div>"],
+       //      responsiveClass:true,
+       //      responsive:false
            
-        });
+       //  });
           
 }
    

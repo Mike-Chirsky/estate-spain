@@ -13748,7 +13748,7 @@ ul.wpb_thumbnails-fluid > li,
 .comment-form #submit,
 .wpresidence_button{
     color: #ffffff;
-    float: left;
+    display: inline-block;
     padding: 14px 20px 13px;
     font-size: 13px;
     background-color: #3C90BE;
