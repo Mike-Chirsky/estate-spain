@@ -24,6 +24,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 category.Type = "type";
             }
+            // Generate seo
+            CustomSeoCategory(context, category);
             return category;
         }
 
@@ -45,7 +47,13 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 if (category.Parent != null && !string.IsNullOrEmpty(category.Parent.Id))
                 {
-                    var names = category.Name.Split('и');
+                    var index = category.Name.IndexOf(" и ");
+                    var names = new string[] { "", "" };
+                    names[0] = category.Name.Substring(0, index == -1 ? category.Name.Length : index);
+                    if (index != -1)
+                    {
+                        names[1] = category.Name.Substring(index + 3);
+                    }
                     category.SeoInfo.Title = $"{category.Name} {ptext} {category.Parent.Name} - купить {string.Join(" или ", names.Select(x => x.ToLower().Trim()))} {ptext} {category.Parent.Name} недорого, цены в рублях";
 
                 }

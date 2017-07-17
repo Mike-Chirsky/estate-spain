@@ -54,9 +54,6 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
             result.Parent = context.Parent;
 
-            // Generate seo
-            CustomSeoCategory(context, result);
-
             return result;
 
         }
@@ -87,6 +84,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                     category.Descriptions = exception.Descriptions;
                     category.Properties = exception.Properties;
                     category.Images = exception.Images;
+                    category.SeoInfo.MetaDescription = exception.SeoInfo?.MetaDescription;
+                    category.SeoInfo.Title = exception.SeoInfo?.Title;
                 }
                 else
                 {
@@ -94,6 +93,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                     category.Descriptions = new Model.EditorialReview[0];
                     category.Properties = new CatalogProperty[0];
                     category.Images = new Model.Image[0];
+                    category.SeoInfo.MetaDescription = string.Empty;
+                    category.SeoInfo.Title = string.Empty;
                 }
             }
             var par = context.Parent;
@@ -109,6 +110,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 }
                 par = par.Parent;
             }
+            
         }
 
         protected virtual void CustomSeoCategory(ConverterContext context, Category category)

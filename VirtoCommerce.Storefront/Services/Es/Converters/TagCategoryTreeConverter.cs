@@ -25,6 +25,8 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 category.Type = "tag";
             }
+            // Generate seo
+            CustomSeoCategory(context, category);
             return category;
         }
     }
