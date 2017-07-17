@@ -54,6 +54,9 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
             result.Parent = context.Parent;
 
+            // Generate seo
+            CustomSeoCategory(context, result);
+
             return result;
 
         }
@@ -106,6 +109,11 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 }
                 par = par.Parent;
             }
+        }
+
+        protected virtual void CustomSeoCategory(ConverterContext context, Category category)
+        {
+
         }
     }
 }

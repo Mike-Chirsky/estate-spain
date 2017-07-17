@@ -25,5 +25,22 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
         {
             return $"Недвижимость в {product.Name}";
         }
+
+        protected override void CustomSeoCategory(ConverterContext context, Category category)
+        {
+            if (category.SeoInfo == null)
+            {
+                category.SeoInfo = new Model.SeoInfo();
+            }
+            if (string.IsNullOrEmpty(category.SeoInfo.Title))
+            {
+                category.SeoInfo.Title = $"Недвижимость в {category.Name} купить недвижимость в {category.Name} недорого, цены в рублях";
+            }
+
+            if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
+            {
+                category.SeoInfo.MetaDescription = $"Недвижимость в {category.Name} – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости в {category.Name} по низким ценам!" + " В нашем каталоге представлено {0}.";
+            }
+        }
     }
 }

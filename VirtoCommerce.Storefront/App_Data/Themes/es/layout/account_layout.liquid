@@ -13,7 +13,7 @@
         {{ page_title }}{% if current_tags %}{% assign current_tags_joined = current_tags | join: ', ' %} - {{ 'general.meta.tags' | t: tags: current_tags_joined }}{% endif %}{% if current_page != 1 %} - {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} - {{ shop.name }}{% endunless %}
     </title>
     {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}" />
+    <meta name="description" content="{{ page_description }}" />
     {% endif %}
 
     {% include 'open-graph-tags' %}

@@ -8,7 +8,7 @@
     "sku" : "{{ product.first_available_variant.sku }}",
     "category": "{{ collection.title }}",
     "image": "{{ product.featured_image.src | size_image_link: 'large' }}",
-    "description": "{{ page_description | escape }}",
+    "description": "{{ page_description }}",
     "url" : "{{ product.url | full_url }}",
     "offers": {
         "@type": "Offer",

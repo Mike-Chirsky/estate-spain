@@ -36,6 +36,14 @@ namespace VirtoCommerce.Storefront.Controllers
             {
                 WorkContext.CurrentPageSeo = product.SeoInfo.JsonClone();
                 WorkContext.CurrentPageSeo.Slug = product.Url;
+                if (string.IsNullOrEmpty(WorkContext.CurrentPageSeo.Title))
+                {
+                    WorkContext.CurrentPageSeo.Title = $"Купить {product.CustomTitle} – цена {product.Price?.ActualPrice.ToString(false, true)}.";
+                }
+                if (string.IsNullOrEmpty(WorkContext.CurrentPageSeo.MetaDescription))
+                {
+                    WorkContext.CurrentPageSeo.MetaDescription = $"{product.CustomTitle} продажа от агентства Estate-Spain.com &#8364; Цена - {product.Price?.ActualPrice.ToString(false, true)}.";
+                }
 
                 // make sure title is set
                 if (string.IsNullOrEmpty(WorkContext.CurrentPageSeo.Title))

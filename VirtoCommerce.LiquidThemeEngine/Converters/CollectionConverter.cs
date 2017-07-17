@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.Practices.ServiceLocation;
 using PagedList;
+using VirtoCommerce.LiquidThemeEngine.Filters;
 using VirtoCommerce.LiquidThemeEngine.Objects;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Common;
@@ -40,6 +41,11 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
             {
                 result.Products = new MutablePagedList<Product>((pageNumber, pageSize, sortInfos) =>
                 {
+                    // fill count products in collection for metho info
+                    if (category.SeoInfo != null)
+                    {
+                        category.SeoInfo.MetaDescription = string.Format(category.SeoInfo.MetaDescription, StringFilters.NumEnding(category.Products.Count, "объект", "объекта", "объектов"));
+                    }
                     category.Products.Slice(pageNumber, pageSize, sortInfos);
                     return new StaticPagedList<Product>(category.Products.Select(x => ToLiquidProduct(x)), category.Products);
                 }, category.Products.PageNumber, category.Products.PageSize);

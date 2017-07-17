@@ -87,6 +87,7 @@
     <Compile Include="Catalog\CategoryResponseGroup.cs" />
     <Compile Include="Catalog\Es\CategoryTreeItem.cs" />
     <Compile Include="Catalog\Extensions\Category.cs" />
+    <Compile Include="Catalog\Extensions\Product.cs" />
     <Compile Include="Catalog\Extensions\ProductSearchCriteria.cs" />
     <Compile Include="Catalog\IHasProperties.cs" />
     <Compile Include="Catalog\InventoryStatus.cs" />

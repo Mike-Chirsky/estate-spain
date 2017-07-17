@@ -33,5 +33,39 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 return $"{product.Name} в {context.Parent.Name}";
             return product.Name;
         }
+
+        protected override void CustomSeoCategory(ConverterContext context, Category category)
+        {
+            if (category.SeoInfo == null)
+            {
+                category.SeoInfo = new Model.SeoInfo();
+            }
+            var ptext = category.Type == "city" ? "в" : "на";
+            if (string.IsNullOrEmpty(category.SeoInfo.Title))
+            {
+                if (category.Parent != null && !string.IsNullOrEmpty(category.Parent.Id))
+                {
+                    var names = category.Name.Split('и');
+                    category.SeoInfo.Title = $"{category.Name} {ptext} {category.Parent.Name} - купить {string.Join(" или ", names.Select(x => x.ToLower().Trim()))} {ptext} {category.Parent.Name} недорого, цены в рублях";
+
+                }
+                else
+                {
+                    category.SeoInfo.Title = $"{category.Name} в Испании";
+                }
+            }
+
+            if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
+            {
+                if (!string.IsNullOrEmpty(category.Parent.Id))
+                {
+                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} {ptext} {category.Parent.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья {ptext} {category.Parent.Name} по низким ценам! " + "В нашем каталоге представлено {0}.";
+                }
+                else
+                {
+                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья по низким ценам! " + "В нашем каталоге представлено {0}.";
+                }
+            }
+        }
     }
 }
