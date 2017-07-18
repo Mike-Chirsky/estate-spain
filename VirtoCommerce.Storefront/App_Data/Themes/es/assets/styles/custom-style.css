@@ -1670,3 +1670,10 @@ blockquote
 {
     font-size: 18px;
 }
+
+.article-description
+{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
