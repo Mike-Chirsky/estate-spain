@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-<main class="container content_wrapper about-page" role="main">   
+<div class="container content_wrapper about-page">   
     {% include 'breadcrumb' %}
     <div class="row">
         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -44,7 +44,7 @@
             <img src="{{ 'images/logo.png' | assets_url }}">
         </div>
     </div>
-    <div class="padding15-0 text-center">
+    <div class="margin-top-25 padding15-0 text-center">
         <h3>{{ 'about.header5' | t }}</h3>
         <div class="about-hr margin-auto"></div>
         <div> {{'about.text6' | t }} </div>
@@ -91,9 +91,10 @@
             </a>
         </div>
     </div>
-    <div class="padding15-0">
-        <h3 class="text-center">{{ 'about.header6' | t }}</h3>
-        <div class="about-hr margin-auto"></div>
+</div>
+<div class="reviews">
+    <div class="container padding15-0">
+        <h2 class="text-center">{{ 'about.header6' | t }}</h2>
         <div class="padding15-0 text-center">{{ 'about.text7' | t }}</div>
         <div id="review-carusel" class="carousel slide about-carusel" data-ride="carousel" data-interval="false" style="min-height: 200px;">
             <!-- Indicators -->
@@ -227,6 +228,8 @@
             </a>
         </div>
     </div>
+</div>
+<div class="container content_wrapper about-page">
     <div class="padding15-0">
         <div class="row">
             <div class="col-md-12">
@@ -279,4 +282,4 @@
     </div>
     {% include 'footer/contact-us' %}
     {% include 'footer/request-call' %}
-</main>
+</div>

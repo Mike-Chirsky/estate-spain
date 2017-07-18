@@ -4,6 +4,36 @@
     margin-top: auto;
 }
 
+.carousel
+{
+    height: 300px;
+}
+
+.reviews
+{
+    background: #ededed;
+}
+
+.reviews .carousel-indicators
+{
+    display: none;
+}
+
+.carousel-inner
+{
+    margin: 25px 0 0;
+}
+
+.carousel-control
+{
+    left: -50px;
+}
+
+.carousel-control.right
+{
+    right: -50px;
+}
+
 @media (max-width:1024px) {
     .addition-form {
         display: none;
@@ -1460,7 +1490,7 @@ h2.blog-header
 }
 
 .about-carusel .carousel-indicators{
-    bottom: -30px;
+    top: 180px;
 }
 
 .list-contacts ul {
