@@ -1042,10 +1042,6 @@ h2.blog-header
 
 }
 
-.blog-related h2{
-    padding-left: 15px;
-}
-
 .blog-preview-text
 {
     margin-bottom: 30px;
@@ -1672,5 +1668,12 @@ blockquote
 }
 .panel-title a
 {
+    font-size: 18px;
+}
+
+.article-description
+{
+    width: 100%;
+    text-align: center;
     font-size: 18px;
 }

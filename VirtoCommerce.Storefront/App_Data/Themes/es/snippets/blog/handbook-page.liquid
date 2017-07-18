@@ -1,11 +1,11 @@
 <div class="row handbook-main-container">
    <div class="col-md-6">
-      <div class="row blog-preview-text">
+      <div class="blog-preview-text">
          <p>{{ 'blog.handbook.preview-text' | t }}</p>
          <br/>
          <p>{{ 'blog.handbook.preview-text2' | t }}</p>
       </div>
-      <div class="row blog-download">
+      <div class="blog-download">
          <div class="download-handbook-container" style="background-image: url('{{- 'images/handbook_download_img.jpg' | asset_url -}}')">
             <div><a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url}}" target="_blank" class="wpresidence_button">{{ 'blog.handbook.download' | t }}</a></div>
          </div>
@@ -92,7 +92,7 @@
       </div>
    </div>
 </div>
-<div class="row blog-related">
+<div class="blog-related">
     <h2>{{ 'blog.handbook.related-header' | t }}</h2>
     {% assign related_category = "news" %}
     {% include 'blog/blog-related-category', related_category %}

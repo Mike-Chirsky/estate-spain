@@ -1,5 +1,6 @@
 {%- if article -%}
     <h1 class="blog-header padding15">{{- article.title -}}</h1>
+    <div class="article-description no-display-mobile">{{article.description}}</div>
 {%- else -%}
     {%- if blog.handle == 'news'-%}
         <h4 class="blog-header">{{'blog.news.header' | t }}</h3>

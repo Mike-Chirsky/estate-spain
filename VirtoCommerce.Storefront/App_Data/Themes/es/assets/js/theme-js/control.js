@@ -995,7 +995,7 @@ jQuery(document).ready(function ($) {
             slider_max =slider_max *my_custom_curr_coef;
         }
         
-        jQuery("#" + slider_name).slider({
+        /*jQuery("#" + slider_name).slider({
             range: true,
             min: parseFloat(slider_min),
             max: parseFloat(slider_max),
@@ -1032,7 +1032,7 @@ jQuery(document).ready(function ($) {
                     }
                 }
             }
-        });
+        });*/
     }
 
     function wpestate_enable_slider(slider_name, price_low, price_max, amount, my_custom_curr_pos, my_custom_curr_symbol, my_custom_curr_cur_post, my_custom_curr_coef) {
@@ -1049,7 +1049,7 @@ jQuery(document).ready(function ($) {
             slider_max =slider_max *my_custom_curr_coef;
         }
         
-        jQuery("#" + slider_name).slider({
+        /*jQuery("#" + slider_name).slider({
             range: true,
             min: parseFloat(slider_min),
             max: parseFloat(slider_max),
@@ -1079,7 +1079,7 @@ jQuery(document).ready(function ($) {
                     }
                 }
             }
-        });
+        });*/
     }
 
 
@@ -2347,16 +2347,6 @@ function filter_invoices(){
  
  
 function estate_sidebar_slider_carousel(){
-    var owl = jQuery("#owl-featured-slider").data('owlCarousel');
-    jQuery(".owl-featured-slider").owlCarousel({
-         rtl:true,
-         navigation : true, // Show next and prev buttons
-         slideSpeed : 300,
-         paginationSpeed : 400,
-         singleItem:true,
-         navigationText : ["<div class='nextleft'><i class='fa fa-angle-left'></i></div>","<div class='nextright'><i class='fa fa-angle-right'></i></div>"],
-
-     });
       
 } 
 
@@ -2377,19 +2367,6 @@ function estate_start_lightbox(){
             jQuery('.lightbox_property_wrapper').hide();
         }) 
       
-    
-       jQuery("#owl-demo").owlCarousel({
-         
-            loop:true,
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            items:1,
-            navigationText : ["<div class='nextleft'><i class='fa fa-angle-left'></i></div>","<div class='nextright'><i class='fa fa-angle-right'></i></div>"],
-            responsiveClass:true,
-            responsive:false
-           
-        });
           
 }
    
@@ -2406,17 +2383,6 @@ function estate_start_lightbox_floorplans(){
             event.preventDefault();
             jQuery('.lightbox_property_wrapper_floorplans').hide();
         }) 
-       
-        
-       jQuery("#owl-demo-floor").owlCarousel({
-            rtl:true,
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            navigationText : ["<div class='nextleft'><i class='fa fa-angle-left'></i></div>","<div class='nextright'><i class='fa fa-angle-right'></i></div>"],
-           
-        });
       
           
 }

@@ -1,7 +1,5 @@
-<div class="row">
-    {% include 'breadcrumb' %}
-</div>
-<div class="row rightmargin single_width_blog">
+{% include 'breadcrumb' %}
+<div class="rightmargin single_width_blog">
    <div class="meta-info">
       <div class="meta-element">{{ 'blog.publish-date' | t }} <time pubdate datetime="{{ article.published_at | date: '%d.%m.%Y' }}">{{ article.published_at | date: '%d.%m.%Y' }}</time></div>
    </div>
