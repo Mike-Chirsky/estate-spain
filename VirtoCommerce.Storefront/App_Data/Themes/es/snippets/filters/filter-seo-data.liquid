@@ -1,0 +1,87 @@
+<script>
+    window.baseUrl = '{{'/' | full_url }}';
+	collectionType = "{{ collection.type }}";
+    var initFilterValueRange = {
+        distanceToSea: "{{- collection.current_sea_distance_filter.value -}}",
+        price: "{{- collection.current_price_range_filter.value -}}"
+    };
+	var seoLinks = [];
+	seoLinks["estatetype"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'estatetype' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	]; 
+    seoLinks["region"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'region' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	];
+    seoLinks["city"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'city' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	]; 
+    seoLinks["tag"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'tag' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	];
+    seoLinks["condition"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'condition' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	];
+    seoLinks["other_type"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'other_type' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	];
+</script>

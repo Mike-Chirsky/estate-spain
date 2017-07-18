@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using VirtoCommerce.Storefront.Converters.Catalog;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
+using VirtoCommerce.Storefront.Model.Catalog.Extensions;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Services;
 
@@ -22,8 +24,11 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         // storefrontapi/product/filter
         [HttpPost]
-        public async Task<ActionResult> FilterProducts(ProductSearchCriteria searchCriteria)
+        public async Task<ActionResult> FilterProducts(ProductFilterCriteria filterCriteria)
         {
+            var searchCriteria = new ProductSearchCriteria(WorkContext.CurrentLanguage, WorkContext.CurrentCurrency, WorkContext.QueryString);
+            searchCriteria.ResponseGroup = ItemResponseGroup.ItemInfo;
+            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext);
             var retVal = await _catalogSearchService.SearchProductsAsync(searchCriteria);
             return Json(new
             {

@@ -40,26 +40,3 @@
       </div>
    </div>
 </div>
-<script>
-    jQuery("#send-main-filter-mobile").click(function () {
-        var locationPath = jQuery("#location-path").val();
-        var locationValue = jQuery("#location-value").val();
-        var esTypeVl = jQuery("#estate-type-value").val();
-        if((locationPath === undefined || locationPath ==="") && locationValue!== undefined && locationValue !=='')
-        {
-            var termStr = getTermsString('#main-filter-controls-mobile');
-            var location = '{{'/' | full_url }}' + getSearchPath('#main-filter-controls-mobile');
-            if(esTypeVl !== undefined && esTypeVl !=="")
-            {
-                termStr+= (termStr.length > 0 ? ';':'') + "estatetype:"+esTypeVl;
-            }
-            window.location.href = location + (termStr.length > 0 ? ('terms=' + encodeURIComponent(termStr)) : ""); 
-        }
-        else
-        {
-            var termStr = getTermsString('#main-filter-controls-mobile');	
-            var location = '{{'/' | full_url }}' + getRequestSeoPath('#main-filter-controls-mobile');
-            window.location.href = location + (termStr.length > 0 ? ('?terms=' + encodeURIComponent(termStr)) : ""); 
-        }
-   });
-</script>

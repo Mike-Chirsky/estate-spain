@@ -41,7 +41,7 @@
 
 {%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == "tag_add" or collection.type == "condition_add" -%}
   <h2 id="list-products" class="header-name text-center margin-bot-0">{{- collection.h2_listing -}}</h2>
-  <h4 class="text-center" >{{'found' | t }} {% include 'product-count' %} {{ 'objects' | t }}</h4>
+  <h4 class="text-center" >{{'found' | t }} {% include 'product-count' %}</h4>
   {% include 'product-list' %}
 {%- endif -%}
 
