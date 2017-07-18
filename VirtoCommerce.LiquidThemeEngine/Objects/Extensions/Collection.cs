@@ -29,6 +29,8 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
 
         public TagCollection CurrentTagCollection { set; get; }
 
+        public Dictionary<string, NumericRange> RangeFilters { set; get; }
+
         #region Images
         public string HeaderImage
         {
@@ -344,13 +346,24 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                var seaFilter = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(SeaDistanceKey, StringComparison.InvariantCultureIgnoreCase));
-                if (seaFilter == null || !seaFilter.Value.Contains("["))
+                var tag = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(SeaDistanceKey, StringComparison.InvariantCultureIgnoreCase));
+                if (tag != null)
                 {
-                    return seaFilter;
+                    return tag;
                 }
-                seaFilter.Value = PrepareRangeValueToFrontValue(seaFilter.Value);
-                return seaFilter;
+                if (RangeFilters == null)
+                {
+                    return null;
+                }
+                if (!RangeFilters.ContainsKey(SeaDistanceKey))
+                {
+                    return null;
+                }
+                tag = new Tag(SeaDistanceKey, PrepareRangeValueToFrontValue(RangeFilters[SeaDistanceKey].ToString()));
+                var collection = CurrentTagCollection.ToList();
+                collection.Add(tag);
+                CurrentTagCollection = new TagCollection(collection);
+                return tag;
             }
         }
 
@@ -358,13 +371,24 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                var priceFilter = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(PriceRangeKey, StringComparison.InvariantCultureIgnoreCase));
-                if (priceFilter == null || !priceFilter.Value.Contains("["))
+                var tag = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(PriceRangeKey, StringComparison.InvariantCultureIgnoreCase));
+                if (tag != null)
                 {
-                    return priceFilter;
+                    return tag;
                 }
-                priceFilter.Value = PrepareRangeValueToFrontValue(priceFilter.Value);
-                return priceFilter;
+                if (RangeFilters == null)
+                {
+                    return null;
+                }
+                if (!RangeFilters.ContainsKey(PriceRangeKey))
+                {
+                    return null;
+                }
+                tag = new Tag(PriceRangeKey, PrepareRangeValueToFrontValue(RangeFilters[PriceRangeKey].ToString()));
+                var collection = CurrentTagCollection.ToList();
+                collection.Add(tag);
+                CurrentTagCollection = new TagCollection(collection);
+                return tag;
             }
         }
         #endregion
@@ -480,7 +504,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             value = value.Replace(" ", "").Replace("[", "").Replace("]", "");
             if (value.StartsWith("TO"))
             {
-                value =value.Replace("TO", "from");
+                value =value.Replace("TO", "low");
             }
             else if (value.EndsWith("TO"))
             {

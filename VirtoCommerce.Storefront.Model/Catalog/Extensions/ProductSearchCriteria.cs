@@ -24,5 +24,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog
                 return _mutableTerms;
             }
         }
+
+        public Dictionary<string, Common.NumericRange> RangeFilters { set; get; }
     }
 }

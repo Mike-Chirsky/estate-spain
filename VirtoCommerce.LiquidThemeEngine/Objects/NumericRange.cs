@@ -1,6 +1,13 @@
-﻿namespace VirtoCommerce.Storefront.Model.Common
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DotLiquid;
+
+namespace VirtoCommerce.LiquidThemeEngine.Objects
 {
-    public class NumericRange
+    public class NumericRange:Drop
     {
         public decimal? Lower { get; set; }
         public decimal? Upper { get; set; }

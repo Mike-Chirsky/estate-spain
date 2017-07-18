@@ -7,6 +7,6 @@
     {%- endif -%}
     {{- collection.region_name -}}
 {%- endif -%}
-{%- if keyword != null -%}
+{%- if keyword != null and collection.region_name == null and collection.city_name == null -%}
     {{- keyword -}}
 {%- endif -%}

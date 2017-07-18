@@ -3,10 +3,10 @@
       <a class="wpresidence_button js-show-filters">Показать фильтры</a>
       <div class="adv-search-1">
          <div class="main-filter-container" id="main-filter-controls-mobile">
-            <div class="col-md-6">
+            <div class="col-md-6 clearfix">
                {% include 'filters/location' %}
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 clearfix">
                <div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -27,7 +27,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 clearfix">
                <div class="dropdown form-control {%- if collection.current_other_type_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -48,7 +48,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 clearfix">
                <div class="dropdown form-control {%- if collection.current_condit_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -69,7 +69,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-md-3 distance-to-sea">
+            <div class="col-md-3 distance-to-sea clearfix">
                <div class="dropdown form-control {%- if collection.current_sea_distance_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -89,7 +89,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-md-3 price-cmb">
+            <div class="col-md-3 price-cmb clearfix">
                <div class="dropdown form-control {%- if collection.current_price_range_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -100,7 +100,7 @@
                   <input type="hidden" property-name="price" id="price-value" value="{{ collection.current_price_range_filter.value }}">
                   <ul class="dropdown-menu filter_menu">
                      <li data-value="*" value="{{ 'filter.price2' | t }}">{{ 'filter.any3' | t }}</li>
-                     <li data-value="from100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+                     <li data-value="low100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
                      <li data-value="100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
                      <li data-value="150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
                      <li data-value="200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
@@ -110,11 +110,11 @@
                   </ul>
                </div>
             </div>
-            <div class="extended_search_check_wrapper" style="display: none;">
+            <div class="extended_search_check_wrapper" style="display: none;float: none;">
                <span id="adv_extended_close_adv" class="adv_extended_close_button" style="display: none;"><i class="fa fa-times"></i></span>
                {% include 'filters/additional-filter' %}
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 clearfix">
                <button id="send-main-filter-mobile" class="wpresidence_button">
                {% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
                <span id="count-objects">

@@ -1,4 +1,5 @@
-﻿<div class="dropdown form-control location-search">
+﻿{% if template contains 'collection' %}
+<div class="dropdown form-control location-search">
     <input  data-ignore
             class="{%- if collection.current_region_filter or collection.current_city_filter -%}selected{%- endif -%}" 
             type="text" 
@@ -11,6 +12,24 @@
             type="hidden" 
             id="location-path"
             value="{%- include 'location-path' -%}">
-    <ul class="dropdown-menu filter_menu list"> 
+    <ul class="dropdown-menu filter_menu list location"> 
     </ul>
 </div>
+{% else %}
+<div class="dropdown form-control location-search">
+    <input  data-ignore
+            class="selected" 
+            type="text" 
+            placeholder="{{'filter.location-placeholder' | t }}"
+            id="location-value"
+            value="Коста Бланка">
+    <input  data-ignore 
+            data-city="" 
+            data-region="Коста Бланка"
+            type="hidden" 
+            id="location-path"
+            value="costa-blanka">
+    <ul class="dropdown-menu filter_menu list location"> 
+    </ul>
+</div>
+{% endif %}

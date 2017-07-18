@@ -5,15 +5,9 @@
 			{% include 'filters/location' %}
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
-					{{- ' selected' -}}
-					{%-endif-%}">
+			<div class="dropdown form-control selected">
 				<div data-toggle="dropdown" class="filter_menu_trigger">
-					{%- if collection.current_estate_type_filter -%}
-					{{ collection.current_estate_type_filter.value }}
-					{%-else-%} 
-					{{ 'filter.category' | t }}
-					{%-endif-%}
+					Квартиры и апартаменты
 					<span class="caret  caret_filter "></span>
 				</div>
 				<input data-ignore 
@@ -21,7 +15,7 @@
 					   data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}" 
 					   property-name="estatetype" 
 					   id="estate-type-value" 
-					   value="{{ collection.current_estate_type_filter.value }}">
+					   value="Квартиры и апартаменты">
 				<ul class="dropdown-menu filter_menu">
 					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
 					{% for item in collection.estate_type_filter %}

@@ -67,6 +67,16 @@ namespace VirtoCommerce.Storefront.Model.Catalog
             {
                 result.Terms = Terms.Select(x => new Term { Name = x.Name, Value = x.Value }).ToArray();
             }
+            if (PriceRange != null)
+            {
+                result.PriceRange = new NumericRange
+                {
+                    IncludeLower = PriceRange.IncludeLower,
+                    IncludeUpper = PriceRange.IncludeUpper,
+                    Lower = PriceRange.Lower,
+                    Upper = PriceRange.Upper
+                };
+            }
 
             return result;
         }

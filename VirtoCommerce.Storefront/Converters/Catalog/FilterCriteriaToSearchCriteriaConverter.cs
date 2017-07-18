@@ -25,6 +25,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 throw new ArgumentNullException($"{nameof(wc)}");
             }
             var terms = searchCriteria.Terms.ToList();
+            searchCriteria.RangeFilters = new Dictionary<string, Model.Common.NumericRange>();
             if (!string.IsNullOrEmpty(criteria.Bath))
             {
                 terms.Add(new Term
@@ -51,12 +52,17 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.DisToSea))
             {
-                var term = GetRangeTerm(criteria.DisToSea);
-                terms.Add(new Term
+                var term = GetRange(criteria.DisToSea);
+                if (searchCriteria.Keyword == null)
                 {
-                    Name = "distancetosea",
-                    Value = criteria.DisToSea
-                });
+                    searchCriteria.Keyword = "";
+                }
+                else
+                {
+                    searchCriteria.Keyword += ",";
+                }
+                searchCriteria.Keyword = $"distancetosea:{term}";
+                searchCriteria.RangeFilters.Add("distancetosea", term);
             }
             if (!string.IsNullOrEmpty(criteria.EstateType))
             {
@@ -76,12 +82,8 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.Price))
             {
-                var termCriteria = GetRangeTerm(criteria.Price);
-                terms.Add(new Term
-                {
-                    Name = "price",
-                    Value = termCriteria
-                });
+                searchCriteria.PriceRange = GetRange(criteria.Price);
+                searchCriteria.RangeFilters.Add("price", searchCriteria.PriceRange);
             }
             if (!string.IsNullOrEmpty(criteria.Region))
             {
@@ -127,24 +129,45 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
         }
 
 
-        private static string GetRangeTerm(string value)
+        private static Model.Common.NumericRange GetRange(string value)
         {
-            if (string.IsNullOrEmpty(value))
-                return string.Empty;
-            var termCriteria = string.Empty;
-            if (value.Contains("from"))
+            var range = new Model.Common.NumericRange
             {
-                termCriteria = $"[TO {value.Replace("from", "")}]";
+                IncludeLower = true,
+                IncludeUpper = true
+            };
+            if (string.IsNullOrEmpty(value))
+                return range;
+            if (value.Contains("low"))
+            {
+                decimal d;
+                if (decimal.TryParse(value.Replace("low", ""), out d))
+                {
+                    range.Upper = d;
+                }
             }
             else if (value.Contains("up"))
             {
-                termCriteria = $"[{value.Replace("up", "")} TO]";
+                decimal d;
+                if (decimal.TryParse(value.Replace("up", ""), out d))
+                {
+                    range.Lower = d;
+                }
             }
             else if (value.Contains("-"))
             {
-                termCriteria = $"[{value.Replace(" ", "").Replace("-", " TO ")}]";
+                var items = value.Replace(" ", "").Split('-');
+                decimal d;
+                if (decimal.TryParse(items[0], out d))
+                {
+                    range.Lower = d;
+                }
+                if (decimal.TryParse(items[1], out d))
+                {
+                    range.Upper = d;
+                }
             }
-            return termCriteria;
+            return range;
         }
         private static string GetLocalizationValue(WorkContext wc, string value, string key)
         {

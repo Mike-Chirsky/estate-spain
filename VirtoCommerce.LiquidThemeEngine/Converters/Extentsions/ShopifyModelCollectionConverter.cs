@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VirtoCommerce.LiquidThemeEngine.Objects;
+using VirtoCommerce.Storefront.Converters.Catalog;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
 
@@ -16,6 +17,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             var collection = base.ToLiquidCollection(category, workContext);
             collection.CurrentTagCollection = new TagCollection(
                         workContext.CurrentProductSearchCriteria.Terms.Select(t => ToLiquidTag(t)).ToList());
+            collection.RangeFilters = workContext.CurrentProductSearchCriteria.RangeFilters?.ToDictionary(x => x.Key, x => x.Value.ToStreFrontModel());
             if (category.Properties != null)
             {
                 collection.Properties = category.Properties.Select(x => x.ToShopifyModel()).ToList();

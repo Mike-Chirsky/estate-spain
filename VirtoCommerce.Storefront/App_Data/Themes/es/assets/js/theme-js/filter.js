@@ -394,6 +394,9 @@ function getValues(aggregations, type) {
 
 function setClickDdElement(elem) {
     $.each($(elem + ' li'), function (index, el) {
+        if ($(el).parent().hasClass("location")) {
+            return;
+        }
         $(el).off('click');
         $(el).click(function (event) {
             if (event) {
@@ -600,8 +603,8 @@ function setCurrentValueDd(elements, value) {
         var els = $(element).children("li");
         $.each(els, function (index, item) {
             var elItem = $(item);
-            if (elItem.attr("data-value") == value) {
-                elItem.click();
+            if (elItem.attr("data-value") === value) {
+                setDdValue(elItem, false, false);
             }
         });
     });

@@ -1036,6 +1036,7 @@
     <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Controllers\QuoteRequestController.cs" />
     <Compile Include="Converters\Catalog\FilterCriteriaToSearchCriteriaConverter.cs" />
+    <Compile Include="Converters\Catalog\NumerRangeConverter.cs" />
     <Compile Include="Converters\Es\ProductToLocationItem.cs" />
     <Compile Include="Converters\Recommendations\CognitiveRecommendationConverter.cs" />
     <Compile Include="Converters\SettingConverter.cs" />
