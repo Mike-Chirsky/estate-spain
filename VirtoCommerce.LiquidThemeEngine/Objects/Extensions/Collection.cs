@@ -340,11 +340,17 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
         }
 
-        public Tag CurrentSaeDistanceFilter
+        public Tag CurrentSeaDistanceFilter
         {
             get
             {
-                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(SeaDistanceKey, StringComparison.InvariantCultureIgnoreCase));
+                var seaFilter = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(SeaDistanceKey, StringComparison.InvariantCultureIgnoreCase));
+                if (seaFilter == null || !seaFilter.Value.Contains("["))
+                {
+                    return seaFilter;
+                }
+                seaFilter.Value = PrepareRangeValueToFrontValue(seaFilter.Value);
+                return seaFilter;
             }
         }
 
@@ -352,7 +358,13 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(PriceRangeKey, StringComparison.InvariantCultureIgnoreCase));
+                var priceFilter = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(PriceRangeKey, StringComparison.InvariantCultureIgnoreCase));
+                if (priceFilter == null || !priceFilter.Value.Contains("["))
+                {
+                    return priceFilter;
+                }
+                priceFilter.Value = PrepareRangeValueToFrontValue(priceFilter.Value);
+                return priceFilter;
             }
         }
         #endregion
@@ -459,6 +471,26 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return new List<Tag>();
             }
             return AllTags.Where(x => x.GroupName.Equals(groupName, StringComparison.InvariantCultureIgnoreCase)).ToList();
+        }
+
+        private string PrepareRangeValueToFrontValue(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+                return null;
+            value = value.Replace(" ", "").Replace("[", "").Replace("]", "");
+            if (value.StartsWith("TO"))
+            {
+                value =value.Replace("TO", "from");
+            }
+            else if (value.EndsWith("TO"))
+            {
+               value = "up" + value.Replace("TO", "");
+            }
+            else
+            {
+                value = value.Replace("TO", "-");
+            }
+            return value;
         }
 
         /// <summary>

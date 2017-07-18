@@ -84,4 +84,17 @@
 			{%- endif -%}
 		{%- endfor -%}
 	];
+	seoLinks["other_type_dict"] = [ 
+		{%- for item in filter_seo_links %}
+			{%- if item.key == 'other_type_dict' -%}
+				{%- for seo in item -%}
+					{%- if forloop.last -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"}
+					{%- else -%}
+					{value: "{{- seo.value_filter -}}", seoLink: "{{- seo.seo_link -}}"},
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+		{%- endfor -%}
+	];
 </script>

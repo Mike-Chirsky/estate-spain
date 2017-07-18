@@ -725,39 +725,42 @@ namespace VirtoCommerce.Storefront.Owin
             // condition
             FillSeoDictionary("condition", ConfigurationManager.AppSettings["ConditionCategoryId"], result);
 
-            // other types 
-            result.Add("other_type", new List<Tuple<string, string>>());
-            result["other_type"].Add(new Tuple<string, string>("Дом", "dom"));
-            result["other_type"].Add(new Tuple<string, string>("Масия", "masia"));
-            result["other_type"].Add(new Tuple<string, string>("Замок", "zamok"));
-            result["other_type"].Add(new Tuple<string, string>("Вилла", "villa"));
-            result["other_type"].Add(new Tuple<string, string>("Сельский дом", "selscii-dom"));
-            result["other_type"].Add(new Tuple<string, string>("Усадьба", "usadba"));
-            result["other_type"].Add(new Tuple<string, string>("Коттедж", "cottage"));
-            result["other_type"].Add(new Tuple<string, string>("Поместье", "pomeste"));
-            result["other_type"].Add(new Tuple<string, string>("Особняк", "osobnyak"));
-            result["other_type"].Add(new Tuple<string, string>("Апартаменты", "apartamenty"));
-            result["other_type"].Add(new Tuple<string, string>("Пентхаус", "penthouse"));
-            result["other_type"].Add(new Tuple<string, string>("Квартира", "kavartira"));
-            result["other_type"].Add(new Tuple<string, string>("Студия", "studio"));
-            result["other_type"].Add(new Tuple<string, string>("Бунгало", "bungalo"));
-            result["other_type"].Add(new Tuple<string, string>("Таунхаус", "townhouse"));
-            result["other_type"].Add(new Tuple<string, string>("Шале", "shale"));
-            result["other_type"].Add(new Tuple<string, string>("Дуплекс", "duplex"));
-            result["other_type"].Add(new Tuple<string, string>("Жилое строительство", "jiloe-stroitelstvo"));
-            result["other_type"].Add(new Tuple<string, string>("Коммерческий", "kommerchiskii"));
-            result["other_type"].Add(new Tuple<string, string>("Отель", "hotel"));
-            result["other_type"].Add(new Tuple<string, string>("Жилое здание", "jiloe-zdanie"));
-            result["other_type"].Add(new Tuple<string, string>("Гостиница", "gostinica"));
-            result["other_type"].Add(new Tuple<string, string>("Кафе", "coffe"));
-            result["other_type"].Add(new Tuple<string, string>("Коммерческая", "kommerchiskaya"));
-            result["other_type"].Add(new Tuple<string, string>("Помещение", "pomeshenie"));
-            result["other_type"].Add(new Tuple<string, string>("Офис", "office"));
-            result["other_type"].Add(new Tuple<string, string>("Ресторан", "restoran"));
-            result["other_type"].Add(new Tuple<string, string>("Хостел", "hostel"));
-            result["other_type"].Add(new Tuple<string, string>("Заправка", "zapravka"));
-            result["other_type"].Add(new Tuple<string, string>("Здание нежилое", "zdanie-ne-jiloe"));
-            result["other_type"].Add(new Tuple<string, string>("Склад", "sklad"));
+            // other types
+            FillSeoDictionary("other_type", ConfigurationManager.AppSettings["OtherTypeCategoryId"], result);
+
+            // other types dict
+            result.Add("other_type_dict", new List<Tuple<string, string>>());
+            result["other_type_dict"].Add(new Tuple<string, string>("Дом", "dom"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Масия", "masia"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Замок", "zamok"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Вилла", "villa"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Сельский дом", "selscii-dom"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Усадьба", "usadba"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Коттедж", "cottage"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Поместье", "pomeste"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Особняк", "osobnyak"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Апартаменты", "apartamenty"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Пентхаус", "penthouse"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Квартира", "kavartira"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Студия", "studio"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Бунгало", "bungalo"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Таунхаус", "townhouse"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Шале", "shale"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Дуплекс", "duplex"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Жилое строительство", "jiloe-stroitelstvo"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Коммерческий", "kommerchiskii"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Отель", "hotel"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Жилое здание", "jiloe-zdanie"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Гостиница", "gostinica"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Кафе", "coffe"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Коммерческая", "kommerchiskaya"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Помещение", "pomeshenie"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Офис", "office"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Ресторан", "restoran"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Хостел", "hostel"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Заправка", "zapravka"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Здание нежилое", "zdanie-ne-jiloe"));
+            result["other_type_dict"].Add(new Tuple<string, string>("Склад", "sklad"));
 
             wc.CurrentStore = oldCurrentStore;
             return result;

@@ -75,7 +75,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-3" class="distance-to-sea">
+		<div class="col-md-3 distance-to-sea">
 			<div class="dropdown form-control {%- if collection.current_sea_distance_filter -%}
 					{{- ' selected' -}}
 					{%-endif-%}">
@@ -86,16 +86,16 @@
 				<input type="hidden" property-name="distancetosea" id="distancetosea-range" value="{{ collection.current_sea_distance_filter.value }}">
 				<ul class="dropdown-menu filter_menu">
 					<li data-value="*" value="{{ 'product.distancetosea' | t }}">{{ 'filter.any2' | t }}</li>
-					<li data-value="300" formated-value="{{'filter.to' | t }} 300 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
+					<li data-value="from300" formated-value="{{'filter.to' | t }} 300 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
 					<li data-value="300-500" formated-value="{{'filter.from' | t }} 300 - 500 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">300 - 500 {{'filter.m' | t }}</li>
 					<li data-value="500-1000" formated-value="{{'filter.from' | t }} 500 - 1000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">500 - 1000 {{'filter.m' | t }}</li>
 					<li data-value="1000-2000" formated-value="{{'filter.from' | t }} 1000 - 2000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">1000 - 2000 {{'filter.m' | t }}</li>
 					<li data-value="2000-5000" formated-value="{{'filter.from' | t }} 2000 - 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">2000 - 5000 {{'filter.m' | t }}</li>
-					<li data-value="5000" formated-value="{{ 'filter.more' | t }} 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
+					<li data-value="up5000" formated-value="{{ 'filter.more' | t }} 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-3" class="price-cmb">
+		<div class="col-md-3 price-cmb">
 			<div class="dropdown form-control {%- if collection.current_price_range_filter -%}
 					{{- ' selected' -}}
 					{%-endif-%}">
@@ -109,13 +109,13 @@
 					   value="{{ collection.current_price_range_filter.value }}">
 				<ul class="dropdown-menu filter_menu">
 					<li data-value="*" value="{{ 'filter.price2' | t }}">{{ 'filter.any3' | t }}</li>
-					<li data-value="100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+					<li data-value="from100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
 					<li data-value="100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
 					<li data-value="150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
 					<li data-value="200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
 					<li data-value="500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
 					<li data-value="1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
-					<li data-value="2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
+					<li data-value="up2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
 				</ul>
 			</div>
 		</div>

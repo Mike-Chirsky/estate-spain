@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using VirtoCommerce.LiquidThemeEngine.Converters.Extentsions;
 using VirtoCommerce.Storefront.Common;
+using VirtoCommerce.Storefront.Converters.Catalog;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
+using VirtoCommerce.Storefront.Model.Catalog.Extensions;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Services;
 using VirtoCommerce.Storefront.Services.Es;
@@ -61,8 +63,11 @@ namespace VirtoCommerce.Storefront.Controllers
             WorkContext.CurrentCategory = category;
             WorkContext.CurrentPageSeo = category.SeoInfo.JsonClone();
             WorkContext.CurrentPageSeo.Slug = category.Url;
-
+            // map filter properies to search criteria
+            var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
+            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
             var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
+            
             criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?
        
             if (category != null)

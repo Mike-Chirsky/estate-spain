@@ -6,7 +6,7 @@
             <div class="col-md-6">
                {% include 'filters/location' %}
             </div>
-            <div class="col-md-3 {% if collection.current_estate_type_filter %} disabled {% endif %}">
+            <div class="col-md-3">
                <div class="dropdown form-control {%- if collection.current_estate_type_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -69,7 +69,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 distance-to-sea">
                <div class="dropdown form-control {%- if collection.current_sea_distance_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -80,16 +80,16 @@
                   <input type="hidden" property-name="distancetosea" id="distancetosea-range" value="{{ collection.current_sea_distance_filter.value }}">
                   <ul class="dropdown-menu filter_menu">
                      <li data-value="*" value="{{ 'product.distancetosea' | t }}">{{ 'filter.any2' | t }}</li>
-                     <li data-value="distancetosea-under-300" formated-value="{{'filter.to' | t }} 300 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
-                     <li data-value="distancetosea-300-500" formated-value="{{'filter.from' | t }} 300 - 500 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">300 - 500 {{'filter.m' | t }}</li>
-                     <li data-value="distancetosea-500-1000" formated-value="{{'filter.from' | t }} 500 - 1000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">500 - 1000 {{'filter.m' | t }}</li>
-                     <li data-value="distancetosea-1000-2000" formated-value="{{'filter.from' | t }} 1000 - 2000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">1000 - 2000 {{'filter.m' | t }}</li>
-                     <li data-value="distancetosea-2000-5000" formated-value="{{'filter.from' | t }} 2000 - 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">2000 - 5000 {{'filter.m' | t }}</li>
-                     <li data-value="distancetosea-over-5000" formated-value="{{ 'filter.more' | t }} 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
+                     <li data-value="from300" formated-value="{{'filter.to' | t }} 300 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
+                     <li data-value="300-500" formated-value="{{'filter.from' | t }} 300 - 500 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">300 - 500 {{'filter.m' | t }}</li>
+                     <li data-value="500-1000" formated-value="{{'filter.from' | t }} 500 - 1000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">500 - 1000 {{'filter.m' | t }}</li>
+                     <li data-value="1000-2000" formated-value="{{'filter.from' | t }} 1000 - 2000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">1000 - 2000 {{'filter.m' | t }}</li>
+                     <li data-value="2000-5000" formated-value="{{'filter.from' | t }} 2000 - 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">2000 - 5000 {{'filter.m' | t }}</li>
+                     <li data-value="up5000" formated-value="{{ 'filter.more' | t }} 5000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{ 'filter.more' | t }} 5000 {{'filter.m' | t }}</li>
                   </ul>
                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 price-cmb">
                <div class="dropdown form-control {%- if collection.current_price_range_filter -%}
                   {{- ' selected' -}}
                   {%-endif-%}">
@@ -100,13 +100,13 @@
                   <input type="hidden" property-name="price" id="price-value" value="{{ collection.current_price_range_filter.value }}">
                   <ul class="dropdown-menu filter_menu">
                      <li data-value="*" value="{{ 'filter.price2' | t }}">{{ 'filter.any3' | t }}</li>
-                     <li data-value="price-under-100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
-                     <li data-value="price-over-2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
+                     <li data-value="from100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
+                     <li data-value="100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
+                     <li data-value="150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>
+                     <li data-value="200000-500000">200 000 - 500 000 {{ current_currency.symbol }}</li>
+                     <li data-value="500000-1000000">500 000 - 1 000 000 {{ current_currency.symbol }}</li>
+                     <li data-value="1000000-1500000">1 000 000 - 1 500 000 {{ current_currency.symbol }}</li>
+                     <li data-value="up2000000">{{ 'filter.more' | t }} 2 000 000  {{ current_currency.symbol }}</li>
                   </ul>
                </div>
             </div>

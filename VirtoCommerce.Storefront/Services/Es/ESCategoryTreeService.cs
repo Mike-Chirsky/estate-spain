@@ -75,6 +75,10 @@ namespace VirtoCommerce.Storefront.Services.Es
 
             // Step 4. Load Conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions");
+            // Condition + type
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions").ContinueWith(t=>LoadChildrenFromCategory(t.Result,"Estatetype"));
+            // Condition + tag
+            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tag"));
             // Step 5. Load Other type
             await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");
             _lockObject.Release();

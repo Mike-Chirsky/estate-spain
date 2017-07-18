@@ -2,7 +2,7 @@
    <div class="col-md-12 filters">
     <div class="row">
       <div class="listing_filters_head" id="addition-filter-controls">
-         <div class="dropdown listing_filter_select">
+         <div class="dropdown listing_filter_select {% if collection.current_bed_rooms_filter %}selected{% endif %}">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
             {{ 'filter.bed-count' | t }}
              {%- if collection.current_bed_rooms_filter -%}
@@ -18,7 +18,7 @@
                 {% endfor %}
             </ul>
          </div>
-         <div class="dropdown listing_filter_select">
+         <div class="dropdown listing_filter_select {% if collection.current_bath_rooms_filter %}selected{% endif %}">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
             {{ 'filter.bath-count' | t }}
              {%- if collection.current_bath_rooms_filter -%}
@@ -34,10 +34,11 @@
                 {% endfor %}
             </ul>
          </div>
-         <div class="dropdown listing_filter_select">
+         <div class="dropdown listing_filter_select {% if collection.current_property_square_filter %}selected{% endif %}">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
              {{ 'filter.square' | t }}
              {%- if collection.current_property_square_filter -%}
+                ({{ 'product.square' | t }})
                 : <span class="dd-select-value">{{ collection.current_property_square_filter.value }}</span>
              {%-endif-%}
              <span class="caret caret_filter"></span>
@@ -50,10 +51,11 @@
                 {% endfor %}
             </ul>
          </div>
-         <div class="dropdown listing_filter_select order_filter">
+         <div class="dropdown listing_filter_select {% if collection.current_land_square_filter %}selected{% endif %}">
             <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
              {{ 'filter.landsquare' | t }}
              {%- if collection.current_land_square_filter -%}
+             ({{ 'product.square' | t }})
                 : <span class="dd-select-value">{{ collection.current_land_square_filter.value }}</span>
              {%-endif-%}
              <span class="caret caret_filter"></span>

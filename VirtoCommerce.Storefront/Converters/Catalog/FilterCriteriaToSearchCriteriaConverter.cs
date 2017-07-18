@@ -51,6 +51,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.DisToSea))
             {
+                var term = GetRangeTerm(criteria.DisToSea);
                 terms.Add(new Term
                 {
                     Name = "distancetosea",
@@ -75,10 +76,11 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.Price))
             {
+                var termCriteria = GetRangeTerm(criteria.Price);
                 terms.Add(new Term
                 {
                     Name = "price",
-                    Value = criteria.Price
+                    Value = termCriteria
                 });
             }
             if (!string.IsNullOrEmpty(criteria.Region))
@@ -102,7 +104,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 terms.Add(new Term
                 {
                     Name = "other_type",
-                    Value = GetLocalizationValue(wc, criteria.Type, "other_type")
+                    Value = GetLocalizationValue(wc, criteria.Type, "other_type_dict")
                 });
             }
             if (!string.IsNullOrEmpty(criteria.Condition))
@@ -124,7 +126,27 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             searchCriteria.Terms = terms.ToArray();
         }
 
-        public static string GetLocalizationValue(WorkContext wc, string value, string key)
+
+        private static string GetRangeTerm(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+                return string.Empty;
+            var termCriteria = string.Empty;
+            if (value.Contains("from"))
+            {
+                termCriteria = $"[TO {value.Replace("from", "")}]";
+            }
+            else if (value.Contains("up"))
+            {
+                termCriteria = $"[{value.Replace("up", "")} TO]";
+            }
+            else if (value.Contains("-"))
+            {
+                termCriteria = $"[{value.Replace(" ", "").Replace("-", " TO ")}]";
+            }
+            return termCriteria;
+        }
+        private static string GetLocalizationValue(WorkContext wc, string value, string key)
         {
             return wc.FilterSeoLinks[key]?.FirstOrDefault(x => x.Item2 == value)?.Item1;
         }

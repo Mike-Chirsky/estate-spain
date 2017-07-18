@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,5 +48,18 @@ namespace VirtoCommerce.Storefront.Model.Catalog.Extensions
         /// Fiter by sys_filter
         /// </summary>
         public string More { set; get; }
+
+        public ProductFilterCriteria() {
+        }
+
+        public ProductFilterCriteria(NameValueCollection queryString)
+        {
+            var type = GetType();
+            foreach (var prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            {
+                prop.SetValue(this, queryString.Get(prop.Name));
+            }
+        }
+
     }
 }

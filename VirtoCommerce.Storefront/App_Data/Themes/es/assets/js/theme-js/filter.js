@@ -13,49 +13,53 @@ $(document).ready(function () {
             selfBlock.removeClass('opened');
             self.text('Показать фильтры');
         }
-
-        $("#send-main-filter").click(function () {
-            var locationPath = $("#location-path").val();
-            var locationValue = $("#location-value").val();
-            var esTypeVl = $("#estate-type-value").val();
-            if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
-                var termStr = getSearchTerms('#main-filter-controls');
-                var location = window.baseUrl + getSearchPath('#main-filter-controls');
-                if (esTypeVl !== undefined && esTypeVl !== "") {
-                    termStr += (termStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
-                }
-                window.location.href = location + (termStr.length > 0 ? 'terms=' + encodeURIComponent(termStr) : "");
-            }
-            else {
-                var termStr = getTermsString('#main-filter-controls');
-                var location = window.baseUrl + getRequestSeoPath('#main-filter-controls');
-                var fromFilter = false;
-                if (window.location.href.split('?')[0] == location) {
-                    fromFilter = true;
-                }
-                window.location.href = location + (termStr.length > 0 ? '?terms=' + encodeURIComponent(termStr) + (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
-            }
-        });
-        $("#send-main-filter-mobile").click(function () {
-            var locationPath = $("#location-path").val();
-            var locationValue = $("#location-value").val();
-            var esTypeVl = $("#estate-type-value").val();
-            if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
-                var termStr = getSearchTerms('#main-filter-controls-mobile');
-                var location = window.baseUrl + getSearchPath('#main-filter-controls-mobile');
-                if (esTypeVl !== undefined && esTypeVl !== "") {
-                    termStr += (termStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
-                }
-                window.location.href = location + (termStr.length > 0 ? ('terms=' + encodeURIComponent(termStr)) : "");
-            }
-            else {
-                var termStr = getTermsString('#main-filter-controls-mobile');
-                var location = window.baseUrl + getRequestSeoPath('#main-filter-controls-mobile');
-                window.location.href = location + (termStr.length > 0 ? ('?terms=' + encodeURIComponent(termStr)) : "");
-            }
-        });
-        initValue();
     });
+
+    $("#send-main-filter").click(function () {
+        var locationPath = $("#location-path").val();
+        var locationValue = $("#location-value").val();
+        var esTypeVl = $("#estate-type-value").val();
+        if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
+            var requestStr = getSearchTerms('#main-filter-controls');
+            var location = window.baseUrl + getSearchPath('#main-filter-controls');
+            if (esTypeVl !== undefined && esTypeVl !== "") {
+                requestStr += (requestStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
+            }
+            window.location.href = location + (requestStr.length > 0 ? 'terms=' + encodeURIComponent(re) : "");
+        }
+        else {
+            var requestStr = getSeoRequest('#main-filter-controls');
+            var location = window.baseUrl + requestStr;
+            var fromFilter = false;
+            if (window.location.href.split('?')[0] == location.split('?')[0]) {
+                fromFilter = true;
+            }
+            window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+        }
+    });
+    $("#send-main-filter-mobile").click(function () {
+        var locationPath = $("#location-path").val();
+        var locationValue = $("#location-value").val();
+        var esTypeVl = $("#estate-type-value").val();
+        if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
+            var requestStr = getSearchTerms('#main-filter-controls-mobile');
+            var location = window.baseUrl + getSearchPath('#main-filter-controls-mobile');
+            if (esTypeVl !== undefined && esTypeVl !== "") {
+                requestStr += (requestStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
+            }
+            window.location.href = location + (requestStr.length > 0 ? ('terms=' + encodeURIComponent(requestStr)) : "");
+        }
+        else {
+            var requestStr = getSeoRequest('#main-filter-controls-mobile');
+            var location = window.baseUrl + '/' + requestStr;
+            var fromFilter = false;
+            if (window.location.href.split('?')[0] == location.split('?')[0]) {
+                fromFilter = true;
+            }
+            window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+        }
+    });
+    initValue();
 
 
 
@@ -123,58 +127,58 @@ $(document).ready(function () {
 function getTerms(rootElement) {
     var terms = {};
     var element = $(rootElement + " #location-path");
-    var region = getSeoName(element.attr("data-region"), "region");
-    if (region != "" && region != undefined) {
-        terms["region"] = region;
+    var value = getSeoName(element.attr("data-region"), "region");
+    if (value != "" && value != undefined) {
+        terms["region"] = value;
     }
-    var city = getSeoName(element.attr("data-city"), "city");
-    if (city != "" && city != undefined) {
-        terms["city"] = city;
+    value = getSeoName(element.attr("data-city"), "city");
+    if (value != "" && value != undefined) {
+        terms["city"] = value;
     }
     element = $(rootElement + " #estate-type-value");
-    var estatetype = getSeoName(element.val(), "estatetype");
-    if (estatetype != "" && estatetype != undefined) {
-        terms["estatetype"] = estatetype;
+    value = getSeoName(element.val(), "estatetype");
+    if (value != "" && value != undefined) {
+        terms["estatetype"] = value;
     }
     element = $(rootElement + " #other_type");
-    var other_type = getSeoName(element.val(), "other_type");
-    if (other_type != "" && other_type != undefined) {
-        terms["type"] = other_type;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["type"] = value;
     }
     element = $(rootElement + " #condition-value");
-    var condition = getSeoName(element.val(), "condition");
-    if (condition != "" && condition != undefined) {
-        terms["cond"] = condition;
+    value = getSeoName(element.val(), "condition");
+    if (value != "" && value != undefined) {
+        terms["cond"] = value;
     }
     element = $(rootElement + " #distancetosea-range");
-    var distancetosea = element.val();
-    if (distancetosea != "" && distancetosea != undefined) {
-        terms["distosea"] = distancetosea;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["distosea"] = value;
     }
     element = $(rootElement + " #price-value");
-    var price = element.val();
-    if (price != "" && price != undefined) {
-        terms["price"] = price;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["price"] = value;
     }
     element = $(rootElement + " #bed-count");
-    var bedCount = element.val();
-    if (bedCount != "" && bedCount != undefined) {
-        terms["broom"] = bedCount;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["broom"] = value;
     }
     element = $(rootElement + " #bath-count");
-    var bathCount = element.val();
-    if (bathCount != "" && bathCount != undefined) {
-        terms["bath"] = bathCount;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["bath"] = value;
     }
     element = $(rootElement + " #property-square");
-    var square = element.val();
-    if (square != "" && square != undefined) {
-        terms["sq"] = square;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["sq"] = value;
     }
     element = $(rootElement + " #land-square");
-    var landSquare = element.val();
-    if (landSquare != "" && landSquare != undefined) {
-        terms["ls"] = landSquare;
+    value = element.val();
+    if (value != "" && value != "*" && value != undefined) {
+        terms["ls"] = value;
     }
     if ($(rootElement + " #filter-checks input:checked").length > 0) {
         var sysfilterValue = "";
@@ -186,8 +190,115 @@ function getTerms(rootElement) {
     return terms;
 }
 
-function getTermsString(rootElement) {
-    
+function getSeoRequest(rootElement) {
+    var terms = getTerms(rootElement);
+    var returnPath = "";
+    var hasCityOrRegion = terms.hasOwnProperty('city') || terms.hasOwnProperty('region');
+    var hasEstateType = terms.hasOwnProperty('estatetype');
+    var hasCondition = terms.hasOwnProperty('cond');
+    var hasOtherType = terms.hasOwnProperty('type');
+    // region + type + condition
+    if (hasCityOrRegion && hasEstateType && hasCondition) {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        if (terms.hasOwnProperty('type'))
+        {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += '/' + terms['estatetype'];
+        returnPath += '/' + terms['cond'];
+        returnPath += getRequstParams(['city', 'region', 'estatetype', 'cond'], terms);
+    }
+    // region + type
+    else if (hasCityOrRegion && hasEstateType) {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += '/' + terms['estatetype'];
+        returnPath += getRequstParams(['city', 'region', 'estatetype'], terms);
+    }
+    // region + condition
+    else if (hasCityOrRegion && hasCondition) {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += '/' + terms['cond'];
+        returnPath += getRequstParams(['city', 'region', 'cond'], terms);
+    }
+    // type + condition
+    else if (hasEstateType && hasCondition) {
+        returnPath = terms['estatetype'];
+        returnPath += '/' + terms['cond'];
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += getRequstParams(['estatetype', 'cond'], terms);
+    }
+    // region
+    else if (hasCityOrRegion)
+    {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        returnPath += getRequstParams(['city', 'region'], terms);
+    }
+    // type
+    else if (hasEstateType) {
+        returnPath = terms['estatetype'];
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += getRequstParams(['estatetype'], terms);
+    }
+    // condition
+    else if (hasCondition) {
+        returnPath = terms['cond'];
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += getRequstParams(['cond'], terms);
+    }
+    // other-type
+    else if (hasOtherType) {
+        returnPath = getSeoName(terms['type'], "other_type");
+        returnPath += getRequstParams(['type'], terms);
+    }
+    return returnPath;
+}
+
+function getRequstParams(excludeProperty, terms) {
+    var result = "";
+    for (var prop in terms) {
+        if (!terms.hasOwnProperty(prop) || excludeProperty.indexOf(prop) > -1) {
+            continue;
+        }
+        if (result === '') {
+            result = prop + "=" + terms[prop];
+        }
+        else {
+            result += '&' + prop + "=" + terms[prop];
+        }
+    }
+    return result == "" ? result : ("?" + result);
 }
 
 function getSearchTerms(rootElement)
@@ -209,6 +320,10 @@ function getSearchTerms(rootElement)
 
 function getFoundResults(rootElement, fillElements) {
     var terms = getTerms(rootElement);
+    if (terms.hasOwnProperty('type'))
+    {
+        terms['type'] = getSeoName(terms['type'], "other_type_dict");
+    }
     $.ajax({
         url: "storefrontapi/product/filter",
         data: JSON.stringify(terms),
@@ -325,6 +440,7 @@ function setDdValue(element, changeNotif, loadResult) {
     else {
         parent.find('input').val(value);
     }
+    //$(element).parent().hide();
 
     if (loadResult) {
         var rootElemet = '';
@@ -469,18 +585,25 @@ function getSearchPath(rootElement) {
 }
 
 function initValue(){
-    var listPrice = $("#main-filter-controls .distance-to-sea ul");
-    setCurrentValueDd(listPrice, initFilterValueRange.price);
-    listPrice = $("#main-filter-controls-mobile .distance-to-sea ul");
-    setCurrentValueDd(listPrice, initFilterValueRange.price);
+    var el = $("#main-filter-controls .price-cmb ul");
+    setCurrentValueDd(el, initFilterValueRange.price);
+    el = $("#main-filter-controls-mobile .price-cmb ul");
+    setCurrentValueDd(el, initFilterValueRange.price);
+    el = $("#main-filter-controls-mobile .distance-to-sea ul");
+    setCurrentValueDd(el, initFilterValueRange.distanceToSea);
+    el = $("#main-filter-controls .distance-to-sea ul");
+    setCurrentValueDd(el, initFilterValueRange.distanceToSea);
 }
 
 function setCurrentValueDd(elements, value) {
     $.each(elements, function (index, element) {
-        var el = $(element);
-        if (el.attr("data-value") == value) {
-            el.click();
-        }
+        var els = $(element).children("li");
+        $.each(els, function (index, item) {
+            var elItem = $(item);
+            if (elItem.attr("data-value") == value) {
+                elItem.click();
+            }
+        });
     });
 }
 
