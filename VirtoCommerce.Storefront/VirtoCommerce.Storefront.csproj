@@ -601,6 +601,9 @@
     <Content Include="App_Data\Themes\es\snippets\seo\breadcrumb-micro.liquid" />
     <Content Include="App_Data\Themes\es\snippets\seo\schemeorg-collection.liquid" />
     <Content Include="App_Data\Themes\es\snippets\seo\article-micro.liquid" />
+    <Content Include="App_Data\Themes\es\layout\about.liquid">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
