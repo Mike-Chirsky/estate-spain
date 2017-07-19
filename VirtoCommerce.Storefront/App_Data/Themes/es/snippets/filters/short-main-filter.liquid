@@ -16,8 +16,8 @@
 					   property-name="estatetype" 
 					   id="estate-type-value" 
 					   value="Квартиры и апартаменты">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'filter.category' | t }}">
+					<li data-value="*" value="{{ 'filter.category-any' | t }}">{{ 'filter.any2' | t }}</li>
 					{% for item in collection.estate_type_filter %}
 					<li data-value="{{ item.value }}" data-seo-path="{{ item.value | filter_seo_link: 'estatetype': filter_seo_links}}">{{ item.value }}</li>
 					{% endfor %}

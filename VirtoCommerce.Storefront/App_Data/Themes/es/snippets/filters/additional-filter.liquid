@@ -11,8 +11,8 @@
              <span class="caret caret_filter"></span>
             </div>
             <input type="hidden" id="bed-count" value="{{- collection.current_bed_rooms_filter.value -}}" property-name="bedrooms">
-            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li data-value="*" value="{{ 'filter.bed-count' | t }}">{{ 'filter.any2' | t }}</li>
+            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action" data-default-value="{{ 'filter.bed-count' | t }}">
+               <li data-value="*" value="{{ 'filter.bed-count-any' | t }}">{{ 'filter.any2' | t }}</li>
                 {% for item in collection.bed_rooms_filter %}
                     <li display-header="{{ 'filter.bed-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}
@@ -27,8 +27,8 @@
              <span class="caret caret_filter"></span>
             </div>
             <input type="hidden" id="bath-count" property-name="bath" value="{{- collection.current_bath_rooms_filter.value -}}">
-            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li data-value="*" value="{{ 'filter.bath-count' | t }}">{{ 'filter.any2' | t }}</li>
+            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action" data-default-value="{{ 'filter.bath-count' | t }}">
+               <li data-value="*" value="{{ 'filter.bath-count-any' | t }}">{{ 'filter.any2' | t }}</li>
                 {% for item in collection.bath_rooms_filter %}
                     <li display-header="{{ 'filter.bath-count' | t }}" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}
@@ -44,8 +44,8 @@
              <span class="caret caret_filter"></span>
             </div>
             <input type="hidden" id="property-square" value="{{- collection.current_property_square_filter.value -}}" property-name="propertysquare">
-            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li data-value="*" value="{{ 'filter.square' | t }}">{{ 'filter.any' | t }}</li>
+            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action" data-default-value="{{ 'filter.square' | t }}">
+               <li data-value="*" value="{{ 'filter.square-any' | t }}">{{ 'filter.any' | t }}</li>
                 {% for item in collection.property_square_filter %}
                     <li display-header="{{ 'filter.square' | t }} ({{ 'product.square' | t }})" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}
@@ -61,8 +61,8 @@
              <span class="caret caret_filter"></span>
             </div>
             <input type="hidden" id="land-square" value="{{- collection.current_land_square_filter.value -}}" property-name="landsquare">
-            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action">
-               <li data-value="*" value="{{ 'filter.landsquare' | t }}">{{ 'filter.any' | t }}</li>
+            <ul class="dropdown-menu filter_menu" role="menu" aria-labelledby="a_filter_action" data-default-value="{{ 'filter.landsquare' | t }}">
+               <li data-value="*" value="{{ 'filter.landsquare-any' | t }}">{{ 'filter.any' | t }}</li>
                 {% for item in collection.land_square_filter %}
                     <li display-header="{{ 'filter.landsquare' | t }} ({{ 'product.square' | t }})" data-value="{{ item.value }}">{{ item.value }}</li>
                 {% endfor %}

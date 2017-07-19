@@ -381,7 +381,7 @@ function fillElement(id, aggregations, field, addText) {
     var types = getValues(aggregations, field);
     var setToDefault = true;
     types.forEach(function (item) {
-        if (item.value === currentValue) {
+        if (item.value === currentValue || currentValue === "*") {
             setToDefault = false;
         }
         if (seoLinks && seoLinks[field]) {
@@ -398,6 +398,7 @@ function fillElement(id, aggregations, field, addText) {
         }
     });
     if (setToDefault) {
+
         setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false, true);
     }
     setClickDdElement(".search_wrapper");
