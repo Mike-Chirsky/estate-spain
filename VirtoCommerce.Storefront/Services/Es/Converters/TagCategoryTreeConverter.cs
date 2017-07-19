@@ -29,6 +29,18 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             CustomSeoCategory(context, category);
             return category;
         }
+        protected override string CreateFullName(ConverterContext context, Product product)
+        {
+            // thrid level
+            if (context.Parent.Parent != null && context.Parent.Parent.Id != null)
+                return $"{context.Parent.FullName} {product.Name.ToLower()}";
+
+            // second level
+            if (context.Parent.Id != null)
+                return $"{product.Name} в {context.Parent.FullName}";
+
+            return product.Name;
+        }
 
         protected override void CustomSeoCategory(ConverterContext context, Category category)
         {

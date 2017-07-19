@@ -13,6 +13,17 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     {
 
         #region Properties
+
+        /// <summary>
+        /// Get H1 property
+        /// </summary>
+        public string H1
+        {
+            get
+            {
+                return GetPropertyByName("h1")?.Value;
+            }
+        }
         /// <summary>
         /// Get estate type
         /// </summary>

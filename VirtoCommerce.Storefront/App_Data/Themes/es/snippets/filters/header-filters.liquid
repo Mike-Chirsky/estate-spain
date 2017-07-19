@@ -40,12 +40,7 @@
             {% if collection.h1 == null %}
                 {{ collection.full_name }}
             {% else %}
-                {%- if collection.h11 == null -%}
-                    {{- collection.h1 -}}
-                {%- else -%}
-                    {{- collection.h11-}}&nbsp;{{ 'on' | t }}
-                    {{ collection.title }}
-                {% endif %}
+                {{- collection.h1 -}}
             {% endif %}
             
             
