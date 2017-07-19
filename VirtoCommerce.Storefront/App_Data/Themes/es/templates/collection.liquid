@@ -1,7 +1,7 @@
 ﻿<div class="breadcrumb_container">
   {% include 'breadcrumb' %} 
 </div>
-{%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "tag" && collection.type == "condition" && collection.type == "other_type") -%}
+{%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "tag" or collection.type == "condition" or collection.type == "other_type") -%}
   <div class="row">
     <h2 id="list-products" class="text-center padding15-0">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}&nbsp;{{-'objects' | t -}}</h2>
   </div>

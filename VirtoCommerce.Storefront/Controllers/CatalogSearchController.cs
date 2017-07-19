@@ -34,6 +34,9 @@ namespace VirtoCommerce.Storefront.Controllers
         {
             //All resulting categories, products and aggregations will be lazy evaluated when view will be rendered. (workContext.Products, workContext.Categories etc) 
             //All data will loaded using by current search criteria taken from query string
+            // map filter properies to search criteria
+            var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
+            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
             WorkContext.CurrentProductSearchCriteria.Keyword = search;
             //For set filters value in UI
             WorkContext.CurrentCategory = new Category();

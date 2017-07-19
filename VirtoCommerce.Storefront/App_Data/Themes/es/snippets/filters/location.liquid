@@ -1,4 +1,4 @@
-﻿{% if template contains 'collection' %}
+﻿{% if template contains 'collection' or template contains 'search' %}
 <div class="dropdown form-control location-search">
     <input  data-ignore
             class="{%- if collection.current_region_filter or collection.current_city_filter -%}selected{%- endif -%}" 

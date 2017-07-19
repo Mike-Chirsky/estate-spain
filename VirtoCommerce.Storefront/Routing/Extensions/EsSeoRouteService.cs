@@ -104,6 +104,14 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         Value = product.Name
                     });
                 }
+                else if (product.CategoryId == ConfigurationManager.AppSettings["OtherTypeCategoryId"])
+                {
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "other_type",
+                        Value = product.Name
+                    });
+                }
 
                 /*seo = all.FirstOrDefault(x => x.ObjectType == "Category");
                 if (seo == null)

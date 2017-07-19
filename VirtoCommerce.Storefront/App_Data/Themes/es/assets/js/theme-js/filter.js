@@ -20,12 +20,9 @@ $(document).ready(function () {
         var locationValue = $("#location-value").val();
         var esTypeVl = $("#estate-type-value").val();
         if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
-            var requestStr = getSearchTerms('#main-filter-controls');
+            var requestStr = getSearchRequest('#main-filter-controls');
             var location = window.baseUrl + getSearchPath('#main-filter-controls');
-            if (esTypeVl !== undefined && esTypeVl !== "") {
-                requestStr += (requestStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
-            }
-            window.location.href = location + (requestStr.length > 0 ? 'terms=' + encodeURIComponent(re) : "");
+            window.location.href = location + (location.indexOf('keyword') && requestStr.length > 0 ? "&" : "") + requestStr;
         }
         else {
             var requestStr = getSeoRequest('#main-filter-controls');
@@ -42,16 +39,13 @@ $(document).ready(function () {
         var locationValue = $("#location-value").val();
         var esTypeVl = $("#estate-type-value").val();
         if ((locationPath === undefined || locationPath === "") && locationValue !== undefined && locationValue !== '') {
-            var requestStr = getSearchTerms('#main-filter-controls-mobile');
+            var requestStr = getSearchRequest('#main-filter-controls-mobile');
             var location = window.baseUrl + getSearchPath('#main-filter-controls-mobile');
-            if (esTypeVl !== undefined && esTypeVl !== "") {
-                requestStr += (requestStr.length > 0 ? ';' : '') + "estatetype:" + esTypeVl;
-            }
-            window.location.href = location + (requestStr.length > 0 ? ('terms=' + encodeURIComponent(requestStr)) : "");
+            window.location.href = location + (location.indexOf('keyword') && requestStr.length > 0 ? "&" : "") + requestStr;
         }
         else {
             var requestStr = getSeoRequest('#main-filter-controls-mobile');
-            var location = window.baseUrl + '/' + requestStr;
+            var location = window.baseUrl + requestStr;
             var fromFilter = false;
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
                 fromFilter = true;
@@ -65,13 +59,17 @@ $(document).ready(function () {
 
     // filter events
     $("#main-filter-controls #location-value").keyup(function (e) {
+        $("#main-filter-controls-mobile #location-path").val('');
+        $("#main-filter-controls-mobile #location-path").attr('data-city', '');
+        $("#main-filter-controls-mobile #location-path").attr('data-region', '');
+        $("#main-filter-controls #location-path").val('');
+        $("#main-filter-controls #location-path").attr('data-city', '');
+        $("#main-filter-controls #location-path").attr('data-region', '');
         if (e.target.value.length < 3) {
             return;
         }
         if (ignoredKeyCodes.indexOf(e.which) === -1) {
             $("#main-filter-controls-mobile #location-value").val($("#main-filter-controls #location-value").val());
-            $("#main-filter-controls-mobile #location-path").val('');
-            $("#main-filter-controls #location-path").val('');
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls");
         }
 
@@ -87,13 +85,17 @@ $(document).ready(function () {
     });
     // mobile
     $("#main-filter-controls-mobile #location-value").keyup(function (e) {
+        $("#main-filter-controls-mobile #location-path").val('');
+        $("#main-filter-controls-mobile #location-path").attr('data-city', '');
+        $("#main-filter-controls-mobile #location-path").attr('data-region', '');
+        $("#main-filter-controls #location-path").val('');
+        $("#main-filter-controls #location-path").attr('data-city', '');
+        $("#main-filter-controls #location-path").attr('data-region', '');
         if (e.target.value.length < 3) {
             return;
         }
         if (ignoredKeyCodes.indexOf(e.which) === -1) {
             $("#main-filter-controls #location-value").val($("#main-filter-controls-mobile #location-value").val());
-            $("#main-filter-controls-mobile #location-path").val('');
-            $("#main-filter-controls #location-path").val('');
             loadSearchData("storefrontapi/location/search", $("#main-filter-controls-mobile #location-value").val(), ["#main-filter-controls .location-search", "#main-filter-controls-mobile .location-search"], ["#main-filter-controls-mobile", "#main-filter-controls"], "#main-filter-controls-mobile");
         }
 
@@ -280,7 +282,14 @@ function getSeoRequest(rootElement) {
     // other-type
     else if (hasOtherType) {
         returnPath = getSeoName(terms['type'], "other_type");
-        returnPath += getRequstParams(['type'], terms);
+        if (returnPath == "") {
+            returnPath = "search";
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+            returnPath += getRequstParams([], terms);
+        }
+        else {
+            returnPath += getRequstParams(['type'], terms);
+        }
     }
     return returnPath;
 }
@@ -301,13 +310,17 @@ function getRequstParams(excludeProperty, terms) {
     return result == "" ? result : ("?" + result);
 }
 
-function getSearchTerms(rootElement)
+function getSearchRequest(rootElement)
 {
     var terms = getTerms(rootElement);
     var term = "";
     for (var item in terms) {
         if (!terms.hasOwnProperty(item))
             continue;
+        if (item == "type")
+        {
+            terms["type"] = getSeoName(terms["type"], "other_type_dict");
+        }
         if (term == "") {
             term += item + "=" + terms[item];
         }
@@ -508,9 +521,9 @@ function loadSearchData(url, search, elements, listElement, rootElement) {
                                 infoRegion = 'data-region="' + item.regionName + '"';
                             }
                             if (item.cityName) {
-                                infoCity = 'data-region="' + item.cityName + '"';
+                                infoCity = 'data-city="' + item.cityName + '"';
                             }
-                            $(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + '" ' + infoCity + '" data-value="' + item.fullName + '">' + item.fullName + '</li>')
+                            $(element + " .list").append('<li data-seo-path="' + item.seo + '" ' + infoRegion + ' ' + infoCity + ' data-value="' + item.fullName + '">' + item.fullName + '</li>')
                         }
                         $.each($(element + " .list li"), function (index, item) {
                             $(item).click(function () {
@@ -536,11 +549,24 @@ function loadSearchData(url, search, elements, listElement, rootElement) {
 function selectSearchItem(item, elements, listElements, rootElement) {
     elements.forEach(function (element) {
         $(element + " .list").css("display", "none");
-        $(element + " input[type=text]").val($(item).attr("data-value"));
-        $(element + " input[type=hidden]").val($(item).attr("data-seo-path"));
-        $(element + " input[type=hidden]").attr("data-region", $(item).attr("data-region"));
-        $(element + " input[type=hidden]").attr("data-city", $(item).attr("data-city"));
-        $(element + " input[type=text]").addClass("selected");
+        $(element + " #location-value").val($(item).attr("data-value")).change();
+        $(element + " #location-value").addClass("selected");
+        $(element + " #location-path").val($(item).attr("data-seo-path"));
+        var region = $(item).attr("data-region");
+        if (region) {
+            $(element + " #location-path").attr("data-region", region);
+        }
+        else {
+            $(element + " #location-path").attr("data-region", "");
+        }
+        var city = $(item).attr("data-city");
+        if (city) {
+            $(element + " #location-path").attr("data-city", city);
+        }
+        else {
+            $(element + " #location-path").attr("data-city", "");
+        }
+        
     });
 
     getFoundResults(rootElement, listElements);
@@ -583,7 +609,7 @@ function getSearchPath(rootElement) {
         return "search?"
     }
     else {
-        return "search?search=" + locationValue + "&";
+        return "search?search=" + locationValue;
     }
 }
 

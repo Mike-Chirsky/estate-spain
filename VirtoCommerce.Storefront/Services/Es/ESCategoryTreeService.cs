@@ -27,6 +27,13 @@ namespace VirtoCommerce.Storefront.Services.Es
         private Currency _currency;
         private Store _store;
 
+        private const string RegionKey = "Regions";
+        private const string EstateTypeKey = "Estatetypes";
+        private const string TagsKey = "Tags";
+        private const string ConditionKey = "Conditions";
+        private const string OtherTypeKey = "OtherType";
+        private const string CitiesKey = "Cities";
+
         public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory)
         {
             _catalogModuleApi = catalogModuleApi;
@@ -48,39 +55,42 @@ namespace VirtoCommerce.Storefront.Services.Es
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
             // Load region and regio + estate type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
             // Load region + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
             // Load region + condition
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Conditions"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
             // Load region + estate type + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Tags")));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, TagsKey)));
             // Load region + estate type + condition
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, "Conditions")));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey)));
 
             // Load cities + estate type + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Tags"))));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
 
             // Load cities + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tags")));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
+
+            // load cities + condition
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
 
             // Load cities + estate type + conditions
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Regions").ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, "Estatetypes").ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, "Conditions"))));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result,ConditionKey))));
 
             // Step 2. Load Estatetypes
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Estatetypes");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
 
             // Step 3. Load Tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Tags");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
 
             // Step 4. Load Conditions
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey);
             // Condition + type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions").ContinueWith(t=>LoadChildrenFromCategory(t.Result,"Estatetype"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t=>LoadChildrenFromCategory(t.Result,EstateTypeKey));
             // Condition + tag
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "Conditions").ContinueWith(t => LoadChildrenFromCategory(t.Result, "Tag"));
+            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
             // Step 5. Load Other type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, "OtherType");
+            await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey);
             _lockObject.Release();
             return _loadedCategory;
         }
@@ -144,7 +154,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                {
                    CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
                    ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString(),
-                   Outline = ProductTypeToOutline("Cities"),
+                   Outline = ProductTypeToOutline(CitiesKey),
                    Take = 10000,
                    Skip = 0
                });
@@ -166,17 +176,17 @@ namespace VirtoCommerce.Storefront.Services.Es
         {
             switch (productType)
             {
-                case "Regions":
+                case RegionKey:
                     return ConfigurationManager.AppSettings["RegionCategoryId"];
-                case "Estatetypes":
+                case EstateTypeKey:
                     return ConfigurationManager.AppSettings["EstateTypeCategoryId"];
-                case "Tags":
+                case TagsKey:
                     return ConfigurationManager.AppSettings["TagCategoryId"];
-                case "Cities":
+                case CitiesKey:
                     return ConfigurationManager.AppSettings["CityCategoryId"];
-                case "Conditions":
+                case ConditionKey:
                     return ConfigurationManager.AppSettings["ConditionCategoryId"];
-                case "OtherType":
+                case OtherTypeKey:
                     return ConfigurationManager.AppSettings["OtherTypeCategoryId"];
             }
             return string.Empty;
@@ -240,27 +250,27 @@ namespace VirtoCommerce.Storefront.Services.Es
         
         private ICategoryTreeConverter GetConverterByPath(string path)
         {
-            if (path.EndsWith("Tag"))
+            if (path.EndsWith(TagsKey))
             {
                 return new TagCategoryTreeConverter();
             }
-            else if (path.EndsWith("Estatetypes"))
+            else if (path.EndsWith(EstateTypeKey))
             {
                 return new TypeCategoryTreeConverter();
             }
-            else if (path.EndsWith("Cities"))
+            else if (path.EndsWith(CitiesKey))
             {
                 return new CityCategoryTreeConverter();
             }
-            else if (path.EndsWith("Regions"))
+            else if (path.EndsWith(RegionKey))
             {
                 return new RegionCategoryTreeConverter();
             }
-            else if (path.EndsWith("OtherType"))
+            else if (path.EndsWith(OtherTypeKey))
             {
                 return new OtherTypeCategoryTreeConverter();
             }
-            else if (path.EndsWith("Conditions"))
+            else if (path.EndsWith(ConditionKey))
             {
                 return new ConditionCategoryTreeConverter();
             }
