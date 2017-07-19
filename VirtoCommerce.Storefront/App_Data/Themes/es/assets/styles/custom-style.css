@@ -9,6 +9,11 @@
     height: 200px;
 }
 
+#team-carusel .carousel-inner
+{
+    margin: 25px 0 0;
+}
+
 .reviews
 {
     background: #ededed;
@@ -17,11 +22,6 @@
 .reviews .carousel-indicators
 {
     top: auto !important;
-}
-
-.carousel-inner
-{
-    margin: 25px 0 0;
 }
 
 .carousel-control
