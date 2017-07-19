@@ -1208,7 +1208,11 @@ jQuery(document).ready(function ($) {
     $('.adv_extended_close_button').click(function(){
         $(this).parent().parent().find('.extended_search_check_wrapper').slideUp();
         $(this).hide();
-        $(this).parent().parent().find('.adv_extended_options_text').show();
+        var moreButton = $(this).parent().parent().find('.adv_extended_options_text');
+        if (moreButton.length == 0) {
+            moreButton = $(this).parent().parent().parent().find('.adv_extended_options_text');
+        }
+        moreButton.show();
         $('.adv-search-1.adv_extended_class').removeAttr('style');
         $('.adv_extended_class .adv1-holder').removeAttr('style');
     });

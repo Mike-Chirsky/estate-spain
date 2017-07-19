@@ -115,7 +115,10 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
         protected virtual void CustomSeoCategory(ConverterContext context, Category category)
         {
-
+            if (category.SeoInfo == null)
+            {
+                category.SeoInfo = new Model.SeoInfo();
+            }
         }
     }
 }

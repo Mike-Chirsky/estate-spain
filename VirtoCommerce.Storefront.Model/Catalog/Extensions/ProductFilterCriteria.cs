@@ -12,7 +12,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog.Extensions
     {        
         public string City { set; get; }
         
-        public string Condition { set; get; }
+        public string Cond { set; get; }
 
         public string Region { set; get; }
 

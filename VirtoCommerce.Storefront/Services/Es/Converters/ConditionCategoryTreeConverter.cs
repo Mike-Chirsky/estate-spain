@@ -37,5 +37,37 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 return $"{product.Name} в {context.Parent?.Name}";
             return product.Name;
         }
+
+        protected override void CustomSeoCategory(ConverterContext context, Category category)
+        {
+            if (category.SeoInfo == null)
+            {
+                category.SeoInfo = new Model.SeoInfo();
+            }
+            var ptext = category.Type == "city" ? "в" : "на";
+            if (string.IsNullOrEmpty(category.SeoInfo.Title))
+            {
+                if (string.IsNullOrEmpty(category.Parent.Type))
+                {
+                    category.SeoInfo.Title = $"Недвижимость в {category.Name} – купить недвижимость в {category.Name} недорого, цены в рублях";
+                }
+                else
+                {
+                    category.SeoInfo.Title = $"Недвижимость {ptext} {category.Parent.Name} – купить {category.Name} {ptext} {category.Parent.Name} недорого, цены в рублях";
+                }
+
+                if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
+                {
+                    if (string.IsNullOrEmpty(category.Parent.Type))
+                    {
+                        category.SeoInfo.MetaDescription = $"&#127969; Недвижимость в {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге представлено {0}.";
+                    }
+                    else
+                    {
+                        category.SeoInfo.MetaDescription = $"&#127969; Недвижимость {ptext} {category.Parent.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге представлено {0}.";
+                    }
+                }
+            }
+        }
     }
 }

@@ -109,12 +109,12 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                     Value = GetLocalizationValue(wc, criteria.Type, "other_type_dict")
                 });
             }
-            if (!string.IsNullOrEmpty(criteria.Condition))
+            if (!string.IsNullOrEmpty(criteria.Cond))
             {
                 terms.Add(new Term
                 {
                     Name = "condition",
-                    Value = GetLocalizationValue(wc, criteria.Type, "condition")
+                    Value = GetLocalizationValue(wc, criteria.Cond, "condition")
                 });
             }
             if (!string.IsNullOrEmpty(criteria.More))

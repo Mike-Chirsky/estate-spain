@@ -116,12 +116,13 @@ namespace VirtoCommerce.Storefront.Controllers
             var dict = _categoryTreeService.GetSeoDict();
             using (var file = new System.IO.StreamWriter(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "seo_dict.csv"), false, System.Text.Encoding.UTF8))
             {
-                file.WriteLine("url;h1;description;title;seo text");
+                file.WriteLine("url;h1;description;title;seo text;region");
                 var converter = new EsShopifyModelConverter();
                 foreach (var key in dict.Keys)
                 {
                     var liquidCategory = converter.ToLiquidCollection(dict[key], WorkContext);
-                    file.WriteLine($"{key};\"{(string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1).Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo.MetaDescription?.Replace("\"","\"\"")}\";\"{dict[key].SeoInfo?.Title?.Replace("\"","\"\"")}\";\"{liquidCategory.SeotextUp?.Replace("\"", "\"\"")}\"");
+                    var line = $"{key};\"{(string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1).Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo.MetaDescription?.Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo?.Title?.Replace("\"", "\"\"")}\";\"{liquidCategory.SeotextUp?.Replace("\"", "\"\"")}\";{liquidCategory.RegionName}";
+                    file.WriteLine(line);
                 }
             }
         }

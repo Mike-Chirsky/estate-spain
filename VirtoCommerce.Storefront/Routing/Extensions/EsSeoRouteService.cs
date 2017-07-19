@@ -30,6 +30,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
 
         protected override SeoEntity FindEntityBySeoPath(string seoPath, WorkContext workContext)
         {
+            seoPath = seoPath.Trim('/');
             if (_categoryTreeService.FindByPath(seoPath) == null)
             {
                 var existSeo = base.FindEntityBySeoPath(seoPath, workContext);
@@ -43,7 +44,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 }
             }
 
-            var pathParts = seoPath.Trim('/').Split('/');
+            var pathParts = seoPath.Split('/');
             // TODO: Move fill terms to Tree service
             foreach (var part in pathParts)
             {
@@ -112,13 +113,14 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         Value = product.Name
                     });
                 }
-
-                /*seo = all.FirstOrDefault(x => x.ObjectType == "Category");
-                if (seo == null)
+                else if (product.CategoryId == ConfigurationManager.AppSettings["ConditionCategoryId"])
                 {
-                    return null;
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = "condition",
+                        Value = product.Name
+                    });
                 }
-                existSeo = new SeoEntity { ObjectType = seo.ObjectType, ObjectId = seo.ObjectId, SeoPath = seoPath };*/
             }
             return new SeoEntity
             {
