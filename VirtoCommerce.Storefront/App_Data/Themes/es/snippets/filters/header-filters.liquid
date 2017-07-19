@@ -36,7 +36,7 @@
 <div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{collection.header_image}})">
       <div class="description-header with-filters">
-         <h1 class="entry-title entry-tax">
+         <h1 class="blog-header">
             {% if collection.h1 == null %}
                 {{ collection.full_name }}
             {% else %}
@@ -51,7 +51,7 @@
             
          </h1>
          {% paginate collection.products by 36 %}   
-            <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{{- paginate.items | num_ending: "представлен": "представленно": "представленно": false -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </div>
+            <div class="blog-header">{{- 'your-request' | t -}}&nbsp;{{- paginate.items | num_ending: "представлен": "представленно": "представленно": false -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </div>
          {% endpaginate %}
       </div>
    </div>

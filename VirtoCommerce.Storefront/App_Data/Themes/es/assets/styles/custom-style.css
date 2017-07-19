@@ -4,9 +4,14 @@
     margin-top: auto;
 }
 
-.carousel
+#team-carusel
 {
-    height: 300px;
+    height: 200px;
+}
+
+#team-carusel .carousel-inner
+{
+    margin: 25px 0 0;
 }
 
 .reviews
@@ -16,22 +21,18 @@
 
 .reviews .carousel-indicators
 {
-    display: none;
-}
-
-.carousel-inner
-{
-    margin: 25px 0 0;
+    top: auto !important;
 }
 
 .carousel-control
 {
-    left: -50px;
+    display: none;
 }
 
-.carousel-control.right
+.team-text
 {
-    right: -50px;
+    margin: auto;
+    width: 70%;
 }
 
 @media (max-width:1024px) {
@@ -400,6 +401,13 @@ ul.pagination-custom li.more-page:hover
 
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+.description-header.with-filters
+{
+    top: 65px;
+
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .search_wrapper .adv-search-1{
     background-color: #EDEDED;
