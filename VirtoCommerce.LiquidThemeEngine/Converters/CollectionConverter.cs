@@ -69,7 +69,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
                                            .SelectMany(a => a.Items.Select(item => ToLiquidTag(item, a.Field, a.Label)));
                     return new StaticPagedList<Tag>(tags, workContext.Aggregations);
 
-                }, workContext.Aggregations.PageNumber, workContext.Aggregations.PageSize));
+                }, 1, int.MaxValue));
             }
 
             if (workContext.CurrentProductSearchCriteria.SortBy != null)

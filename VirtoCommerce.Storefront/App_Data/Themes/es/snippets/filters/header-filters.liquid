@@ -50,7 +50,9 @@
             
             
          </h1>
-         <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %} </div>
+         {% paginate collection.products by 36 %}   
+            <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{{- paginate.items | num_ending: "представлен": "представленно": "представленно": false -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </div>
+         {% endpaginate %}
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">

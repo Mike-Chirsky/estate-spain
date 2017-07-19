@@ -19,8 +19,8 @@
 				<input data-ignore type="hidden"
 					   data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}"
 					   property-name="estatetype" id="estate-type-value" value="{{ collection.current_estate_type_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'filter.category' | t }}">{{ 'filter.any2' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'filter.category' | t }}">
+					<li data-value="*" value="{{ 'filter.category-any' | t }}">{{ 'filter.any2' | t }}</li>
 					{% for item in collection.estate_type_filter %}
 					<li data-value="{{ item.value }}" data-seo-path="{{ item.value | filter_seo_link: 'estatetype': filter_seo_links}}">{{ item.value }}</li>
 					{% endfor %}
@@ -43,8 +43,8 @@
 					   type="hidden"
 					   id="other_type"
 					   value="{{- collection.current_other_type_filter.value -}}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.other_type' | t }}">{{ 'filter.any' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'product.other_type' | t }}">
+					<li data-value="*" value="{{ 'product.other_type-any' | t }}">{{ 'filter.any' | t }}</li>
 					{% for item in collection.other_type_filter %}
 					<li data-value="{{ item.value }}">{{ item.value }}</li>
 					{% endfor %}
@@ -67,8 +67,8 @@
 					   property-name="condition"
 					   id="condition-value" 
 					   value="{{ collection.current_condit_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.condition' | t }}">{{ 'filter.any2' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'product.condition' | t }}">
+					<li data-value="*" value="{{ 'product.condition-any' | t }}" >{{ 'filter.any2' | t }}</li>
 					{% for item in collection.condit_filter %}
 					<li data-value="{{ item.value }}">{{ item.value }}</li>
 					{% endfor %}
@@ -84,8 +84,8 @@
 					<span class="caret  caret_filter "></span>
 				</div>
 				<input type="hidden" property-name="distancetosea" id="distancetosea-range" value="{{ collection.current_sea_distance_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'product.distancetosea' | t }}">{{ 'filter.any2' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'product.distancetosea' | t }}">
+					<li data-value="*" value="{{ 'product.distancetosea-any' | t }}">{{ 'filter.any2' | t }}</li>
 					<li data-value="from300" formated-value="{{'filter.to' | t }} 300 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">{{'filter.to' | t }} 300 {{'filter.m' | t }}</li>
 					<li data-value="300-500" formated-value="{{'filter.from' | t }} 300 - 500 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">300 - 500 {{'filter.m' | t }}</li>
 					<li data-value="500-1000" formated-value="{{'filter.from' | t }} 500 - 1000 {{'filter.m' | t }} {{ 'filter.to-sea' | t}}">500 - 1000 {{'filter.m' | t }}</li>
@@ -107,8 +107,8 @@
 					   property-name="price"
 					   id="price-value"
 					   value="{{ collection.current_price_range_filter.value }}">
-				<ul class="dropdown-menu filter_menu">
-					<li data-value="*" value="{{ 'filter.price2' | t }}">{{ 'filter.any3' | t }}</li>
+				<ul class="dropdown-menu filter_menu" data-default-value="{{ 'product.filter.price2' | t }}">
+					<li data-value="*" value="{{ 'filter.price2-any' | t }}">{{ 'filter.any3' | t }}</li>
 					<li data-value="low100000">{{ 'filter.to' | t }} 100 000 {{ current_currency.symbol }}</li>
 					<li data-value="100000-150000"> 100 000 - 150 000 {{ current_currency.symbol }}</li>
 					<li data-value="150000-200000"> 150 000 - 200 000 {{ current_currency.symbol }}</li>

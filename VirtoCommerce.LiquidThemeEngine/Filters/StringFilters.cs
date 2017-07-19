@@ -119,35 +119,28 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
         /// Declension word after number
         /// </summary>
         /// <param name="input">Number</param>
-        public static string NumEnding(object input, string wordOne, string wordFour, string wordFive)
+        public static string NumEnding(object input, string wordOne, string wordFour, string wordFive, bool addNumber = true)
         {
-            if (Regex.Match(input.ToString(), "1\\d$").Success)
-                return $"{input} {wordFive}";
-            if (Regex.Match(input.ToString(), "1$").Success)
-                return $"{input} {wordOne}";
-            if (Regex.Match(input.ToString(), "(2|3|4)$").Success)
-                return $"{input} {wordFour}";
-            return $"{input} {wordFive}";
-            /*
-            int number;
-            if (!int.TryParse(input.ToString(), out number))
+            if (addNumber)
             {
-                return $"{input} {wordOne}";
-            }
-            number %= 100;
-            if (number > 11 && number <= 19)
-                
-            number %= 10;
-            switch (number)
-            {
-                case 1:
+                if (Regex.Match(input.ToString(), "1\\d$").Success)
+                    return $"{input} {wordFive}";
+                if (Regex.Match(input.ToString(), "1$").Success)
                     return $"{input} {wordOne}";
-                case 2:
-                case 3:
-                case 4:
+                if (Regex.Match(input.ToString(), "(2|3|4)$").Success)
                     return $"{input} {wordFour}";
+                return $"{input} {wordFive}";
             }
-            return $"{input} {wordFive}";*/
+            else
+            {
+                if (Regex.Match(input.ToString(), "1\\d$").Success)
+                    return $"{wordFive}";
+                if (Regex.Match(input.ToString(), "1$").Success)
+                    return $"{wordOne}";
+                if (Regex.Match(input.ToString(), "(2|3|4)$").Success)
+                    return $"{wordFour}";
+                return $"{wordFive}";
+            }
         }
     }
 

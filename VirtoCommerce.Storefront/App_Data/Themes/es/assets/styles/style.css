@@ -9827,10 +9827,11 @@ table tbody tr td {
     width: 100%;
     background-color: #fdfdfd;
     padding-bottom:0px;
+    overflow-y: auto;
 }
 
 .adv-search-1 .filter_menu li{
-    min-width:185px;
+    min-width:100px;
 }
 
 #advanced_submit_2,

@@ -261,6 +261,9 @@ function getSeoRequest(rootElement) {
         else {
             returnPath = terms['region'];
         }
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
         returnPath += getRequstParams(['city', 'region'], terms);
     }
     // type
@@ -348,6 +351,11 @@ function getFoundResults(rootElement, fillElements) {
                 fillElement(element + " #estate-type-value", data.aggregations, "estatetype");
                 fillElement(element + " #other_type", data.aggregations, "other_type");
                 fillElement(element + " #condition-value", data.aggregations, "condition");
+                fillElement(element + " #bed-count", data.aggregations, "bedrooms", "Спален");
+                fillElement(element + " #bath-count", data.aggregations, "bath", "Санузлов");
+                fillElement(element + " #property-square", data.aggregations, "propertysquare", "Метраж (м<sup>2</sup>)");
+                fillElement(element + " #land-square", data.aggregations, "landsquare","Участок (м<sup>2</sup>)");
+                
             });
         },
         method: "POST",
@@ -365,7 +373,7 @@ function numEnding(number) {
     return number + " объектов";
 }
 
-function fillElement(id, aggregations, field) {
+function fillElement(id, aggregations, field, addText) {
     // remove old values
     $(id).parent().find("ul.dropdown-menu li:not(:first)").remove();
     var currentValue = $(id).val();
@@ -383,14 +391,14 @@ function fillElement(id, aggregations, field) {
                     seoPath = seo.seoLink;
                 }
             });
-            list.append('<li data-value="' + item.value + '" data-seo-path="' + seoPath + '">' + item.value + '</li>');
+            list.append('<li data-value="' + item.value + '" data-seo-path="' + seoPath + '"' + (addText ? 'display-header="' + addText + '"' : '') + '>' + item.value + '</li>');
         }
         else {
-            list.append('<li data-value="' + item.value + '">' + item.value + '</li>');
+            list.append('<li data-value="' + item.value + '"' + (addText ? 'display-header="' + addText + '"' : '') + '>' + item.value + '</li>');
         }
     });
     if (setToDefault) {
-        setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false);
+        setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false, true);
     }
     setClickDdElement(".search_wrapper");
 }
@@ -420,11 +428,15 @@ function setClickDdElement(elem) {
     });
 }
 
-function setDdValue(element, changeNotif, loadResult) {
+function setDdValue(element, changeNotif, loadResult, setDefaultValue) {
     var pick, value, parent, parent_replace;
-
+    var setSelect = true;
     parent_replace = '.filter_menu_trigger';
-    if ($(element).attr('data-value') == "*") {
+    if (setDefaultValue) {
+        pick = $(element).parent().attr("data-default-value");
+        setSelect = false;
+    }
+    else if ($(element).attr('data-value') == "*") {
         pick = $(element).attr('value');
     }
     else if ($(element).attr('display-header')) {
@@ -443,7 +455,7 @@ function setDdValue(element, changeNotif, loadResult) {
         parent.find("input").attr('data-seo-path', $(element).attr('data-seo-path'));
     }
     // set select
-    if ($(element).attr('data-value') != "*") {
+    if (setSelect) {
         parent.addClass("selected");
     } else {
         parent.removeClass("selected");
