@@ -733,6 +733,11 @@
     #access{
         display:none;
     }
+
+    .about-page .col-md-4
+    {
+        padding-bottom: 15px;
+    }
   
     
     .mobile_header{
@@ -3174,6 +3179,11 @@
         width: 100%;
         float: left;
         padding-left: 0px;
+    }
+
+    .team-text
+    {
+        width: 100%;
     }
     
     .has_4per_row.listing_wrapper.col-md-12 .property_listing .listing_unit_price_wrapper, 

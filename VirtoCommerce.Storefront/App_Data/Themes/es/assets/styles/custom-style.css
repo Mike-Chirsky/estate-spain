@@ -4,9 +4,9 @@
     margin-top: auto;
 }
 
-.carousel
+#team-carusel
 {
-    height: 300px;
+    height: 200px;
 }
 
 .reviews
@@ -16,7 +16,7 @@
 
 .reviews .carousel-indicators
 {
-    display: none;
+    top: auto !important;
 }
 
 .carousel-inner
@@ -26,12 +26,13 @@
 
 .carousel-control
 {
-    left: -50px;
+    display: none;
 }
 
-.carousel-control.right
+.team-text
 {
-    right: -50px;
+    margin: auto;
+    width: 70%;
 }
 
 @media (max-width:1024px) {

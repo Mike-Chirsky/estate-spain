@@ -36,7 +36,7 @@
 <div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{collection.header_image}})">
       <div class="description-header with-filters">
-         <h1 class="entry-title entry-tax">
+         <h1 class="blog-header">
             {% if collection.h1 == null %}
                 {{ collection.full_name }}
             {% else %}
@@ -50,7 +50,7 @@
             
             
          </h1>
-         <div class="tax_tagline">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %} </div>
+         <h2 class="blog-header">{{- 'your-request' | t -}}&nbsp;{% include 'product-count' %} </h2>
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">
