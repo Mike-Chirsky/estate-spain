@@ -401,6 +401,13 @@ ul.pagination-custom li.more-page:hover
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
+.description-header.with-filters
+{
+    top: 65px;
+
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
 .search_wrapper .adv-search-1{
     background-color: #EDEDED;
     border-radius: 3px;
