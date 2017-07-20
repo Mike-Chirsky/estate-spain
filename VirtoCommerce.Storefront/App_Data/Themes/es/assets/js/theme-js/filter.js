@@ -1,6 +1,13 @@
 ﻿var ignoredKeyCodes = [9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 91, 92, 93, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145, 186, 187, 190, 191, 192, 219, 220, 221];
 // init document
 $(document).ready(function () {
+    if (document.cookie.indexOf("open-submenu=true") > -1)
+    {
+        setTimeout(function () {
+            $('#adv_extended_options_text_adv ').click();
+        }, 100);
+        
+    }
     $('.js-show-filters').on('click', function () {
         var self = $(this);
         var selfBlock = self.parent();
