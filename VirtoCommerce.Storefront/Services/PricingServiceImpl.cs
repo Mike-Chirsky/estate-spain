@@ -39,12 +39,13 @@ namespace VirtoCommerce.Storefront.Services
 
             var pricesResponse = await _pricingApi.PricingModule.EvaluatePricesAsync(evalContext);
             ApplyProductPricesInternal(products, pricesResponse, workContext);
+
             //Evaluate product discounts
-            var promoEvalContext = workContext.ToPromotionEvaluationContext(products);
-            await _promotionEvaluator.EvaluateDiscountsAsync(promoEvalContext, products);
+            //var promoEvalContext = workContext.ToPromotionEvaluationContext(products);
+            //await _promotionEvaluator.EvaluateDiscountsAsync(promoEvalContext, products);
             //Evaluate product taxes
-            var taxEvalContext = workContext.ToTaxEvaluationContext(products);
-            await _taxEvaluator.EvaluateTaxesAsync(taxEvalContext, products);
+            //var taxEvalContext = workContext.ToTaxEvaluationContext(products);
+            //await _taxEvaluator.EvaluateTaxesAsync(taxEvalContext, products);
         }   
 
         #endregion

@@ -32,13 +32,15 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             {
                 Keyword = search,
                 Outline = ConfigurationManager.AppSettings["CityCategoryId"],
-                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations
+                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations,
+                AssociationsResponseGroup = ItemResponseGroup.ItemSmall
             });
             var foundProductsRegionTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
                 Outline = ConfigurationManager.AppSettings["RegionCategoryId"],
-                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations
+                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations,
+                AssociationsResponseGroup = ItemResponseGroup.ItemSmall
             });
 
             await Task.WhenAll(foundProductsCityTask, foundProductsRegionTask);

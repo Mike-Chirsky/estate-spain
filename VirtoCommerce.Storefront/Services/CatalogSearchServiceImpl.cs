@@ -77,7 +77,7 @@ namespace VirtoCommerce.Storefront.Services
 
                     if (responseGroup.HasFlag(ItemResponseGroup.ItemAssociations))
                     {
-                        taskList.Add(LoadProductAssociationsAsync(allProducts));
+                        taskList.Add(LoadProductAssociationsAsync(allProducts, responseGroup));
                     }
 
                     if (responseGroup.HasFlag(ItemResponseGroup.Inventory))
@@ -221,7 +221,7 @@ namespace VirtoCommerce.Storefront.Services
 
                 if (criteria.ResponseGroup.HasFlag(ItemResponseGroup.ItemAssociations))
                 {
-                    taskList.Add(LoadProductAssociationsAsync(productsWithVariations));
+                    taskList.Add(LoadProductAssociationsAsync(productsWithVariations, criteria.AssociationsResponseGroup == ItemResponseGroup.None? criteria.ResponseGroup : criteria.AssociationsResponseGroup));
                 }
 
                 if (criteria.ResponseGroup.HasFlag(ItemResponseGroup.Inventory))
@@ -341,7 +341,7 @@ namespace VirtoCommerce.Storefront.Services
         }
 
 
-        protected virtual async Task LoadProductAssociationsAsync(IEnumerable<Product> products)
+        protected virtual async Task LoadProductAssociationsAsync(IEnumerable<Product> products, ItemResponseGroup productResponseGroup = ItemResponseGroup.None)
         {
             var allAssociations = products.SelectMany(x => x.Associations).ToList();
 
@@ -350,7 +350,7 @@ namespace VirtoCommerce.Storefront.Services
 
             if (allProductAssociations.Any())
             {
-                var allAssociatedProducts = await GetProductsAsync(allProductAssociations.Select(x => x.ProductId).ToArray(), ItemResponseGroup.ItemInfo | ItemResponseGroup.Seo | ItemResponseGroup.Outlines);
+                var allAssociatedProducts = await GetProductsAsync(allProductAssociations.Select(x => x.ProductId).ToArray(), productResponseGroup);
 
                 foreach (var productAssociation in allProductAssociations)
                 {
@@ -375,7 +375,7 @@ namespace VirtoCommerce.Storefront.Services
                                 PageNumber = pageNumber,
                                 PageSize = pageSize,
                                 Outline = categoryAssociation.Category.Outline,
-                                ResponseGroup = ItemResponseGroup.ItemInfo | ItemResponseGroup.ItemWithPrices | ItemResponseGroup.Inventory | ItemResponseGroup.ItemWithVendor
+                                ResponseGroup = ItemResponseGroup.ItemInfo | ItemResponseGroup.ItemWithPrices
                             };
 
                             if (!sortInfos.IsNullOrEmpty())

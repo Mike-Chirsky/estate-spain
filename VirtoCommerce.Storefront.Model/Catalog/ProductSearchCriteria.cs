@@ -8,7 +8,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog
 {
     public partial class ProductSearchCriteria : PagedSearchCriteria
     {
-        public static int DefaultPageSize { get; set; } = 20;
+        public static int DefaultPageSize { get; set; } = 36;
 
         //For JSON deserialization
         public ProductSearchCriteria()
@@ -60,7 +60,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog
                 SortBy = SortBy,
                 PageNumber = PageNumber,
                 PageSize = PageSize,
-                ResponseGroup = ResponseGroup
+                ResponseGroup = ResponseGroup,
+                AssociationsResponseGroup = AssociationsResponseGroup
             };
 
             if (Terms != null)
@@ -87,7 +88,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog
 
             SortBy = queryString.Get("sort_by");
 
-            ResponseGroup = EnumUtility.SafeParse(queryString.Get("resp_group"), ItemResponseGroup.ItemSmall );
+            ResponseGroup = EnumUtility.SafeParse(queryString.Get("resp_group"), ItemResponseGroup.ItemSmall | ItemResponseGroup.ItemWithPrices);
             // terms=name1:value1,value2,value3;name2:value1,value2,value3
             Terms = (queryString.GetValues("terms") ?? new string[0])
                 .SelectMany(s => s.Split(';'))

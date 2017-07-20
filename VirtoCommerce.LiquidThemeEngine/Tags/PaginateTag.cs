@@ -52,7 +52,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Tags
             Uri.TryCreate(context["request_url"] as string, UriKind.RelativeOrAbsolute, out requestUrl);
             var pageNumber = (int)context["current_page"];
             var globalPageSize = (int)context["page_size"];
-            var localPageSize = GetIntegerValue(_paginateBy, context, 20);
+            var localPageSize = GetIntegerValue(_paginateBy, context, 36);
 
             if (mutablePagedList != null)
             {

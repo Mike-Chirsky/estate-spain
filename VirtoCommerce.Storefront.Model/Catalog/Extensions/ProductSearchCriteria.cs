@@ -26,5 +26,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog
         }
 
         public Dictionary<string, Common.NumericRange> RangeFilters { set; get; }
+
+        // IF Load Product with ItemAssociations, we can define 
+        public ItemResponseGroup AssociationsResponseGroup { get; set; }
     }
 }

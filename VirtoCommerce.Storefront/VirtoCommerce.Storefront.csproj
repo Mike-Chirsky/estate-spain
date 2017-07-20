@@ -966,6 +966,7 @@
     <None Include="AutoRestClients\!readme.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ServerMaintenance.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -988,6 +989,8 @@
     <Compile Include="AutoRestClients\ContentModuleApi.cs" />
     <Compile Include="AutoRestClients\CoreModuleApi.cs" />
     <Compile Include="AutoRestClients\CustomerModuleApi.cs" />
+    <Compile Include="AutoRestClients\Es\EsPricingModule.cs" />
+    <Compile Include="AutoRestClients\Es\EsPricingModuleApiClient.cs" />
     <Compile Include="AutoRestClients\InventoryModuleApi.cs" />
     <Compile Include="AutoRestClients\MarketingModuleApi.cs" />
     <Compile Include="AutoRestClients\OrdersModuleApi.cs" />

@@ -1,10 +1,32 @@
-﻿<% Response.StatusCode = 503 %>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Maintenance</title>
 
     <script src="https://use.fontawesome.com/aa2b31be63.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script language="javascript">
+        var local = {
+            "no": {
+                "h1": "UNDER VEDLIKEHOLD",
+                "p": "Vi oppdaterer vår butikk med enda flere produkter. Besøk oss igjen om noen minutter."
+            },
+            "se": {
+                "h1": "KORT UNDERHÅLL",
+                "p": "Vi uppdaterar vår butik med ännu fler produkter. Besök oss igen om några minuter."
+            }
+        };
+
+        $(document).ready(function() {
+            var hostNameArray = window.location.hostname.split('.');
+            var tld = hostNameArray[hostNameArray.length - 1];
+            if (local[tld]) {
+                $('#layout .content h1').text(local[tld]['h1']);
+                $('#layout .content p').text(local[tld]['p']);
+            }
+        });
+    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
@@ -26,8 +48,7 @@
             font-family: 'Open Sans';
         }
 
-        h1
-        {
+        h1 {
             color: #F57C00;
             font-size: 40px;
             font-weight: 600;
