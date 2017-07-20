@@ -24,7 +24,7 @@
     top: auto !important;
 }
 
-.carousel-control
+#team-carusel .carousel-control
 {
     display: none;
 }
