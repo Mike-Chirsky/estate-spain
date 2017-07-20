@@ -105,8 +105,8 @@ namespace VirtoCommerce.Storefront.Builders
 
             if (needReevaluate)
             {
-                await EvaluatePromotionsAsync();
-                await EvaluateTaxesAsync();
+                //await EvaluatePromotionsAsync();
+                //await EvaluateTaxesAsync();
             }
         }
 

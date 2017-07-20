@@ -210,7 +210,7 @@ namespace VirtoCommerce.Storefront.Services
 
             var searchCriteria = criteria.ToProductSearchCriteriaDto(workContext);
             var result = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(searchCriteria);
-            await LoadAllValuesForSelectedTerms(criteria, workContext, result);
+            //await LoadAllValuesForSelectedTerms(criteria, workContext, result);
             // TODO Remove check is null afeter fix null values from admin
             var products = result.Items?.Where(x => x != null).Select(x => x.ToProduct(workContext.CurrentLanguage, workContext.CurrentCurrency, workContext.CurrentStore)).ToList() ?? new List<Product>();
 

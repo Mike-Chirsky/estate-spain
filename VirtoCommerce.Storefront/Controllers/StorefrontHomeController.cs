@@ -25,7 +25,7 @@ namespace VirtoCommerce.Storefront.Controllers
         {
             var productSearchResult = await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria()
             {
-                ResponseGroup = ItemResponseGroup.ItemSmall | ItemResponseGroup.ItemWithPrices 
+                ResponseGroup = ItemResponseGroup.ItemSmall 
             });
             _workContext.Aggregations = new MutablePagedList<Aggregation>(productSearchResult.Aggregations);
             _workContext.CurrentCategory = new Category();
