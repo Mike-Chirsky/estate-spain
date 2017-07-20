@@ -1,3 +1,1 @@
-﻿{% paginate collection.products by 36 %}
-{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}}
-{% endpaginate %}
+﻿{{ collection.products_count | num_ending: " объект":" объекта": " объектов" }} 

@@ -45,9 +45,7 @@
             
             
          </h1>
-         {% paginate collection.products by 36 %}   
-            <div class="blog-header">{{- 'your-request' | t -}}&nbsp;{{- paginate.items | num_ending: "представлен": "представленно": "представленно": false -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </div>
-         {% endpaginate %}
+         <div class="blog-header">{{- 'your-request' | t -}}&nbsp;{{- collection.products_count | num_ending: "представлен": "представленно": "представленно": false -}}&nbsp;{{- collection.products_count | num_ending: " объект":" объекта": " объектов" -}} </div>
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">
