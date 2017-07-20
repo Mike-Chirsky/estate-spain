@@ -9828,6 +9828,7 @@ table tbody tr td {
     background-color: #fdfdfd;
     padding-bottom:0px;
     overflow-y: auto;
+    min-width: 220px;
 }
 
 .adv-search-1 .filter_menu li{

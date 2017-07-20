@@ -1,6 +1,18 @@
 ﻿var ignoredKeyCodes = [9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 91, 92, 93, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145, 186, 187, 190, 191, 192, 219, 220, 221];
 // init document
 $(document).ready(function () {
+    // expand addition filter if open on preview page
+    if (document.cookie.indexOf("open-submenu=true") > -1)
+    {
+        setTimeout(function () {
+            $('.adv-search-1.adv_extended_class').css('height', 'auto');
+            $('.adv_extended_class .adv1-holder').css('height', 'auto');
+            $('#adv_extended_options_text_adv').parent().find('.adv_extended_options_text').hide();
+            $('#adv_extended_options_text_adv').parent().find('.extended_search_check_wrapper').slideDown();
+            $('#adv_extended_options_text_adv').parent().find('.adv_extended_close_button').show();
+        }, 100);
+        
+    }
     $('.js-show-filters').on('click', function () {
         var self = $(this);
         var selfBlock = self.parent();
@@ -31,7 +43,26 @@ $(document).ready(function () {
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
                 fromFilter = true;
             }
-            window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+            $.ajax({
+                url: "storefrontapi/product/filter/checkurl",
+                data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
+                success: function (data) {
+                    if (data === true) {
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    } else if (data === false) {
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    }
+                    else {
+                        location = data;
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    }
+                },
+                error: function (err) {
+                    console.error(err);
+                },
+                method: "POST",
+                contentType: "application/json"
+            });
         }
     });
     $("#send-main-filter-mobile").click(function () {
@@ -50,7 +81,26 @@ $(document).ready(function () {
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
                 fromFilter = true;
             }
-            window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+            $.ajax({
+                url: "storefrontapi/product/filter/checkurl",
+                data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
+                success: function (data) {
+                    if (data === true) {
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    } else if (data === false) {
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    }
+                    else {
+                        location = data;
+                        window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
+                    }
+                },
+                error: function (err) {
+                    console.error(err);
+                },
+                method: "POST",
+                contentType: "application/json"
+            });
         }
     });
     initValue();
@@ -182,6 +232,11 @@ function getTerms(rootElement) {
     if (value != "" && value != "*" && value != undefined) {
         terms["ls"] = value;
     }
+    element = $(rootElement + " #tag-value");
+    value = getSeoName(element.val(), "tag");
+    if (value != "" && value != "*" && value != undefined) {
+        terms["tag"] = value;
+    }
     if ($(rootElement + " #filter-checks input:checked").length > 0) {
         var sysfilterValue = "";
         $.each($(rootElement + " #filter-checks input:checked"), function (index, item) {
@@ -199,7 +254,8 @@ function getSeoRequest(rootElement) {
     var hasEstateType = terms.hasOwnProperty('estatetype');
     var hasCondition = terms.hasOwnProperty('cond');
     var hasOtherType = terms.hasOwnProperty('type');
-    // region + type + condition
+    var hasTag = terms.hasOwnProperty('tag');
+    // region(city) + type + condition
     if (hasCityOrRegion && hasEstateType && hasCondition) {
         if (terms.hasOwnProperty('city')) {
             returnPath = terms['city'];
@@ -207,15 +263,29 @@ function getSeoRequest(rootElement) {
         else {
             returnPath = terms['region'];
         }
-        if (terms.hasOwnProperty('type'))
-        {
+        if (terms.hasOwnProperty('type')) {
             terms['type'] = getSeoName(terms['type'], "other_type_dict");
         }
         returnPath += '/' + terms['estatetype'];
         returnPath += '/' + terms['cond'];
         returnPath += getRequstParams(['city', 'region', 'estatetype', 'cond'], terms);
     }
-    // region + type
+    // region(city) + type + tag
+    else if (hasCityOrRegion && hasEstateType && hasTag) {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += '/' + terms['estatetype'];
+        returnPath += '/' + terms['tag'];
+        returnPath += getRequstParams(['city', 'region', 'estatetype', 'tag'], terms);
+    }
+    // region(city) + type
     else if (hasCityOrRegion && hasEstateType) {
         if (terms.hasOwnProperty('city')) {
             returnPath = terms['city'];
@@ -229,7 +299,7 @@ function getSeoRequest(rootElement) {
         returnPath += '/' + terms['estatetype'];
         returnPath += getRequstParams(['city', 'region', 'estatetype'], terms);
     }
-    // region + condition
+    // region(city) + condition
     else if (hasCityOrRegion && hasCondition) {
         if (terms.hasOwnProperty('city')) {
             returnPath = terms['city'];
@@ -252,9 +322,31 @@ function getSeoRequest(rootElement) {
         }
         returnPath += getRequstParams(['estatetype', 'cond'], terms);
     }
+    // type + tag
+    else if (hasEstateType && hasTag) {
+        returnPath = terms['estatetype'];
+        returnPath += '/' + terms['tag'];
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += getRequstParams(['estatetype', 'tag'], terms);
+    }
+    // region(city) + tag
+    else if (hasCityOrRegion && hasTag) {
+        if (terms.hasOwnProperty('city')) {
+            returnPath = terms['city'];
+        }
+        else {
+            returnPath = terms['region'];
+        }
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += '/' + terms['tag'];
+        returnPath += getRequstParams(['city', 'region', 'tag'], terms);
+    }
     // region
-    else if (hasCityOrRegion)
-    {
+    else if (hasCityOrRegion) {
         if (terms.hasOwnProperty('city')) {
             returnPath = terms['city'];
         }
@@ -293,6 +385,14 @@ function getSeoRequest(rootElement) {
         else {
             returnPath += getRequstParams(['type'], terms);
         }
+    }
+    else if (hasTag)
+    {
+        returnPath = terms['tag'];
+        if (terms.hasOwnProperty('type')) {
+            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        }
+        returnPath += getRequstParams(['tag'], terms);
     }
     return returnPath;
 }
@@ -340,28 +440,65 @@ function getFoundResults(rootElement, fillElements) {
     {
         terms['type'] = getSeoName(terms['type'], "other_type_dict");
     }
-    $.ajax({
-        url: "storefrontapi/product/filter",
-        data: JSON.stringify(terms),
-        success: function (data) {
-            fillElements.forEach(function (element) {
+    loadFoundResult(terms, function (data) {
+        var elementSetTodefult = false;
+        fillElements.forEach(function (element) {
+            
+            if (fillElement(element + " #estate-type-value", data.aggregations, "estatetype") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #other_type", data.aggregations, "other_type") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #condition-value", data.aggregations, "condition") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #bed-count", data.aggregations, "bedrooms", "Спален") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #bath-count", data.aggregations, "bath", "Санузлов") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #property-square", data.aggregations, "propertysquare", "Метраж (м<sup>2</sup>)") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (fillElement(element + " #land-square", data.aggregations, "landsquare", "Участок (м<sup>2</sup>)") && !elementSetTodefult) {
+                elementSetTodefult = true;
+            }
+            if (!elementSetTodefult) {
                 $(element + " #no-filter").hide();
                 $(element + " #count-objects").show();
                 $(element + " #result-count").text(numEnding(data.metaData.totalItemCount));
-                fillElement(element + " #estate-type-value", data.aggregations, "estatetype");
-                fillElement(element + " #other_type", data.aggregations, "other_type");
-                fillElement(element + " #condition-value", data.aggregations, "condition");
-                fillElement(element + " #bed-count", data.aggregations, "bedrooms", "Спален");
-                fillElement(element + " #bath-count", data.aggregations, "bath", "Санузлов");
-                fillElement(element + " #property-square", data.aggregations, "propertysquare", "Метраж (м<sup>2</sup>)");
-                fillElement(element + " #land-square", data.aggregations, "landsquare","Участок (м<sup>2</sup>)");
-                
-            });
-        },
+            }
+        });
+        if (elementSetTodefult) {
+            getFoundResultWithoutFill(rootElement, fillElements);
+        }
+    });
+}
+function getFoundResultWithoutFill(rootElement, fillElements) {
+    var terms = getTerms(rootElement);
+    if (terms.hasOwnProperty('type')) {
+        terms['type'] = getSeoName(terms['type'], "other_type_dict");
+    }
+    loadFoundResult(terms, function (data) {
+        fillElements.forEach(function (element) {
+            $(element + " #no-filter").hide();
+            $(element + " #count-objects").show();
+            $(element + " #result-count").text(numEnding(data.metaData.totalItemCount));
+        });
+    });
+}
+function loadFoundResult(terms, callback) {
+    $.ajax({
+        url: "storefrontapi/product/filter",
+        data: JSON.stringify(terms),
+        success: callback,
         method: "POST",
         contentType: "application/json"
     });
 }
+
 function numEnding(number) {
 
     if (/1\\d$/.test(number))
@@ -381,7 +518,7 @@ function fillElement(id, aggregations, field, addText) {
     var types = getValues(aggregations, field);
     var setToDefault = true;
     types.forEach(function (item) {
-        if (item.value === currentValue || currentValue === "*") {
+        if (item.value === currentValue || currentValue === "*" || currentValue === "") {
             setToDefault = false;
         }
         if (seoLinks && seoLinks[field]) {
@@ -402,6 +539,7 @@ function fillElement(id, aggregations, field, addText) {
         setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false, true);
     }
     setClickDdElement(".search_wrapper");
+    return setToDefault;
 }
 
 function getValues(aggregations, type) {
@@ -410,6 +548,12 @@ function getValues(aggregations, type) {
         if (agg.field === type) {
             result = agg.items;
         }
+    });
+    result.sort(function (a, b) {
+        if (!isNaN(parseInt(a.value))) {
+            return parseInt(a.value) - parseInt(b.value);
+        }
+        return 0;
     });
     return result;
 }

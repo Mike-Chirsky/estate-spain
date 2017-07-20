@@ -87,62 +87,25 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         private void SearchProduct(string type, string id, int page, int pageSize)
         {
-            switch (type)
+            if (type != "type")
             {
-                case "region":                 
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
+                WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
                         new Term
                         {
-                            Name = "region",
+                            Name = type,
                             Value = id
                         }
                     };
-                    break;
-                case "city":
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
-                        new Term
-                        {
-                            Name = "city",
-                            Value = id
-                        }
-                    };
-                    break;
-                case "type":
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
+            }
+            else
+            {
+                WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
                         new Term
                         {
                             Name = "estatetype",
                             Value = id
                         }
                     };
-                    break;
-                case "condition":
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
-                        new Term
-                        {
-                            Name = "condition",
-                            Value = id
-                        }
-                    };
-                    break;
-                case "other_type":
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
-                        new Term
-                        {
-                            Name = "other_type",
-                            Value = id
-                        }
-                    };
-                    break;
-                case "tag":
-                    WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
-                        new Term
-                        {
-                            Name = "tags",
-                            Value = id
-                        }
-                    };
-                    break;
             }
             WorkContext.Products = new MutablePagedList<Product>((pageNumber, pSize, sortInfos) =>
             {

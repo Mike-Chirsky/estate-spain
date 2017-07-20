@@ -595,6 +595,7 @@
         }
     },
     "product": {
+        "request-price": "По запросу",
         "description": "Описание",
         "full-info": "Детальное описание",
         "city": "Город",
@@ -780,7 +781,7 @@
         "category": "Категория",
         "category-any": "Все категории",
         "to-sea": "до моря",
-        "location-placeholder": "Введите название"
+        "location-placeholder": "Введите название города или региона"
     },
     "blog":{
         "read-more":"Читать полностью",
@@ -966,6 +967,6 @@
     "your-request2": "По вашему запросу найдено",
     "in": "в",
     "on": "на",
-    "showing":"Показано"
+    "showing":"Показано",
 
 }

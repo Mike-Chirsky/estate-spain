@@ -39,7 +39,7 @@
     <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
     <h4><a href="{{ product.url | absolute_url }}">{{ product.custom_title }}</a></h4>
     <div class="listing_unit_price_wrapper">
-        <span class="price_label price_label_before"> {% include 'price' with product.price %}</span>
+        <span class="price_label price_label_before">{% if product.price == 0 || product.price == null %}{{ 'product.request-price' | t }} {% else %} {% include 'price' with product.price %}{% endif %}</span>
     </div>
     <div class="listing_details the_list_view" style="display: block">
         {{- product.product_description | strip_html | slice: 0, 180 | strip -}}

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
-using VirtoCommerce.Storefront.Model.Catalog.Extensions;
+using VirtoCommerce.Storefront.Model.Catalog.Es;
 
 namespace VirtoCommerce.Storefront.Converters.Catalog
 {
@@ -123,6 +123,14 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 {
                     Name = "sys_filter",
                     Value = criteria.More
+                });
+            }
+            if (!string.IsNullOrEmpty(criteria.Tag))
+            {
+                terms.Add(new Term
+                {
+                    Name = "tag",
+                    Value = GetLocalizationValue(wc, criteria.Tag, "tag")
                 });
             }
             searchCriteria.Terms = terms.ToArray();

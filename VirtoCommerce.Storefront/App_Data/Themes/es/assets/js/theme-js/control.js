@@ -1203,6 +1203,8 @@ jQuery(document).ready(function ($) {
         $(this).parent().find('.adv_extended_options_text').hide();
         $(this).parent().find('.extended_search_check_wrapper').slideDown();
         $(this).parent().find('.adv_extended_close_button').show();
+        setTimeout(function () { slideToBlock("#main-filter-controls") }, 300);
+        document.cookie = "open-submenu=true;";
     });
     
     $('.adv_extended_close_button').click(function(){
@@ -1213,6 +1215,7 @@ jQuery(document).ready(function ($) {
             moreButton = $(this).parent().parent().parent().find('.adv_extended_options_text');
         }
         moreButton.show();
+        document.cookie = "open-submenu=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
         $('.adv-search-1.adv_extended_class').removeAttr('style');
         $('.adv_extended_class .adv1-holder').removeAttr('style');
     });

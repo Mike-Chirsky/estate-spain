@@ -80,6 +80,9 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Step 2. Load Estatetypes
             await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
 
+            // estatetype + tag
+            await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+
             // Step 3. Load Tags
             await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
 
