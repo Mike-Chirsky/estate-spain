@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VirtoCommerce.Storefront.Model.Catalog.Extensions
+namespace VirtoCommerce.Storefront.Model.Catalog.Es
 {
     public class ProductFilterCriteria
     {        
@@ -48,6 +48,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog.Extensions
         /// Fiter by sys_filter
         /// </summary>
         public string More { set; get; }
+
+        public string Tag { set; get; }
 
         public ProductFilterCriteria() {
         }

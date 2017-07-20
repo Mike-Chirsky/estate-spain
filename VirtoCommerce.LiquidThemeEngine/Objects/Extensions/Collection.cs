@@ -23,7 +23,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         private const string LandSquareKey = "landsquare";
         private const string PropertySquareKey = "propertysquare";
         private const string SysFilterKey = "sys_filter";
-
+        private const string TagKey = "tag";
 
         #endregion
 
@@ -342,6 +342,14 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             }
         }
 
+        public Tag CurrentTagFilter
+        {
+            get
+            {
+                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(TagKey, StringComparison.InvariantCultureIgnoreCase));
+            }
+        }
+
         public Tag CurrentSeaDistanceFilter
         {
             get
@@ -400,7 +408,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetFiltersByGroupName(PropertySquareKey)?.OrderBy(x => x.Value).ToList();
+                return GetFiltersByGroupName(PropertySquareKey)?.OrderBy(x => x.Value, new SemiNumericComparer()).ToList();
             }
         }
 
@@ -408,7 +416,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetFiltersByGroupName(LandSquareKey)?.OrderBy(x => x.Value).ToList();
+                return GetFiltersByGroupName(LandSquareKey)?.OrderBy(x => x.Value, new SemiNumericComparer()).ToList();
             }
         }
 
@@ -416,7 +424,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetFiltersByGroupName(BathRoomsKey);
+                return GetFiltersByGroupName(BathRoomsKey)?.OrderBy(x => x.Value, new SemiNumericComparer()).ToList();
             }
         }
 
@@ -424,7 +432,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return GetFiltersByGroupName(BedRoomsKey);
+                return GetFiltersByGroupName(BedRoomsKey)?.OrderBy(x => x.Value, new SemiNumericComparer()).ToList();
             }
         }
 
@@ -561,5 +569,28 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         public string RegionName { set; get; }
 
         public IList<KeyValue<string, string>> Breadcrumb { set; get; }
+
+        private class SemiNumericComparer : IComparer<string>
+        {
+            public int Compare(string item, string item2)
+            {
+                int n, n1;
+                bool nIsNum = false, n1IsNum = false;
+                if ((nIsNum = int.TryParse(item, out n)) && (n1IsNum = int.TryParse(item2, out n1)))
+                {
+                    if (n > n1) return 1;
+                    if (n < n1) return -1;
+                    if (n == n1) return 0;
+                }
+
+                if (nIsNum && !n1IsNum)
+                    return -1;
+
+                if (!nIsNum && n1IsNum)
+                    return 1;
+
+                return string.Compare(item, item2, true);
+            }
+        }
     }
 }
