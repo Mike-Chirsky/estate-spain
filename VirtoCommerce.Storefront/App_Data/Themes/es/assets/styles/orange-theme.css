@@ -6,6 +6,50 @@
     border: none;
 }
 
+.wpresidence_button.loading
+{
+    position: relative;
+}
+
+.wpresidence_button.loading *
+{
+    visibility: hidden;
+}
+
+.wpresidence_button.loading::after
+{
+    border-color: #fff transparent #fff #fff;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    content: ' ';
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+
+    -webkit-animation: loader 1s linear infinite;
+            animation: loader 1s linear infinite;
+}
+
+@-webkit-keyframes loader
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loader
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+};
+
 .comment-form #submit, .blog_unit_image img, .blog2v img, .single-content input[type="submit"], .agentpict, .featured_property img, .agent_unit img {
     border-bottom: 3px solid #FF9800 !important;
 }
