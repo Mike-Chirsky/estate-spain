@@ -205,6 +205,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["CitiesEstatetypesConditionsCategoryId"];
                 case "/Cities/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["CitiesEstatetypesTagsCategoryId"];
+                case "/Cities/Estatetypes":
+                    return ConfigurationManager.AppSettings["CitiesEstatetypesCategoryId"];
                 case "/Cities/Tags":
                     return ConfigurationManager.AppSettings["CitiesTagsCategoryId"];
                 case "/Estatetypes/Tags":
