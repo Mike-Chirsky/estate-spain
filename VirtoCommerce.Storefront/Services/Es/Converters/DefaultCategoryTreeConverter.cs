@@ -76,7 +76,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             if (context.ListExceptions != null)
             {
                 var seoPath = category.SeoPath.Trim('/');
-                var exception = context.ListExceptions.FirstOrDefault(x => x.SeoInfo != null && category.SeoPath != null ? x.SeoInfo.Slug.Replace("-", "/") == seoPath : false);
+                var exception = context.ListExceptions.FirstOrDefault(x => x.SeoInfo != null && category.SeoPath != null ? x.SeoInfo.Slug.Replace("Z", "/") == seoPath : false);
                 if (exception != null)
                 {
                     category.FullName = exception.Name;

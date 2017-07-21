@@ -65,17 +65,22 @@ namespace VirtoCommerce.Storefront.Services.Es
             // Load region + estate type + condition
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey)));
 
-            // Load cities + estate type + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
+            
 
             // Load cities + tags
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
 
             // load cities + condition
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
-
+            
+            // load cities + estate type
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey)));
+            
             // Load cities + estate type + conditions
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result,ConditionKey))));
+
+            // Load cities + estate type + tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
 
             // Step 2. Load Estatetypes
             await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
@@ -199,15 +204,15 @@ namespace VirtoCommerce.Storefront.Services.Es
         {
             switch (productPath)
             {
-                case "/Cities/Conditions":
+                case "/Regions/Cities/Conditions":
                     return ConfigurationManager.AppSettings["CitiesConditionsCategoryId"];
-                case "/Cities/Estatetypes/Conditions":
+                case "/Regions/Cities/Estatetypes/Conditions":
                     return ConfigurationManager.AppSettings["CitiesEstatetypesConditionsCategoryId"];
-                case "/Cities/Estatetypes/Tags":
+                case "/Regions/Cities/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["CitiesEstatetypesTagsCategoryId"];
-                case "/Cities/Estatetypes":
+                case "/Regions/Cities/Estatetypes":
                     return ConfigurationManager.AppSettings["CitiesEstatetypesCategoryId"];
-                case "/Cities/Tags":
+                case "/Regions/Cities/Tags":
                     return ConfigurationManager.AppSettings["CitiesTagsCategoryId"];
                 case "/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["EstatetypesTagsCategoryId"];
