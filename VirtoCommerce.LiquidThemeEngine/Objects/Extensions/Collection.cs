@@ -94,6 +94,15 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         #endregion
 
         #region Info property
+
+        public string H2Features
+        {
+            get
+            {
+                return GetPropertyByName("h2-features")?.Value;
+            }
+
+        }
         public string H1
         {
             get
