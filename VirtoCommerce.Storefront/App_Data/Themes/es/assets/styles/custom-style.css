@@ -39,14 +39,24 @@
     .addition-form {
         display: none;
     }
-    .backtop, .contact-box
+    .contact-box
     {
         display: none;
     }
     .contactformwrapper{
         display: none;
     }
-
+    .backtop
+    {
+        background: #a61f21;
+        clear: both;
+        color: #fff;
+        display: block;
+        opacity: 1;
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .contact-sidebar-call-back input[type=submit], 
@@ -1476,6 +1486,7 @@ h2.blog-header
 }
 .margin-auto
 {
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1686,8 +1697,10 @@ blockquote
 {
     display: inline-block;
     margin: 0 5px;
+    text-align: center;
     vertical-align: top;
     word-spacing: 0;
+    width: 31px;
 }
 
 .list-social .list-link

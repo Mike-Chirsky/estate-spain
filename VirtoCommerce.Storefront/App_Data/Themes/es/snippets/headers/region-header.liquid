@@ -19,7 +19,7 @@
       </div>
       {%- endif -%}
       {%- if collection.link_block_type2 -%}
-      <div class="col-md-{%- if collection.link_block_type1 and collection.link_block_type3 -%}
+      <div class="padding15 col-md-{%- if collection.link_block_type1 and collection.link_block_type3 -%}
           {{-4-}}
           {%- elseif collection.link_block_type1 == null or collection.link_block_type3 == null -%}
           {{-6-}}
@@ -34,13 +34,13 @@
       </div>
       {%- endif -%}
       {%- if collection.link_block_type3 -%}
-      <div class="col-md-{%- if collection.link_block_type1 and collection.link_block_type2 -%}
+      <div class="padding15 col-md-{%- if collection.link_block_type1 and collection.link_block_type2 -%}
           {{-4-}}
           {%- elseif collection.link_block_type1 == null or collection.link_block_type2 == null -%}
           {{-6-}}
           {%- else -%}
           {{-12-}}
-          {%- endif -%}">
+          {%- endif -%}>
          <div class="block-inner" style="background-image: url({{collection.link_block_type3_image}})">
             <div class="bottom">
                {{- collection.link_block_type3 -}}

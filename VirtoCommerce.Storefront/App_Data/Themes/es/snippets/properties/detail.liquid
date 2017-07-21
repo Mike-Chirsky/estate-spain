@@ -32,32 +32,32 @@
 {%- endfor -%}
 
 {%- if other_type -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.other_type' | t }}:</strong> {{ other_type | capitalize }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.other_type' | t }}:</span> {{ other_type | capitalize }}</div>
 {%- endif -%}
 {%- if propertysquare -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.propertysquare' | t }}:</strong> {{ product.property_square  }} {{ 'product.square' | t }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.propertysquare' | t }}:</span> {{ product.property_square  }} {{ 'product.square' | t }}</div>
 {%- endif -%}
 {%- if landsquare -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.landsquare' | t }}:</strong> {{ product.land_square }} {{ 'product.square' | t }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.landsquare' | t }}:</span> {{ product.land_square }} {{ 'product.square' | t }}</div>
 {%- endif -%}
 {%- if seaview -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.seaview' | t }}:</strong> {{ seaview | t | capitalize }} </div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.seaview' | t }}:</span> {{ seaview | t | capitalize }} </div>
 {%- endif -%}
 {%- if distancetosea -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.distancetosea' | t }}:</strong> {{ distancetosea | capitalize | replace: ".00", "" }} {{ 'product.m' | t }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.distancetosea' | t }}:</span> {{ distancetosea | capitalize | replace: ".00", "" }} {{ 'product.m' | t }}</div>
 {%- endif -%}
 {%- if distanceairport -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.distanceairport' | t }}:</strong> {{ distanceairport | capitalize | replace: ".00", "" }} {{ 'product.km' | t }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.distanceairport' | t }}:</span> {{ distanceairport | capitalize | replace: ".00", "" }} {{ 'product.km' | t }}</div>
 {%- endif -%}
 {%- if bath -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.bath' | t }}:</strong> {{ bath | capitalize }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.bath' | t }}:</span> {{ bath | capitalize }}</div>
 {%- endif -%}
 {%- if rooms -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.rooms' | t }}:</strong> {{ rooms | capitalize }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.rooms' | t }}:</span> {{ rooms | capitalize }}</div>
 {%- endif -%}
 {%- if bedrooms -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.bedrooms' | t }}:</strong> {{ bedrooms | capitalize }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.bedrooms' | t }}:</span> {{ bedrooms | capitalize }}</div>
 {%- endif -%}
 {%- if condition -%}
-    <div class="listing_detail col-md-4"><strong>{{ 'product.condition' | t }}:</strong> {{ condition | capitalize }}</div>
+    <div class="listing_detail col-md-4"><span class="bold">{{ 'product.condition' | t }}:</span> {{ condition | capitalize }}</div>
 {%- endif -%}
