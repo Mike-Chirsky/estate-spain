@@ -112,7 +112,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     ResponseGroup = "1619",
                     Outline = ProductTypeToOutline(productType),
                     Take = 10000,
-                    Skip = 0
+                    Skip = 0,
+                    WithHidden = false
                 });
             var listExceptions = new List<Product>();
             var firstParent = parents.FirstOrDefault();
@@ -128,7 +129,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                             ResponseGroup = "1619",
                             Outline = exceptionOutline,
                             Take = 10000,
-                            Skip = 0
+                            Skip = 0,
+                            WithHidden = false
                         });
                     if (resultExceptions.Items != null)
                     {
@@ -164,7 +166,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                    ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString(),
                    Outline = ProductTypeToOutline(CitiesKey),
                    Take = 10000,
-                   Skip = 0
+                   Skip = 0,
+                   WithHidden = false
                });
             foreach (var parent in parents)
             {

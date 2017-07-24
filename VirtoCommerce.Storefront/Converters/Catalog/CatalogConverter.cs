@@ -227,6 +227,7 @@ namespace VirtoCommerce.Storefront.Converters
                 Skip = criteria.Start,
                 Take = criteria.PageSize,
                 ResponseGroup = ((int)criteria.ResponseGroup).ToString(),
+                WithHidden  = false
             };
 
             // Add vendor id to terms
