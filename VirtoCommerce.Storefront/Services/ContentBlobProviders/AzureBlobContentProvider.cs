@@ -126,7 +126,7 @@ namespace VirtoCommerce.Storefront.Services
             var subDir =  Path.GetDirectoryName(searchPattern);
             if(!string.IsNullOrEmpty(subDir))
             {
-                path = path.TrimEnd('/') + "/" + subDir;
+                path = path.TrimEnd('/') + "/" + subDir.Replace('\\', '/');
                 searchPattern = Path.GetFileName(searchPattern);
             }
 
