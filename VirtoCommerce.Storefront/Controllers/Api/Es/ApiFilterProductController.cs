@@ -41,6 +41,24 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             });
         }
 
+        // storefrontapi/product/totalcount
+        [HttpPost]
+        public async Task<ActionResult> GetTotalCount(ProductFilterCriteria filterCriteria)
+        {
+            var searchCriteria = new ProductSearchCriteria(WorkContext.CurrentLanguage, WorkContext.CurrentCurrency, WorkContext.QueryString);
+            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext);
+
+            searchCriteria.ResponseGroup = ItemResponseGroup.ItemInfo;
+            searchCriteria.PageSize = 0;
+
+            var retVal = await _catalogSearchService.SearchProductsAsync(searchCriteria);
+            return Json(new
+            {
+                TotalItemCount = retVal.Products?.TotalItemCount,
+                Aggregations = retVal.Aggregations
+            });
+        }
+
         // storefrontapi/product/filter/checkurl
 
         /// <summary>

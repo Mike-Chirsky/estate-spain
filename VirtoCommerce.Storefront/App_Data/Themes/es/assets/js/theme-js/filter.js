@@ -468,7 +468,7 @@ function getFoundResults(rootElement, fillElements) {
             if (!elementSetTodefult) {
                 $(element + " #no-filter").hide();
                 $(element + " #count-objects").show();
-                $(element + " #result-count").text(numEnding(data.metaData.totalItemCount));
+                $(element + " #result-count").text(numEnding(data.totalItemCount));
             }
         });
         if (elementSetTodefult) {
@@ -485,13 +485,13 @@ function getFoundResultWithoutFill(rootElement, fillElements) {
         fillElements.forEach(function (element) {
             $(element + " #no-filter").hide();
             $(element + " #count-objects").show();
-            $(element + " #result-count").text(numEnding(data.metaData.totalItemCount));
+            $(element + " #result-count").text(numEnding(data.totalItemCount));
         });
     });
 }
 function loadFoundResult(terms, callback) {
     $.ajax({
-        url: "storefrontapi/product/filter",
+        url: "storefrontapi/product/totalcount",
         data: JSON.stringify(terms),
         success: callback,
         method: "POST",
