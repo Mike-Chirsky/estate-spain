@@ -126,7 +126,6 @@
 					{{ 'filter.show-result' | t }}
 					{% if template contains 'search' %}
 					<span id="result-count">{{ products_total_count | num_ending: " объект":" объекта": " объектов" }}</span>
-					
 					{% else %}
 					<span id="result-count">{%- include 'product-count' -%}</span>
 					{% endif %}
