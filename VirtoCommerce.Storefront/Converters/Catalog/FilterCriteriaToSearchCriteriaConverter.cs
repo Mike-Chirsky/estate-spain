@@ -61,7 +61,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 {
                     searchCriteria.Keyword += ",";
                 }
-                searchCriteria.Keyword = $"distancetosea:{term}";
+                searchCriteria.Keyword += $"distancetosea:{term}";
                 searchCriteria.RangeFilters.Add("distancetosea", term);
             }
             if (!string.IsNullOrEmpty(criteria.EstateType))

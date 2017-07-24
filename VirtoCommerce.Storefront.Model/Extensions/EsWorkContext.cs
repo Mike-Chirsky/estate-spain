@@ -13,5 +13,7 @@ namespace VirtoCommerce.Storefront.Model
         /// List filter seo keywords
         /// </summary>
         public Dictionary<string, List<Tuple<string, string>>> FilterSeoLinks { get; set; }
+
+        public string Search { set; get; }
     }
 }

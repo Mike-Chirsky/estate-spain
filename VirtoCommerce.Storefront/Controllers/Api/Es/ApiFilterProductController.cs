@@ -77,12 +77,24 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
                 }
                 while (true);
-                return Json(CreateUrl(existCategory, request.Terms));
+                if (existCategory != null)
+                {
+                    return Json(CreateUrl(existCategory, request.Terms));
+                }
+                else
+                {
+                    return Json(CreateSearchUrl(request.Terms));
+                }
             }
             else
             {
                 return Json(true);
             }
+        }
+
+        private string CreateSearchUrl(ProductFilterCriteria criteria)
+        {
+            return $"search?{CreateParams(new string[0], criteria)}";
         }
 
         private string CreateUrl(Category category, ProductFilterCriteria criteria)

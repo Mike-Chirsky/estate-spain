@@ -24,12 +24,13 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
             }
             if (workContext.CurrentProductSearchCriteria != null && !string.IsNullOrEmpty(workContext.CurrentProductSearchCriteria.Keyword))
             {
-                result.Keyword = workContext.CurrentProductSearchCriteria.Keyword;
+                result.SearchText = workContext.Search;
             }
             if (result.Product != null)
             {
                 SetBreadcrumbToProduct(result.Product, workContext);
             }
+
             return result;
         }
 

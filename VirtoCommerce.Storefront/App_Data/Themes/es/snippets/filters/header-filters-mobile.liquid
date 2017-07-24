@@ -117,10 +117,14 @@
             <div class="col-md-3 clearfix">
                <button id="send-main-filter-mobile" class="wpresidence_button">
                {% comment %}<span id="no-filter">{{ 'filter.action' | t }}</span>{% endcomment %}
-               <span id="count-objects">
-               {{ 'filter.show-result' | t }} 
-               <span id="result-count">{%- include 'product-count' -%}</span>
-               </span>
+                <span id="count-objects">
+                {{ 'filter.show-result' | t }} 
+                {% if template contains 'search' %}
+					<span id="result-count">{{ products_total_count | num_ending: " объект":" объекта": " объектов" }}</span>
+                {% else %}
+                    <span id="result-count">{%- include 'product-count' -%}</span>
+                {% endif %}
+                </span>
                </button>
             </div>
          </div>

@@ -10,8 +10,16 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     {
         public bool FromFilter { set; get; }
 
-        public string Keyword { set; get; }
+        public string SearchText { set; get; }
 
         public FilterSeoLinkCollections FilterSeoLinks { set; get; }
+
+        public int? ProductsTotalCount
+        {
+            get
+            {
+                return Products?.TotalItemCount;
+            }
+        }
     }
 }

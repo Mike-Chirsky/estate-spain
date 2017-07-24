@@ -54,7 +54,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             _language = wc.CurrentLanguage;
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
-            // Load region and regio + estate type
+            // Load region + estate type
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
             // Load region + tags
             await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
