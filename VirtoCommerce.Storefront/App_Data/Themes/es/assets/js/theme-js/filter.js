@@ -1,4 +1,6 @@
 ﻿var ignoredKeyCodes = [9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 91, 92, 93, 106, 107, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145, 186, 187, 190, 191, 192, 219, 220, 221];
+var loadResultObj = null;
+var loadLocationObj = null;
 // init document
 $(document).ready(function () {
     // expand addition filter if open on preview page
@@ -43,6 +45,8 @@ $(document).ready(function () {
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
                 fromFilter = true;
             }
+            $("#send-main-filter").addClass("loading");
+            $("#send-main-filter-mobile").addClass("loading");
             $.ajax({
                 url: "storefrontapi/product/filter/checkurl",
                 data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
@@ -81,6 +85,8 @@ $(document).ready(function () {
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
                 fromFilter = true;
             }
+            $("#send-main-filter").addClass("loading");
+            $("#send-main-filter-mobile").addClass("loading");
             $.ajax({
                 url: "storefrontapi/product/filter/checkurl",
                 data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
@@ -490,10 +496,19 @@ function getFoundResultWithoutFill(rootElement, fillElements) {
     });
 }
 function loadFoundResult(terms, callback) {
-    $.ajax({
+    if (loadResultObj != null && loadResultObj.readyState != 4) {
+        loadResultObj.abort();
+    }
+    $("#send-main-filter").addClass("loading");
+    $("#send-main-filter-mobile").addClass("loading");
+    loadResultObj = $.ajax({
         url: "storefrontapi/product/filter",
         data: JSON.stringify(terms),
-        success: callback,
+        success: function (data) {
+            $("#send-main-filter").removeClass("loading");
+            $("#send-main-filter-mobile").removeClass("loading");
+            callback(data)
+        },
         method: "POST",
         contentType: "application/json"
     });
@@ -657,6 +672,9 @@ function setRelativeCheckbox(rootElement, value, isSet) {
 function loadSearchData(url, search, elements, listElement, rootElement) {
     if (!search || !url) {
         return;
+    }
+    if (loadLocationObj != null && loadLocationObj.readyState != 4) {
+        loadLocationObj.abort();
     }
     if (elements.length > 0) {
         elements.forEach(function (element) {
