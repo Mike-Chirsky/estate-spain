@@ -61,7 +61,7 @@
         {% if item.url == article.url %}
           {% continue %}
         {% endif %}
-        {% if countItems == 4 %}
+        {% if count_items == 4 %}
           {% break %}
         {% endif %}
         {% assign count_items = count_items | plus: 1 %}
