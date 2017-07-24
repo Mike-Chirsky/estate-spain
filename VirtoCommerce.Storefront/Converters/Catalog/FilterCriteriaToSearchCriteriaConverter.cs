@@ -119,13 +119,13 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.More))
             {
-                var tersm = criteria.More.Split(',');
-                foreach (var term in terms)
+                var tersmValue = criteria.More.Trim(',').Split(',');
+                foreach (var term in tersmValue)
                 {
                     terms.Add(new Term
                     {
                         Name = "sys_filter",
-                        Value = criteria.More.Trim()
+                        Value = term.Trim()
                     });
                 }
             }
