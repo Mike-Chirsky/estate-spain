@@ -7,7 +7,7 @@
       {% if settings.favicon_enable %}
       <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
       {% endif %}
-      <title>{{- page_title -}}</title>
+      <title>{{- page_title -}}{% if template contains 'collection' %}{{ 'collection.product-count-header' | t }}{{ collection.products_count | num_ending: " объект":" объекта": " объектов" }} {%endif%}</title>
       {% if page_description %}
         <meta name="description" content="{{ page_description }}" />
       {% endif %}

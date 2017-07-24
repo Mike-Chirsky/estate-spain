@@ -14,7 +14,10 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             if (!string.IsNullOrEmpty(context.Parent.Type))
             {
                 category.Type = "type_add";
-                FillFromException(context, category);
+                if (!FillFromException(context, category))
+                {
+                    return null;
+                }
                 category.RegionUrl = context.Parent.RegionUrl;
                 category.CityUrl = context.Parent.CityUrl;
                 category.RegionName = context.Parent.RegionName;

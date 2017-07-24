@@ -143,7 +143,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                 if (result.Items != null)
                 {
 
-                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p, listExceptions));
+                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p, listExceptions)).Where(x => x != null);
                     if (parent.Categories != null)
                         categories.AddRange(parent.Categories);
                     categories.AddRange(children);
@@ -172,7 +172,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).ToList();
+                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).Where(x => x != null).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
@@ -226,6 +226,11 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["RegionsEstatetypesConditionsCategoryId"];
                 case "/Regions/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["RegionsEstatetypesTagsCategoryId"];
+                case "/Conditions/Estatetypes":
+                    return ConfigurationManager.AppSettings["ConditionEstatetypesCategoryId"];
+                case "/Conditions/Tags":
+                    return ConfigurationManager.AppSettings["ConditionTagsCategoryId"];
+
             }
             return string.Empty;
         }
@@ -246,6 +251,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     ProductType = productType,
                     ListExceptions = listExceptions
                 }, product);
+            if (category == null)
+                return null;
             var seoPath = category.SeoPath.Trim('/');
             lock (_seoCategoryDict)
             {

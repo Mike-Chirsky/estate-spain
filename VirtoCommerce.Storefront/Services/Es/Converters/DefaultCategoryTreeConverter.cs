@@ -71,7 +71,11 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             return product.Name;
         }
 
-        protected virtual void FillFromException(ConverterContext context, Category category)
+        /// <summary>
+        /// Fill data from exceptions
+        /// </summary>
+        /// <returns>If return false then not exist in MasterCatalog</returns>
+        protected virtual bool FillFromException(ConverterContext context, Category category)
         {
             if (context.ListExceptions != null)
             {
@@ -89,12 +93,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 }
                 else
                 {
-                    category.Description = string.Empty;
-                    category.Descriptions = new Model.EditorialReview[0];
-                    category.Properties = new CatalogProperty[0];
-                    category.Images = new Model.Image[0];
-                    category.SeoInfo.MetaDescription = string.Empty;
-                    category.SeoInfo.Title = string.Empty;
+                    return false;
                 }
             }
             var par = context.Parent;
@@ -110,7 +109,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
                 }
                 par = par.Parent;
             }
-            
+            return true;
         }
 
         protected virtual void CustomSeoCategory(ConverterContext context, Category category)

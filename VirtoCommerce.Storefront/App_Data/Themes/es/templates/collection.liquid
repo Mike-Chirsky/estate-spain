@@ -21,7 +21,7 @@
 
 {%- if from_filter == false and (collection.type == 'region' or collection.type == 'type' or collection.type == 'other_type' or collection.type == 'tag' or collection.type == 'condition') -%}
   <div>
-    <h2 class="header-name margin-top-25 padding0-15">{{- collection.h2_features -}}</h2>
+    <h2 class="header-name margin-top-25 padding0-15">{% if collection.h2_features %}{{- collection.h2_features -}}{%else%}{{'collection.header_features' | t }}{% endif %}</h2>
   </div>
   {% case collection.type %}
     {% when 'other_type' %}

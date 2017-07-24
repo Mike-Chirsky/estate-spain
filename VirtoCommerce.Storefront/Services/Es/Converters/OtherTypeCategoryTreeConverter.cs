@@ -14,7 +14,10 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             if (!string.IsNullOrEmpty(context.Parent.Type))
             {
                 category.Type = "other_type_add";
-                FillFromException(context, category);
+                if (!FillFromException(context, category))
+                {
+                    return null;
+                }
                 category.RegionUrl = context.Parent.RegionUrl;
                 category.CityUrl = context.Parent.CityUrl;
                 category.RegionName = context.Parent.RegionName;
@@ -38,7 +41,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             }
             if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
             {
-                category.SeoInfo.MetaDescription = $"&#127969; {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге представлено {0}";
+                category.SeoInfo.MetaDescription = $"&#127969; {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!";
             }
         }
     }

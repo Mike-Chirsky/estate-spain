@@ -738,7 +738,9 @@
         "advantages": "Преимущества",
         "approach":"Кому подойдет",
         "coast": "Стоимость",
-        "detail": " Подробно"
+        "detail": " Подробно",
+        "header_features":"Лучшие предложения этого месяца",
+        "product-count-header": ". В нашем каталоге предсталвено "
     },
     "filter":{
         "min-price":"Цена от",
