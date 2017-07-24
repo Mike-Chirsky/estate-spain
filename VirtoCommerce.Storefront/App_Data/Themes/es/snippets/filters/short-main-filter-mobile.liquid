@@ -12,7 +12,11 @@
                      {{ 'filter.category' | t }}
                      <span class="caret  caret_filter "></span>
                   </div>
-                  <input data-ignore type="hidden" data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}" property-name="estatetype" id="estate-type-value" value="Квартиры и апартаменты">
+                  <input data-ignore type="hidden"
+                         data-seo-path="{{ collection.current_estate_type_filter.value | filter_seo_link: 'estatetype': filter_seo_links}}"
+                         property-name="estatetype"
+                         id="estate-type-value" 
+                         value="">
                   <ul class="dropdown-menu filter_menu" data-default-value="{{ 'filter.category' | t }}">
 					<li data-value="*" value="{{ 'filter.category-any' | t }}">{{ 'filter.category-any' | t }}</li>
 					{% for item in collection.estate_type_filter %}
