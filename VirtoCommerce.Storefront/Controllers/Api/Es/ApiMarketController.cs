@@ -87,7 +87,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         private void SearchProduct(string type, string id, int page, int pageSize)
         {
-            if (type != "type")
+            if (type != "type" && type != "main")
             {
                 WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
                         new Term
@@ -97,7 +97,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
                         }
                     };
             }
-            else
+            else if (type == "type")
             {
                 WorkContext.CurrentProductSearchCriteria.MutableTerms = new List<Term> {
                         new Term
