@@ -378,6 +378,12 @@
           </div>
         </div>
       </div>
+      {% if template contains 'article' %}
+      {{ '/styles/tilda-blocks-2.12.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/tilda-grid-3.0.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/tilda-zoom-1.0.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/tooltipster.css' | asset_url | stylesheet_tag }}
+      {% endif %}
       {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
    </body>
 </html>

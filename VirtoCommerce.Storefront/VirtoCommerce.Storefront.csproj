@@ -531,6 +531,10 @@
     <Content Include="App_Data\Themes\es\assets\styles\orange-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\static.css" />
     <Content Include="App_Data\Themes\es\assets\styles\style.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\tilda-blocks-2.12.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\tilda-grid-3.0.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\tilda-zoom-1.0.css" />
+    <Content Include="App_Data\Themes\es\assets\styles\tooltipster.css" />
     <Content Include="App_Data\Themes\es\snippets\footer\contact-us.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\about.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\region.liquid" />
