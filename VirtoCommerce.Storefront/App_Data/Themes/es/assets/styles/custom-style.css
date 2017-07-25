@@ -1724,3 +1724,11 @@ blockquote
     text-align: center;
     font-size: 18px;
 }
+a.caret.caret_filter.active:after
+{
+    color: #FF7F27;
+}
+.dropdown.listing_filter_select.active
+{
+    color: #FF7F27;
+}
