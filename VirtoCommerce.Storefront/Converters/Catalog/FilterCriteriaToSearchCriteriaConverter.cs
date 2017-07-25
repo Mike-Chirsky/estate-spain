@@ -139,7 +139,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             terms.Add(new Term {
                 Name = "available",
-                Value = "Неизвестно, Доступно"
+                Value = "Неизвестно,Доступно"
             });
             searchCriteria.Terms = terms.ToArray();
         }
