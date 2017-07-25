@@ -21,7 +21,7 @@
         {%- if blog.handle != 'blog' -%}
             {%- continue -%}
         {%- endif -%}
-        {%- for article in blog.article -%}
+        {%- for article in blog.articles -%}
             {%- if forloop.index > 2 -%}
                 {%- break -%}
             {%- endif -%}
@@ -31,7 +31,7 @@
                         <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
                             <div class="textwidget">
                                 <div class="megamenu-demos">
-                                    <a href="{{article.handle}}"><img src="{{ article.image_url | absolute_url }}" alt="{{article.title}}">
+                                    <a href="{{article.handle}}"><img src="{{ article.image_url | absolute_url }}" alt="{{article.title}}"/>
                                     </a>
                                 </div>
                                 <a href="{{ article.handle }}">{{ article.title }}</a> 
