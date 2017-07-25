@@ -267,7 +267,7 @@
                     <div class="item">
                     {% endif %}
                         <a href="{{ image.src }}">
-                            <img src="{{ image.src }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                            <img src="{{ image.src | img_url: 'preview' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
                         </a>
                     </div>
                     {% endfor %}
