@@ -24,7 +24,6 @@
       {{ '/styles/static.css' | asset_url | stylesheet_tag }}
       {{ '/styles/mobile.css' | asset_url | stylesheet_tag }}
       {{ '/styles/orange-theme.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
@@ -379,5 +378,6 @@
           </div>
         </div>
       </div>
+      {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
    </body>
 </html>

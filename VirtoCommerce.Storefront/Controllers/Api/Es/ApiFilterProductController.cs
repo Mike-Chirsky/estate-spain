@@ -112,6 +112,10 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
         private string CreateSearchUrl(ProductFilterCriteria criteria)
         {
+            if (criteria == null)
+            {
+                return "search";
+            }
             return $"search?{CreateParams(new string[0], criteria)}";
         }
 
