@@ -13,13 +13,5 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         public string SearchText { set; get; }
 
         public FilterSeoLinkCollections FilterSeoLinks { set; get; }
-
-        public int? ProductsTotalCount
-        {
-            get
-            {
-                return Products?.TotalItemCount;
-            }
-        }
     }
 }

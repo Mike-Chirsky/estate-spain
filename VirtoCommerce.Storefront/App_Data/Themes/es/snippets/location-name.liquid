@@ -7,6 +7,6 @@
     {%- endif -%}
     {{- collection.region_name -}}
 {%- endif -%}
-{%- if search != null and collection.region_name == null and collection.city_name == null and template contains 'search' -%}
-    {{- search -}}
+{%- if search_text != null and collection.region_name == null and collection.city_name == null and template contains 'search' -%}
+    {{- search_text -}}
 {%- endif -%}

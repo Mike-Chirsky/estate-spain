@@ -121,6 +121,10 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
         /// <param name="input">Number</param>
         public static string NumEnding(object input, string wordOne, string wordFour, string wordFive, bool addNumber = true)
         {
+            if (input == null)
+            {
+                return string.Empty;
+            }
             if (addNumber)
             {
                 if (Regex.Match(input.ToString(), "1\\d$").Success)

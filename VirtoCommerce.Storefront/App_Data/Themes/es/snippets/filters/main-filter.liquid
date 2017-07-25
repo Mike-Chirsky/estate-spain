@@ -124,7 +124,9 @@
 				<span id="count-objects">
 					{{ 'filter.show-result' | t }}
 					{% if template contains 'search' %}
-					<span id="result-count">{{ products_total_count | num_ending: " объект":" объекта": " объектов" }}</span>
+					{% paginate products by 36 %}
+					<span id="result-count">{{ paginate.items | num_ending: " объект":" объекта": " объектов" }}</span>
+					{% endpaginate %}
 					{% else %}
 					<span id="result-count">{%- include 'product-count' -%}</span>
 					{% endif %}

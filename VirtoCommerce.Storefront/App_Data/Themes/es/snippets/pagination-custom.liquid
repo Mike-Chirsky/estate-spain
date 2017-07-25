@@ -4,12 +4,12 @@
       <li><a href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}">&larr;</a></li>
     {% endif %}
     {% for part in paginate.custom_parts %}
-      
       {% if part.is_link %}
         <li>
           <a href="{{ part.url }}" title="">{{ part.title }}</a>
         </li>
       {% else %}
+      
         {% if part.title == paginate.current_page %}
           <li class="active"><span>{{ part.title }}</span></li>
         {% else %}
@@ -34,23 +34,4 @@
       <li><a href="{{ paginate.next.url }}" title="{{ paginate.next.title }}">&rarr;</a></li>
     {% endif %}
   </ul>
-  <!-- <div class="social">
-    <ul>
-      <li>
-        <a href="#"><i class="fa fa-odnoklassniki"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-vk"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-google-plus"></i></a>
-      </li>
-    </ul>
-  </div> -->
 </div>

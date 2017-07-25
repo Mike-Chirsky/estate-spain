@@ -49,6 +49,10 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                     count = Pages - startIndex;
                     isAddLast = false;
                 }
+                if (CurrentPage == 1)
+                {
+                    startIndex = 0;
+                }
                 listParts.AddRange(Parts.GetRange(startIndex, count));
                 if (startIndex + count < Pages - 1)
                 {
