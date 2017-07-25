@@ -239,16 +239,21 @@ function getTerms(rootElement) {
         terms["ls"] = value;
     }
     element = $(rootElement + " #tag-value");
-    value = getSeoName(element.val(), "tag");
-    if (value != "" && value != "*" && value != undefined) {
-        terms["tag"] = value;
+    if (element.is(":checked")) {
+        value = getSeoName(element.val(), "tag");
+        if (value != "" && value != "*" && value != undefined) {
+            terms["tag"] = value;
+        }
     }
     if ($(rootElement + " #filter-checks input:checked").length > 0) {
         var sysfilterValue = "";
         $.each($(rootElement + " #filter-checks input:checked"), function (index, item) {
-            sysfilterValue += $(item).val() + ",";
+            if ($(item).attr('data-ignore') === undefined || $(item).attr('data-ignore') === null || $(item).attr('data-ignore') === false)
+                sysfilterValue += $(item).val() + ",";
         });
-        terms["more"] = sysfilterValue;
+        if (sysfilterValue !== "") {
+            terms["more"] = sysfilterValue;
+        }
     }
     return terms;
 }

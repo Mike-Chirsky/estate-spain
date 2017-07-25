@@ -125,6 +125,14 @@
                 {{ 'filter.furniture' | t }}
             </label>
         </div>
+        {% if collection.current_tag_filter %}
+        <div class="col-md-2">
+            <label>
+                <input type="checkbox" data-ignore="true" id="tag-value" property-name="tag" checked value="{{ collection.current_tag_filter.value}}">
+                {{ collection.current_tag_filter.value}}
+            </label>
+        </div>
+        {% endif %}
     </div>
    </div>
    {% comment %}
