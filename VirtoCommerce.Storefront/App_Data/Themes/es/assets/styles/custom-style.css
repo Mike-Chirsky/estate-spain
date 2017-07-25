@@ -256,10 +256,6 @@
     width: 400px;
 }
 
-#carousel-full > div > div.item.active > a > img
-{
-    max-height: 515px;
-}
 
 /*.pagination-custom
 {
