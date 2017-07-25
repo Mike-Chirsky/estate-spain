@@ -48,58 +48,64 @@ namespace VirtoCommerce.Storefront.Services.Es
                 _lockObject.Release();
                 return _loadedCategory;
             }
-            _loadedCategory = new Category();
-            // init data for product converter
-            var wc = _workContextFactory();
-            _language = wc.CurrentLanguage;
-            _currency = wc.CurrentCurrency;
-            _store = wc.CurrentStore;
-            // Load region + estate type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
-            // Load region + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
-            // Load region + condition
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
-            // Load region + estate type + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, TagsKey)));
-            // Load region + estate type + condition
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey)));
+            try
+            {
+                _loadedCategory = new Category();
+                // init data for product converter
+                var wc = _workContextFactory();
+                _language = wc.CurrentLanguage;
+                _currency = wc.CurrentCurrency;
+                _store = wc.CurrentStore;
+                // Load region + estate type
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
+                // Load region + tags
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+                // Load region + condition
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
+                // Load region + estate type + tags
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, TagsKey)));
+                // Load region + estate type + condition
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey)));
 
-            
 
-            // Load cities + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
 
-            // load cities + condition
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
-            
-            // load cities + estate type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey)));
-            
-            // Load cities + estate type + conditions
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result,ConditionKey))));
+                // Load cities + tags
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
 
-            // Load cities + estate type + tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
+                // load cities + condition
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
 
-            // Step 2. Load Estatetypes
-            await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
+                // load cities + estate type
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey)));
 
-            // estatetype + tag
-            await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+                // Load cities + estate type + conditions
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, ConditionKey))));
 
-            // Step 3. Load Tags
-            await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
+                // Load cities + estate type + tags
+                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
 
-            // Step 4. Load Conditions
-            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey);
-            // Condition + type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t=>LoadChildrenFromCategory(t.Result,EstateTypeKey));
-            // Condition + tag
-            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
-            // Step 5. Load Other type
-            await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey);
-            _lockObject.Release();
+                // Step 2. Load Estatetypes
+                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
+
+                // estatetype + tag
+                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+
+                // Step 3. Load Tags
+                await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
+
+                // Step 4. Load Conditions
+                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey);
+                // Condition + type
+                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
+                // Condition + tag
+                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+                // Step 5. Load Other type
+                await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey);
+            }
+            finally
+            {
+                _lockObject.Release();
+            }
             return _loadedCategory;
         }
 
@@ -305,6 +311,14 @@ namespace VirtoCommerce.Storefront.Services.Es
         public Dictionary<string, Category> GetSeoDict()
         {
             return _seoCategoryDict;
+        }
+
+        public async Task ClearTree()
+        {
+            await _lockObject.WaitAsync();
+            _seoCategoryDict = new Dictionary<string, Category>();
+            _loadedCategory = null;
+            _lockObject.Release();
         }
     }
 }

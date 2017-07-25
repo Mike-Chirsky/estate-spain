@@ -122,6 +122,11 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                     });
                 }
             }
+            workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+            {
+                Name = "available",
+                Value = "Неизвестно, Доступно"
+            });
             return new SeoEntity
             {
                 ObjectType = "Category",
