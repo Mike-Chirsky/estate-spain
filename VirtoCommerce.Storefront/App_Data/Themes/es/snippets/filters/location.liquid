@@ -3,6 +3,7 @@
     <input  data-ignore
             class="{%- if collection.current_region_filter or collection.current_city_filter -%}selected{%- endif -%}" 
             type="text" 
+            autocomplete="off"
             placeholder="{{'filter.location-placeholder' | t }}"
             id="location-value"
             value="{%- include 'location-name' -%}">

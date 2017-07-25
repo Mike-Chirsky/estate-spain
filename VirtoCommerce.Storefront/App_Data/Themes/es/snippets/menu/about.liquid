@@ -12,4 +12,29 @@
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/o-kompanii#press">Для прессы</a></li>
         </ul>
     </li>
+    {%- for blog in blogs -%}
+        {%- if blog.handle != 'news' -%}
+            {%- continue -%}
+        {%- endif -%}
+        {%- for article in blog.articles -%}
+            {%- if article.handle == 'news/nedvizhimost-v-ispanii-spantao' -%}
+            <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
+                <div class="megamenu-widgets-container">
+                    <ul>
+                        <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
+                            <div class="textwidget">
+                                <div class="megamenu-demos">
+                                    <a href="{{article.handle}}"><img src="{{ article.image_url | absolute_url }}" alt="{{article.title}}"/>
+                                    </a>
+                                </div>
+                                <a href="{{ article.handle }}">{{ article.title }}</a> 
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            {%- break -%}
+            {%- endif -%}
+        {%- endfor -%}   
+    {% endfor %}
 </ul>

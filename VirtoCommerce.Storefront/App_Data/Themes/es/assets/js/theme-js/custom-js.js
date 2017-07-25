@@ -259,4 +259,7 @@ jQuery(document).ready(function () {
         $("#sortByPrice").parent().addClass("active");
         $("#sortByPrice").children().children(".bottom").addClass("active");
     }
+    if (window.location.href.indexOf("#")) {
+        setTimeout(function () { slideToBlock("#" + window.location.href.split("#")[1]) }, 300);
+    }
 });
