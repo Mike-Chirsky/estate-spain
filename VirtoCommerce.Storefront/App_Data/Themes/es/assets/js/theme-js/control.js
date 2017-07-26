@@ -1849,9 +1849,9 @@ jQuery(document).ready(function ($) {
      $('.backtop').click(function(event){
          event.preventDefault();
   
-         $('body,html').animate({
-                scrollTop: 0
-          }, "slow");
+         $('html,body').animate({
+             scrollTop: 0
+         }, 500);
 
      })    
          
