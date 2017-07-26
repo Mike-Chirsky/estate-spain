@@ -2,33 +2,33 @@
     <ul>
         <li>
             <div class="dropdown listing_filter_select">
-                <div data-toggle="dropdown" id="sortByPrice" class="filter_menu_trigger" aria-expanded="false"> 
-                    {{ 'filter.price2' | t }} 
+                <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
+                    <span id="sortByPrice">{{ 'filter.price2' | t }}</span>
                     <span>
-                        <a class="caret caret_filter top"></a>
-                        <a class="caret caret_filter bottom"></a>
+                        <a class="caret caret_filter top" id="sortByPriceAsc"></a>
+                        <a class="caret caret_filter bottom" id="sortByPriceDesc"></a>
                     </span>
                 </div>
             </div>
         </li>
         <li>
             <div class="dropdown listing_filter_select">
-                <div data-toggle="dropdown" id="sortBySquare" class="filter_menu_trigger" aria-expanded="false"> 
-                    {{ 'filter.meters' | t }} 
+                <div data-toggle="dropdown"  class="filter_menu_trigger" aria-expanded="false"> 
+                    <span id="sortBySquare">{{ 'filter.meters' | t }}</span>
                     <span>
-                        <a class="caret caret_filter top"></a>
-                        <a class="caret caret_filter bottom"></a>
+                        <a class="caret caret_filter top" id="sortBySquareAsc"></a>
+                        <a class="caret caret_filter bottom" id="sortBySquareDesc"></a>
                     </span>
                 </div>
             </div>
         </li>
         <li>
             <div class="dropdown listing_filter_select order_filter">
-                <div data-toggle="dropdown" id="sortByDate" class="filter_menu_trigger" aria-expanded="false"> 
-                    {{ 'filter.is-new' | t }}
+                <div data-toggle="dropdown" class="filter_menu_trigger" aria-expanded="false"> 
+                    <span id="sortByDate">{{ 'filter.is-new' | t }}</span>
                     <span>
-                        <a class="caret caret_filter top"></a>
-                        <a class="caret caret_filter bottom"></a>
+                        <a class="caret caret_filter top" id="sortByDateAsc"></a>
+                        <a class="caret caret_filter bottom" id="sortByDateDesc"></a>
                     </span>
                 </div>
             </div>

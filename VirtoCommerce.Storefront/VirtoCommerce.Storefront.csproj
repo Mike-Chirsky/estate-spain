@@ -1262,6 +1262,7 @@
     <Content Include="Views\Common\NoStore.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="ServerMaintenance.aspx" />
+    <Content Include="rewriteMaps.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

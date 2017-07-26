@@ -153,7 +153,7 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
     "use strict";
     /* sorting controls*/
-
+    /* sort by price */
     jQuery("#sortByPrice").click(function () {
         if (window.location.href.indexOf("price-ascending")!== -1) {
             sortBy("price-descending");
@@ -162,7 +162,17 @@ jQuery(document).ready(function ($) {
             sortBy("price-ascending");
         }
     });
-
+    jQuery("#sortByPriceDesc").click(function () {
+        if (window.location.href.indexOf("price-descending") === -1) {
+            sortBy("price-descending");
+        }
+    });
+    jQuery("#sortByPriceAsc").click(function () {
+        if (window.location.href.indexOf("price-ascending") === -1) {
+            sortBy("price-ascending");
+        }
+    });
+    /* sort by square */
     jQuery("#sortBySquare").click(function () {
         if (window.location.href.indexOf("propertysquare-ascending") !== -1) {
             sortBy("propertysquare-descending");
@@ -172,6 +182,17 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    jQuery("#sortBySquareDesc").click(function () {
+        if (window.location.href.indexOf("propertysquare-descending") === -1) {
+            sortBy("propertysquare-descending");
+        }
+    });
+    jQuery("#sortBySquareAsc").click(function () {
+        if (window.location.href.indexOf("propertysquare-ascending") === -1) {
+            sortBy("propertysquare-ascending");
+        }
+    });
+    /* sort by date*/
     jQuery("#sortByDate").click(function () {
         if (window.location.href.indexOf("created-ascending") !== -1) {
             sortBy("created-descending");
@@ -180,7 +201,16 @@ jQuery(document).ready(function ($) {
             sortBy("created-ascending");
         }
     });
-
+    jQuery("#sortByDateAsc").click(function () {
+        if (window.location.href.indexOf("created-ascending") === -1) {
+            sortBy("created-descending");
+        }
+    });
+    jQuery("#sortByDateDesc").click(function () {
+        if (window.location.href.indexOf("created-descending") === -1) {
+            sortBy("created-descending");
+        }
+    });
     
 
     var screen_width,screen_height,map_tab;

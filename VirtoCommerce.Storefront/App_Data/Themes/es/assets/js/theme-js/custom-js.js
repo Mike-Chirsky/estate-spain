@@ -234,30 +234,30 @@ jQuery(document).ready(function () {
     // set active sort by square
     if (window.location.href.indexOf("sort_by=propertysquare-ascending") > -1)
     {
-        $("#sortBySquare").parent().addClass("active");
-        $("#sortBySquare").children().children(".top").addClass("active");
+        $("#sortBySquare").parent().parent().addClass("active");
+        $("#sortBySquareAsc").addClass("active");
     }
     if (window.location.href.indexOf("sort_by=propertysquare-descending") > -1) {
-        $("#sortBySquare").parent().addClass("open");
-        $("#sortBySquare").children().children(".bottom").addClass("active");
+        $("#sortBySquare").parent().parent().addClass("active");
+        $("#sortBySquareDesc").addClass("active");
     }
     // set active sort by date
     if (window.location.href.indexOf("sort_by=created-ascending") > -1) {
-        $("#sortByDate").parent().addClass("active");
-        $("#sortByDate").children().children(".top").addClass("active");
+        $("#sortByDate").parent().parent().addClass("active");
+        $("#sortByDateAsc").addClass("active");
     }
     if (window.location.href.indexOf("sort_by=created-descending") > -1) {
-        $("#sortByDate").parent().addClass("active");
-        $("#sortByDate").children().children(".bottom").addClass("active");
+        $("#sortByDate").parent().parent().addClass("active");
+        $("#sortByDateDesc").addClass("active");
     }
     // set active sort by price
     if (window.location.href.indexOf("sort_by=price-ascending") > -1) {
-        $("#sortByPrice").parent().addClass("active");
-        $("#sortByPrice").children().children(".top").addClass("active");
+        $("#sortByPrice").parent().parent().addClass("active");
+        $("#sortByPriceAsc").addClass("active");
     }
     if (window.location.href.indexOf("sort_by=price-descending") > -1) {
-        $("#sortByPrice").parent().addClass("active");
-        $("#sortByPrice").children().children(".bottom").addClass("active");
+        $("#sortByPrice").parent().parent().addClass("active");
+        $("#sortByPriceDesc").addClass("active");
     }
     if (window.location.href.indexOf("#")) {
         setTimeout(function () { slideToBlock("#" + window.location.href.split("#")[1]) }, 300);
