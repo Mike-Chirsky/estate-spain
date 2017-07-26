@@ -793,7 +793,11 @@ function getSearchPath(rootElement) {
     }
 }
 
-function initValue(){
+function initValue() {
+    if (!initFilterValueRange)
+    {
+        return;
+    }
     var el = $("#main-filter-controls .price-cmb ul");
     setCurrentValueDd(el, initFilterValueRange.price);
     el = $("#main-filter-controls-mobile .price-cmb ul");
