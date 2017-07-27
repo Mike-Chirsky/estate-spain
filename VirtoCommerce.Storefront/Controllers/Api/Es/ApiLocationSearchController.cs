@@ -37,7 +37,8 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             }))?.Products.OrderBy(x => x.Name).ToList();
             WorkContext.CurrentStore = oldCurrentStore;
             // load associations 
-            var associations = await _catalogSearchService.GetProductsAsync(products.SelectMany(x => x.Associations.OfType<ProductAssociation>().Select(s => s.ProductId)).ToArray(), ItemResponseGroup.ItemSmall);
+            // TODO: Uncomment if association not contains object
+            /*var associations = await _catalogSearchService.GetProductsAsync(products.SelectMany(x => x.Associations.OfType<ProductAssociation>().Select(s => s.ProductId)).Distinct().ToArray(), ItemResponseGroup.ItemSmall);
             foreach (var association in products.SelectMany(x => x.Associations.OfType<ProductAssociation>()))
             {
                 var foundAssocaitionProd = associations.FirstOrDefault(x => x.Id == association.ProductId);
@@ -45,7 +46,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
                 {
                     association.Product = foundAssocaitionProd;
                 }
-            }
+            }*/
             var result = new LocationSearchResult();
             result.Items.AddRange(products.Select(x => x.ToLocationItem()));
             return Json(result);

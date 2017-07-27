@@ -14733,7 +14733,7 @@ select.dsidx-resp-select {
 .ui-widget-content .ui-state-focus, 
 .ui-widget-header .ui-state-focus {
     border: 1px solid #fbcb09;
-    background-color: #e6e6e6!important
+    background-color: #e6e6e6!important;
     background-image: none;
     font-weight: bold;
     color: #c77405;
