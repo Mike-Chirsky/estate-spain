@@ -226,6 +226,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["CitiesTagsCategoryId"];
                 case "/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["EstatetypesTagsCategoryId"];
+                case "/Estatetypes/Conditions":
+                    return ConfigurationManager.AppSettings["ConditionEstatetypesCategoryId"];
                 case "/Regions/Estatetypes":
                     return ConfigurationManager.AppSettings["RegionEstatetypeCategoryId"];
                 case "/Regions/Tags":
@@ -236,8 +238,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["RegionsEstatetypesConditionsCategoryId"];
                 case "/Regions/Estatetypes/Tags":
                     return ConfigurationManager.AppSettings["RegionsEstatetypesTagsCategoryId"];
-                case "/Conditions/Estatetypes":
-                    return ConfigurationManager.AppSettings["ConditionEstatetypesCategoryId"];
+                
                 case "/Conditions/Tags":
                     return ConfigurationManager.AppSettings["ConditionTagsCategoryId"];
 
