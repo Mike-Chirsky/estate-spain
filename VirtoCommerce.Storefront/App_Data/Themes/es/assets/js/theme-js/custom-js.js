@@ -41,7 +41,7 @@ jQuery(document).ready(function () {
         setTimeout(function () {
             slideToBlock("#accordingPay");
         }, 300);
-        
+
     });
     $('#accordingMortagage').click(function () {
         setTimeout(function () {
@@ -94,9 +94,23 @@ jQuery(document).ready(function () {
             jQuery.post('storefrontapi/getresponse/subscribe', { email: jQuery("#subscribe-email").val() }, function (data) {
                 jQuery("#subscribe-spinner").hide();
                 jQuery("#subscribe-ok").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "subscribe",
+                        eventURL: window.location.href
+                    });
             }).fail(function () {
                 jQuery("#subscribe-spinner").hide();
                 jQuery("#subscribe-fail").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "subscribe-error",
+                        eventURL: window.location.href
+                    });
             });
         }
         else {
@@ -164,10 +178,24 @@ jQuery(document).ready(function () {
             success: function (data) {
                 jQuery("#callback-spinner").hide();
                 jQuery("#callback-succes").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "callback",
+                        eventURL: window.location.href
+                    });
             },
             error: function (err) {
                 jQuery("#callback-spinner").hide();
                 jQuery("#callback-fail").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "callback-error",
+                        eventURL: window.location.href
+                    });
             },
             contentType: "application/json",
             dataType: 'json'
@@ -185,7 +213,7 @@ jQuery(document).ready(function () {
     });
     jQuery("#contact-us-form-footer-submit").click(function () {
         sendContactUsForm("-footer");
-    })
+    });
 
     function sendContactUsForm(prefix) {
         if (!prefix)
@@ -221,10 +249,24 @@ jQuery(document).ready(function () {
             success: function (data) {
                 jQuery("#contact-us-form-spinner" + prefix).hide();
                 jQuery("#contact-us-form-succes" + prefix).show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "contact-us" + prefix,
+                        eventURL: window.location.href
+                    });
             },
             error: function (err) {
                 jQuery("#contact-us-form-spinner" + prefix).hide();
                 jQuery("#contact-us-form-fail" + prefix).show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "contact-us" +prefix + "-error",
+                        eventURL: window.location.href
+                    });
             },
             contentType: "application/json",
             dataType: 'json'
