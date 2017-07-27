@@ -89,14 +89,15 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 // estatetype + tag
                 await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
+                // estatetype + Condition
+                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
 
                 // Step 3. Load Tags
                 await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
 
                 // Step 4. Load Conditions
                 await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey);
-                // Condition + type
-                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
+                
                 // Condition + tag
                 await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
                 // Step 5. Load Other type
