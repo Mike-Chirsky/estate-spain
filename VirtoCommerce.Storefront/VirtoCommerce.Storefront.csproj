@@ -273,6 +273,7 @@
   <ItemGroup>
     <Content Include="App_Data\cms-content\Pages\demo\assets\news\images\dijest_news.jpg" />
     <Content Include="App_Data\cms-content\Pages\demo\assets\reviews\images\first.jpg" />
+    <None Include="App_Data\cms-content\Pages\demo\user-personal-data.md" />
     <Content Include="App_Data\countries.json" />
     <Content Include="App_Data\Themes\es\assets\css-images\apartmentsrentals.png" />
     <Content Include="App_Data\Themes\es\assets\css-images\apartmentsrentals_2x.png" />
@@ -608,6 +609,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Themes\es\snippets\filters\filter-seo-data.liquid" />
+    <Content Include="App_Data\cms-content\Pages\demo\user-privacy.md" />
+    <Content Include="App_Data\Themes\es\snippets\static\user-personal-data.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\static\user-privace.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

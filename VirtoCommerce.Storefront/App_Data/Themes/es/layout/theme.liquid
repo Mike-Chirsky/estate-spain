@@ -311,7 +311,7 @@
                         </li>
                         <li class="subscribe-footer">
                             <p>
-                                {{ 'subscribe.license' | t }}
+                                <a href="/user-personal-data">{{ 'subscribe.license' | t }}</a>
                             </p>
                         </li>
                         <li class="subscribe-footer">
@@ -329,7 +329,7 @@
             </div>
             <div class="sub_footer clearfix">
                 <div class="col-md-4 text-center">2017 &copy; | Estate Spain</div>
-                <div class="col-md-4 text-center"><a href="">{{ 'footer.user-accept' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="">{{ 'footer.user-personal' | t }}</a></div>
+                <div class="col-md-4 text-center"><a href="/user-privace">{{ 'footer.user-accept' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="/user-personal-data">{{ 'footer.user-personal' | t }}</a></div>
                 <div class="col-md-4"><a href="/partners">{{ 'footer.parthners' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="/o-kompanii">{{ 'footer.about' | t }}</a></div>
             </div>
          </footer>
@@ -369,7 +369,7 @@
                   {{- 'request-form.message' | t -}}
                   {%- endif -%}
                   </textarea>
-                  <span class="license light-text"> {{ 'request-form.license' | t }} </span>
+                  <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
                   <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
               </div>
           </div>
