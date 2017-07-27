@@ -1732,3 +1732,13 @@ a.caret.caret_filter.active:after
 {
     color: #FF7F27;
 }
+ul.user-terms-list
+{
+    list-style: none;
+    line-height: 1.5;
+    margin-left: 0;
+}
+.user-terms-list li
+{
+    padding-top: 15px;
+}

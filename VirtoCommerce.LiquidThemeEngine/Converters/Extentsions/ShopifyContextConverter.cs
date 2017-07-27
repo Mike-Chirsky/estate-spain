@@ -37,9 +37,19 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters.Extentsions
         private void SetBreadcrumbToProduct(Product product, WorkContext workContext)
         {
             product.Breadcrumb = new List<KeyValue<string, string>>();
-            var region = AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["region"].FirstOrDefault(x => x.Item1 == product.Region));
-            var city = AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["city"].FirstOrDefault(x => x.Item1 == product.City));
-            AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["estatetype"].FirstOrDefault(x => x.Item1 == product.Estatetype), city?.Value ?? "");
+            if (workContext.FilterSeoLinks.ContainsKey("region"))
+            {
+                AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["region"].FirstOrDefault(x => x.Item1 == product.Region));
+            }
+            KeyValue<string, string> city = null;
+            if (workContext.FilterSeoLinks.ContainsKey("city"))
+            {
+                city = AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["city"].FirstOrDefault(x => x.Item1 == product.City));
+            }
+            if (workContext.FilterSeoLinks.ContainsKey("estatetype"))
+            {
+                AddBreadcrumb(product.Breadcrumb, workContext.FilterSeoLinks["estatetype"].FirstOrDefault(x => x.Item1 == product.Estatetype), city?.Value ?? "");
+            }
             product.Breadcrumb.Add(new KeyValue<string, string>(product.BreadcrumbTitle, ""));
         }
 
