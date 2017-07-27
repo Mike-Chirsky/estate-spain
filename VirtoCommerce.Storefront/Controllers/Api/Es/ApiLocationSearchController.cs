@@ -28,32 +28,26 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         {
             var oldCurrentStore = WorkContext.CurrentStore;
             WorkContext.CurrentStore = WorkContext.AllStores.FirstOrDefault(x => x.Id == ConfigurationManager.AppSettings["MasterStoreId"]);
-            var foundProductsCityTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
+            var products = (await _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
             {
                 Keyword = search,
-                Outline = ConfigurationManager.AppSettings["CityCategoryId"],
+                Outlines = new[] { ConfigurationManager.AppSettings["CityCategoryId"], ConfigurationManager.AppSettings["RegionCategoryId"] },
                 ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations,
-                AssociationsResponseGroup = ItemResponseGroup.ItemSmall
-            });
-            var foundProductsRegionTask = _catalogSearchService.SearchProductsAsync(new ProductSearchCriteria
-            {
-                Keyword = search,
-                Outline = ConfigurationManager.AppSettings["RegionCategoryId"],
-                ResponseGroup = ItemResponseGroup.Seo | ItemResponseGroup.ItemAssociations,
-                AssociationsResponseGroup = ItemResponseGroup.ItemSmall
-            });
-
-            await Task.WhenAll(foundProductsCityTask, foundProductsRegionTask);
+                AssociationsResponseGroup = ItemResponseGroup.ItemSmall,
+            }))?.Products.OrderBy(x => x.Name).ToList();
             WorkContext.CurrentStore = oldCurrentStore;
-            var foundProductsCity = foundProductsCityTask.Result;
-            var foundProductsRegion = foundProductsRegionTask.Result;
-
-            var products = foundProductsCity.Products.ToList();
-            products.AddRange(foundProductsRegion.Products);
-            products = products.OrderBy(x => x.Name).ToList();
+            // load associations 
+            var associations = await _catalogSearchService.GetProductsAsync(products.SelectMany(x => x.Associations.OfType<ProductAssociation>().Select(s => s.ProductId)).ToArray(), ItemResponseGroup.ItemSmall);
+            foreach (var association in products.SelectMany(x => x.Associations.OfType<ProductAssociation>()))
+            {
+                var foundAssocaitionProd = associations.FirstOrDefault(x => x.Id == association.ProductId);
+                if (foundAssocaitionProd != null)
+                {
+                    association.Product = foundAssocaitionProd;
+                }
+            }
             var result = new LocationSearchResult();
             result.Items.AddRange(products.Select(x => x.ToLocationItem()));
-            //result.Items.AddRange(GetMockData());
             return Json(result);
         }
 

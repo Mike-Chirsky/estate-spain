@@ -86,16 +86,6 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         Name = "city",
                         Value = product.Name
                     });
-                    // link to region
-                    var regionAssociationId = product.Associations.OfType<ProductAssociation>().FirstOrDefault(x => x.Type == "Regions")?.ProductId;
-                    if (!string.IsNullOrEmpty(regionAssociationId))
-                    {
-                        var regionProduct = _cacheManager.Get($"Product{regionAssociationId}", "SeoProducts", () => _catalogApiFactory()
-                                                                                                .CatalogModuleProducts.GetProductById(regionAssociationId, ItemResponseGroup.ItemAssociations.ToString())
-                                                                                                ?.ToProduct(workContext.CurrentLanguage,
-                                                                                                            workContext.CurrentCurrency,
-                                                                                                            workContext.CurrentStore));
-                    }
                 }
                 else if (product.CategoryId == ConfigurationManager.AppSettings["TagCategoryId"])
                 {

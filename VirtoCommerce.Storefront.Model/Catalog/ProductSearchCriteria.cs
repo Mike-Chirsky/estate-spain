@@ -10,6 +10,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog
     {
         public static int DefaultPageSize { get; set; } = 36;
 
+
+
         //For JSON deserialization
         public ProductSearchCriteria()
             : this(null, null)
@@ -29,7 +31,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog
 
             Parse(queryString);
         }
-
+        public IList<string> Outlines { get; set; }
         public ItemResponseGroup ResponseGroup { get; set; }
 
         public string Outline { get; set; }
@@ -61,7 +63,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog
                 PageNumber = PageNumber,
                 PageSize = PageSize,
                 ResponseGroup = ResponseGroup,
-                AssociationsResponseGroup = AssociationsResponseGroup
+                AssociationsResponseGroup = AssociationsResponseGroup,
+                Outlines = Outlines
             };
 
             if (Terms != null)

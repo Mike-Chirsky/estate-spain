@@ -227,6 +227,7 @@ namespace VirtoCommerce.Storefront.Converters
                 Skip = criteria.Start,
                 Take = criteria.PageSize,
                 ResponseGroup = ((int)criteria.ResponseGroup).ToString(),
+                Outlines = criteria.Outlines,
                 WithHidden  = false
             };
 
