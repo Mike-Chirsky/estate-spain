@@ -83,7 +83,7 @@ namespace VirtoCommerce.Storefront.Test
         {
 
             // TODO: Create mock chache manager, 
-            var service = new ESCategoryTreeService(CreateMockApiClient(), CreateWorkContext);
+            var service = new ESCategoryTreeService(CreateMockApiClient(), CreateWorkContext, null);
             return service;
         }
 

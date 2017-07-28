@@ -1742,3 +1742,14 @@ ul.user-terms-list
 {
     padding-top: 15px;
 }
+.padding0-15-normal{
+    padding: 0 15px;
+}
+
+@media(max-width:992px){
+    .padding0-15-normal{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

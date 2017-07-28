@@ -26,6 +26,7 @@ namespace VirtoCommerce.Storefront.Services.Es
         private Language _language;
         private Currency _currency;
         private Store _store;
+        private readonly ILocalCacheManager _cacheManager;
 
         private const string RegionKey = "Regions";
         private const string EstateTypeKey = "Estatetypes";
@@ -34,10 +35,12 @@ namespace VirtoCommerce.Storefront.Services.Es
         private const string OtherTypeKey = "OtherType";
         private const string CitiesKey = "Cities";
 
-        public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory)
+        public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager)
         {
             _catalogModuleApi = catalogModuleApi;
             _workContextFactory = workContextFactory;
+            _cacheManager = cacheManager;
+
         }
 
         public async Task<Category> GetTree()
@@ -71,13 +74,13 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 // Load cities + tags
                 await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
-
+                
                 // load cities + condition
                 await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
-
+                
                 // load cities + estate type
                 await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey)));
-
+                
                 // Load cities + estate type + conditions
                 await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, ConditionKey))));
 
@@ -106,6 +109,10 @@ namespace VirtoCommerce.Storefront.Services.Es
             finally
             {
                 _lockObject.Release();
+                if (_cacheManager != null)
+                {
+                    _cacheManager.Clear();
+                }
             }
             return _loadedCategory;
         }

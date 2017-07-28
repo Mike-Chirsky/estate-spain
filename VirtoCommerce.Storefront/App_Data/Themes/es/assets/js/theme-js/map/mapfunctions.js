@@ -922,19 +922,40 @@ if(  document.getElementById('gmapzoomplus') ){
            current=20;
        }
        map.setZoom(current);
+       offsetMapCenter();
     });  
 }
     
     
-if(  document.getElementById('gmapzoomminus') ){
-     google.maps.event.addDomListener(document.getElementById('gmapzoomminus'), 'click', function () {      
-       var current= parseInt( map.getZoom(),10);
-       current--;
-       if(current<0){
-           current=0;
-       }
-       map.setZoom(current);
-    });  
+if (document.getElementById('gmapzoomminus')) {
+    google.maps.event.addDomListener(document.getElementById('gmapzoomminus'), 'click', function () {
+        var current = parseInt(map.getZoom(), 10);
+        current--;
+        if (current < 0) {
+            current = 0;
+        }
+        map.setZoom(current);
+
+        offsetMapCenter();
+
+    });
+}
+
+function offsetMapCenter()
+{
+    var markerPoint = map.getProjection().fromLatLngToPoint(
+        new google.maps.LatLng(gmarkers[0].position.lat(), gmarkers[0].position.lng())
+    );
+    offsetX = 0;
+    offsetY = -150;
+    var offsetPoint = new google.maps.Point(
+        offsetX / Math.pow(2, map.getZoom()),
+        offsetY / Math.pow(2, map.getZoom())
+    );
+    map.setCenter(map.getProjection().fromPointToLatLng(new google.maps.Point(
+        markerPoint.x - offsetPoint.x,
+        markerPoint.y + offsetPoint.y
+    )));
 }
         
     

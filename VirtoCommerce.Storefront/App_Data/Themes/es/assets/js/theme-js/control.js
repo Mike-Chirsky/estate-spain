@@ -7,7 +7,7 @@ jQuery(window).scroll(function () {
     "use strict";
     var switch_logo;
     var scroll = jQuery(window).scrollTop();
-    if(!control_vars)
+    if (typeof control_vars === 'undefined')
     {
         return;
     }

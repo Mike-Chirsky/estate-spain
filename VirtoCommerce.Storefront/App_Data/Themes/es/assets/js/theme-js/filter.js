@@ -16,17 +16,16 @@ $(document).ready(function () {
         
     }
     $('.js-show-filters').on('click', function () {
-        var self = $(this);
-        var selfBlock = self.parent();
 
-        if (!selfBlock.hasClass('opened')) {
+        showHideMobileFilters(this);
+        /*if (!selfBlock.hasClass('opened')) {
             selfBlock.addClass('opened');
             self.text('Скрыть фильтры');
         }
         else {
             selfBlock.removeClass('opened');
             self.text('Показать фильтры');
-        }
+        }*/
     });
 
     $("#send-main-filter").click(function () {
@@ -113,8 +112,27 @@ $(document).ready(function () {
             });
         }
     });
+    
+    function showHideMobileFilters(element) {
+        var self = $(element);
+        var selfBlock = self.parent();
+        var elements = $(".adv-search-1.display-mobile .main-filter-container").children();
+        $.each(elements, function (index, item) {
+            if (index == elements.length - 1) {
+                return;
+            }
+            if ($(item).hasClass('hide')) {
+                $(item).removeClass('hide');
+                self.text('Скрыть фильтры');
+            }
+            else {
+                $(item).addClass('hide');
+                self.text('Показать фильтры');
+            }
+        });
+    }
     initValue();
-
+    showHideMobileFilters($('.js-show-filters'));
 
 
     // filter events
@@ -801,7 +819,7 @@ function getSearchPath(rootElement) {
 }
 
 function initValue() {
-    if (!initFilterValueRange)
+    if (typeof initFilterValueRange === 'undefined')
     {
         return;
     }
