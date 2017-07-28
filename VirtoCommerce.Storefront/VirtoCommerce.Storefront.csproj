@@ -451,6 +451,11 @@
     <Content Include="App_Data\Themes\es\assets\images\search_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\style-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\style_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\team\lilia-freimon.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\team\mark-skoda.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\team\olga-lomko.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\team\sergei-sinugin.jpg" />
+    <Content Include="App_Data\Themes\es\assets\images\team\tatyana-trifonova.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\unsubscribe_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_icon_male.png" />
     <Content Include="App_Data\Themes\es\assets\images\user_default_img_women.png" />
