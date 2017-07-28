@@ -560,10 +560,11 @@ function fillElement(id, aggregations, field, addText) {
     if ((currentValue === "" || currentValue === undefined) && setToDefault) {
         setToDefault = false;
     }
+    /* uncommet for set default value element
     if (setToDefault) {
 
         setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false, true);
-    }
+    }*/
     setClickDdElement(".search_wrapper");
     return setToDefault;
 }
