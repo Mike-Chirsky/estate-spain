@@ -39,7 +39,8 @@ $(document).ready(function () {
             window.location.href = location + (location.indexOf('keyword') && requestStr.length > 0 ? "&" : "") + requestStr;
         }
         else {
-            var requestStr = getSeoRequest('#main-filter-controls');
+            var terms = getTerms('#main-filter-controls');
+            var requestStr = getSeoRequest(terms);
             var location = window.baseUrl + requestStr;
             var fromFilter = false;
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
@@ -47,9 +48,11 @@ $(document).ready(function () {
             }
             $("#send-main-filter").addClass("loading");
             $("#send-main-filter-mobile").addClass("loading");
+            
+            
             $.ajax({
                 url: "storefrontapi/product/filter/checkurl",
-                data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
+                data: JSON.stringify({ url: location, terms: terms }),
                 success: function (data) {
                     if (data === true) {
                         window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
@@ -79,7 +82,8 @@ $(document).ready(function () {
             window.location.href = location + (location.indexOf('keyword') && requestStr.length > 0 ? "&" : "") + requestStr;
         }
         else {
-            var requestStr = getSeoRequest('#main-filter-controls-mobile');
+            var terms = getTerms('#main-filter-controls');
+            var requestStr = getSeoRequest(terms);
             var location = window.baseUrl + requestStr;
             var fromFilter = false;
             if (window.location.href.split('?')[0] == location.split('?')[0]) {
@@ -89,7 +93,7 @@ $(document).ready(function () {
             $("#send-main-filter-mobile").addClass("loading");
             $.ajax({
                 url: "storefrontapi/product/filter/checkurl",
-                data: JSON.stringify({ url: location, terms: getTerms('#main-filter-controls') }),
+                data: JSON.stringify({ url: location, terms: terms }),
                 success: function (data) {
                     if (data === true) {
                         window.location.href = location + (location.indexOf('?') > -1 ? (fromFilter ? "&from_filter=1" : "") : (fromFilter ? "?from_filter=1" : ""));
@@ -258,8 +262,7 @@ function getTerms(rootElement) {
     return terms;
 }
 
-function getSeoRequest(rootElement) {
-    var terms = getTerms(rootElement);
+function getSeoRequest(terms) {
     var returnPath = "";
     var hasCityOrRegion = terms.hasOwnProperty('city') || terms.hasOwnProperty('region');
     var hasEstateType = terms.hasOwnProperty('estatetype');
@@ -538,7 +541,7 @@ function fillElement(id, aggregations, field, addText) {
     var types = getValues(aggregations, field);
     var setToDefault = true;
     types.forEach(function (item) {
-        if (item.value === currentValue || currentValue === "*" || currentValue === "") {
+        if (item.value === currentValue || currentValue === "*" || currentValue === "" || currentValue === undefined) {
             setToDefault = false;
         }
         if (seoLinks && seoLinks[field]) {
@@ -554,6 +557,9 @@ function fillElement(id, aggregations, field, addText) {
             list.append('<li data-value="' + item.value + '"' + (addText ? 'display-header="' + addText + '"' : '') + '>' + item.value + '</li>');
         }
     });
+    if ((currentValue === "" || currentValue === undefined) && setToDefault) {
+        setToDefault = false;
+    }
     if (setToDefault) {
 
         setDdValue($(id).parent().find("ul.dropdown-menu li:first"), false, false, true);
