@@ -53,6 +53,7 @@ namespace VirtoCommerce.Storefront.Model.Catalog
                 var strings = terms
                     .OrderBy(t => t.Name)
                     .Select(t => string.Join(":", t.Name, t.Value))
+                    .Distinct()
                     .ToList();
 
                 if (strings.Any())

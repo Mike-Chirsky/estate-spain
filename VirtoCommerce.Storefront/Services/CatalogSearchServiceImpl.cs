@@ -209,6 +209,14 @@ namespace VirtoCommerce.Storefront.Services
             criteria = criteria.Clone();
 
             var searchCriteria = criteria.ToProductSearchCriteriaDto(workContext);
+
+            // OZ: Improve performance
+            if(searchCriteria.PriceRange==null)
+                searchCriteria.Currency = null;
+            searchCriteria.StoreId = null;
+            searchCriteria.Pricelists = null;
+            //
+
             var result = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(searchCriteria);
             //await LoadAllValuesForSelectedTerms(criteria, workContext, result);
             // TODO Remove check is null afeter fix null values from admin

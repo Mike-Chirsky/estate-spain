@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -27,6 +28,7 @@ namespace VirtoCommerce.Storefront.Model.Common
                     result = cacheManager.Get(cacheKey, region);
                     if (result == null)
                     {
+                        Trace.WriteLine($"Put into cache region {region} value {cacheKey}");
                         result = getValueFunction();
                         if (result != null || cacheNullValue)
                         {
