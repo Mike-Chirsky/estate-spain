@@ -34,6 +34,24 @@ function valideEmail(str)
     var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     return re.test(str);
 }
+
+function sendGAEvent(category, action, label, prefix) {
+    if (prefix === "-sidebar") label = "Right Side";
+    if (prefix === "-footer") label = "Popup bottom";
+    if (prefix === "") label = "Bottom";
+
+    if (window.gaPage) 
+        label = window.gaPage + ": " + label;
+
+    if (window.dataLayer)
+        window.dataLayer.push({
+            event: "form",
+            eventCategory: category,
+            eventAction: action,
+            eventURL: label
+        });
+}
+
 jQuery(document).ready(function () {
 
     // accordion actions on info blog page
@@ -87,30 +105,18 @@ jQuery(document).ready(function () {
 
     jQuery("#subcribe-action").click(function () {
 
-        if (valideEmailjQuery("#subscribe-email").val()) {
+        if (valideEmail(jQuery("#subscribe-email").val())) {
             jQuery("#subscribe-email").removeClass("error");
             jQuery("#subscribe-form").hide();
             jQuery("#subscribe-spinner").show();
             jQuery.post('storefrontapi/getresponse/subscribe', { email: jQuery("#subscribe-email").val() }, function (data) {
                 jQuery("#subscribe-spinner").hide();
                 jQuery("#subscribe-ok").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "subscribe",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Email subscription form", "Submitted success", "Footer");
             }).fail(function () {
                 jQuery("#subscribe-spinner").hide();
                 jQuery("#subscribe-fail").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "subscribe-error",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Email subscription form", "Submitted fail", "Footer");
             });
         }
         else {
@@ -178,24 +184,12 @@ jQuery(document).ready(function () {
             success: function (data) {
                 jQuery("#callback-spinner").hide();
                 jQuery("#callback-succes").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "callback",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Call me form", "Submitted success", "Bottom");
             },
             error: function (err) {
                 jQuery("#callback-spinner").hide();
                 jQuery("#callback-fail").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "callback-error",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Call me form", "Submitted fail", "Bottom");
             },
             contentType: "application/json",
             dataType: 'json'
@@ -249,24 +243,12 @@ jQuery(document).ready(function () {
             success: function (data) {
                 jQuery("#contact-us-form-spinner" + prefix).hide();
                 jQuery("#contact-us-form-succes" + prefix).show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "contact-us" + prefix,
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Contact me form", "Submitted success", null, prefix);
             },
             error: function (err) {
                 jQuery("#contact-us-form-spinner" + prefix).hide();
                 jQuery("#contact-us-form-fail" + prefix).show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "contact-us" +prefix + "-error",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Contact me form", "Submitted fail", null, prefix);
             },
             contentType: "application/json",
             dataType: 'json'
