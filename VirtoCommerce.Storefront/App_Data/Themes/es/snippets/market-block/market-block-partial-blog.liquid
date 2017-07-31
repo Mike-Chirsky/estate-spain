@@ -5,7 +5,7 @@
     {%- for article in blog.articles -%}
     <div class="col-md-4 col-xs-6 col-sm-6 blog2v">
     <div class="property_listing" data-link="{{ article.url | absolute_url }}" style="height: 470px;">
-        <div class="blog_unit_image"><img width="525" height="328" src="{{ article.image_url  | img_url: 'thumb'| absolute_url }}" class="lazyload img-responsive wp-post-image" alt=""></div>
+        <div class="blog_unit_image"><img width="525" height="328" src="{{ article.image_url | absolute_url }}" class="lazyload img-responsive wp-post-image" alt=""></div>
         <h4>
             <a href="{{article.url | absolute_url}}">{{ article.title }}</a>
         </h4>
