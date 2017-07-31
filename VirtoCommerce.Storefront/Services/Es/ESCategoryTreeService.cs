@@ -53,6 +53,10 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
             try
             {
+                if (_cacheManager != null)
+                {
+                    _cacheManager.Clear();
+                }
                 _loadedCategory = new Category();
                 // init data for product converter
                 var wc = _workContextFactory();
@@ -109,10 +113,6 @@ namespace VirtoCommerce.Storefront.Services.Es
             finally
             {
                 _lockObject.Release();
-                if (_cacheManager != null)
-                {
-                    _cacheManager.Clear();
-                }
             }
             return _loadedCategory;
         }
