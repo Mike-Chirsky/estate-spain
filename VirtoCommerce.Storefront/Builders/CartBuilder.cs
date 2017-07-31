@@ -73,41 +73,43 @@ namespace VirtoCommerce.Storefront.Builders
 
         public virtual async Task LoadOrCreateNewTransientCartAsync(string cartName, Store store, CustomerInfo customer, Language language, Currency currency)
         {
-            var cacheKey = GetCartCacheKey(store.Id, cartName, customer.Id, currency.Code);
-            var needReevaluate = false;
+            Cart = await Task.FromResult(CreateCart(cartName, store, customer, language, currency));
 
-            Cart = await _cacheManager.GetAsync(cacheKey, _cartCacheRegion, async () =>
-            {
-                needReevaluate = true;
+            //var cacheKey = GetCartCacheKey(store.Id, cartName, customer.Id, currency.Code);
+            //var needReevaluate = false;
 
-                var cartSearchCriteria = CreateCartSearchCriteria(cartName, store, customer, language, currency);
-                var cartSearchResult = await _cartApi.CartModule.SearchAsync(cartSearchCriteria);
+            //Cart = await _cacheManager.GetAsync(cacheKey, _cartCacheRegion, async () =>
+            //{
+            //    needReevaluate = true;
 
-                var cartDto = cartSearchResult.Results.FirstOrDefault();
-                var cart = cartDto?.ToShoppingCart(currency, language, customer) ?? CreateCart(cartName, store, customer, language, currency);
+            //    var cartSearchCriteria = CreateCartSearchCriteria(cartName, store, customer, language, currency);
+            //    var cartSearchResult = await _cartApi.CartModule.SearchAsync(cartSearchCriteria);
 
-                //Load cart payment plan with have same id
-                if (store.SubscriptionEnabled)
-                {
-                    var paymentPlanIds = new[] { cart.Id }.Concat(cart.Items.Select(x => x.ProductId).Distinct()).ToArray();
+            //    var cartDto = cartSearchResult.Results.FirstOrDefault();
+            //    var cart = cartDto?.ToShoppingCart(currency, language, customer) ?? CreateCart(cartName, store, customer, language, currency);
 
-                    var paymentPlans = (await _subscriptionApi.SubscriptionModule.GetPaymentPlanByIdsAsync(paymentPlanIds)).Select(x => x.ToPaymentPlan()).ToList();
-                    cart.PaymentPlan = paymentPlans.FirstOrDefault(x => x.Id == cart.Id);
-                    foreach (var lineItem in cart.Items)
-                    {
-                        lineItem.PaymentPlan = paymentPlans.FirstOrDefault(x => x.Id == lineItem.ProductId);
-                    }
-                }
+            //    //Load cart payment plan with have same id
+            //    if (store.SubscriptionEnabled)
+            //    {
+            //        var paymentPlanIds = new[] { cart.Id }.Concat(cart.Items.Select(x => x.ProductId).Distinct()).ToArray();
 
-                cart.Customer = customer;
-                return cart;
-            });
+            //        var paymentPlans = (await _subscriptionApi.SubscriptionModule.GetPaymentPlanByIdsAsync(paymentPlanIds)).Select(x => x.ToPaymentPlan()).ToList();
+            //        cart.PaymentPlan = paymentPlans.FirstOrDefault(x => x.Id == cart.Id);
+            //        foreach (var lineItem in cart.Items)
+            //        {
+            //            lineItem.PaymentPlan = paymentPlans.FirstOrDefault(x => x.Id == lineItem.ProductId);
+            //        }
+            //    }
 
-            if (needReevaluate)
-            {
-                //await EvaluatePromotionsAsync();
-                //await EvaluateTaxesAsync();
-            }
+            //    cart.Customer = customer;
+            //    return cart;
+            //});
+
+            //if (needReevaluate)
+            //{
+            //await EvaluatePromotionsAsync();
+            //await EvaluateTaxesAsync();
+            //}
         }
 
         public virtual async Task AddItemAsync(Product product, int quantity)
