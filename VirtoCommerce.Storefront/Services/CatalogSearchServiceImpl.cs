@@ -213,7 +213,7 @@ namespace VirtoCommerce.Storefront.Services
             // OZ: Improve performance
             if(searchCriteria.PriceRange==null)
                 searchCriteria.Currency = null;
-            searchCriteria.StoreId = null;
+            //searchCriteria.StoreId = null;
             searchCriteria.Pricelists = null;
             //
 
