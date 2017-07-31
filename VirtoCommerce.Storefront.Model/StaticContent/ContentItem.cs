@@ -25,6 +25,10 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
 
         public string Title { get; set; }
 
+        public string PageTitle { set; get; }
+
+        public string MetaDescription { set; get; }
+
         /// <summary>
         /// Relative content url
         /// </summary>
@@ -130,6 +134,12 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
 
                         case "description":
                             Description = settingValue;
+                            break;
+                        case "meta-description":
+                            MetaDescription = settingValue;
+                            break;
+                        case "page-title":
+                            PageTitle = settingValue;
                             break;
                     }
                 }

@@ -49,8 +49,8 @@ namespace VirtoCommerce.Storefront.Controllers
                 WorkContext.CurrentPageSeo = new SeoInfo
                 {
                     Language = WorkContext.CurrentBlog.Language,
-                    MetaDescription = WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
-                    Title = WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
+                    MetaDescription = WorkContext.CurrentBlog.MetaDescription ?? WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
+                    Title = WorkContext.CurrentBlog.PageTitle ?? WorkContext.CurrentBlog.Title ?? WorkContext.CurrentBlog.Name,
                     Slug = WorkContext.RequestUrl.AbsolutePath
                 };
                 return View("blog", WorkContext.CurrentBlog.Layout, WorkContext);
@@ -94,8 +94,8 @@ namespace VirtoCommerce.Storefront.Controllers
                 context.CurrentPageSeo = new SeoInfo
                 {
                     Language = context.CurrentBlog.Language,
-                    MetaDescription = context.CurrentBlog.Title ?? context.CurrentBlog.Name,
-                    Title = context.CurrentBlog.Title ?? context.CurrentBlog.Name,
+                    MetaDescription = context.CurrentBlog.MetaDescription ?? context.CurrentBlog.Title ?? context.CurrentBlog.Name,
+                    Title = context.CurrentBlog.PageTitle ?? context.CurrentBlog.Title ?? context.CurrentBlog.Name,
                     Slug = context.RequestUrl.AbsolutePath
                 };
                 return View("blog", context.CurrentBlog.Layout, WorkContext);

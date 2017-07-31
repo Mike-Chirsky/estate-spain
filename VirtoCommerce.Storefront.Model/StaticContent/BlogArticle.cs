@@ -75,6 +75,16 @@ namespace VirtoCommerce.Storefront.Model.StaticContent
                 bool.TryParse(metaInfoMap["showInMarketBlock"].FirstOrDefault(), out isShowInMarketBlock);
                 ShowInMarketBlock = isShowInMarketBlock;
             }
+
+            if (metaInfoMap.ContainsKey("meta-description"))
+            {
+                MetaDescription = metaInfoMap["meta-description"].FirstOrDefault();
+            }
+
+            if (metaInfoMap.ContainsKey("page-title"))
+            {
+                PageTitle = metaInfoMap["page-title"].FirstOrDefault();
+            }
             base.LoadContent(content, metaInfoMap);
         }
     }

@@ -1,26 +1,13 @@
 {%- if article -%}
     <h1 class="blog-header padding15">{{- article.title -}}</h1>
-    <div class="article-description no-display-mobile">{{article.description}}</div>
+    <div class="article-description no-display-mobile">{{- article.description | strip_html | slice: 0, 237 | strip -}}
+        {%- if article.description.size > 237 -%}
+           ... <a href="{{article.url | absolute_url}}">[{{ 'blog.read-more' | t }}]</a>
+        {%- endif -%}</div>
 {%- else -%}
     {%- if blog.handle == 'news'-%}
         <h4 class="blog-header">{{'blog.news.header' | t }}</h3>
-        <h1 class="blog-header">{{'blog.news.header1' | t | upcase }}</h1>
-        <h2 class="blog-header">{{'blog.news.header2' | t }}</h2>
     {%- endif -%}
-    {%- if blog.handle == 'obzory'-%}
-        <h1 class="blog-header">{{'blog.reviews.header' | t }}</h1>
-        <h2 class="blog-header">{{'blog.reviews.header2' | t }}</h2>
-    {%- endif -%}
-    {%- if blog.handle == 'info'-%}
-        <h1 class="blog-header">{{'blog.handbook.header' | t }}</h1>
-        <h2 class="blog-header">{{'blog.handbook.header1' | t }}</h1>
-    {%- endif -%}
-    {%- if blog.handle == 'blog' -%}
-        <h1 class="blog-header">{{ 'blog.blog.header' | t }}</h1>
-        <h2 class="blog-header">{{ 'blog.blog.header2' | t }}</h2>
-    {%- endif -%}
-    {%- if blog.handle == 'style' -%}
-        <h1 class="blog-header">{{ 'blog.style.header' | t }}</h1>
-        <h2 class="blog-header">{{ 'blog.style.header2' | t }}</h2>
-    {%- endif -%}
+    <h1 class="blog-header">{{ blog.title | upcase }}</h1>
+    <h2 class="blog-header">{{ blog.description | upcase }}</h2>
 {%- endif -%}
