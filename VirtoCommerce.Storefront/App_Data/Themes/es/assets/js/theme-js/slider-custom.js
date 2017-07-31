@@ -1,15 +1,18 @@
 ﻿function createCustomSlider(contentId, marketId, url) {
-    var el = jQuery(contentId);
+    var el = $(contentId);
     var page = 1;
-    var spinner = jQuery(contentId + " .spinner");
-    var content = jQuery(contentId + " .market-block-content");
-    var next = jQuery(contentId + " .next");
-    var prev = jQuery(contentId + " .prev");
+    var spinner = $(contentId + " .spinner");
+    var content = $(contentId + " .market-block-content");
+    var next = $(contentId + " .next");
+    var prev = $(contentId + " .prev");
     function loadData(fromNext) {
-        jQuery.get(url + '/' + marketId + '/' + page + '/3', function (data) {
+        $.get(url + '/' + marketId + '/' + page + '/3', function (data) {
             spinner.hide();
             if (data !== '') {
                 content.html(data);
+                setTimeout(function () {
+                    lazyLoad(content);
+                }, 100);
                 prev.removeClass('disabled');
                 next.removeClass('disabled');
             }
@@ -44,13 +47,13 @@
 }
 
 function createCustomSliderMobile(contentId, marketId, url) {
-    var el = jQuery(contentId);
+    var el = $(contentId);
     var page = 1;
-    var spinner = jQuery(contentId + " .spinner");
-    var content = jQuery(contentId + " .market-block-content");
-    var more = jQuery(contentId + " .more-button button");
+    var spinner = $(contentId + " .spinner");
+    var content = $(contentId + " .market-block-content");
+    var more = $(contentId + " .more-button button");
     function loadData() {
-        jQuery.get(url + '/' + marketId + '/' + page + '/4', function (data) {
+        $.get(url + '/' + marketId + '/' + page + '/4', function (data) {
             spinner.hide();
             if (data === '') {
                 more.hide();
@@ -59,6 +62,10 @@ function createCustomSliderMobile(contentId, marketId, url) {
                 more.show();
             }
             content.append(data);
+            setTimeout(function () {
+                lazyLoad(content);
+            }, 100);
+            lazyLoad(content);
         }).fail(function () {
             el.hide();
         });
@@ -69,4 +76,12 @@ function createCustomSliderMobile(contentId, marketId, url) {
         loadData();
     });
     loadData();
+}
+
+function lazyLoad(element) {
+    $(element).find(".carousel").on("slide.bs.carousel", function (ev) {
+        lazy = $(ev.relatedTarget).find("img[data-src]");
+        lazy.attr("src", lazy.data('src'));
+        lazy.removeAttr("data-src");
+    });
 }

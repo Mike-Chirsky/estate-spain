@@ -304,4 +304,10 @@ jQuery(document).ready(function () {
     if (window.location.href.indexOf("#")) {
         setTimeout(function () { slideToBlock("#" + window.location.href.split("#")[1]) }, 300);
     }
+    // lazy load for slider
+    $(".carousel").on("slide.bs.carousel", function (ev) {
+        lazy = $(ev.relatedTarget).find("img[data-src]");
+        lazy.attr("src", lazy.data('src'));
+        lazy.removeAttr("data-src");
+    });
 });

@@ -21,12 +21,14 @@
             {% endif %}
             {% if forloop.first %}
             <div class="item active">
-               {% else %}
-               <div class="item">
-                  {% endif %}
-                  <a href="{{ product.url | absolute_url }}"><img width="525" height="328" src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt="" data-original="{{ image.src | img_url: 'thumb' }}"></a>
-               </div>
-               {%- endfor -%}
+                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt=""></a>
+            </div>
+            {% else %}
+            <div class="item">
+                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" data-src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt=""></a>
+            </div>
+            {% endif %}
+            {%- endfor -%}
             </div>
             <a href="{{ product.url | absolute_url }}"> </a><a class="left  carousel-control" href="#property_unit_carousel_{{product.id}}" data-slide="prev">
                 <i class="fa fa-angle-left"></i>
