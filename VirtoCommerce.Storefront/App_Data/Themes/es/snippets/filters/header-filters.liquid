@@ -10,9 +10,13 @@
 <div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | assets_url}})">
       <div class="description-header with-filters">
+      {% unless request_url contains '?' %}
+        <h1 class="entry-title entry-tax">{{- 'general.search.header' | t -}}</h1>
+      {% else %}
         {% paginate products by 36 %}
             <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </h1>
         {% endpaginate %}
+      {% endunless %}
       </div>
    </div>
    <div class="search_wrapper search_wr_6  " id="search_wrapper">

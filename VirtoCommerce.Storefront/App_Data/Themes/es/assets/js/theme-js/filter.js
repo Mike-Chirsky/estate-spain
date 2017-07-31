@@ -18,14 +18,16 @@ $(document).ready(function () {
     $('.js-show-filters').on('click', function () {
 
         showHideMobileFilters(this);
-        /*if (!selfBlock.hasClass('opened')) {
+        var self = $(this);
+        var selfBlock = self.parent();
+        if (!selfBlock.hasClass('opened')) {
             selfBlock.addClass('opened');
             self.text('Скрыть фильтры');
         }
         else {
             selfBlock.removeClass('opened');
             self.text('Показать фильтры');
-        }*/
+        }
     });
 
     $("#send-main-filter").click(function () {
@@ -123,10 +125,12 @@ $(document).ready(function () {
             }
             if ($(item).hasClass('hide')) {
                 $(item).removeClass('hide');
+                $(".adv-search-1.display-mobile .adv_extended_options_text").removeClass('hide');
                 self.text('Скрыть фильтры');
             }
             else {
                 $(item).addClass('hide');
+                $(".adv-search-1.display-mobile .adv_extended_options_text").addClass('hide');
                 self.text('Показать фильтры');
             }
         });

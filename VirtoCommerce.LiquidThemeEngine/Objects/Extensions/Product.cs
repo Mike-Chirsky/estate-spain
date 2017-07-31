@@ -315,7 +315,8 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 title += $"{square} {TranslationFilter.T(withHtml ? "product.square" : "product.square2")} ";
             }
 
-            var propertyCity = GetPropertyByName("city");
+
+            var propertyCity = GetPropertyByName("city_name_in") ?? GetPropertyByName("city");
             if (propertyCity != null && !string.IsNullOrEmpty(propertyCity.Value))
             {
                 title += $"{TranslationFilter.T("product.in-city")} {propertyCity.Value}";

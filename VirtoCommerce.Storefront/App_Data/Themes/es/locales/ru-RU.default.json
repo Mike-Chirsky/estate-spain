@@ -145,9 +145,10 @@
             "post_field_error_html": "The <strong>{{ field }}</strong> {{ error }}"
         },
         "search": {
+            "title":"Каталог недвижимости в Испании на продажу. Жилая и коммерческая недвижимость.",
             "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
             "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
-            "title": "Search for products on our site"
+            "header":"Полный каталог объектов недвижимости"
         }
     },
     "blogs": {
