@@ -307,6 +307,8 @@ small, .small {
 
 .header_media .header-bg
 {
+    background: url(../images/index/header.jpg) no-repeat scroll 50% 0;
+    background-size: cover;
     height: 400px;
     position: relative;
 }
@@ -320,6 +322,7 @@ small, .small {
     position: absolute;
     right: 0;
     top: 0;
+    display: none;
 }
 
 .header_media .header-video

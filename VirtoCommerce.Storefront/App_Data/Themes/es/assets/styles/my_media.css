@@ -1,4 +1,4 @@
-*, *::after, *::before
+﻿*, *::after, *::before
 {
     box-sizing: border-box !important;
 }
@@ -805,7 +805,6 @@
 
     .header_media .header-bg
     {
-        background: url(../images/header-index.png) no-repeat scroll 50% 0;
         height: 300px;
     }
 

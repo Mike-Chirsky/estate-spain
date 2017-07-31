@@ -1,4 +1,5 @@
-﻿<div class="order row">
+﻿{% if collection.products.size > 0 %}
+<div class="order row">
     <ul>
         <li>
             <div class="dropdown listing_filter_select">
@@ -35,6 +36,7 @@
         </li>
     </ul>
 </div>
+{%- endif -%}
 <div class="product-list row" id="list-products">
     {% paginate collection.products by 36 %}
         {% assign link_index = collection.products.size | divided_by: 2 %}

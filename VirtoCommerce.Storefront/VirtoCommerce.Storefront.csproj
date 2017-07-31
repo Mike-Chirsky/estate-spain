@@ -425,6 +425,7 @@
     <Content Include="App_Data\Themes\es\assets\images\handbook_blog_header_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\header-index.png" />
+    <Content Include="App_Data\Themes\es\assets\images\index\header.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\catalonia.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\commerical.jpg" />
     <Content Include="App_Data\Themes\es\assets\images\index\costa-blanka.jpg" />
