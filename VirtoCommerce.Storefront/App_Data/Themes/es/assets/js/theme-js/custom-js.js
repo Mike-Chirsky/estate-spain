@@ -151,7 +151,7 @@ $(document).ready(function () {
     }
 
     $("#to-parthner-form").click(function () {
-        slideToBlock("#contact-us-form");
+        slideToBlock("#partner-form");
     });
     // forms
     $("#partner-form-submit").click(function(){
