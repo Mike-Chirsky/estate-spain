@@ -2,18 +2,18 @@
     {{- article.image_url | absolute_url -}}
 {%- else -%}
     {%- if blog.handle == 'news' -%}
-        {{- 'images/news_blog_header_img.jpg' | asset_url -}}
+        {{- 'images/news_blog_header_img.jpg' | static_asset_url -}}
     {%- endif -%}
     {%- if blog.handle == 'obzory' -%}
-        {{- 'images/reviews_blog_header_img.jpg' | asset_url -}}
+        {{- 'images/reviews_blog_header_img.jpg' | static_asset_url -}}
     {%- endif -%}
     {%- if blog.handle == 'info' -%}
-        {{- 'images/handbook_blog_header_img.jpg' | asset_url -}}
+        {{- 'images/handbook_blog_header_img.jpg' | static_asset_url -}}
     {%- endif -%}
     {%- if blog.handle == 'blog' -%}
-        {{- 'images/blog_blog_header_img.jpg' | asset_url -}}
+        {{- 'images/blog_blog_header_img.jpg' | static_asset_url -}}
     {%- endif -%}
     {%- if blog.handle == 'style' -%}
-        {{- 'images/style_blog_header_img.jpg' | asset_url -}}
+        {{- 'images/style_blog_header_img.jpg' | static_asset_url -}}
     {%- endif -%}
 {%- endif -%}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {% if settings.favicon_enable %}
-    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+    <link rel="shortcut icon" href="{{ 'favicon.png' | static_asset_url }}" type="image/png" />
     {% endif %}
 
     <title>
@@ -24,7 +24,7 @@
     <!--{{ '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css' | stylesheet_tag }}-->
     {{ '~/default-theme/account/css' | stylesheet_bundle_tag }}
 
-     {{ 'default.scss.css' | asset_url | stylesheet_tag }}
+     {{ 'default.scss.css' | static_asset_url | stylesheet_tag }}
 
     {% include 'google-fonts' %}
 
@@ -67,7 +67,7 @@
                         {% endif %}
                         {% if settings.logo_use_image %}
                         <a href="{{ '/' | absolute_url }}" itemprop="url">
-                            <img alt="{{ shop.name }}" src="{{ 'logo.png' | asset_url }}" itemprop="logo" />
+                            <img alt="{{ shop.name }}" src="{{ 'logo.png' | static_asset_url }}" itemprop="logo" />
                         </a>
                         {% else %}
                         <a href="{{ '/' | absolute_url }}" itemprop="url">{{ shop.name }}</a>

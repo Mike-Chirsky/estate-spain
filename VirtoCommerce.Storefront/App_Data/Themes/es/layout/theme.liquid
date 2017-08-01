@@ -8,7 +8,7 @@
       <meta name="robots" content="none">
       {%- endif -%}
       {% if settings.favicon_enable %}
-      <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+      <link rel="shortcut icon" href="{{ 'favicon.png' | static_asset_url }}" type="image/png" />
       {% endif %}
       <title>
       {% if page_title and page_title != '' %}
@@ -32,13 +32,13 @@
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
       {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
-      {{ '/styles/bootstrap-theme.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/bootstrap.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/style.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/custom-style.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/static.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/mobile.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/orange-theme.css' | asset_url | stylesheet_tag }}
+      {{ '/styles/bootstrap-theme.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/bootstrap.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/style.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/custom-style.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/static.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/mobile.css' | static_asset_url | stylesheet_tag }}
+      {{ '/styles/orange-theme.css' | static_asset_url | stylesheet_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
@@ -58,7 +58,7 @@
             "@context": "http://schema.org/",
             "@type" : "Organization",
             "url" : "{{- '/' | absolute_url -}}",
-            "logo": "{{ 'images/logo.png' | asset_url }}"
+            "logo": "{{ 'images/logo.png' | static_asset_url }}"
         }
       </script>
    </head>
@@ -114,15 +114,15 @@
             </div>
             <div class="mobile-logo">
                 <a href="{{ '/' | absolute_url }}">
-                    <img class="img-responsive" src="{{ 'images/logo.png' | asset_url }}" alt="logo">
+                    <img class="img-responsive" src="{{ 'images/logo.png' | static_asset_url }}" alt="logo">
                 </a>
             </div>
         </div>
         <div class="header_wrapper header_type2 header_left hover_type_ header_alignment_text_left">
-            <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | asset_url }}" data-sticky-logo="">
+            <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | static_asset_url }}" data-sticky-logo="">
                 <div class="logo">
                     <a href="{{ '/' | absolute_url}}">
-                        <img id="logo_image" style="width: 150px;" src="{{ 'images/logo.png' | asset_url }}" class="img-responsive" alt="logo">
+                        <img id="logo_image" style="width: 150px;" src="{{ 'images/logo.png' | static_asset_url }}" class="img-responsive" alt="logo">
                     </a>
                 </div>
                 <div class="header-actions">
@@ -464,11 +464,11 @@
 </div>
 </div>
 {% if template contains 'article' %}
-{{ '/styles/tilda-blocks-2.12.css' | asset_url | stylesheet_tag }}
-{{ '/styles/tilda-grid-3.0.css' | asset_url | stylesheet_tag }}
-{{ '/styles/tilda-zoom-1.0.css' | asset_url | stylesheet_tag }}
-{{ '/styles/tooltipster.css' | asset_url | stylesheet_tag }}
+{{ '/styles/tilda-blocks-2.12.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tilda-grid-3.0.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tilda-zoom-1.0.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tooltipster.css' | static_asset_url | stylesheet_tag }}
 {% endif %}
-{{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
+{{ '/styles/my_media.css' | static_asset_url | stylesheet_tag }}
 </body>
 </html>

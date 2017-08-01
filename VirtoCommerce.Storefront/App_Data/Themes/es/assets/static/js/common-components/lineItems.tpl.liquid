@@ -5,7 +5,7 @@
                 <div class="product-qty" ng-bind="lineItem.quantity"></div>
                 <img alt="{% raw %}{{ lineItem.name }}{% endraw %}" ng-src="{% raw %}{{ lineItem.imageUrl }}{% endraw %}" ng-if="lineItem.imageUrl" />
                 <div class="no-product-image" ng-if="!lineItem.imageUrl">
-                    <img src="{{ 'no-image.svg' | asset_url }}" />
+                    <img src="{{ 'no-image.svg' | static_asset_url }}" />
                 </div>
             </div>
         </td>

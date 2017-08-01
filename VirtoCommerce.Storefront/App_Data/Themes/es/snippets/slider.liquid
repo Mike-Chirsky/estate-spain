@@ -10,7 +10,7 @@
         {% if settings[slide] %}
           <li>
             <a href="{{ settings[slide_link] }}" class="slide-link">
-              {{ slide_img | asset_url | img_tag: settings[slide_alt] }}
+              {{ slide_img | static_asset_url | img_tag: settings[slide_alt] }}
             </a>
           </li>
         {% endif %}

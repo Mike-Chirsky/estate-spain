@@ -42,36 +42,33 @@ namespace VirtoCommerce.Storefront
                     .IncludeDirectory("~/App_Data/Themes/default/assets/js/account/", "*.js"));
             bundles.Add(
                 new ScriptBundle("~/theme-bundler/scripts")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/bootstrap.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/modernizr.custom.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.ui.core.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.lazyload.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.nicescroll.js")
-                    /*.Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.ui.touch-punch.js")*/
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/dense.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/encoder.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/infobox.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/owl.carousel.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/placeholders.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/property.js")
-                    //.Include("~/App_Data/Themes/es/assets/js/theme-js/retina-1.1.0.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/slick.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/widget.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/mouse.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/menu.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/draggable.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/position.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/custom-js.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/control.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/slider.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.contentcarousel.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.easing.1.3.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/slider-custom.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/jquery.mousewheel.js")
-                    .Include("~/App_Data/Themes/es/assets/js/theme-js/filter.js"));
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/bootstrap.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/modernizr.custom.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.ui.core.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.lazyload.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.nicescroll.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/dense.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/encoder.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/infobox.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/owl.carousel.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/placeholders.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/property.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/slick.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/widget.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/mouse.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/menu.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/draggable.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/position.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/custom-js.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/control.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/slider.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.contentcarousel.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/slider-custom.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.mousewheel.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/filter.js"));
 
             bundles.Add(new ScriptBundle("~/theme-bundler/scripts/map")
-                    .IncludeDirectory("~/App_Data/Themes/es/assets/js/theme-js/map/", "*.js"));
+                    .IncludeDirectory("~/App_Data/Themes/es/assets/static/js/theme-js/map", "*.js"));
             #endregion
 
             #region CSS
