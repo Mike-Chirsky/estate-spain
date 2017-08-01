@@ -1,6 +1,15 @@
-{% if shop.metafields.settings['GoogleEcommerceAnalytics.EnableTracking'] %} 
+{%- if shop.metafields.settings['GoogleEcommerceAnalytics.EnableTracking'] -%} 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ shop.metafields.settings['GoogleEcommerceAnalytics.GoogleTagManagerId'] }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-{% endif %}
+{%- if template contains 'index' -%}
+	<script type='text/javascript'>var gaPage = 'Main page';</script>
+{%- elsif template contains 'product' -%}
+	<script type='text/javascript'>var gaPage = 'Product';</script>
+{%- elsif blog.handle contains 'info' -%}
+	<script type='text/javascript'>var gaPage = 'Info page';</script>
+{%- else -%}
+	<script type='text/javascript'>var gaPage = 'Anypage';</script>
+{%- endif -%}
+{%- endif -%}

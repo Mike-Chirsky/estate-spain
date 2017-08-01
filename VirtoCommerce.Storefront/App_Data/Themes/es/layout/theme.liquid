@@ -62,184 +62,187 @@
         }
       </script>
    </head>
-   <body lang="{{- current_language -}}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
-      <div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">
-        <div class="snap-drawers">
-            <div class="snap-drawer snap-drawer-left">
-                <div class="mobilemenu-close"><i class="fa fa-times"></i></div>
-                <ul id="menu-main-menu" class="mobilex-menu">
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
-                        {% include 'menu/regions-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
-                        {% include 'menu/cities-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
-                        {% include 'menu/realty-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
-                        {% include 'menu/helpful-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
-                        {% include 'menu/interesting-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                        <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
-                        {% include 'menu/about-mobile' %}
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                        <button class="wpresidence_button m-button" id="request-callback-button-mobile">{{ 'request-form.callback' | t }}</button>
-                        {%- if product -%}
-                        <button class="wpresidence_button m-button" id="contact-us-button-product-mobile">{{ 'request-form.send-request' | t }}</button>
-                        {%- else -%}
-                        <button class="wpresidence_button m-button" id="contact-us-button-mobile">{{ 'request-form.send-request' | t }}</button>
-                        {%- endif-%}
-                    </li>
-                </ul>
+<body lang="{{- current_language -}}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
+{% include 'google-tag-manager-body' %}
+<div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <div class="mobilemenu-close"><i class="fa fa-times"></i>
+            </div>
+            <ul id="menu-main-menu" class="mobilex-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
+                    {% include 'menu/regions-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                    {% include 'menu/cities-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                    {% include 'menu/realty-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                    {% include 'menu/helpful-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                    {% include 'menu/interesting-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                    {% include 'menu/about-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                    <button class="wpresidence_button m-button" id="request-callback-button-mobile">{{ 'request-form.callback' | t }}</button>
+                    {%- if product -%}
+                    <button class="wpresidence_button m-button" id="contact-us-button-product-mobile">{{ 'request-form.send-request' | t }}</button>
+                    {%- else -%}
+                    <button class="wpresidence_button m-button" id="contact-us-button-mobile">{{ 'request-form.send-request' | t }}</button>
+                    {%- endif-%}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="website-wrapper" id="all_wrapper">
+<div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
+    <div class="master_header wide">
+        <div class="mobile_header">
+            <div class="mobile-trigger"><i class=" fa fa-bars"></i>
+            </div>
+            <div class="mobile-logo">
+                <a href="{{ '/' | absolute_url }}">
+                    <img class="img-responsive" src="{{ 'images/logo.png' | asset_url }}" alt="logo">
+                </a>
             </div>
         </div>
-      </div>
-      <div class="website-wrapper" id="all_wrapper">
-         <div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
-            <div class="master_header wide">
-               <div class="mobile_header">
-                  <div class="mobile-trigger"><i class=" fa fa-bars"></i></div>
-                  <div class="mobile-logo">
-                     <a href="{{ '/' | absolute_url }}">
-                     <img class="img-responsive" src="{{ 'images/logo.png' | asset_url }}" alt="logo">        
-                     </a>
-                  </div>
-               </div>
-               <div class="header_wrapper header_type2 header_left hover_type_ header_alignment_text_left">
-                 <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | asset_url }}" data-sticky-logo="">
-                      <div class="logo">
-                         <a href="{{ '/' | absolute_url}}">
-                            <img id="logo_image" style="width: 150px;" src="{{ 'images/logo.png' | asset_url }}" class="img-responsive" alt="logo">
-                         </a>
-                      </div>
-                    <div class="header-actions">
-                         <div class="action-item">
-                             <button class="wpresidence_button" id="request-callback-button">{{ 'request-form.callback' | t }}</button>
-                         </div>
-                         <div class="action-item">
-                             <button class="wpresidence_button" id="contact-us-button">{{ 'request-form.send-request' | t }}</button>
-                         </div>
-                     </div>
-                     <div class="phone-list">
-                         <div class="phone-item">
-                             <a href="tel:88003332887">
-                             <i class="fa fa-phone"></i> 8 800 333 28 87
-                             <div>{{ 'menu.phone' | t }}</div>
-                            </a>
-                         </div>
-                         <div class="phone-item">
-                             <a href="tel:+74951342387">
-                             <i class="fa fa-phone"></i> +7 495 134 23 87
-                             <div>{{ 'menu.phone2' | t }}</div>
-                             </a>
-                         </div>
-                     </div>
-                      <nav id="access">
-                         <div class="menu-main-menu-container">
-                            <ul id="menu-main-menu-1" class="menu">
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
-                                    {% include 'menu/regions' %}
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
-                                    {% include 'menu/cities' %}
-                                </li>            
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
-                                    {% include 'menu/realty' %}
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
-                                    {% include 'menu/helpful' %}
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
-                                    {% include 'menu/interesting' %}
-                                </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                    <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
-                                    {% include 'menu/about' %}
-                                </li>
-                            </ul>
-                         </div>
-                      </nav>
-                      <!-- #access -->
-                   </div> 
-               </div>
-            </div>
-            {% if template contains 'collection' or template contains 'search' %}
-                {% include 'filters/header-filters' %}
-                {% if collection.handle != 'arenda' %}
-                  {% include 'filters/header-filters-mobile' %}
-                {% endif %}
-            {% endif %}
-            {% if template contains 'blog' or template contains 'article' %}
-                {% include 'headers/blog-header' %}
-            {% endif %}
-            {% if template contains 'search' or template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
-            <main class="container content_wrapper" role="main">
-                {{ content_for_layout }}
-                {% unless template contains '404' %}
-                <div class="padding15-0">
-                  <h4 class="text-center margin-bot-0">Поделиться</h4>
-                  <ul class="list-social">
-                    <li class="list-item">
-                      <a href="http://www.facebook.com/sharer.php?u={{ canonical_url | full_url }}" target="_blank" class="list-link">
-                        <i class="list-ico fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a href="https://vk.com/share.php?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
-                        <i class="list-ico fa fa-vk"></i>
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a href="http://twitter.com/home?status={{ canonical_url | full_url }}" class="list-link" target="_blank">
-                        <i class="list-ico fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a href="https://plus.google.com/share?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
-                        <i class="list-ico fa fa-google-plus"></i>
-                      </a>
-                    </li>
-                  </ul>
+        <div class="header_wrapper header_type2 header_left hover_type_ header_alignment_text_left">
+            <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | asset_url }}" data-sticky-logo="">
+                <div class="logo">
+                    <a href="{{ '/' | absolute_url}}">
+                        <img id="logo_image" style="width: 150px;" src="{{ 'images/logo.png' | asset_url }}" class="img-responsive" alt="logo">
+                    </a>
                 </div>
-                {% endunless %}
-            </main>
-            {% else %}
-            {{ content_for_layout }}
-            <div class="padding15-0">
-              <h4 class="text-center margin-bot-0">Поделиться</h4>
-              <ul class="list-social">
+                <div class="header-actions">
+                    <div class="action-item">
+                        <button class="wpresidence_button" id="request-callback-button">{{ 'request-form.callback' | t }}</button>
+                    </div>
+                    <div class="action-item">
+                        <button class="wpresidence_button" id="contact-us-button">{{ 'request-form.send-request' | t }}</button>
+                    </div>
+                </div>
+                <div class="phone-list">
+                    <div class="phone-item">
+                        <a href="tel:88003332887">
+                            <i class="fa fa-phone"></i> 8 800 333 28 87
+                            <div>{{ 'menu.phone' | t }}</div>
+                        </a>
+                    </div>
+                    <div class="phone-item">
+                        <a href="tel:+74951342387">
+                            <i class="fa fa-phone"></i> +7 495 134 23 87
+                            <div>{{ 'menu.phone2' | t }}</div>
+                        </a>
+                    </div>
+                </div>
+                <nav id="access">
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu-1" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
+                                {% include 'menu/regions' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                                {% include 'menu/cities' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                                {% include 'menu/realty' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                                {% include 'menu/helpful' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                                {% include 'menu/interesting' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                                {% include 'menu/about' %}
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- #access -->
+            </div>
+        </div>
+    </div>
+    {% if template contains 'collection' or template contains 'search' %}
+    {% include 'filters/header-filters' %}
+    {% if collection.handle != 'arenda' %}
+    {% include 'filters/header-filters-mobile' %}
+    {% endif %}
+    {% endif %}
+    {% if template contains 'blog' or template contains 'article' %}
+    {% include 'headers/blog-header' %}
+    {% endif %}
+    {% if template contains 'search' or template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
+    <main class="container content_wrapper" role="main">
+        {{ content_for_layout }}
+        {% unless template contains '404' %}
+        <div class="padding15-0">
+            <h4 class="text-center margin-bot-0">Поделиться</h4>
+            <ul class="list-social">
                 <li class="list-item">
-                  <a href="#" class="list-link">
+                    <a href="http://www.facebook.com/sharer.php?u={{ canonical_url | full_url }}" target="_blank" class="list-link">
+                        <i class="list-ico fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://vk.com/share.php?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                        <i class="list-ico fa fa-vk"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="http://twitter.com/home?status={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                        <i class="list-ico fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://plus.google.com/share?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                        <i class="list-ico fa fa-google-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {% endunless %}
+    </main>
+    {% else %}
+    {{ content_for_layout }}
+    <div class="padding15-0">
+        <h4 class="text-center margin-bot-0">Поделиться</h4>
+        <ul class="list-social">
+            <li class="list-item">
+                <a href="#" class="list-link">
                     <i class="list-ico fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-item">
-                  <a href="#" class="list-link">
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">
                     <i class="list-ico fa fa-vk"></i>
-                  </a>
-                </li>
-                <li class="list-item">
-                  <a href="#" class="list-link">
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">
                     <i class="list-ico fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-item">
-                  <a href="#" class="list-link">
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">
                     <i class="list-ico fa fa-google-plus"></i>
                   </a>
                 </li>
@@ -382,18 +385,18 @@
                   {{- 'request-form.message' | t -}}
                   {%- endif -%}
                   </textarea>
-                  <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
-                  <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
-              </div>
-          </div>
+            <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
+            <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
         </div>
-      </div>
-      {% if template contains 'article' %}
-      {{ '/styles/tilda-blocks-2.12.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/tilda-grid-3.0.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/tilda-zoom-1.0.css' | asset_url | stylesheet_tag }}
-      {{ '/styles/tooltipster.css' | asset_url | stylesheet_tag }}
-      {% endif %}
-      {{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
-   </body>
+    </div>
+</div>
+</div>
+{% if template contains 'article' %}
+{{ '/styles/tilda-blocks-2.12.css' | asset_url | stylesheet_tag }}
+{{ '/styles/tilda-grid-3.0.css' | asset_url | stylesheet_tag }}
+{{ '/styles/tilda-zoom-1.0.css' | asset_url | stylesheet_tag }}
+{{ '/styles/tooltipster.css' | asset_url | stylesheet_tag }}
+{% endif %}
+{{ '/styles/my_media.css' | asset_url | stylesheet_tag }}
+</body>
 </html>
