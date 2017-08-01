@@ -17,7 +17,7 @@
     <div style="background-image: url('{{- 'images/parthners_slide_1.jpg' | asset_url -}}')">
         <div class="pathner-slide">
             <div class="text">
-                Помимо стандартных услуг, которые оказывает каждое большое агентство недвижимости (покупка, продажа, обмен, аренда жилых и коммерческих объектов), Spantao развивает направления консалтинга и девелопмента. 
+              Помимо стандартных услуг, которые оказывает каждое большое агентство недвижимости (покупка, продажа, обмен, аренда жилых и коммерческих объектов), Estate spain развивает направления консалтинга и девелопмента.
             </div>
         </div>
     </div>
@@ -37,6 +37,56 @@
             </div>
         </div>
     </div>
-    {% include 'footer/contact-us' %}
-    {% include 'footer/request-call' %}
+    <div>
+    <div class="row contact-us-footer">
+   
+   <div class="col-md-12 padding15-0">
+      <h3 class="text-center">{{'partner.header' | t}}</h3>
+      <div class="spinner" id="partner-form-spinner" style="display: none;">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div id="partner-form-succes" class="text-center" style="display: none">    
+            <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+        </div>
+        <div id="partner-form-fail" class="text-center" style="display: none">    
+            <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+        </div>
+      <div id="partner-form">
+        <div class="row">
+         <div class="col-md-4">
+            <input type="text" data-property="name"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+         </div>
+         <div class="col-md-4">
+            <input type="text" data-property="phone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+         </div>
+         <div class="col-md-4">
+            <input type="email" data-property="email" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+         </div>
+         <input type="hidden" data-property="formType" value="5" />
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <textarea cols="45" rows="6" data-property="userMessage" aria-required="true" class="form-control">{{- 'partner.text' | t -}}</textarea>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-8">
+                    <span class="license light-text"> <a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
+                </div>
+                <div class="col-md-4">
+                    <button class="wpresidence_button form-control btn-std margin-auto" id="partner-form-submit" >{{ 'request-form.send' | t }}</button>
+                </div>
+            </div>
+         </div>
+        </div>
+      </div>
+   </div>
+</div>
+    </div>
 </main>

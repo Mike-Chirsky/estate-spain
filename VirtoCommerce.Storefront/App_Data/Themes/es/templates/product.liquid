@@ -166,6 +166,11 @@
                     </div>
                 </div>
             </div>
+            {%- if product.small_description -%}
+            <div class="description padding0-15-normal">
+                {{ product.small_description }}
+            </div>
+            {%- endif -%}
             {%- if product.seo_text_down1 -%}
             <div class="product-soe-text">
                 {{ product.seo_text_down1 }}
@@ -185,23 +190,6 @@
                     </div>
                 </div>
             </div>{% endcomment %}
-            
-            {%- if product.small_description -%}
-            <div class="panel-group property-panel" id="accordion_small_description">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <a data-toggle="collapse" data-parent="#accordion_prop_full_details" href="#collapseSmallDescription">
-                            <h4 class="panel-title" id="prop_det">{{ 'product.small-description' | t }}</h4>
-                        </a>
-                    </div>
-                    <div id="collapseSmallDescription" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                            {{ product.small_description }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {%- endif -%}
             <div class="margin-top-0">
                 <div class="no-display-mobile">
                 {% include 'footer/contact-us' %}
