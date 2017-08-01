@@ -38,7 +38,9 @@ namespace VirtoCommerce.Storefront.Controllers
 
                 WorkContext.CurrentBlogArticle = blogArticle;
                 WorkContext.CurrentBlog = WorkContext.Blogs.SingleOrDefault(x => x.Name.EqualsInvariant(blogArticle.BlogName));
-                var layout = string.IsNullOrEmpty(blogArticle.Layout) ? WorkContext.CurrentBlog.Layout : blogArticle.Layout;
+                // TODO: Uncomment for set layout from article
+                //var layout = string.IsNullOrEmpty(blogArticle.Layout) ? WorkContext.CurrentBlog.Layout : blogArticle.Layout;
+                var layout = "blog_article";
                 return View("article", layout, WorkContext);
             }
 

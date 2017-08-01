@@ -524,23 +524,13 @@ jQuery(document).ready(function ($) {
     ////////////////////////////////////////////////////////////////////////////
     //new retina script
     ////////////////////////////////////////////////////////////////////////////
-        
-        $('.retina_ready').dense();
-        var image_unnit = $('<div data-1x="'+control_vars.path+'/css/css-images/unit.png" data-2x="'+control_vars.path+'/css/css-images/unit_2x.png" />').dense('getImageAttribute');
-      //  $('.property_marker, .inforoom, .infobath, .infobath, .infosize').css('background-image', 'url(' + image_unnit + ')').css('background-size','210px 38px');
-        
-        var image_unnit = $('<div data-1x="'+control_vars.path+'/css/css-images/unitshare.png" data-2x="'+control_vars.path+'/css/css-images/unitshare_2x.png" />').dense('getImageAttribute');
-        //$('.share_list').css('background-image', 'url(' + image_unnit + ')').css('background-size','36px 12px');;
 
-        /*var image_unnit = $('<div data-1x="'+control_vars.path+'/css/css-images/unit.png" data-2x="'+control_vars.path+'/css/css-images/unit_2x.png" />').dense('getImageAttribute');
-        $('.inforoom').css('background-image', 'url(' + image_unnit + ')');
+     if (typeof control_vars !== 'undefined') {
+         $('.retina_ready').dense();
+         var image_unnit = $('<div data-1x="' + control_vars.path + '/css/css-images/unit.png" data-2x="' + control_vars.path + '/css/css-images/unit_2x.png" />').dense('getImageAttribute');
 
-        var image_unnit = $('<div data-1x="'+control_vars.path+'/css/css-images/unit.png" data-2x="'+control_vars.path+'/css/css-images/unit_2x.png" />').dense('getImageAttribute');
-        $('.infobath').css('background-image', 'url(' + image_unnit + ')');
-
-        var image_unnit = $('<div data-1x="'+control_vars.path+'/css/css-images/unit.png" data-2x="'+control_vars.path+'/css/css-images/unit_2x.png" />').dense('getImageAttribute');
-        $('.infosize').css('background-image', 'url(' + image_unnit + ')');
-        */
+         var image_unnit = $('<div data-1x="' + control_vars.path + '/css/css-images/unitshare.png" data-2x="' + control_vars.path + '/css/css-images/unitshare_2x.png" />').dense('getImageAttribute');
+     }
     ////////////////////////////////////////////////////////////////////////////
     //invoice filters
     ////////////////////////////////////////////////////////////////////////////
@@ -984,8 +974,7 @@ jQuery(document).ready(function ($) {
     wpestate_enable_slider('slider_price_widget', 'price_low_widget', 'price_max_widget', 'amount_wd', my_custom_curr_pos, my_custom_curr_symbol, my_custom_curr_cur_post,my_custom_curr_coef);
     wpestate_enable_slider('slider_price_mobile', 'price_low_mobile', 'price_max_mobile', 'amount_mobile', my_custom_curr_pos, my_custom_curr_symbol, my_custom_curr_cur_post,my_custom_curr_coef);
 
-
-    if(control_vars.adv6_taxonomy_term!==''){
+    if (typeof control_vars !== 'undefined' && control_vars.adv6_taxonomy_term !== ''){
         control_vars.adv6_taxonomy_term.forEach(advtabs_function);
     }
     
@@ -1067,7 +1056,7 @@ jQuery(document).ready(function ($) {
 
     function wpestate_enable_slider(slider_name, price_low, price_max, amount, my_custom_curr_pos, my_custom_curr_symbol, my_custom_curr_cur_post, my_custom_curr_coef) {
         "use strict";
-        var price_low_val, price_max_val, temp_min, temp_max, slider_min, slider_max;
+        /*var price_low_val, price_max_val, temp_min, temp_max, slider_min, slider_max;
         price_low_val = parseInt(jQuery('#'+price_low).val(), 10);
         price_max_val = parseInt(jQuery('#'+price_max).val(), 10);
 
@@ -1078,7 +1067,7 @@ jQuery(document).ready(function ($) {
             slider_min =slider_min *my_custom_curr_coef;
             slider_max =slider_max *my_custom_curr_coef;
         }
-        
+        */
         /*jQuery("#" + slider_name).slider({
             range: true,
             min: parseFloat(slider_min),

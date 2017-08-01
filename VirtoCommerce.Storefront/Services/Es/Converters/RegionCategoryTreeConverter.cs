@@ -32,7 +32,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
             if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
             {
-                category.SeoInfo.MetaDescription = $"&#127969; Недвижимость на {category.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа недвижимости на {category.Name} по низким ценам!" + " В нашем каталоге представленно {0}.";
+                category.SeoInfo.MetaDescription = $"&#127969; Недвижимость на {category.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа недвижимости на {category.Name} по низким ценам!" + " В нашем каталоге {0} {1}.";
             }
         }
     }

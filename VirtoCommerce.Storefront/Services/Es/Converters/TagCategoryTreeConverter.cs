@@ -64,11 +64,11 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 if (string.IsNullOrEmpty(category.Parent.Type))
                 {
-                    category.SeoInfo.MetaDescription = $"&#127969; Недвижимость {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге представленно {0}";
+                    category.SeoInfo.MetaDescription = $"&#127969; Недвижимость {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге {0} {1}";
                 }
                 else
                 {
-                    category.SeoInfo.MetaDescription = $"&#127969; {category.Parent.FullName} {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге представленно {0}";
+                    category.SeoInfo.MetaDescription = $"&#127969; {category.Parent.FullName} {category.Name} – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!" + " В нашем каталоге {0} {1}";
                 }
             }
         }

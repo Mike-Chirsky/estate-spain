@@ -512,6 +512,7 @@ function getFoundResults(rootElement, fillElements) {
                 $(element + " #no-filter").hide();
                 $(element + " #count-objects").show();
                 $(element + " #result-count").text(numEnding(data.totalItemCount));
+                $(element + " #count-result-dop-text").show();
             }
         });
         if (elementSetTodefult) {
@@ -529,6 +530,7 @@ function getFoundResultWithoutFill(rootElement, fillElements) {
             $(element + " #no-filter").hide();
             $(element + " #count-objects").show();
             $(element + " #result-count").text(numEnding(data.totalItemCount));
+            $(element + " #count-result-dop-text").show();
         });
     });
 }
@@ -553,7 +555,7 @@ function loadFoundResult(terms, callback) {
 
 function numEnding(number) {
 
-    if (/1\\d$/.test(number))
+    if (/1\d$/.test(number))
         return number + " объектов";
     if (/1$/.test(number))
         return number + " объект";

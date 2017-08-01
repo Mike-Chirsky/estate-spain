@@ -12,7 +12,7 @@
       {% endif %}
       <title>
       {% if page_title and page_title != '' %}
-        {{- page_title -}}{% if template contains 'collection' %}{{ 'collection.product-count-header' | t }}{{ collection.products_count | num_ending: " объект":" объекта": " объектов" }} {%endif%}
+        {{- page_title -}}{% if template contains 'collection' %}{{ 'collection.product-count-header' | t }}{{ collection.products_count | num_ending: "представлен ": "представлено ": "представлено ": false -}}{{ collection.products_count | num_ending: " объект":" объекта": " объектов" }} {%endif%}
       {% elseif template contains '404' %}
         {{- 'general.404.title' | t -}}
       {% elseif template contains 'search' %}

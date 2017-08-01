@@ -527,6 +527,7 @@
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider-custom.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\slider.js" />
     <Content Include="App_Data\Themes\es\assets\js\theme-js\widget.js" />
+    <Content Include="App_Data\Themes\es\assets\styles\blog-style.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap-theme.css" />
     <Content Include="App_Data\Themes\es\assets\styles\bootstrap.css" />
     <Content Include="App_Data\Themes\es\assets\styles\ca-style.css" />
@@ -617,6 +618,7 @@
     <Content Include="App_Data\cms-content\Pages\demo\user-privacy.md" />
     <Content Include="App_Data\Themes\es\snippets\static\user-personal-data.liquid" />
     <Content Include="App_Data\Themes\es\snippets\static\user-privace.liquid" />
+    <Content Include="App_Data\Themes\es\layout\blog_article.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />

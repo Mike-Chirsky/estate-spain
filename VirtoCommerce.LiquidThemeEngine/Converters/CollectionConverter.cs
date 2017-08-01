@@ -44,7 +44,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
                     // fill count products in collection for metho info
                     if (category.SeoInfo != null && category.SeoInfo.MetaDescription != null)
                     {
-                        category.SeoInfo.MetaDescription = string.Format(category.SeoInfo.MetaDescription, StringFilters.NumEnding(category.Products.Count, "объект", "объекта", "объектов"));
+                        category.SeoInfo.MetaDescription = string.Format(category.SeoInfo.MetaDescription, StringFilters.NumEnding(category.Products.Count, "представлен", "представлено", "представлено", false), StringFilters.NumEnding(category.Products.Count, "объект", "объекта", "объектов"));
                     }
                     category.Products.Slice(pageNumber, pageSize, sortInfos);
                     return new StaticPagedList<Product>(category.Products.Select(x => ToLiquidProduct(x)), category.Products);

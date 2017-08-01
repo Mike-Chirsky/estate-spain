@@ -70,11 +70,11 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             {
                 if (!string.IsNullOrEmpty(category.Parent.Id))
                 {
-                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} {ptext} {category.Parent.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья {ptext} {category.Parent.Name} по низким ценам! " + "В нашем каталоге представленно {0}.";
+                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} {ptext} {category.Parent.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья {ptext} {category.Parent.Name} по низким ценам! " + "В нашем каталоге {0} {1}.";
                 }
                 else
                 {
-                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья по низким ценам! " + "В нашем каталоге представленно {0}.";
+                    category.SeoInfo.MetaDescription = $"&#127969; {category.Name} – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья по низким ценам! " + "В нашем каталоге {0} {1}.";
                 }
             }
         }

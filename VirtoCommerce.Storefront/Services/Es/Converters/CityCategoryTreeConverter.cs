@@ -41,7 +41,7 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
 
             if (string.IsNullOrEmpty(category.SeoInfo.MetaDescription))
             {
-                category.SeoInfo.MetaDescription = $"Недвижимость в {category.Name} – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости в {category.Name} по низким ценам!" + " В нашем каталоге представленно {0}.";
+                category.SeoInfo.MetaDescription = $"Недвижимость в {category.Name} – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости в {category.Name} по низким ценам!" + " В нашем каталоге {0} {1}.";
             }
         }
     }
