@@ -137,10 +137,14 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                     Value = GetLocalizationValue(wc, criteria.Tag, "tag")
                 });
             }
-            terms.Add(new Term {
-                Name = "available",
-                Value = "Неизвестно,Доступно"
-            });
+            if (terms.FirstOrDefault(x => x.Name == "available") == null)
+            {
+                terms.Add(new Term
+                {
+                    Name = "available",
+                    Value = "Неизвестно,Доступно"
+                });
+            }
             searchCriteria.Terms = terms.ToArray();
         }
 

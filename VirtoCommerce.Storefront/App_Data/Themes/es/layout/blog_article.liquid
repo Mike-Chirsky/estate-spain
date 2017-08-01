@@ -4,12 +4,27 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {%- if template contains 'search' -%}
+      <meta name="robots" content="none">
+      {%- endif -%}
       {% if settings.favicon_enable %}
       <link rel="shortcut icon" href="{{ 'favicon.png' | static_asset_url }}" type="image/png" />
       {% endif %}
-      <title>{{- page_title -}}</title>
+      <title>
+      {% if page_title and page_title != '' %}
+        {{- page_title -}}{% if template contains 'collection' %}{{ 'collection.product-count-header' | t }}{{ collection.products_count | num_ending: "представлен ": "представлено ": "представлено ": false -}}{{ collection.products_count | num_ending: " объект":" объекта": " объектов" }} {%endif%}
+      {% elseif template contains '404' %}
+        {{- 'general.404.title' | t -}}
+      {% elseif template contains 'search' %}
+        {{- 'general.search.title' | t -}}
+      {% else %}
+        {{-'general.meta.title' | t -}}
+      {% endif %}
+      </title>
       {% if page_description and page_description != '' %}
-      <meta name="description" content="{{ page_description }}" />
+        <meta name="description" content="{{ page_description }}" />
+        {% else %}
+        <meta name="description" content="{{ 'general.meta.description' | t }}" />
       {% endif %}
       {% include 'google-tag-manager-head' %}
       {% include 'open-graph-tags' %}
@@ -17,9 +32,10 @@
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
       {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
+      
       {{'~/es-theme/css-base' | stylesheet_bundle_tag }}
       {{ '/styles/orange-theme.css'| static_asset_url | stylesheet_tag }}
-      {{ '/styles/blog-style.css'| static_asset_url | stylesheet_tag }}
+	  {{'/styles/blog-style.css' | static_asset_url | stylesheet_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
@@ -27,299 +43,380 @@
       {{ '~/theme-bundler/scripts' | script_bundle_tag }}
       {% include 'seo/article-micro' %}
       <script type="application/ld+json">
-         {
-             "@context": "http://schema.org/",
-             "@type" : "Organization",
-             "url" : "{{- '/' | absolute_url -}}",
-             "logo": "{{ 'images/logo.png' | static_asset_url }}"
-         }
+        {
+            "@context": "http://schema.org/",
+            "@type" : "Organization",
+            "url" : "{{- '/' | absolute_url -}}",
+            "logo": "{{ 'images/logo.png' | static_asset_url }}"
+        }
       </script>
    </head>
-   <body lang="{{- current_language -}}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
-      {% include 'google-tag-manager-body' %}
-      <div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">
-         <div class="snap-drawers">
-            <div class="snap-drawer snap-drawer-left">
-               <div class="mobilemenu-close"><i class="fa fa-times"></i>
-               </div>
-               <ul id="menu-main-menu" class="mobilex-menu">
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
-                     {% include 'menu/regions-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
-                     {% include 'menu/cities-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
-                     {% include 'menu/realty-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
-                     {% include 'menu/helpful-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
-                     {% include 'menu/interesting-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                     <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
-                     {% include 'menu/about-mobile' %}
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                     <button class="wpresidence_button m-button" id="request-callback-button-mobile">{{ 'request-form.callback' | t }}</button>
-                     {%- if product -%}
-                     <button class="wpresidence_button m-button" id="contact-us-button-product-mobile">{{ 'request-form.send-request' | t }}</button>
-                     {%- else -%}
-                     <button class="wpresidence_button m-button" id="contact-us-button-mobile">{{ 'request-form.send-request' | t }}</button>
-                     {%- endif-%}
-                  </li>
-               </ul>
+<body lang="{{- current_language -}}" class="estate_property-template-default single single-estate_property postid-668 wpb-js-composer js-comp-ver-5.1.1 vc_responsive">
+{% include 'google-tag-manager-body' %}
+<div class="mobilewrapper" style="display: none; transform: translate(-265px, 0px);">
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <div class="mobilemenu-close"><i class="fa fa-times"></i>
             </div>
-         </div>
-      </div>
-      <div class="website-wrapper" id="all_wrapper">
-         <div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
-            <div class="master_header wide">
-               <div class="mobile_header">
-                  <div class="mobile-trigger"><i class=" fa fa-bars"></i>
-                  </div>
-                  <div class="mobile-logo">
-                     <a href="{{ '/' | absolute_url }}">
-                     <img class="img-responsive" src="{{ 'images/logo.png' | static_asset_url }}" alt="logo">
-                     </a>
-                  </div>
-               </div>
-               <div class="header_wrapper header_type2 header_left hover_type_ header_alignment_text_left">
-                  <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | static_asset_url }}" data-sticky-logo="">
-                     <div class="logo">
-                        <a href="{{ '/' | absolute_url}}">
+            <ul id="menu-main-menu" class="mobilex-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
+                    {% include 'menu/regions-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                    {% include 'menu/cities-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                    {% include 'menu/realty-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                    {% include 'menu/helpful-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                    {% include 'menu/interesting-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                    {% include 'menu/about-mobile' %}
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                    <button class="wpresidence_button m-button" id="request-callback-button-mobile">{{ 'request-form.callback' | t }}</button>
+                    {%- if product -%}
+                    <button class="wpresidence_button m-button" id="contact-us-button-product-mobile">{{ 'request-form.send-request' | t }}</button>
+                    {%- else -%}
+                    <button class="wpresidence_button m-button" id="contact-us-button-mobile">{{ 'request-form.send-request' | t }}</button>
+                    {%- endif-%}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="website-wrapper" id="all_wrapper">
+<div class="container main_wrapper  wide has_header_type3 contentheader_left cheader_left " style="padding: 0px;">
+    <div class="master_header wide">
+        <div class="mobile_header">
+            <div class="mobile-trigger"><i class=" fa fa-bars"></i>
+            </div>
+            <div class="mobile-logo">
+                <a href="{{ '/' | absolute_url }}">
+                    <img class="img-responsive" src="{{ 'images/logo.png' | static_asset_url }}" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="header_wrapper header_type2 header_left hover_type_ header_alignment_text_left">
+            <div class="header_wrapper_inside " data-logo="{{ 'images/logo.png' | static_asset_url }}" data-sticky-logo="">
+                <div class="logo">
+                    <a href="{{ '/' | absolute_url}}">
                         <img id="logo_image" style="width: 150px;" src="{{ 'images/logo.png' | static_asset_url }}" class="img-responsive" alt="logo">
+                    </a>
+                </div>
+                <div class="header-actions">
+                    <div class="action-item">
+                        <button class="wpresidence_button" id="request-callback-button">{{ 'request-form.callback' | t }}</button>
+                    </div>
+                    <div class="action-item">
+                        <button class="wpresidence_button" id="contact-us-button">{{ 'request-form.send-request' | t }}</button>
+                    </div>
+                </div>
+                <div class="phone-list">
+                    <div class="phone-item">
+                        <a href="tel:88003332887">
+                            <i class="fa fa-phone"></i> 8 800 333 28 87
+                            <div>{{ 'menu.phone' | t }}</div>
                         </a>
-                     </div>
-                     <div class="header-actions">
-                        <div class="action-item">
-                           <button class="wpresidence_button" id="request-callback-button">{{ 'request-form.callback' | t }}</button>
-                        </div>
-                        <div class="action-item">
-                           <button class="wpresidence_button" id="contact-us-button">{{ 'request-form.send-request' | t }}</button>
-                        </div>
-                     </div>
-                     <div class="phone-list">
-                        <div class="phone-item">
-                           <a href="tel:88003332887">
-                              <i class="fa fa-phone"></i> 8 800 333 28 87
-                              <div>{{ 'menu.phone' | t }}</div>
-                           </a>
-                        </div>
-                        <div class="phone-item">
-                           <a href="tel:+74951342387">
-                              <i class="fa fa-phone"></i> +7 495 134 23 87
-                              <div>{{ 'menu.phone2' | t }}</div>
-                           </a>
-                        </div>
-                     </div>
-                     <nav id="access">
-                        <div class="menu-main-menu-container">
-                           <ul id="menu-main-menu-1" class="menu">
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
-                                 {% include 'menu/regions' %}
-                              </li>
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
-                                 {% include 'menu/cities' %}
-                              </li>
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
-                                 {% include 'menu/realty' %}
-                              </li>
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
-                                 {% include 'menu/helpful' %}
-                              </li>
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
-                                 {% include 'menu/interesting' %}
-                              </li>
-                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
-                                 <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
-                                 {% include 'menu/about' %}
-                              </li>
-                           </ul>
-                        </div>
-                     </nav>
-                     <!-- #access -->
-                  </div>
-               </div>
+                    </div>
+                    <div class="phone-item">
+                        <a href="tel:+74951342387">
+                            <i class="fa fa-phone"></i> +7 495 134 23 87
+                            <div>{{ 'menu.phone2' | t }}</div>
+                        </a>
+                    </div>
+                </div>
+                <nav id="access">
+                    <div class="menu-main-menu-container">
+                        <ul id="menu-main-menu-1" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.regions.header' | t }}</a>
+                                {% include 'menu/regions' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.city.header' | t }}</a>
+                                {% include 'menu/cities' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.realty.header' | t }}</a>
+                                {% include 'menu/realty' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.helpful.header' | t }}</a>
+                                {% include 'menu/helpful' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.interesting.header' | t }}</a>
+                                {% include 'menu/interesting' %}
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu">
+                                <a class="menu-item-link">{{ 'menu.about.header' | t }}</a>
+                                {% include 'menu/about' %}
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- #access -->
             </div>
-            {% include 'headers/blog-header' %}
-            <main class="blog container content_wrapper main-page" role="main">
-               {{ content_for_layout }}
-               <div class="padding15-0">
-                  <h4 class="text-center margin-bot-0">Поделиться</h4>
-                  <ul class="list-social">
-                     <li class="list-item">
-                        <a href="http://www.facebook.com/sharer.php?u={{ canonical_url | full_url }}" target="_blank" class="list-link">
+        </div>
+    </div>
+    
+    {% include 'headers/blog-header' %}
+    <main class="blog container content_wrapper" role="main">
+        {{ content_for_layout }}
+        <div class="padding15-0">
+            <h4 class="text-center margin-bot-0">Поделиться</h4>
+            <ul class="list-social">
+                <li class="list-item">
+                    <a href="http://www.facebook.com/sharer.php?u={{ canonical_url | full_url }}" target="_blank" class="list-link">
                         <i class="list-ico fa fa-facebook"></i>
-                        </a>
-                     </li>
-                     <li class="list-item">
-                        <a href="https://vk.com/share.php?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://vk.com/share.php?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
                         <i class="list-ico fa fa-vk"></i>
-                        </a>
-                     </li>
-                     <li class="list-item">
-                        <a href="http://twitter.com/home?status={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="http://twitter.com/home?status={{ canonical_url | full_url }}" class="list-link" target="_blank">
                         <i class="list-ico fa fa-twitter"></i>
-                        </a>
-                     </li>
-                     <li class="list-item">
-                        <a href="https://plus.google.com/share?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://plus.google.com/share?url={{ canonical_url | full_url }}" class="list-link" target="_blank">
                         <i class="list-ico fa fa-google-plus"></i>
-                        </a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+         </div>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var control_vars = {"morg1":"Amount Financed:","morg2":"Mortgage Payments:","morg3":"Annual cost of Loan:","searchtext":"SEARCH","searchtext2":"Search here...","path":"http:\/\/localhost:8081\/wp-content\/themes\/wpresidence","search_room":"Type Bedrooms No.","search_bath":"Type Bathrooms No.","search_min_price":"Type Min. Price","search_max_price":"Type Max. Price","contact_name":"Your Name","contact_email":"Your Email","contact_phone":"Your Phone","contact_comment":"Your Message","zillow_addres":"Your Address","zillow_city":"Your City","zillow_state":"Your State Code (ex CA)","adv_contact_name":"Your Name","adv_email":"Your Email","adv_phone":"Your Phone","adv_comment":"Your Message","adv_search":"Send Message","admin_url":"http:\/\/localhost:8081\/wp-admin\/","login_redirect":"http:\/\/localhost:8081\/my-profile\/","login_loading":"Sending user info, please wait...","street_view_on":"Street View","street_view_off":"Close Street View","userid":"0","show_adv_search_map_close":"yes","close_map":"close map","open_map":"open map","fullscreen":"Fullscreen","default":"Default","addprop":"Please wait while we are processing your submission!","deleteconfirm":"Are you sure you wish to delete?","terms_cond":"You need to agree with terms and conditions !","procesing":"Processing...","slider_min":"0","slider_max":"5600000","curency":"\u20ac","where_curency":"after","submission_curency":"USD","to":"to","direct_pay":"","send_invoice":"Send me the invoice","direct_title":"Direct payment instructions","direct_thx":"Thank you. Please check your email for payment instructions.","direct_price":"To be paid","price_separator":".","plan_title":"Plan Title","plan_image":"Plan Image","plan_desc":"Plan Description","plan_size":"Plan Size","plan_rooms":"Plan Rooms","plan_bathrooms":"Plan Bathrooms","plan_price":"Plan Price","readsys":"no","datepick_lang":"en-GB","deleting":"deleting...","captchakey":"","usecaptcha":"no","scroll_trigger":"100","adv6_taxonomy_term":["35","38"],"adv6_max_price":["7000","1500000"],"adv6_min_price":["0","0"],"is_rtl":"0"};
+        /* ]]> */
+        </script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var control_vars = {
+                "morg1": "Amount Financed:",
+                "morg2": "Mortgage Payments:",
+                "morg3": "Annual cost of Loan:",
+                "searchtext": "SEARCH",
+                "searchtext2": "Search here...",
+                "path": "http:\/\/localhost:8081\/wp-content\/themes\/wpresidence",
+                "search_room": "Type Bedrooms No.",
+                "search_bath": "Type Bathrooms No.",
+                "search_min_price": "Type Min. Price",
+                "search_max_price": "Type Max. Price",
+                "contact_name": "Your Name",
+                "contact_email": "Your Email",
+                "contact_phone": "Your Phone",
+                "contact_comment": "Your Message",
+                "zillow_addres": "Your Address",
+                "zillow_city": "Your City",
+                "zillow_state": "Your State Code (ex CA)",
+                "adv_contact_name": "Your Name",
+                "adv_email": "Your Email",
+                "adv_phone": "Your Phone",
+                "adv_comment": "Your Message",
+                "adv_search": "Send Message",
+                "admin_url": "http:\/\/localhost:8081\/wp-admin\/",
+                "login_redirect": "http:\/\/localhost:8081\/my-profile\/",
+                "login_loading": "Sending user info, please wait...",
+                "street_view_on": "Street View",
+                "street_view_off": "Close Street View",
+                "userid": "0",
+                "show_adv_search_map_close": "yes",
+                "close_map": "close map",
+                "open_map": "open map",
+                "fullscreen": "Fullscreen",
+                "default": "Default",
+                "addprop": "Please wait while we are processing your submission!",
+                "deleteconfirm": "Are you sure you wish to delete?",
+                "terms_cond": "You need to agree with terms and conditions !",
+                "procesing": "Processing...",
+                "slider_min": "0",
+                "slider_max": "5600000",
+                "curency": "\u20ac",
+                "where_curency": "after",
+                "submission_curency": "USD",
+                "to": "to",
+                "direct_pay": "",
+                "send_invoice": "Send me the invoice",
+                "direct_title": "Direct payment instructions",
+                "direct_thx": "Thank you. Please check your email for payment instructions.",
+                "direct_price": "To be paid",
+                "price_separator": ".",
+                "plan_title": "Plan Title",
+                "plan_image": "Plan Image",
+                "plan_desc": "Plan Description",
+                "plan_size": "Plan Size",
+                "plan_rooms": "Plan Rooms",
+                "plan_bathrooms": "Plan Bathrooms",
+                "plan_price": "Plan Price",
+                "readsys": "no",
+                "datepick_lang": "en-GB",
+                "deleting": "deleting...",
+                "captchakey": "",
+                "usecaptcha": "no",
+                "scroll_trigger": "100",
+                "adv6_taxonomy_term": ["35", "38"],
+                "adv6_max_price": ["7000", "1500000"],
+                "adv6_min_price": ["0", "0"],
+                "is_rtl": "0"
+            };
+            /* ]]> */
+        </script>
+         <!--End scripts-->
+         <footer id="colophon" role="contentinfo" class="footer_back_repeat">
+            <div id="footer-widget-area" class="row">
+               <div id="first" class="widget-area col-md-3">
+                  <ul class="xoxo">
+                     <li>
+                        <h4 class="subscribe-header"><i class="fa fa-building-o"></i> {{ 'footer.contacts' | t }}</h4>
+                        <div class="contact_sidebar_wrap">
+                            <p class="widget_contact_phone">
+                                <a href="tel:88003332887"><i class="fa fa-phone"></i> 8 800 333 28 87</a>
+                            </p>
+                            <p class="widget_contact_fax">
+                                <a href="tel:+74951342387"><i class="fa fa-phone"></i> +7 495 134 23 87</a>
+                            </p>
+                            <p>
+                                <a href=\"tel:+34627713505\"><i class="fa fa-phone"></i>+34 627 713 505</a>
+                            </p>
+                            <p>{{ 'footer.work-time' | t }}</p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="social_sidebar_internal">
+                           <a href="https://www.instagram.com/estatespain" target="_blank"><i class="fa fa-instagram fa-fw"></i></a>
+                           <a href="https://vk.com/nedvizhimost_ispania_estatespain" target="_blank"><i class="fa fa-vk  fa-fw"></i></a>
+                           <a href="https://www.facebook.com/spantao" target="_blank"><i class="fa fa-facebook  fa-fw"></i></a>
+                           <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter  fa-fw"></i></a>
+                           <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="contact_sidebar_wrap">
+                           <p class="contact-sidebar-call-back">
+                              <p style="margin-bottom: 15px">{{ 'footer.office' | t }}</p>
+                                <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | static_asset_url }}" target="_blank" class="wpresidence_button text-center gray" style="width:100%">{{ 'footer.download' | t }}</a>
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <a href="/partners" class="footer-button-link">{{ 'footer.parthners' | t }}</a>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <a href="/o-kompanii" class="footer-button-link">{{ 'footer.about' | t }}</a>
+                                    </div>
+                                </div>
+                           </p>
+                        </div>
                      </li>
                   </ul>
                </div>
-            </main>
-            <!--End scripts-->
-            <footer id="colophon" role="contentinfo" class="footer_back_repeat">
-               <div id="footer-widget-area" class="row">
-                  <div id="first" class="widget-area col-md-3">
+                {% include 'menu/footer-menu' %}
+               <!-- #third .widget-area -->
+               <div id="fourth" class="widget-area col-md-3">
+                  <div class="textwidget">
                      <ul class="xoxo">
-                        <li>
-                           <h4 class="subscribe-header"><i class="fa fa-building-o"></i> {{ 'footer.contacts' | t }}</h4>
-                           <div class="contact_sidebar_wrap">
-                              <p class="widget_contact_phone">
-                                 <a href="tel:88003332887"><i class="fa fa-phone"></i> 8 800 333 28 87</a>
-                              </p>
-                              <p class="widget_contact_fax">
-                                 <a href="tel:+74951342387"><i class="fa fa-phone"></i> +7 495 134 23 87</a>
-                              </p>
-                              <p>
-                                 <a href=\"tel:+34627713505\"><i class="fa fa-phone"></i>+34 627 713 505</a>
-                              </p>
-                              <p>{{ 'footer.work-time' | t }}</p>
-                           </div>
+                        <li class="row subscribe-header">
+                            <h4>{{'subscribe.header' | t }}</h4>
                         </li>
-                        <li>
-                           <div class="social_sidebar_internal">
-                              <a href="https://www.instagram.com/estatespain" target="_blank"><i class="fa fa-instagram fa-fw"></i></a>
-                              <a href="https://vk.com/nedvizhimost_ispania_estatespain" target="_blank"><i class="fa fa-vk  fa-fw"></i></a>
-                              <a href="https://www.facebook.com/spantao" target="_blank"><i class="fa fa-facebook  fa-fw"></i></a>
-                              <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter  fa-fw"></i></a>
-                              <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
-                           </div>
+                        <li class="subscribe-body">
+                            <div class="spinner" id="subscribe-spinner" style="display: none;">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+                            <div id="subscribe-form">
+                                <input type="email" class="form-control"  id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
+                                <button id="subcribe-action" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+                            </div>
+                            <div id="subscribe-ok" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}</div>
+                            <div id="subscribe-fail" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}</div>
                         </li>
-                        <li>
-                           <div class="contact_sidebar_wrap">
-                              <p class="contact-sidebar-call-back">
-                              <p style="margin-bottom: 15px">{{ 'footer.office' | t }}</p>
-                              <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | static_asset_url }}" target="_blank" class="wpresidence_button text-center gray" style="width:100%">{{ 'footer.download' | t }}</a>
-                              <div class="row">
-                                 <div class="col-md-6 col-xs-12 col-sm-12">
-                                    <a href="/partners" class="footer-button-link">{{ 'footer.parthners' | t }}</a>
-                                 </div>
-                                 <div class="col-md-6 col-xs-12 col-sm-12">
-                                    <a href="/o-kompanii" class="footer-button-link">{{ 'footer.about' | t }}</a>
-                                 </div>
-                              </div>
-                              </p>
-                           </div>
+                        <li class="subscribe-footer">
+                            <p>
+                                <a href="/user-personal-data">{{ 'subscribe.license' | t }}</a>
+                            </p>
+                        </li>
+                        <li class="subscribe-footer">
+                            <p>
+                                {{ 'subscribe.footer' | t }}
+                            </p>
+                            <p>
+                                {{ 'subscribe.footer2' | t }}
+                            </p>
                         </li>
                      </ul>
                   </div>
-                  {% include 'menu/footer-menu' %}
-                  <!-- #third .widget-area -->
-                  <div id="fourth" class="widget-area col-md-3">
-                     <div class="textwidget">
-                        <ul class="xoxo">
-                           <li class="row subscribe-header">
-                              <h4>{{'subscribe.header' | t }}</h4>
-                           </li>
-                           <li class="subscribe-body">
-                              <div class="spinner" id="subscribe-spinner" style="display: none;">
-                                 <div class="rect1"></div>
-                                 <div class="rect2"></div>
-                                 <div class="rect3"></div>
-                                 <div class="rect4"></div>
-                                 <div class="rect5"></div>
-                              </div>
-                              <div id="subscribe-form">
-                                 <input type="email" class="form-control"  id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
-                                 <button id="subcribe-action" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
-                              </div>
-                              <div id="subscribe-ok" style="display: none;"><i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}</div>
-                              <div id="subscribe-fail" style="display: none;"><i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}</div>
-                           </li>
-                           <li class="subscribe-footer">
-                              <p>
-                                 <a href="/user-personal-data">{{ 'subscribe.license' | t }}</a>
-                              </p>
-                           </li>
-                           <li class="subscribe-footer">
-                              <p>
-                                 {{ 'subscribe.footer' | t }}
-                              </p>
-                              <p>
-                                 {{ 'subscribe.footer2' | t }}
-                              </p>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <!-- #fourth .widget-area -->
                </div>
-               <div class="sub_footer clearfix">
-                  <div class="col-md-4 text-center">2017 &copy; | Estate Spain</div>
-                  <div class="col-md-4 text-center"><a href="/user-privace">{{ 'footer.user-accept' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="/user-personal-data">{{ 'footer.user-personal' | t }}</a></div>
-                  <div class="col-md-4">Powered by UAB VirtoProperty, made on <a href="https://virtocommerce.com">Virtocommerce</a></div>
-               </div>
-            </footer>
-            <a href="#" class="backtop  islive"><i class="fa fa-chevron-up"></i></a>
-            <a href="#" class="contact-box  islive"><i class="fa fa-envelope-o"></i></a>
-            <div class="contactformwrapper hidden">
-               <a data-name="contact-close" class="fa fa-close"></a>
-               <div id="footer-contact-form">
-                  <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
-                  <div class="spinner" id="contact-us-form-spinner-footer" style="display: none;">
-                     <div class="rect1"></div>
-                     <div class="rect2"></div>
-                     <div class="rect3"></div>
-                     <div class="rect4"></div>
-                     <div class="rect5"></div>
-                  </div>
-                  <div id="contact-us-form-succes-footer" class="text-center" style="display: none">    
-                     <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
-                  </div>
-                  <div id="contact-us-form-fail-footer" class="text-center" style="display: none">    
-                     <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
-                  </div>
-                  <div id="contact-us-form-footer">
-                     <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-                     <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
-                     <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
-                     {% if product %}
-                     <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
-                     <input type="hidden" data-property="formType" value="3" />
-                     {% else %}
-                     <input type="hidden" data-property="formType" value="4" />
-                     {% endif %}
-                     <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
-                     {%- if template contains 'product' -%}
-                     {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
-                     {%- else -%}
-                     {{- 'request-form.message' | t -}}
-                     {%- endif -%}
-                     </textarea>
-                     <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
-                     <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
-                  </div>
-               </div>
+               <!-- #fourth .widget-area -->
             </div>
-         </div>
-      </div>
-      {{'~/es-theme/tilda' | stylesheet_bundle_tag }}
-   </body>
+            <div class="sub_footer clearfix">
+                <div class="col-md-4 text-center">2017 &copy; | Estate Spain</div>
+                <div class="col-md-4 text-center"><a href="/user-privace">{{ 'footer.user-accept' | t }}</a>&nbsp;&nbsp;&nbsp;<a href="/user-personal-data">{{ 'footer.user-personal' | t }}</a></div>
+                <div class="col-md-4">Powered by UAB VirtoProperty, made on <a href="https://virtocommerce.com">Virtocommerce</a></div>
+            </div>
+         </footer>
+        <a href="#" class="backtop  islive"><i class="fa fa-chevron-up"></i></a>
+        <a href="#" class="contact-box  islive"><i class="fa fa-envelope-o"></i></a>
+        <div class="contactformwrapper hidden">
+        <a data-name="contact-close" class="fa fa-close"></a>
+          <div id="footer-contact-form">
+              <h4 id="show_contact">{{ 'request-form.header' | t }}</h4>
+              <div class="spinner" id="contact-us-form-spinner-footer" style="display: none;">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+              </div>
+              <div id="contact-us-form-succes-footer" class="text-center" style="display: none">    
+                  <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+              </div>
+              <div id="contact-us-form-fail-footer" class="text-center" style="display: none">    
+                  <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+              </div>
+              <div id="contact-us-form-footer">
+                  <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                  <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                  <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
+                  {% if product %}
+                      <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                      <input type="hidden" data-property="formType" value="3" />
+                  {% else %}
+                      <input type="hidden" data-property="formType" value="4" />
+                  {% endif %}
+                  <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
+                  {%- if template contains 'product' -%}
+                  {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
+                  {%- else -%}
+                  {{- 'request-form.message' | t -}}
+                  {%- endif -%}
+                  </textarea>
+            <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
+            <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
+        </div>
+    </div>
+</div>
+</div>
+{{ '/styles/tilda-blocks-2.12.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tilda-grid-3.0.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tilda-zoom-1.0.css' | static_asset_url | stylesheet_tag }}
+{{ '/styles/tooltipster.css' | static_asset_url | stylesheet_tag }}
+</body>
 </html>
