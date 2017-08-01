@@ -4982,7 +4982,7 @@ input.form-control::-moz-placeholder {
 }
 
 .property_marker{
-    background-image: url(./../css-images/unit.png);
+    background-image: url(../static/css-images/unit.png);
     background-repeat: no-repeat;
     background-position: 0px -19px;
     margin-right: 0px;
@@ -5208,7 +5208,7 @@ input.form-control::-moz-placeholder {
 
 .property_listing_details .inforoom,
 .property_location .inforoom {
-    background-image: url('./../css-images/unit.png');
+    background-image: url('../static/css-images/unit.png');
     font-size: 14px;
     line-height: 30px;
     background-repeat: no-repeat;
@@ -5222,7 +5222,7 @@ input.form-control::-moz-placeholder {
 
 .property_listing_details .infobath,
 .property_location .infobath {
-    background-image: url('./../css-images/unit.png');
+    background-image: url('../static/css-images/unit.png');
     font-size: 14px;
     line-height: 30px;
     background-repeat: no-repeat;
@@ -5237,7 +5237,7 @@ input.form-control::-moz-placeholder {
 
 .property_listing_details .infosize,
 .property_location .infosize {
-    background-image: url('./../css-images/unit.png');
+    background-image: url('../static/css-images/unit.png');
     font-size: 14px;
     line-height: 30px;
     background-repeat: no-repeat;

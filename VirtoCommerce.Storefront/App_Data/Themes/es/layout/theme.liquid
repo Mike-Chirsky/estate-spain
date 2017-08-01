@@ -32,7 +32,9 @@
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
       {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
+      
       {{'~/es-theme/css-base' | stylesheet_bundle_tag }}
+      {{ '/styles/orange-theme.css'| static_asset_url | stylesheet_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}

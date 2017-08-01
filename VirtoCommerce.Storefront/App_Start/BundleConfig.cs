@@ -73,15 +73,14 @@ namespace VirtoCommerce.Storefront
 
             #region CSS
 
-            bundles.Add(CreateStyleBundle("~/es-theme/css-base")
-                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap-theme.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/style.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/custom-style.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/static.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/mobile.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/orange-theme.css", CssItemTransforms)
-                .Include("~/App_Data/Themes/es/assets/static/styles/my_media.css", CssItemTransforms)
+            bundles.Add(new Bundle("~/es-theme/css-base")
+                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap-theme.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/style.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/custom-style.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/static.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/mobile.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/my_media.css")
             );
             bundles.Add(CreateStyleBundle("~/es-theme/tilda")
                 .Include("~/App_Data/Themes/es/assets/static/styles/tilda-blocks-2.12.css", CssItemTransforms)
