@@ -32,13 +32,7 @@
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
       {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
-      {{ '/styles/bootstrap-theme.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/bootstrap.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/style.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/custom-style.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/static.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/mobile.css' | static_asset_url | stylesheet_tag }}
-      {{ '/styles/orange-theme.css' | static_asset_url | stylesheet_tag }}
+      {{'~/es-theme/css-base' | stylesheet_bundle_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
@@ -360,7 +354,7 @@
                         <div class="contact_sidebar_wrap">
                            <p class="contact-sidebar-call-back">
                               <p style="margin-bottom: 15px">{{ 'footer.office' | t }}</p>
-                                <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | assets_url }}" target="_blank" class="wpresidence_button text-center gray" style="width:100%">{{ 'footer.download' | t }}</a>
+                                <a href="{{ 'downloads/Spravochnik_pokupatelia_ispanskoy_nedvizhimosti.pdf' | static_asset_url }}" target="_blank" class="wpresidence_button text-center gray" style="width:100%">{{ 'footer.download' | t }}</a>
                                 <div class="row">
                                     <div class="col-md-6 col-xs-12 col-sm-12">
                                         <a href="/partners" class="footer-button-link">{{ 'footer.parthners' | t }}</a>

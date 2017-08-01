@@ -1,4 +1,4 @@
-.static
+﻿.static
 {
 	height: 100vh;
 	padding: 140px 0 0;
@@ -30,7 +30,7 @@
 
 .static[data-name="unsubscribe"]
 {
-	background-image: url(../images/unsubscribe_header.jpg);
+	background-image: url(../static/images/unsubscribe_header.jpg);
 	background-position: 10% 0;
 	background-size: cover;
 	position: relative;
@@ -50,7 +50,7 @@
 
 .static[data-name="email"]
 {
-	background-image: url(../images/we.jpg);
+	background-image: url(../static/images/we.jpg);
 	background-position: 10% 0;
 	background-size: cover;
 	position: relative;
@@ -107,7 +107,7 @@
 
 .static .opros-head
 {
-	background: url(../images/opros-header.jpg) no-repeat scroll 0 50%;
+	background: url(../static/images/opros-header.jpg) no-repeat scroll 0 50%;
 	background-size: cover;
 	height: 1000px;
 	position: relative;
@@ -193,12 +193,12 @@
 
 .opros-reviews .list-ico.man
 {
-	background-image: url(../images/user_default_icon_male.png);
+	background-image: url(../static/images/user_default_icon_male.png);
 }
 
 .opros-reviews .list-ico.woman
 {
-	background-image: url(../images/user_default_img_women.png);
+	background-image: url(../static/images/user_default_img_women.png);
 }
 
 .opros-reviews .list-info

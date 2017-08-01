@@ -1,6 +1,6 @@
 ﻿{%- if collection.handle == 'arenda' -%}
 <div class="header_media with_search_6">
-   <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{ 'images/arenda_category_header.jpg' | assets_url }})">
+   <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{ 'images/arenda_category_header.jpg' | static_asset_url }})">
       <div class="description-header blog-header-container text-center">
         <h1 class="blog-header">{{ 'arenda.header' | t }}</h1>
       </div>
@@ -8,7 +8,7 @@
 </div>
 {% elseif template contains 'search' %}
 <div class="header_media with_search_6">
-    <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | assets_url}})">
+    <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url({{'images/search_header.jpg' | static_asset_url}})">
       <div class="description-header with-filters">
       {% unless request_url contains '?' %}
         <h1 class="entry-title entry-tax">{{- 'general.search.header' | t -}}</h1>

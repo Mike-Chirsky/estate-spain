@@ -307,7 +307,7 @@ small, .small {
 
 .header_media .header-bg
 {
-    background: url(../images/index/header.jpg) no-repeat scroll 50% 0;
+    background: url(../static/images/index/header.jpg) no-repeat scroll 50% 0;
     background-size: cover;
     height: 400px;
     position: relative;
@@ -315,7 +315,7 @@ small, .small {
 
 .header_media .header-bg::after
 {
-    background: url(../images/bg-pattern.png) repeat scroll 0 0;
+    background: url(../static/images/bg-pattern.png) repeat scroll 0 0;
     bottom: 0;
     content: ' ';
     left: 0;
@@ -334,7 +334,7 @@ small, .small {
 
 .header_media .header-bg .scroll-btn
 {
-    background: url(../images/scroll-btn.png) no-repeat scroll 0 0;
+    background: url(../static/images/scroll-btn.png) no-repeat scroll 0 0;
     bottom: 40px;
     cursor: pointer;
     height: 39px;

@@ -30,7 +30,7 @@ namespace VirtoCommerce.Storefront
                     .IncludeDirectory("~/App_Data/Themes/default/assets/js/checkout/", "*.js"));
 
             bundles.Add(
-                new ScriptBundle("~/default-theme/account/scripts")
+               CreateScriptBundle("~/default-theme/account/scripts")
                     .Include("~/App_Data/Themes/default/assets/modernizr.min.js")
                     .Include("~/App_Data/Themes/default/assets/js/app.js")
                     .Include("~/App_Data/Themes/default/assets/js/services.js")
@@ -41,7 +41,7 @@ namespace VirtoCommerce.Storefront
                     .IncludeDirectory("~/App_Data/Themes/default/assets/js/common-components/", "*.js")
                     .IncludeDirectory("~/App_Data/Themes/default/assets/js/account/", "*.js"));
             bundles.Add(
-                new ScriptBundle("~/theme-bundler/scripts")
+                CreateScriptBundle("~/theme-bundler/scripts")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/bootstrap.js")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/modernizr.custom.js")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.ui.core.js")
@@ -67,12 +67,28 @@ namespace VirtoCommerce.Storefront
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.mousewheel.js")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/filter.js"));
 
-            bundles.Add(new ScriptBundle("~/theme-bundler/scripts/map")
+            bundles.Add(CreateScriptBundle("~/theme-bundler/scripts/map")
                     .IncludeDirectory("~/App_Data/Themes/es/assets/static/js/theme-js/map", "*.js"));
             #endregion
 
             #region CSS
 
+            bundles.Add(CreateStyleBundle("~/es-theme/css-base")
+                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap-theme.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/style.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/custom-style.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/static.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/mobile.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/orange-theme.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/my_media.css", CssItemTransforms)
+            );
+            bundles.Add(CreateStyleBundle("~/es-theme/tilda")
+                .Include("~/App_Data/Themes/es/assets/static/styles/tilda-blocks-2.12.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/tilda-grid-3.0.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/tilda-zoom-1.0.css", CssItemTransforms)
+                .Include("~/App_Data/Themes/es/assets/static/styles/tooltipster.css", CssItemTransforms)
+            );
             bundles.Add(
                 CreateStyleBundle("~/default-theme/css")
                     .Include("~/App_Data/Themes/default/assets/storefront.css", CssItemTransforms)
