@@ -10798,7 +10798,7 @@ input[type="checkbox"]:checked:before {
     height: 16px;
     background-color: #ffffff;
     z-index:999999;
-    background-image: url('./../css-images/closeicon.png');
+    background-image: url('../static/css-images/closeicon.png');
     cursor: pointer;
     border-top-right-radius:4px;
 }
@@ -10925,7 +10925,7 @@ input[type="checkbox"]:checked:before {
 #infobath{
     font-size: 13px!important;
     float: right;
-    background-image: url(./../css-images/icon_bath.png);
+    background-image: url(../static/css-images/icon_bath.png);
     height: 19px;
     background-repeat: no-repeat;
     margin-left: 9px;
@@ -10936,10 +10936,10 @@ input[type="checkbox"]:checked:before {
     margin-top: -3px;
 }
 
-#inforoom{
-    font-size: 13px!important;
+#inforoom {
+    font-size: 13px !important;
     float: right;
-    background-image: url(./../css-images/icon_bed.png);
+    background-image: url(../static/css-images/icon_bed.png);
     height: 17px;
     background-repeat: no-repeat;
     margin-left: 20px;
@@ -10950,10 +10950,10 @@ input[type="checkbox"]:checked:before {
     margin-top: -3px;
 }
 
-#infosize{
-    font-size: 13px!important;
+#infosize {
+    font-size: 13px !important;
     float: right;
-    background-image: url(./../css-images/icon-size.png);
+    background-image: url(../static/css-images/icon-size.png);
     height: 17px;
     background-repeat: no-repeat;
     margin-left: 10px;
