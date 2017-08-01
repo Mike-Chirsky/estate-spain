@@ -17,17 +17,19 @@ $(document).ready(function () {
     }
     $('.js-show-filters').on('click', function () {
 
-        showHideMobileFilters(this);
-        var self = $(this);
-        var selfBlock = self.parent();
-        if (!selfBlock.hasClass('opened')) {
-            selfBlock.addClass('opened');
-            self.text('Скрыть фильтры');
-        }
-        else {
-            selfBlock.removeClass('opened');
-            self.text('Показать фильтры');
-        }
+        if(!showHideMobileFilters(this)){
+            var self = $(this);
+            var selfBlock = self.parent();
+            if (!selfBlock.hasClass('opened')) {
+                selfBlock.addClass('opened');
+                self.text('Скрыть фильтры');
+            }
+            else {
+                selfBlock.removeClass('opened');
+                self.text('Подобрать объект');
+            }
+        };
+
     });
 
     $("#send-main-filter").click(function () {
@@ -119,6 +121,10 @@ $(document).ready(function () {
         var self = $(element);
         var selfBlock = self.parent();
         var elements = $(".adv-search-1.display-mobile .main-filter-container").children();
+        if (elements.length == 0)
+        {
+            return false;
+        }
         $.each(elements, function (index, item) {
             if (index == elements.length - 1) {
                 return;
@@ -134,6 +140,7 @@ $(document).ready(function () {
                 self.text('Показать фильтры');
             }
         });
+        return true;
     }
     initValue();
     showHideMobileFilters($('.js-show-filters'));

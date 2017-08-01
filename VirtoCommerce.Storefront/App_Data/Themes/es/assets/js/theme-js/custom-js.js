@@ -3,7 +3,7 @@
     {
         offest = 200;
     }
-    var el = jQuery(selector);
+    var el = $(selector);
     if (!el || !el.offset())
     {
         return false;
@@ -52,7 +52,7 @@ function sendGAEvent(category, action, label, prefix) {
         });
 }
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
     // accordion actions on info blog page
     $('#accordingPay').click(function () {
@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    jQuery("#subcribe-action").click(function () {
+    $("#subcribe-action").click(function () {
 
         if (valideEmail(jQuery("#subscribe-email").val())) {
             jQuery("#subscribe-email").removeClass("error");
@@ -120,29 +120,29 @@ jQuery(document).ready(function () {
             });
         }
         else {
-            jQuery("#subscribe-email").addClass("error");
+            $("#subscribe-email").addClass("error");
         }
         return false;
     });
-    jQuery("#request-callback-button-mobile").click(function () {
+    $("#request-callback-button-mobile").click(function () {
         slideToBlock("#callback-form");
-        jQuery(".mobilemenu-close").click();
+        $(".mobilemenu-close").click();
     });
-    jQuery("#contact-us-button-mobile").click(function () {
+    $("#contact-us-button-mobile").click(function () {
         slideToBlock("#contact-us-form");
-        jQuery(".mobilemenu-close").click();
+        $(".mobilemenu-close").click();
     });
-    jQuery("#contact-us-button-product-mobile").click(function () {
+    $("#contact-us-button-product-mobile").click(function () {
         slideToBlock("#show_contact", 0);
-        jQuery(".mobilemenu-close").click();
+        $(".mobilemenu-close").click();
     });
-    jQuery("#request-callback-button").click(function () {
+    $("#request-callback-button").click(function () {
         slideToBlock("#callback-form");
     });
-    jQuery("#contact-us-button").click(function () {
+    $("#contact-us-button").click(function () {
         slideToBlock("#contact-us-form");
     });
-    jQuery("#contact-us-button-product").click(function () {
+    $("#contact-us-button-product").click(function () {
         slideToBlock("#show_contact", 0);
     });
 
@@ -150,17 +150,69 @@ jQuery(document).ready(function () {
         slideToBlock("#list-products");
     }
 
-    jQuery("#to-parthner-form").click(function () {
-        slideToBlock("#contact-us-form");
+    $("#to-parthner-form").click(function () {
+        slideToBlock("#partner-form");
     });
     // forms
-    jQuery("#callback-send").click(function () {
-        // get fields
-        var inputs = jQuery("#callback-form").find("input");
+    $("#partner-form-submit").click(function(){
+        var inputs = $("#partner-form").find("input");
         var params = {};
         var isError = false;
-        jQuery.each(inputs, function (index, item) {
-            var el = jQuery(item);
+        $.each(inputs, function (index, item) {
+            var el = $(item);
+            var prData = el.attr('data-property');
+            var prRequaired = el.attr("required");
+            if (prRequaired && (el.val() === '' || (el.attr('type') === 'email' && !valideEmail(el.val())))) {
+                el.addClass('error');
+                isError = true;
+            }
+            else {
+                el.removeClass('error');
+                params[prData] = el.val();
+            }
+        });
+        if (isError) {
+            return;
+        }
+        $("#partner-form").hide();
+        $("#partner-form-spinner").show();
+        $.ajax({
+            type: 'POST',
+            url: 'storefrontapi/forms',
+            data: JSON.stringify(params),
+            success: function (data) {
+                $("#partner-form-spinner").hide();
+                $("#partner-form-succes").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "callback",
+                        eventURL: window.location.href
+                    });
+            },
+            error: function (err) {
+                $("#partner-form-spinner").hide();
+                $("#partner-form-fail").show();
+                if (window.dataLayer)
+                    window.dataLayer.push({
+                        event: "form",
+                        eventCategory: "Send Form",
+                        eventAction: "callback-error",
+                        eventURL: window.location.href
+                    });
+            },
+            contentType: "application/json",
+            dataType: 'json'
+        });
+    });
+    $("#callback-send").click(function () {
+        // get fields
+        var inputs = $("#callback-form").find("input");
+        var params = {};
+        var isError = false;
+        $.each(inputs, function (index, item) {
+            var el = $(item);
             var property = el.attr('data-property');
             if (el.val() === '' && property === 'phone') {
                 el.addClass("error");
@@ -175,9 +227,9 @@ jQuery(document).ready(function () {
         if (isError) {
             return;
         }
-        jQuery("#callback-form").hide();
-        jQuery("#callback-spinner").show();
-        jQuery.ajax({
+        $("#callback-form").hide();
+        $("#callback-spinner").show();
+        $.ajax({
             type: 'POST',
             url: 'storefrontapi/forms',
             data: JSON.stringify(params),
@@ -196,16 +248,16 @@ jQuery(document).ready(function () {
         });
     });
 
-    jQuery("#request-form-submit").click(function () {
+    $("#request-form-submit").click(function () {
         sendContactUsForm();
     });
-    jQuery("#request-form-submit-sidebar").click(function () {
+    $("#request-form-submit-sidebar").click(function () {
         sendContactUsForm('-sidebar');
     });
-    jQuery("#request-form-submit-image").click(function () {
+    $("#request-form-submit-image").click(function () {
         sendContactUsForm('-image');
     });
-    jQuery("#contact-us-form-footer-submit").click(function () {
+    $("#contact-us-form-footer-submit").click(function () {
         sendContactUsForm("-footer");
     });
 
@@ -214,11 +266,11 @@ jQuery(document).ready(function () {
         {
             prefix = "";
         }
-        var inputs = jQuery("#contact-us-form" + prefix).find(":input");
+        var inputs = $("#contact-us-form" + prefix).find(":input");
         var data = {};
         var isError = false;
-        jQuery.each(inputs, function (index, item) {
-            var el = jQuery(item);
+        $.each(inputs, function (index, item) {
+            var el = $(item);
             var prData = el.attr('data-property');
             var prRequaired = el.attr("required");
             if (prRequaired && (el.val() === '' || (el.attr('type') === 'email' && !valideEmail(el.val())))) {
@@ -234,9 +286,9 @@ jQuery(document).ready(function () {
             return;
         }
         data['fromUrl'] = window.location.href;
-        jQuery("#contact-us-form-spinner" + prefix).show();
-        jQuery("#contact-us-form" + prefix).hide();
-        jQuery.ajax({
+        $("#contact-us-form-spinner" + prefix).show();
+        $("#contact-us-form" + prefix).hide();
+        $.ajax({
             type: 'POST',
             url: 'storefrontapi/forms',
             data: JSON.stringify(data),

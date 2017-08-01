@@ -3,7 +3,10 @@
 </div>
 {%- if from_filter == true and (collection.type == "region" or collection.type == "type" or collection.type == "tag" or collection.type == "condition" or collection.type == "other_type") -%}
   <div class="row">
-    <h2 id="list-products" class="text-center padding15-0">{{-'your-request2' | t -}}&nbsp;{%- include 'product-count' -%}</h2>
+  {% paginate products by 36 %}
+    <h2 id="list-products" class="text-center padding15-0">{{-'your-request2' | t -}}&nbsp;{{- paginate.items | num_ending: "найден":"найдено": "найдено": false -}}&nbsp;{%- include 'product-count' -%}</h2>
+  {% endpaginate %}
+    
   </div>
   {% include 'product-list' %}
 {%endif%}

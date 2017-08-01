@@ -6,7 +6,7 @@
         <h4><a href="{{article.url | absolute_url }}">{{ article.title }}</a></h4>
         <div> {{- article.description | strip_html | slice: 0, 237 | strip -}}
         {%- if article.description.size > 237 -%}
-           ... <a href="{{article.url | absolute_url}}">[{{ 'blog.read-more' | t }}]</a>
+           ...
         {%- endif -%} </div>
         <div>
             <a class="read_more" href="{{article.url | absolute_url}}">{{'blog.read-more' | t  }}<i class="fa fa-angle-right"></i></a>
