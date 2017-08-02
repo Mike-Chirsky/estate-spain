@@ -412,6 +412,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\arenda_category_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\bg-pattern.png" />
     <Content Include="App_Data\Themes\es\assets\static\images\blog_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\static\images\blog_blog_header_img_small.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\ceny-index.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\costa-blanka-n.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\costa-blanka-preview.jpg" />
@@ -423,6 +424,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\dict_city_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\handbook-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\static\images\handbook_blog_header_img_small.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\header-index.png" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\header.jpg" />
@@ -448,6 +450,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\pressa-smi.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\reviews-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\reviews_blog_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\static\images\reviews_blog_header_img_small.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\scroll-btn.png" />
     <Content Include="App_Data\Themes\es\assets\static\images\search_header.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\style-blog-preview.jpg" />
