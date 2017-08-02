@@ -178,15 +178,17 @@
     </div>
     {% if template contains 'collection' or template contains 'search' %}
     {% include 'filters/header-filters' %}
-    {% if collection.handle != 'arenda' %}
-    {% include 'filters/header-filters-mobile' %}
-    {% endif %}
     {% endif %}
     {% if template contains 'blog' or template contains 'article' %}
     {% include 'headers/blog-header' %}
     {% endif %}
     {% if template contains 'search' or template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
     <main class="container content_wrapper" role="main">
+        {% if (template contains 'collection' or template contains 'search') and collection.handle != 'arenda' %}
+        <div class="row">
+            {% include 'filters/header-filters-mobile' %}
+        </div>
+        {% endif %}
         {{ content_for_layout }}
         {% unless template contains '404' %}
         <div class="padding15-0">
