@@ -46,7 +46,7 @@
 
 {%- if collection.type == 'city' or collection.handle == 'arenda' or collection.type == 'type_add' or collection.type == "tag_add" or collection.type == "condition_add" -%}
   <h2 id="list-products" class="header-name text-center margin-bot-0">{{- collection.h2_listing -}}</h2>
-{% paginate products by 36 %}
+{% paginate collection.products by 36 %}
     <h4 class="text-center" >{{- paginate.items | num_ending: "Найден":"Найдено": "Найдено" : false-}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </h4>
 {% endpaginate %}
 {% include 'product-list' %}

@@ -32,7 +32,8 @@ namespace VirtoCommerce.Storefront.Controllers
             if (blogArticle != null)
             {
                 WorkContext.CurrentPageSeo.ImageUrl = blogArticle.ImageUrl;
-                WorkContext.CurrentPageSeo.MetaDescription = blogArticle.Excerpt ?? blogArticle.Title;
+                WorkContext.CurrentPageSeo.Title = blogArticle.PageTitle ?? blogArticle.Title;
+                WorkContext.CurrentPageSeo.MetaDescription = blogArticle.MetaDescription ?? blogArticle.Excerpt ?? blogArticle.Title;
 
                 WorkContext.CurrentBlogArticle = blogArticle;
                 WorkContext.CurrentBlog = WorkContext.Blogs.SingleOrDefault(x => x.Name.EqualsInvariant(blogArticle.BlogName));

@@ -7,67 +7,69 @@
       {{ article.content }}
       {% if article.slider_images.size > 0 %}
       <div id="carousel-listing" class="carousel slide post-carusel" data-ride="carousel" data-interval="false">
-          <div>
-          <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                  {% for image in article.slider_images %}
-                  {% if forloop.first %}
-                  <div class="item active">
+         <div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               {% for image in article.slider_images %}
+               {% if forloop.first %}
+               <div class="item active">
                   {% else %}
                   <div class="item">
-                  {% endif %}
-                      <a href="{{ image }}" title="" rel="prettyPhoto" class="prettygalery">
-                          <img src="{{ image | img_url: 'thumb' | absolute_url }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
-                      </a>
+                     {% endif %}
+                     <a href="{{ image }}" title="" rel="prettyPhoto" class="prettygalery">
+                     <img src="{{ image | img_url: 'thumb' | absolute_url }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                     </a>
                   </div>
                   {% endfor %}
-              </div>
-
-              <div class="slider-information">
+               </div>
+               <div class="slider-information">
                   <div><span id="current-main-slide">1</span> / {{ article.slider_images.size }}</div>
-              </div>    
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
-                  <i class="fa fa-angle-left"></i>
-              </a>
-              <a class="right carousel-control" href="#carousel-listing" data-slide="next">
-                  <i class="fa fa-angle-right"></i>
-              </a>
-          </div>
-          <!-- Indicators -->
-          <div class="carusel-back"></div>
-          <ol class="carousel-indicators">
-              {% for image in article.slider_images %}
-              {% if forloop.first %}
-              <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="active">
-              {% else %}
-              <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
-              {% endif %}
+               </div>
+               <!-- Controls -->
+               <a class="left carousel-control" href="#carousel-listing" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="right carousel-control" href="#carousel-listing" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+            <!-- Indicators -->
+            <div class="carusel-back"></div>
+            <ol class="carousel-indicators">
+               {% for image in article.slider_images %}
+               {% if forloop.first %}
+               <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="active">
+                  {% else %}
+               <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
+                  {% endif %}
                   <img src="{{ image | img_url: 'thumb' | absolute_url }}" alt="slider">
-              </li>
-              {% endfor %}
-          </ol>
+               </li>
+               {% endfor %}
+            </ol>
+         </div>
       </div>
+      {% endif %}
    </div>
-   {% endif %}
 </div>
 <div class="row">
-  <div class="vc_column-inner">
-   <div class="wpb_wrapper">
-      <div class="article_container bottom-post  blogs_wrapper ">
-         <h2 class="shortcode_title">{{ 'blog.associated-posts' | t }}</h2>
-         {% assign count_items = 0 %}
-		 {% for item in blog.articles %}
+    <div class="col-md-12 related-article">
+        <h2 class="shortcode_title">{{ 'blog.associated-posts' | t }}</h2>
+        {% assign count_items = 0 %}
+        {% for item in blog.articles %}
         {% if item.url == article.url %}
-          {% continue %}
+        {% continue %}
         {% endif %}
-        {% if count_items == 3 %}
-          {% break %}
+        {% if count_items == 4 %}
+        {% break %}
         {% endif %}
         {% assign count_items = count_items | plus: 1 %}
+        
+        {% if count_items == 4 %}
+        {% assign add_class = 'display-mobile' %}
+        {% include 'blog/blog-related-item', item, add_class %}
+        {% else %}
         {% include 'blog/blog-related-item', item %}
-		{% endfor %}
-      </div>
-   </div>
-  </div>
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
