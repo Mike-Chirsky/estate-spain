@@ -50,7 +50,7 @@
     {
         transform: rotate(360deg);
     }
-};
+}
 
 .comment-form #submit, .blog_unit_image img, .blog2v img, .single-content input[type="submit"], .agentpict, .featured_property img, .agent_unit img {
     border-bottom: 3px solid #FF9800 !important;

@@ -81,6 +81,7 @@ namespace VirtoCommerce.Storefront
                 .Include("~/App_Data/Themes/es/assets/static/styles/static.css")
                 .Include("~/App_Data/Themes/es/assets/static/styles/mobile.css")
                 .Include("~/App_Data/Themes/es/assets/static/styles/my_media.css")
+                .Include("~/App_Data/Themes/es/assets/static/styles/orange-theme.css")
             );
             bundles.Add(CreateStyleBundle("~/es-theme/tilda")
                 .Include("~/App_Data/Themes/es/assets/static/styles/tilda-blocks-2.12.css", CssItemTransforms)
