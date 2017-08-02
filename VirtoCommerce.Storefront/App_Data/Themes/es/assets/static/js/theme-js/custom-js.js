@@ -183,24 +183,12 @@ $(document).ready(function () {
             success: function (data) {
                 $("#partner-form-spinner").hide();
                 $("#partner-form-succes").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "callback",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Call me form", "Submitted success", "Bottom");
             },
             error: function (err) {
                 $("#partner-form-spinner").hide();
                 $("#partner-form-fail").show();
-                if (window.dataLayer)
-                    window.dataLayer.push({
-                        event: "form",
-                        eventCategory: "Send Form",
-                        eventAction: "callback-error",
-                        eventURL: window.location.href
-                    });
+                sendGAEvent("Call me form", "Submitted fail", "Bottom");
             },
             contentType: "application/json",
             dataType: 'json'
