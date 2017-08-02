@@ -1284,6 +1284,7 @@
   <ItemGroup>
     <Folder Include="App_Data\cms-content\Pages\demo\assets\handbook\images\" />
     <Folder Include="App_Data\Pages\" />
+    <Folder Include="App_Data\Themes\es\assets\static\images\menu\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VirtoCommerce.LiquidThemeEngine\VirtoCommerce.LiquidThemeEngine.csproj">

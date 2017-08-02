@@ -11,13 +11,45 @@
     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_4   ">
         <div class="megamenu-title">{{ 'menu.interesting.cat2' | t }}</div>
         <ul class="sub-menu wpestate_megamenu_col_4">
-            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/info/obrazovanie-v-ispanii">Образование в Испании</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/obzory/leto-v-ispanii-raspisanie-sobytij-2017">Испанские праздники</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/obzory/harakter-mentalitet-ispantsev">Менталитет и характер испанцев</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/blog/obrazovanie-v-ispanii">Образование в Испании</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/blog/leto-v-ispanii-raspisanie-sobytij-2017">Испанские праздники</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/blog/harakter-mentalitet-ispantsev">Менталитет и характер испанцев</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="/style">Дизайн и интерьер</a></li>
         </ul>
     </li>
-    {%- for blog in blogs -%}
+    <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
+        <div class="megamenu-widgets-container">
+            <ul>
+                <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
+                    <div class="textwidget">
+                        <div class="megamenu-demos">
+                            <a href="/blog">
+                                <img style="background-image: url('{{ 'images/blog_blog_header_img.jpg' | static_asset_url }}'); background-size: cover; background-position: center; height:170px;visibility: visible;" />
+                            </a>
+                        </div>
+                        <a href="/blog">Блог</a> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="menu-item menu-item-type-custom menu-item-object-custom wpestate_megamenu_col_4">
+        <div class="megamenu-widgets-container">
+            <ul>
+                <li id="text-11" class="widget widget-container sbg_widget blog1 widget_text">
+                    <div class="textwidget">
+                        <div class="megamenu-demos">
+                            <a href="/obzory">
+                                <img style="background-image: url('{{ 'images/reviews_blog_header_img.jpg' | static_asset_url }}'); background-size: cover; background-position: center; height:170px;visibility: visible;" />
+                            </a>
+                        </div>
+                        <a href="/obzory">Обзоры</a> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    {% comment %}{%- for blog in blogs -%}
         {%- if blog.handle != 'blog' -%}
             {%- continue -%}
         {%- endif -%}
@@ -43,4 +75,5 @@
             </li>
         {%- endfor -%}   
     {% endfor %}
+    {% endcomment %}
 </ul>
