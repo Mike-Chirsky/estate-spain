@@ -20,9 +20,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ page_title }}" />
   {%- if template contains 'index' -%}
-  <meta property="og:image" content="{{ 'images/index/header.jpg' | static_asset_url | full_url }}" />
+  {%- assign src = 'images/index/header_og.jpg' | static_asset_url | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- elseif template contains 'collection' -%}
-  <meta property="og:image" content="https:{{ collection.header_image }}" />
+  {%- assign src = collection.header_image | img_url: 'thumb' | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="https:{{ src }}" />
+  <meta property="og:image:secure_url" content="http:{{ src }}" />
   {%- else-%}
   {%- if settings.logo_use_image -%}
   <meta property="og:image" content="{{ 'logo.png' | static_asset_url | full_url }}" />
