@@ -19,7 +19,7 @@
             "position": {{- forloop.index | plus: 1 -}},
             "item":
                 {
-                    "@id": "{%- if forloop.last -%}{{- collection.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
+                    "@id": "https:{%- if forloop.last -%}{{- collection.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
                     "name": "{{-item.key-}}"
                 }
             }{%- unless forloop.last -%},{% endunless %}
@@ -31,7 +31,7 @@
             "position": {{- forloop.index | plus: 1 -}},
             "item":
                 {
-                    "@id": "{%- if forloop.last -%}{{- product.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
+                    "@id": "https:{%- if forloop.last -%}{{- product.handle | absolute_url -}}{%- else -%} {{-item.value | absolute_url-}}{%- endif -%}",
                     "name": "{{-item.key-}}"
                 }
             }{%- unless forloop.last -%},{% endunless %}

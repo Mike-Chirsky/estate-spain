@@ -435,6 +435,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\index\costa-dorada.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\del-sol.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\elitnaya.png" />
+    <Content Include="App_Data\Themes\es\assets\static\images\index\header_og.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\kvartiri.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\maresme.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\logo.png" />
@@ -1085,6 +1086,7 @@
     <Compile Include="Services\Es\Converters\DefaultCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\OtherTypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\RegionCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\SinglePageCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TagCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ESCategoryTreeService.cs" />

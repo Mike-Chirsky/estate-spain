@@ -60,7 +60,7 @@ namespace VirtoCommerce.Storefront.Controllers
             {
                 category = (await _searchService.GetCategoriesAsync(new[] { categoryId }, CategoryResponseGroup.Full)).FirstOrDefault();
             }
-            if(category == null)
+            if (category == null)
             {
                 throw new HttpException(404, String.Format("Category {0} not found.", categoryId));
             }
@@ -72,33 +72,29 @@ namespace VirtoCommerce.Storefront.Controllers
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
             productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
             var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
-            
-            criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?
-       
-            if (category != null)
-            {
-                category.Products = new MutablePagedList<Product>((pageNumber, pageSize, sortInfos) =>
-                {                 
-                    criteria.PageNumber = pageNumber;
-                    criteria.PageSize = pageSize;
-                    if (string.IsNullOrEmpty(criteria.SortBy) && !sortInfos.IsNullOrEmpty())
-                    {
-                        criteria.SortBy = SortInfo.ToString(sortInfos);
-                    }
-                    var result = _searchService.SearchProducts(criteria);
-                    //Prevent double api request for get aggregations
-                    //Because catalog search products returns also aggregations we can use it to populate workContext using C# closure
-                    //now workContext.Aggregation will be contains preloaded aggregations for current search criteria
-                    WorkContext.Aggregations = new MutablePagedList<Aggregation>(result.Aggregations);
-                    return result.Products;
-                }, 1, ProductSearchCriteria.DefaultPageSize);
-                               
 
-                // make sure title is set
-                if(string.IsNullOrEmpty(WorkContext.CurrentPageSeo.Title))
+            criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?
+            category.Products = new MutablePagedList<Product>((pageNumber, pageSize, sortInfos) =>
+            {
+                criteria.PageNumber = pageNumber;
+                criteria.PageSize = pageSize;
+                if (string.IsNullOrEmpty(criteria.SortBy) && !sortInfos.IsNullOrEmpty())
                 {
-                    WorkContext.CurrentPageSeo.Title = category.Name;
+                    criteria.SortBy = SortInfo.ToString(sortInfos);
                 }
+                var result = _searchService.SearchProducts(criteria);
+                //Prevent double api request for get aggregations
+                //Because catalog search products returns also aggregations we can use it to populate workContext using C# closure
+                //now workContext.Aggregation will be contains preloaded aggregations for current search criteria
+                WorkContext.Aggregations = new MutablePagedList<Aggregation>(result.Aggregations);
+                return result.Products;
+            }, 1, ProductSearchCriteria.DefaultPageSize);
+
+
+            // make sure title is set
+            if (string.IsNullOrEmpty(WorkContext.CurrentPageSeo.Title))
+            {
+                WorkContext.CurrentPageSeo.Title = category.Name;
             }
 
             if (string.IsNullOrEmpty(view))

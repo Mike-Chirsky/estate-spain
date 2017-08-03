@@ -2,17 +2,17 @@
   <meta property="og:type" content="product" />
   <meta property="og:title" content="{{ product.custom_title | strip_html | escape }}" />
   {%- for image in product.images limit:1 -%}
-  <meta property="og:image" content="{{ image.src | img_url }}" />
+  {%- assign src = image.src | img_url: 'thumb' | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- endfor -%}
   <meta property="og:product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}" />
   <meta property="og:product:price:currency" content="{{ shop.currency }}" />
-{%- elsif template contains 'article' -%}
+{%- elseif template contains 'article' -%}
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ article.title | strip_html | escape }}" />
-  {%- assign img_tag = '<' | append: 'img' -%}
-  {%- if article.content contains img_tag -%}
-    {%- assign src = article.content | split: 'src="' -%}
-    {%- assign src = src[1] | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  {%- if article.image_url -%}
+    {%- assign src = article.image_url | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
     {%- if src -%}
   <meta property="og:image" content="http:{{ src }}" />
   <meta property="og:image:secure_url" content="https:{{ src }}" />
@@ -21,9 +21,33 @@
 {%- else -%}
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ page_title }}" />
+  {%- if template contains 'index' -%}
+  {%- assign src = 'images/index/header_og.jpg' | static_asset_url | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
+  {%- elseif template contains 'collection' -%}
+  {%- assign src = collection.header_image | img_url: 'thumb' | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
+  {%- else-%}
+  {%- if template contains 'page' -%}
+    {%- if page.handle == 'opros' -%}
+  
+      {%- assign src = 'images/opros-header.jpg' | static_asset_url | full_url  | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+      <meta property="og:image" content="http:{{ src }}" />
+      <meta property="og:image:secure_url" content="https:{{ src }}" />
+    {%- endif -%}
+    {%- if page.handle == 'partners' -%}
+      {%- assign src =  'images/parthner_header_img.jpg' | static_asset_url | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+      <meta property="og:image" content="http:{{ src }}" />
+      <meta property="og:image:secure_url" content="https:{{ src }}" />
+    {%- endif -%}
+  {%- else -%}
   {%- if settings.logo_use_image -%}
   <meta property="og:image" content="{{ 'logo.png' | static_asset_url | full_url }}" />
   {%- comment -%}<meta property="og:image:secure_url" content="{{ 'logo.png' | static_asset_url | full_url }}">{%- endcomment -%}
+  {%- endif -%}
+  {%- endif -%}
   {%- endif -%}
 {%- endif -%}
 {%- if page_description -%}

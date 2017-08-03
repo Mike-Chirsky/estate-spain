@@ -111,6 +111,14 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                         Value = product.Name
                     });
                 }
+                else if (product.CategoryId == ConfigurationManager.AppSettings["SinglePageCategoryId"])
+                {
+                    workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
+                    {
+                        Name = product.Properties.FirstOrDefault(x => x.Name == "term-name")?.Value,
+                        Value = product.Properties.FirstOrDefault(x => x.Name == "term-value")?.Value
+                    });
+                }
             }
             workContext.CurrentProductSearchCriteria.Terms = AddTerm(workContext.CurrentProductSearchCriteria.Terms, new Term
             {

@@ -178,15 +178,17 @@
     </div>
     {% if template contains 'collection' or template contains 'search' %}
     {% include 'filters/header-filters' %}
-    {% if collection.handle != 'arenda' %}
-    {% include 'filters/header-filters-mobile' %}
-    {% endif %}
     {% endif %}
     {% if template contains 'blog' or template contains 'article' %}
     {% include 'headers/blog-header' %}
     {% endif %}
     {% if template contains 'search' or template contains 'product' or template contains 'collection' or template contains 'blog' or template contains 'article' or template contains '404' %}
     <main class="container content_wrapper" role="main">
+        {% if (template contains 'collection' or template contains 'search') and collection.handle != 'arenda' %}
+        <div class="row">
+            {% include 'filters/header-filters-mobile' %}
+        </div>
+        {% endif %}
         {{ content_for_layout }}
         {% unless template contains '404' %}
         <div class="padding15-0">
@@ -347,8 +349,6 @@
                            <a href="https://www.instagram.com/estatespain" target="_blank"><i class="fa fa-instagram fa-fw"></i></a>
                            <a href="https://vk.com/nedvizhimost_ispania_estatespain" target="_blank"><i class="fa fa-vk  fa-fw"></i></a>
                            <a href="https://www.facebook.com/spantao" target="_blank"><i class="fa fa-facebook  fa-fw"></i></a>
-                           <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter  fa-fw"></i></a>
-                           <a href="#" target="_blank"><i class="fa fa-google-plus  fa-fw"></i></a>
                         </div>
                      </li>
                      <li>
@@ -445,13 +445,7 @@
                   {% else %}
                       <input type="hidden" data-property="formType" value="4" />
                   {% endif %}
-                  <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">
-                  {%- if template contains 'product' -%}
-                  {{- 'request-form.message-object' | t: sku: product.first_available_variant.sku -}}
-                  {%- else -%}
-                  {{- 'request-form.message' | t -}}
-                  {%- endif -%}
-                  </textarea>
+                  <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
             <span class="license light-text"><a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
             <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
         </div>
@@ -464,5 +458,20 @@
 {{ '/styles/tilda-zoom-1.0.css' | static_asset_url | stylesheet_tag }}
 {{ '/styles/tooltipster.css' | static_asset_url | stylesheet_tag }}
 {% endif %}
+<!— Chatra {literal} —>
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'vma9nRgfoHoAfnxHS';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+        + '//call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!— /Chatra {/literal} —>
 </body>
 </html>

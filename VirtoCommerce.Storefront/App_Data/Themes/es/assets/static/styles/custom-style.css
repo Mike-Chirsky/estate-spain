@@ -1178,6 +1178,7 @@ h2.blog-header
 #contact-us-form-succes-sidebar i,
 #contact-us-form-succes i,
 #callback-succes i,
+#partner-form-succes i,
 #subscribe-ok
 {
     color: #FF9800;
@@ -1187,6 +1188,7 @@ h2.blog-header
 #contact-us-form-fail-sidebar i,
 #contact-us-form-fail i,
 #callback-fail i,
+#partner-form-fail i,
 #subscribe-fail
 {
     color: #BF4600;

@@ -155,7 +155,8 @@ namespace VirtoCommerce.Storefront.Owin
                 workContext.CurrentStore = GetStore(context, workContext.AllStores);
                 workContext.CurrentLanguage = GetLanguage(context, workContext.AllStores, workContext.CurrentStore);
                 // Initialize request specific properties
-                workContext.CurrentStore = GetStore(context, workContext.AllStores);
+                //TODO: maybe dublicate?
+                //workContext.CurrentStore = GetStore(context, workContext.AllStores);
                 #if DEBUG
                 //TODO: REMOVE WHEN MERGE WITH DEV
                 if (ConfigurationManager.AppSettings["forceStoreRedirect"] != null)

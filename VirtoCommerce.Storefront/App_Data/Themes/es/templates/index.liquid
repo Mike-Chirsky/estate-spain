@@ -26,7 +26,16 @@
       </div>
       <div>
          <div class="col-md-6">{{ 'index.h1.col1' | t }}</div>
-         <div class="col-md-6">{{ 'index.h1.col2' | t }}</div>
+         <div class="col-md-6">
+          {{ 'index.h1.col2' | t }}
+          <div class="header-about">
+            <div class="link-list-about" style="margin-top:10px;">
+              <a onclick="slideToBlock('#types')">Типы недвижимости</a>&nbsp;
+              <a onclick="slideToBlock('.about-text')">Об агенстве</a>&nbsp;
+              <a onclick="slideToBlock('#price')">Цены на недвижимость</a>
+            </div>
+          </div>
+         </div>
       </div>
    </div>
    <div class="row">
@@ -112,7 +121,7 @@
       </div>
    </div>
    <div>
-      <h2 class="text-center padding15">{{'index.type.header' | t}}</h2>
+      <h2 class="text-center padding15" id="types">{{'index.type.header' | t}}</h2>
       <div>
          {{ 'index.type.text' | t }}
       </div>
@@ -188,7 +197,7 @@
       </div>
    </div>
    <div class="row">
-      <h2 class="text-center padding15">{{'index.price.header' | t}}</h2>
+      <h2 class="text-center padding15" id="price">{{'index.price.header' | t}}</h2>
       <div>
          <div class="col-md-6">
           {{ 'index.price.col1' | t }}

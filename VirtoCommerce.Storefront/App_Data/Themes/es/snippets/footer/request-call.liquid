@@ -16,7 +16,7 @@
                         <input data-property="userName" type="text" class="form-control" placeholder="{{'callback-form.name-ph' | t}}"/>
                     </div>
                     <div class="col-md-6">
-                        <input data-property="userPhone" type="text" class="form-control" placeholder="{{'callback-form.phone-ph' | t}}"/>
+                        <input data-property="userPhone" type="text" class="form-control" placeholder="{{'callback-form.phone-ph' | t}}" required/>
                     </div>
                     {% if product %}
                         <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
