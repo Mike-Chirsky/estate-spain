@@ -8,7 +8,7 @@
   {%- endfor -%}
   <meta property="og:product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}" />
   <meta property="og:product:price:currency" content="{{ shop.currency }}" />
-{%- elsif template contains 'article' -%}
+{%- elseif template contains 'article' -%}
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ article.title | strip_html | escape }}" />
   {%- if article.image_url -%}
@@ -30,9 +30,23 @@
   <meta property="og:image" content="http:{{ src }}" />
   <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- else-%}
+  {%- if template contains 'page' -%}
+    {%- if page.handle == 'opros' -%}
+  
+      {%- assign src = 'images/opros-header.jpg' | static_asset_url | full_url  | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+      <meta property="og:image" content="http:{{ src }}" />
+      <meta property="og:image:secure_url" content="https:{{ src }}" />
+    {%- endif -%}
+    {%- if page.handle == 'partners' -%}
+      {%- assign src =  'images/parthner_header_img.jpg' | static_asset_url | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+      <meta property="og:image" content="http:{{ src }}" />
+      <meta property="og:image:secure_url" content="https:{{ src }}" />
+    {%- endif -%}
+  {%- else -%}
   {%- if settings.logo_use_image -%}
   <meta property="og:image" content="{{ 'logo.png' | static_asset_url | full_url }}" />
   {%- comment -%}<meta property="og:image:secure_url" content="{{ 'logo.png' | static_asset_url | full_url }}">{%- endcomment -%}
+  {%- endif -%}
   {%- endif -%}
   {%- endif -%}
 {%- endif -%}
