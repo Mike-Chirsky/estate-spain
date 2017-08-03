@@ -211,8 +211,8 @@ namespace VirtoCommerce.Storefront.Services
             var searchCriteria = criteria.ToProductSearchCriteriaDto(workContext);
 
             // OZ: Improve performance
-            if(searchCriteria.PriceRange==null)
-                searchCriteria.Currency = null;
+            //if(searchCriteria.PriceRange==null)
+            //    searchCriteria.Currency = null;
             //searchCriteria.StoreId = null;
             //searchCriteria.Pricelists = null;
 
