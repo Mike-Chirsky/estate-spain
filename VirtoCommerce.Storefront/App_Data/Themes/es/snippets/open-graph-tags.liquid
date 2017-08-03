@@ -2,7 +2,9 @@
   <meta property="og:type" content="product" />
   <meta property="og:title" content="{{ product.custom_title | strip_html | escape }}" />
   {%- for image in product.images limit:1 -%}
-  <meta property="og:image" content="https:{{ image.src | img_url }}" />
+  {%- assign src = image.src | img_url: 'thumb' | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- endfor -%}
   <meta property="og:product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}" />
   <meta property="og:product:price:currency" content="{{ shop.currency }}" />
@@ -25,8 +27,8 @@
   <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- elseif template contains 'collection' -%}
   {%- assign src = collection.header_image | img_url: 'thumb' | full_url | split: '"' | first | remove: 'https:' | remove: 'http:' -%}
-  <meta property="og:image" content="https:{{ src }}" />
-  <meta property="og:image:secure_url" content="http:{{ src }}" />
+  <meta property="og:image" content="http:{{ src }}" />
+  <meta property="og:image:secure_url" content="https:{{ src }}" />
   {%- else-%}
   {%- if settings.logo_use_image -%}
   <meta property="og:image" content="{{ 'logo.png' | static_asset_url | full_url }}" />
