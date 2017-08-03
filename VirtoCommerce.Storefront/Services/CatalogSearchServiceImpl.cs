@@ -214,8 +214,7 @@ namespace VirtoCommerce.Storefront.Services
             if(searchCriteria.PriceRange==null)
                 searchCriteria.Currency = null;
             //searchCriteria.StoreId = null;
-            searchCriteria.Pricelists = null;
-            //
+            //searchCriteria.Pricelists = null;
 
             var result = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(searchCriteria);
             //await LoadAllValuesForSelectedTerms(criteria, workContext, result);
