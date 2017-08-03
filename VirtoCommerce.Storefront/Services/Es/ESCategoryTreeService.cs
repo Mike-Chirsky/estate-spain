@@ -34,6 +34,7 @@ namespace VirtoCommerce.Storefront.Services.Es
         private const string ConditionKey = "Conditions";
         private const string OtherTypeKey = "OtherType";
         private const string CitiesKey = "Cities";
+        private const string SinglePageKey = "SinglePage";
 
         public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager)
         {
@@ -109,6 +110,10 @@ namespace VirtoCommerce.Storefront.Services.Es
                 await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
                 // Step 5. Load Other type
                 await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey);
+
+                // Step 6 Load Single pages
+                await LoadChildrenFromCategory(new Category[] { new Category() }, SinglePageKey);
+
             }
             finally
             {
@@ -213,6 +218,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     return ConfigurationManager.AppSettings["ConditionCategoryId"];
                 case OtherTypeKey:
                     return ConfigurationManager.AppSettings["OtherTypeCategoryId"];
+                case SinglePageKey:
+                    return ConfigurationManager.AppSettings["SinglePageCategoryId"];
             }
             return string.Empty;
         }
@@ -282,7 +289,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             
             return category;
         }
-        
+
         private ICategoryTreeConverter GetConverterByPath(string path)
         {
             if (path.EndsWith(TagsKey))
@@ -308,6 +315,10 @@ namespace VirtoCommerce.Storefront.Services.Es
             else if (path.EndsWith(ConditionKey))
             {
                 return new ConditionCategoryTreeConverter();
+            }
+            else if (path.EndsWith(SinglePageKey))
+            {
+                return new SinglePageCategoryTreeConverter();
             }
             return new DefaultCategoryTreeConverter();
         }

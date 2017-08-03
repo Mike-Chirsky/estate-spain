@@ -10546,7 +10546,7 @@ input[type="checkbox"]:checked:before {
     padding: 10px 12px;
     position: fixed;
     bottom: 10px;
-    right: -60px;
+    /*right: -60px;*/
     z-index: 100;
     opacity: 0;
     transition: all .2s ease-in-out;
@@ -10565,7 +10565,7 @@ input[type="checkbox"]:checked:before {
     padding: 10px 12px;
     position: fixed;
     bottom: 10px;
-    right: -125px;
+    /*right: -125px;*/
     z-index: 100;
     opacity: 0;
     transition: all .2s ease-in-out;
@@ -10573,19 +10573,19 @@ input[type="checkbox"]:checked:before {
     -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
-    margin-right: 51px;
+    margin-left: 51px;
     opacity: 0;
     z-index: 102;
 }
 
 .islive{
-    right:15px;  
+    left:15px;  
     opacity:0.7;
 }
 
 .contactformwrapper{
     position: fixed;
-    right: 45px;
+    left: 15px;
     bottom: 80px;
     z-index: 300;
     transition: all .2s ease-in-out;
@@ -10615,7 +10615,7 @@ input[type="checkbox"]:checked:before {
     border-right: 19px solid transparent;
     border-top: 19px solid #f0f0f0;
     bottom: -19px;
-    right: 26px;
+    left: 65px;
     position: absolute;
 }
 
@@ -10626,8 +10626,8 @@ input[type="checkbox"]:checked:before {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid #fff;
-    bottom: -15px;
-    right: 30px;
+    bottom: -16px;
+    left: 70px;
     position: absolute;
 }
 

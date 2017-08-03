@@ -1086,6 +1086,7 @@
     <Compile Include="Services\Es\Converters\DefaultCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\OtherTypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\RegionCategoryTreeConverter.cs" />
+    <Compile Include="Services\Es\Converters\SinglePageCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TagCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\TypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ESCategoryTreeService.cs" />
