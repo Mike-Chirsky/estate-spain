@@ -105,17 +105,17 @@ $(document).ready(function () {
 
     $("#subcribe-action").click(function () {
 
-        if (valideEmail(jQuery("#subscribe-email").val())) {
-            jQuery("#subscribe-email").removeClass("error");
-            jQuery("#subscribe-form").hide();
-            jQuery("#subscribe-spinner").show();
-            jQuery.post('storefrontapi/getresponse/subscribe', { email: jQuery("#subscribe-email").val() }, function (data) {
-                jQuery("#subscribe-spinner").hide();
-                jQuery("#subscribe-ok").show();
+        if (valideEmail($("#subscribe-email").val())) {
+            $("#subscribe-email").removeClass("error");
+            $("#subscribe-form").hide();
+            $("#subscribe-spinner").show();
+            $.post('storefrontapi/getresponse/subscribe', { email: $("#subscribe-email").val() }, function (data) {
+                $("#subscribe-spinner").hide();
+                $("#subscribe-ok").show();
                 sendGAEvent("Email subscription form", "Submitted success", "Footer");
             }).fail(function () {
-                jQuery("#subscribe-spinner").hide();
-                jQuery("#subscribe-fail").show();
+                $("#subscribe-spinner").hide();
+                $("#subscribe-fail").show();
                 sendGAEvent("Email subscription form", "Submitted fail", "Footer");
             });
         }
@@ -162,7 +162,7 @@ $(document).ready(function () {
             var el = $(item);
             var prData = el.attr('data-property');
             var prRequaired = el.attr("required");
-            if (prRequaired && (el.val() === '' || (el.attr('type') === 'email' && !valideEmail(el.val())))) {
+            if (prRequaired && (el.val() === '' || (el.attr('data-property') === 'userEmail' && !valideEmail(el.val())))) {
                 el.addClass('error');
                 isError = true;
             }
@@ -174,6 +174,7 @@ $(document).ready(function () {
         if (isError) {
             return;
         }
+        params['fromUrl'] = window.location.href;
         $("#partner-form").hide();
         $("#partner-form-spinner").show();
         $.ajax({
@@ -188,6 +189,7 @@ $(document).ready(function () {
             error: function (err) {
                 $("#partner-form-spinner").hide();
                 $("#partner-form-fail").show();
+                $("#partner-form").show();
                 sendGAEvent("Call me form", "Submitted fail", "Bottom");
             },
             contentType: "application/json",
@@ -202,7 +204,7 @@ $(document).ready(function () {
         $.each(inputs, function (index, item) {
             var el = $(item);
             var property = el.attr('data-property');
-            if (el.val() === '' && property === 'phone') {
+            if (el.val() === '' && property === 'userPhone') {
                 el.addClass("error");
                 isError = true;
             }
@@ -222,13 +224,14 @@ $(document).ready(function () {
             url: 'storefrontapi/forms',
             data: JSON.stringify(params),
             success: function (data) {
-                jQuery("#callback-spinner").hide();
-                jQuery("#callback-succes").show();
+                $("#callback-spinner").hide();
+                $("#callback-succes").show();
                 sendGAEvent("Call me form", "Submitted success", "Bottom");
             },
             error: function (err) {
-                jQuery("#callback-spinner").hide();
-                jQuery("#callback-fail").show();
+                $("#callback-spinner").hide();
+                $("#callback-fail").show();
+                $("#callback-form").show();
                 sendGAEvent("Call me form", "Submitted fail", "Bottom");
             },
             contentType: "application/json",
@@ -281,13 +284,14 @@ $(document).ready(function () {
             url: 'storefrontapi/forms',
             data: JSON.stringify(data),
             success: function (data) {
-                jQuery("#contact-us-form-spinner" + prefix).hide();
-                jQuery("#contact-us-form-succes" + prefix).show();
+                $("#contact-us-form-spinner" + prefix).hide();
+                $("#contact-us-form-succes" + prefix).show();
                 sendGAEvent("Contact me form", "Submitted success", null, prefix);
             },
             error: function (err) {
-                jQuery("#contact-us-form-spinner" + prefix).hide();
-                jQuery("#contact-us-form-fail" + prefix).show();
+                $("#contact-us-form-spinner" + prefix).hide();
+                $("#contact-us-form-fail" + prefix).show();
+                $("#contact-us-form" + prefix).show();
                 sendGAEvent("Contact me form", "Submitted fail", null, prefix);
             },
             contentType: "application/json",
