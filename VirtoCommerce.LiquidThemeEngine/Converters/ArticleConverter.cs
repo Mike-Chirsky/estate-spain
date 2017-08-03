@@ -31,6 +31,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
             retVal.Comments = new MutablePagedList<Comment>(new List<Comment>());
             retVal.SliderImages = article.SliderImages;
             retVal.ShowInMarketBlock = article.ShowInMarketBlock;
+            retVal.ImageUrl = article.ImageUrl;
             if (article.Category != null)
             {
                 retVal.Category = article.Category.Handelize();
