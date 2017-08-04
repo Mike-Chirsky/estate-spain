@@ -54,6 +54,10 @@ namespace VirtoCommerce.Storefront.Services.Es
             try
             {
                 await _lockObject.WaitAsync();
+                if (_seoCategoryDict != null)
+                {
+                    return _seoCategoryDict;
+                }
                 return await GenerateTree();
             }
             finally
@@ -417,7 +421,13 @@ namespace VirtoCommerce.Storefront.Services.Es
                     {
                         categories[i + 1].Parent = convertCategory;
                     }
+                    categories[i] = convertCategory;
                 }
+                lock(_seoCategoryDict)
+                {
+                    _seoCategoryDict[path] = categories.Last();
+                }
+                
                 if (_cacheManager != null)
                 {
                     _cacheManager.Clear();
