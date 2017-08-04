@@ -14,6 +14,8 @@ namespace VirtoCommerce.Storefront.Model
         /// </summary>
         public Dictionary<string, List<Tuple<string, string>>> FilterSeoLinks { get; set; }
 
+        public Dictionary<string, Category> CategoryRoutes { set; get; }
+
         public string Search { set; get; }
     }
 }
