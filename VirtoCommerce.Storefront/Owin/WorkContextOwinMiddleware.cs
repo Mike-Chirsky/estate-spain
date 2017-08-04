@@ -394,7 +394,7 @@ namespace VirtoCommerce.Storefront.Owin
             try
             {
                 var searchService = Container.Resolve<ICategoryTreeService>();
-                await searchService.GetTree();
+                workContext.CategoryRoutes = await searchService.GetTree();
                 LastExceptionBuildTree = null;
                 LastTimeFialBuildTree = null;
             }
