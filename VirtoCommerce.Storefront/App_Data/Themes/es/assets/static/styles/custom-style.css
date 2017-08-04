@@ -1775,3 +1775,10 @@ ul.user-terms-list
         padding: 5px 2.5px;
     }
 }
+.pagination-custom-mobile a,
+.pagination-custom a{
+    cursor: pointer;
+}
+.busy-indicator-product{
+    display: none;
+}

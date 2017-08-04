@@ -11,23 +11,6 @@
     $('html, body').animate({ scrollTop: el.offset().top - offest }, 500);
     return false;
 }
-function sortBy(value) {
-    if (window.location.href.indexOf("?") === -1) {
-        window.location.href += "?sort_by=" + value;
-    }
-    else {
-        var locationParts = window.location.href.split('?');
-        var paramsParts = locationParts[1].split('&');
-        var paramsStr = "";
-        paramsParts.forEach(function (item) {
-            if (item.indexOf("sort_by") === -1) {
-                paramsStr += item + "&";
-            }
-        });
-        paramsStr += "sort_by=" + value;
-        window.location.href = locationParts[0] + "?" + paramsStr;
-    }
-}
 
 function valideEmail(str)
 {

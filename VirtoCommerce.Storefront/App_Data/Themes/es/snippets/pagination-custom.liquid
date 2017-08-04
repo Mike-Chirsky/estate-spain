@@ -1,12 +1,12 @@
 <div class="pagination-container clearfix">
   <ul class="pagination-custom">
     {% if paginate.previous %}
-      <li><a href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}">&larr;</a></li>
+      <li><a onclick="loadListProducts('{{paginate.previous.url}}', true)" title="{{ paginate.previous.title }}">&larr;</a></li>
     {% endif %}
     {% for part in paginate.custom_parts %}
       {% if part.is_link %}
         <li>
-          <a href="{{ part.url }}" title="">{{ part.title }}</a>
+          <a onclick="loadListProducts('{{part.url}}', true)" title="{{ part.title }}">{{ part.title }}</a>
         </li>
       {% else %}
       
@@ -18,12 +18,12 @@
       {% endif %}
     {% endfor %}
     {% if paginate.next %}
-      <li><a href="{{ paginate.next.url }}" title="{{ paginate.next.title }}">&rarr;</a></li>
+      <li><a onclick="loadListProducts('{{paginate.next.url}}', true)" title="{{ paginate.next.title }}">&rarr;</a></li>
     {% endif %}
   </ul>
   <ul class="pagination-custom-mobile">
     {% if paginate.previous %}
-      <li><a href="{{ paginate.previous.url }}" title="{{ paginate.previous.title }}">&larr;</a></li>
+      <li><a onclick="loadListProducts('{{paginate.previous.url}}', true)" title="{{ paginate.previous.title }}">&larr;</a></li>
     {% endif %}
     {% for part in paginate.custom_parts %}
       {% if part.title == paginate.current_page %}
@@ -31,7 +31,7 @@
       {% endif %}
     {% endfor %}
     {% if paginate.next %}
-      <li><a href="{{ paginate.next.url }}" title="{{ paginate.next.title }}">&rarr;</a></li>
+      <li><a onclick="loadListProducts('{{ paginate.next.url }}', true)" title="{{ paginate.next.title }}">&rarr;</a></li>
     {% endif %}
   </ul>
 </div>

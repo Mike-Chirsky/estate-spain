@@ -37,6 +37,15 @@
     </ul>
 </div>
 {%- endif -%}
+<div class="busy-indicator-product">
+    <div class="spinner" id="contact-us-form-spinner-footer">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
 <div class="product-list row" id="list-products">
     {% paginate collection.products by 36 %}
         {% assign link_index = collection.products.size | divided_by: 2 %}
