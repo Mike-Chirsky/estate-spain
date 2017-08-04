@@ -511,6 +511,7 @@
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\dense.js" />
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\encoder.js" />
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\control.js" />
+    <Content Include="App_Data\Themes\es\assets\static\js\theme-js\loader.js" />
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\map\infobox.js" />
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\jquery.lazyload.js" />
     <Content Include="App_Data\Themes\es\assets\static\js\theme-js\jquery.nicescroll.js" />

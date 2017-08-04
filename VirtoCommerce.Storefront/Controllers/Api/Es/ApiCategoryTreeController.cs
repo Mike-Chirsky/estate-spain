@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Common;
+using VirtoCommerce.Storefront.Owin;
 using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Controllers.Api.Es
@@ -25,8 +26,20 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             {
                 return new HttpStatusCodeResult(403);
             }
-            await _categoryTreeService.ClearTree();
-            await _categoryTreeService.GetTree();
+            await _categoryTreeService.BuildTree();
+            WorkContextOwinMiddleware.LastExceptionBuildTree = null;
+            WorkContextOwinMiddleware.LastTimeFialBuildTree = null;
+            return new HttpStatusCodeResult(200);
+        }
+        //  GET: /storefrontapi/categorytree/rebuild/element/{key}/{path}
+        public async Task<ActionResult> RegenerateElemet(string key, string path)
+        {
+            path = path.Replace("_", "/");
+            if (key != "15117b282328146ac6afebaa8acd80e7")
+            {
+                return new HttpStatusCodeResult(403);
+            }
+            await _categoryTreeService.RebuildElement(path);
             return new HttpStatusCodeResult(200);
         }
     }
