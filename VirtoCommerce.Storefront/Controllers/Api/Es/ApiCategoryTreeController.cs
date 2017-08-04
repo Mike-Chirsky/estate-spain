@@ -32,14 +32,14 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             return new HttpStatusCodeResult(200);
         }
         //  GET: /storefrontapi/categorytree/rebuild/element/{key}/{path}
-        public async Task<ActionResult> RegenerateElemet(string key, string path)
+        public async Task<ActionResult> RegenerateElemet(string key, string url)
         {
-            path = path.Replace("_", "/");
+            url = url.Replace("_", "/");
             if (key != "15117b282328146ac6afebaa8acd80e7")
             {
                 return new HttpStatusCodeResult(403);
             }
-            await _categoryTreeService.RebuildElement(path);
+            await _categoryTreeService.RebuildElement(url);
             return new HttpStatusCodeResult(200);
         }
     }
