@@ -6359,7 +6359,6 @@ listing_actions a{
     margin-bottom: 13px;
     font-size: 13px;
     line-height: 22px;
-    float:left;
     width:100%;
 }
 
@@ -12350,7 +12349,6 @@ img.alignleft {
 
 .single-content img, .entry-summary img,
 .comment-content img, .widget img, .wp-caption {   
-    max-width: 100%;
     height:auto;
 
 }
