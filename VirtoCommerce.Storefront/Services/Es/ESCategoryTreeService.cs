@@ -13,6 +13,7 @@ using System.Threading;
 using System.Configuration;
 using VirtoCommerce.Storefront.AutoRestClients.CatalogModuleApi;
 using System.Diagnostics;
+using System.Collections.Concurrent;
 
 namespace VirtoCommerce.Storefront.Services.Es
 {
@@ -21,8 +22,8 @@ namespace VirtoCommerce.Storefront.Services.Es
         private readonly SemaphoreSlim _lockObject = new SemaphoreSlim(1);
         private readonly ICatalogModuleApiClient _catalogModuleApi;
         private readonly Func<WorkContext> _workContextFactory;
-        private static Category _loadedCategory;
-        private static Dictionary<string, Category> _seoCategoryDict = new Dictionary<string, Category>();
+        private static Dictionary<string, Category> _seoCategoryDict;
+        private static ConcurrentBag<Exception> _buildTreeExceptions = new ConcurrentBag<Exception>();
         private Language _language;
         private Currency _currency;
         private Store _store;
@@ -44,85 +45,115 @@ namespace VirtoCommerce.Storefront.Services.Es
 
         }
 
-        public async Task<Category> GetTree()
+        public async Task<Dictionary<string, Category>> GetTree()
         {
-            await _lockObject.WaitAsync();
-            if (_loadedCategory != null)
+            if (_seoCategoryDict != null)
             {
-                _lockObject.Release();
-                return _loadedCategory;
+                return _seoCategoryDict;
             }
             try
             {
-                if (_cacheManager != null)
+                await _lockObject.WaitAsync();
+                if (_seoCategoryDict != null)
                 {
-                    _cacheManager.Clear();
+                    return _seoCategoryDict;
                 }
-                _loadedCategory = new Category();
-                // init data for product converter
-                var wc = _workContextFactory();
-                _language = wc.CurrentLanguage;
-                _currency = wc.CurrentCurrency;
-                _store = wc.CurrentStore;
-                // Load region + estate type
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey));
-                // Load region + tags
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
-                // Load region + condition
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
-                // Load region + estate type + tags
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, TagsKey)));
-                // Load region + estate type + condition
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey)));
-
-
-
-                // Load cities + tags
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey)));
-                
-                // load cities + condition
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey)));
-                
-                // load cities + estate type
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey)));
-                
-                // Load cities + estate type + conditions
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, ConditionKey))));
-
-                // Load cities + estate type + tags
-                await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey).ContinueWith(t1 => LoadCities(t1.Result).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey))));
-
-                // Step 2. Load Estatetypes
-                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey);
-
-                // estatetype + tag
-                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
-                // estatetype + Condition
-                await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey));
-
-                // Step 3. Load Tags
-                await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey);
-
-                // Step 4. Load Conditions
-                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey);
-                
-                // Condition + tag
-                await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey));
-                // Step 5. Load Other type
-                await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey);
-
-                // Step 6 Load Single pages
-                await LoadChildrenFromCategory(new Category[] { new Category() }, SinglePageKey);
-
+                return await GenerateTree();
             }
             finally
             {
                 _lockObject.Release();
             }
-            return _loadedCategory;
         }
 
-        private async Task<Category[]> LoadChildrenFromCategory(Category[] parents, string productType)
+        public async Task<Dictionary<string, Category>> BuildTree()
+        {
+            try
+            {
+                await _lockObject.WaitAsync();
+                return await GenerateTree();
+            }
+            finally
+            {
+                _lockObject.Release();
+            }
+        }
+
+        private async Task<Dictionary<string, Category>> GenerateTree()
+        {
+            var tempSeoDict = new Dictionary<string, Category>();
+            if (_cacheManager != null)
+            {
+                _cacheManager.Clear();
+            }
+            // init data for product converter
+            var wc = _workContextFactory();
+            _language = wc.CurrentLanguage;
+            _currency = wc.CurrentCurrency;
+            _store = wc.CurrentStore;
+
+            // Load region + estate type
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), EstateTypeKey, tempSeoDict);
+            // Load region + tags
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), TagsKey, tempSeoDict);
+            // Load region + condition
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), ConditionKey, tempSeoDict);
+            // Load region + estate type + tags
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, TagsKey, tempSeoDict)));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), EstateTypeKey, tempSeoDict), TagsKey, tempSeoDict);
+            // Load region + estate type + condition
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict).ContinueWith(t1 => LoadChildrenFromCategory(t1.Result, ConditionKey, tempSeoDict)));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), EstateTypeKey, tempSeoDict), ConditionKey, tempSeoDict);
+            // Load cities + tags
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => HandleFailTask(t1, LoadCities(t1.Result, tempSeoDict)).ContinueWith(t => HandleFailTask(t, LoadChildrenFromCategory(t.Result, TagsKey, tempSeoDict)).ContinueWith(t2 => HandleFailTask(t2, null))));
+            await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), TagsKey, tempSeoDict);
+            // load cities + condition
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey, tempSeoDict)));
+            await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), ConditionKey, tempSeoDict);
+            // load cities + estate type
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict)));
+            await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), EstateTypeKey, tempSeoDict);
+
+            // Load cities + estate type + conditions
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, ConditionKey, tempSeoDict))));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), EstateTypeKey, tempSeoDict), ConditionKey, tempSeoDict);
+            // Load cities + estate type + tags
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, TagsKey, tempSeoDict))));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), EstateTypeKey, tempSeoDict), TagsKey, tempSeoDict);
+
+            // Step 2. Load Estatetypes
+            await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey, tempSeoDict);
+
+
+            // estatetype + tag
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey, tempSeoDict), TagsKey, tempSeoDict);
+            // estatetype + Condition
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, ConditionKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, EstateTypeKey, tempSeoDict), ConditionKey, tempSeoDict);
+
+            // Step 3. Load Tags
+            await LoadChildrenFromCategory(new Category[] { new Category() }, TagsKey, tempSeoDict);
+
+            // Step 4. Load Conditions
+            await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey, tempSeoDict);
+
+            // Condition + tag
+            //await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, TagsKey, tempSeoDict));
+            await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, ConditionKey, tempSeoDict), TagsKey, tempSeoDict);
+            // Step 5. Load Other type
+            await LoadChildrenFromCategory(new Category[] { new Category() }, OtherTypeKey, tempSeoDict);
+
+            // Step 6 Load Single pages
+            await LoadChildrenFromCategory(new Category[] { new Category() }, SinglePageKey, tempSeoDict);
+            _seoCategoryDict = tempSeoDict;
+            return _seoCategoryDict;
+        }
+
+        private async Task<Category[]> LoadChildrenFromCategory(Category[] parents, string productType, Dictionary<string, Category> seoDict)
         {
             var result = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
                 new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
@@ -164,7 +195,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                 if (result.Items != null)
                 {
 
-                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p, listExceptions)).Where(x => x != null);
+                    var children = result.Items.Select(p => ConvertProductToCategory(parent, productType, p, listExceptions, seoDict)).Where(x => x != null);
                     if (parent.Categories != null)
                         categories.AddRange(parent.Categories);
                     categories.AddRange(children);
@@ -172,13 +203,12 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
-
             return parents.SelectMany(p => p.Categories).ToArray();
         }
 
-        private async Task<Category[]> LoadCities(Category[] parents)
+        private async Task<Category[]> LoadCities(Category[] parents, Dictionary<string, Category> seoDict)
         {
-            var resultCities = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+           var resultCities = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
                new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
                {
                    CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
@@ -194,7 +224,7 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>())).Where(x => x != null).ToList();
+                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>(), seoDict)).Where(x => x != null).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
@@ -260,11 +290,10 @@ namespace VirtoCommerce.Storefront.Services.Es
             return string.Empty;
         }
 
-        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.CatalogModuleApi.Models.Product dtoProduct, List<Product> listExceptions)
+        private Category ConvertProductToCategory(Category parent, string productType, AutoRestClients.CatalogModuleApi.Models.Product dtoProduct, List<Product> listExceptions, Dictionary<string, Category> seoDict)
         {
             var path = string.Join("/", parent.Path, productType);
 
-            // TODO: Find Converter By Seo Path
             var converter = GetConverterByPath(path);
 
             var product = dtoProduct.ToProduct(_language, _currency, _store);
@@ -279,11 +308,11 @@ namespace VirtoCommerce.Storefront.Services.Es
             if (category == null)
                 return null;
             var seoPath = category.SeoPath.Trim('/');
-            lock (_seoCategoryDict)
+            lock (seoDict)
             {
-                if (!_seoCategoryDict.ContainsKey(seoPath))
+                if (!seoDict.ContainsKey(seoPath))
                 {
-                    _seoCategoryDict.Add(seoPath, category);
+                    seoDict.Add(seoPath, category);
                 }
             }
             
@@ -336,8 +365,75 @@ namespace VirtoCommerce.Storefront.Services.Es
         public async Task ClearTree()
         {
             await _lockObject.WaitAsync();
-            _seoCategoryDict = new Dictionary<string, Category>();
-            _loadedCategory = null;
+            _seoCategoryDict = null;
+            _lockObject.Release();
+        }
+
+        public async Task RebuildElement(string path)
+        {
+            await _lockObject.WaitAsync();
+            path = path.Trim('/');
+            if (_seoCategoryDict.ContainsKey(path))
+            {
+                var obj = _seoCategoryDict[path];
+                var productIds = new List<string>();
+                var categories = new List<Category>();
+                var current = obj;
+                do
+                {
+                    productIds.Add(current.Id);
+                    categories.Add(current);
+                    current = current.Parent.Parent != null ? current.Parent : null;
+                } while (current != null);
+                var products = _catalogModuleApi.CatalogModuleProducts.GetProductByIds(productIds, 
+                    (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString())
+                    .Select(x => x.ToProduct(_language, _currency, _store));
+                categories.Reverse();
+                for (int i = 0; i < categories.Count; i++)
+                {
+                    var category = categories[i];
+                    var context = new ConverterContext
+                    {
+                        Parent = category.Parent,
+                        Path = category.Path,
+                        ProductType = category.ProductType
+                    };
+                    var exceptionOutline = ProductPathToOutlineException(category.Path);
+                    if (!string.IsNullOrEmpty(exceptionOutline))
+                    {
+                        var resultExceptions = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+                            new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
+                            {
+                                CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
+                                ResponseGroup = "1619",
+                                Outline = exceptionOutline,
+                                Take = 10000,
+                                Skip = 0,
+                                WithHidden = false
+                            });
+                        if (resultExceptions.Items != null)
+                        {
+                            context.ListExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                        }
+                    }
+                    var convertCategory = GetConverterByPath(category.Path).ToCategory(context, products.First(x => x.Id == category.Id));
+                    if (i + 1 < categories.Count)
+                    {
+                        categories[i + 1].Parent = convertCategory;
+                    }
+                    categories[i] = convertCategory;
+                }
+                lock(_seoCategoryDict)
+                {
+                    _seoCategoryDict[path] = categories.Last();
+                }
+                
+                if (_cacheManager != null)
+                {
+                    _cacheManager.Clear();
+                    //_cacheManager.Remove($"SeoProducts:Product{obj.Id}");
+                }
+            }
             _lockObject.Release();
         }
     }

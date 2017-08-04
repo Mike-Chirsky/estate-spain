@@ -10,8 +10,10 @@ namespace VirtoCommerce.Storefront.Services.Es
     public interface ICategoryTreeService
     {
         Category FindByPath(string path);
-        Task<Category> GetTree();
+        Task<Dictionary<string, Category>> GetTree();
+        Task<Dictionary<string, Category>> BuildTree();
         Dictionary<string, Category> GetSeoDict();
         Task ClearTree();
+        Task RebuildElement(string path);
     }
 }

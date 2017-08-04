@@ -47,6 +47,8 @@ namespace VirtoCommerce.Storefront.Owin
         protected static readonly RequireHttps RequireHttps = GetRequireHttps();
         protected static readonly PathString[] OwinIgnorePathsStrings = GetOwinIgnorePathStrings();
         protected static readonly Country[] AllCountries = GetAllCounries();
+        public static DateTime? LastTimeFialBuildTree { set; get; }
+        public static Exception LastExceptionBuildTree { set; get; }
         /// <summary>
         /// Containts all seo keywords for filters
         /// </summary>
@@ -382,11 +384,26 @@ namespace VirtoCommerce.Storefront.Owin
         }
 
 
-        private Task LoadCategoryTree(WorkContext workContext)
+        private async Task LoadCategoryTree(WorkContext workContext)
         {
-            var searchService = Container.Resolve<ICategoryTreeService>();
-            //var searchClient = Container.Resolve<ISearchApiModuleApiClient>();
-            return searchService.GetTree();
+            // check init fail category tree
+            if (LastTimeFialBuildTree.HasValue && (DateTime.UtcNow - LastTimeFialBuildTree.Value).TotalMinutes < 2)
+            {
+                throw LastExceptionBuildTree;
+            }
+            try
+            {
+                var searchService = Container.Resolve<ICategoryTreeService>();
+                await searchService.GetTree();
+                LastExceptionBuildTree = null;
+                LastTimeFialBuildTree = null;
+            }
+            catch (Exception ex)
+            {
+                LastTimeFialBuildTree = DateTime.UtcNow;
+                LastExceptionBuildTree = ex;
+                throw;
+            }
         }
 
 

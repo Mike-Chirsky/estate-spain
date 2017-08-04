@@ -65,7 +65,8 @@ namespace VirtoCommerce.Storefront
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.contentcarousel.js")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/slider-custom.js")
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/jquery.mousewheel.js")
-                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/filter.js"));
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/filter.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/loader.js"));
 
             bundles.Add(CreateScriptBundle("~/theme-bundler/scripts/map")
                     .IncludeDirectory("~/App_Data/Themes/es/assets/static/js/theme-js/map", "*.js"));
