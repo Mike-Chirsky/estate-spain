@@ -403,11 +403,25 @@ function getSeoRequest(terms) {
     }
     // type
     else if (hasEstateType) {
-        returnPath = terms['estatetype'];
-        if (terms.hasOwnProperty('type')) {
-            terms['type'] = getSeoName(terms['type'], "other_type_dict");
+        
+        if (terms['estatetype'] === 'villy-doma') {
+            if (terms.hasOwnProperty('type')) {
+                if (terms.hasOwnProperty('type')) {
+                    terms['type'] = getSeoName(terms['type'], "other_type");
+                }
+                returnPath += terms['type'] + '?estatetype=villy-doma';
+            }
+            else {
+                returnPath += 'villy?estatetype=villy-doma';
+            }
         }
-        returnPath += getRequstParams(['estatetype'], terms);
+        else {
+            if (terms.hasOwnProperty('type')) {
+                terms['type'] = getSeoName(terms['type'], "other_type_dict");
+            }
+            returnPath = terms['estatetype'];
+            returnPath += getRequstParams(['estatetype'], terms);
+        }
     }
     // condition
     else if (hasCondition) {
