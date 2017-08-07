@@ -31,12 +31,13 @@
 </div>
 <script type="text/javascript">
   setTimeout(function(){
-    if(!createSliders()){
-        setTimeout(function(){createSliders()}, 100);
+    if(!createSliders{{ block_id | replace: '-','_' }}())
+    {
+        setTimeout(function(){createSliders{{ block_id | replace: '-','_' }}()}, 100);
     }
   }, 100);
 
-  function createSliders()  {
+  function createSliders{{ block_id | replace: '-','_' }}()  {
     if (typeof createCustomSlider !== "undefined") {
         createCustomSlider("#marketblock-{{ block_id }}", "{{ market_id}}", "{{ market_url}}");
         createCustomSliderMobile("#marketblock-{{ block_id }}-mobile", "{{ market_id}}", "{{ market_url}}");
