@@ -552,6 +552,10 @@ function loadFoundResult(terms, callback) {
     if (loadResultObj != null && loadResultObj.readyState != 4) {
         loadResultObj.abort();
     }
+    if (terms.hasOwnProperty("city") && terms.hasOwnProperty("region"))
+    {
+        delete terms["region"];
+    }
     $("#send-main-filter").addClass("loading");
     $("#send-main-filter-mobile").addClass("loading");
     loadResultObj = $.ajax({
