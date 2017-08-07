@@ -30,7 +30,7 @@
             {% endif %}
             {%- endfor -%}
             </div>
-            <a href="{{ product.url | absolute_url }}"> </a><a class="left  carousel-control" href="#property_unit_carousel_{{product.id}}" data-slide="prev">
+            <a class="left  carousel-control" href="#property_unit_carousel_{{product.id}}" data-slide="prev">
                 <i class="fa fa-angle-left"></i>
             </a>
             <a class="right  carousel-control" href="#property_unit_carousel_{{product.id}}" data-slide="next">
@@ -38,21 +38,23 @@
             </a>
          </div>
       </div>
-    <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
-    <h4><a href="{{ product.url | absolute_url }}">{{ product.custom_title }}</a></h4>
-    <div class="listing_unit_price_wrapper">
-        <span class="price_label price_label_before">{% if product.price == 0 || product.price == null %}{{ 'product.request-price' | t }} {% else %} {% include 'price' with product.price %}{% endif %}</span>
-    </div>
-    <div class="listing_details the_list_view" style="display: block">
-        {{- product.product_description | strip_html | slice: 0, 180 | strip -}}
-        {%- if product.product_description.size > 180 -%}
-           ... <a href="{{product.url | absolute_url}}">[{{ 'collection.read-more' | t }}]</a>
-        {%- endif -%}
-    </div>
-    <div class="property_listing_details">
-        <span class="inforoom">{{ product.count_bed_rooms }}</span>
-        <span class="infobath">{{ product.count_bath_rooms }}</span> 
-        <span class="infosize">{{ product.square | replace: ".00", "" }} {{ 'product.square' | t }}</span>
-        <a href="{{ product.url | absolute_url }}" class="unit_details_x">{{ 'collection.full-info' | t }}</a> 
+    <div class="product-body" data-link="{{ product.url | absolute_url }}">
+        <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
+        <div class="div-h4"><a>{{ product.custom_title }}</a></div>
+        <div class="listing_unit_price_wrapper">
+            <span class="price_label price_label_before">{% if product.price == 0 || product.price == null %}{{ 'product.request-price' | t }} {% else %} {% include 'price' with product.price %}{% endif %}</span>
+        </div>
+        <div class="listing_details the_list_view" style="display: block">
+            {{- product.product_description | strip_html | slice: 0, 180 | strip -}}
+            {%- if product.product_description.size > 180 -%}
+            ... <a>[{{ 'collection.read-more' | t }}]</a>
+            {%- endif -%}
+        </div>
+        <div class="property_listing_details">
+            <span class="inforoom">{{ product.count_bed_rooms }}</span>
+            <span class="infobath">{{ product.count_bath_rooms }}</span> 
+            <span class="infosize">{{ product.square | replace: ".00", "" }} {{ 'product.square' | t }}</span>
+            <a class="unit_details_x">{{ 'collection.full-info' | t }}</a> 
+        </div>
     </div>
    </div>

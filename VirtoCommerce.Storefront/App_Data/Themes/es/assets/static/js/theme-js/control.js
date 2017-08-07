@@ -1335,7 +1335,7 @@ jQuery(document).ready(function ($) {
     ////////////////////////////////////////////////////////////////////////////////////////////
     /// listings unit navigation
     ///////////////////////////////////////////////////////////////////////////////////////////
-    $('.property_listing, .places_cover,.agent_unit, .blog_unit , .featured_widget_image').click(function(){
+    $('.property_listing, .places_cover,.agent_unit, .blog_unit , .featured_widget_image, .product-body').click(function(){
         var link;
         link = $(this).attr('data-link'); 
 
