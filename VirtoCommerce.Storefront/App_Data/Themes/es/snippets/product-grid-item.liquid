@@ -21,7 +21,7 @@
             {% endif %}
             {% if forloop.first %}
             <div class="item active">
-                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt=""></a>
+                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | replace: '<sup>', '' | replace: '</sup>', ''}}"></a>
             </div>
             {% else %}
             <div class="item">

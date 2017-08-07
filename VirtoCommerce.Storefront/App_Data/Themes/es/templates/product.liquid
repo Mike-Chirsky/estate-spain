@@ -77,7 +77,7 @@
                         <div class="item">
                         {% endif %}
                             <a href="{{ image.src }}" title="" rel="prettyPhoto" class="prettygalery">
-                                <img src="{{ image.src | img_url: 'large' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                                <img src="{{ image.src | img_url: 'large' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | append: ' preview' | replace: '<sup>', '' | replace: '</sup>', ''}}" class="img-responsive lightbox_trigger">
                             </a>
                         </div>
                         {% endfor %}
@@ -103,7 +103,7 @@
                     {% else %}
                     <li data-target="#carousel-listing" data-slide-to="{{ forloop.index | minus: 1 }}" class="">
                     {% endif %}
-                        <img src="{{ image.src | img_url: 'small' }}" alt="">
+                        <img src="{{ image.src | img_url: 'small' }}" alt="{{ 'indicator' | append: forloop.index }}">
                     </li>
                     {% endfor %}
                 </ol>
@@ -111,7 +111,7 @@
             <div class="mobile-list-image">
                 <ul>
                     {%- for image in product.images -%}
-                        <li><img src="{{ image.src | img_url: 'large' }}" alt=""></li>
+                        <li><img src="{{ image.src | img_url: 'large' }}" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | append: ' mobile' | replace: '<sup>', '' | replace: '</sup>', ''}}"></li>
                     {%- endfor -%}
                 </ul>
             </div>
@@ -255,7 +255,7 @@
                     <div class="item">
                     {% endif %}
                         <a href="{{ image.src }}">
-                            <img src="{{ image.src | img_url: 'preview' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="" class="img-responsive lightbox_trigger">
+                            <img src="{{ image.src | img_url: 'preview' }}" data-slider-no="{{ forloop.index | minus: 1 }}" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | append: ' large' | replace: '<sup>', '' | replace: '</sup>', ''}}" class="img-responsive lightbox_trigger">
                         </a>
                     </div>
                     {% endfor %}
