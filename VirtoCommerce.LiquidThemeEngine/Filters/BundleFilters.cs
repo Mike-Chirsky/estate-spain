@@ -13,12 +13,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
     {
         private static readonly bool _optimizeStaticContent = ConfigurationManager.AppSettings.GetValue("VirtoCommerce:Storefront:OptimizeStaticContent", false);
 
-        public static string ScriptBundleTag(string input, bool async)
+        public static string ScriptBundleTag(string input, bool async = false)
         {
             return GetBundleTag(HtmlFilters.ScriptTag, input, async);
         }
 
-        public static string StylesheetBundleTag(string input, bool async)
+        public static string StylesheetBundleTag(string input, bool async = false)
         {
             return GetBundleTag(HtmlFilters.StylesheetTag, input, async);
         }

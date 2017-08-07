@@ -30,6 +30,19 @@
     </div>
 </div>
 <script type="text/javascript">
-    createCustomSlider("#marketblock-{{ block_id }}", "{{ market_id}}", "{{ market_url}}");
-    createCustomSliderMobile("#marketblock-{{ block_id }}-mobile", "{{ market_id}}", "{{ market_url}}");
+  setTimeout(function(){
+    if(!createSliders()){
+        setTimeout(function(){createSliders()}, 100);
+    }
+  }, 100);
+
+  function createSliders()  {
+    if (typeof createCustomSlider !== "undefined") {
+        createCustomSlider("#marketblock-{{ block_id }}", "{{ market_id}}", "{{ market_url}}");
+        createCustomSliderMobile("#marketblock-{{ block_id }}-mobile", "{{ market_id}}", "{{ market_url}}");
+        return true;
+    }
+    return false;
+  }
+
 </script>
