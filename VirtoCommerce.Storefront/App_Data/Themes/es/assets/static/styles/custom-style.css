@@ -1782,3 +1782,11 @@ ul.user-terms-list
 .busy-indicator-product{
     display: none;
 }
+.div-header{
+    color: #303030;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36.4px;
+    margin-top: 30px;
+    margin-bottom: 13px;
+}
