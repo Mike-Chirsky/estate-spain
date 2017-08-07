@@ -11,9 +11,16 @@
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static string ScriptTag(string input)
+        public static string ScriptTag(string input, bool async = false)
         {
-            return string.Format("<script type=\"text/javascript\" src=\"{0}\"></script>", input);
+            if (async)
+            {
+                return string.Format("<script type=\"text/javascript\" src=\"{0}\" async></script>", input);
+            }
+            else
+            {
+                return string.Format("<script type=\"text/javascript\" src=\"{0}\"></script>", input);
+            }
         }
 
         /// <summary>
@@ -22,9 +29,16 @@
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static string StylesheetTag(string input)
+        public static string StylesheetTag(string input, bool async = false)
         {
-            return string.Format("<link type=\"text/css\" rel=\"stylesheet\" media=\"all\" href=\"{0}\" />", input);
+            if (async)
+            {
+                return string.Format("<link type=\"text/css\" rel=\"stylesheet\" media=\"all\" href=\"{0}\" async />", input);
+            }
+            else
+            {
+                return string.Format("<link type=\"text/css\" rel=\"stylesheet\" media=\"all\" href=\"{0}\"/>", input);
+            }
         }
 
         /// <summary>

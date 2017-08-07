@@ -9,6 +9,9 @@ namespace VirtoCommerce.Storefront
 
         public virtual void RegisterBundles(BundleCollection bundles)
         {
+            // for async scripts
+            Scripts.DefaultTagFormat = @"<script src=""{0}"" type=""text/javascript""  async></script>";
+            Styles.DefaultTagFormat = @"<link rel=""stylesheet"" type=""text/css"" async href=""{0}""/>";
             #region JS
 
             bundles.Add(
@@ -74,7 +77,7 @@ namespace VirtoCommerce.Storefront
 
             #region CSS
 
-            bundles.Add(new Bundle("~/es-theme/css-base")
+            bundles.Add(new StyleBundle("~/es-theme/css-base")
                 .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap-theme.css")
                 .Include("~/App_Data/Themes/es/assets/static/styles/bootstrap.css")
                 .Include("~/App_Data/Themes/es/assets/static/styles/style.css")
@@ -101,7 +104,7 @@ namespace VirtoCommerce.Storefront
                 new StyleBundle("~/default-theme/account/css")
                 .Include("~/App_Data/Themes/default/assets/account-bootstrap.css", CssItemTransforms)
                 .Include("~/App_Data/Themes/default/assets/common-components.css", CssItemTransforms));
-
+            
             #endregion
         }
 

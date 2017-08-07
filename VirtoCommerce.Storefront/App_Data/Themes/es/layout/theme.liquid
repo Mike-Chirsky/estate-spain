@@ -31,14 +31,13 @@
       {% include 'twitter-card' %}
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
-      {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
-      
-      {{'~/es-theme/css-base' | stylesheet_bundle_tag }}
+      {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag : true }}
+      {{'~/es-theme/css-base' | stylesheet_bundle_tag: true }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
       {{ '//code.jquery.com/jquery-3.2.1.min.js' | script_tag }}
-      {{ '~/theme-bundler/scripts' | script_bundle_tag }}
+      {{ '~/theme-bundler/scripts' | script_bundle_tag : true }}
       {% if template contains 'product' %}
         {% include 'seo/schemaorg-product' %}
       {% endif %}

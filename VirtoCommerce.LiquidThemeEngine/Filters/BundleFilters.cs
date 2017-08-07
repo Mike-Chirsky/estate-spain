@@ -13,18 +13,18 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
     {
         private static readonly bool _optimizeStaticContent = ConfigurationManager.AppSettings.GetValue("VirtoCommerce:Storefront:OptimizeStaticContent", false);
 
-        public static string ScriptBundleTag(string input)
+        public static string ScriptBundleTag(string input, bool async)
         {
-            return GetBundleTag(HtmlFilters.ScriptTag, input);
+            return GetBundleTag(HtmlFilters.ScriptTag, input, async);
         }
 
-        public static string StylesheetBundleTag(string input)
+        public static string StylesheetBundleTag(string input, bool async)
         {
-            return GetBundleTag(HtmlFilters.StylesheetTag, input);
+            return GetBundleTag(HtmlFilters.StylesheetTag, input, async);
         }
 
 
-        private static string GetBundleTag(Func<string, string> tagFunc, string bundleName)
+        private static string GetBundleTag(Func<string, bool, string> tagFunc, string bundleName, bool async)
         {
             var storeId = GetCurrentStoreId();
             var bundleType = tagFunc.Method.Name;
@@ -42,12 +42,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Filters
                     if (_optimizeStaticContent)
                     {
                         var url = BundleTable.Bundles.ResolveBundleUrl(bundleName);
-                        result = tagFunc(url);
+                        result = tagFunc(url, async);
                     }
                     else
                     {
                         var response = bundle.GenerateBundleResponse(new BundleContext(new HttpContextWrapper(HttpContext.Current), BundleTable.Bundles, string.Empty));
-                        result = string.Join("\r\n", response.Files.Select(f => tagFunc(GetAssetUrl(f.IncludedVirtualPath))));
+                        result = string.Join("\r\n", response.Files.Select(f => tagFunc(GetAssetUrl(f.IncludedVirtualPath), async)));
                     }
                 }
 
