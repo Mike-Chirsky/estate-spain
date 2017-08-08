@@ -1,7 +1,7 @@
 <div class="col-md-4 col-xs-6 col-sm-6 {{ add_class }} blog2v">
     <div class="property_listing" data-link="{{ item.url | absolute_url }}" style="height: 470px;">
         <div class="blog_unit_image">
-            <img class="img-responsive wp-post-image" style="background-image: url({{ item.image_url | absolute_url }}); background-size:cover; height:192px;visibility: visible;"/>
+            <img class="img-responsive wp-post-image" style="background-image: url({{ item.image_url | img_url: 'thumb_blog' | absolute_url }}); background-size:cover; height:192px;visibility: visible;"/>
         </div>
         <h4>
             <a href="{{item.url | absolute_url}}">{{ item.title }}</a>

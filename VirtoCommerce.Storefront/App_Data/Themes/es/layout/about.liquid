@@ -22,7 +22,7 @@
       {{ content_for_header }}
       {% include 'oldIE-js' %}
       {{ '//code.jquery.com/jquery-3.2.1.min.js' | script_tag }}
-      {{ '~/theme-bundler/scripts' | script_bundle_tag }}
+      {{ '~/theme-bundler/scripts' | script_bundle_tag: true }}
       {% if template contains 'article' %}
         {% include 'seo/article-micro' %}
       {% endif %}

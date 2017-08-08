@@ -31,8 +31,8 @@
       {% include 'twitter-card' %}
       <link rel="canonical" href="{{ canonical_url }}" />
       <base href="{{ '/' | absolute_url }}" />
-      {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag : true }}
-      {{'~/es-theme/css-base' | stylesheet_bundle_tag: true }}
+      {{ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' | stylesheet_tag }}
+      {{'~/es-theme/css-base' | stylesheet_bundle_tag }}
       {% include 'google-fonts' %}
       {{ content_for_header }}
       {% include 'oldIE-js' %}
