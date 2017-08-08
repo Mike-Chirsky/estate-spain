@@ -31,7 +31,7 @@
         /// <returns></returns>
         public static string StylesheetTag(string input, bool async = false)
         {
-            return string.Format("<link type=\"text/css\" rel=\"stylesheet\" media=\"all\" href=\"{0}\" />", input)
+            return string.Format("<link type=\"text/css\" rel=\"stylesheet\" media=\"all\" href=\"{0}\" />", input);
         }
 
         /// <summary>
