@@ -2,6 +2,9 @@
     $(".busy-indicator-product").show();
     $("div#list-products").hide();
     $(".pagination-container.clearfix").hide();
+    if (slideToTop) {
+        setTimeout(function () { slideToBlock("#list-products"); }, 100);
+    }
     $.get(url, function (data, slideToTop) {
         var responseData = $(data);
         var container = responseData.find("div#list-products");
@@ -14,9 +17,6 @@
         $(".busy-indicator-product").hide();
         $("div#list-products").show();
         $(".pagination-container.clearfix").show();
-        if (slideToTop) {
-            slideToBlock("div#list-products");
-        }
     }).fail(function (err) {
         $(".busy-indicator-product").hide();
         $("div#list-products").show();
