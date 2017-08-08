@@ -14992,14 +14992,14 @@ select.dsidx-resp-select {
 
 
 
-.stripe-button-el span,
+/* .stripe-button-el span,
 .stripe-button-el{
-/*    background: #1275ff!important;
+    background: #1275ff!important;
     background-image: none!important;
     text-shadow: none!important;
     box-shadow: none!important;
-    border-radius: 3px;*/
-}
+    border-radius: 3px;
+}*/
 
 /*=dashboard search
 --------------------------------------------------------------------------------*/
@@ -15581,8 +15581,8 @@ span.wpcf7-form-control-wrap {
 
 
 /*=property page design*/
-.wpestate_estate_property_slider_section_wrapper {
-}
+/*.wpestate_estate_property_slider_section_wrapper {
+}*/
 
 .wpestate_estate_property_slider_section_wrapper .post-carusel .item{
     height: 100%;
@@ -16225,9 +16225,9 @@ button.slick-next.slick-arrow {
     color: white;
 }
 
-.places_wrapper_type_2:hover {
+/*.places_wrapper_type_2:hover {
 }
-
+*/
 .places_wrapper_type_2 h4 {
     margin-bottom:0px;
 }
@@ -17333,10 +17333,10 @@ button.slick-next.slick-arrow {
     margin-right: 8px;
 }
 
-.property_area_type1 a,
+/*.property_area_type1 a,
 .property_city_type1 a{
     
-}
+}*/
 
 .property_listing.property_unit_type1 .icon-fav {
     position: absolute;
@@ -18524,9 +18524,9 @@ span.property_details_type1_id,
 .yelp_icon .fa-cloud{
     background-color: #5691C9;  
 }
-.yelp_icon .fa-cutlery{
+/*.yelp_icon .fa-cutlery{
     
-}
+}*/
 .yelp_icon .fa-shopping-bag{
     background-color: #ADC13C;
 }

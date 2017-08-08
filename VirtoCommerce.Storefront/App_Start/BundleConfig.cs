@@ -8,10 +8,7 @@ namespace VirtoCommerce.Storefront
         public IItemTransform[] CssItemTransforms { get; set; } = { new CssUrlTransform() };
 
         public virtual void RegisterBundles(BundleCollection bundles)
-        {
-            // for async scripts
-            Scripts.DefaultTagFormat = @"<script src=""{0}"" type=""text/javascript""  async></script>";
-            Styles.DefaultTagFormat = @"<link rel=""stylesheet"" type=""text/css"" async href=""{0}""/>";
+        { 
             #region JS
 
             bundles.Add(
