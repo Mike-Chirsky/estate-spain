@@ -478,6 +478,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\parthners_slide_1.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\parthners_slide_2.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\parthner_header_img.jpg" />
+    <Content Include="App_Data\Themes\es\assets\static\images\partners-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\photo-maria.png" />
     <Content Include="App_Data\Themes\es\assets\static\images\pressa-smi.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\reviews-blog-preview.jpg" />
