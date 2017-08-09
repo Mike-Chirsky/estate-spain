@@ -434,6 +434,8 @@ namespace VirtoCommerce.Storefront.Services.Es
                     //_cacheManager.Remove($"SeoProducts:Product{obj.Id}");
                 }
             }
+            // TODO: Create if not exist
+            // TODO:Clear seo dictionary
             _lockObject.Release();
         }
     }

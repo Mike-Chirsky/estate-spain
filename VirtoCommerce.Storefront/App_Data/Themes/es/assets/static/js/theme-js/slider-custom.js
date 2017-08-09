@@ -13,6 +13,13 @@
                 setTimeout(function () {
                     lazyLoad(content);
                 }, 100);
+                $(".market-block-content .product-body").click(function () {
+                    var link;
+                    link = $(this).attr('data-link');
+                    if (link) {
+                        window.open(link, '_self');
+                    }
+                });
                 prev.removeClass('disabled');
                 next.removeClass('disabled');
             }
@@ -62,6 +69,15 @@ function createCustomSliderMobile(contentId, marketId, url) {
                 more.show();
             }
             content.append(data);
+            if (data != '') {
+                $(".market-block-content .product-body").click(function () {
+                    var link;
+                    link = $(this).attr('data-link');
+                    if (link) {
+                        window.open(link, '_self');
+                    }
+                });
+            }
             setTimeout(function () {
                 lazyLoad(content);
             }, 100);
