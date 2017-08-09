@@ -14,6 +14,10 @@ using System.Configuration;
 using VirtoCommerce.Storefront.AutoRestClients.CatalogModuleApi;
 using System.Diagnostics;
 using System.Collections.Concurrent;
+using VirtoCommerce.Storefront.Owin;
+using VirtoCommerce.Storefront.Routing;
+using coreDto = VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi.Models;
+using VirtoCommerce.Storefront.AutoRestClients.CoreModuleApi;
 
 namespace VirtoCommerce.Storefront.Services.Es
 {
@@ -22,6 +26,7 @@ namespace VirtoCommerce.Storefront.Services.Es
         private readonly SemaphoreSlim _lockObject = new SemaphoreSlim(1);
         private readonly ICatalogModuleApiClient _catalogModuleApi;
         private readonly Func<WorkContext> _workContextFactory;
+        private readonly Func<ICoreModuleApiClient> _coreApiFactory;
         private static Dictionary<string, Category> _seoCategoryDict;
         private static ConcurrentBag<Exception> _buildTreeExceptions = new ConcurrentBag<Exception>();
         private Language _language;
@@ -37,12 +42,12 @@ namespace VirtoCommerce.Storefront.Services.Es
         private const string CitiesKey = "Cities";
         private const string SinglePageKey = "SinglePage";
 
-        public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager)
+        public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager, Func<ICoreModuleApiClient> coreApiFactory)
         {
             _catalogModuleApi = catalogModuleApi;
             _workContextFactory = workContextFactory;
             _cacheManager = cacheManager;
-
+            _coreApiFactory = coreApiFactory;
         }
 
         public async Task<Dictionary<string, Category>> GetTree()
@@ -71,7 +76,9 @@ namespace VirtoCommerce.Storefront.Services.Es
             try
             {
                 await _lockObject.WaitAsync();
-                return await GenerateTree();
+                var result = await GenerateTree();
+                WorkContextOwinMiddleware.FilterSeo = null;
+                return result;
             }
             finally
             {
@@ -91,7 +98,6 @@ namespace VirtoCommerce.Storefront.Services.Es
             _language = wc.CurrentLanguage;
             _currency = wc.CurrentCurrency;
             _store = wc.CurrentStore;
-
             // Load region + estate type
             //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict));
             await LoadChildrenFromCategory(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), EstateTypeKey, tempSeoDict);
@@ -169,24 +175,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             var firstParent = parents.FirstOrDefault();
             if (firstParent != null)
             {
-                var exceptionOutline = ProductPathToOutlineException(string.Join("/", firstParent.Path, productType));
-                if (!string.IsNullOrEmpty(exceptionOutline))
-                {
-                    var resultExceptions = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
-                        new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
-                        {
-                            CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
-                            ResponseGroup = "1619",
-                            Outline = exceptionOutline,
-                            Take = 10000,
-                            Skip = 0,
-                            WithHidden = false
-                        });
-                    if (resultExceptions.Items != null)
-                    {
-                        listExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
-                    }
-                }
+                listExceptions = await GetExceptionProducts(string.Join("/", firstParent.Path, productType));
             }
             foreach (var parent in parents)
             {
@@ -212,7 +201,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
                {
                    CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
-                   ResponseGroup = (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString(),
+                   ResponseGroup = CreateProductResponseGroup(),
                    Outline = ProductTypeToOutline(CitiesKey),
                    Take = 10000,
                    Skip = 0,
@@ -308,15 +297,41 @@ namespace VirtoCommerce.Storefront.Services.Es
             if (category == null)
                 return null;
             var seoPath = category.SeoPath.Trim('/');
-            lock (seoDict)
+            if (seoDict != null)
             {
-                if (!seoDict.ContainsKey(seoPath))
+                lock (seoDict)
                 {
-                    seoDict.Add(seoPath, category);
+                    if (!seoDict.ContainsKey(seoPath))
+                    {
+                        seoDict.Add(seoPath, category);
+                    }
                 }
             }
             
             return category;
+        }
+
+        private async Task<List<Product>> GetExceptionProducts(string productPath)
+        {
+            var exceptionOutline = ProductPathToOutlineException(productPath);
+            if (!string.IsNullOrEmpty(exceptionOutline))
+            {
+                var resultExceptions = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
+                    new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
+                    {
+                        CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
+                        ResponseGroup = "1619",
+                        Outline = exceptionOutline,
+                        Take = 10000,
+                        Skip = 0,
+                        WithHidden = false
+                    });
+                if (resultExceptions.Items != null)
+                {
+                    return resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                }
+            }
+            return new List<Product>();
         }
 
         private ICategoryTreeConverter GetConverterByPath(string path)
@@ -371,72 +386,150 @@ namespace VirtoCommerce.Storefront.Services.Es
 
         public async Task RebuildElement(string path)
         {
+            // init data for product converter
+            var wc = _workContextFactory();
+            _language = wc.CurrentLanguage;
+            _currency = wc.CurrentCurrency;
+            _store = wc.CurrentStore;
             await _lockObject.WaitAsync();
-            path = path.Trim('/');
-            if (_seoCategoryDict.ContainsKey(path))
+            try
             {
-                var obj = _seoCategoryDict[path];
-                var productIds = new List<string>();
-                var categories = new List<Category>();
-                var current = obj;
-                do
+                path = path.Trim('/');
+                if (_seoCategoryDict.ContainsKey(path))
                 {
-                    productIds.Add(current.Id);
-                    categories.Add(current);
-                    current = current.Parent.Parent != null ? current.Parent : null;
-                } while (current != null);
-                var products = _catalogModuleApi.CatalogModuleProducts.GetProductByIds(productIds, 
-                    (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString())
-                    .Select(x => x.ToProduct(_language, _currency, _store));
-                categories.Reverse();
-                for (int i = 0; i < categories.Count; i++)
-                {
-                    var category = categories[i];
-                    var context = new ConverterContext
+                    var obj = _seoCategoryDict[path];
+                    var productIds = new List<string>();
+                    var categories = new List<Category>();
+                    var current = obj;
+                    do
                     {
-                        Parent = category.Parent,
-                        Path = category.Path,
-                        ProductType = category.ProductType
-                    };
-                    var exceptionOutline = ProductPathToOutlineException(category.Path);
-                    if (!string.IsNullOrEmpty(exceptionOutline))
+                        productIds.Add(current.Id);
+                        categories.Add(current);
+                        current = current.Parent.Parent != null ? current.Parent : null;
+                    } while (current != null);
+                    var products = _catalogModuleApi.CatalogModuleProducts.GetProductByIds(productIds, CreateProductResponseGroup())
+                        .Select(x => x.ToProduct(_language, _currency, _store));
+                    categories.Reverse();
+                    for (int i = 0; i < categories.Count; i++)
                     {
-                        var resultExceptions = await _catalogModuleApi.CatalogModuleSearch.SearchProductsAsync(
-                            new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
-                            {
-                                CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
-                                ResponseGroup = "1619",
-                                Outline = exceptionOutline,
-                                Take = 10000,
-                                Skip = 0,
-                                WithHidden = false
-                            });
-                        if (resultExceptions.Items != null)
+                        var category = categories[i];
+                        var context = new ConverterContext
                         {
-                            context.ListExceptions = resultExceptions.Items.Select(x => x.ToProduct(_language, _currency, _store)).ToList();
+                            Parent = category.Parent,
+                            Path = category.Path,
+                            ProductType = category.ProductType
+                        };
+                        context.ListExceptions = await GetExceptionProducts(category.Path);
+                        var convertCategory = GetConverterByPath(category.Path).ToCategory(context, products.First(x => x.Id == category.Id));
+                        if (i + 1 < categories.Count)
+                        {
+                            categories[i + 1].Parent = convertCategory;
+                        }
+                        categories[i] = convertCategory;
+                    }
+                    lock (_seoCategoryDict)
+                    {
+                        _seoCategoryDict[path] = categories.Last();
+                    }
+
+                    if (_cacheManager != null)
+                    {
+                        //_cacheManager.Clear();
+                        _cacheManager.Remove($"SeoProducts:Product{obj.Id}");
+                    }
+                }
+                else
+                {
+                    var pathItems = path.Split('/');
+                    var categoryParent = new Category();
+                    if (pathItems.Length > 1)
+                    {
+                        var parentPath = string.Join("/", pathItems.Take(pathItems.Length - 1));
+                        if (_seoCategoryDict.ContainsKey(parentPath))
+                        {
+                            categoryParent = _seoCategoryDict[parentPath];
                         }
                     }
-                    var convertCategory = GetConverterByPath(category.Path).ToCategory(context, products.First(x => x.Id == category.Id));
-                    if (i + 1 < categories.Count)
+                    var seoRecords = GetAllSeoRecords(pathItems.LastOrDefault()).FirstOrDefault();
+                    if (seoRecords!=null)
                     {
-                        categories[i + 1].Parent = convertCategory;
+                        var product = _catalogModuleApi.CatalogModuleProducts.GetProductById(seoRecords.ObjectId, CreateProductResponseGroup());
+                        var productType = GetProductType(product.CategoryId);
+                        if (productType == CitiesKey)
+                        {
+                            var regionId = product.Associations.FirstOrDefault(x => x.Type == "Regions")?.AssociatedObjectId;
+                            if (!string.IsNullOrEmpty(regionId))
+                            {
+                                var region = _catalogModuleApi.CatalogModuleProducts.GetProductById(regionId, CreateProductResponseGroup());
+                                categoryParent = ConvertProductToCategory(new Category(), RegionKey, region, null, null);
+                            }
+                            else
+                            {
+                                throw new Exception($"Not resolve region for city:{product.Name}");
+                            }
+                        }
+                        var exceptionProducts = string.IsNullOrEmpty(categoryParent.Path) ? new List<Product>() : await GetExceptionProducts(string.Join("/", categoryParent.Path, productType));
+
+                        ConvertProductToCategory(categoryParent, productType, product, exceptionProducts, _seoCategoryDict);
+                        WorkContextOwinMiddleware.FilterSeo = null;
                     }
-                    categories[i] = convertCategory;
-                }
-                lock(_seoCategoryDict)
-                {
-                    _seoCategoryDict[path] = categories.Last();
-                }
-                
-                if (_cacheManager != null)
-                {
-                    _cacheManager.Clear();
-                    //_cacheManager.Remove($"SeoProducts:Product{obj.Id}");
                 }
             }
-            // TODO: Create if not exist
-            // TODO:Clear seo dictionary
-            _lockObject.Release();
+            finally
+            {
+                _lockObject.Release();
+            }
+        }
+
+        private string GetProductType(string categoryId)
+        {
+            if (categoryId == ConfigurationManager.AppSettings["RegionCategoryId"])
+            {
+                return RegionKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["EstateTypeCategoryId"])
+            {
+                return EstateTypeKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["TagCategoryId"])
+            {
+                return TagsKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["CityCategoryId"])
+            {
+                return CitiesKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["ConditionCategoryId"])
+            {
+                return ConditionKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["OtherTypeCategoryId"])
+            {
+                return OtherTypeKey;
+            }
+            else if (categoryId == ConfigurationManager.AppSettings["SinglePageCategoryId"])
+            {
+                return SinglePageKey;
+            }
+            return string.Empty;
+        }
+
+        private string CreateProductResponseGroup()
+        {
+            return (ItemResponseGroup.ItemAssociations | ItemResponseGroup.Seo | ItemResponseGroup.ItemEditorialReviews | ItemResponseGroup.ItemInfo).ToString();
+        }
+
+        protected virtual IList<coreDto.SeoInfo> GetAllSeoRecords(string slug)
+        {
+            var result = new List<coreDto.SeoInfo>();
+
+            if (!string.IsNullOrEmpty(slug))
+            {
+                var apiResult = _cacheManager.Get(string.Join(":", "Commerce.GetSeoInfoBySlug", slug), "ApiRegion", () => _coreApiFactory().Commerce.GetSeoInfoBySlug(slug));
+                result.AddRange(apiResult);
+            }
+
+            return result;
         }
     }
 }

@@ -268,7 +268,7 @@ namespace VirtoCommerce.Storefront
             // ammo crm service
             container.RegisterType<IAmmoService, AmmoService>();
             // tree category service
-            container.RegisterInstance<ICategoryTreeService>(new ESCategoryTreeService(container.Resolve<ICatalogModuleApiClient>(), workContextFactory, container.Resolve<ILocalCacheManager>()));
+            container.RegisterInstance<ICategoryTreeService>(new ESCategoryTreeService(container.Resolve<ICatalogModuleApiClient>(), workContextFactory, container.Resolve<ILocalCacheManager>(), () => container.Resolve<ICoreModuleApiClient>()));
             // google shet service
             container.RegisterType<IGoogleSheetService, GoogleSheetService>();
 

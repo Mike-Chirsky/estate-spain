@@ -52,7 +52,7 @@ namespace VirtoCommerce.Storefront.Owin
         /// <summary>
         /// Containts all seo keywords for filters
         /// </summary>
-        protected static Dictionary<string, List<Tuple<string, string>>> FilterSeo;
+        public static Dictionary<string, List<Tuple<string, string>>> FilterSeo;
 
         protected UnityContainer Container { get; }
         protected ILocalCacheManager CacheManager { get; }
