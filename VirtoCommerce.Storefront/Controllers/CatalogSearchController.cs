@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -114,13 +115,41 @@ namespace VirtoCommerce.Storefront.Controllers
             var dict = _categoryTreeService.GetSeoDict();
             using (var file = new System.IO.StreamWriter(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "seo_dict.csv"), false, System.Text.Encoding.UTF8))
             {
-                file.WriteLine("url;h1;description;title;seo text;region;city");
+                file.WriteLine("\"url\";\"h1\";\"description\";\"title\";\"region\";\"city\";\"H2Features\";\"H21\";\"H2Listing\";\"H2Tip\";\"H3SeotextDown1\";\"H3SeotextDown2\";\"H3SeotextDown3\";\"SeotextUp\";\"LinkBlockCentr\";\"LinkBlockCentr1\";\"LinkBlockLeft\";\"LinkBlockRight\";\"LinkBlockType1\";\"LinkBlockType2\";\"LinkBlockType3\";\"InfoBlockListing1\";\"InfoBlockListing2\";\"InfoBlockListing3\"");
                 var converter = new EsShopifyModelConverter();
                 foreach (var key in dict.Keys)
                 {
                     var liquidCategory = converter.ToLiquidCollection(dict[key], WorkContext);
-                    var line = $"{key};\"{(string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1).Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo.MetaDescription?.Replace("\"", "\"\"")}\";\"{dict[key].SeoInfo?.Title?.Replace("\"", "\"\"")}\";\"{liquidCategory.SeotextUp?.Replace("\"", "\"\"")}\";{liquidCategory.RegionName};{liquidCategory.CityName}";
-                    file.WriteLine(line);
+                    var row = new StringBuilder();
+                    row.Append($"\"{key}\";");
+                    row.Append($"\"{((string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1)).Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(dict[key].SeoInfo.MetaDescription?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(dict[key].SeoInfo.Title ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(dict[key].RegionName ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(dict[key].CityName ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H11 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H2Features ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H21 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H2Listing ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H2Tip ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H3SeotextDown1 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H3SeotextDown2 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.H3SeotextDown3 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.SeotextDown1 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.SeotextDown2 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.SeotextDown3 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.SeotextUp ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockCentr ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockCentr1 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockLeft ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockRight ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockType1 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockType2 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.LinkBlockType3 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.InfoBlockListing1 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.InfoBlockListing2 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.InfoBlockListing3 ?? " ").Replace("\"", "\"\"")}\";");
+                    file.WriteLine(row.ToString().Replace("\n","").Replace("\r", ""));
                 }
             }
         }
