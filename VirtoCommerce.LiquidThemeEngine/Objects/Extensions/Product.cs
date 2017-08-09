@@ -248,6 +248,16 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
                 return GetBreadcrumbTitle();
             }
         }
+        /// <summary>
+        /// Get custom title for product in listing
+        /// </summary>
+        public string ListingCustomTitle
+        {
+            get
+            {
+                return GetCustomTitle(includeCity: false);
+            }
+        }
 
         public ICollection<KeyValue<string, string>> Breadcrumb { set; get; }
 
@@ -289,7 +299,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         /// </summary>
         /// <param name="withHtml">Use html tags in return result</param>
         /// <returns></returns>
-        private string GetCustomTitle(bool withHtml = true)
+        private string GetCustomTitle(bool withHtml = true, bool includeCity = true)
         {
             if (Properties.Count == 0)
             {
@@ -314,14 +324,18 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             {
                 title += $"{square} {TranslationFilter.T(withHtml ? "product.square" : "product.square2")} ";
             }
-
-
-            var propertyCity = GetPropertyByName("city_name_in") ?? GetPropertyByName("city");
-            if (propertyCity != null && !string.IsNullOrEmpty(propertyCity.Value))
+            if (includeCity)
             {
-                title += $"{TranslationFilter.T("product.in-city")} {propertyCity.Value}";
+                var propertyCity = GetPropertyByName("city_name_in");
+                if (propertyCity == null || string.IsNullOrEmpty(propertyCity.Value))
+                {
+                    propertyCity = GetPropertyByName("city");
+                }
+                if (propertyCity != null && !string.IsNullOrEmpty(propertyCity.Value))
+                {
+                    title += $"{TranslationFilter.T("product.in-city")} {propertyCity.Value}";
+                }
             }
-
             return title;
         }
 

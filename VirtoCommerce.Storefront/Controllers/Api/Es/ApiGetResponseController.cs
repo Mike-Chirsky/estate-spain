@@ -9,16 +9,19 @@ using RestSharp;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Common;
 using VirtoCommerce.Storefront.Model.Common.Exceptions;
+using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Controllers.Api.Es
 {
     public class ApiGetResponseController : StorefrontControllerBase
     {
         private const string ServerUrl = "https://api.getresponse.com/v3";
+        private readonly IGoogleSheetService _googleSheetService;
 
-        public ApiGetResponseController(WorkContext context, IStorefrontUrlBuilder urlBuilder)
+        public ApiGetResponseController(WorkContext context, IStorefrontUrlBuilder urlBuilder, IGoogleSheetService googleSheetService)
             : base(context, urlBuilder)
         {
+            _googleSheetService = googleSheetService;
         }
 
         // POST: /storefrontapi/getresponse/subscribe
@@ -42,7 +45,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
 
             subscribeRequest.AddBody(contact);
             IRestResponse subscribeResponse = await client.ExecuteTaskAsync(subscribeRequest);
-
+            _googleSheetService.WriteSubscribe(email);
             return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
 

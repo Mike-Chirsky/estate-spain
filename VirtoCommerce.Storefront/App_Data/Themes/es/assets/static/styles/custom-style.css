@@ -1807,3 +1807,7 @@ ul.user-terms-list
 .property_listing a{
     cursor: pointer;
 }
+
+.product-body{
+    cursor: pointer;
+}

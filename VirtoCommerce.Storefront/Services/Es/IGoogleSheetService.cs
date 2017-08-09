@@ -10,5 +10,6 @@ namespace VirtoCommerce.Storefront.Services.Es
     public interface IGoogleSheetService
     {
         void WriteMessage(CallbackUserRequest userMessage);
+        void WriteSubscribe(string email);
     }
 }

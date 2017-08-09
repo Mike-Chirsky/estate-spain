@@ -189,7 +189,7 @@
                     {% endif %}
                     <textarea cols="45" rows="8" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
                     </textarea>
-                    <span class="license light-text"> <a href="/user-privace">{{ 'request-form.license' | t }}</a> </span>
+                    <span class="license light-text">{{ 'request-form.license' | t }}</span>
                     <button class="wpresidence_button form-control btn-std margin-auto" id="contact-us-form-footer-submit">{{ 'request-form.send' | t }}</button>
                 </div>
             </div>
@@ -269,12 +269,12 @@
                                 {{ 'subscribe.footer2' | t }}
                             </p>
                             <p>
-                                <a href="/user-personal-data">{{ 'subscribe.license' | t }}</a>
+                                {{ 'subscribe.license' | t }}
                             </p>
                         </li>
                         <li class="subscribe-footer">
                             <p>
-                                <a href="/user-personal-data">{{ 'subscribe.license' | t }}</a>
+                                {{'subscribe.license' | t }}
                             </p>
                         </li>
                      </ul>
