@@ -1807,7 +1807,9 @@ ul.user-terms-list
 .property_listing a{
     cursor: pointer;
 }
-
+.reviews .carousel-inner{
+    min-height: 255px;
+}
 .product-body{
     cursor: pointer;
 }
