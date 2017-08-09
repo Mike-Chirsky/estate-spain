@@ -30,7 +30,12 @@ namespace VirtoCommerce.Storefront.Model.Catalog
             {
                 return Name;
             }
+            var estateType = GetPropertyByName("estatetype")?.Value;
             var title = GetPropertyByName("other_type")?.Value;
+            if (estateType == "Земельные участки")
+            {
+                title = "Участок";
+            }
             if (!string.IsNullOrEmpty(title))
             {
                 title = $"{char.ToUpper(title.First())}{title.Substring(1)} ";

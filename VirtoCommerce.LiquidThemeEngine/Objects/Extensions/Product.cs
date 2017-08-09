@@ -271,7 +271,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             {
                 return Title;
             }
+            var estateType = GetPropertyByName("estatetype")?.Value;
             var title = GetPropertyByName("other_type")?.Value;
+            if (estateType == "Земельные участки")
+            {
+                title = "Участок";
+            }
             if (!string.IsNullOrEmpty(title))
             {
                 title = $"{char.ToUpper(title.First())}{title.Substring(1)} ";
@@ -305,7 +310,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
             {
                 return Title;
             }
+            var estateType = GetPropertyByName("estatetype")?.Value;
             var title = GetPropertyByName("other_type")?.Value;
+            if (estateType == "Земельные участки")
+            {
+                title = "Участок";
+            }
             if (!string.IsNullOrEmpty(title))
             {
                 title = $"{char.ToUpper(title.First())}{title.Substring(1)} ";

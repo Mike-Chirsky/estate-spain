@@ -1799,7 +1799,7 @@ ul.user-terms-list
     float: left;
     width: 100%;
     font-size: 18px;
-    height: 1.3em;
+    line-height: 1.3em;
 }
 .div-h4 a{
     color: #303030;
