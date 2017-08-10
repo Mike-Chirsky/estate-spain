@@ -231,13 +231,15 @@ namespace VirtoCommerce.LiquidThemeEngine
             var curentThemediscoveryPaths = _templatesDiscoveryFolders.Select(x => Path.Combine(CurrentThemePath, x, liquidTemplateFileName));
 
             //First try to find template in current theme folder
-            var retVal = curentThemediscoveryPaths.FirstOrDefault(x => _themeBlobProvider.PathExists(x));
-            if (searchInGlobalThemeOnly || retVal == null)
-            {
-                //Then try to find in global theme
-                var globalThemeDiscoveyPaths = _templatesDiscoveryFolders.Select(x => Path.Combine(x, liquidTemplateFileName));
-                retVal = globalThemeDiscoveyPaths.FirstOrDefault(x => _globalThemeBlobProvider.PathExists(x));
-            }
+            //TODO: Uncomment for get theme files from blob
+            //var retVal = curentThemediscoveryPaths.FirstOrDefault(x => _themeBlobProvider.PathExists(x));
+
+            /*if (searchInGlobalThemeOnly || retVal == null)
+            {*/
+            //Then try to find in global theme
+            var globalThemeDiscoveyPaths = _templatesDiscoveryFolders.Select(x => Path.Combine(x, liquidTemplateFileName));
+            var retVal = globalThemeDiscoveyPaths.FirstOrDefault(x => _globalThemeBlobProvider.PathExists(x));
+            //}
 
             return retVal;
         }
