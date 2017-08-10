@@ -273,20 +273,27 @@ namespace VirtoCommerce.Storefront
             container.RegisterType<IGoogleSheetService, GoogleSheetService>();
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
+            var themeConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ThemeConnectionString"].ConnectionString);
             var themesBasePath = cmsContentConnectionString.RootPath.TrimEnd('/') + "/" + "Themes";
             var staticContentBasePath = cmsContentConnectionString.RootPath.TrimEnd('/') + "/" + "Pages";
             //Use always file system provider for global theme
             var globalThemesBlobProvider = new FileSystemContentBlobProvider(ResolveLocalPath("~/App_Data/Themes/es"));
             IContentBlobProvider themesBlobProvider;
             IStaticContentBlobProvider staticContentBlobProvider;
-            if ("AzureBlobStorage".Equals(cmsContentConnectionString.Provider, StringComparison.OrdinalIgnoreCase))
+            if ("AzureBlobStorage".Equals(themeConnectionString.Provider, StringComparison.OrdinalIgnoreCase))
             {
                 themesBlobProvider = new AzureBlobContentProvider(cmsContentConnectionString.ConnectionString, themesBasePath, localCacheManager);
-                staticContentBlobProvider = new AzureBlobContentProvider(cmsContentConnectionString.ConnectionString, staticContentBasePath, localCacheManager);
             }
             else
             {
                 themesBlobProvider = new FileSystemContentBlobProvider(ResolveLocalPath(themesBasePath));
+            }
+            if ("AzureBlobStorage".Equals(cmsContentConnectionString.Provider, StringComparison.OrdinalIgnoreCase))
+            {
+                staticContentBlobProvider = new AzureBlobContentProvider(cmsContentConnectionString.ConnectionString, staticContentBasePath, localCacheManager);
+            }
+            else
+            {
                 staticContentBlobProvider = new FileSystemContentBlobProvider(ResolveLocalPath(staticContentBasePath));
             }
             container.RegisterInstance(staticContentBlobProvider);
