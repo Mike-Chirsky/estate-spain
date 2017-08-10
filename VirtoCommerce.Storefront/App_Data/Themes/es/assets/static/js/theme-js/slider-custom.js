@@ -13,7 +13,7 @@
                 setTimeout(function () {
                     lazyLoad(content);
                 }, 100);
-                $(".market-block-content .product-body").click(function () {
+                $(".market-block-content .product-body, .market-block-content .blog-body").click(function () {
                     var link;
                     link = $(this).attr('data-link');
                     if (link) {
@@ -70,7 +70,7 @@ function createCustomSliderMobile(contentId, marketId, url) {
             }
             content.append(data);
             if (data != '') {
-                $(".market-block-content .product-body").click(function () {
+                $(".market-block-content .product-body, .market-block-content .blog-body").click(function () {
                     var link;
                     link = $(this).attr('data-link');
                     if (link) {
