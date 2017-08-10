@@ -434,8 +434,13 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                     if (_cacheManager != null)
                     {
-                        //_cacheManager.Clear();
-                        _cacheManager.Remove($"SeoProducts:Product{obj.Id}");
+                        _cacheManager.Clear();
+                        /*_cacheManager.Remove($"Product{obj.Id}", "SeoProducts");
+                        var paths = path.Split('/');
+                        foreach (var p in paths)
+                        {
+                            _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{p}", "ApiRegion");
+                        }*/
                     }
                 }
                 else
