@@ -14,7 +14,7 @@
         <h1 class="entry-title entry-tax">{{- 'general.search.header' | t -}}</h1>
       {% else %}
         {% paginate products by 36 %}
-            <h1 class="entry-title entry-tax">{{- 'your-request2' | t -}}&nbsp;{{- paginate.items | num_ending: "найден":"найдено": "найдено" : false-}}&nbsp;{{- paginate.items | num_ending: " объект":" объекта": " объектов" -}} </h1>
+            <h1 class="entry-title entry-tax">{{ 'your-request2' | t }} {{ paginate.items | num_ending: "найден":"найдено": "найдено" : false }} {{ paginate.items | num_ending: " объект":" объекта": " объектов" }}</h1>
         {% endpaginate %}
       {% endunless %}
       </div>

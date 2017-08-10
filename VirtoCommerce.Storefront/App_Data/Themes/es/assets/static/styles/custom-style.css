@@ -1816,3 +1816,10 @@ ul.user-terms-list
 .product-list .listing_wrapper{
     height: 515px;
 }
+
+@media(max-width:460px)
+{
+    .entry-tax{
+        font-size: 30px;
+    }
+}
