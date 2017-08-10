@@ -3,19 +3,19 @@
 {%- endif -%}
 <div class="header-about header-container">
   <span>{{-collection.seotext_up-}}</span>
-  {% if collection.seotext_down1 or collection.seotext_down2 or collection.seotext_down3 %}
+  {% if collection.h3_seotext_down1 or collection.h3_seotext_down2 or collection.h3_seotext_down3 %}
   <br/>
   <div class="link-list-about">
     {{-'collection.detail' | t -}}:
-    {%- if collection.seotext_down1 -%}
+    {%- if collection.h3_seotext_down1 -%}
     <a id="advantagesId">{{-collection.h3_seotext_down1-}}</a>
     {%- if collection.h3_seotext_down2 or collection.h3_seotext_down3 -%},{%- endif -%}
     {% endif %}
-    {%- if collection.seotext_down2 -%}
+    {%- if collection.h3_seotext_down2 -%}
     <a id="approachId">{{-collection.h3_seotext_down2-}}</a>
     {%- if collection.h3_seotext_down3 -%},{%- endif -%}
     {% endif %}
-    {%- if collection.seotext_down3 -%}
+    {%- if collection.h3_seotext_down3 -%}
     <a id="coastId">{{-collection.h3_seotext_down3-}}</a>
     {% endif %}
   </div> 

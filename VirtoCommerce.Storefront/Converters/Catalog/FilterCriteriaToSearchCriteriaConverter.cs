@@ -10,7 +10,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
 {
     public static class FilterCriteriaToSearchCriteriaConverter
     {
-        public static void FillTermsFromFileterCriteria(this ProductFilterCriteria criteria, ProductSearchCriteria searchCriteria, WorkContext wc)
+        public static void FillTermsFromFileterCriteria(this ProductFilterCriteria criteria, ProductSearchCriteria searchCriteria, WorkContext wc, bool arenda = false)
         {
             if (criteria == null)
             {
@@ -143,6 +143,14 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 {
                     Name = "available",
                     Value = "Неизвестно,Доступно"
+                });
+            }
+            if (!arenda)
+            {
+                terms.Add(new Term
+                {
+                    Name = "dealtype",
+                    Value = "Продажа"
                 });
             }
             searchCriteria.Terms = terms.ToArray();

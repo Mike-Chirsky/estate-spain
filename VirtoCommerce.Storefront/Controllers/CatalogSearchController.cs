@@ -57,8 +57,10 @@ namespace VirtoCommerce.Storefront.Controllers
         {
             categoryId = categoryId.Trim('/');
             var category = _categoryTreeService.FindByPath(categoryId);
+            var isArenda = false;
             if (category == null)
             {
+                isArenda = true;
                 category = (await _searchService.GetCategoriesAsync(new[] { categoryId }, CategoryResponseGroup.Full)).FirstOrDefault();
             }
             if (category == null)
@@ -71,7 +73,7 @@ namespace VirtoCommerce.Storefront.Controllers
             WorkContext.CurrentPageSeo.Slug = category.Url;
             // map filter properies to search criteria
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
-            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
+            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, isArenda);
             var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
 
             criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?
@@ -115,14 +117,15 @@ namespace VirtoCommerce.Storefront.Controllers
             var dict = _categoryTreeService.GetSeoDict();
             using (var file = new System.IO.StreamWriter(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "seo_dict.csv"), false, System.Text.Encoding.UTF8))
             {
-                file.WriteLine("\"url\";\"h1\";\"description\";\"title\";\"region\";\"city\";\"H2Features\";\"H21\";\"H2Listing\";\"H2Tip\";\"H3SeotextDown1\";\"H3SeotextDown2\";\"H3SeotextDown3\";\"SeotextUp\";\"LinkBlockCentr\";\"LinkBlockCentr1\";\"LinkBlockLeft\";\"LinkBlockRight\";\"LinkBlockType1\";\"LinkBlockType2\";\"LinkBlockType3\";\"InfoBlockListing1\";\"InfoBlockListing2\";\"InfoBlockListing3\"");
-                var converter = new EsShopifyModelConverter();
+                //file.WriteLine("\"url\";\"h1\";\"description\";\"title\";\"region\";\"city\";\"H2Features\";\"H21\";\"H2Listing\";\"H2Tip\";\"H3SeotextDown1\";\"H3SeotextDown2\";\"H3SeotextDown3\";\"SeotextUp\";\"LinkBlockCentr\";\"LinkBlockCentr1\";\"LinkBlockLeft\";\"LinkBlockRight\";\"LinkBlockType1\";\"LinkBlockType2\";\"LinkBlockType3\";\"InfoBlockListing1\";\"InfoBlockListing2\";\"InfoBlockListing3\"");
+                file.WriteLine("url;path");
+                //var converter = new EsShopifyModelConverter();
                 foreach (var key in dict.Keys)
                 {
-                    var liquidCategory = converter.ToLiquidCollection(dict[key], WorkContext);
-                    var row = new StringBuilder();
-                    row.Append($"\"{key}\";");
-                    row.Append($"\"{((string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1)).Replace("\"", "\"\"")}\";");
+                    //var liquidCategory = converter.ToLiquidCollection(dict[key], WorkContext);
+
+                    var row = $"\"{key}\";{dict[key].Path};";
+                    /*row.Append($"\"{((string.IsNullOrEmpty(liquidCategory.H1) ? liquidCategory.FullName : liquidCategory.H1)).Replace("\"", "\"\"")}\";");
                     row.Append($"\"{(dict[key].SeoInfo.MetaDescription?? " ").Replace("\"", "\"\"")}\";");
                     row.Append($"\"{(dict[key].SeoInfo.Title ?? " ").Replace("\"", "\"\"")}\";");
                     row.Append($"\"{(dict[key].RegionName ?? " ").Replace("\"", "\"\"")}\";");
@@ -148,7 +151,7 @@ namespace VirtoCommerce.Storefront.Controllers
                     row.Append($"\"{(liquidCategory.LinkBlockType3 ?? " ").Replace("\"", "\"\"")}\";");
                     row.Append($"\"{(liquidCategory.InfoBlockListing1 ?? " ").Replace("\"", "\"\"")}\";");
                     row.Append($"\"{(liquidCategory.InfoBlockListing2 ?? " ").Replace("\"", "\"\"")}\";");
-                    row.Append($"\"{(liquidCategory.InfoBlockListing3 ?? " ").Replace("\"", "\"\"")}\";");
+                    row.Append($"\"{(liquidCategory.InfoBlockListing3 ?? " ").Replace("\"", "\"\"")}\";");*/
                     file.WriteLine(row.ToString().Replace("\n","").Replace("\r", ""));
                 }
             }

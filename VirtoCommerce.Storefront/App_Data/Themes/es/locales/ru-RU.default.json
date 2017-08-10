@@ -744,7 +744,7 @@
         "coast": "Стоимость",
         "detail": " Подробно",
         "header_features": "Лучшие предложения этого месяца",
-        "product-count-header": ". В нашем каталоге "
+        "product-count-header": " в нашем каталоге "
     },
     "filter":{
         "min-price":"Цена от",
