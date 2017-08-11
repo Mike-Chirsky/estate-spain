@@ -113,6 +113,7 @@ namespace VirtoCommerce.Storefront
             routes.AddStorefrontRoute("API.Es.CategoryTree.Rebuild", "storefrontapi/categorytree/rebuild/{key}", defaults: new { controller = "ApiCategoryTree", action = "RegenerateTree" }, constraints: new { httpMethod = new HttpMethodConstraint("GET") });
             routes.AddStorefrontRoute("API.Es.CategoryTree.RebuildElement", "storefrontapi/categorytree/rebuild/elemet/{key}", defaults: new { controller = "ApiCategoryTree", action = "RegenerateElemet" }, constraints: new { httpMethod = new HttpMethodConstraint("GET") });
             routes.AddStorefrontRoute("API.Es.Products.ResetCacheProduct", "storefrontapi/products/resetcache/{key}", defaults: new { controller = "ApiProductCache", action = "ResetProductCache" }, constraints: new { httpMethod = new HttpMethodConstraint("GET") });
+            routes.AddStorefrontRoute("API.Es.Blogs.ResetCacheBlog", "storefrontapi/blogs/resetcache/{key}", defaults: new { controller = "ApiBlogCache", action = "ClearBlogCache" }, constraints: new { httpMethod = new HttpMethodConstraint("GET") });
             #endregion
 
             #endregion

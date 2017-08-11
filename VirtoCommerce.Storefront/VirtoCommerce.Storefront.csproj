@@ -1088,6 +1088,7 @@
     <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiBlogCacheController.cs" />
     <Compile Include="Controllers\BulkOrderController.cs" />
     <Compile Include="Controllers\SitemapController.cs" />
     <Compile Include="Controllers\StaticContentController.cs" />
@@ -1118,6 +1119,7 @@
     <Compile Include="Services\ContentBlobProviders\AzureBlobContentProvider.cs" />
     <Compile Include="Services\ContentBlobProviders\FileSystemContentBlobProvider.cs" />
     <Compile Include="Services\CustomerServiceImpl.cs" />
+    <Compile Include="Services\Es\ResetBlogCacheService.cs" />
     <Compile Include="Services\Es\ConverterContext.cs" />
     <Compile Include="Services\Es\Converters\CityCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\Converters\ConditionCategoryTreeConverter.cs" />
@@ -1129,6 +1131,7 @@
     <Compile Include="Services\Es\Converters\TypeCategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ESCategoryTreeService.cs" />
     <Compile Include="Services\Es\GoogleSheetService.cs" />
+    <Compile Include="Services\Es\IResetBlogCacheService.cs" />
     <Compile Include="Services\Es\ICategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ICategoryTreeService.cs" />
     <Compile Include="Services\Es\IGoogleSheetService.cs" />

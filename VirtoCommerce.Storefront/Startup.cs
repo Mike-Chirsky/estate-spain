@@ -273,6 +273,8 @@ namespace VirtoCommerce.Storefront
             container.RegisterType<IGoogleSheetService, GoogleSheetService>();
             // reset product cache
             container.RegisterType<IResetCacheProductService, ResetCacheProductService>();
+            // reset blog cache
+            container.RegisterType<IResetBlogCacheService, ResetBlogCacheService>();
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
             var themeConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ThemeConnectionString"].ConnectionString);
