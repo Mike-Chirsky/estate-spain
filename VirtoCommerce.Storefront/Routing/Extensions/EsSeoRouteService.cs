@@ -44,7 +44,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
                 }
             }
 
-            var pathParts = seoPath.Split('/');
+            /*var pathParts = seoPath.Split('/');
             // TODO: Move fill terms to Tree service
             foreach (var part in pathParts)
             {
@@ -129,7 +129,7 @@ namespace VirtoCommerce.Storefront.Routing.Extensions
             {
                 Name = "dealtype",
                 Value = "Продажа"
-            });
+            });*/
             return new SeoEntity
             {
                 ObjectType = "Category",

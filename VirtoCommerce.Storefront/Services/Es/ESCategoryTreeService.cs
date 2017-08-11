@@ -34,13 +34,13 @@ namespace VirtoCommerce.Storefront.Services.Es
         private Store _store;
         private readonly ILocalCacheManager _cacheManager;
 
-        private const string RegionKey = "Regions";
-        private const string EstateTypeKey = "Estatetypes";
-        private const string TagsKey = "Tags";
-        private const string ConditionKey = "Conditions";
-        private const string OtherTypeKey = "OtherType";
-        private const string CitiesKey = "Cities";
-        private const string SinglePageKey = "SinglePage";
+        public const string RegionKey = "Regions";
+        public const string EstateTypeKey = "Estatetypes";
+        public const string TagsKey = "Tags";
+        public const string ConditionKey = "Conditions";
+        public const string OtherTypeKey = "OtherType";
+        public const string CitiesKey = "Cities";
+        public const string SinglePageKey = "SinglePage";
 
         public ESCategoryTreeService(ICatalogModuleApiClient catalogModuleApi, Func<WorkContext> workContextFactory, ILocalCacheManager cacheManager, Func<ICoreModuleApiClient> coreApiFactory)
         {
@@ -71,12 +71,13 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
         }
 
-        public async Task<Dictionary<string, Category>> BuildTree()
+        public async Task<Dictionary<string, Category>> RebuildTree()
         {
             try
             {
                 await _lockObject.WaitAsync();
                 var result = await GenerateTree();
+                ClearCache(_seoCategoryDict.Keys.ToList());
                 WorkContextOwinMiddleware.FilterSeo = null;
                 return result;
             }
@@ -89,10 +90,6 @@ namespace VirtoCommerce.Storefront.Services.Es
         private async Task<Dictionary<string, Category>> GenerateTree()
         {
             var tempSeoDict = new Dictionary<string, Category>();
-            if (_cacheManager != null)
-            {
-                _cacheManager.Clear();
-            }
             // init data for product converter
             var wc = _workContextFactory();
             _language = wc.CurrentLanguage;
@@ -431,17 +428,14 @@ namespace VirtoCommerce.Storefront.Services.Es
                     {
                         _seoCategoryDict[path] = categories.Last();
                     }
-
-                    if (_cacheManager != null)
+                    ClearCache(new List<string>() { path });
+                    //CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(key);
+                    /*_cacheManager.Remove($"Product{obj.Id}", "SeoProducts");
+                    var paths = path.Split('/');
+                    foreach (var p in paths)
                     {
-                        _cacheManager.Clear();
-                        /*_cacheManager.Remove($"Product{obj.Id}", "SeoProducts");
-                        var paths = path.Split('/');
-                        foreach (var p in paths)
-                        {
-                            _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{p}", "ApiRegion");
-                        }*/
-                    }
+                        _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{p}", "ApiRegion");
+                    }*/
                 }
                 else
                 {
@@ -456,7 +450,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                         }
                     }
                     var seoRecords = GetAllSeoRecords(pathItems.LastOrDefault()).FirstOrDefault();
-                    if (seoRecords!=null)
+                    if (seoRecords != null)
                     {
                         var product = _catalogModuleApi.CatalogModuleProducts.GetProductById(seoRecords.ObjectId, CreateProductResponseGroup());
                         var productType = GetProductType(product.CategoryId);
@@ -535,6 +529,36 @@ namespace VirtoCommerce.Storefront.Services.Es
             }
 
             return result;
+        }
+
+        private void ClearCache(List<string> keys)
+        {
+            //clear output cache
+            var outputCacheKeys = keys.Select(x => $"{_store.Id}/{_language.CultureName.ToLower()}/{x}").ToList();
+            var cacheHandle = CacheManager.Web.CacheManagerOutputCacheProvider.Cache.CacheHandles.FirstOrDefault();
+            var cache = (System.Collections.IEnumerable)cacheHandle.GetType().GetField("cache", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cacheHandle);
+            foreach (var item in cache)
+            {
+                var key = item.GetType().GetProperty("Key", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance).GetValue(item).ToString();
+
+                if (outputCacheKeys.Any(x => key.Contains(x)))
+                {
+                    var removeKey = string.Join(":", key.Split(':').Skip(1));
+                    CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(removeKey);
+                }
+            }
+            //clear seo request
+            if (_cacheManager != null)
+            {
+                foreach (var key in keys)
+                {
+                    var paths = key.Split('/');
+                    foreach (var path in paths)
+                    {
+                        _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{path}", "ApiRegion");
+                    }
+                }
+            }
         }
     }
 }

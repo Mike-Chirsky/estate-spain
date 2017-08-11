@@ -145,7 +145,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                     Value = "Неизвестно,Доступно"
                 });
             }
-            if (!arenda)
+            if (!arenda && terms.FirstOrDefault(x=>x.Name == "dealtype") == null)
             {
                 terms.Add(new Term
                 {

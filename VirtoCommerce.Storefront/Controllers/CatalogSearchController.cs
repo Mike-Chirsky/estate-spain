@@ -42,7 +42,7 @@ namespace VirtoCommerce.Storefront.Controllers
             productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
             //For set filters value in UI
             WorkContext.CurrentCategory = new Category();
-            
+
             return View("search", WorkContext);
         }
 
@@ -62,6 +62,10 @@ namespace VirtoCommerce.Storefront.Controllers
             {
                 isArenda = true;
                 category = (await _searchService.GetCategoriesAsync(new[] { categoryId }, CategoryResponseGroup.Full)).FirstOrDefault();
+            }
+            else
+            {
+                category.FillSearchCriteriaTerms(WorkContext.CurrentProductSearchCriteria);
             }
             if (category == null)
             {

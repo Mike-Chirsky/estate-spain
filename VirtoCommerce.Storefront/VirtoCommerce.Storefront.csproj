@@ -1084,6 +1084,7 @@
     <Compile Include="Controllers\Api\Es\ApiCategoryTreeController.cs" />
     <Compile Include="Controllers\Api\Es\ApiFilterProductController.cs" />
     <Compile Include="Controllers\Api\Es\ApiMarketController.cs" />
+    <Compile Include="Controllers\Api\Es\ApiProductCacheController.cs" />
     <Compile Include="Controllers\Api\Es\ApiUserFormsController.cs" />
     <Compile Include="Controllers\Api\Es\ApiGetResponseController.cs" />
     <Compile Include="Controllers\Api\Es\ApiLocationSearchController.cs" />
@@ -1092,6 +1093,7 @@
     <Compile Include="Controllers\StaticContentController.cs" />
     <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Controllers\QuoteRequestController.cs" />
+    <Compile Include="Converters\Catalog\FillSearchCriteriaFromCategory.cs" />
     <Compile Include="Converters\Catalog\FilterCriteriaToSearchCriteriaConverter.cs" />
     <Compile Include="Converters\Catalog\NumerRangeConverter.cs" />
     <Compile Include="Converters\Es\ProductToLocationItem.cs" />
@@ -1130,6 +1132,8 @@
     <Compile Include="Services\Es\ICategoryTreeConverter.cs" />
     <Compile Include="Services\Es\ICategoryTreeService.cs" />
     <Compile Include="Services\Es\IGoogleSheetService.cs" />
+    <Compile Include="Services\Es\IResetCacheProductService.cs" />
+    <Compile Include="Services\Es\ResetCacheProductService.cs" />
     <Compile Include="Services\IChangesTrackingService.cs" />
     <Compile Include="Services\LinkListServiceImpl.cs" />
     <Compile Include="Services\PricingServiceImpl.cs" />

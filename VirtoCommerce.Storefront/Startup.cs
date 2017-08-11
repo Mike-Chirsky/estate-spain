@@ -271,6 +271,8 @@ namespace VirtoCommerce.Storefront
             container.RegisterInstance<ICategoryTreeService>(new ESCategoryTreeService(container.Resolve<ICatalogModuleApiClient>(), workContextFactory, container.Resolve<ILocalCacheManager>(), () => container.Resolve<ICoreModuleApiClient>()));
             // google shet service
             container.RegisterType<IGoogleSheetService, GoogleSheetService>();
+            // reset product cache
+            container.RegisterType<IResetCacheProductService, ResetCacheProductService>();
 
             var cmsContentConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ContentConnectionString"].ConnectionString);
             var themeConnectionString = BlobConnectionString.Parse(ConfigurationManager.ConnectionStrings["ThemeConnectionString"].ConnectionString);

@@ -28,7 +28,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             {
                 return new HttpStatusCodeResult(403);
             }
-            await _categoryTreeService.BuildTree();
+            await _categoryTreeService.RebuildTree();
             WorkContextOwinMiddleware.LastExceptionBuildTree = null;
             WorkContextOwinMiddleware.LastTimeFialBuildTree = null;
             return new HttpStatusCodeResult(200);
