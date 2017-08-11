@@ -19,7 +19,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 {
                     break;
                 }
-                parent = category.Parent;
+                parent = parent.Parent;
             }
             while (parent != null || parent.Parent != null);
             terms.Add(new Term
