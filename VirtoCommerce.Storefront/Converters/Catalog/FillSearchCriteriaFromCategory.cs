@@ -21,7 +21,7 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
                 }
                 parent = parent.Parent;
             }
-            while (parent != null || parent.Parent != null);
+            while (parent != null && parent.Parent != null);
             terms.Add(new Term
             {
                 Name = "available",
