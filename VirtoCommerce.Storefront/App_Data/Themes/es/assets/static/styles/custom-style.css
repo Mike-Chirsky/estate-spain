@@ -344,17 +344,6 @@ ul.pagination-custom li.more-page:hover
     background: rgba(0,0,0,.5);
 
 }
-.col-md-4 .property_listing{
-    height: 485px;
-}
-@media (max-width:1024px){
-    .col-md-4 .property_listing{
-        height: 515px;
-    }
-    .property_listing_details{
-        margin-top: 480px;
-    }
-}
 
 .property_listing:hover .listing-unit-img-wrapper img
 {
@@ -1796,7 +1785,6 @@ ul.user-terms-list
     padding: 0px 20px;
     margin-top: 20px;
     margin-bottom: 0px;
-    float: left;
     width: 100%;
     font-size: 18px;
     line-height: 1.3em;
@@ -1814,7 +1802,7 @@ ul.user-terms-list
     cursor: pointer;
 }
 .product-list .listing_wrapper{
-    height: 515px;
+    margin-bottom: 30px;
 }
 
 @media(max-width:460px)

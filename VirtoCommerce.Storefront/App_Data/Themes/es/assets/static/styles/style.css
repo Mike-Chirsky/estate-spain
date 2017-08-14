@@ -4829,19 +4829,16 @@ input.form-control::-moz-placeholder {
 
 .property_listing{
     position: relative;
-    margin-bottom: 30px;
     border: 1px solid #dde4e9;
     border-radius: 3px;
     font-size: 13px;
     background-color: #ffffff;
-    height: 485px;
     max-width: 525px;
     -webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     transition: all 0.15s ease;
     cursor: pointer;
-    float: left;
 /*    min-height: 466px;
    min-width: 248px;
  */}
@@ -4927,7 +4924,6 @@ input.form-control::-moz-placeholder {
 
 .listing-unit-img-wrapper{
     position:relative;
-    float:left;
     background: #000;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -5150,7 +5146,6 @@ input.form-control::-moz-placeholder {
 .listing_details {
     margin: 0px;
     line-height: 22px;
-    float: left;
     padding: 0px 20px;
     margin: 5px 0px 5px 0px;
     width: 100%;
@@ -5311,18 +5306,15 @@ input.form-control::-moz-placeholder {
     /* padding: 0px 30px; */
     line-height: 16px;
     /* width: 100%; */
-    float: left;
     line-height: 30px;
 
 }
 
 .property_listing_details{
-    position: absolute;
     color: #3a4659;
     width: 100%;
-    float: left;
     padding: 0 20px;
-    margin-top: 450px;
+    margin-bottom: 15px;
 }
 
 .col-md-9 .listing_wrapper.col-md-12 .property_listing .listing_unit_price_wrapper{
