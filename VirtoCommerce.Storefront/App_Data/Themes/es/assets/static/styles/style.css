@@ -13093,8 +13093,8 @@ blockquote cite, blockquote small {
 }
 
 .testimonial-container.type_class_2 .testimonial-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     float: none;
     margin-left: auto;

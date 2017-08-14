@@ -6,7 +6,7 @@
 
 #team-carusel
 {
-    height: 200px;
+    height: 300px;
 }
 
 #team-carusel .carousel-inner
@@ -1496,7 +1496,7 @@ h2.blog-header
 }
 
 .about-carusel .carousel-indicators{
-    top: 180px;
+    top: 280px;
 }
 
 .list-contacts ul {
