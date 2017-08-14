@@ -1779,8 +1779,7 @@ ul.user-terms-list
     margin-top: 30px;
     margin-bottom: 13px;
 }
-.div-h4
-{
+.div-h4 {
     color: #303030;
     padding: 0px 20px;
     margin-top: 20px;
@@ -1788,6 +1787,9 @@ ul.user-terms-list
     width: 100%;
     font-size: 18px;
     line-height: 1.3em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .div-h4 a{
     color: #303030;

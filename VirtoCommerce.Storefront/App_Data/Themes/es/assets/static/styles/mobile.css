@@ -215,7 +215,7 @@
     }
 
     .t-carousel__arrows__container_outside {
-        width: 100%;
+        width: 100% !important;
     }
 }
 @media (max-width: 768px)
