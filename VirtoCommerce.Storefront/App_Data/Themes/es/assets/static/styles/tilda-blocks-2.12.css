@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&subset=latin,cyrillic);
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&subset=latin,cyrillic);
 .t-body {
     margin: 0
@@ -6331,7 +6331,7 @@ img:not([src]) {
     max-width: 1160px!important
 }
 .t-carousel__arrows__container_outside {
-    width: 100%
+    width: 800px;
 }
 .t344__descr ul {
     padding: 0!important;

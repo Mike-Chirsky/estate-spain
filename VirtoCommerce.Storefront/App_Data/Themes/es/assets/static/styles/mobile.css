@@ -205,18 +205,18 @@
 	}
 }
 @media (max-width: 800px) {
-	.entry-tax
-	{
-		font-size: 32px;
-	}
+    .entry-tax {
+        font-size: 32px;
+    }
 
-	.tax_tagline
-	{
-		font-size: 16px;
-		line-height: 1.4;
-	}
+    .tax_tagline {
+        font-size: 16px;
+        line-height: 1.4;
+    }
 
-	
+    .t-carousel__arrows__container_outside {
+        width: 100%;
+    }
 }
 @media (max-width: 768px)
 {
@@ -229,6 +229,7 @@
     {
         width: 100%;
     }
+
 }
 @media (max-width: 664px)
 {
