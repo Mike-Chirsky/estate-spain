@@ -458,6 +458,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_blog_header_img_small.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\header-index.png" />
+    <Content Include="App_Data\Themes\es\assets\static\images\index\elitnaya.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\header.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\catalonia.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\commerical.jpg" />
@@ -465,7 +466,6 @@
     <Content Include="App_Data\Themes\es\assets\static\images\index\costa-brava.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\costa-dorada.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\del-sol.jpg" />
-    <Content Include="App_Data\Themes\es\assets\static\images\index\elitnaya.png" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\header_og.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\kvartiri.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\maresme.jpg" />
