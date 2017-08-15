@@ -1,9 +1,6 @@
 {%- if article -%}
     <h1 class="blog-header padding15">{{- article.title -}}</h1>
-    <div class="article-description no-display-mobile">{{- article.description | strip_html | slice: 0, 237 | strip -}}
-        {%- if article.description.size > 237 -%}
-           ...
-        {%- endif -%}</div>
+    <div class="article-description no-display-mobile">{{- article.description | strip_html | slice: 0, 250 | strip -}}{%- if article.description.size > 250 -%}...{%- endif -%}</div>
 {%- else -%}
     {%- if blog.handle == 'news'-%}
         <h4 class="blog-header">{{'blog.news.header' | t }}</h3>
