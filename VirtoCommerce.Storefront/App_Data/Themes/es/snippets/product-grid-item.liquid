@@ -40,7 +40,7 @@
       </div>
     <div class="product-body" data-link="{{ product.url | absolute_url }}">
         <div class="tag-wrapper"><div class="featured_div">{{ product.deal_type }}</div></div>
-        <div class="div-h4"><a>{{ product.listing_custom_title }}</a></div>
+        <div class="div-h4"><a href="{{ product.url | absolute_url }}">{{ product.listing_custom_title }}</a></div>
         <div class="listing_unit_price_wrapper">
             <span class="price_label price_label_before">{% if product.price == 0 || product.price == null %}{{ 'product.request-price' | t }} {% else %} {% include 'price' with product.price %}{% endif %}</span>
         </div>

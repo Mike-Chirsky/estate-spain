@@ -17,6 +17,13 @@
         $(".busy-indicator-product").hide();
         $("div#list-products").show();
         $(".pagination-container.clearfix").show();
+        $(".product-list .product-body").click(function () {
+            var link;
+            link = $(this).attr('data-link');
+            if (link && link != '') {
+                window.open(link, '_self');
+            }
+        });
     }).fail(function (err) {
         $(".busy-indicator-product").hide();
         $("div#list-products").show();
@@ -27,6 +34,13 @@
 window.onpopstate = function (e) {
     $("div#list-products").html(e.state.container);
     $(".pagination-container.clearfix").html(e.state.pagination);
+    $(".product-list .product-body").click(function () {
+        var link;
+        link = $(this).attr('data-link');
+        if (link && link != '') {
+            window.open(link, '_self');
+        }
+    });
 }
 function sortBy(value) {
     var url = "";
@@ -64,7 +78,6 @@ function setCurrentSort(id, asc, resets) {
         $(item + "Desc").removeClass("active");
     });
 }
-
 $(document).ready(function () {
     /* sorting controls*/
     /* sort by price */
