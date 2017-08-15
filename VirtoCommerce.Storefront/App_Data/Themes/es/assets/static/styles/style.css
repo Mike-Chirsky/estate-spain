@@ -5149,6 +5149,8 @@ input.form-control::-moz-placeholder {
     height: 132px;
     padding: 0px 20px;
     margin: 5px 0px 5px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 100%;
 }
  
