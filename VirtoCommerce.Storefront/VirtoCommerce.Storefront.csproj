@@ -470,6 +470,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\index\kvartiri.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\maresme.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\logo.png" />
+    <Content Include="App_Data\Themes\es\assets\static\images\menu\ceny-2017.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\mortgage-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\news-blog-preview.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\news_blog_header_img.jpg" />
@@ -1334,7 +1335,6 @@
   <ItemGroup>
     <Folder Include="App_Data\cms-content\Pages\demo\assets\handbook\images\" />
     <Folder Include="App_Data\Pages\" />
-    <Folder Include="App_Data\Themes\es\assets\static\images\menu\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VirtoCommerce.LiquidThemeEngine\VirtoCommerce.LiquidThemeEngine.csproj">
