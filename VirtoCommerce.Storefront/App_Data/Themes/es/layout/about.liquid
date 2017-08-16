@@ -8,6 +8,7 @@
       <link rel="shortcut icon" href="{{ 'favicon.png' | static_asset_url }}" type="image/png" />
       {% endif %}
       <title>{{- page_title -}}</title>
+      {% include 'apple-icons' %}
       {% if page_description %}
         <meta name="description" content="{{ page_description }}" />
       {% endif %}
