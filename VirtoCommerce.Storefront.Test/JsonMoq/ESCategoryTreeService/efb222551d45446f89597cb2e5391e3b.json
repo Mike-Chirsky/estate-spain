@@ -1,0 +1,730 @@
+﻿{
+    "totalCount": 2,
+    "items": [
+        {
+            "code": "ES-COND-VTORICHNAYA",
+            "name": "Вторичная недвижимость",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "efb222551d45446f89597cb2e5391e3b",
+            "outline": "efb222551d45446f89597cb2e5391e3b",
+            "path": "Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/header-novostroyki.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1df72c4f8ecc4ef0a2f09ee083d78276",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1df72c4f8ecc4ef0a2f09ee083d78276",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a34c0ad9bf7f4f53803485104b9bc280",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a34c0ad9bf7f4f53803485104b9bc280",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Новостройки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "cc56c01ca0824b73975ae305ffad9b0b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "cc56c01ca0824b73975ae305ffad9b0b",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "b60eed3e0df6456eacb8177ed5ddb000",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "b60eed3e0df6456eacb8177ed5ddb000",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторички по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1289909abb20481a8c599a4369ecd4c2",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1289909abb20481a8c599a4369ecd4c2",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Виды жилья",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3bcd16ec3f404770a865c9099cdd3403",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3bcd16ec3f404770a865c9099cdd3403",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Стоимость вторичного жилья",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6dda3c717abf40a9b46bd52e4e9d6237",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down3",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6dda3c717abf40a9b46bd52e4e9d6237",
+                            "propertyName": "h3-seotext-down3",
+                            "propertyId": "a2aac9d5-b2d6-4ca5-91c0-d3cc56cf701e",
+                            "valueType": "ShortText",
+                            "value": "Кому подойдет для покупки",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "21d2b4bb867d400e8b8ccbe4889dc7ce",
+                    "relativeUrl": "catalog/ES-COND-NOVOSTROYKI/header-novostroyki.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/header-novostroyki.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-novostroyki.png",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "f27a1a0adc5b474eae3c3e9f94e81395",
+                    "relativeUrl": "catalog/ES-COND-VTORICHNAYA/linkblock-centr/linkblock-centr-vtorichnaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/linkblock-centr/linkblock-centr-vtorichnaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-vtorichnaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "7b169c3b1056457595e6501b45eb6140",
+                    "relativeUrl": "catalog/ES-COND-VTORICHNAYA/linkblock-type1/linkblock-type1-vtorichnaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/linkblock-type1/linkblock-type1-vtorichnaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-vtorichnaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "25c8db8e691c40bda8ca2a138d17142e",
+                    "relativeUrl": "catalog/ES-COND-VTORICHNAYA/linkblock-type2/linkblock-type2-vtorichnaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/linkblock-type2/linkblock-type2-vtorichnaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-vtorichnaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "40b325c801a84a6fa1aee80fbc476c63",
+                    "relativeUrl": "catalog/ES-COND-VTORICHNAYA/linkblock-type3-vtorichnaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/linkblock-type3-vtorichnaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-vtorichnaya.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "4659a7326b9447f18d1f0a7be92afc62",
+                    "content": "### Виды вторичной недвижимости ###\n\nВторичная недвижимость в Испании на побережье пользуется спросом среди испанцев, и у зарубежных покупателей, и предполагает широкий выбор. Удачный вариант для инвестиций  – это покупка апартаментов на побережье или с видом на море. Объект в 300-500 метрах от пляжа в разгар сезона всегда можно сдать в аренду.\n\nВыбор объектов из испанской вторички разнообразен:\n* таунхаусы в урбанизации с придомовой территорией;\n* апартаменты, квартиры в малоэтажных или высотных зданиях;\n* отдельный дом, коттедж с бассейном, вилла.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4db129aa6ef644e39c4035501b488d25",
+                    "content": "### Цены на вторичном рынке ###\n\nКак и везде, объекты на вторичном рынке можно найти дешевле на 20-30% их новых аналогов. Цены стартуют от 35 000 - 40 000 евро за небольшую студию на юге Коста Бланки. Так, известный курортный город Торревьеха на Коста Бланке дает возможность выбора из  множества недорогих интересных вариантов. Похожий объект на севере Испании, например, на побережье Коста Брава, обойдется уже в сумму от 80 000 евро за небольшую студию. Разнится и стоимость апартаментов с отделкой на Коста-Бланка в курортном Бенидорме, где инфраструктура и сфера досуга хорошо развиты.\n\nКроме сравнительно низких цен, затраты на покупку объекта на вторичном рынке также несколько ниже, чем при приобретении новостройки (так как в этом случае платится дополнительный гербовый сбор).\n\nСредние цены на наиболее популярную недвижимость вторичного рынка:\n\n1. квартира с двумя спальнями, свежим ремонтом в доме не старше 10-15 лет, в пешей доступности до моря на Коста Бланке (юг) - от 65 000 Евро, Коста Бланке (север) - от 90 000 Евро, на Коста Браве - от 130 000 Евро, на Коста дель Соль - от 110 000 Евро.\n2. таунхаус с двумя-тремя спальнями в пешей доступности до моря, с общественным бассейном и небольшим участков земли - на Коста Бланке (юг) - от 95 000 Евро, Коста Бланке (север) - от 120 000 Евро, на Коста Браве - от 250 000 Евро, на Коста дель Соль - от 210 000 Евро.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4ffda522fcd44120a34eaeb316da456a",
+                    "content": "### Типы вторичного жилья ###\n* [Элтиная недвижимость на вторичном рынке](/vtorichnaya/elitnaya)\n* [Вторичное жилье у моря](/vtorichnaya/na-more)\n* [Вторичное жилье в пригородах](/vtorichnaya/prigorod)\n* [Вторичная недвижимость в горах](/vtorichnaya/v-gorah)\n* [Вторичное жилье для пенсионеров](/vtorichnaya/dlya-pensionerov)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "626ba85aceb24aa7937167bbc4311c34",
+                    "content": "### Вторичка по регионам Испании ###\n* [В Андалусии](/andalusia/vtorichnaya)\n* [В Каталонии](/catalonia/vtorichnaya)\n* [На Коста Бланке](/costa-blanca/vtorichnaya)\n* [На Коста Браве](/costa-brava/vtorichnaya)\n* [На Коста дель Соль](/costa-del-sol/vtorichnaya)\n* [На Коста Дорада](/costa-dorada/vtorichnaya)\n* [На Коста Гарраф](/costa-garraf/vtorichnaya)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6a0ffd0245a94881a8c373c2b92b4a34",
+                    "content": "### Виды вторичного жилья ###\n* [Квартиры на вторичном рынке](/kvartiry-apartamenty/vtorichnaya)\n* [Таунхаусы из вторичного фонда](/townhouse/vtorichnaya)\n* [Виллы и дома из вторичного фонда](/villy-doma/vtorichnaya)\n* [Недорогая вторичная недвижимость](/vtorichnaya/nedorogaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "821a957db06641f190e883d99ebd12de",
+                    "content": "Испания – страна солнечных дней с мягким средиземноморским климатом и богатым культурным наследием. Выгодные предложения на приобретение домов и квартир дают возможность купить вторичное жилье в Испании недорого.\nНедвижимость на вторичном рынке Испании привлекательна тем, что объекты в жилых комплексах продаются уже с отделкой, сантехникой, и часто с мебелью. Второй немаловажный фактор - это возможность найти вариант с удачным месторасположением, так как наиболее интересные участки осваиваются застройщками в первую очередь.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "9c5ed905b816493787e6d7ce7471b403",
+                    "content": "### Вторичка в популярных городах Испании ###\n* [Аликанте](/alicante/vtorichnaya)\n* [Алтея](/altea/vtorichnaya)\n* [Барселона](/barcelona/vtorichnaya)\n* [Бенидорм](/benidorm/vtorichnaya)\n* [Дения](/denia/vtorichnaya)\n* [Эстепона](/estepona/vtorichnaya)\n* [Ллорет де Мар](/lloret-de-mar/vtorichnaya)\n* [Марбелья](/marbella/vtorichnaya)\n* [Ориуэла Коста](/orihuela-costa/vtorichnaya)\n* [Плайя де Аро](/playa-de-aro/vtorichnaya)\n* [Салоу](/salou/vtorichnaya)\n* [Торревьеха](/torrevieja/vtorichnaya)",
+                    "reviewType": "linkblock-centr",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "b788c309ce07467c9ca9c45f6465ca8e",
+                    "content": "### Кому подойдет покупка вторичного жилья ###\n\nВторичное жилье обычно выбирают покупатели с ограниченным бюджетом (когда нужно строго ему соответствовать, а также сэкономить на затратах на оформление и покупку мебели). Также частая причина покупки вторичной недвижимости - это развитая инфраструктура вокруг, близость к морю и хорошим пляжам. Очень часто вторичку в Испанию приобретают как второй объект и сдают его в аренду с минимальными затратами на старте. \n\nТакое жилье подойдет всем, кто понимает и ценит расслабленную, но интересную жизнь на море. Но купить вторичное жилье в Испании можно и для выгодного вложения средств, получив в собственность готовый объект с отделкой и ремонтом. Если требуется получение ипотеки, агентство недвижимости Estate Spain поможет найти варианты для реализации любой задачи.",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость в Испании — купить вторичное жилье в Испании недорого, цены в рублях",
+                    "metaDescription": "Продажа вторичной недвижимости в Испании недорого. Цены на вторичное жилье в Испании.",
+                    "objectId": "abd4792946b547eb8c91e4e78e633272",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:23:48.373Z",
+                    "modifiedDate": "2017-07-27T14:23:48.373Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "76970f34cb7d4bc5a919f6ddd16e96d9"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "efb222551d45446f89597cb2e5391e3b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "abd4792946b547eb8c91e4e78e633272",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-20T15:53:41.637Z",
+            "modifiedDate": "2017-08-04T10:50:33.24Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "abd4792946b547eb8c91e4e78e633272"
+        },
+        {
+            "code": "ES-COND-NOVOSTROYKI",
+            "name": "Новостройки",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "efb222551d45446f89597cb2e5391e3b",
+            "outline": "efb222551d45446f89597cb2e5391e3b",
+            "path": "Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/header-vtorichnaya.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3fb0d52e7c23413fa2e3f2c527c14de6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3fb0d52e7c23413fa2e3f2c527c14de6",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5ab1b281f0db4277be1b5bc24ce3adbf",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5ab1b281f0db4277be1b5bc24ce3adbf",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8c97bac73bd1421ab5f2641878599ff5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8c97bac73bd1421ab5f2641878599ff5",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2047c901333840c48ac4c17d1b1a6c07",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2047c901333840c48ac4c17d1b1a6c07",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Новая недвижимость по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1ce53f73ddfc41bb95943a0e9cfc33c6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1ce53f73ddfc41bb95943a0e9cfc33c6",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Цены на новое жилье",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6c5e9c73da4e4510a1366174c18458ef",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6c5e9c73da4e4510a1366174c18458ef",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Особенности новостроек",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "77b687b6fc644be891da426a82558f58",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down3",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "77b687b6fc644be891da426a82558f58",
+                            "propertyName": "h3-seotext-down3",
+                            "propertyId": "a2aac9d5-b2d6-4ca5-91c0-d3cc56cf701e",
+                            "valueType": "ShortText",
+                            "value": "Часто задаваемые вопросы",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "83d57e02ec054caf81fce58b45fd2d40",
+                    "relativeUrl": "catalog/ES-COND-VTORICHNAYA/header-vtorichnaya.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-VTORICHNAYA/header-vtorichnaya.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-vtorichnaya.png",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "c97133b5d84d421a8f830f56482b9db0",
+                    "relativeUrl": "catalog/ES-COND-NOVOSTROYKI/linkblock-centr/linkblock-centr-novostroyka.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/linkblock-centr/linkblock-centr-novostroyka.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-novostroyka.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "04cd9842176e491dbaa58f1f1add8f02",
+                    "relativeUrl": "catalog/ES-COND-NOVOSTROYKI/linkblock-type1/linkblock-type1-novostroyka.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/linkblock-type1/linkblock-type1-novostroyka.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-novostroyka.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "95fca0e2b557425b80111a00d41852b0",
+                    "relativeUrl": "catalog/ES-COND-NOVOSTROYKI/linkblock-type2/linkblock-type2-novostroyka.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/linkblock-type2/linkblock-type2-novostroyka.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-novostroyka.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "0e7855b4fbd044199888b5242bea6990",
+                    "relativeUrl": "catalog/ES-COND-NOVOSTROYKI/linkblock-type3/linkblock-type3-novostroyka.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-COND-NOVOSTROYKI/linkblock-type3/linkblock-type3-novostroyka.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-novostroyka.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "1be026e32364471fbea003d838fc7be9",
+                    "content": "Если вы задумались над покупкой недвижимости в Испании, и не приемлете варианты вторичного жилья, то новостройки в Испании – это разумный выбор. Новая недвижимость в Испании – это отличное вложение денег и возможность, не только отдыхать, но и зарабатывать. Любые объекты недвижимости на лазурном побережье имеют высокий потенциал сдачи в аренду, особенно в тех регионах, где сезон длится до десяти месяцев в году.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "1e8d59b73ec14708940279793ae55148",
+                    "content": "###  Цены на новое жилье ###\n\nЦены на недвижимость в Испании от застройщика будут сильно зависеть от местности, района, приближенности или удаленности от моря, инфраструктуры внутри урбанизации и рядом с ней, и варьироваться от 1300 до 4000 евро за квадратный метр.\n\nИсторически сложилось так, что новостройки в Испании от застройщика на побережье Коста Брава были дороже и считались более престижными объектами недвижимости. А побережье Коста Бланка, наоборот, славилось своей демократичностью и доступностью.\n\nПри этом качество застройки всегда будет на должном уровне, будь то дорогие объекты недвижимости в Сагаро, или квартиры по демократичным ценам в новых домах в Торревьехе.\n\nПокупая новое жильё в Испании, вы гарантировано получаете отличное качество строительства, чистовую отделку, предустановленную сантехнику, кондиционеры и встроенную кухонную мебель. Также всегда есть возможность получить ипотечный кредит сроком на 20 лет и более на сумму до 60% от стоимости жилья и средней процентной годовой ставкой в размере 3.0 - 3.5%.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "295d30e7bb3f4d1fae86e070b8772b22",
+                    "content": "### Новое жилье по типам  ###\n* [Новые апартаменты и квартиры](/kvartiry-apartamenty/novostroyki)\n* [Новые таунхасы и бунгало](/townhouse/novostroyki)\n* [Новые виллы и дома](/villy-doma/novostroyki)\n* [Элитные новостройки](/novostroyki/elitnaya)\n* [Новое жилье у моря](/novostroyki/na-more)\n* [Недорогое новое жилье](/novostroyki/nedorogaya)\n* [Новостройки в пригородах](/novostroyki/prigorod)\n* [Новое жилье в горах](/novostroyki/v-gorah)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "98c53d5fc476419d9eb0dde8a9d6cef2",
+                    "content": "### Особенности новой недвижимости ###\n\nПланируете купить новостройку в Испании? Помните об особенностях строительства и стандартном, в представлении испанцев, виде апартаментов и отдельных домов.\n\nЕсли речь идёт о многоквартирном доме, то, как правило, это будет большая просторная гостиная-столовая, небольшая кухня и несколько спален не очень большого размера. Испанцы любят проводить время шумными компаниями вместе, а под спальни отводят небольшие помещения. Если такой «национальный колорит» планировки жилья вам не подходит, и вы привыкли к большим пространствам, то лучше сразу отмести мысль о покупке квартиры и обратить внимание на таунхаусы, бунгало или виллы.\nОтдельное жильё (вилла, бунгало, таунхаус), предполагает разные варианты планировок, в ряде случаев, застройщики оговаривают нюансы включенной отделки. Предлагают на выбор несколько пакетов отделки, которые рассчитаны на различный ценовой сегмент (дорогую или более дешевую бытовую технику, сантехнику, межкомнатные двери и встроенные шкафы).\nЕсли вы планируете купить новостройку в Испании, то лучше делать это с помощью агентства недвижимости, которое будет гарантом юридической защиты и прозрачности сделки. Новое жилье в Испании продается на разных стадиях строительства, начиная от стадии котлована, и заканчивая уже готовым к заселению жильем. Агентство недвижимости Estate Spain работает только с проверенными застройщиками всех регионов Испании и гарантирует своим клиентам 100% защиту от любых форм мошенничества или недобросовестного строительства.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "a0b0da70e9cc4d90910349df1117a133",
+                    "content": "### Новостройки в самых популярных городах ###\n* [Новостройки в Алтее, Коста Бланка](/altea/novostroyki)\n* [Новостройки в Бенитачель, Коста Бланка](/benitachell/novostroyki)\n* [Новостройки в Финестрате, Коста Бланка](/finestrat/novostroyki)\n* [Новостройки в Ориэла Коста, Коста Бланка](/orihuela-costa/novostroyki)\n* [Новостройки в Торрьевьехе, Коста Бланка](/torrevieja/novostroyki)",
+                    "reviewType": "linkblock-centr1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "a8f0a8123f1d47479f62ed3dbbf07737",
+                    "content": "### Новостройки в вопросах и ответах ###\n\n**ЕКАТЕРИНА:**\tЕсть ли смысл покупать именно новую квартиру в Испании? В чем выгода?\n **Лилия, МЕНЕДЖЕР ПО ПРОДАЖАМ ESTATE SPAIN:** \n > Преимущества новостройки, прежде всего, заключаются в том, что квартиру вы получаете со всеми удобствами, с современным ремонтом, новой сантехникой, кухней и ванной. И все эти удобства уже входят в стоимость первичной недвижимости. Поэтому цена получается очень заманчивой и выгодной. А если еще учитывать то, что объект находится вдоль береговой линии, то преимуществ становится еще больше. Туристический сезон в Испании длится 10 месяцев в году, поэтому можно сказать, что он практически никогда не заканчивается. По этой причине недвижимость можно сдавать в аренду и получать стабильный доход.\n\n**ЕКАТЕРИНА:**\tВ России мы наблюдаем строительный бум, а как с этим обстоит дело в Испании?\n**Лилия, МЕНЕДЖЕР ПО ПРОДАЖАМ ESTATE SPAIN**\n> Рынок новой недвижимости Испании очень активно развивается. Каждый год появляется все больше новых домов с современными и комфортными квартирами. Перечень коммерческой недвижимости очень большой и включает в себя не только квартиры, но и частные дома, отдельные корпуса, жилые комплексы и многое другое. Учитывая то, что спрос на недвижимость в Испании постоянно растет, то растут и цены.\n\n**ЕКАТЕРИНА:**\tНасколько качественно строят в Испании, из каких материалов?\n**Лилия, МЕНЕДЖЕР ПО ПРОДАЖАМ ESTATE SPAIN**\n> Объекты недвижимости в Испании чаще всего представлены в виде монолитно-кирпичных домов и панельных построек. Панельные дома имеют более простую конструкцию, поэтому и стоят дешевле; монолитно-кирпичные же стоят дороже, но и обладают большей функциональностью.\nЕсли нужна хорошая и комфортная квартира в новостройке, то лучше всего обратить внимание на панельные дома. Квартира в таком доме будет стоить недорого и обладать всеми удобствами и комфортом. К тому же строительство таких домов обычно не занимает много времени. Такие квартиры отлично подходят для сдачи в аренду туристам.\nНе стоит пугаться словосочетаний типа: \"недорогая недвижимость в Испании\" - даже в экономичном варианте недвижимость в Испании представляет собой апартаменты со всеми удобствами. При строительстве всех объектов соблюдаются европейские стандарты качества, поэтому любая недвижимость отвечает всем современным требованиям.айти варианты для реализации любой задачи.",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "aa74f3e31e4640c69106410597f85d9a",
+                    "content": "### Север Испании ###\n* [Каталонские новостройки](/catalonia/novostroyki)\n* [Новостройки на Коста Браве](/costa-brava/novostroyki)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "e5d79b025d344c8080a88faba240fbd1",
+                    "content": "### Центр и юг Испании ###\n\n* [Новое жилье на Коста Бланка](/costa-blanca/novostroyki)\n* [Новое жилье на Коста Калида](/costa-calida/novostroyki)\n* [Новостройки Коста дель Валенсии](/costa-del-valencia/novostroyki)\n* [Новое жилье на Коста дель Соль](/costa-del-sol/novostroyki)\n* [Новостройки в Андалусии](/andalusia/novostroyki)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki",
+                    "pageTitle": "Новая недвижимость в Испании — купить новостройку в Испании от застройщика, цены в рублях",
+                    "metaDescription": "Продажа новостроек в Испании - цены на недвижимость в Испании от застройщика. Цены на новое жилье в Испании.",
+                    "objectId": "91815b4930314256aabb1cc8c006c660",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:23:48.34Z",
+                    "modifiedDate": "2017-07-27T14:23:48.34Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "d1d63415f4b0485e87e54c5f32b1eceb"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "efb222551d45446f89597cb2e5391e3b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "91815b4930314256aabb1cc8c006c660",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-20T15:55:06.477Z",
+            "modifiedDate": "2017-08-04T10:50:32.287Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "91815b4930314256aabb1cc8c006c660"
+        }
+    ],
+    "aggregations": []
+}

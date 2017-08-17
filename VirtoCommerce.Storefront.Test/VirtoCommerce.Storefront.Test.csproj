@@ -88,9 +88,8 @@
     <Reference Include="Moq, Version=4.7.99.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.7.99\lib\net45\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.11\lib\net45\NLog.dll</HintPath>
@@ -103,6 +102,9 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.4.3.1\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -113,7 +115,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VirtoCommerce.Tools, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\VirtoCommerce.Tools.1.2.0\lib\net461\VirtoCommerce.Tools.dll</HintPath>
@@ -144,10 +145,29 @@
     <Compile Include="CommonTests.cs" />
     <Compile Include="ESCategoryTreeServiceTests.cs" />
     <Compile Include="MutablePagedListTests.cs" />
+    <None Include="JsonMoq\ESCategoryTreeService\00d8afcebe4b4f6ab02aab523c441bff.json" />
     <None Include="JsonMoq\ESCategoryTreeService\06d09840154341a4b4564aa9b94b06b3.json" />
     <None Include="JsonMoq\ESCategoryTreeService\2036643b08794d149e1722adbe0230e8.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\2a457c6498aa4341ad380edc046a019a.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\39511a105f124f86a82a37056b74e215.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\4069bf77b3004921aa1e1a96eff1bab7.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\417574fdb3914d5bb620a705c31dc5b4.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\46f93fa133674323a98b9cbc55d7dfb6.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\482d6976884d42958863fda2cf91a91a.json" />
     <None Include="JsonMoq\ESCategoryTreeService\654dbd245eb2484fa5ccd8ffd69387da.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\754bca93cdcc49fda013a617b89ed4ee.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\815ddf6797f045f69e8e53605baa00b7.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\834c195a10c44bd582d32c99f6f8ebe7.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\8a51d21eae164cafb66622dfd4814c5e.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\alicante_seo.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\alicante_update.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\b2e5670ffad94288830a8c3b0489e976.json" />
     <None Include="JsonMoq\ESCategoryTreeService\d6cce7c7d9854f609ab3fd5109d79a57.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\dafbaa8a96da4ea4bdfd67bf707c116b.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\e2c000ac94e44f6db47af5ba103c5c5d.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\eac5828809f34ab7b59ab1e78199be5f.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\efb222551d45446f89597cb2e5391e3b.json" />
+    <None Include="JsonMoq\ESCategoryTreeService\f3d9acf66a6049e7b01b83519a5ed317.json" />
     <None Include="Pages\StoreWithInvalidPages\valid.md" />
     <None Include="Pages\StoreWithInvalidPages\invalid.md" />
     <None Include="Pages\TestStore\blogs\news\default.md" />

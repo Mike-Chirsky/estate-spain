@@ -1,0 +1,2469 @@
+﻿{
+    "totalCount": 19,
+    "items": [
+        {
+            "code": "ES-REG-COND-ANDALUSIA-VTORICHNAYA",
+            "name": "Вторичная  недвижимость в Андалусии",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "d492be0c3bc7490ba63849cbdb8e8226",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "d492be0c3bc7490ba63849cbdb8e8226",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Андалусии",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "d67fd53381514518b1b3b8de38a38e41",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "d67fd53381514518b1b3b8de38a38e41",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной  недвижимости в Андалусии на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "andalusia/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость в Андалусии — купить вторичную недвижимость недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная  недвижимость в Андалусии – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам! .",
+                    "objectId": "5dc80252837a4e3a928fbc4534308dc3",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.113Z",
+                    "modifiedDate": "2017-08-08T11:51:15.113Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "2ba265ad48ed4d8da65654365add5ab4"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "5dc80252837a4e3a928fbc4534308dc3",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "andalusia/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:25.917Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "5dc80252837a4e3a928fbc4534308dc3"
+        },
+        {
+            "code": "ES-REG-COND-BARCELONA-OKRESTNOSTI-VTORICHNAYA",
+            "name": "Вторичная недвижимость в Барселоне и окрестностях",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e72cb9f893f74e5ba7fda3d8ea482e3e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e72cb9f893f74e5ba7fda3d8ea482e3e",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Барселоне и окрестностях",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bfbd0474996242aeb1019aee049110c3",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bfbd0474996242aeb1019aee049110c3",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в Барселоне и окрестностях на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "barcelona-okrestnosti/vtorichnaya",
+                    "pageTitle": "Недвижимость в Барселоне и окрестностях — купить вторичную недвижимость в Барселоне и окрестностях недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в Барселоне и окрестностях – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам! ",
+                    "objectId": "bd1c7f53c6fb46a38e2b0dcaa815bdd9",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.127Z",
+                    "modifiedDate": "2017-08-08T11:51:15.127Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "e77ac20462794381bf06931d77d251e4"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "bd1c7f53c6fb46a38e2b0dcaa815bdd9",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "barcelona-okrestnosti/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:27.377Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "bd1c7f53c6fb46a38e2b0dcaa815bdd9"
+        },
+        {
+            "code": "ES-REG-COND-CATALONIA-VTORICHNAYA",
+            "name": "Вторичная недвижимость в Каталонии",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "d25b644d48e14980828769d76d5735d1",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "d25b644d48e14980828769d76d5735d1",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Каталонии",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "981698d7f25a4acfbf8ed918c867546e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "981698d7f25a4acfbf8ed918c867546e",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в Каталонии на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "catalonia/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость в Каталонии — купить недвижимость из вторичного фонда Каталонии недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в Каталонии – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "4e6ba3b5863a4ce8ad15b8ba2a5fbea2",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.207Z",
+                    "modifiedDate": "2017-08-08T11:51:15.207Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "29950cf966af451fa71c565e0d6449fd"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "4e6ba3b5863a4ce8ad15b8ba2a5fbea2",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "catalonia/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:34.877Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "4e6ba3b5863a4ce8ad15b8ba2a5fbea2"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-BLANCA-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста Бланке",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "663e309ace424c01b0601feaf2ddb95f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "663e309ace424c01b0601feaf2ddb95f",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста Бланке",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8ce6bc92e8bf4eb988f9851548ce15c9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8ce6bc92e8bf4eb988f9851548ce15c9",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста Бланке на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-blanca/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста Бланке — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста Бланке – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "042254abb6fd4285b2185b6f2eed09b8",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.237Z",
+                    "modifiedDate": "2017-08-08T11:51:15.237Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "9cea59cc627641e394d94f4166fa596e"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "042254abb6fd4285b2185b6f2eed09b8",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-blanca/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:36.633Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "042254abb6fd4285b2185b6f2eed09b8"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-BRAVA-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста Брава",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "41166399f7cb4a668119439e4db4da2b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "41166399f7cb4a668119439e4db4da2b",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста Брава",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6290539a579d4560b768c8fe9426ca5d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6290539a579d4560b768c8fe9426ca5d",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста Брава на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-brava/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста Брава — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста Брава  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "7f837c4b41f54d5195477d53e6e54829",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.613Z",
+                    "modifiedDate": "2017-08-08T11:51:15.613Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "83f4579acd7a49949209d500749b18ca"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "7f837c4b41f54d5195477d53e6e54829",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-brava/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:37.49Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "7f837c4b41f54d5195477d53e6e54829"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DORADA-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста Дорада",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bc8247fe204a49a5ae6efbdde51c8545",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bc8247fe204a49a5ae6efbdde51c8545",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста Дорада",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "74789b303beb48bfac11d1d47886fd6a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "74789b303beb48bfac11d1d47886fd6a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста Дорада на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-dorada/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста Дорада — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста Дорада  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "2d1efce4eecf42c292645249265df2ad",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.83Z",
+                    "modifiedDate": "2017-08-08T11:51:15.83Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "31b2465d96c44c02ae3ac086bb08a190"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2d1efce4eecf42c292645249265df2ad",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-dorada/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:39.86Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "2d1efce4eecf42c292645249265df2ad"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-CALIDA-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста Калида",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "748e9a49525348d4bafd4ae728c7b34f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "748e9a49525348d4bafd4ae728c7b34f",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста Калида",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9f5bbfbf4a994fd887f11ed976f16cb6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9f5bbfbf4a994fd887f11ed976f16cb6",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста Калида на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-calida/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста Калида — купить недвижимость из вторчного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста Калида  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "fd280494630742298c598db43bb178fb",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.677Z",
+                    "modifiedDate": "2017-08-08T11:51:15.677Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "b3e35f6978ce41b49ce8c42b6dd3856b"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "fd280494630742298c598db43bb178fb",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-calida/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:37.88Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "fd280494630742298c598db43bb178fb"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DE-LA-LUZ-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста-де-ла-Лус",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2a5b9904e3f14ea19fdbf03b08a885b1",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2a5b9904e3f14ea19fdbf03b08a885b1",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста-де-ла-Лус",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5552630e57ea4b5dbd2b8eda1fc16731",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5552630e57ea4b5dbd2b8eda1fc16731",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста-де-ла-Лус на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-de-la-luz/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста-де-ла-Лус — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста-де-ла-Лус – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "500a54f0a23146e2baca983049d89d1d",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.707Z",
+                    "modifiedDate": "2017-08-08T11:51:15.707Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "94bbf18fab904c5e8a191da56fb119a3"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "500a54f0a23146e2baca983049d89d1d",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-de-la-luz/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:38.287Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "500a54f0a23146e2baca983049d89d1d"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DEL-VALENCIA-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста-дель-Валенсия",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8ce0e55802d840f38d1b7f82375cb8d9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8ce0e55802d840f38d1b7f82375cb8d9",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста-дель-Валенсия",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a2920bd58f144b35b0029967711df147",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a2920bd58f144b35b0029967711df147",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста-дель-Валенсия на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-del-valencia/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста-дель-Валенсия — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста-дель-Валенсия – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "83a7e79ed3dd4f1f980f4eade24bd98d",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.817Z",
+                    "modifiedDate": "2017-08-08T11:51:15.817Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "9c4947bc052d400e81aa020000e1ecec"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "83a7e79ed3dd4f1f980f4eade24bd98d",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-del-valencia/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:39.47Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "83a7e79ed3dd4f1f980f4eade24bd98d"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-GARRAF-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста-дель-Гарраф",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "20987b1025594049945069eee464465d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "20987b1025594049945069eee464465d",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста-дель-Гарраф",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5c921c07c7f94835ae820cd13f0c15bc",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5c921c07c7f94835ae820cd13f0c15bc",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста-дель-Гарраф на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-garraf/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста-дель-Гарраф — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста-дель-Гарраф – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "016315e92cde411592308cdbf31dd756",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.863Z",
+                    "modifiedDate": "2017-08-08T11:51:15.863Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "c3ac0a3d840943ee8acd233fceae8ee2"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "016315e92cde411592308cdbf31dd756",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-garraf/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:40.233Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "016315e92cde411592308cdbf31dd756"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-MARESME-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста-дель-Маресме",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e15d7da0461841bbb9eda5ae1f94d242",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e15d7da0461841bbb9eda5ae1f94d242",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста-дель-Маресме",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "02d27a22c251411296b5722d01199945",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "02d27a22c251411296b5722d01199945",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста-дель-Маресме на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-maresme/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста-дель-Маресме — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста-дель-Маресме – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "abcf4144d45c48cf973da117b4831c13",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:16.177Z",
+                    "modifiedDate": "2017-08-08T11:51:16.177Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "e3756ff3be7f462a97b6b2ac284636f9"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "abcf4144d45c48cf973da117b4831c13",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-maresme/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:41.11Z",
+            "modifiedDate": "2017-08-08T11:51:16.033Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "abcf4144d45c48cf973da117b4831c13"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DEL-SOL-VTORICHNAYA",
+            "name": "Вторичная недвижимость на Коста-дель-Соль",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "566144ca58b94797b1471adf725193ca",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "566144ca58b94797b1471adf725193ca",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость на Коста-дель-Соль",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a28fb23a65554977b20d743288de03b9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a28fb23a65554977b20d743288de03b9",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости на Коста-дель-Соль на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-del-sol/vtorichnaya",
+                    "pageTitle": "Вторичная недвижимость на Коста-дель-Соль — купить недвижимость из вторичного фонда недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость на Коста-дель-Соль – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "6b13f76676fa41499e9026608a9a1d1f",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.753Z",
+                    "modifiedDate": "2017-08-08T11:51:15.753Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "ad45302761ca47adae794b345f69cb14"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "6b13f76676fa41499e9026608a9a1d1f",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-del-sol/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:39.027Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "6b13f76676fa41499e9026608a9a1d1f"
+        },
+        {
+            "code": "ES-REG-COND-ANDALUSIA-NOVOSTROYKI",
+            "name": "Новостройки в Андалусии",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "46d53f796174484596c5460d1d8d0d63",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "46d53f796174484596c5460d1d8d0d63",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки в Андалусии",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "647825d788a74f3c82538f7b2f2e8480",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "647825d788a74f3c82538f7b2f2e8480",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек в Андалусии на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "andalusia/novostroyki",
+                    "pageTitle": "Новая недвижимость в Андалусии — купить недвижимость в новостройках недорого, цены в рублях.",
+                    "metaDescription": "&#127969   Новостройки в  Андалусии – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам! .",
+                    "objectId": "12eeb68da0e14aebb3478e21a0898df8",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.08Z",
+                    "modifiedDate": "2017-08-08T11:51:15.08Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "c50b9a41482b45ed94d54d5d170458b3"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "12eeb68da0e14aebb3478e21a0898df8",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "andalusia/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:25.403Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "12eeb68da0e14aebb3478e21a0898df8"
+        },
+        {
+            "code": "ES-REG-COND-CATALONIA-NOVOSTROYKI",
+            "name": "Новостройки в Каталонии",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "eac3ee8148ae4ef2812628fe200db45b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "eac3ee8148ae4ef2812628fe200db45b",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки в Каталонии",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "096cbd65534a4a81b55973cb35dc89a6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "096cbd65534a4a81b55973cb35dc89a6",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек в Каталонии на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "catalonia/novostroyki",
+                    "pageTitle": "Новая недвижимость в Каталонии — купить недвижимость в новостройках Каталонии недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новая недвижимость в Каталонии – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "e45df62ddf51407c993d334c25743990",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.16Z",
+                    "modifiedDate": "2017-08-08T11:51:15.16Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "14adcb64b2424515846ce56c10009bd2"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e45df62ddf51407c993d334c25743990",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "catalonia/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:34.44Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "e45df62ddf51407c993d334c25743990"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-BLANCA-NOVOSTROYKI",
+            "name": "Новостройки на Коста Бланке",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "4a8cb0ac66b8402795d24e12aaaaa7f0",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "4a8cb0ac66b8402795d24e12aaaaa7f0",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки на Коста Бланке",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c104b66029b747aea27a1099091eeff4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c104b66029b747aea27a1099091eeff4",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек на Коста Бланке на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "33744ab24b6144689b66eeb1205fe559",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "33744ab24b6144689b66eeb1205fe559",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "37573db9e51a485ba8b9efd2420722c1",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "37573db9e51a485ba8b9efd2420722c1",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Стоимость",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1f44fa2d66e041acb04ce2df70592017",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down3",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1f44fa2d66e041acb04ce2df70592017",
+                            "propertyName": "h3-seotext-down3",
+                            "propertyId": "a2aac9d5-b2d6-4ca5-91c0-d3cc56cf701e",
+                            "valueType": "ShortText",
+                            "value": "Кому подойдет",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0fd9af7048f14e808ad18f9a742e0070",
+                    "content": "### Кому подойдет для жизни ### \n\nНовостройки на Коста Бланка – удачное вложение инвестиций для всех, кто любит солнечные дни, пляжи, средиземноморский климат. Квартиры-студии эконом-класса или роскошные виллы, дома на берегу – выбор жилья в этом регионе очень разнообразен.",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4babc6124f2b43c4be8100366e311448",
+                    "content": "«Белый берег» – побережье Коста Бланка – туристически и инвестиционно привлекательный регион с протяженными песчаными пляжами, теплым морем и мягким климатом. Новостройки в Испании на Коста Бланка – оптимальный выбор приобретения недвижимости на средиземноморском побережье.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "b02fced33cdd4a1587b8695e17b1d994",
+                    "content": "### Особенности недвижимости ###\n\nВыгодный с точки зрения туризма регион дает возможность на протяжении 10 месяцев сдавать в аренду жилье.\nЭто активный сектор продаж недвижимости в Испании. Новые жилые комплексы оснащены всем необходимым для комфортной жизни. Качественный ремонт, кухня, ванная, система кондиционирования – это включено в стоимость жилья первичного рынка. Сделка купли-продажи поможет получить новый дом на берегу, и параллельно – прибыльный бизнес. \n\nПервичный рынок представлен различными категориями жилья – от монолитно-кирпичных многоэтажных новостроек и комплексов из таунхаусов, до отдельно стоящих вилл и домов. Возводятся они, в основном, в южной части побережья. Цена в новостройках зависит от расположения (центр города, дом на берегу). Север побережья представлен больше вторичным рынком.\n\n### **Преимущества нового жилья на Коста Бланке:** ###\n\n* Большое количество солнечных дней в году;\n* Доступные цены и большой выбор нового жилья в сравнении с любым другим побережьем Испании;\n* Все необходимое для жизни и отдыха, развитая инфраструктура.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "de62d21d621b4b3db8482e2f146a1ab9",
+                    "content": "### Сколько стоят новостройки на Коста Бланке ### \n\nКоста Бланка - это наиболее демократичное по ценам побережье Испании, на котором вполне свободно можно найти доступное жилье даже среди нового строительства. Строительные компании предлагают варианты в районе Торревьехи и ее окрестностей по ценам от 90 тысяч евро за студию с одной спальней (примерно 45-50 кв.м.), а средние цены на квартиры с двумя и более спальнями начинаются от 120 тысяч евро. \n\nСблокированные новые котеджи (таунхаусы) продаются по цене от 180 тысяч евро, аналогичный отдельно стоящий вариант (вилла, дом) обойдется в 200 тысяч евро и выше. В северной части Коста Бланки, в таких городах как Алтея, Сан-Хуан де Аликанте, Бенидорм, цены на новостройки будут начинаться уже от 300 тысяч евро, а в Морайре можно новые виллы продаются по ценам от 1 миллиона евро. Найти можно любую недвижимость - все зависит от типа жилья и целей его приобретения.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-blanca/novostroyki",
+                    "pageTitle": "Новостройки на Коста Бланке — купить недвижимость в новостройках Коста Бланки недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новостройки на Коста Бланке – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "29ba20879fc94e36a3d02c8ce6160859",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.223Z",
+                    "modifiedDate": "2017-08-08T11:51:15.223Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "7a79574c66024673a2225cbf0c166303"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "29ba20879fc94e36a3d02c8ce6160859",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-blanca/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:35.847Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "29ba20879fc94e36a3d02c8ce6160859"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-BRAVA-NOVOSTROYKI",
+            "name": "Новостройки на Коста Брава",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8a5ce8ad837144c7a010ed1ae2854c4c",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8a5ce8ad837144c7a010ed1ae2854c4c",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки на Коста Брава",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ad3a5f737c7441a28a4d99f55a2473ef",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ad3a5f737c7441a28a4d99f55a2473ef",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек на Коста Брава на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-brava/novostroyki",
+                    "pageTitle": "Новостройки на Коста Брава — купить недвижимость в новостройках Коста Бравы недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новые квартиры и апартаменты на Коста Брава – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "d488b8a86bbf4f2f9d6a160c59068c30",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.347Z",
+                    "modifiedDate": "2017-08-08T11:51:15.347Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "16056c2b89da473b990610bc30f01146"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "d488b8a86bbf4f2f9d6a160c59068c30",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-brava/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:37.13Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "d488b8a86bbf4f2f9d6a160c59068c30"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-CALIDA-NOVOSTROYKI",
+            "name": "Новостройки на Коста Калида",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a310d49c08c84dd190dfe15d586d0040",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a310d49c08c84dd190dfe15d586d0040",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки на Коста Калида",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bf9511c34a314ea59f1efa02b1df3a9f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bf9511c34a314ea59f1efa02b1df3a9f",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек на Коста Калида на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-calida/novostroyki",
+                    "pageTitle": "Новостройки на Коста Калида — купить недвижимость в новостройке недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новостройки на Коста Калида  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "bd74a299a5a843068f4998e5b1eb8070",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.66Z",
+                    "modifiedDate": "2017-08-08T11:51:15.66Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "3ade86060b7946f187a74943ce22f15a"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "bd74a299a5a843068f4998e5b1eb8070",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-calida/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:37.49Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "bd74a299a5a843068f4998e5b1eb8070"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DEL-VALENCIA-NOVOSTROYKI",
+            "name": "Новостройки на Коста-дель-Валенсия",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "15a1ffc8c47e4f538287e7e630bd8992",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "15a1ffc8c47e4f538287e7e630bd8992",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки на Коста-дель-Валенсия",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "30c1618e444a44d8a5f6dc13bfb0c397",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "30c1618e444a44d8a5f6dc13bfb0c397",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек на Коста-дель-Валенсия на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-del-valencia/novostroyki",
+                    "pageTitle": "Новостройки на Коста-дель-Валенсия — купить недвижимость в новостройках недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новостройки на Коста-дель-Валенсия – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "bcd2179473c9431a8fef245ca700f341",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.783Z",
+                    "modifiedDate": "2017-08-08T11:51:15.783Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "b2e4f5efbe8642bfa0fcaf3a21c4c24a"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "bcd2179473c9431a8fef245ca700f341",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-del-valencia/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:39.027Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "bcd2179473c9431a8fef245ca700f341"
+        },
+        {
+            "code": "ES-REG-COND-COSTA-DEL-SOL-NOVOSTROYKI",
+            "name": "Новостройки на Коста-дель-Соль",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "outline": "dafbaa8a96da4ea4bdfd67bf707c116b",
+            "path": "Regions_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c8583c562b374a408e7e2e6451410ce5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c8583c562b374a408e7e2e6451410ce5",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новостройки на Коста-дель-Соль",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "02eb9ffa1afc412db716856d8a99721a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "02eb9ffa1afc412db716856d8a99721a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новостроек на Коста-дель-Соль на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "costa-del-sol/novostroyki",
+                    "pageTitle": "Новостройки на Коста-дель-Соль — купить недвижимость в новостройках Коста-дель-Соль недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новостройки на Коста-дель-Соль – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "1d60836384294f35b972f0d348297dc0",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.737Z",
+                    "modifiedDate": "2017-08-08T11:51:15.737Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "f194079153984b2482e2d15f8186ce09"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "dafbaa8a96da4ea4bdfd67bf707c116b",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "1d60836384294f35b972f0d348297dc0",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "costa-del-sol/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:38.663Z",
+            "modifiedDate": "2017-08-08T11:51:15.503Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "1d60836384294f35b972f0d348297dc0"
+        }
+    ],
+    "aggregations": []
+}

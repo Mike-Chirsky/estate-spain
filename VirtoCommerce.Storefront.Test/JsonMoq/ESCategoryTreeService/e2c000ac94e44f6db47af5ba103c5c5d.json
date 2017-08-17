@@ -1,0 +1,1232 @@
+﻿{
+    "totalCount": 5,
+    "items": [
+        {
+            "code": "ES-OTHER-VILLY",
+            "name": "Вилла",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "outline": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "path": "Other_type",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/header-villa.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7bec695059394e53b48c5d16ee8bd731",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7bec695059394e53b48c5d16ee8bd731",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "fa5838d7b8074e498bfff86b7993ad74",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "fa5838d7b8074e498bfff86b7993ad74",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Виллы в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2903a6a933eb4f3e9d9363761a81d028",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2903a6a933eb4f3e9d9363761a81d028",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ad3787f699e44dd7b3347c314ff7f4ba",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ad3787f699e44dd7b3347c314ff7f4ba",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Виллы по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a120f9343a9f4d4088dd2184654ba67c",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a120f9343a9f4d4088dd2184654ba67c",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности и цены",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "b75876708edc4dc1b5189993f8aaaddf",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "b75876708edc4dc1b5189993f8aaaddf",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Где покупают чаще",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "2ca0bf89e56b44698eee65b75cae0f29",
+                    "relativeUrl": "catalog/ES-OTHER-VILLY/header-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/header-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "ed0db1776cc8486d9555b5f1499c4e22",
+                    "relativeUrl": "catalog/ES-OTHER-VILLY/linkblock-centr/linkblock-centr-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/linkblock-centr/linkblock-centr-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "9e1c74dbd1eb4d758d585cc16b045c60",
+                    "relativeUrl": "catalog/ES-OTHER-VILLY/linkblock-type1/linkblock-type1-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/linkblock-type1/linkblock-type1-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "82678f2175494064b69ed30fac9bd9a9",
+                    "relativeUrl": "catalog/ES-OTHER-VILLY/linkblock-type2/linkblock-type2-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/linkblock-type2/linkblock-type2-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "bee799957c294ce7981ad410ab8faa8a",
+                    "relativeUrl": "catalog/ES-OTHER-VILLY/linkblock-type3/linkblock-type3-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-VILLY/linkblock-type3/linkblock-type3-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-villa.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "11b23ff8efcf4a79b8586b3e73686f14",
+                    "content": "###  ЦЕНТР И ЮГ ИСПАНИИ ###\n\n* [Коста Дорада](/costa-dorada/villy-doma)\n* [Коста Бланка](/costa-blanca/villy-doma)\n* [Коста Калида](/costa-calida/villy-doma)\n* [Коста дель Соль](/costa-del-sol/villy-doma)\n* [Андалусия](/andalusia/villy-doma)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "36e82c8ca43144b28af4f43c944fa227",
+                    "content": "### ВИЛЛЫ ПО ТИПАМ И ОСОБЕННОСТЯМ ###\n* \n* [Новые виллы](/villy-doma/novostroyki)\n* [Виллы из вторичного фонда](/villy-doma/vtorichnaya)\n* [Элитные и премиум-виллы](/villy-doma/elitnaya)\n* [На побережьях у моря](/villy-doma/na-more)\n* [Недорогие виллы](/villy-doma/nedorogaya)\n* [Виллы в пригородах](/villy-doma/prigorod)\n* [Виллы в горах](/villy-doma/v-gorah)\n* [Виллы для пенсионеров](/villy-doma/dlya-pensionerov)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "8ae5ad8aafc84ae399b01f10f658b682",
+                    "content": "Покупка виллы в Испании – настоящий праздник. Дом мечты, утопающий в зелени, с огромными комнатами, террасами и потрясающим видом на Средиземное море может себе позволить не каждый. Вилла в Испании, цена которой варьируется от сотни тысяч до миллионов евро – роскошь, привилегия, показатель статуса и высокого качества жизни.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "a1b7f8a68ed846a593aee194f0118c08",
+                    "content": "### Где чаще всего покупают испанские виллы ###\n\nВилла в Испании, купить недорого которую вряд ли возможно, в большинстве своем интересна состоятельным людям. Фото таких объектов представлены в каталоге. Наличие дорогой виллы – это всегда статус, престиж, и право на получение ВНЖ на основании владения недвижимостью. Где чаще всего покупают виллы в Испании?\n\n* на Золотой Миле Коста дель Соль, где расположены элитные частные резиденции\n* на острове Майорка среди природных заповедников\n* на престижном побережье Коста-Брава \n* в северной части побережья Коста Бланка, где много новых вилл и домов",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "b1df71df21d943f480fa9f9f695e6033",
+                    "content": "###  СЕВЕР ИСПАНИИ ###\n\n* [Барселона и окрестности](/barcelona-okrestnosti/villy-doma)\n* [Каталония](/catalonia/villy-doma)\n* [Коста Брава](/costa-brava/villy-doma)\n* [Коста Гарраф](/costa-garraf/villy-doma)\n* [Коста Маресме](/costa-maresme/villy-doma)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "c439335fae964cdea7b3e5aa9f57d5c7",
+                    "content": "### Виллы в Испании - особенности и цены ###\n\nПродажа вилл в Испании и стартовая цена по сделке зависят от множества показателей – эксклюзивности, качества возведения дома, его расположения и близости к первой линии. Чаще всего это особняки с собственным пляжем или мини-полями для гольфа. На виллы в Испании цены устанавливаются в зависимости от класса, метража, удаленности от моря и других немаловажных факторов.\n\nСколько стоит та или иная категория жилья в различных регионах – от небольших коттеджей до эксклюзивных домов?\nНедорогая вилла иногда предполагает бассейн, террасу и небольшой земельный участок. При тщательном поиске всё же можно купить виллу в Испании недорого в разумных пределах, и более просторную.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy",
+                    "pageTitle": "Виллы в Испании — купить виллу в Испании недорого, цены в рублях, фото",
+                    "metaDescription": "Продажа вилл в Испании недорого.  Купить виллу в Испании по ценам надежного агентства Estate Spain.  Стоимость виллы в Испании - цены в рублях.",
+                    "objectId": "f503eb9f5c1145919c00b578599036a4",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:40:31.237Z",
+                    "modifiedDate": "2017-08-09T16:12:18.577Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "9f8e5a33726647c6bac2ecd8a634ef49"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e2c000ac94e44f6db47af5ba103c5c5d",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f503eb9f5c1145919c00b578599036a4",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T12:43:20.94Z",
+            "modifiedDate": "2017-08-09T16:12:18.55Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "f503eb9f5c1145919c00b578599036a4"
+        },
+        {
+            "code": "ES-OTHER-DOMA",
+            "name": "Дом",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "outline": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "path": "Other_type",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/header-dom.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3973c5ec3bdb4e4c8f453dcca3193aef",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3973c5ec3bdb4e4c8f453dcca3193aef",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "64a8f93ab6f540d4bdcbcb750d01da69",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "64a8f93ab6f540d4bdcbcb750d01da69",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "444e3996e32f4d5baa8b48306d6d3433",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "444e3996e32f4d5baa8b48306d6d3433",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог домов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "695af0a497174a4d8097aac8f8dacaf5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "695af0a497174a4d8097aac8f8dacaf5",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Дома по видам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "abf2dfc8beba44d6b78984243254d60a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "abf2dfc8beba44d6b78984243254d60a",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности домов",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "faf26dd64f084629b07c3af9dd87d55c",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "faf26dd64f084629b07c3af9dd87d55c",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Цены и регионы для покупки",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "af4ce9acb4634089aed5e579b3781ffd",
+                    "relativeUrl": "catalog/ES-OTHER-DOMA/header-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/header-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "d701fbb5e25a41a6bc5e69cb4a1fba5b",
+                    "relativeUrl": "catalog/ES-OTHER-DOMA/linkblock-centr/linkblock-centr-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/linkblock-centr/linkblock-centr-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "e764210f572d463b9dc91d9742540790",
+                    "relativeUrl": "catalog/ES-OTHER-DOMA/linkblock-type1/linkblock-type1-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/linkblock-type1/linkblock-type1-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "871ef7230d164382b15b6ebb60607805",
+                    "relativeUrl": "catalog/ES-OTHER-DOMA/linkblock-type2/linkblock-type2-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/linkblock-type2/linkblock-type2-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "048045fedae64660bb03ac2fd15a0c89",
+                    "relativeUrl": "catalog/ES-OTHER-DOMA/linkblock-type3/linkblock-type3-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-DOMA/linkblock-type3/linkblock-type3-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-dom.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "006462cc978c4ee2b4db9c6e3fd468f5",
+                    "content": "### Типы и особенности ###\n* [Новые дома](/villy-doma/novostroyki)\n* [Дома из вторичного фонда](/villy-doma/vtorichnaya)\n* [Дома на море](/villy-doma/na-more)\n* [Элитные дома](/villy-doma/elitnaya)\n* [Недорогие дома](/villy-doma/nedorogaya)\n* [Дома в пригородах](/villy-doma/prigorod)\n* [Дома в горах](/villy-doma/v-gorah)\n* [Дома для пенсионеров](/villy-doma/dlya-pensionerov)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "3e3d51b8c14f44c6aeb7583a2614abce",
+                    "content": "Дома в Испании – это выгодное вложение денег для тех, кто ценит уединенность и комфорт. Одна из самых востребованных туристических стран Европы – Испания славится своими пляжами, жарким климатом, вкусной едой и терпкими винами.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "62a98c0d85a64d25bc03533bc21ccf4d",
+                    "content": "###  Дома в Испании. Цены и регионы ###  \n\nАгентство недвижимости Estate Spain предлагает своим клиентам дома на продажу в регионах Коста-Брава, Коста-Бланка и Коста-дель-Соль. Цена на дом в Испании будет во многом зависеть от региона. Каждый из представленных регионов обладает своими характерными особенностями и нюансами, которые нужно учитывать, выбирая себе дом.\n\n\nКоста-Бланка – один из главных туристических центров страны. Регион славится жарким климатом и обилием пляжей, удостоенных за чистоту и обустроенность престижной отметкой «голубой флаг». Отменные рестораны, потрясающая природа, тайные гроты в береговой линии, поля для гольфа, старые деревеньки с милыми белыми домиками – это всё ждёт вас на 200-километровой зоне вдоль берега Коста-Бланки. Дешевые дома в Испании можно приобрести именно в этом регионе. Уютное бунгало с бассейном будет стоить от 130 000 – 150 000 евро, а новая вилла в закрытой резиденции от 280 000 евро. \n\n\nКоста-Брава регион на севере страны, расположенный недалеко от границы с Францией. Славится своим умеренным климатом и целебным воздухом, наполненным ароматом сосен и аниса. Побережье Коста-Бравы всегда считалось более дорогим и закрытым, цены на дома в этом регионе будут значительно выше. Купить дом с Испании недорого на побережье Коста-Бравы будет сложнее, стартовые цены на дома – 600 000-700 000 евро и могут достигать нескольких миллионов. \n\n\nКоста-дель-Соль – это побережье, где купили себе резиденции многие голливудские звезды, спортсмены и политики со всего мира. Шикарные яхты, чистые пляжи и круглосуточный праздник в разгар сезона. Рядом Танжер со своей арабской сказкой и пряными блюдами. Но из-за атлантического течения вода в море будет не самой теплой, зато отлично подойдёт любителям серфинга. Также, как и на Коста-Браве, дом в Испании купить недорого на побережье Коста-дель-Соль фактически невозможно. Начальная стоимость домов от 500 000 евро и может достигать 2 500 000 – 3 000 000 евро и выше. \n\n\n\n\n> Где бы вы не планировали купить себе недвижимость, агентство Estate Spain окажет вам профессиональную помощь. Продажа домов в Испании – один из основных профилей деятельности агентства. Мы поможем вам найти недорогие дома в Испании и купить отличное жильё в любом регионе страны.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "bfe057f9f46247e39572dcc418108fbe",
+                    "content": "### Центр и юг Испании ###\n* [Андалусия](/andalusia/villy-doma)\n* [Коста Брава](/costa-brava/villy-doma)\n* [Коста Калида](/costa-calida/villy-doma)\n* [Коста Дорада](/costa-dorada/villy-doma)\n* [Коста Бланка](/costa-blanca/villy-doma)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "ea66fe30ce3f4d8287f0a42b14ef14af",
+                    "content": "###  Особенности домов в Испании ###  \n\nЕсли вы мечтали иметь свой уютный уголок на побережье Средиземного моря, без соседей и шума вокруг, то дом в Испании – это то что вам нужно.\n\nКак правило, рядом с каждым домом есть небольшая придомовая территория, на которой будет располагаться паркинг, бассейн или сад.\n\nГлавный вопрос, который волнует любого покупателя: сколько стоит дом в Испании?\n\nСтоимость дома в Испании зависит от разных факторов, мы перечислим основные из них:\n\n* район и регион Испании;\n* близость дома к морю и пляжам;\n* близость к инфраструктуре и основным туристическим местам;\n* площадь придомовой территории и этажность;\n* наличие парковки, сада, бассейна;\n* год постройки.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "eab3ed3f69684ce59b87b0655e9625cf",
+                    "content": "* ### СЕВЕР ИСПАНИИ ###\n* [Барселона](/barcelona-okrestnosti/villy-doma)\n* [Каталония](/catalonia/villy-doma)\n* [Коста Брава](/costa-brava/villy-doma)\n* [Коста Маресме](/costa-maresme/villy-doma)\n* [Коста Гарраф](/costa-garraf/villy-doma)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "doma",
+                    "pageTitle": "Дома в Испании — купить дом в Испании недорого, цены в рублях, фото. ",
+                    "metaDescription": "&#127969  Продажа дома в Испании недорого. Купить дом в Испании по ценам надежного агентства Estate Spain. &#9728  Стоимость домов в Испании - цены в рублях.",
+                    "objectId": "30cd221064b64592995f0484974fc5fa",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-04T10:51:10.147Z",
+                    "modifiedDate": "2017-08-04T10:51:10.147Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "e65d847ef36b417f8abd9ebe65a2c985"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e2c000ac94e44f6db47af5ba103c5c5d",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "30cd221064b64592995f0484974fc5fa",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "doma",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T12:18:44.28Z",
+            "modifiedDate": "2017-08-04T10:51:10.007Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "30cd221064b64592995f0484974fc5fa"
+        },
+        {
+            "code": "ES-OTHER-KOTTEDZHI",
+            "name": "Коттедж",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "outline": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "path": "Other_type",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/Header/header-kottedzh.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9c8532d1fd0441b3b087186ea8f2893e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9c8532d1fd0441b3b087186ea8f2893e",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Коттеджи в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "0e019ef3f76d4ecca727ef2f11c33061",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "0e019ef3f76d4ecca727ef2f11c33061",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог коттеджей в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "302c5877ec0849a8bc22153b7b457fbe",
+                    "relativeUrl": "catalog/ES-OTHER-KOTTEDZHI/Header/header-kottedzh.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/Header/header-kottedzh.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-kottedzh.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "95003ba22f534c479c8e9276ebdf0024",
+                    "relativeUrl": "catalog/ES-OTHER-KOTTEDZHI/linkblock-centr/linkblock-centr-dom copy.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/linkblock-centr/linkblock-centr-dom copy.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-dom copy.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "6f2e5febc86b4013a6655ee8b89cb130",
+                    "relativeUrl": "catalog/ES-OTHER-KOTTEDZHI/linkblock-type1/linkblock-type1-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/linkblock-type1/linkblock-type1-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "04e622e1e353424f9da91830ebdeaa73",
+                    "relativeUrl": "catalog/ES-OTHER-KOTTEDZHI/linkblock-type2/linkblock-type3-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/linkblock-type2/linkblock-type3-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-villa.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 5,
+                    "id": "0e8e2a957aa54ff5840a4f6e25107eef",
+                    "relativeUrl": "catalog/ES-OTHER-KOTTEDZHI/linkblock-type3/linkblock-type1-dom copy.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-KOTTEDZHI/linkblock-type3/linkblock-type1-dom copy.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-dom copy.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "4453e6dc936e43fb9ba74d4da025f09a",
+                    "content": "Коттедж в Испании - это обычно вилла, особняк или сельский дом с собственной территорией, на которой оборудован бассейн, сад, барбекю и зона отдыха, а иногда - летняя кухня или гостевой домик. Обычно коттеджи располагаются в горах и в урбанизациях в нескольких минутах езды от моря. Купить коттедж в Испании можно и элитный, расположенный на берегу моря, но такая недвижимость редко выставляется на продажу и имеет очень высокую цену.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "68f92b853e2d4c118b1289bd8b3c597a",
+                    "content": "### Стоимость ###\n\nНебольшой коттедж сельского типа под ремонт в горах можно найти и от 90 000 евро, но такой дом будет расположен в нескольких часах езды от моря. Новые дома продаются по цене от 165 000 евро на побережье Коста Бланка. Такие недорогие коттеджи отличаются небольшой площадью, около 100 кв.м., а также скромным участком 200 кв.м. Новый просторный коттедж в Финестрате на участке 600 квадратов обойдется в 650 000 евро. \n\nЭлитные коттеджи на Коста-дель-Соль и Коста-Брава по цене выйдут от 2 200 000 до 6 500 000 евро.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6a174e3012ce4cdb95d3ffe88bd2697f",
+                    "content": "### От чего зависит цена ###\n\nКоттеджные дома в Испании строят на всех побережьях, и, кроме региональных особенностей ценообразования, стоимость недвижимости здесь также зависит от таких факторов, как: \n\n* Площадь дома и участка\n* Наличие мебели и техники\n* Возраст недвижимости\n* Качество строительства\n* Удаленность от моря\n* Качество окружающей инфраструктуры\n* Наличие дополнительных опций на участке (бассейн, джакузи, сад, гостевой или летний дом, зона барбекю, гараж или парковочные места, теннисный корт, детская площадка)",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kottedzhi",
+                    "pageTitle": "Коттеджи в Испании — купить коттедж недорого, цены в рублях",
+                    "metaDescription": "&#127969; Коттеджи в Испании – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "c6423f52a7454708aa3231659b57a97e",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:40:31.207Z",
+                    "modifiedDate": "2017-07-27T14:40:31.207Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "67521cc524e34ee288e2917ef0ab2786"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e2c000ac94e44f6db47af5ba103c5c5d",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "c6423f52a7454708aa3231659b57a97e",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kottedzhi",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-20T16:02:36.173Z",
+            "modifiedDate": "2017-08-10T09:09:35.88Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "c6423f52a7454708aa3231659b57a97e"
+        },
+        {
+            "code": "ES-OTHER-OSOBHYAKI",
+            "name": "Особняк",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "outline": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "path": "Other_type",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/Header/header-osobnyaki.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7f072eb1c23a42fbba3c84a31a10fb8e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7f072eb1c23a42fbba3c84a31a10fb8e",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Особняки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e31f2ed1348f4a5cadc6988fd5a5ad3a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e31f2ed1348f4a5cadc6988fd5a5ad3a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог особняков в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "fdbcd961dce644a6877b2b0cbe16bed5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "fdbcd961dce644a6877b2b0cbe16bed5",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "На что обратить внимание",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ba9c198e1b454a76981d40aa08cffc08",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ba9c198e1b454a76981d40aa08cffc08",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Сколько стоит",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "5602ed82031b4466bf33f7a92df92a4c",
+                    "relativeUrl": "catalog/ES-OTHER-OSOBHYAKI/Header/header-osobnyaki.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/Header/header-osobnyaki.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-osobnyaki.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "a83b5452e7f4417cbefb9808f9a2a260",
+                    "relativeUrl": "catalog/ES-OTHER-OSOBHYAKI/linkblock-centr/linkblock-centr-townhouse.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/linkblock-centr/linkblock-centr-townhouse.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-townhouse.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "4a727e9b72dd40f78a01ab6f313d585e",
+                    "relativeUrl": "catalog/ES-OTHER-OSOBHYAKI/linkblock-type1/linkblock-type3-dom copy.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/linkblock-type1/linkblock-type3-dom copy.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-dom copy.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "b52f32b438684e2d8647dec31ea87c25",
+                    "relativeUrl": "catalog/ES-OTHER-OSOBHYAKI/linkblock-type2/linkblock-type1-zamok.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/linkblock-type2/linkblock-type1-zamok.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-zamok.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 5,
+                    "id": "f474e75cbd764f69ba4faed5aefc203b",
+                    "relativeUrl": "catalog/ES-OTHER-OSOBHYAKI/linkblock-type3/linkblock-type2-villa.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-OSOBHYAKI/linkblock-type3/linkblock-type2-villa.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-villa.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "23c32f7469fb48a1b84e17b62a6d74f3",
+                    "content": "### На что обратить внимание ###\n\nПри покупке особняка стоит принять во внимание репутацию застройщика, качество строительных материалов, возраст недвижимости, расстояние до моря, окружающую инфраструктуру и потенциал развития урбанизации и ближайшего города. Очень часто при покупке особняка в новом комплексе из нескольких домов можно купить showhouse - это рекламный дом, который продается по выгодной цене уже укомплектованный мебелью и техникой. Также нередко застройщики предлагают приобрести пакетное дизайнерское предложение мебели и техники по хорошей цене - такой вариант подойдет тем, кто хочет сэкономить на дизайнере и не тратить лишнее время на самостоятельные поиски товаров для дома.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "94e30b7b248648f4a04a30d26ddedfb3",
+                    "content": "Особняк в Испании обычно представляет собой отдельно стоящий дом, элитную виллу у моря, небольшой коттедж с садом или сельский дом в пригороде. Купить особняк в Испании можно в любом регионе и даже со скромным бюджетом. Самые бюджетные варианты как новых, так и вторичных особняков вы найдете на побережье Коста Бланка. Особняки элитного типа обычно покупают на побережье Коста-дель-Соль либо Коста Дорада.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "c5f7397123f3495283c9bc4fc1da34e3",
+                    "content": "### Сколько стоит ###\n\nНедорого купить особняк в Испании можно в регионе Коста Бланка: здесь цены на вторичные дома начинаются от 160 000 евро, на новые - от 200 000. Новое строительство идет по всему району Ориуэла Коста, сейчас здесь приятные цены на дома, и растут они из года в год. \n\nЭлитные особняки в Испании располагаются на побережье Коста-дель-Соль на Золотой Миле, в Эстепоне, Малаге и Марбелье. Здесь новые дома обойдутся владельцам от 2 до 6 миллионов евро. Такие же цены на престижную недвижимость ждут желающих обзавестись особняком в регионе Коста Дорада.\n\nПокупая особняк стоимостью от 500 000 евро, вы гарантировано получаете испанский вид на жительство.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "osobnyaki",
+                    "pageTitle": "Особняки в Испании — купить Особняк недорого, цены в рублях",
+                    "metaDescription": "&#127969; Особняки в Испании – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "3d54115cf0854e90b2352fa272aad5e0",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:40:31.22Z",
+                    "modifiedDate": "2017-07-27T14:40:31.22Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "7969f213c7dd4c9eaea7661a015fcf83"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e2c000ac94e44f6db47af5ba103c5c5d",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "3d54115cf0854e90b2352fa272aad5e0",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "osobnyaki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-20T15:59:17.543Z",
+            "modifiedDate": "2017-08-10T09:08:28.183Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "3d54115cf0854e90b2352fa272aad5e0"
+        },
+        {
+            "code": "ES-OTHER-PENTHOUSE",
+            "name": "Пентхаус",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "outline": "e2c000ac94e44f6db47af5ba103c5c5d",
+            "path": "Other_type",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-PENTHOUSE/header-penthouse.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f6881a33b18d4b45bdc39628a05d7868",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f6881a33b18d4b45bdc39628a05d7868",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Пентхаусы в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "a8a7f48609fe45798158df59d38e57ed",
+                    "relativeUrl": "catalog/ES-OTHER-PENTHOUSE/header-penthouse.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-OTHER-PENTHOUSE/header-penthouse.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-penthouse.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "385058e1afd8496c95441a66c3aafbdf",
+                    "content": "Пентхаусы в Испании представляют собой просторные апартаменты на последнем этаже многоквартирного дома. Они располагают одной или несколькими террасами, солярием на крыше. Купить пентхаус в Испании чаще можно с современной открытой планировкой, они также нередко бывают двухуровневыми. Иногда на террасе такой квартиры оборудован бассейн или джакузи. Пентхаусы обычно состоят из нескольких спален и ванных комнат, чтобы удовлетворять запросы больших семей.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4ea0c30cf2cd40f98d788f37158d5c82",
+                    "content": "### Где строят пентхаусы ###\n\nЧаще всего пентхаусы представляют собой элитное жилье, поэтому, как и остальная дорогостоящая недвижимость, располагаются на побережьях с престижными объектами. Коста-дель-Соль и Коста Бланка - это те регионы Испании, где обычно последний этаж нового многоквартирного дома располагает пентхаусом или двухуровневыми апартаментами.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "dbb3ec04211d443d918a28e442f5fc99",
+                    "content": "### Сколько стоит ###\n\nЕсли говорить о недорогих пентхаусах, которые можно купить на побережье Коста Бланка в Торревьехе и Ориуэла Коста, то обычно это малогабаритные трехкомнатные квартиры с солярием в доме без бассейна и парковки, и цены на такие квартиры вторичного фонда под ремонт начинаются от 60 000 евро. На Коста Бланке также есть крупногабаритные пентхаусы в Бенидорме, Пунта-Приме и Ла-Мате, цены в новостройках на них составляют 250 000 - 350 000 евро.\n\nКрасивые пентхаусы на Коста-дель-Соль в новом фонде обойдутся от 600 тысяч евро без мебели, а элитный пентхаус в Эстепоне на первой линии моря, укомплектованный лучшей бытовой техникой и мебелью, может стоить и 3,5 миллиона евро.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "penthouse",
+                    "pageTitle": "Пентхаусы в Испании  — купить пентхаус недорого, цены в рублях.",
+                    "metaDescription": "🏡 Пентхаусы в Испании – лучшие предложения от агентства Estate-Spain.com ☀ Продажа недвижимости по низким ценам!",
+                    "objectId": "ccdccf450e1b434f90eba86ced1febc3",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "createdDate": "2017-08-08T14:41:48.88Z",
+                    "modifiedDate": "2017-08-08T14:41:48.88Z",
+                    "createdBy": "tt",
+                    "modifiedBy": "tt",
+                    "id": "043c597d0fcf4681bf886e859bb1a442"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e2c000ac94e44f6db47af5ba103c5c5d",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "ccdccf450e1b434f90eba86ced1febc3",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "penthouse",
+                                    "isActive": true,
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-08-08T14:34:28.477Z",
+            "modifiedDate": "2017-08-10T09:10:15.897Z",
+            "createdBy": "tt",
+            "modifiedBy": "tt",
+            "id": "ccdccf450e1b434f90eba86ced1febc3"
+        }
+    ],
+    "aggregations": []
+}

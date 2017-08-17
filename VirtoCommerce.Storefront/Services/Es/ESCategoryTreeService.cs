@@ -534,18 +534,28 @@ namespace VirtoCommerce.Storefront.Services.Es
         private void ClearCache(List<string> keys)
         {
             //clear output cache
-            var outputCacheKeys = keys.Select(x => $"{_store.Id}/{_language.CultureName.ToLower()}/{x}").ToList();
-            var cacheHandle = CacheManager.Web.CacheManagerOutputCacheProvider.Cache.CacheHandles.FirstOrDefault();
-            var cache = (System.Collections.IEnumerable)cacheHandle.GetType().GetField("cache", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cacheHandle);
-            foreach (var item in cache)
+            try
             {
-                var key = item.GetType().GetProperty("Key", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance).GetValue(item).ToString();
-
-                if (outputCacheKeys.Any(x => key.Contains(x)))
+                var outputCacheKeys = keys.Select(x => $"{_store.Id}/{_language.CultureName.ToLower()}/{x}").ToList();
+                var cacheHandle = CacheManager.Web.CacheManagerOutputCacheProvider.Cache.CacheHandles.FirstOrDefault();
+                var cache = (System.Collections.IEnumerable)cacheHandle.GetType().GetField("cache", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cacheHandle);
+                foreach (var item in cache)
                 {
-                    var removeKey = string.Join(":", key.Split(':').Skip(1));
-                    CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(removeKey);
+                    var key = item.GetType().GetProperty("Key", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance).GetValue(item).ToString();
+
+                    if (outputCacheKeys.Any(x => key.Contains(x)))
+                    {
+                        var removeKey = string.Join(":", key.Split(':').Skip(1));
+                        CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(removeKey);
+                    }
                 }
+            }
+            catch (InvalidOperationException)
+            {
+            }
+            catch
+            {
+                throw;
             }
             //clear seo request
             if (_cacheManager != null)
