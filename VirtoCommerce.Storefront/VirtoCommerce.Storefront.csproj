@@ -581,7 +581,7 @@
     <Content Include="App_Data\Themes\es\assets\static\styles\tilda-grid-3.0.css" />
     <Content Include="App_Data\Themes\es\assets\static\styles\tilda-zoom-1.0.css" />
     <Content Include="App_Data\Themes\es\assets\static\styles\tooltipster.css" />
-    <None Include="App_Data\Themes\es\snippets\apple-icons.liquid" />
+    <Content Include="App_Data\Themes\es\snippets\apple-icons.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\contact-us.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\about.liquid" />
     <Content Include="App_Data\Themes\es\snippets\footer\region.liquid" />
