@@ -210,11 +210,24 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>(), seoDict)).Where(x => x != null).ToList();
+                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id))
+                                    .Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>(), seoDict))
+                                    .Where(x => x != null).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
+            var cities = parents.SelectMany(x => x.Categories);
+            // fill child cities
+            foreach (var city in cities)
+            {
+                //city.ChildCategory = cities.Where(x=>x.Id == )
+                foreach (var child in city.ChildCategory)
+                {
+                    child.Parent = city;
+                }
+            }
+
             return parents.SelectMany(x => x.Categories).ToArray();
         }
 
@@ -429,13 +442,6 @@ namespace VirtoCommerce.Storefront.Services.Es
                         _seoCategoryDict[path] = categories.Last();
                     }
                     ClearCache(new List<string>() { path });
-                    //CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(key);
-                    /*_cacheManager.Remove($"Product{obj.Id}", "SeoProducts");
-                    var paths = path.Split('/');
-                    foreach (var p in paths)
-                    {
-                        _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{p}", "ApiRegion");
-                    }*/
                 }
                 else
                 {

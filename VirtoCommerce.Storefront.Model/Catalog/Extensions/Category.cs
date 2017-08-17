@@ -25,6 +25,6 @@ namespace VirtoCommerce.Storefront.Model.Catalog
         public string RegionUrl { set; get; }
         public string CityName { set; get; }
         public string RegionName { set; get; }
-
+        public ICollection<Category> ChildCategory { set; get; }
     }
 }
