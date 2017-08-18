@@ -2,8 +2,8 @@
 {
     "@type":"Article",
     "@context": "http://schema.org",
-    "mainEntityOfPage": "https:{{- article.url | absolute_url -}}",
-    "image": "https:{{- article.image_url | absolute_url -}}",
+    "mainEntityOfPage": "{{- article.url | absolute_url -}}",
+    "image": "{{- article.image_url | absolute_url -}}",
     "description": "{{- article.description -}}",
     "datePublished": "{{- article.published_at | date: '%Y-%m-%d' -}}",
     "name": "{{- article.title -}}"

@@ -210,11 +210,24 @@ namespace VirtoCommerce.Storefront.Services.Es
 
                 if (resultCities.Items != null)
                 {
-                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id)).Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>(), seoDict)).Where(x => x != null).ToList();
+                    var children = resultCities.Items.Where(x => x != null && x.Associations != null && x.Associations.Any(a => a.AssociatedObjectId == parent.Id))
+                                    .Select(p => ConvertProductToCategory(parent, "Cities", p, new List<Product>(), seoDict))
+                                    .Where(x => x != null).ToList();
                     categories.AddRange(children);
                 }
                 parent.Categories = new MutablePagedList<Category>(categories);
             }
+            var cities = parents.SelectMany(x => x.Categories);
+            // fill child cities
+            foreach (var city in cities)
+            {
+                //city.ChildCategory = cities.Where(x=>x.Id == )
+                foreach (var child in city.ChildCategory)
+                {
+                    child.Parent = city;
+                }
+            }
+
             return parents.SelectMany(x => x.Categories).ToArray();
         }
 
@@ -429,13 +442,6 @@ namespace VirtoCommerce.Storefront.Services.Es
                         _seoCategoryDict[path] = categories.Last();
                     }
                     ClearCache(new List<string>() { path });
-                    //CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(key);
-                    /*_cacheManager.Remove($"Product{obj.Id}", "SeoProducts");
-                    var paths = path.Split('/');
-                    foreach (var p in paths)
-                    {
-                        _cacheManager.Remove($"Commerce.GetSeoInfoBySlug:{p}", "ApiRegion");
-                    }*/
                 }
                 else
                 {
@@ -534,18 +540,28 @@ namespace VirtoCommerce.Storefront.Services.Es
         private void ClearCache(List<string> keys)
         {
             //clear output cache
-            var outputCacheKeys = keys.Select(x => $"{_store.Id}/{_language.CultureName.ToLower()}/{x}").ToList();
-            var cacheHandle = CacheManager.Web.CacheManagerOutputCacheProvider.Cache.CacheHandles.FirstOrDefault();
-            var cache = (System.Collections.IEnumerable)cacheHandle.GetType().GetField("cache", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cacheHandle);
-            foreach (var item in cache)
+            try
             {
-                var key = item.GetType().GetProperty("Key", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance).GetValue(item).ToString();
-
-                if (outputCacheKeys.Any(x => key.Contains(x)))
+                var outputCacheKeys = keys.Select(x => $"{_store.Id}/{_language.CultureName.ToLower()}/{x}").ToList();
+                var cacheHandle = CacheManager.Web.CacheManagerOutputCacheProvider.Cache.CacheHandles.FirstOrDefault();
+                var cache = (System.Collections.IEnumerable)cacheHandle.GetType().GetField("cache", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(cacheHandle);
+                foreach (var item in cache)
                 {
-                    var removeKey = string.Join(":", key.Split(':').Skip(1));
-                    CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(removeKey);
+                    var key = item.GetType().GetProperty("Key", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance).GetValue(item).ToString();
+
+                    if (outputCacheKeys.Any(x => key.Contains(x)))
+                    {
+                        var removeKey = string.Join(":", key.Split(':').Skip(1));
+                        CacheManager.Web.CacheManagerOutputCacheProvider.Cache.Remove(removeKey);
+                    }
                 }
+            }
+            catch (InvalidOperationException)
+            {
+            }
+            catch
+            {
+                throw;
             }
             //clear seo request
             if (_cacheManager != null)

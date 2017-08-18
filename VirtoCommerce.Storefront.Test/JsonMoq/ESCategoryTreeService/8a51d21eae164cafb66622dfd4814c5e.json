@@ -1,0 +1,565 @@
+﻿{
+    "totalCount": 3,
+    "items": [
+        {
+            "code": "ES-DISTR-diagonal-mar",
+            "name": "Диагональ Мар",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "8a51d21eae164cafb66622dfd4814c5e",
+            "outline": "8a51d21eae164cafb66622dfd4814c5e",
+            "path": "Single_pages",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-DISTR-diagonal-mar/header-diagonal-mar.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "de7e0cef0b25460895b3376fce5ec65a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "de7e0cef0b25460895b3376fce5ec65a",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Диагональ Мар - современный приморский квартал Барселоны",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "698a62f2369e47469afb5f3d21290aae",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-name",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "698a62f2369e47469afb5f3d21290aae",
+                            "propertyName": "term-name",
+                            "propertyId": "e79dd6f7-c56b-47e9-8f18-e31794a67cb7",
+                            "valueType": "ShortText",
+                            "value": "district",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1cfead76012c4aa8a5b9b695835767e0",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-value",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1cfead76012c4aa8a5b9b695835767e0",
+                            "propertyName": "term-value",
+                            "propertyId": "8a25de42-f5cb-4043-ae24-3d1351bfe23b",
+                            "valueType": "ShortText",
+                            "value": "Диагональ Мар",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "9cb4828e18d04ebb8a90fd9748284cdc",
+                    "relativeUrl": "catalog/ES-DISTR-diagonal-mar/header-diagonal-mar.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-DISTR-diagonal-mar/header-diagonal-mar.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-diagonal-mar.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "7ea000d269ad43e8a53ff46416587f25",
+                    "content": "<div id=\"rec7772992\" class=\"r\" style=\"padding-top:15px;padding-bottom:0px;background-color:#ffffff; \" data-record-type=\"106\" data-bg-color=\"#ffffff\" data-animationappear=\"off\"><!-- T004 --><div class=\"t004\"><div class=\"t-container \"> <div class=\"t-col t-col_10 t-prefix_1\"><div field=\"text\" class=\"t-text t-text_md \"><div style=\"text-align:center;\" data-customstyle=\"yes\"> Диагональ Мар - это новый район Барселоны, который воплотил в себе идею соединить центральную улицу Барселоны Диагональ с природой и морем. Диагональ Мар - это район для комфортного проживания, покупок, прогулок и просто для приятного проведения досуга. Район располагается в очень живописной зоне, в натуральном природном парке, напротив моря. Диагональ Мар славится своими торговыми центрами и известными европейскими бутиками. <br><br>В этом районе находятся самые комфортабельные и высококачественные квартиры Барселоны. Важнейшее преимущество этих современных объектов недвижимости заключается в том, что всего в нескольких десятках метров находятся пляж и море. <br><br></div></div></div></div></div></div><div id=\"rec7772993\" class=\"r r_anim r_showed\" style=\"padding-top:30px; \" data-record-type=\"169\"><!-- t155 --><div class=\"t155\"> <div class=\"t-container\"> <div class=\"t-row\"> <div class=\"t-col t-col_6 t-bgimg t-zoomable loaded\" bgimgfield=\"gi_img__0\" data-zoomable=\"yes\" data-img-zoom-url=\"images/tild6534-6666-4436-b564-313332333733__e2cd8a88ff60e9c61acfab470b615d21.jpg\" data-original=\"https://estate-spain.com/images/tild6534-6666-4436-b564-313332333733__e2cd8a88ff60e9c61acfab470b615d21.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild6534-6666-4436-b564-313332333733__e2cd8a88ff60e9c61acfab470b615d21.jpg&quot;) center center / cover no-repeat; height: 460px; margin-bottom: 20px;\" src=\"\"></div> <div class=\"t-col t-col_6 t-bgimg t-zoomable loaded\" bgimgfield=\"gi_img__1\" data-zoomable=\"yes\" data-img-zoom-url=\"images/tild3063-6236-4037-b361-653066313665__feedphoto.jpg\" data-original=\"https://estate-spain.com/images/tild3063-6236-4037-b361-653066313665__feedphoto.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild3063-6236-4037-b361-653066313665__feedphoto.jpg&quot;) center center / cover no-repeat; height: 460px; margin-bottom: 20px;\" src=\"\"></div> </div> </div></div></div><div id=\"rec7772994\" class=\"r r_anim r_showed\" style=\"padding-top:30px;padding-bottom:30px; \" data-record-type=\"3\"><!-- T107 --><div class=\"t107\"> <div class=\"t-align_center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\"><meta itemprop=\"image\" content=\"images/tild3761-6436-4138-b737-643566623336__3.jpg\"> <img src=\"https://estate-spain.com/images/tild3761-6436-4138-b737-643566623336__3.jpg\" data-original=\"https://estate-spain.com/images/tild3761-6436-4138-b737-643566623336__3.jpg\" class=\"t107__width t-width t-width_8 t-img loaded\" imgfield=\"img\"> </div> </div></div><div id=\"rec7772995\" class=\"r\" style=\"padding-top:15px;padding-bottom:0px;background-color:#ffffff; \" data-record-type=\"106\" data-bg-color=\"#ffffff\" data-animationappear=\"off\"><!-- T004 --><div class=\"t004\"><div class=\"t-container \"> <div class=\"t-col t-col_10 t-prefix_1\"><div field=\"text\" class=\"t-text t-text_md \"><div style=\"text-align:center;\" data-customstyle=\"yes\"> Несмотря на относительную удаленность от центра города, из Диагональ мар до центральной улицы Барселоны - Пасео де Грасия можно добраться за 10 минут благодаря превосходной работе метрополитена. Отличное транспортное сообщение включает систему автобусных маршрутов, удобный выезд к кольцевым дорогам Барселоны, а также трамвайную линию, которая начинается в Диагональ Мар и идет через торговый комплекс Глориес до прибрежного района Олимпийская деревня. Диагональ мар оснащен удобным выездом на окружную дорогу Ронда Литораль и автостраду до международного аэропорта Барселоны. <br><br><br></div></div></div></div></div></div><div id=\"rec7772996\" class=\"r r_anim r_showed\" style=\"padding-top:30px;padding-bottom:0px; \" data-record-type=\"146\"><!-- t215--><div class=\"t215\"> <div class=\"t-container\"> <div class=\"t-row\"> <div class=\"t-col t-col_6\" style=\"margin-bottom:20px;\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\"> <div class=\"t215__blockimg t-bgimg loaded\" bgimgfield=\"gi_img__0\" data-zoom-target=\"0\" data-original=\"https://estate-spain.com/images/tild6365-3565-4162-b166-383436666161__4.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild6365-3565-4162-b166-383436666161__4.jpg&quot;) center center / cover no-repeat;\" src=\"\"><meta itemprop=\"image\" content=\"images/tild6365-3565-4162-b166-383436666161__4.jpg\"></div> </div> <div class=\"t-col t-col_6\" style=\"margin-bottom:20px;\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\"> <div class=\"t215__blockimg t-bgimg loaded\" bgimgfield=\"gi_img__1\" data-zoom-target=\"1\" data-original=\"https://estate-spain.com/images/tild3438-3833-4032-b765-316664643963__2.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild3438-3833-4032-b765-316664643963__2.jpg&quot;) center center / cover no-repeat;\" src=\"\"><meta itemprop=\"image\" content=\"images/tild3438-3833-4032-b765-316664643963__2.jpg\"></div> </div> </div><div class=\"t-row\"> </div> </div></div></div><div id=\"rec7772997\" class=\"r r_anim r_showed\" style=\"padding-top:15px;padding-bottom:15px; \" data-record-type=\"106\"><!-- T004 --><div class=\"t004\"><div class=\"t-container \"> <div class=\"t-col t-col_10 t-prefix_1\"><div field=\"text\" class=\"t-text t-text_md \"><div style=\"text-align:center;\" data-customstyle=\"yes\">Район расположен непосредственно рядом с пляжем Льевант и хорошо сообщается с центром города посредством общественного транспорта. Несомненно главными его достоинствами являются широкие улицы, необычный Парк Диагональ Мар и близость к морю. <br> <br>Второй по значимости достопримечательностью стало здание Форум - это часть застройки входящей в район Диагональ Мар, здание треугольной формы, которое осталось как память после международного симпозиума. В 2011 году здание стало новым домом для Музея Естественных наук Барселоны. Сейчас здесь проводятся выставки в течение всего года и музыкальные фестивали, например, известный во всем мире - Primavera Sound.<br><br>Другой изюминкой района является Фотогальваническая площадь, современная и красивая, она органично вписалась в панораму города. К тому же здесь расположена Зона для купания в Форум, своего рода искусственный бассейн с морской водой, идеальный для купания летом, оснащенный всем необходимым для купания людей с ограниченными возможностями. <br> <br>Особого внимания заслуживает Парк Диагональ Мар, современный парк, сочетающий в своём ландшафте, бионическую архитектуру, сады и водоёмы. Парк по праву может считаться произведением искусства современной урбанистики, соединющей в себе гармонию природы и архитектуры. Идеальное место, чтобы отдохнуть на скамейках, наслаждаясь солнечными лучами, почитать интересную книгу и провести время с детьми. <br><br></div></div></div></div></div></div><div id=\"rec7772998\" class=\"r r_anim r_showed\" style=\"padding-top:30px; \" data-record-type=\"169\"><!-- t155 --><div class=\"t155\"> <div class=\"t-container\"> <div class=\"t-row\"> <div class=\"t-col t-col_6 t-bgimg t-zoomable loaded\" bgimgfield=\"gi_img__0\" data-zoomable=\"yes\" data-img-zoom-url=\"images/tild6139-6366-4236-a331-373237353434__parkdiagonalmar.jpg\" data-original=\"https://estate-spain.com/images/tild6139-6366-4236-a331-373237353434__parkdiagonalmar.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild6139-6366-4236-a331-373237353434__parkdiagonalmar.jpg&quot;) center center / cover no-repeat; height: 460px; margin-bottom: 20px;\" src=\"\"></div> <div class=\"t-col t-col_6 t-bgimg t-zoomable loaded\" bgimgfield=\"gi_img__1\" data-zoomable=\"yes\" data-img-zoom-url=\"images/tild3437-6164-4333-b933-623333356662__bcn_73.jpg\" data-original=\"https://estate-spain.com/images/tild3437-6164-4333-b933-623333356662__bcn_73.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild3437-6164-4333-b933-623333356662__bcn_73.jpg&quot;) center center / cover no-repeat; height: 460px; margin-bottom: 20px;\" src=\"\"></div> </div> </div></div></div><div id=\"rec7772999\" class=\"r r_anim r_showed\" style=\"padding-top:30px;padding-bottom:30px; \" data-record-type=\"3\"><!-- T107 --><div class=\"t107\"> <div class=\"t-align_center\" itemscope=\"\" itemtype=\"https://schema.org/ImageObject\"><meta itemprop=\"image\" content=\"images/tild3139-3730-4463-b935-393762646132__smallbanysdelforum2.jpg\"> <img src=\"https://estate-spain.com/images/tild3139-3730-4463-b935-393762646132__smallbanysdelforum2.jpg\" data-original=\"https://estate-spain.com/images/tild3139-3730-4463-b935-393762646132__smallbanysdelforum2.jpg\" class=\"t107__width t-width t-width_6 t-img loaded\" imgfield=\"img\"> </div> </div></div><div id=\"rec7773000\" class=\"r r_anim r_showed\" style=\"padding-top:15px;padding-bottom:15px; \" data-record-type=\"106\"><!-- T004 --><div class=\"t004\"><div class=\"t-container \"> <div class=\"t-col t-col_10 t-prefix_1\"><div field=\"text\" class=\"t-text t-text_md \"><div style=\"text-align:center;\" data-customstyle=\"yes\">Одноименный огромный торговый мол - Диагональ Мар - один из самых больших торговых центров в Испании. Это большое пространство, где можно найти все необходимое на каждый день, последние новинки масс маркета, а также новинки от испанских и европейских дизайнеров, лучшие современные рестораны и кинотеатры. И все это не выезжая за пределы Барселоны и рядом с морем. <br> Большая часть торгового центра не работает по воскресеньям, но рестораны и развлекательные центры на верхних этажах остаются открытыми всю неделю. <br><br></div></div></div></div></div></div><div id=\"rec7773001\" class=\"r r_anim r_showed\" style=\"padding-top:30px; \" data-record-type=\"169\"><!-- t155 --><div class=\"t155\"> <div class=\"t-container\"> <div class=\"t-row\"> <div class=\"t-col t-col_6 t-bgimg t-zoomable loaded\" bgimgfield=\"gi_img__0\" data-zoomable=\"yes\" data-img-zoom-url=\"images/tild6131-3332-4266-b736-663632333632__20153007114659.jpg\" data-original=\"https://estate-spain.com/images/tild6131-3332-4266-b736-663632333632__20153007114659.jpg\" style=\"background: url(&quot;https://estate-spain.com/images/tild6131-3332-4266-b736-663632333632__20153007114659.jpg&quot;) center center / cover no-repeat; height: 460px; margin-bottom: 20px;\" src=\"\"></div>",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "diagonal-mar",
+                    "pageTitle": "Современный приморский район Барселоны",
+                    "metaDescription": "Достопримечательности района Диагональ Мар",
+                    "objectId": "39c5cfa97b2545ca837db7570b4b07ea",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "createdDate": "2017-07-28T09:42:58.187Z",
+                    "modifiedDate": "2017-07-28T09:42:58.187Z",
+                    "createdBy": "admin",
+                    "modifiedBy": "admin",
+                    "id": "b5d7796fd6e54cbabc0a73d3277c6904"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "8a51d21eae164cafb66622dfd4814c5e",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "39c5cfa97b2545ca837db7570b4b07ea",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "diagonal-mar",
+                                    "isActive": true,
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-28T09:30:40.497Z",
+            "modifiedDate": "2017-08-03T12:44:26.763Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "39c5cfa97b2545ca837db7570b4b07ea"
+        },
+        {
+            "code": "ES-SING-odnokomnatnye-kvartiry-studii",
+            "name": "Однокомнатные квартиры в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "8a51d21eae164cafb66622dfd4814c5e",
+            "outline": "8a51d21eae164cafb66622dfd4814c5e",
+            "path": "Single_pages",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-SING-odnokomnatnye-kvartiry-studii/header-odnokomnatnye-kvartiry-studii.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6ed75f72afe14540b816cbe98e261670",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6ed75f72afe14540b816cbe98e261670",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Однокомнатные квартиры в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "4f132f7a604544fea852c94500443715",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "4f132f7a604544fea852c94500443715",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогих квартир и студий на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ea0259bc7077409eb83fb8279f2b4662",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-name",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ea0259bc7077409eb83fb8279f2b4662",
+                            "propertyName": "term-name",
+                            "propertyId": "e79dd6f7-c56b-47e9-8f18-e31794a67cb7",
+                            "valueType": "ShortText",
+                            "value": "bedrooms",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8730bb08460446d6b65669ee1978e94a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-value",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8730bb08460446d6b65669ee1978e94a",
+                            "propertyName": "term-value",
+                            "propertyId": "8a25de42-f5cb-4043-ae24-3d1351bfe23b",
+                            "valueType": "ShortText",
+                            "value": "1",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "21a74d6873af475c8159403a805e58db",
+                    "relativeUrl": "catalog/ES-SING-odnokomnatnye-kvartiry-studii/header-odnokomnatnye-kvartiry-studii.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-SING-odnokomnatnye-kvartiry-studii/header-odnokomnatnye-kvartiry-studii.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-odnokomnatnye-kvartiry-studii.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "ec58c267cbaa43299df7ad06d6be4644",
+                    "content": "Недорогие квартиры или студии всегда пользуются большим спросом у покупателей, цель которых - купить квартиру для сезонного отдыха и проживания в Испании. Уютная и светлая \"дальняя дача\" у моря на побережье Коста Бланка стоит недорого даже по российским меркам. Вполне симпатичный вариант можно найти по цене примерно в 40 тысяч Евро (это чуть менее 3 млн российских рублей). Количество комнат - это не главный критерий для поиска жилья, мы рекомендуем обратить особое внимание на метраж. Как правило, экономичные варианты квартир имеют площади о 25 до 55 метров.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "odnokomnatnye-kvartiry-studii",
+                    "pageTitle": "Однокомнатные квартиры в Испании - купить небольшую квартиру в Испании недорого, цены в рублях",
+                    "metaDescription": "Продажа небольших квартир в Испании недорого. Цены на однокомнатные квартиры в Испании от надежного агентства недвижимости Estate Spain",
+                    "objectId": "f86e5b828ad2417e81d1055cb5ebb3be",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "createdDate": "2017-07-28T09:52:57.863Z",
+                    "modifiedDate": "2017-07-28T09:52:57.863Z",
+                    "createdBy": "admin",
+                    "modifiedBy": "admin",
+                    "id": "784d88a0a8de455c97d319368c1de66c"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "8a51d21eae164cafb66622dfd4814c5e",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f86e5b828ad2417e81d1055cb5ebb3be",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "odnokomnatnye-kvartiry-studii",
+                                    "isActive": true,
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-28T09:51:08.2Z",
+            "modifiedDate": "2017-08-03T11:51:08.503Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "f86e5b828ad2417e81d1055cb5ebb3be"
+        },
+        {
+            "code": "ES-SING-chetyrehkomnatnye-kvartiry",
+            "name": "Четырехкомнатные квартиры и апартаменты в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "8a51d21eae164cafb66622dfd4814c5e",
+            "outline": "8a51d21eae164cafb66622dfd4814c5e",
+            "path": "Single_pages",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-SING-chetyrehkomnatnye-kvartiry/header-vtorichnaya.png",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "286f0bee3b7b4d9d8ced2e8e07bfa246",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "286f0bee3b7b4d9d8ced2e8e07bfa246",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Четырехкомнатные квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "b0e9abd9a6aa48e298d3a7629522797a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "b0e9abd9a6aa48e298d3a7629522797a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Большие квартиры и студии на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7134b51a5ed64d69b27adb82417bfa08",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-name",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7134b51a5ed64d69b27adb82417bfa08",
+                            "propertyName": "term-name",
+                            "propertyId": "e79dd6f7-c56b-47e9-8f18-e31794a67cb7",
+                            "valueType": "ShortText",
+                            "value": "bedrooms",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7b3ca547cc0348bca3fc507985ac82f9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "term-value",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7b3ca547cc0348bca3fc507985ac82f9",
+                            "propertyName": "term-value",
+                            "propertyId": "8a25de42-f5cb-4043-ae24-3d1351bfe23b",
+                            "valueType": "ShortText",
+                            "value": "4",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 1,
+                    "id": "eb86259530404d72ab6f11277ceacb4b",
+                    "relativeUrl": "catalog/ES-SING-chetyrehkomnatnye-kvartiry/header-vtorichnaya.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-SING-chetyrehkomnatnye-kvartiry/header-vtorichnaya.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-vtorichnaya.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "db971666142741908c79a9bf8648c3cb",
+                    "content": "Четырехкомнатные квартиры в Испании – это жилье для довольно большой семьи. Такие вместительные апартаменты часто арендуют туристы, когда приезжают на отдых всей семьей. Часто в четырехкомнатных испанских квартирах имеются две ванные комнаты. \n\nОбычно испанские квартиры проектируют таким образом, что спальни в них довольно маленькие и минималистичные: с одной двуспальной, либо двумя односпальными кроватями и со встроенными шкафами. Нередко гостиная совмещена с открытой кухней американского типа.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "chetyrehkomnatnye-kvartiry",
+                    "pageTitle": "Четырехкомнатные квартиры в Испании - купить четырехкомнатные апартаменты в Испании у моря, цены на 4-х комнатные квартиры в Испании",
+                    "metaDescription": "Продажа четырехкомнатных квартир и апартаментов в Испании по доступным ценам от надежного агентства. &#10003; Полное сопровождение сделок под ключ. &#10003; Спецпредложения.",
+                    "objectId": "6908080c1b834029a9536e61add5b25a",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "createdDate": "2017-07-28T10:06:08.383Z",
+                    "modifiedDate": "2017-07-28T10:06:08.383Z",
+                    "createdBy": "admin",
+                    "modifiedBy": "admin",
+                    "id": "4c9cd098761341588c4a550705ce2499"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "8a51d21eae164cafb66622dfd4814c5e",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "6908080c1b834029a9536e61add5b25a",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "chetyrehkomnatnye-kvartiry",
+                                    "isActive": true,
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-28T09:59:01.22Z",
+            "modifiedDate": "2017-08-03T12:39:25.72Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "6908080c1b834029a9536e61add5b25a"
+        }
+    ],
+    "aggregations": []
+}
