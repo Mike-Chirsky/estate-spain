@@ -198,7 +198,7 @@ namespace VirtoCommerce.Storefront.Services.Es
                new AutoRestClients.CatalogModuleApi.Models.ProductSearchCriteria
                {
                    CatalogId = ConfigurationManager.AppSettings["MasterCatalogId"],
-                   ResponseGroup = CreateProductResponseGroup(),
+                   ResponseGroup = $"{CreateProductResponseGroup()} | ReferencedAssociations",
                    Outline = ProductTypeToOutline(CitiesKey),
                    Take = 10000,
                    Skip = 0,
@@ -221,7 +221,8 @@ namespace VirtoCommerce.Storefront.Services.Es
             // fill child cities
             foreach (var city in cities)
             {
-                //city.ChildCategory = cities.Where(x=>x.Id == )
+                var referIds = resultCities.Items.FirstOrDefault(x => x.Id == city.Id).ReferencedAssociations.Where(x => x.Type == "Cities").Select(x => x.AssociatedObjectId);
+                city.ChildCategory = cities.Where(x => referIds.Contains(x.Id)).ToList();
                 foreach (var child in city.ChildCategory)
                 {
                     child.Parent = city;
