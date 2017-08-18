@@ -32,7 +32,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         {
             var searchCriteria = new ProductSearchCriteria(WorkContext.CurrentLanguage, WorkContext.CurrentCurrency, WorkContext.QueryString);
             searchCriteria.ResponseGroup = ItemResponseGroup.ItemInfo;
-            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext);
+            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext, _categoryTreeService);
             var retVal = await _catalogSearchService.SearchProductsAsync(searchCriteria);
             return Json(new
             {
@@ -46,7 +46,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
         public async Task<ActionResult> GetTotalCount(ProductFilterCriteria filterCriteria)
         {
             var searchCriteria = new ProductSearchCriteria(WorkContext.CurrentLanguage, WorkContext.CurrentCurrency, WorkContext.QueryString);
-            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext);
+            filterCriteria.FillTermsFromFileterCriteria(searchCriteria, WorkContext, _categoryTreeService);
 
             searchCriteria.ResponseGroup = ItemResponseGroup.ItemInfo;
             searchCriteria.PageSize = 0;
