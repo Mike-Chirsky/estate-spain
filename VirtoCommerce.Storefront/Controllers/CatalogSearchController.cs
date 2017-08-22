@@ -39,7 +39,7 @@ namespace VirtoCommerce.Storefront.Controllers
             WorkContext.CurrentProductSearchCriteria.Keyword = search;
             WorkContext.Search = search;
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
-            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext);
+            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, _categoryTreeService);
             //For set filters value in UI
             WorkContext.CurrentCategory = new Category();
 
@@ -77,7 +77,7 @@ namespace VirtoCommerce.Storefront.Controllers
             WorkContext.CurrentPageSeo.Slug = category.Url;
             // map filter properies to search criteria
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
-            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, isArenda);
+            productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, _categoryTreeService, isArenda);
             var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
 
             criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?

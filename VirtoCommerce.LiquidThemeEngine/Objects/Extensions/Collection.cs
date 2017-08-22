@@ -332,7 +332,12 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
         {
             get
             {
-                return CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(CityKey, StringComparison.InvariantCultureIgnoreCase));
+                var tag = CurrentTagCollection.FirstOrDefault(x => x.GroupName.Equals(CityKey, StringComparison.InvariantCultureIgnoreCase));
+                if (tag != null)
+                {
+                    tag.Value = tag.Value?.Split(',')[0].Trim();
+                }
+                return tag;
             }
         }
 

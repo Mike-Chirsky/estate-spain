@@ -5,12 +5,13 @@ using System.Web;
 using VirtoCommerce.Storefront.Model;
 using VirtoCommerce.Storefront.Model.Catalog;
 using VirtoCommerce.Storefront.Model.Catalog.Es;
+using VirtoCommerce.Storefront.Services.Es;
 
 namespace VirtoCommerce.Storefront.Converters.Catalog
 {
     public static class FilterCriteriaToSearchCriteriaConverter
     {
-        public static void FillTermsFromFileterCriteria(this ProductFilterCriteria criteria, ProductSearchCriteria searchCriteria, WorkContext wc, bool arenda = false)
+        public static void FillTermsFromFileterCriteria(this ProductFilterCriteria criteria, ProductSearchCriteria searchCriteria, WorkContext wc, ICategoryTreeService categoryTreeService, bool arenda = false)
         {
             if (criteria == null)
             {
@@ -44,11 +45,16 @@ namespace VirtoCommerce.Storefront.Converters.Catalog
             }
             if (!string.IsNullOrEmpty(criteria.City))
             {
-                terms.Add(new Term
+                var city = categoryTreeService.FindByPath(criteria.City);
+                if (city != null)
                 {
-                    Name = "city",
-                    Value = GetLocalizationValue(wc, criteria.City, "city")
-                });
+                    terms.Add(new Term
+                    {
+                        Name = "city",
+                        Value = $"{city.Name}{(city.ChildCategory != null ? $",{string.Join(",", city.ChildCategory.Select(x => x.Name))}" : "")}" //GetLocalizationValue(wc, criteria.City, "city")
+                    });
+                }
+                
             }
             if (!string.IsNullOrEmpty(criteria.DisToSea))
             {
