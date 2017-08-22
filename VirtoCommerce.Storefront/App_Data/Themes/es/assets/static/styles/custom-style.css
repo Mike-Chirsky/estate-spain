@@ -1855,3 +1855,14 @@ ul.user-terms-list
 .info_details{
     text-align: center;
 }
+.listing-unit-img-wrapper .carousel-inner
+{
+    height: 200px;
+}
+
+.listing-unit-img-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}

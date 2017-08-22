@@ -21,11 +21,11 @@
             {% endif %}
             {% if forloop.first %}
             <div class="item active">
-                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" title="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | replace: '<sup>', '' | replace: '</sup>', ''}}" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | replace: '<sup>', '' | replace: '</sup>', ''}}"></a>
+                <a href="{{ product.url | absolute_url }}"><img src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" title="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | replace: '<sup>', '' | replace: '</sup>', ''}}" alt="{{ product.custom_title | append: ' - ' | append: product.deal_type | append: ' - ' | append: forloop.index | replace: '<sup>', '' | replace: '</sup>', ''}}"></a>
             </div>
             {% else %}
             <div class="item">
-                <a href="{{ product.url | absolute_url }}"><img width="525" height="328" data-src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt=""></a>
+                <a href="{{ product.url | absolute_url }}"><img data-src="{{ image.src | img_url: 'thumb' }}" class="lazyload img-responsive wp-post-image" alt=""></a>
             </div>
             {% endif %}
             {%- endfor -%}

@@ -4843,9 +4843,9 @@ input.form-control::-moz-placeholder {
    min-width: 248px;
  */}
 
-.property_listing .carousel{
+/*.property_listing .carousel{
     float:left;
-}
+}*/
 
 .has_prop_slider .property_listing{
     cursor:default;                 
@@ -4928,6 +4928,7 @@ input.form-control::-moz-placeholder {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     overflow:hidden;
+    height: 200px;
 }
 
 .prop_new_details{
