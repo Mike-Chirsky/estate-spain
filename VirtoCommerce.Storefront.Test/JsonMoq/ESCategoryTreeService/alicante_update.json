@@ -1,0 +1,734 @@
+﻿[
+    {
+        "code": "ES-CITY-ALICANTE",
+        "name": "Аликанте",
+        "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+        "categoryId": "06d09840154341a4b4564aa9b94b06b3",
+        "outline": "06d09840154341a4b4564aa9b94b06b3",
+        "path": "Cities",
+        "isBuyable": true,
+        "isActive": true,
+        "trackInventory": true,
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "productType": "Physical",
+        "priority": 0,
+        "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-type1-tild3734-6134-4334-b731-626530396538__alicanteport.jpg",
+        "properties": [
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "04ea1825b8d745558569c82040082f83",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "city_name_in",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "04ea1825b8d745558569c82040082f83",
+                        "propertyName": "city_name_in",
+                        "propertyId": "8609a38d-18df-4f21-89bb-47c237fb34cb",
+                        "valueType": "ShortText",
+                        "value": "Аликанте",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "40145d6a0488449795c990b6bd37a39c",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h1",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "40145d6a0488449795c990b6bd37a39c",
+                        "propertyName": "h1",
+                        "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                        "valueType": "ShortText",
+                        "value": "Недвижимость в Аликанте",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "f56d161ed02a470c9a83c3be326b0444",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h1 ",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "f56d161ed02a470c9a83c3be326b0444",
+                        "propertyName": "h1 ",
+                        "valueType": "ShortText",
+                        "value": "Недвижимость в Аликанте",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "cbca53864ddb4da098d2201bb7b64c38",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h2-listing",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "cbca53864ddb4da098d2201bb7b64c38",
+                        "propertyName": "h2-listing",
+                        "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                        "valueType": "ShortText",
+                        "value": "Каталог недвижимости в Аликанте на продажу",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "89f7b3336cde4ffda4cce2928d478060",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h2-tip",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "89f7b3336cde4ffda4cce2928d478060",
+                        "propertyName": "h2-tip",
+                        "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                        "valueType": "ShortText",
+                        "value": "Жилье в Аликанте по видам и особенностям",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "133925e0fa2f419ca7cee0262b17ff4b",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h3-seotext-down1",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "133925e0fa2f419ca7cee0262b17ff4b",
+                        "propertyName": "h3-seotext-down1",
+                        "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                        "valueType": "ShortText",
+                        "value": "Цены",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "532bf515a6e642aba6c0869d7112207b",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h3-seotext-down2",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "532bf515a6e642aba6c0869d7112207b",
+                        "propertyName": "h3-seotext-down2",
+                        "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                        "valueType": "ShortText",
+                        "value": "О городе и провинции",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "fb8dc6e30af74b0a896063827e75df84",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "yandex-city",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "fb8dc6e30af74b0a896063827e75df84",
+                        "propertyName": "yandex-city",
+                        "propertyId": "b09d0249-a198-4c12-b1a1-1c4ccfa2b22f",
+                        "valueType": "ShortText",
+                        "value": "Аликанте",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            }
+        ],
+        "images": [
+            {
+                "sortOrder": 0,
+                "id": "27413f08fd454e55a71cb9d102912bb0",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/linkblock-type1-tild3734-6134-4334-b731-626530396538__alicanteport.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-type1-tild3734-6134-4334-b731-626530396538__alicanteport.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type1-tild3734-6134-4334-b731-626530396538__alicanteport.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 1,
+                "id": "675b1ab3a39c405986df2e37df4f2552",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/linkblock-type3-tild6339-3261-4633-b265-666438613933__alicantetownhose.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-type3-tild6339-3261-4633-b265-666438613933__alicantetownhose.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type3-tild6339-3261-4633-b265-666438613933__alicantetownhose.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 2,
+                "id": "886e45488ec24e01a3acfce71cbe135f",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/linkblock-type2-tild3136-6334-4538-b837-323234666663__villa10.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-type2-tild3136-6334-4538-b837-323234666663__villa10.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type2-tild3136-6334-4538-b837-323234666663__villa10.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 3,
+                "id": "ad472b92bbbe4d43932c4224c9cfe60c",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/linkblock-right-shutterstock_391184257.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-right-shutterstock_391184257.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-right-shutterstock_391184257.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 5,
+                "id": "6d3a20fe5bdd421daec29dbcb787828e",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/linkblock-left-541846648.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/linkblock-left-541846648.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-left-541846648.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 6,
+                "id": "5f4c21120408416780c054de7da177eb",
+                "relativeUrl": "catalog/ES-CITY-ALICANTE/header-alicante.png",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-CITY-ALICANTE/header-alicante.png",
+                "typeId": "image",
+                "group": "images",
+                "name": "header-alicante.png",
+                "isInherited": false
+            }
+        ],
+        "reviews": [
+            {
+                "id": "131bfc1419dd488ca5241b2f81bcf684",
+                "content": "* [Банковская недвижимость ](/alicante/ot-bankov)\n* [Коммерческая недвижимость ](/alicante/kommercheskaya)\n* [Вся недвижимость на Коста Бланке](/costa-blanca)",
+                "reviewType": "linkblock-type3",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "2d91feb1fc0143aa9120505f93e59fd7",
+                "content": "### Цены на жилье в Аликанте ### \n\nНедорогая недвижимость в Аликанте позволит вам выбрать подходящий вариант и стать обладателем дома мечты на море, не особо задумываясь о цене.\n\nПри этом недвижимость в Аликанте стоит недорого, по сравнению с ценами на жилье в северной части испанского побережья.\nХорошая трех- или четырехкомнатная квартира во вторичном жилье ближе к центру будет стоить от 60 000 евро, а квартира с панорамным видом на море в закрытой резиденции от 120 000 евро.\n\nЛюдям, которые ценят уединенность и повышенный комфорт, подойдут апартаменты или квартиры в новостройках в престижных районах близко к морю. На такие объекты недвижимости в Аликанте по ценам будут чуть выше, от 150 000 – 200 000 евро.",
+                "reviewType": "seotext-down1",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "4de19b7a01ae4f2dba7f1ccd974c01be",
+                "content": "* [Квартиры и апартаменты](/alicante/kvartiry-apartamenty)\n* [Недвижимость на море](/alicante/na-more)\n* [Недорогая недвижимость](/alicante/nedorogaya)",
+                "reviewType": "linkblock-type1",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "5ce3335fb5544f11bd5f6e122d6cd13e",
+                "content": "### Провинция Аликанте ### \n\nГлавной достопримечательностью города является замок Санта-Барбара, венчающий гору Бенатанкиль, которая за причудливые очертания получила прозвище «лицо мавра».\n\nВторая визитная карточка солнечного Аликанте – набережная Экспланада. Вдоль набережной высажена красивая пальмовая аллея, а сама мостовая вымощена мраморной плиткой, узор которой включает в себя 6,5 миллиона деталей.\n\nНедвижимость в Испании в Аликанте подарит своим будущим владельцам возможность наслаждаться теплым морем, ярким солнцем (более 300 солнечных дней в году) и интересными достопримечательностями.",
+                "reviewType": "seotext-down2",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "6158453983854eb5a24ae0129d39b8ae",
+                "content": "> Недвижимость в Аликанте – это отличное вложение денег и возможность, не только отдыхать, но и зарабатывать. Жилье в Аликанте имеет высокий потенциал сдачи в аренду. Туристический сезон длится на побережье Коста Бланка с мая по октябрь и не перестает радовать обилием солнца и ласковым теплым морем.\n\nАликанте – город и порт в Испании на [побережье Коста Бланка](/costa-blanca). Он расположен на юге Валенсийского сообщества и является одним из самых старейших средиземноморских портов.\nАликанте большой красивый город, сочетающий в себе старинные испанские улочки и современную застройку. В зависимости от ваших ожиданий и запросов, купить недвижимость в Аликанте можно как рядом с основными пляжами и центром города, так и в удаленных районах и пригородах, где обстановка будет более тихой и уютной.",
+                "reviewType": "seotext-up",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "aebe3b3cee904092abf9d8e66594adbd",
+                "content": "* [Недвижимость от банков](/alicante/ot-bankov)\n* [Вторичная недвижимость](/alicante/vtorichnaya)",
+                "reviewType": "linkblock-type2",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            }
+        ],
+        "associations": [
+            {
+                "type": "Regions",
+                "priority": 0,
+                "associatedObjectId": "88885cbcf23d46aa9ebd9da2585c37ad",
+                "associatedObjectName": "Коста Бланка",
+                "associatedObjectType": "product",
+                "associatedObjectImg": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-type1-tild6261-3139-4431-b139-616461646461__shutterstock_1628660.jpg"
+            }
+        ],
+        "seoObjectType": "Product",
+        "seoInfos": [
+            {
+                "semanticUrl": "alicante",
+                "pageTitle": "Недвижимость в Аликанте — купить жилье в Аликанте в Испании - цены в рублях. ",
+                "metaDescription": "☀ Продажа недвижимости в Аликанте по доступным ценам от надежного агентства. Недорогая ☀  Недвижимость в Аликанте. Цены на ☀  Недвижимость в Аликанте у моря.",
+                "objectId": "f019ef5402024d359703a9a197c1e44e",
+                "objectType": "CatalogProduct",
+                "isActive": true,
+                "languageCode": "ru-RU",
+                "createdDate": "2017-08-04T10:40:34.21Z",
+                "modifiedDate": "2017-08-09T16:25:58.66Z",
+                "createdBy": "unknown",
+                "modifiedBy": "admin",
+                "id": "6debbb53b55b4c28a6eef0ed5480f860"
+            }
+        ],
+        "createdDate": "2017-06-15T15:56:00.303Z",
+        "modifiedDate": "2017-08-11T14:18:18.03Z",
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "id": "f019ef5402024d359703a9a197c1e44e"
+    },
+    {
+        "code": "ES-REG-COSTA-BLANKA",
+        "name": "Коста Бланка",
+        "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+        "categoryId": "654dbd245eb2484fa5ccd8ffd69387da",
+        "outline": "654dbd245eb2484fa5ccd8ffd69387da",
+        "path": "Regions",
+        "isBuyable": true,
+        "isActive": true,
+        "trackInventory": true,
+        "maxQuantity": 0,
+        "minQuantity": 0,
+        "priority": 0,
+        "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-type1-tild6261-3139-4431-b139-616461646461__shutterstock_1628660.jpg",
+        "properties": [
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "fbc98838c5da4d8bb60a527d49d0eaa2",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h1",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "fbc98838c5da4d8bb60a527d49d0eaa2",
+                        "propertyName": "h1",
+                        "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                        "valueType": "ShortText",
+                        "value": "Недвижимость на Коста Бланке",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "5e0bd43370d94fb4bcf0beadcf7b24ae",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h1 ",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "5e0bd43370d94fb4bcf0beadcf7b24ae",
+                        "propertyName": "h1 ",
+                        "valueType": "ShortText",
+                        "value": "Недвижимость на Коста Бланке",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "9a50dbf236e14bb2a97e44aa57ac6569",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h2-listing",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "9a50dbf236e14bb2a97e44aa57ac6569",
+                        "propertyName": "h2-listing",
+                        "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                        "valueType": "ShortText",
+                        "value": "Каталог недвижимости на Коста Бланке на продажу",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "88eeb9873e844c0d98dffe39818d89db",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h2-tip",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "88eeb9873e844c0d98dffe39818d89db",
+                        "propertyName": "h2-tip",
+                        "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                        "valueType": "ShortText",
+                        "value": "Недвижимость на Коста Бланка по типам и особенностям",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "e4067b06b7f4452aaf9a59fd3daa7772",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h3-seotext-down1",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "e4067b06b7f4452aaf9a59fd3daa7772",
+                        "propertyName": "h3-seotext-down1",
+                        "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                        "valueType": "ShortText",
+                        "value": "Особенности",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "c6b7d6a028194b3790359e473a9b67d0",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h3-seotext-down2",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "c6b7d6a028194b3790359e473a9b67d0",
+                        "propertyName": "h3-seotext-down2",
+                        "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                        "valueType": "ShortText",
+                        "value": "Погода",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            },
+            {
+                "isReadOnly": false,
+                "isManageable": false,
+                "isNew": false,
+                "id": "6d5ec03a05924df8b9d8e3e30d4968c2",
+                "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                "name": "h3-seotext-down3",
+                "required": false,
+                "dictionary": false,
+                "multivalue": false,
+                "multilanguage": false,
+                "valueType": "ShortText",
+                "type": "Product",
+                "values": [
+                    {
+                        "id": "6d5ec03a05924df8b9d8e3e30d4968c2",
+                        "propertyName": "h3-seotext-down3",
+                        "propertyId": "a2aac9d5-b2d6-4ca5-91c0-d3cc56cf701e",
+                        "valueType": "ShortText",
+                        "value": "Цены на жилье",
+                        "isInherited": false,
+                        "propertyMultivalue": false
+                    }
+                ],
+                "isInherited": false
+            }
+        ],
+        "images": [
+            {
+                "sortOrder": 0,
+                "id": "31293d9caf8b4ef48c417dea8ecf43a7",
+                "relativeUrl": "catalog/ES-REG-COSTA-BLANKA/linkblock-type1-tild6261-3139-4431-b139-616461646461__shutterstock_1628660.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-type1-tild6261-3139-4431-b139-616461646461__shutterstock_1628660.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type1-tild6261-3139-4431-b139-616461646461__shutterstock_1628660.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 1,
+                "id": "d36a1d7360a843a3ad6f682d541f10f3",
+                "relativeUrl": "catalog/ES-REG-COSTA-BLANKA/linkblock-type2-tild3139-3739-4734-b739-353330393362__shutterstock_310514906.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-type2-tild3139-3739-4734-b739-353330393362__shutterstock_310514906.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type2-tild3139-3739-4734-b739-353330393362__shutterstock_310514906.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 2,
+                "id": "5fbb95c9dd8f445c8466c472c81d5775",
+                "relativeUrl": "catalog/ES-REG-COSTA-BLANKA/linkblock-type3-tild6130-3230-4830-b130-323464333937__shutterstock_525752932.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-type3-tild6130-3230-4830-b130-323464333937__shutterstock_525752932.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-type3-tild6130-3230-4830-b130-323464333937__shutterstock_525752932.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 3,
+                "id": "b34d96629f124b66af5099d1f3790b11",
+                "relativeUrl": "catalog/ES-REG-COSTA-BLANKA/header-costa-blanca.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/header-costa-blanca.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "header-costa-blanca.jpg",
+                "isInherited": false
+            },
+            {
+                "sortOrder": 4,
+                "id": "1dceb8737ed84080a6725729378a7003",
+                "relativeUrl": "catalog/ES-REG-COSTA-BLANKA/linkblock-centr-costa-blanca.jpg",
+                "url": "https://esdev.blob.core.windows.net/catalog/ES-REG-COSTA-BLANKA/linkblock-centr-costa-blanca.jpg",
+                "typeId": "image",
+                "group": "images",
+                "name": "linkblock-centr-costa-blanca.jpg",
+                "isInherited": false
+            }
+        ],
+        "assets": [],
+        "reviews": [
+            {
+                "id": "14aae6e0ab07462397966d10c2435ba6",
+                "content": "### Погода на Коста Бланка ### \n\nПровинция Аликанте - жемчужина Коста Бланки, отличается исключительным климатом - здесь тепло почти всегда, и только зимой температура опускается до 15-17 градусов по Цельсию. Вода в море прогревается уже с середины мая и остается теплой до конца сентября, и даже начала октября. Больше информации о погоде, рейсах, достопримечательностях Коста Бланки и Аликанте читайте в нашей статье [\"Коста Бланка и Аликанте в цифрах и фактах\".](obzory/alicante-ispania-turizm)",
+                "reviewType": "seotext-down2",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "3b8089d0be2e446fac5d30dbeb9226ea",
+                "content": "### Особенное жилье ###\n* [Недвижимость для пенсионеров](/costa-blanca/dlya-pensionerov)\n* [Недвижимость на море](/costa-blanca/na-more)\n* [Недвижимость в пригороде](/costa-blanca/prigorod)\n* [Недвижимость в горах](/costa-blanca/v-gorah)",
+                "reviewType": "linkblock-type3",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "40867c2e7e2f47ef9340bfa5679e9913",
+                "content": "### Недвижимость по видам ###\n* [Новостройки](/costa-blanca/novostroyki)\n* [Вторичная недвижимость](/costa-blanca/vtorichnaya)\n* [Элитная недвижимость](/costa-blanca/elitnaya)\n* [Недорогая недвижимость](/costa-blanca/nedorogaya)",
+                "reviewType": "linkblock-type2",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "573e589659304935857f05831fb8d353",
+                "content": "### НЕДВИЖИМОСТЬ НА СЕВЕРЕ КОСТА БЛАНКА ###\n* [Альтеа](/altea)\n* [Бенидорм](/benidorm)\n* [Кальп](/calpe)\n* [Дения](/denia)\n* [Вильяхойоса](/villajoyosa)\n* [Альфас-дель-Пи](/alfas-de-pi)\n* [Бениса](/benisa)\n* [Бенитачель](/benitachell)\n* [Финестрат](/finestrat)\n* [Ла Кала](/la-cala)\n* [Теулада](/teulada)\n* [Морайра](/moraira)",
+                "reviewType": "linkblock-centr",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "6e7d177d75234ed28f4db19aa2c6d2da",
+                "content": "### Недвижимость по типам ###\n* [Квартиры и апартаменты](/costa-blanca/kvartiry-apartamenty)\n* [Таунхаусы](/costa-blanca/townhouse)\n* [Виллы и дома](/costa-blanca/villy-doma)\n* [Земельные участки](/costa-blanca/zemlya)",
+                "reviewType": "linkblock-type1",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "7304a0d1a21c4af09b398271431779dc",
+                "content": "### Цены на недвижимость в Испании на Коста Бланка ###\n\nНедвижимость на Коста Бланке отличается довольно демократичной ценой, особенно если сравнить с побережьями Коста Брава или Коста дель Соль.\nЕсли вы запланировали купить недвижимость на Коста Бланке, то легко сможете выбрать объект от 40 000 евро. Например, студию в Торревьехе в нескольких минутах ходьбы до пляжа всего за 39 900 евро.\n\nТакже на территории всего побережья Коста Бланка идёт активное строительство современных домов с системой \"умный дом\" - передовые технологии уже давно внедряются в новую недвижимость. Такие объекты будут стоить дороже, но в будущем сэкономят не мало средств своему владельцу.\nЕсли вы желаете стать собственником испанской недвижимости по адекватной цене - мы поможем вам найти качественные квартиры и дома на побережье Коста Бланка!",
+                "reviewType": "seotext-down3",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "c3fe9e5344e0476186b69a18382389f2",
+                "content": "Регион Коста Бланка - это почти двести километров белых песчаных пляжей, рекордное количество из которых отмечено наградой \"Голубой Флаг\" за исключительную чистоту и развитую инфраструктуру на берегу. Кроме широких пляжей, здесь имеется множество уединенных бухт и гаваней с морскими обитателями. Недвижимость на Коста Блака и все жилье на побережье отличаются великолепным сочетанием цены и качества - стоимость жилья здесь ниже, чем в курортных городах России, а климатические условия и предоставляемый сервис и услуги – в разы лучше!",
+                "reviewType": "seotext-up",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "caef8eec7265496f98cea46b3d3abe6f",
+                "content": "### ЮГ КОСТА БЛАНКА ###\n* [Аликанте](/alicante)\n* [Торревьеха](/torrevieja)\n* [Ориуэла Коста](/orihuela-costa)\n* [Пилар-де-ла-Орадада](/pilar-de-la-horadada)\n\n* [Альбуферета](/albufereta)\n* [Гуардамар-дель-Сегура](/guardamar-del-segura)\n* [Ла-Мата](/la-mata)\n* [Лос Альтос](/los-altos)\n* [Пунта-Прима](/punta-prima)\n* [Рохалес](/rojales)\n* [Сан Фульхенсио](/san-fulgencio)\n* [Санта-Пола](/santa-pola)",
+                "reviewType": "linkblock-centr1",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            },
+            {
+                "id": "fd55589e402e4eed8675528e50949399",
+                "content": "### Протяженность побережья ###\n\nПобережье Коста Бланка простирается от Дении на севере и до Пилар-де-ла-Орадада на юге Испании. Самыми популярными курортами побережья считаются: Дения, Кальп, Бенидорм, Альтея, Вильяхойоса, Аликанте, Санта Пола, Торревьеха, Ориуэла Коста и другие. В регионе отлично развиты водные виды спорта, яхтинг, имеются шикарные поля для гольфа. Также вдоль побережья есть очень много развлечений для детей: крупнейшие в стране тематические парки с аттракционами, аквапарки, сафари-парки, интерактивные музеи и многое другое.",
+                "reviewType": "seotext-down1",
+                "languageCode": "ru-RU",
+                "isInherited": false
+            }
+        ],
+        "seoObjectType": "Product",
+        "seoInfos": [
+            {
+                "semanticUrl": "costa-blanca",
+                "pageTitle": "Недвижимость на Коста Бланке — купить недвижимость на Коста Бланке в Испании - цены в рублях.",
+                "metaDescription": "&#127969   Продажа недвижимости на Коста Бланке - цены от надежного испанского агентства. &#9728 Недвижимость на Коста Бланке, Испания. ? Цены на жилье на Коста Бланке.",
+                "objectId": "88885cbcf23d46aa9ebd9da2585c37ad",
+                "objectType": "CatalogProduct",
+                "isActive": true,
+                "languageCode": "ru-RU",
+                "createdDate": "2017-08-04T10:51:09.6Z",
+                "modifiedDate": "2017-08-04T10:51:09.6Z",
+                "createdBy": "unknown",
+                "modifiedBy": "unknown",
+                "id": "ccb4868009d5400e9d77cb65738fb6c3"
+            }
+        ],
+        "outlines": [
+            {
+                "items": [
+                    {
+                        "id": "ddada1a8f0b14831890b6c67912442bc",
+                        "seoObjectType": "Catalog",
+                        "seoInfos": [],
+                        "hasVirtualParent": false
+                    },
+                    {
+                        "id": "654dbd245eb2484fa5ccd8ffd69387da",
+                        "seoObjectType": "Category",
+                        "seoInfos": [],
+                        "hasVirtualParent": false
+                    },
+                    {
+                        "id": "88885cbcf23d46aa9ebd9da2585c37ad",
+                        "seoObjectType": "CatalogProduct",
+                        "seoInfos": [
+                            {
+                                "semanticUrl": "costa-blanca",
+                                "isActive": true,
+                                "languageCode": "ru-RU",
+                                "createdDate": "0001-01-01T00:00:00Z"
+                            }
+                        ],
+                        "hasVirtualParent": false
+                    }
+                ]
+            }
+        ],
+        "createdDate": "2017-06-14T11:25:14.137Z",
+        "modifiedDate": "2017-08-04T10:51:09.49Z",
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "id": "88885cbcf23d46aa9ebd9da2585c37ad"
+    }
+]

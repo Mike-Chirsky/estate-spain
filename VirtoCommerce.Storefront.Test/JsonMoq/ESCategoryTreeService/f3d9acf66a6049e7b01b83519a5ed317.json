@@ -1,0 +1,2467 @@
+﻿{
+    "totalCount": 17,
+    "items": [
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-NA-MORE",
+            "name": "Виллы и дома в Испании на море ",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f16ec84285ec4897aaa0f85ab32faf07",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f16ec84285ec4897aaa0f85ab32faf07",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома в Испании на море",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "50df6094ce6f4745a700cad92540fde5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "50df6094ce6f4745a700cad92540fde5",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов в Испании на море  на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5e057633cfe1496bab6c64d3ab815610",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5e057633cfe1496bab6c64d3ab815610",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "14fbdb7f17054391b15fde6cec63f546",
+                    "content": "### Виллы и дома по побережьям Испании ###\n* [Андалусия](/andalusia/villy-doma/na-more)\n* [Барселона](/barcelona-okrestnosti/villy-doma/na-more)\n* [Каталония](/catalonia/villy-doma/na-more)\n* [Коста Бланка](/costa-blanca/villy-doma/na-more)\n* [Коста Брава](/costa-brava/villy-doma/na-more)\n* [Коста Калида](/costa-calida/villy-doma/na-more)\n* [Коста дель Соль](/costa-del-sol/villy-doma/na-more)\n* [Коста Дорада](/costa-dorada/villy-doma/na-more)\n* [Коста Маресме](/costa-maresme/villy-doma/na-more)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "2f261056300347649e9555e2ed112288",
+                    "content": "### Особенности домов и вилл у моря ###\n\n[Купить дом в Испании](/doma) на побережье и жить на первой линии, или в закрытой урбанизации – роскошно и престижно. Месторасположение, удаленность от пляжей, наличие развитой инфраструктуры рядом, являются регуляторами, определяющими, какой будет цена дома в Испании на берегу моря.\n\nКачество материалов для возведения дома, уникальность дизайнерских решений – эти и иные характеристики побуждают купить дом в Испании на берегу моря, цены на объекты в этом случае не являются препятствием для осуществления мечты.\n\nПланируя [купить виллу в Испании](/villy) на берегу моря, следует принять во внимание особенности регионов. \n\n**Наиболее популярные курорты и побережья:** \n* Коста-Бланка\n* Коста-Брава\n* Коста-дель-Соль",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "3732d95667ed4f9db12810e41687d6d2",
+                    "content": "Желание купить дом в Испании на берегу моря недорого показывает стабильный рост среди почитателей этой солнечной страны. Мягкий климат, живописная природа, чистые песчаные пляжи, теплая морская вода, города с богатой историей и инфраструктурой – все это манит новых инвесторов.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4ff69fa32f094054a41fbc64c4a4f235",
+                    "content": "* [Все виллы](/villy)\n* [Все дома](/doma)\n* [Вся недвижимость на море](/na-more)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "e4e4bfaaca2e4ab4b8054b9e1f437359",
+                    "content": "> Дом в Испании у моря хорош для постоянного проживания большой семьей или сезонного отдыха. Если вас интересует вилла в Испании на берегу моря, купить ее можно из реестра объектов недвижимости от банков, в ипотеку. В каталоге компании представлены подробные описания, фото и видео зданий.\n\n**— Сергей Синюгин,** управляющий партнер Estate Spain",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/na-more",
+                    "pageTitle": "Виллы и дома в Испании на море — купить виллы и дома на море недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Виллы и дома в Испании на море  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "1e22b35cbda0438286dbaf58d4661444",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.983Z",
+                    "modifiedDate": "2017-08-08T11:51:13.983Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "709e3e3d90904837826ee003fd2c6bba"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "1e22b35cbda0438286dbaf58d4661444",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/na-more",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.197Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "1e22b35cbda0438286dbaf58d4661444"
+        },
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-V-GORAH",
+            "name": "Виллы и дома в горах в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "0f189d46e31546c0aae2681b92f90419",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "0f189d46e31546c0aae2681b92f90419",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома в горах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1ba41481f98849018d0245278c2ba4a9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1ba41481f98849018d0245278c2ba4a9",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов в горах в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0e722dd7ec4847b2a70973610a67f5b1",
+                    "content": "### Дома и виллы в горах по регионам Испании ###\n* [Каталония](/catalonia/villy-doma/v-gorah)\n* [Коста Бланка](/costa-blanca/villy-doma/v-gorah)\n* [Коста Брава](/costa-brava/villy-doma/v-gorah)\n* [Коста дель Соль](/costa-del-sol/villy-doma/v-gorah)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6a03c5c206574ca39f7dd313e606b1b7",
+                    "content": "* [Все виллы](/villy)\n* [Все дома](/doma)\n* [Вся недвижимость в горах](/v-gorah)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/v-gorah",
+                    "pageTitle": "Виллы и дома в горах в Испании — купить виллы и дома в горах недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Виллы и дома в горах в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "1501f8034be849c0964dff220c484a14",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.067Z",
+                    "modifiedDate": "2017-08-08T11:51:15.067Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "335ea43538c84f5ab50da864a0af1269"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "1501f8034be849c0964dff220c484a14",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/v-gorah",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-08T11:51:14.893Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "1501f8034be849c0964dff220c484a14"
+        },
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-PRIGOROD",
+            "name": "Виллы и дома в пригородах Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3ae47437e12a408e9b003d9cb4965b49",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3ae47437e12a408e9b003d9cb4965b49",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома в пригородах Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6035a94594ba40e5856d0c40c1d25d29",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6035a94594ba40e5856d0c40c1d25d29",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов в пригородах Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "48744461c2704b6b9cda38b36f5ce8eb",
+                    "content": "### Виллы и дома в пригородах Испании ###\n* [Коста Бланка](/costa-blanca/villy-doma/prigorod)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "de0a43aa3f0e4625929f491122ef3f98",
+                    "content": "* [Все виллы](/villy)\n* [Все дома](/doma)\n* [Вся недвижимость в пригородах](/prigorod)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/prigorod",
+                    "pageTitle": "Виллы и дома в пригородах Испании — купить пригородный дом или виллу недорого, цены в рублях.",
+                    "metaDescription": "&#127969 Виллы и дома в пригородах Испании – лучшие предложения от агентства Estate-Spain.com. Продажа дорого и роскошного жилья!",
+                    "objectId": "6a6edc50a36147b4974cf37059b80af1",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:15.02Z",
+                    "modifiedDate": "2017-08-09T17:02:02.8Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "e104fa1db104479cb6952c3bd16c0323"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "6a6edc50a36147b4974cf37059b80af1",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/prigorod",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.197Z",
+            "modifiedDate": "2017-08-09T17:02:02.72Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "6a6edc50a36147b4974cf37059b80af1"
+        },
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-DLYA-PENSIONEROV",
+            "name": "Виллы и дома для пенсионеров в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "55e57a640beb4b4da230d468c529a14d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "55e57a640beb4b4da230d468c529a14d",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома для пенсионеров в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5a0cb5ae8a0840288b7f001a3649d5de",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5a0cb5ae8a0840288b7f001a3649d5de",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов для пенсионеров в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/dlya-pensionerov",
+                    "pageTitle": "Виллы и дома для пенсионеров в Испании — купить виллы и дома для пенсионеров недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Виллы и дома для пенсионеров в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "a37bed7c09544479bc790ac106f35c53",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.92Z",
+                    "modifiedDate": "2017-08-08T11:51:13.92Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "3b0cf43e543a48dea6c2cbf7c3b27d20"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "a37bed7c09544479bc790ac106f35c53",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/dlya-pensionerov",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.197Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "a37bed7c09544479bc790ac106f35c53"
+        },
+        {
+            "code": "ES-EST-TAGS-kvartiry-apartamenty-vozle-univer",
+            "name": "Квартиры и апартаменты в Испании возле университетов",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "22a24afa306a403ea4817ec1de161eb1",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "22a24afa306a403ea4817ec1de161eb1",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты в Испании возле университетов",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "801e012c140c4c059635a1979e8763b9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "801e012c140c4c059635a1979e8763b9",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов в Испании возле университетов",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/vozle-univer",
+                    "pageTitle": "Квартиры и апартаменты в Испании возле университетов -  — купить квартиру или апартаменты недорого, цены в рублях",
+                    "metaDescription": "&#127959; Квартиры и апартаменты в Испании возле университетов  – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "118d2abd31954b2aad5f90650e2689b1",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:39:16.72Z",
+                    "modifiedDate": "2017-07-27T14:39:16.72Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "772e003a5d13481bb17f28dad1d20914"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "118d2abd31954b2aad5f90650e2689b1",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/vozle-univer",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-27T14:39:16.5Z",
+            "modifiedDate": "2017-07-27T14:39:16.5Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "118d2abd31954b2aad5f90650e2689b1"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-V-GORAH",
+            "name": "Квартиры и апартаменты в горах в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "4f9a4e508f2c466796ae505087046fc8",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "4f9a4e508f2c466796ae505087046fc8",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты в горах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "885f8fe2a68e422aad13db37691180ff",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "885f8fe2a68e422aad13db37691180ff",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов в горах в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "adacf30618a64ee2b965090f5088dd9f",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Вся недвижимость в горах](/v-gorah)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "d62dbbf763fe4183a77107d587536d81",
+                    "content": "### Квартиры и апартаменты в горах ###\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty/v-gorah)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/v-gorah",
+                    "pageTitle": "Квартиры и апартаменты в горах в Испании — купить кваритиры и апартаменты в горах недорого, цены в рублях.",
+                    "metaDescription": "&#127969 Квартиры и апартаменты в горах в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "78e1d02ae2f34b789c22746bbd9157f0",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.843Z",
+                    "modifiedDate": "2017-08-08T11:51:13.843Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "515b1f6eb60e40edbc0525be968cec93"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "78e1d02ae2f34b789c22746bbd9157f0",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/v-gorah",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "78e1d02ae2f34b789c22746bbd9157f0"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-PRIGOROD",
+            "name": "Квартиры и апартаменты в пригородах Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6bb1e16c62eb47a8b1936826535818de",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6bb1e16c62eb47a8b1936826535818de",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты в пригородах Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "eaa8b970110a4890934b347c8321bc4d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "eaa8b970110a4890934b347c8321bc4d",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов в пригородах Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0b295789fefc4a078d9498d2664c3d35",
+                    "content": "### Квартиры и апартаменты в пригороде ###\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty/prigorod)\n* [Коста дель Соль](/costa-del-sol/kvartiry-apartamenty/prigorod)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "e7e2750f3060493e952c20890cb09760",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Вся недвижимость в пригородах](/prigorod)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/prigorod",
+                    "pageTitle": "Квартиры и апартаменты в пригородах Испании — купить пригородные апартаменты или квартиру недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Квартиры и апартаменты в пригородах Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "769bbecea3ef450c8a7be7bc31ec0f68",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.81Z",
+                    "modifiedDate": "2017-08-08T11:51:13.81Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "cfd6ed24e21d47f1a3f1b930ecf9c732"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "769bbecea3ef450c8a7be7bc31ec0f68",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/prigorod",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "769bbecea3ef450c8a7be7bc31ec0f68"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-DLYA-PENSIONEROV",
+            "name": "Квартиры и апартаменты для пенсионеров в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ab183d07a0d3475e8f9acb5928a91e14",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ab183d07a0d3475e8f9acb5928a91e14",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты для пенсионеров в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a19602b530384657ab9f16dee1b6c26b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a19602b530384657ab9f16dee1b6c26b",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов для пенсионеров в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "624221aaf4b74534bf7623471e33e735",
+                    "content": "### [ Квартиры для пенсионеров на Коста Бланка ](/costa-blanca/kvartiry-apartamenty/dlya-pensionerov) ###",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "c46458131b83469e8a95d2ffc125b5dc",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Вся недвижимость для пенсионеров ](/dlya-pensionerov)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/dlya-pensionerov",
+                    "pageTitle": "Квартиры и апартаменты для пенсионеров в Испании — купить квартиры и апартаменты для пенсионеров недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Квартиры и апартаменты для пенсионеров в Испании  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "eed55488890a494bb51e67e6a3aa26d3",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.42Z",
+                    "modifiedDate": "2017-08-09T16:01:11.527Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "cd86114b7e784bbcb9eab0d8d1e249e0"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eed55488890a494bb51e67e6a3aa26d3",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/dlya-pensionerov",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-09T16:01:11.493Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "eed55488890a494bb51e67e6a3aa26d3"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-NA-MORE",
+            "name": "Квартиры и апартаменты на море в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9fa47c3a6d4f44c3bfae45e535d51228",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9fa47c3a6d4f44c3bfae45e535d51228",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты на море в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6128d47bd23743928071f4ae292393f3",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6128d47bd23743928071f4ae292393f3",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов на море в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "382e27f51d454399bdaa95df8222490e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "382e27f51d454399bdaa95df8222490e",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1dfa79e968094ae1aa1df38a5a7145f6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1dfa79e968094ae1aa1df38a5a7145f6",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Цены",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "49896d1e14bd4a3b955968cb572aec84",
+                    "content": "Всем, кто решил купить апартаменты в Испании у моря, предстоит выбрать побережье и тип жилья. Продажа квартир в Испании у моря наиболее активно развита в популярных прибрежных регионах – Коста Бланка, Коста Брава, Коста-дель-Соль",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6c438f9bd26741cdb2260c9cd10ba795",
+                    "content": "### Цены на жилье у моря ### \n\nКвартиры и апартаменты в непосредственной близости к морю - наиболее популярный запрос как среди россиян, так и европейских покупателей испанской недвижимости. Шикарный вид из окон и пешая доступность до пляжей, возможность купаться в теплом море в любое время суток и заниматься активными видами спорта без ограничений, или отдыхать в уютных прибрежных кафе - все эти факторы создают неповторимую тягу у приобретению квартиры именно у моря.\n\nПо статистике, самое большое число сделок с недвижимостью в Испании приходится именно на прибрежные районы этой страны. Квартиру в Испании можно купить недалеко от моря недорого – к примеру, выбрав залоговую недвижимость от банков.\n\nВ целом, апартаменты у моря, на первой линии, добавляют к цене жилья примерно 30-40%, чем дальше от пляжа - это показатель снижается больше. Так, квартира в пешей доступности до пляжа примерно в 500 метрах будет стоить уже существенно ниже первой линии.\n\nВ «русскоговорящем» городе Торревьеха жилье у моря доступно от 60 000 евро, в курортном городе с развитой инфраструктурой Бенидорме – от 150 000 евро на вторичном рынке и на первой линии.\n\nОбъекты Коста-Брава обойдутся в 2-2,5 раза дороже, чем юг страны. Апартаменты в 500 метрах от пляжа в Ллорет де Мар общей площадью 50 кв. м. предлагаются от 100 000 евро. Стоимость квартиры в Испании на море в одном из престижных районов Коста-дель-Соль – от 110 000 евро.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "84e7c1f8b04745d0a8c1b2afba07fbc8",
+                    "content": "### Особенности выбора ### \n\nЕсли ваша цель – квартира в Испании на берегу моря, купить ее можно на первичном и вторичном рынках. Коста-Бланка – это более 320 солнечных дней в году и самое теплое море в Испании. Планируя купить квартиру в Испании у моря, рекомендуем изучить предложения Коста Бланка внимательно.\n\nСтудия от застройщика или залоговая недвижимость от банков, дом в нескольких метрах от пляжа или танхаус в престижном районе – покупку квартир определяют предпочтения и возможности будущего владельца.\n\nАпартаменты в Испании на море для постоянного проживания или сдачи в аренду привлекают инвестиции многих россиян. Стоимость объектов класса люкс, так и однокомнатных студий, регулируется многими параметрами:\n\n* регионом Испании и его климатом\n* расположением, например, на первой линии\n* наличием пляжей и набережных в пешей доступности\n* типом недвижимости",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "affc77506fc444578e92763293d7bb52",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Вся недвижимость на море](/na-more)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "cc8cf6130b634b669338d54a17e6a23c",
+                    "content": "> Квартиры у моря в Испании в собственности - это приятное приобретение для всех покупателей без ограничений. Но более всего мы рекомендуем такой тип жилья двум группам покупателей: \nтем, кто приезжает в Испанию на сезон отдохнуть, погреться и провести время в пользой\nтем, кто хочет выгодно вложить деньги (ведь такие квартиры всегда \"в цене\"), и извлекать максимальный доход из сдачи жилья в аренду\n\n**— Сергей Синюгин**, управляющий партнер Estate Spain",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "d5732ec6d9ef4775bf26666abe09b0e5",
+                    "content": "### Квартиры по побережьям Испании ###\n* [Андалусия](/andalusia/kvartiry-apartamenty/na-more)\n* [Каталония](/catalonia/kvartiry-apartamenty/na-more)\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty/na-more)\n* [Коста Брава](/costa-brava/kvartiry-apartamenty/na-more)\n* [Коста дель Соль](/costa-del-sol/kvartiry-apartamenty/na-more)\n* [Коста Дорада](/costa-dorada/kvartiry-apartamenty/na-more)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/na-more",
+                    "pageTitle": "Квартиры и апартаменты на море в Испании — купить  апартаменты и кваритиры на море недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Квартиры и апартаменты на море в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "947112a96d664806bfc0081bf035ac49",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.48Z",
+                    "modifiedDate": "2017-08-08T11:51:13.48Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "82e6f6be4d2e480eafac5d5bdd9ed141"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "947112a96d664806bfc0081bf035ac49",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/na-more",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "947112a96d664806bfc0081bf035ac49"
+        },
+        {
+            "code": "ES-EST-TAGS-kommercheskaya-vozle-univer",
+            "name": "Коммерчекская недвижимость в Испании возле университетов",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f580d52088e149c4b935ef1d36ad9b65",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f580d52088e149c4b935ef1d36ad9b65",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Коммерчекская недвижимость в Испании возле университетов",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "76bbfbf3a4284825bb0f40f4db46fa2a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "76bbfbf3a4284825bb0f40f4db46fa2a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог коммерчекской недвижимости в Испании возле университетов",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kommercheskaya/vozle-univer",
+                    "pageTitle": "Коммерчекская недвижимость в Испании возле университетов — купить комерческую недвижимость недорого, цены в рублях",
+                    "metaDescription": "&#127959; Коммерчекская недвижимость в Испании возле университетов – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "052e802a8e674cfb88e3b931beacb3b2",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:39:16.61Z",
+                    "modifiedDate": "2017-07-27T14:39:16.61Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "03bd8e0569ea4cbebb4f0a7bd10eff8a"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "052e802a8e674cfb88e3b931beacb3b2",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kommercheskaya/vozle-univer",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-27T14:39:16.5Z",
+            "modifiedDate": "2017-07-27T14:39:16.5Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "052e802a8e674cfb88e3b931beacb3b2"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-NEDOROGAYA",
+            "name": "Недорогие вартиры и апартаменты в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bd800b11955e473c943b5ae126136827",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bd800b11955e473c943b5ae126136827",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Недорогие вартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5d6115bc90414661aea03c3c464e0fd6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5d6115bc90414661aea03c3c464e0fd6",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогих вартиры и апартаменты в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "271aa6a559ac4362a52e6599edf08595",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Все недорогая недвижимость](/nedorogaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "7b95b3a767bc400bb50efa9235864320",
+                    "content": "### Недорогие кваритры по регионам Испании ###\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty/nedorogaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/nedorogaya",
+                    "pageTitle": "Недорогие квартиры и апартаменты в Испании — купить квартиры и апартаменты недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Дешеые  квартиры и апартаменты в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "c9ab92ca4ea742cd86cbed066f9d5b1a",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.797Z",
+                    "modifiedDate": "2017-08-09T16:03:08.887Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "52a60a129e604362a28093fe55ff4011"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "c9ab92ca4ea742cd86cbed066f9d5b1a",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/nedorogaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-09T16:03:08.71Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "c9ab92ca4ea742cd86cbed066f9d5b1a"
+        },
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-NEDOROGAYA",
+            "name": "Недорогие виллы и дома в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7350f898c6b24169a4f0303eb2a0e788",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7350f898c6b24169a4f0303eb2a0e788",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Недорогие виллы и дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c4e0ce93c0884708be2b7524c15b565d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c4e0ce93c0884708be2b7524c15b565d",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогих вилл и домов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/nedorogaya",
+                    "pageTitle": "Недорогие виллы и дома в Испании — купить виллы и дома недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Дешевые виллы и дома в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "1b6e65e24b70479488722c0ce71c7698",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:14.01Z",
+                    "modifiedDate": "2017-08-08T11:51:14.01Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "053fab277bcf496c810f44b29edba364"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "1b6e65e24b70479488722c0ce71c7698",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/nedorogaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.197Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "1b6e65e24b70479488722c0ce71c7698"
+        },
+        {
+            "code": "ES-EST-TAGS-TOWNHOUSE-NEDOROGAYA",
+            "name": "Недорогие таунхаусы и бунгало в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "88b0c9f9f0e542879bd39987e89ff5d5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "88b0c9f9f0e542879bd39987e89ff5d5",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Недорогие таунхаусы и бунгало в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9559157461424558b009777b4f915f08",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9559157461424558b009777b4f915f08",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогих таунхаусов и бунгало в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "16dec7744a4144feaebce504a532a8b7",
+                    "content": "* [Все таунхаусы](/townhouse)\n* [Все недорогая недвижимость](/nedorogaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "763d12bf032a4996be47cc681a8a7f3a",
+                    "content": "### Недорогие таунхаусы и бунгало по регионам Испании ###\n* [Коста Бланка](/costa-blanca/townhouse/nedorogaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse/nedorogaya",
+                    "pageTitle": "Недорогие таунхаусы и бунгало в Испании — купить таунхаусы и бунгало недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Дешевые таунхаусы и бунгало в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "a6624e07fa0f4a289a90fb70e664dcde",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.907Z",
+                    "modifiedDate": "2017-08-08T11:51:13.907Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "8e7e9d7716544f90a980cf7dfbb33d6f"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "a6624e07fa0f4a289a90fb70e664dcde",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse/nedorogaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:07.237Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "a6624e07fa0f4a289a90fb70e664dcde"
+        },
+        {
+            "code": "ES-EST-TAGS-TOWNHOUSE-NA-MORE",
+            "name": "Таунхаусы и бунгало на море в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c1192b8e40a34d9e81c80b52938678a6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c1192b8e40a34d9e81c80b52938678a6",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Таунхаусы и бунгало на море в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c4f50782ccfe4ec4b3f6ed8096cdd1e4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c4f50782ccfe4ec4b3f6ed8096cdd1e4",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог таунхаусов и бунгало на море в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "2a208811383e4a248bfe0fd05f13b255",
+                    "content": "### Таунхаусы и бунгало на побережьях Испании ###\n* [Андалусия](/andalusia/townhouse/na-more)\n* [Каталония](/catalonia/townhouse/na-more)\n* [Коста Бланка](/costa-blanca/townhouse/na-more)\n* [Коста Брава](/costa-brava/townhouse/na-more)\n* [Коста Калида](/costa-calida/townhouse/na-more)\n* [Коста дель Соль](/costa-del-sol/townhouse/na-more)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "2b5751fcd2874c4694f68c3265318c48",
+                    "content": "* [Все таунхаусы](/townhouse)\n* [Вся недвижимость на море](/na-more)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse/na-more",
+                    "pageTitle": "Таунхаусы и бунгало на море в Испании — купить таунхаусы и бунгало на море недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Таунхаусы и бунгало на море в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "943826c46ade4cda9a695232088255be",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.873Z",
+                    "modifiedDate": "2017-08-08T11:51:13.873Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "c8a4a48da2ef46a09ab0f649cfdc12d7"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "943826c46ade4cda9a695232088255be",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse/na-more",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:07.237Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "943826c46ade4cda9a695232088255be"
+        },
+        {
+            "code": "ES-EST-TAGS-VILLY-DOMA-ELITNAYA",
+            "name": "Элитные виллы и дома в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "13654ccbac0c4d768285d4e595c1e153",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "13654ccbac0c4d768285d4e595c1e153",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Элитные виллы и дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e661665d09be4a2991814574f8336dc1",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e661665d09be4a2991814574f8336dc1",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог элитных вилл и домов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "215a6973e5374ff0b86c91298c521131",
+                    "content": "* [Все виллы](/villy)\n* [Все дома](/doma)\n* [Вся элитная недвижимость ](/elitnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "7a8908300d754f6ca0dc93f798f8ed2b",
+                    "content": "### Особенности элитных домов ###\n\nСовременная элитная вилла в Испании всегда находится в престижных районах популярных населенных пунктов на Средиземном море. В каждом без исключения случае дизайн выполнен по эксклюзивному проекту, а охраняемая территория оформлена ландшафтным специалистом. \nИ для дорогой виллы, и для статусных частных домов типично наличие не только самой лучшей бытовой техники и шикарной отделки, но и:\n* собственного лифта и тренажерного зала\n* гостиной с камином\n* до 10 спален\n* роскошных ванных комнат\n* мини поле для гольфа\n* других отличительных характеристик вилл класса «премиум»",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "81d5727c0cc54079bf1901bb9c4e3122",
+                    "content": "### Элитные виллы и дома по регионам Испании ###\n* [Андалусия](/andalusia/villy-doma/elitnaya)\n* [Барселона](/barcelona-okrestnosti/villy-doma/elitnaya)\n* [Каталония](/catalonia/villy-doma/elitnaya)\n* [Коста Бланка](/costa-blanca/villy-doma/elitnaya)\n* [Коста Брава](/costa-brava/villy-doma/elitnaya)\n* [Коста дель Соль](/costa-del-sol/villy-doma/elitnaya)\n* [Коста Дорада](/costa-dorada/villy-doma/elitnaya)\n* [Коста Маресме](/costa-maresme/villy-doma/elitnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "b7db3bb521e2472a8908795725794488",
+                    "content": "Элитные виллы в Испании - это статус, престиж, ни с чем несравнимый комфорт и отдых на берегу ласкового моря. Престижные дома с большими бассейнами и таунхаусы рядом с пляжем доступны платежеспособным клиентам в любой точке средиземноморского побережья. Такие объекты пользуются повышенным вниманием и спросом по всей Испании: на светской фешенебельной Золотой Миле, Майорке или солнечной гостеприимной Марбелье.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "f33a625c1f244cc1a9ace6c7217ac5aa",
+                    "content": "Стоимость элитных вилл \n\nЖелающим купить элитную виллу в Испании следует заранее ознакомиться с порядком цен: в зависимости от площади дома и прилегающей территории, а также расположения в одной из элитных урбанизаций, стоимость может составлять от 850 000 евро до 40 000 000 и выше. \n\nВладельцам виллы гарантированы привилегии в получении вида на жительство в Испании – золотую визу собственник такого жилья получает автоматически.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "fefa99519e7f46a5be7a804b834f0b4c",
+                    "content": "### Владельцы элитного жилья ###\n\nПродажа элитных вилл в Испании неизменно вызывает интерес обеспеченной публики. Приобретается не только жилой объект на побережье и сопутствующий ему комфорт в современном стиле, но и важным фактором остается окружение. Особняки, что находятся рядом, часто покупают знаменитые люди, элита бизнеса и даже королевские особы.\n\nЭлитные дома в Испании – это показатели высокого положения владельца в обществе, эталонное понимание престижа. Это безопасность, прекрасные виды, инфраструктура и отдых в хорошем месте с гарантией сохранности вложенных средств.",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/elitnaya",
+                    "pageTitle": "Элитные виллы и дома в Испании — купить дорогие элитные дома и виллы, цены в рублях.",
+                    "metaDescription": "&#127969  Элитные виллы и дома в Испании – лучшие предложения от агентства Estate-Spain.com &#9728; Роскошные и престижные варианты.",
+                    "objectId": "d328a9e47e9b47f38dd639c61776b67f",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.953Z",
+                    "modifiedDate": "2017-08-08T11:51:13.953Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "709c579df85440e4a2c83d35e077e900"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "d328a9e47e9b47f38dd639c61776b67f",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/elitnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.197Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "d328a9e47e9b47f38dd639c61776b67f"
+        },
+        {
+            "code": "ES-EST-TAGS-KVARTIRY-APARTAMENTY-ELITNAYA",
+            "name": "Элитные квартиры и апартаменты в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "4eb015a2844e4d23b54c2de1e54724a8",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "4eb015a2844e4d23b54c2de1e54724a8",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Элитные квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "b32b92c49ca74308b5888d321522bac7",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "b32b92c49ca74308b5888d321522bac7",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог элитных квартир и апартаментов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "68bee58468c84d3fb70729b601279995",
+                    "content": "### Элитные апаратаменты по регионам Испании ###\n* [Андалусия](/andalusia/kvartiry-apartamenty/elitnaya)\n* [Каталония](/catalonia/kvartiry-apartamenty/elitnaya)\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty/elitnaya)\n* [Коста Брава](/costa-brava/kvartiry-apartamenty/elitnaya)\n* [Коста дель Соль](/costa-del-sol/kvartiry-apartamenty/elitnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "dcb2a7f723f847efa37520a484bd7b15",
+                    "content": "* [Все апартаменты и квартиры](/kvartiry-apartamenty)\n* [Вся элитная недвижимость](/elitnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/elitnaya",
+                    "pageTitle": "Элитные квартиры и апартаменты в Испании — купить роскошные элитные апартаменты и квартиры, цены в рублях.",
+                    "metaDescription": "&#127969  Элитные квартиры и апартаменты в Испании – лучшие предложения от агентства Estate-Spain.com. Роскошные и престижные варианты.",
+                    "objectId": "852b36df562949a09b223269000a3cdb",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.45Z",
+                    "modifiedDate": "2017-08-08T11:51:13.45Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "9172feb6223f44c4914509770865fc54"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "852b36df562949a09b223269000a3cdb",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/elitnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:46.037Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "852b36df562949a09b223269000a3cdb"
+        },
+        {
+            "code": "ES-EST-TAGS-TOWNHOUSE-ELITNAYA",
+            "name": "Элитные таунхаусы и бунгало в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "f3d9acf66a6049e7b01b83519a5ed317",
+            "outline": "f3d9acf66a6049e7b01b83519a5ed317",
+            "path": "Estatetype_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "d3221e4f4579440dbe66c079e4c0968e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "d3221e4f4579440dbe66c079e4c0968e",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Элитные таунхаусы и бунгало в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2f38bed7550f48119e6041a59475f1fc",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2f38bed7550f48119e6041a59475f1fc",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог элитных таунхаусов и бунгало в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0667d717731c4a88a9a8b74c29ea6992",
+                    "content": "### Элитные таунхаусы и бунгало по регионам ###\n* [Коста Брава](/costa-brava/townhouse/elitnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "1e79677a704c4b188b3672bb1e9b54b4",
+                    "content": "* [Все таунхаусы](/townhouse)\n* [Вся элитная недвижимость ](/elitnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse/elitnaya",
+                    "pageTitle": "Элитные таунхаусы и бунгало в Испании — купить роскошные бунгало и таунхасы , цены в рублях.",
+                    "metaDescription": "&#127969  Элитные таунхаусы и бунгало в Испании – лучшие предложения от агентства Estate-Spain.com. Престижные и роскошные варианты.",
+                    "objectId": "1f1259841ce544f98d9458a57efb5ac1",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.86Z",
+                    "modifiedDate": "2017-08-08T11:51:13.86Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "f83ee216449e4bdb8bb550036a646d53"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f3d9acf66a6049e7b01b83519a5ed317",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "1f1259841ce544f98d9458a57efb5ac1",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse/elitnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:07.237Z",
+            "modifiedDate": "2017-08-08T11:51:13.67Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "1f1259841ce544f98d9458a57efb5ac1"
+        }
+    ],
+    "aggregations": []
+}

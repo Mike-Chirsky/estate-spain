@@ -1,1 +1,1499 @@
-{"totalCount":5,"products":[{"code":"ES-ESTATYPE-VILLY-DOMA","name":"Виллы и дома","catalogId":"ddada1a8f0b14831890b6c67912442bc","categoryId":"2036643b08794d149e1722adbe0230e8","outline":"2036643b08794d149e1722adbe0230e8","path":"Estatetypes","isBuyable":true,"isActive":true,"trackInventory":true,"maxQuantity":0,"minQuantity":1,"productType":"Physical","priority":0,"imgSrc":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/tild3439-6132-4437-b666-383061353334__shutterstock_104603414.jpg","properties":[{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"08624b1a01b84ef7914f93b0902b0939","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"08624b1a01b84ef7914f93b0902b0939","propertyName":"h1","propertyId":"87090ec0-08a7-442b-9700-2a0a3ea201c6","valueType":"ShortText","value":"Виллы и дома в Испании","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"ade9e20d3e2a44579a6df3b1caf4323f","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1-1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"ade9e20d3e2a44579a6df3b1caf4323f","propertyName":"h1-1","propertyId":"ba2baa83-1d4e-4f9b-9d92-1ecb964a9976","valueType":"ShortText","value":"Виллы и дома","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"caf52861539c44ad9e3fb76c2b59c7c9","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-listing","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"caf52861539c44ad9e3fb76c2b59c7c9","propertyName":"h2-listing","propertyId":"3ddc4d60-2ddb-4025-8db1-82c43df7aceb","valueType":"ShortText","value":"Популярне объекты","isInherited":false}],"isInherited":false}],"images":[{"id":"58e878ea0caf4e9d8a1dc6d6a19b190a","relativeUrl":"catalog/ES-ESTATYPE-VILLY-DOMA/tild3439-6132-4437-b666-383061353334__shutterstock_104603414.jpg","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/tild3439-6132-4437-b666-383061353334__shutterstock_104603414.jpg","typeId":"image","group":"images","name":"tild3439-6132-4437-b666-383061353334__shutterstock_104603414.jpg","isInherited":false}],"assets":[],"reviews":[],"seoObjectType":"Product","seoInfos":[{"semanticUrl":"villy-doma","objectId":"3919a376f3cb4d229a5e8d7821b03446","objectType":"CatalogProduct","isActive":true,"createdDate":"2017-06-16T10:49:43.593Z","modifiedDate":"2017-06-16T10:49:43.593Z","createdBy":"admin","modifiedBy":"admin","id":"0c31508fce1e41258ecbc7f3fac1cdba"}],"outlines":[{"items":[{"id":"ddada1a8f0b14831890b6c67912442bc","seoObjectType":"Catalog","seoInfos":[],"hasVirtualParent":false},{"id":"2036643b08794d149e1722adbe0230e8","seoObjectType":"Category","seoInfos":[{"semanticUrl":"estatetypes","isActive":true,"languageCode":"ru-RU","createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false},{"id":"3919a376f3cb4d229a5e8d7821b03446","seoObjectType":"CatalogProduct","seoInfos":[{"semanticUrl":"villy-doma","isActive":true,"createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false}]}],"createdDate":"2017-06-16T10:49:30.067Z","modifiedDate":"2017-06-16T12:24:14.533Z","createdBy":"admin","modifiedBy":"admin","id":"3919a376f3cb4d229a5e8d7821b03446"},{"code":"ES-ESTATYPE-ZEMLYA","name":"Земельные участки и земля","catalogId":"ddada1a8f0b14831890b6c67912442bc","categoryId":"2036643b08794d149e1722adbe0230e8","outline":"2036643b08794d149e1722adbe0230e8","path":"Estatetypes","isBuyable":true,"isActive":true,"trackInventory":true,"maxQuantity":0,"minQuantity":1,"productType":"Physical","priority":0,"properties":[{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"36e1955495614b7b881716fbd872e005","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"36e1955495614b7b881716fbd872e005","propertyName":"h1","propertyId":"87090ec0-08a7-442b-9700-2a0a3ea201c6","valueType":"ShortText","value":"Земельные участки в Испании","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"7b9e960609894e61bc738e9d5ad1cd59","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1-1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"7b9e960609894e61bc738e9d5ad1cd59","propertyName":"h1-1","propertyId":"ba2baa83-1d4e-4f9b-9d92-1ecb964a9976","valueType":"ShortText","value":"Земельные участки","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"4760473a185f46b686e2f5fd1bbd80c3","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-listing","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"4760473a185f46b686e2f5fd1bbd80c3","propertyName":"h2-listing","propertyId":"3ddc4d60-2ddb-4025-8db1-82c43df7aceb","valueType":"ShortText","value":"Популярные обекты","isInherited":false}],"isInherited":false}],"images":[],"assets":[],"reviews":[],"seoObjectType":"Product","seoInfos":[{"semanticUrl":"zemlya","objectId":"939735882969498985731a8fa2557c0e","objectType":"CatalogProduct","isActive":true,"createdDate":"2017-06-16T10:54:02.667Z","modifiedDate":"2017-06-16T10:54:02.667Z","createdBy":"admin","modifiedBy":"admin","id":"51b7918e6ed44e5cbde58049ab5b50c6"}],"outlines":[{"items":[{"id":"ddada1a8f0b14831890b6c67912442bc","seoObjectType":"Catalog","seoInfos":[],"hasVirtualParent":false},{"id":"2036643b08794d149e1722adbe0230e8","seoObjectType":"Category","seoInfos":[{"semanticUrl":"estatetypes","isActive":true,"languageCode":"ru-RU","createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false},{"id":"939735882969498985731a8fa2557c0e","seoObjectType":"CatalogProduct","seoInfos":[{"semanticUrl":"zemlya","isActive":true,"createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false}]}],"createdDate":"2017-06-16T10:53:45.457Z","modifiedDate":"2017-06-16T12:24:35.653Z","createdBy":"admin","modifiedBy":"admin","id":"939735882969498985731a8fa2557c0e"},{"code":"ES-ESTATYPE-KVARTIRY-APARTAMENTY","name":"Квартиры и апартаменты","catalogId":"ddada1a8f0b14831890b6c67912442bc","categoryId":"2036643b08794d149e1722adbe0230e8","outline":"2036643b08794d149e1722adbe0230e8","path":"Estatetypes","isBuyable":true,"isActive":true,"trackInventory":true,"maxQuantity":0,"minQuantity":1,"productType":"Physical","priority":0,"imgSrc":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg","properties":[{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"4974dceaaf8e438fbaa6200003b943d9","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"4974dceaaf8e438fbaa6200003b943d9","propertyName":"h1","propertyId":"87090ec0-08a7-442b-9700-2a0a3ea201c6","valueType":"ShortText","value":"Квартиры и апартаменты в Испании","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"63db902fec9241769a63edaceddbc072","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-listing","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"63db902fec9241769a63edaceddbc072","propertyName":"h2-listing","propertyId":"3ddc4d60-2ddb-4025-8db1-82c43df7aceb","valueType":"ShortText","value":"Квартиры и апартаменты в Испании, новинки каталога","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"1bd128e279d7444b80978c3f3c44b302","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-tip","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"1bd128e279d7444b80978c3f3c44b302","propertyName":"h2-tip","propertyId":"8916da37-de87-491c-819a-6c9662e0b718","valueType":"ShortText","value":"Самые выгодные предложения","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"19f723ca63e2429d8ea08ae7a0a6c5e2","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h3-seotext-down1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"19f723ca63e2429d8ea08ae7a0a6c5e2","propertyName":"h3-seotext-down1","propertyId":"712102da-dc2b-4c49-9987-7ec67b23805f","valueType":"ShortText","value":"Цены","isInherited":false}],"isInherited":false}],"images":[{"id":"8006aee8dd454e5cb64eb1af7f93f9ae","relativeUrl":"catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg","typeId":"image","group":"images","name":"linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg","isInherited":false},{"id":"85ffcc2af75e4c7293dcc884a032890f","relativeUrl":"catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type3-_437335915.jpg","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type3-_437335915.jpg","typeId":"image","group":"images","name":"linkblock-type3-_437335915.jpg","isInherited":false},{"id":"fd0b313796394e12b3b35b6953f36d42","relativeUrl":"catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/header_365621801.png","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/header_365621801.png","typeId":"image","group":"images","name":"header_365621801.png","isInherited":false},{"id":"73f8a18de3844e79a1e316a70b60f445","relativeUrl":"catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type1-541846648.jpg","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type1-541846648.jpg","typeId":"image","group":"images","name":"linkblock-type1-541846648.jpg","isInherited":false},{"id":"10f6d8b8583845eeb4ea90f24f8c1cee","relativeUrl":"catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-centr-147267992.jpg","url":"https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-centr-147267992.jpg","typeId":"image","group":"images","name":"linkblock-centr-147267992.jpg","isInherited":false}],"assets":[],"reviews":[{"id":"0a770dd1e4484acf9d854a98e8072abe","content":"Королевство Испания – одно из самых востребованных туристических мест в Европе. Апартаменты и квартиры в Испании – это прекрасная возможность вложить деньги и получить свой собственный дом на берегу средиземноморского побережья. Тысячелетняя история и культура, теплый континентальный и морской климат, свежие фрукты и терпкое вино, более 250 солнечных дней в году – это те самые причины, благодаря которым мы хотим возвращаться в Испанию снова и снова.\n\n> По сути, квартиры и апартаменты в Испании – это один и тот же тип жилья. Принципиальная разница будет заключаться в обеденной зоне, которая либо совмещена с гостиной, и тогда перед нами – апартаменты. Либо кухня и гостиная будут отдельными – такой тип жилья классифицируется как квартира.\n\nГде бы вы не планировали купить квартиру в Испании, агентство недвижимости Estate Spain поможет вам, мы работаем с объектами недвижимости во всех регионах страны: от Плая-де-Аро и Сагаро на севере, до окрестностей Малаги на юге.","reviewType":"seotext-up","languageCode":"ru-RU","isInherited":false},{"id":"2d94be896eae47a3a0b926014a655bea","content":"#### [Квартиры от банков ](/kvartiry-apartamenty/ot-bankov/) ####\n<br>В каталоге представлено <br> БОЛЕЕ XX ОБЪЕКТОВ","reviewType":"linkblock-type2","languageCode":"ru-RU","isInherited":false},{"id":"5c9983c06c00427ea18fe2122c3cf0fa","content":"####  Квартиры на побережьях Испании #### \n\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty)\n* [Коста Брава](/costa-brava/kvartiry-apartamenty)\n* [Коста Дель Соль](/costa-del-sol/kvartiry-apartamenty)\n* [Коста Тропикаль](/costa-tropical/kvartiry-apartamenty)\n\n\n#### В регионах ####\n\n* [Андалусия](#/andalusia/kvartiry-apartamenty/)\n* [Каталония](/catalonia/kvartiry-apartamenty/)\n* [Андалусия](#/andalusia/kvartiry-apartamenty/)\n* [Мадрид](#/madrid/kvartiry-apartamenty/)","reviewType":"linkblock-centr","languageCode":"ru-RU","isInherited":false},{"id":"5edf2c6aa9344d659186df19422e330f","content":"### Квартиры в Испании цены ###\n\nСущественное влияние на формирование цены оказывают различные факторы, основные среди которых:\n\n* Месторасположение - регион, город, урбанизация\n* Близость или удаленность квартиры от пляжа\n* Наличие инфраструктуры рядом\n* Наличие закрытой территории и ее обустроенность\n* Год постройки и используемые материалы\n* Этаж и вид из окна\n\nКупить апартаменты в Испании недорого можно на побережье Коста-Бланки. Оборудованные двухкомнатные апартаменты с гаражом и террасой будут стоить около 70 000 евро. Квартиры в Испании купить в Торревьехе можно за 45 000 – 50 000 евро.\n\nКупить квартиру в Испании недорого на побережье Коста-Бравы будет куда сложнее, здесь жильё такого же плана (две комнаты, парковка и терраса), будет стоить не менее 100 000 – 150 000 евро. Север испанского побережья всегда славился более мягким климатом, своей элитарностью и дороговизной.","reviewType":"seotext-down1","languageCode":"ru-RU","isInherited":false},{"id":"86d149be2a484e9687b195c7227689e8","content":"####  Квартиры на Балеарских островах ####\n\n* [Майорка](#/mallorca/kvartiry-apartamenty/)\n* [Ибица](#/ibiza/kvartiry-apartamenty/)\n\n####  [Квартиры и апартаменты на Канарских островах](#/canary-islands/kvartiry-apartamenty/) ###\n\n* [Тенерифе](#/tenerife/kvartiry-apartamenty/)\n* [Фуэртавентура](##/fuerteventura/kvartiry-apartamenty/)\n* [Гран-Канария](#/gran-canaria/kvartiry-apartamenty/)\n* [Гран-Канария](#/gran-canaria/kvartiry-apartamenty/)","reviewType":"linkblock-centr1","languageCode":"ru-RU","isInherited":false},{"id":"ab57ac4c5a85497ebf20c120e8dd581e","content":"#### [Однокомнатные квартиры-студии ](/kvartiry-apartamenty/studio-odnokomnatnye/) ####\n<br>В каталоге представлено <br> БОЛЕЕ XX ОБЪЕКТОВ","reviewType":"linkblock-type3","languageCode":"ru-RU","isInherited":false},{"id":"ddbef1595f144649bae07aa355b7d7a5","content":"#### [Квартиры в Испании у Моря](/kvartiry-apartamenty/na-more) ####\n<br>В каталоге представлено <br> БОЛЕЕ XX ОБЪЕКТОВ","reviewType":"linkblock-type1","languageCode":"ru-RU","isInherited":false}],"seoObjectType":"Product","seoInfos":[{"semanticUrl":"kvartiry-apartamenty","pageTitle":"Апартаменты в Испании недорого - купить квартиру в Испании, цены в рублях","metaDescription":"Продажа квартир в Испании недорого. Продажа апартаментов в Испании недорого.  Цены на дешевые квартиры и апартаменты в Испании в рублях.","objectId":"f30b57de14be4cfe98d5e364dce2ffd5","objectType":"CatalogProduct","isActive":true,"createdDate":"2017-06-16T10:48:17.757Z","modifiedDate":"2017-06-24T16:27:40.987Z","createdBy":"admin","modifiedBy":"admin","id":"c3a94db9271c4564a3ae75ab15a0d17d"}],"outlines":[{"items":[{"id":"ddada1a8f0b14831890b6c67912442bc","seoObjectType":"Catalog","seoInfos":[],"hasVirtualParent":false},{"id":"2036643b08794d149e1722adbe0230e8","seoObjectType":"Category","seoInfos":[{"semanticUrl":"estatetypes","isActive":true,"languageCode":"ru-RU","createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false},{"id":"f30b57de14be4cfe98d5e364dce2ffd5","seoObjectType":"CatalogProduct","seoInfos":[{"semanticUrl":"kvartiry-apartamenty","isActive":true,"createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false}]}],"createdDate":"2017-06-16T10:46:39.637Z","modifiedDate":"2017-06-24T19:15:45.573Z","createdBy":"admin","modifiedBy":"admin","id":"f30b57de14be4cfe98d5e364dce2ffd5"},{"code":"ES-ESTATYPE-KOMMERCHESKAYA","name":"Коммерческая недвижимость","catalogId":"ddada1a8f0b14831890b6c67912442bc","categoryId":"2036643b08794d149e1722adbe0230e8","outline":"2036643b08794d149e1722adbe0230e8","path":"Estatetypes","isBuyable":true,"isActive":true,"trackInventory":true,"maxQuantity":0,"minQuantity":1,"productType":"Physical","priority":0,"properties":[{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"6f3dae76e55a443cb638157a42d92365","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"6f3dae76e55a443cb638157a42d92365","propertyName":"h1","propertyId":"87090ec0-08a7-442b-9700-2a0a3ea201c6","valueType":"ShortText","value":"Коммерческая недвижимость в Испании","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"a98489ebaeba4ca2baf9b1bd13dd1c49","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1-1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"a98489ebaeba4ca2baf9b1bd13dd1c49","propertyName":"h1-1","propertyId":"ba2baa83-1d4e-4f9b-9d92-1ecb964a9976","valueType":"ShortText","value":"Коммерческая недвижимость","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"27b19fa643ff4a61bbfc2b85b31f4262","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-listing","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"27b19fa643ff4a61bbfc2b85b31f4262","propertyName":"h2-listing","propertyId":"3ddc4d60-2ddb-4025-8db1-82c43df7aceb","valueType":"ShortText","value":"Популярные объекты","isInherited":false}],"isInherited":false}],"images":[],"assets":[],"reviews":[],"seoObjectType":"Product","seoInfos":[{"semanticUrl":"kommercheskaya","objectId":"026689a655974f22b3615559b1fb13e1","objectType":"CatalogProduct","isActive":true,"createdDate":"2017-06-16T11:06:19.897Z","modifiedDate":"2017-06-16T11:06:19.897Z","createdBy":"admin","modifiedBy":"admin","id":"08ecb220d7e443ed91e4a216fb7f1a89"}],"outlines":[{"items":[{"id":"ddada1a8f0b14831890b6c67912442bc","seoObjectType":"Catalog","seoInfos":[],"hasVirtualParent":false},{"id":"2036643b08794d149e1722adbe0230e8","seoObjectType":"Category","seoInfos":[{"semanticUrl":"estatetypes","isActive":true,"languageCode":"ru-RU","createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false},{"id":"026689a655974f22b3615559b1fb13e1","seoObjectType":"CatalogProduct","seoInfos":[{"semanticUrl":"kommercheskaya","isActive":true,"createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false}]}],"createdDate":"2017-06-16T11:05:17.07Z","modifiedDate":"2017-06-16T12:45:33.513Z","createdBy":"admin","modifiedBy":"admin","id":"026689a655974f22b3615559b1fb13e1"},{"code":"ES-ESTATYPE-TOWNHOUSE","name":"Таунхаусы и бунгало","catalogId":"ddada1a8f0b14831890b6c67912442bc","categoryId":"2036643b08794d149e1722adbe0230e8","outline":"2036643b08794d149e1722adbe0230e8","path":"Estatetypes","isBuyable":true,"isActive":true,"trackInventory":true,"maxQuantity":0,"minQuantity":1,"productType":"Physical","priority":0,"properties":[{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"589e11b86db241348efd6b70f34cd359","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"589e11b86db241348efd6b70f34cd359","propertyName":"h1","propertyId":"87090ec0-08a7-442b-9700-2a0a3ea201c6","valueType":"ShortText","value":"Таунхаусы и бунгало в Испании","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"cff9617ea49343b79b1e8cbe1aaac29d","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h1-1","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"cff9617ea49343b79b1e8cbe1aaac29d","propertyName":"h1-1","propertyId":"ba2baa83-1d4e-4f9b-9d92-1ecb964a9976","valueType":"ShortText","value":"Таунхаусы и бунгало","isInherited":false}],"isInherited":false},{"isReadOnly":false,"isManageable":false,"isNew":false,"id":"71d7d15d8b37471ea6fd1834f69db4b3","catalogId":"ddada1a8f0b14831890b6c67912442bc","name":"h2-listing","required":false,"dictionary":false,"multivalue":false,"multilanguage":false,"valueType":"ShortText","type":"Product","values":[{"id":"71d7d15d8b37471ea6fd1834f69db4b3","propertyName":"h2-listing","propertyId":"3ddc4d60-2ddb-4025-8db1-82c43df7aceb","valueType":"ShortText","value":"Популярные объекты","isInherited":false}],"isInherited":false}],"images":[],"assets":[],"reviews":[],"seoObjectType":"Product","seoInfos":[{"semanticUrl":"townhouse","objectId":"041951777eeb4a10a64935f21a633854","objectType":"CatalogProduct","isActive":true,"createdDate":"2017-06-16T10:51:28.193Z","modifiedDate":"2017-06-16T10:51:28.193Z","createdBy":"admin","modifiedBy":"admin","id":"b34d35cfdc9c42708fd623a1651af90c"}],"outlines":[{"items":[{"id":"ddada1a8f0b14831890b6c67912442bc","seoObjectType":"Catalog","seoInfos":[],"hasVirtualParent":false},{"id":"2036643b08794d149e1722adbe0230e8","seoObjectType":"Category","seoInfos":[{"semanticUrl":"estatetypes","isActive":true,"languageCode":"ru-RU","createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false},{"id":"041951777eeb4a10a64935f21a633854","seoObjectType":"CatalogProduct","seoInfos":[{"semanticUrl":"townhouse","isActive":true,"createdDate":"0001-01-01T00:00:00Z"}],"hasVirtualParent":false}]}],"createdDate":"2017-06-16T10:51:03.967Z","modifiedDate":"2017-06-16T12:45:48.61Z","createdBy":"admin","modifiedBy":"admin","id":"041951777eeb4a10a64935f21a633854"}]}
+﻿{
+    "totalCount": 5,
+    "items": [
+        {
+            "code": "ES-ESTATYPE-VILLY-DOMA",
+            "name": "Виллы и дома",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "2036643b08794d149e1722adbe0230e8",
+            "outline": "2036643b08794d149e1722adbe0230e8",
+            "path": "Estatetypes",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/header-dom.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9278a0e47ca0404e92606f2582907aa0",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9278a0e47ca0404e92606f2582907aa0",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ade9e20d3e2a44579a6df3b1caf4323f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1-1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ade9e20d3e2a44579a6df3b1caf4323f",
+                            "propertyName": "h1-1",
+                            "propertyId": "ba2baa83-1d4e-4f9b-9d92-1ecb964a9976",
+                            "valueType": "ShortText",
+                            "value": "Виллы и дома",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ddc92203aa8549098f10bf5c3213b66e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ddc92203aa8549098f10bf5c3213b66e",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "5a6d7c2834044b27b1bbc34231995755",
+                    "relativeUrl": "catalog/ES-ESTATYPE-VILLY-DOMA/header-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/header-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "47897be53fe54da69a3629c1240fccd6",
+                    "relativeUrl": "catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-centr/linkblock-centr-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-centr/linkblock-centr-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "3561d282fafb4aeaa2c7ec7c2945e665",
+                    "relativeUrl": "catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type1/linkblock-type1-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type1/linkblock-type1-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "2a965d025b884e71a7cf8056bb772804",
+                    "relativeUrl": "catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type2/linkblock-type2-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type2/linkblock-type2-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-dom.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "67f6814d3e1e4e80b09c5be4c06649fd",
+                    "relativeUrl": "catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type3/linkblock-type3-dom.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-VILLY-DOMA/linkblock-type3/linkblock-type3-dom.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-dom.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "547a693a43514e2ca00035f2db852a5c",
+                    "content": "### Каталог вилл по типам и особенностям ###\n* [Новые виллы](/novostroyki/villy-doma)\n* [Виллы из вторичного фонда](/vtorichnaya/villy-doma)\n* [Элитные виллы](/villy-doma/elitnaya)\n* [Виллы на море](/villy-doma/na-more)\n* [Недорогие виллы](/villy-doma/nedorogaya)\n* [Виллы в пригородах](/villy-doma/prigorod)\n* [Виллы в горах](/villy-doma/v-gorah)\n* [Виллы для пенсионеров](/villy-doma/dlya-pensionerov)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6867a55e62d24707937590d6aa4f98ca",
+                    "content": "## Виллы по регионам Испании ##\n* ### Север Испании ##\n* [Барселона](/barcelona-okrestnosti/villy-doma)\n* [Каталония](/catalonia/villy-doma)\n* [Коста Брава](/costa-brava/villy-doma)\n* [Коста Дорада](/costa-dorada/villy-doma)\n* [Коста Гарраф](/costa-garraf/villy-doma)\n* [Коста Маресме](/costa-maresme/villy-doma)",
+                    "reviewType": "linkblock-centr",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "92efe468106d4522aa69a2fe5394887a",
+                    "content": "### Центр и юг Испании ###\n* [Андалусия](/andalusia/villy-doma)\n* [Коста Бланка](/costa-blanca/villy-doma)\n* [Коста Калида](/costa-calida/villy-doma)\n* [Коста дель Соль](/costa-del-sol/villy-doma)",
+                    "reviewType": "linkblock-centr1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma",
+                    "pageTitle": "Виллы и дома в Испании — купить виллу или дом в Испании недорого, цены в рублях",
+                    "metaDescription": "&#127969; Виллы и дома – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья по низким ценам!",
+                    "objectId": "3919a376f3cb4d229a5e8d7821b03446",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:27:04.473Z",
+                    "modifiedDate": "2017-07-27T14:27:04.473Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "172ad1d552fd432cb678b124f7dc9ccf"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2036643b08794d149e1722adbe0230e8",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "3919a376f3cb4d229a5e8d7821b03446",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T10:49:30.067Z",
+            "modifiedDate": "2017-07-27T15:11:54.893Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "3919a376f3cb4d229a5e8d7821b03446"
+        },
+        {
+            "code": "ES-ESTATYPE-zemlya",
+            "name": "Земельные участки",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "2036643b08794d149e1722adbe0230e8",
+            "outline": "2036643b08794d149e1722adbe0230e8",
+            "path": "Estatetypes",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-ZEMLYA/header-zemlya.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "620f70ba4bcb42a19dd2d30f85a12509",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "620f70ba4bcb42a19dd2d30f85a12509",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Земельные участки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a27b0e8e05824b4b8b0db08ec6044e1e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a27b0e8e05824b4b8b0db08ec6044e1e",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Земельные участки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c589b0f7020549dba761c07b72bfe8ff",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c589b0f7020549dba761c07b72bfe8ff",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог земельных участков в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "12932f8d28ea465dad4fc33d9f5f109f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "12932f8d28ea465dad4fc33d9f5f109f",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Классификация",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f48278c60d614390af4a1130e60116db",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f48278c60d614390af4a1130e60116db",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Цены на землю",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "8e1768ef8a7c42519501644cb33c8a49",
+                    "relativeUrl": "catalog/ES-ESTATYPE-ZEMLYA/header-zemlya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-ZEMLYA/header-zemlya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-zemlya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "44318994dfe04d6bbfb994b4e7ea3610",
+                    "relativeUrl": "catalog/ES-ESTATYPE-zemlya/linkblock-centr/linkblock-centr-zemlya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-zemlya/linkblock-centr/linkblock-centr-zemlya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-zemlya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "22c03783fdd242418ebf67728501ffd1",
+                    "relativeUrl": "catalog/ES-ESTATYPE-zemlya/linkblock-type1/linkblock-type1-zemlya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-zemlya/linkblock-type1/linkblock-type1-zemlya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-zemlya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "6586c3b68b6f4179a2db3a5010dcd61a",
+                    "relativeUrl": "catalog/ES-ESTATYPE-zemlya/linkblock-type3/linkblock-type3-zemlya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-zemlya/linkblock-type3/linkblock-type3-zemlya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-zemlya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "6f502693f03846828800759cdd06bba2",
+                    "relativeUrl": "catalog/ES-ESTATYPE-zemlya/linkblock-type2/linkblock-type2-zemlya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-zemlya/linkblock-type2/linkblock-type2-zemlya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-zemlya.jpg",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0407b3af44fd4ead9055b407e72203ee",
+                    "content": "### Земля на продажу по городам ###\n\n* [Земельные участки в Дении](/denia/zemlya)\n* [Земля в Альтеа](/altea/zemlya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "194361e06c114d5fa1bca0ba52c91e42",
+                    "content": "### Земельные участки по регионам Испании ###\n\n* [Земельные участки в Каталонии](/catalonia/zemlya)\n* [Земля на Коста Бланке](/costa-blanca/zemlya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "2bcc17c0a3474a5fb4814b94057f9654",
+                    "content": "### Цены на землю в Испании ### \n**Стоимость земли зависит от нескольких факторов, принимаются во внимание: **\n\n1. Расположение земельных участков. Самыми дорогими и престижными будут участки на побережье средиземного моря и в больших городах, земля, удаленная от моря или располагающаяся в предгорьях, будет стоить намного дешевле.\n2. Тип грунта и рельеф участка. На скалистых участках сложнее вести строительные работы, они менее пригодны для озеленения, благоустройства (включая бассейны), и будут стоить дешевле, чем ровные участки земли.\n3. Площадь земельного участка. Помимо прямой закономерности: меньше – дешевле, больше – дороже, есть ещё фактор - несколько участков в одной местности. Покупка сразу нескольких участков будет более выгодной.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "7d2ed35be95b4d6f9e2c872eacffadd7",
+                    "content": "###  Классификация участков ### \n\n**О чем важно знать, если вы планируете купить землю в Испании:**\n\nПродажа земли в Испании является сделкой, которую регламентирует государство. Законодательство определяет классификацию участков и целевое назначение земель, следит за соблюдением моратория на продажу участков в прибрежной полосе (150 м от линии моря).\n1. Urbana – участки, имеющие все документы и уже подготовленные под застройку жилья. Как правило, они располагаются в городской черте, в одном из жилищных комплексов. Главный плюс такой земли – подведенные к участку коммуникации.\n2. Urbanizable – такая земля тоже отлично подойдёт для любого вида строительства, и будет располагаться в пределах городской черты. Но участки, классифицируемые как urbanizable, не имеют включенного разрешения и согласования под застройку. Для того, чтобы перевести такой участок в категорию городских земель потребуется определенная подготовительная работа.\n3. Rustica – земли, которые располагаются в сельской местности или охраняемых природных зонах, не предназначены для застройки. Согласование и перевод таких участков в категорию Urbana - невозможно.\n4. Земля в Испании облагается налогом в 18% от суммы купчей, если вы планируете купить и начать работы по строительству в текущий год, то сумма налога уменьшится до 8%.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "c18a4111af1f4ee0a31d399024bdf5c0",
+                    "content": "Если вы хотите приобрести землю или участок в Испании для строительства жилья или коммерческого объекта, то агентство недвижимости Estate Spain обязательно поможет вам.\n\nПродажа земельных участков в Испании является одним из основных видов деятельности агентства Estate Spain. Вилла на побережье, дом в небольшом жилищном комплексе, земля на привлекательном курорте под строительство гостиницы или ресторана - мы подберем для вас лучшие предложения, проведем ознакомительные просмотры и обеспечим юридическое сопровождение сделки. \n\nОсобенно привлекательными земельные участки в Испании делают: живописная природа, средиземноморский климат и ценовая доступность (по сравнению со многими другими регионами Евросоюза). \n\nКупить земельный участок в Испании – это возможность выгодно вложить деньги и переехать жить в страну с большими перспективами развития.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "zemlya",
+                    "pageTitle": "Земля в Испании — купить участок в Испании недорого, цены в рублях | Продажа земельных участков",
+                    "metaDescription": "? Продажа земельных участков в Испании недорого. ? Продажа земли в Испании на море - цены в рублях.",
+                    "objectId": "939735882969498985731a8fa2557c0e",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:27:04.487Z",
+                    "modifiedDate": "2017-07-27T14:27:04.487Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "00d4c5bf3b274487ac6084075ca8d171"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2036643b08794d149e1722adbe0230e8",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "939735882969498985731a8fa2557c0e",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "zemlya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T10:53:45.457Z",
+            "modifiedDate": "2017-08-04T11:01:15.18Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "939735882969498985731a8fa2557c0e"
+        },
+        {
+            "code": "ES-ESTATYPE-KVARTIRY-APARTAMENTY",
+            "name": "Квартиры и апартаменты",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "2036643b08794d149e1722adbe0230e8",
+            "outline": "2036643b08794d149e1722adbe0230e8",
+            "path": "Estatetypes",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-centr-147267992.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "4f72b500d8364295b51d11ffa5f79121",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "4f72b500d8364295b51d11ffa5f79121",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1951b8c506694894b08e20cc6fb5fdcb",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1951b8c506694894b08e20cc6fb5fdcb",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7e709b7dfbba4a778a8a85ddc6fba3f5",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7e709b7dfbba4a778a8a85ddc6fba3f5",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог квартир и апартаментов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1bd128e279d7444b80978c3f3c44b302",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1bd128e279d7444b80978c3f3c44b302",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Апартаменты и квартиры по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "19f723ca63e2429d8ea08ae7a0a6c5e2",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "19f723ca63e2429d8ea08ae7a0a6c5e2",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Обзор цен на квартиры",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "10f6d8b8583845eeb4ea90f24f8c1cee",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-centr-147267992.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-centr-147267992.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-147267992.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "e0a6121b4056473f9b7a73f39c8b3fec",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type1-541846648.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type1-541846648.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-541846648.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "a3bbe007a4544122b120046ac406e454",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-tild6530-6539-4762-a433-626662326131__shutterstock_477440560.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 5,
+                    "id": "6e5af197350f4418b06eb9c3ced64d98",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type3-_437335915.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/linkblock-type3-_437335915.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-_437335915.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 6,
+                    "id": "3fea26892c9c4885bd005bdea3c74c6b",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/header-kvartiry-apartamenty.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KVARTIRY-APARTAMENTY/header-kvartiry-apartamenty.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-kvartiry-apartamenty.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "0a770dd1e4484acf9d854a98e8072abe",
+                    "content": "Королевство Испания – одно из самых востребованных туристических мест в Европе. Апартаменты и квартиры в Испании – это прекрасная возможность вложить деньги и получить свой собственный дом на берегу средиземноморского побережья. Тысячелетняя история и культура, теплый континентальный и морской климат, свежие фрукты и терпкое вино, более 300 солнечных дней в году – это те самые причины, благодаря которым мы хотим возвращаться в Испанию снова и снова.\n\n>  По сути, квартиры и апартаменты в Испании – это один и тот же тип жилья. Принципиальная разница будет заключаться в обеденной зоне, которая либо совмещена с гостиной, и тогда перед нами – апартаменты. Либо кухня и гостиная будут отдельными – такой тип жилья классифицируется как квартира.\n\nГде бы вы не планировали купить квартиру в Испании, агентство недвижимости Estate Spain поможет вам, мы работаем с объектами недвижимости во всех регионах страны: от Плайя-де-Аро и Сагаро на севере, до окрестностей Малаги на юге.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "2d94be896eae47a3a0b926014a655bea",
+                    "content": "* ### Северная часть Испании ###\n* [Барселона](/barcelona-okrestnosti/kvartiry-apartamenty)\n* [Каталония](/catalonia/kvartiry-apartamenty)\n* [Коста Брава](/costa-brava/kvartiry-apartamenty)\n* [Коста Дорада](/costa-dorada/kvartiry-apartamenty)\n* [Коста Гарраф](/costa-garraf/kvartiry-apartamenty)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "5c9983c06c00427ea18fe2122c3cf0fa",
+                    "content": "#### Другие виды квартир #### \n\n* [Четырехкомнатные квартиры](/chetyrehkomnatnye-kvartiry)\n* [Квартиры в пригородах](/kvartiry-apartamenty/prigorod)\n* [Апартаменты в горах](/kvartiry-apartamenty/v-gorah)\t\n* [Квартиры для пенсионеров](/kvartiry-apartamenty/dlya-pensionerov)\n\n### Квартиры в самых популярных городах Испании ###\n* [Квартиры в Аликанте](/alicante/kvartiry-apartamenty)\n* [Квартиры в Алтее](/altea/kvartiry-apartamenty)\n* [Квартиры в Барселоне](/barcelona/kvartiry-apartamenty)\n* [Квартиры в Бенидорме](/benidorm/kvartiry-apartamenty)",
+                    "reviewType": "linkblock-centr",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "5edf2c6aa9344d659186df19422e330f",
+                    "content": "### Квартиры в Испании цены ###\n\nСущественное влияние на формирование цены оказывают различные факторы, основные среди которых:\n\n* Месторасположение - регион, город, урбанизация\n* Близость или удаленность квартиры от пляжа\n* Наличие инфраструктуры рядом\n* Наличие закрытой территории и ее обустроенность\n* Год постройки и используемые материалы\n* Этаж и вид из окна\n\nКупить апартаменты в Испании недорого можно на побережье Коста-Бланки. Оборудованные двухкомнатные апартаменты с гаражом и террасой будут стоить около 70 000 евро. Квартиры в Испании купить в Торревьехе можно за 45 000 – 50 000 евро.\n\nКупить квартиру в Испании недорого на побережье Коста-Бравы будет куда сложнее, здесь жильё такого же плана (две комнаты, парковка и терраса), будет стоить не менее 100 000 – 150 000 евро. Север испанского побережья всегда славился более мягким климатом, своей элитарностью и дороговизной.\n\n> Продажа квартир в Испании – это основная специализация агентства недвижимости Estate Spain. Мы работаем на рынке недвижимости более 7 лет и предоставляем полный спектр услуг, включая: \n* полное юридическое сопровождение сделок;\n* объекты только от лучших и проверенных застройщиков;\n* объекты в разном ценовом диапазоне;\n* организацию предварительных просмотров;\n* постпродажное обслуживание.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "86d149be2a484e9687b195c7227689e8",
+                    "content": "### Квартиры в самых популярных городах Испании ###\n* [Квартиры в Бенидорме](/benidorm/kvartiry-apartamenty)\n* [Квартиры в Дении](/denia/kvartiry-apartamenty)\n* [Квартиры в Эстепоне](/estepona/kvartiry-apartamenty)\n* [Квартиры в Ллорет де Мар](/lloret-de-mar/kvartiry-apartamenty)\n* [Квартиры в Марбелье](/marbella/kvartiry-apartamenty)\n* [Квартиры в Ориуэла Коста](/orihuela-costa/kvartiry-apartamenty)\n* [Квартиры в Плайя де Аро](/playa-de-aro/kvartiry-apartamenty)\n* [Квартиры в Сагаро](/sagaro/kvartiry-apartamenty)\n* [Квартиры в Торрьвьехе](/torrevieja/kvartiry-apartamenty)",
+                    "reviewType": "linkblock-centr1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "ab57ac4c5a85497ebf20c120e8dd581e",
+                    "content": "### Центр и юг Испании ###\n* [Коста дель Валенсия](/costa-del-valencia/kvartiry-apartamenty)\n* [Коста Бланка](/costa-blanca/kvartiry-apartamenty)\n* [Коста дель Соль](/costa-del-sol/kvartiry-apartamenty)\n* [Андалусия](/andalusia/kvartiry-apartamenty)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "ddbef1595f144649bae07aa355b7d7a5",
+                    "content": "### Типы и особенности ###\n* [Новостройки](/kvartiry-apartamenty/novostroyki)\n* [Квартиры из вторичного фонда](/kvartiry-apartamenty/vtorichnaya)\n* [Квартиры на море](/kvartiry-apartamenty/na-more)\n* [Недорогие апартаменты и квартиры](/kvartiry-apartamenty/nedorogaya)\n* [Элитные апартаменты](/kvartiry-apartamenty/elitnaya)\n* [Студии и однокомнатные](/odnokomnatnye-kvartiry-studii)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty",
+                    "pageTitle": "Апартаменты в Испании недорого — купить квартиру в Испании, цены в рублях",
+                    "metaDescription": "Продажа квартир в Испании недорого. Продажа апартаментов в Испании недорого.  Цены на дешевые квартиры и апартаменты в Испании в рублях.",
+                    "objectId": "f30b57de14be4cfe98d5e364dce2ffd5",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:27:04.44Z",
+                    "modifiedDate": "2017-07-27T14:27:04.44Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "4724eed3ed4941c0aa5c57aa7357de68"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2036643b08794d149e1722adbe0230e8",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f30b57de14be4cfe98d5e364dce2ffd5",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T10:46:39.637Z",
+            "modifiedDate": "2017-08-04T11:01:15.18Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "f30b57de14be4cfe98d5e364dce2ffd5"
+        },
+        {
+            "code": "ES-ESTATYPE-KOMMERCHESKAYA",
+            "name": "Коммерческая недвижимость",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "2036643b08794d149e1722adbe0230e8",
+            "outline": "2036643b08794d149e1722adbe0230e8",
+            "path": "Estatetypes",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/header-kommercheskaya.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3baafd9586e04630b2e023c212e616b4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3baafd9586e04630b2e023c212e616b4",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Коммерческая недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f0655c69715645409a82e5bb77d9bef4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f0655c69715645409a82e5bb77d9bef4",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Коммерческая недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "fcbf0d5dd49f49dfa673799a1d13c05c",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "fcbf0d5dd49f49dfa673799a1d13c05c",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог коммерческой недвижимости в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "be2238daa5f14e13928504d9a6da1f03",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "be2238daa5f14e13928504d9a6da1f03",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Коммерческие объекты по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e044a68a854b4df98f9f11db98516301",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e044a68a854b4df98f9f11db98516301",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Типы коммерческой недвижимости",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e25306b4e1454a9383870a60cf282838",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e25306b4e1454a9383870a60cf282838",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Цены",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "82453e6a9e7b41d2906d44a988b25f64",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down3",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "82453e6a9e7b41d2906d44a988b25f64",
+                            "propertyName": "h3-seotext-down3",
+                            "propertyId": "a2aac9d5-b2d6-4ca5-91c0-d3cc56cf701e",
+                            "valueType": "ShortText",
+                            "value": "Рентабельность бизнеса в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "d7fa9de1895c4c3fabc169ccb0c1e464",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KOMMERCHESKAYA/header-kommercheskaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/header-kommercheskaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-kommercheskaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "18ebd6d02f0f48b0b183e7d1a550dc06",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-centr/linkblock-center-kommercheskaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-centr/linkblock-center-kommercheskaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-center-kommercheskaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "8994c2d127224fce86a3e6096a5b7300",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type1/linkblock-type1-kommercheskaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type1/linkblock-type1-kommercheskaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-kommercheskaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "7db542974ddc4ea89a7bc6b3af1bdf3e",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type2/linkblock-type2-kommercheskaya.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type2/linkblock-type2-kommercheskaya.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-kommercheskaya.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "746248407da54d93b8fbb195ada181ee",
+                    "relativeUrl": "catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type3/linkblock-type3-kommercheskaya.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-KOMMERCHESKAYA/linkblock-type3/linkblock-type3-kommercheskaya.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-kommercheskaya.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "00645499f0684d95a200b36b6167f4a9",
+                    "content": "###  Коммерческая недвижимость в Испании - цены ### \n\nИнвестиции в коммерческую недвижимость всегда отличались стабильной рентабельностью и приемлемой ценой. Наиболее часто частные инвесторы вкладывают суммы до 500 тысяч евро. Если покупатель планирует получить ВНЖ, то сумма вложений должна быть не менее 2 млн евро.\n\nКак и рынке жилой недвижимости, цены на коммерческие варианты определяются рядом факторов, главными из которых являются:\n\n* ее тип (кафе, гостиница, салон красоты и так далее);\n* регион Испании и конкретное местоположение (проходимость места, удаленность от моря и так далее);\n* текущее состояние самой недвижимости и бизнеса в целом;\n* необходимость вложений и их тип - капитальные, операционные;\n* рентабельность бизнеса (реальная и потенциальная);\n* юридические факторы (есть ли залог, сколько владельцев и так далее).\n\n**Средние цены на коммерческую недвижимость в Испании и готовые бизнесы выглядят примерно так:**\n\n1. Небольшие кафе и бары на побережье или в туристических городах (кроме Барселоны и Мадрида) можно найти по ценам от 250-300 тысяч евро, полноценные рестораны - от 500 000 евро.\n2. Маленькие помещения под бизнес, например, ремонт обуви ии одежды, фотоуслуги - от 50 000 евро (за площади до 20 квадратных метров).\n3. Хостелы и апарт-отели на 5-6 номеров можно найти также по ценам от 500 000 евро (очень сильно зависит от их местораспложения и состояния).\n4. Полноценные гостиницы и отели от 2-х звезд - от 900 000 евро, 3-4 звезды - ближе к 1 500 000 евро, верхний предел ничем не ограничен. В Барселоне и Мадриде стоимость приличных отелей начинается от 3 000 000 евро.\n5. Cредняя стоимость квадратного метра офисной недвижимости стартует от 2-3 тысяч евро.\n6. Автомобильные заправки с комплексом услуг (например автомойкой) будут стоить от 700 000 евро (на побережье Коста Бланка).",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "4c758fd87bbe4dc59bd38b1bc6894277",
+                    "content": "Инвестиционные проекты и покупка бизнеса в Испании пользуются стабильным спросом у иностранных граждан, включая россиян. Поскольку Испания - это страна с выходом к морю, теплым климатом и богатой историей, чаще всего здесь вкладываются в гостиничный бизнес и предприятия общественного питания в самых известных курортных городах \n<br />\nОбъекты этой категории пользуются большим спросом на европейском рынке, поскольку коммерческая недвижимость в Испании находится под влиянием грамотно сбалансированной государственной инвестиционной политики. Выбор коммерческой недвижимости осуществляется по ряду критериев, обусловленных лояльностью законодательства и интересами клиента.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "95b640e3b7fb48d2825a5dad271f8aba",
+                    "content": "###  Что покупают чаще всего ###\n\n**1 - Гостиницы** - Любые виды гостиничных объектов - от хостелов и апартаментов до дорогих спа- и кантри-отелей.\n\n**2 - Магазины и торговые центры** - От небольших магазинов формата \"у дома\", до франшиз крупных торговых сетей (Mercadona, Consum и других).\n\n**3 - Общепит** - Любые форматы кафе и ресторанов на побережье и в городах с большими турпотоками (Барселоне, Аликанте, Мадриде, Валенсии).\n\n**4 - Предприятия сферы услуг** - Чаще всего выбирают парикмахерские и спа-салоны, фитнес-центры.\n\n**5 - Развлечения и спорт** - Дискотеки, пляжные клубы, гольф-поля, теннисные корты.\n\n**6 - Туризм и офисы** - Небольшие турбюро, агентства недвижимости, отдельные офисы или целые офисные здания.\n\n**7 -  Складирование и логистика** - Любые типы и виды складских помещений, логистические центры. Также большой популярностью в последнее время пользуются автомобильные заправки.\n\n**8 - Земельные участки** - ****Варианты под застройку жилых, гостиничных комплексов.\n\n**9 - Производство** - Не самый популярный запрос, но такие запросы встречаются. Чаще всего в Испании иностранцы покупают винное и оливковое производства.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "bd7de28dd4314c2ca4301ed1a8ff16f8",
+                    "content": "### [Недвижимость для бизнеса на Коста Гарраф](/costa-garraf/kommercheskaya) ###",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "e4091b2ade8a4d2cae397dd67f582bb2",
+                    "content": "### Средние показатели рентабельности бизнеса в Испании ### \n\nЗадумываясь о покупке бизнеса в Испании, следует помнить о средних показателях его рентабельности. Этот показатель для практически любого вида бизнеса в этой стране колеблется от 3% (крайний минимум) до 10% (только при условии очень хорошего управления) годовых, средние показатели - 5-7%. Это касается и сдачи жилья в аренду, и управления мини-отелем, автомойкой или заправкой, получением пассивного дохода от сдачи коммерческой недвижимости в аренду.\n\nКак правило, жителям России и стран СНГ эти показатели кажутся очень низкими, но следует помнить о фундаментальных экономических причинах таких цифр:\n\n* средняя ставки по ипотеке в Испании - 3%, по банковским депозитам - 0,7%;\n* коэффициент инфляции - около 2,3% в годовом выражении (в России - в два раза выше);\n* налоговая ставка - от 25% для физлиц, и примерно под 40% для бизнесов;\n* высокий уровень конкуренции на всех рынках.\t\n\n\nОфисы и торговая недвижимость в Испании - неплохой вариант для покупки в Мадриде и Барселоне, в этих городах можно рассчитывать на хорошую рентабельность. Отели и жилье для сдачи в аренду стоит покупать на популярных туристических курортах, и это будут очень стабильные инвестиции в недвижимость. При этом самые дорогие регионы — Барселона, Мадрид, Коста-Брава и Коста-дель-Соль, а более дешевые — Коста-Бланка и Коста-Дорада.\n\nТакже существует интерес к торговым помещениям и апартаментам в жилых комплексах для сдачи в аренду. Россияне предпочитают приобретать готовый бизнес на побережье, нежели начинать свое дело с нуля, что вполне оправдано.\n\n> Покупка недвижимости для ведения бизнеса в Испании, или уже готового работающего варианта, всегда длительный процесс. Необходимо оценить все факторы, уровень рентабельности и рисков, и сделать оптимальный выбор. Кроме покупки, также можно рассмотреть варианты аренды готовых бизнесов, такие предложения встречаются не редко. Если вы примерно знаете, какую сумму денег хотите вложить и что получить на выходе, обращайтесь к нам. Наши менеджеры по коммерческим объектам работают в разных регионах Испании с банками и адвокатурами, и всегда готовы предложить подборки интересных вариантов под запросы каждого из клиентов. В нашей базе есть все от отелей и хостелов, магазинов и заправок, до вариантов элитных комплексов с собственными винодельнями. Отправляйте заявки сегодня!",
+                    "reviewType": "seotext-down3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "e5146c149ff44120a5253506e142a451",
+                    "content": "### [Коммерческая недвижимость в Барселоне](/barcelona/kommercheskaya) ###",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kommercheskaya",
+                    "pageTitle": "Коммерческая недвижимость в Испании — купить недвижимость для бизнеса в Испании, цены в рублях",
+                    "metaDescription": "? Продажа коммерческой недвижимости в Испании - цены от надежного агентства. ? Цены на недвижимость для бизнеса в Испании.",
+                    "objectId": "026689a655974f22b3615559b1fb13e1",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:27:04.41Z",
+                    "modifiedDate": "2017-07-27T14:27:04.41Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "7dfc6eaa928044f3905138f795f1f5d3"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2036643b08794d149e1722adbe0230e8",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "026689a655974f22b3615559b1fb13e1",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kommercheskaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T11:05:17.07Z",
+            "modifiedDate": "2017-08-04T11:01:15.18Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "026689a655974f22b3615559b1fb13e1"
+        },
+        {
+            "code": "ES-ESTATYPE-TOWNHOUSE",
+            "name": "Таунхаусы и бунгало",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "2036643b08794d149e1722adbe0230e8",
+            "outline": "2036643b08794d149e1722adbe0230e8",
+            "path": "Estatetypes",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "imgSrc": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/header-townhouse.jpg",
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5f4f33bf5b8146f0ae28c8439574f980",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5f4f33bf5b8146f0ae28c8439574f980",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Таунхаусы и бунгало в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e75487dee29d460b949b5212a4b75550",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1 ",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e75487dee29d460b949b5212a4b75550",
+                            "propertyName": "h1 ",
+                            "valueType": "ShortText",
+                            "value": "Таунхаусы и бунгало в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "622a0d13fa074ed88cd92e5e28edf121",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "622a0d13fa074ed88cd92e5e28edf121",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог таунхаусов и бунгало в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "6bb144091550407899316b3d77b31320",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "6bb144091550407899316b3d77b31320",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Бунгало и таунхаусы по типам и регионам",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "a10453f31fd5485bbc1e184d432c6486",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "a10453f31fd5485bbc1e184d432c6486",
+                            "propertyName": "h3-seotext-down1",
+                            "propertyId": "77e30447-47cb-4dad-9611-8b20d03d8e63",
+                            "valueType": "ShortText",
+                            "value": "Особенности и цены",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "89618c5158554ebc975e313c812896fd",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h3-seotext-down2",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "89618c5158554ebc975e313c812896fd",
+                            "propertyName": "h3-seotext-down2",
+                            "propertyId": "b8313269-d1d1-4a14-8534-c90780675492",
+                            "valueType": "ShortText",
+                            "value": "Что такое таунхаус",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [
+                {
+                    "sortOrder": 0,
+                    "id": "242cf368113e44f49277a3bc38fd48df",
+                    "relativeUrl": "catalog/ES-ESTATYPE-TOWNHOUSE/header-townhouse.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/header-townhouse.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "header-townhouse.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 1,
+                    "id": "292c12805b11408d988afb106e025388",
+                    "relativeUrl": "catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-centr-townhouse.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-centr-townhouse.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-centr-townhouse.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 2,
+                    "id": "39eee916a6814e39882218ec50d1052f",
+                    "relativeUrl": "catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type1/linkblock-type1-townhouse.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type1/linkblock-type1-townhouse.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type1-townhouse.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 3,
+                    "id": "82fd141d4b464fa7a02503db2acac6bb",
+                    "relativeUrl": "catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type2/linkblock-type2-townhouse.jpg",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type2/linkblock-type2-townhouse.jpg",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type2-townhouse.jpg",
+                    "isInherited": false
+                },
+                {
+                    "sortOrder": 4,
+                    "id": "56e8b309ae774639b51d09d0086a24df",
+                    "relativeUrl": "catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type3/linkblock-type3-townhouse.png",
+                    "url": "https://esdev.blob.core.windows.net/catalog/ES-ESTATYPE-TOWNHOUSE/linkblock-type3/linkblock-type3-townhouse.png",
+                    "typeId": "image",
+                    "group": "images",
+                    "name": "linkblock-type3-townhouse.png",
+                    "isInherited": false
+                }
+            ],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "39ce692c9d154e4aaa89f0779cb067f8",
+                    "content": "### Испанские бунгало - особенности и цены ###\n\nБунгало в Испании – это одноэтажный дом с арочной верандой, просторной гостиной в американском стиле и несколькими спальнями. Основной отличительной чертой бунгало будет наличие придомовой территории, которая чаще всего оформлена как зеленая зона и сад. Также бунгало может быть частью закрытой резиденции, тогда придомовая территория становится общей, на ней располагаются: бассейн, зона для барбекю и детские игровые площадки. \n\nКупить бунгало в Испании можно как в новых дорогих резиденциях на первой линии моря, так и в старых застройках, ближе к центру города и основной инфраструктуре. Бунгало в Испании недорого можно приобрести на побережье Коста-Бланка. Объекты недвижимости на Коста-Браве будут дороже, несмотря на одинаковое качество застройки. Стоимость бунгало будет зависеть от времени постройки здания, района, близости к морю и инфраструктуры. Средняя цена варьируется от 90 000 до 300 000 евро.",
+                    "reviewType": "seotext-down1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "40cb4a60736343baadd3a701e0a47dbd",
+                    "content": "### Как выглядят таунхаусы в Испании ###\n\nТаунхаусы в Испании – это двухэтажные жилые дома на несколько квартир с изолированными входами. По сути, российским вариантом таунхауса будет являться сблокированный или смежный коттедж. Как правило, почти любой таунхаус в Испании оснащён и солярием, и небольшой придомовой территорией – палисадником. Если таунхаус рассчитан на две семьи, то жильцам со второго этажа достается солярий на крыше, а жильцы первого получают небольшой палисадник. Таунхаусы стандартной планировки на одну семью состоят из салона американского типа, гостевых спален на первом этаже, большой спальни на втором и двух ванных комнат. Купить таунхаус в Испании недорого можно на юге провинции Аликанте в таких городах как Торревьеха, Бенидорм, Кампоамор и многих других.\n\nАгентство недвижимости Estate Spain поможет выбрать подходящий для вас объект недвижимости. Таунхаус или бунгало - чтобы вы не выбрали c нашей помощью, вы всегда будете уверены в добросовестности продавцов и прозрачности сделки.",
+                    "reviewType": "seotext-down2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "5af6d9d996634b6a87a98456778f2084",
+                    "content": "### Таунхаусы по типам и особенностям ###\n* [Новые таунхаусы и бунгало](/townhouse/novostroyki)\n* [Вторичные таунхаусы](/townhouse/vtorichnaya)\n* [Элитные таунхаусы](/townhouse/elitnaya)\n* [Таунхаусы и бунгало на море](/townhouse/na-more)\n* [Недорогие таунхаусы](/townhouse/nedorogaya)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "6b99859a0af94e889ce66d51ec27e897",
+                    "content": "Таунхаусы и бунгало в Испании – это возможность отдыхать на средиземноморском побережье с особым комфортом и спокойствием. Таунхаусы и бунгало – один из самых распространенных видов недвижимости на побережье Коста-Бланка и Коста-Брава. Главный плюс такого жилья – ограниченное количество соседей.",
+                    "reviewType": "seotext-up",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "74d10ef43d954b3aa8055dc38083f177",
+                    "content": "",
+                    "reviewType": "linkblock-centr",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "bf81575558e94ed7ab90bf5d2de216cf",
+                    "content": "",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "f5482b7c28904ea39909367105b1361c",
+                    "content": "### Таунхаусы и бунгало по регионам  ###\n* [Андалусия](/andalusia/townhouse)\n* [Каталония](/catalonia/townhouse)\n* [Коста Бланка](/costa-blanca/townhouse)\n* [Коста Брава](/costa-brava/townhouse)\n* [Коста Калида](/costa-calida/townhouse)\n* [Коста дель Соль](/costa-del-sol/townhouse)\n* [Коста дель Валенсия](/costa-del-valencia/townhouse)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse",
+                    "pageTitle": "Бунгало в Испании — купить таунхаус в Испании недорого, цены в рублях.",
+                    "metaDescription": "&#127969 Продажа таунхаусов в Испании на побережье. Продажа таунхаусов в Испании недорого. &#9728 Цены на бунгало, таунхаусы в Испании в рублях.",
+                    "objectId": "041951777eeb4a10a64935f21a633854",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-04T10:51:10.177Z",
+                    "modifiedDate": "2017-08-04T10:51:10.177Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "87f6e0803a6b41cc8b4eeb45813f8357"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2036643b08794d149e1722adbe0230e8",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "041951777eeb4a10a64935f21a633854",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-06-16T10:51:03.967Z",
+            "modifiedDate": "2017-08-04T11:01:15.18Z",
+            "createdBy": "admin",
+            "modifiedBy": "admin",
+            "id": "041951777eeb4a10a64935f21a633854"
+        }
+    ],
+    "aggregations": []
+}

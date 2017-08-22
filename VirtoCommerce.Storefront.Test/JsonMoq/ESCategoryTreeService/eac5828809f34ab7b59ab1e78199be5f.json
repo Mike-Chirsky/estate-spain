@@ -1,0 +1,1746 @@
+﻿{
+    "totalCount": 14,
+    "items": [
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-DLYA-PENSIONEROV",
+            "name": "Вторичная недвижимость в  для пенсионеров в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f2e597832fc74effa8c53eda7fea320b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f2e597832fc74effa8c53eda7fea320b",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в для пенсионеров в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5549d09cf2b54ea59953ae028773e1e4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5549d09cf2b54ea59953ae028773e1e4",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в  для пенсионеров в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/dlya-pensionerov",
+                    "pageTitle": "Вторичная недвижимость в для пенсионеров в Испании — купить недвижимость из вторичного фонда для пенсионеров недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в  для пенсионеров в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "7ddd84b73f5c4badb91847596970598a",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.24Z",
+                    "modifiedDate": "2017-08-09T15:56:46.98Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "27804e3f5ee9420daeaa09e4844fb9f1"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "7ddd84b73f5c4badb91847596970598a",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/dlya-pensionerov",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-09T15:56:46.933Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "7ddd84b73f5c4badb91847596970598a"
+        },
+        {
+            "code": "ES-COND-TAGS-vtorichnaya-slash-vozle-univer",
+            "name": "Вторичная недвижимость в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8661e56c48524565b5d550376831c064",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8661e56c48524565b5d550376831c064",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1649a9abda9d451abba4b9f14d7ac086",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1649a9abda9d451abba4b9f14d7ac086",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в Испании возле университетов на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/vozle-univer",
+                    "pageTitle": "Вторичная недвижимость в Испании из вторичного фонда возле университетов — купить вторичную недвижимость недорого, цены в рублях",
+                    "metaDescription": "&#127959; Недвижимость в Испании из вторичного фонда  возле университетов – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "a60a054e2e464acfb7a1e73f560dfc9c",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:26:06.997Z",
+                    "modifiedDate": "2017-07-27T14:26:06.997Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "4b4222b317f34244aa4dc7fd917bef6d"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "a60a054e2e464acfb7a1e73f560dfc9c",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/vozle-univer",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-27T14:26:06.857Z",
+            "modifiedDate": "2017-07-27T14:26:06.857Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "a60a054e2e464acfb7a1e73f560dfc9c"
+        },
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-NA-MORE",
+            "name": "Вторичная недвижимость в Испании на море",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "8edabd627cd54acdb15c1af707baa61c",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "8edabd627cd54acdb15c1af707baa61c",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в Испании на море",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3a12c120d2d14350ac397641667c43f0",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3a12c120d2d14350ac397641667c43f0",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в Испании на море на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/na-more",
+                    "pageTitle": "Вторичная недвижимость в Испании на море — купить Вторичная недвижимость на море недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в Испании на море – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "d2b0d84b6aa047bb873beb44cc0b7536",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.303Z",
+                    "modifiedDate": "2017-08-09T16:02:17.593Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "c0a1ed69d25540b79e6f53d77453ef6d"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "d2b0d84b6aa047bb873beb44cc0b7536",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/na-more",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-09T16:02:17.55Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "d2b0d84b6aa047bb873beb44cc0b7536"
+        },
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-V-GORAH",
+            "name": "Вторичная недвижимость в горах в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "45312d6a3855460d9cd78d360462fe17",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "45312d6a3855460d9cd78d360462fe17",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в горах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "72696df1ccba4a73857f7510bb126663",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "72696df1ccba4a73857f7510bb126663",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в горах в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/v-gorah",
+                    "pageTitle": "Вторичная недвижимость в горах в Испании — купить недвижимость из вторичного фонда в горах недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в  в горах в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "2d940aa4695f4734a9cf934194fbdf1a",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.367Z",
+                    "modifiedDate": "2017-08-08T11:51:13.367Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "e36576b1d96047619f9201ff5c3a9d46"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2d940aa4695f4734a9cf934194fbdf1a",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/v-gorah",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "2d940aa4695f4734a9cf934194fbdf1a"
+        },
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-PRIGOROD",
+            "name": "Вторичная недвижимость в пригородах в Испании ",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f388a05354ca4414aaf619f2b065a361",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f388a05354ca4414aaf619f2b065a361",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная недвижимость в пригородах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3834c6259c164bbf84704d807a34ae52",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3834c6259c164bbf84704d807a34ae52",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичной недвижимости в пригородах в Испании  на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/prigorod",
+                    "pageTitle": "Вторичная недвижимость в пригородах в Испании — купить недвижимость из вторичного фонда в пригороде недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Вторичная недвижимость в пригородах в Испании  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "f0a4c52ea2354e33ba2cca8c2cb09d7c",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.35Z",
+                    "modifiedDate": "2017-08-08T11:51:13.35Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "2b2e3d0f3e8f4c64b2aa4130786dfaff"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f0a4c52ea2354e33ba2cca8c2cb09d7c",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/prigorod",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "f0a4c52ea2354e33ba2cca8c2cb09d7c"
+        },
+        {
+            "code": "ES-COND-TAGS-vtorichnaya-dohod-doma",
+            "name": "Вторичные доходные дома в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7474c4bbf7824ee8ac26f965cf3b4300",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7474c4bbf7824ee8ac26f965cf3b4300",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичные доходные дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "05ef509af369497fb5ade3bd5e9608dd",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "05ef509af369497fb5ade3bd5e9608dd",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог доходных домов  из вторичного фонда в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/dohod-doma",
+                    "pageTitle": "Доходные дома в Испании из вторичного фонда — купить доходный дом недорого, цены в рублях",
+                    "metaDescription": "&#127959; Доходные дома в Испании из вторичного фонда  – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "c9157504f6354a86955fe82f7063e1dd",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:26:06.59Z",
+                    "modifiedDate": "2017-07-27T14:26:06.59Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "d74ef9c4c857408c826a8a3d7126cdd0"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "c9157504f6354a86955fe82f7063e1dd",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/dohod-doma",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-27T14:26:06.073Z",
+            "modifiedDate": "2017-08-01T10:43:54.38Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "c9157504f6354a86955fe82f7063e1dd"
+        },
+        {
+            "code": "ES-COND-TAGS-novostroyki-dohod-doma",
+            "name": "Доходные дома в Испании в новостройках",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "eb26a5a5717c4ad1a25ac54fae9a67c4",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "eb26a5a5717c4ad1a25ac54fae9a67c4",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Доходные дома в Испании в новостройках",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bca60a8dfea0459d8a0f765e0e5e40d3",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bca60a8dfea0459d8a0f765e0e5e40d3",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог дходных домов в Испании в новостройках",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/dohod-doma",
+                    "pageTitle": "Доходные дома в Испании в новостройках — купить доходный дом недорого, цены в рублях",
+                    "metaDescription": "&#127959; Доходные дома в Испании в новостройках  – лучшие предложения от агентства Estate-Spain.com &#9728; Продажа недвижимости по низким ценам!",
+                    "objectId": "011b539c9df544f69edfaa57a4426cbb",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:26:06.357Z",
+                    "modifiedDate": "2017-07-27T14:26:06.357Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "3b191a0919ed4f9399fac5d5c4162748"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "011b539c9df544f69edfaa57a4426cbb",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/dohod-doma",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-27T14:26:06.073Z",
+            "modifiedDate": "2017-07-27T14:26:06.073Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "011b539c9df544f69edfaa57a4426cbb"
+        },
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-NEDOROGAYA",
+            "name": "Недорогая вторичная недвижимость в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "08b24c1cb5364a61a2bd9bace5c62695",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "08b24c1cb5364a61a2bd9bace5c62695",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Недорогая вторичная недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ebff09f0d4c8452aab8720e1d921ef96",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ebff09f0d4c8452aab8720e1d921ef96",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогой вторичной недвижимости в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/nedorogaya",
+                    "pageTitle": "Недорогая вторичная недвижимость в Испании — купить недорогую недвижимость из вторичного фонда, цены в рублях.",
+                    "metaDescription": "&#127969  Недорогая вторичная недвижимость в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "b19b8804788a4a7f9db1f89b54c1a148",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.32Z",
+                    "modifiedDate": "2017-08-08T11:51:13.32Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "15ad8879e05f400eb65c7f162d9a3a0d"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b19b8804788a4a7f9db1f89b54c1a148",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/nedorogaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "b19b8804788a4a7f9db1f89b54c1a148"
+        },
+        {
+            "code": "ES-COND-TAGS-NOVOSTROYKI-NEDOROGAYA",
+            "name": "Недорогая недвижимость в новостройках в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1a1b9778c1e041cca76fa36bd0f99f65",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1a1b9778c1e041cca76fa36bd0f99f65",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Недорогая недвижимость в новостройках в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "cb90a3a83d6c440aa5373ea180c600c8",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "cb90a3a83d6c440aa5373ea180c600c8",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог недорогой недвижимости в новостройках в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/nedorogaya",
+                    "pageTitle": "Недорогая недвижимость в новостройках в Испании — купить недвижимость в новостройках недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Недорогая недвижимость в новостройках в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "715e7acf0b5243c1988b2fdff43bea6b",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:12.897Z",
+                    "modifiedDate": "2017-08-08T11:51:12.897Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "22f3206a4ed345649448389118531631"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "715e7acf0b5243c1988b2fdff43bea6b",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/nedorogaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-08T11:51:12.55Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "715e7acf0b5243c1988b2fdff43bea6b"
+        },
+        {
+            "code": "ES-COND-TAGS-NOVOSTROYKI-NA-MORE",
+            "name": "Новая недвижимость в Испании на море",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "db84d5960b04440e9d1bf20b4e34eef0",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "db84d5960b04440e9d1bf20b4e34eef0",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новая недвижимость в Испании на море",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "0aa4469e868447068e9319bfc6930917",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "0aa4469e868447068e9319bfc6930917",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новой недвижимости в Испании на море на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/na-more",
+                    "pageTitle": "Новая недвижимость в Испании на море — купить недвижимость в новостройках у моря недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новая недвижимость в Испании на море – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "afafefdc937a49f7aa22605d6b365d6e",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:12.867Z",
+                    "modifiedDate": "2017-08-08T11:51:12.867Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "e1efacdac6f9488dbff6358501f3aae4"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "afafefdc937a49f7aa22605d6b365d6e",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/na-more",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-08T11:51:12.55Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "afafefdc937a49f7aa22605d6b365d6e"
+        },
+        {
+            "code": "ES-COND-TAGS-NOVOSTROYKI-V-GORAH",
+            "name": "Новая недвижимость в горах в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "bf6c9b3106f54f41b0db1806d1876ab3",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "bf6c9b3106f54f41b0db1806d1876ab3",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новая недвижимость в горах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "04cd25106dd34c01931f0246d94b7d7f",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "04cd25106dd34c01931f0246d94b7d7f",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новой недвижимости в горах в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/v-gorah",
+                    "pageTitle": "Новая недвижимость в горах в Испании — купить недвижимость в новостройках в горах недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новая недвижимость в горах в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "12d9fa5b42f8420398544a8565a967ec",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.21Z",
+                    "modifiedDate": "2017-08-08T11:51:13.21Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "f670557ec4184b37b14be40d15cadc3f"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "12d9fa5b42f8420398544a8565a967ec",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/v-gorah",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "12d9fa5b42f8420398544a8565a967ec"
+        },
+        {
+            "code": "ES-COND-TAGS-NOVOSTROYKI-PRIGOROD",
+            "name": "Новая недвижимость в пригородах в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f3253713154c416c93da84720a497184",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f3253713154c416c93da84720a497184",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новая недвижимость в пригородах в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1ed1adbee4ee45ebb3585b769dab87eb",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1ed1adbee4ee45ebb3585b769dab87eb",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новой недвижимости в пригородах в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/prigorod",
+                    "pageTitle": "Новая недвижимость в пригородах в Испании — купить недвижимость в новостройках в пригородах Испании недорого, цены в рублях.",
+                    "metaDescription": "&#127969  Новая недвижимость в пригородах в Испании  – лучшие предложения от агентства Estate-Spain.com. Продажа недвижимости по низким ценам!",
+                    "objectId": "afb70c59f9084d6f85e28f83a6cee07c",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:12.93Z",
+                    "modifiedDate": "2017-08-08T11:51:12.93Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "5fb06647629140b78ddab47b1a80d1b7"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "afb70c59f9084d6f85e28f83a6cee07c",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/prigorod",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-08T11:51:12.55Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "afb70c59f9084d6f85e28f83a6cee07c"
+        },
+        {
+            "code": "ES-COND-TAGS-VTORICHNAYA-ELITNAYA",
+            "name": "Элитная недвижимость в Испании из вторичного фонда",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "7778c977b30b47a2858cadfface0f756",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "7778c977b30b47a2858cadfface0f756",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичная элитная недвижимость в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1b298ed3c1da45c68f1c467a90bfa559",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1b298ed3c1da45c68f1c467a90bfa559",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог элитной недвижимости в Испании из вторичного фонда на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "vtorichnaya/elitnaya",
+                    "pageTitle": "Элитная недвижимость из вторичного фонда в Испании — купить элитную недвижимость из вторичного фонда, цены в рублях.",
+                    "metaDescription": "&#127969  Элитная недвижимость в Испании из вторичного фонда – лучшие предложения от агентства Estate-Spain.com. Престижные и роскошные варианты",
+                    "objectId": "aae96c8687914bc9abffdfb19f31dcef",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:13.257Z",
+                    "modifiedDate": "2017-08-08T11:51:13.257Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "b950434db28344d8bfe33afc395ab77b"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "aae96c8687914bc9abffdfb19f31dcef",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "vtorichnaya/elitnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-08T11:51:13.117Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "aae96c8687914bc9abffdfb19f31dcef"
+        },
+        {
+            "code": "ES-COND-TAGS-NOVOSTROYKI-ELITNAYA",
+            "name": "Элитные новостройки в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "eac5828809f34ab7b59ab1e78199be5f",
+            "outline": "eac5828809f34ab7b59ab1e78199be5f",
+            "path": "Conditions_Tags",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "5c501c6e44344372819a0ba7a9966a4b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "5c501c6e44344372819a0ba7a9966a4b",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Элитные новостройки в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "995368c0f0294e1a907765114bec97f9",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "995368c0f0294e1a907765114bec97f9",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог элитных новостроек в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "novostroyki/elitnaya",
+                    "pageTitle": "Элитные новостройки в Испании — купить недвижимость в элитной новостройке в Испании, цены в рублях.",
+                    "metaDescription": "&#127969  Элитные новостройки в Испании – лучшие предложения от агентства Estate-Spain.com. Продажа дорогих и роскошных новостроек!",
+                    "objectId": "fe2ef008313d481a8ada266f111ed54d",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-08-08T11:51:12.85Z",
+                    "modifiedDate": "2017-08-09T16:39:32.737Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "b38fbc21ee2f4c98b3cfafab86535215"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "eac5828809f34ab7b59ab1e78199be5f",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "fe2ef008313d481a8ada266f111ed54d",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "novostroyki/elitnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-09T16:39:32.66Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "fe2ef008313d481a8ada266f111ed54d"
+        }
+    ],
+    "aggregations": []
+}

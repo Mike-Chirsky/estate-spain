@@ -1,0 +1,1044 @@
+﻿{
+    "totalCount": 6,
+    "items": [
+        {
+            "code": "ES-COND-EST-VTORICHNAYA-VILLY-DOMA",
+            "name": "Вторичные виллы и дома в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "684d8755343a45c484441d82cf7849f6",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "684d8755343a45c484441d82cf7849f6",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичные виллы и дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1da45fc8f54b48feba6e96ae33bdfc1b",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1da45fc8f54b48feba6e96ae33bdfc1b",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вилл и домов из вторичного фонда в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2147a7415409423dbfef436840185d25",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2147a7415409423dbfef436840185d25",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Дома и виллы вторичного рынка Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "19ed932364664c2d94bb2bef8ed99d45",
+                    "content": "* [ВСЕ ВИЛЛЫ](/villy)\n* [ВСЕ ДОМА](/doma)\n* [ВСЯ ВТОРИЧНАЯ НЕДВИЖИМОСТЬ](/vtorichnaya)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "73c6c0021eb741439c87325b5a152528",
+                    "content": "* [АНДАЛУСИЯ](/andalusia/villy-doma/vtorichnaya)\n* [ОКРЕСТНОСТИ БАРСЕЛОНЫ](/barcelona-okrestnosti/villy-doma/vtorichnaya)\n* [КАТАЛОНИЯ](/catalonia/villy-doma/vtorichnaya)\n* [КОСТА БРАВА](/costa-brava/villy-doma/vtorichnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "ad065e811272416aac047ae5751dd852",
+                    "content": "* [КОСТА ДОРАДА](/costa-dorada/villy-doma/vtorichnaya)\n* [КОСТА ГАРРАФ](/costa-garraf/villy-doma/vtorichnaya)\n* [КОСТА МАРЕСМЕ](/costa-maresme/villy-doma/vtorichnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/vtorichnaya",
+                    "pageTitle": "Виллы и дома из вторичного фонда в Испании — купить виллы или дома из вторичного фонда недорого, цены в рублях",
+                    "metaDescription": "&#127969;  Виллы и дома из вторичного фонда в Испании – лучшие предложения от агентства Estate-Spain.com. ☀ Продажа вторичного жилья в Испании по низким ценам!",
+                    "objectId": "f5747e7cb1614d69a1c68771e7ef8b5e",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.233Z",
+                    "modifiedDate": "2017-08-09T17:00:13.58Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "7033b1a49fbc4ff4a0a8595551dc35b1"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "f5747e7cb1614d69a1c68771e7ef8b5e",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.837Z",
+            "modifiedDate": "2017-08-09T17:00:13.533Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "f5747e7cb1614d69a1c68771e7ef8b5e"
+        },
+        {
+            "code": "ES-COND-EST-VTORICHNAYA-KVARTIRY-APARTAMENTY",
+            "name": "Вторичные квартиры и апартаменты в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "f3d5493f064045769fed79886d151677",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "f3d5493f064045769fed79886d151677",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Вторичные квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "2061e442398548ae8b8b87f6faf497a8",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "2061e442398548ae8b8b87f6faf497a8",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог вторичных квартир и апартаментов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "cfd80e635b2840ccafe6e059eacc99b7",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "cfd80e635b2840ccafe6e059eacc99b7",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Квартиры из вторичного фонда по регионам Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "49c6588f41284589bb356362b647b6a8",
+                    "content": "* [КАТАЛОГ КВАРТИР И АПАРТАМЕНТОВ](/kvartiry-apartamenty)\n* [ВТОРИЧНАЯ НЕДВИЖИМОСТЬ В ИСПАНИИ](/vtorichnaya)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "700910e905f64c3c9b9975dc5c35c6e5",
+                    "content": "* [КОСТА-ДЕ-ЛА-ЛУС](/costa-de-la-luz/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА-ДЕЛЬ-СОЛЬ](/costa-del-sol/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА-ДЕЛЬ-ВАЛЕНСИЯ](/costa-del-valencia/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА ДОРАДА](/costa-dorada/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА ГАРРАФ](/costa-garraf/kvartiry-apartamenty/vtorichnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "ca70314b0a2a4990bd6d5de33b910d2e",
+                    "content": "* [АНДАЛУСИЯ](/andalusia/kvartiry-apartamenty/vtorichnaya)\n* [БАРСЕЛОНА И ОКРЕСТНОСТИ](/barcelona-okrestnosti/kvartiry-apartamenty/vtorichnaya)\n* [КАТАЛОНИЯ](/catalonia/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА БЛАНКА](/costa-blanca/kvartiry-apartamenty/vtorichnaya)\n* [КОСТА БРАВА](/costa-brava/kvartiry-apartamenty/vtorichnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/vtorichnaya",
+                    "pageTitle": "Вторичные квартиры и апартаменты в Испании — купить квартиры или апартаменты из вторичного фонда недорого, цены в рублях",
+                    "metaDescription": "Вторичные квартиры и апартаменты в Испании – лучшие предложения от агентства Estate-Spain.com. ☀ Продажа вторичных квартир в Испании по низким ценам!",
+                    "objectId": "586e1b61abe3449b91aedfec9dfb508f",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.17Z",
+                    "modifiedDate": "2017-08-09T16:17:54.55Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "ae1eec9c9198442b821c60e8bf2b5678"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "586e1b61abe3449b91aedfec9dfb508f",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-09T16:17:54.523Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "586e1b61abe3449b91aedfec9dfb508f"
+        },
+        {
+            "code": "ES-COND-EST-VTORICHNAYA-TOWNHOUSE",
+            "name": "Вторичные таунхаусы и бунгало",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "24e5762c725443bb9d016b24b610d757",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "24e5762c725443bb9d016b24b610d757",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Таунхаусы и бунгало из вторичного фонда",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "e0f5fc5f657e4273b3b44cf3e2aa6199",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "e0f5fc5f657e4273b3b44cf3e2aa6199",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог таунхаусов и бунгало из вторичного фонда на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "1972883775a049619ef65f18c4853e38",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "1972883775a049619ef65f18c4853e38",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Таунхаусы из вторичного фонда по регионам Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "9528aa1c27d64950a8aa615a2149522f",
+                    "content": "* [КАТАЛОГ ВТОРИЧНОЙ НЕДВЖИМОСТИ В ИСПАНИИ](/vtorichnaya)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "c1358d8c28b147baa46a162db4d0ce0a",
+                    "content": "* [КОСТА-ДЕЛЬ-СОЛЬ](/costa-del-sol/townhouse/vtorichnaya)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "f8be8a3210484eaa8f54f00c28e195aa",
+                    "content": "* [КОСТА КАЛИДА](/catalonia/townhouse/vtorichnaya)\n* [КОСТА БЛАНКА](/costa-blanca/townhouse/vtorichnaya)\n* [КОСТА БРАВА](/costa-brava/townhouse/vtorichnaya)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse/vtorichnaya",
+                    "pageTitle": "Таунхаусы и бунгало из вторичного фонда — купить таунхаусы или бунгало из вторичного фонда недорого, цены в рублях",
+                    "metaDescription": "&#127969; Таунхаусы и бунгало из вторичного фонда  – лучшие предложения от агентства Estate-Spain.com. ☀ Продажа испанской вторички  по низким ценам!",
+                    "objectId": "c8f0902dcc71484e9b79551eb288855f",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.217Z",
+                    "modifiedDate": "2017-08-09T16:41:16.153Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "4ea77bed407e4ea2b700b609985fca97"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "c8f0902dcc71484e9b79551eb288855f",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse/vtorichnaya",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:50:09.54Z",
+            "modifiedDate": "2017-08-09T16:41:16.127Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "c8f0902dcc71484e9b79551eb288855f"
+        },
+        {
+            "code": "ES-COND-EST-NOVOSTROYKI-VILLY-DOMA",
+            "name": "Новые виллы и дома в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "071045219dc649feace4463cb84d7622",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "071045219dc649feace4463cb84d7622",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новые виллы и дома в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3c2398340fbd4ece826e2f7235ed6b30",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3c2398340fbd4ece826e2f7235ed6b30",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новых вилл и домов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "653c418f52ed4359ae01c3b2d7e7cf17",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "653c418f52ed4359ae01c3b2d7e7cf17",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Новые дома и виллы по регионам Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "2769eb4387ae4a4a94947554fce2ba43",
+                    "content": "* [АНДАЛУСИЯ](/andalusia/villy-doma/novostroyki)\n* [КАТАЛОНИЯ](/catalonia/villy-doma/novostroyki)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "85f4944ab23748878b2932db64b7e658",
+                    "content": "* [КОСТА БЛАНКА](/costa-blanca/villy-doma/novostroyki)\n* [КОСТА КАЛИДА](/costa-calida/villy-doma/novostroyki)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "d5c7c6e674474a17879cf2423b45390a",
+                    "content": "* [ВИЛЛЫ В ИСПАНИИ](/villy)\n* [КАТАЛОГ ДОМОВ](/doma)\n* [НЕДВИЖИМОСТЬ В НОВОСТРОЙКАХ](/novostroyki)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "villy-doma/novostroyki",
+                    "pageTitle": "Новые виллы и дома в Испании  — купить виллы или дома в новостройках недорого, цены в рублях",
+                    "metaDescription": "&#127969; Новые виллы и дома в Испании – лучшие предложения от агентства Estate-Spain.com. ☀ Продажа жилья в новостройках по низким ценам!",
+                    "objectId": "2795ab04c16248118f58ec817fcb7247",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.153Z",
+                    "modifiedDate": "2017-08-09T16:24:19.533Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "6288e83d59e84dfeacacfa627e1bfc02"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "2795ab04c16248118f58ec817fcb7247",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "villy-doma/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-09T16:24:19.487Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "2795ab04c16248118f58ec817fcb7247"
+        },
+        {
+            "code": "ES-COND-EST-NOVOSTROYKI-KVARTIRY-APARTAMENTY",
+            "name": "Новые квартиры и апартаменты в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "b2594b73d9d84b64a90398393a016a2d",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "b2594b73d9d84b64a90398393a016a2d",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новые квартиры и апартаменты в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "3723094b95c84bb5a6a6b1760ff2191a",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "3723094b95c84bb5a6a6b1760ff2191a",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новых квартир и апартаментов в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "ae60d5cf76a84670a37b5f7a17d5a099",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "ae60d5cf76a84670a37b5f7a17d5a099",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Новые квартиры по регионам Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "30fc8649e46b44839ec9f58ffddb2a7f",
+                    "content": "* [ВСЕ НОВОСТРОЙКИ В ИСПАНИИ](/novostroyki)\n* [КАТАЛОГ КВАРТИР И АПАРТАМЕНТОВ](/kvartiry-apartamenty)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "8ba826bb39484050a75c96031ab8de4a",
+                    "content": "* [АНДАЛУСИЯ](/andalusia/kvartiry-apartamenty/novostroyki)\n* [КАТАЛОНИЯ](/catalonia/kvartiry-apartamenty/novostroyki) \n* [КОСТА БЛАНКА](/costa-blanca/kvartiry-apartamenty/novostroyki)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "adfd3bea6b1944a2b9c19a5be175ea12",
+                    "content": "* [КОСТА-ДЕЛЬ-СОЛЬ](costa-del-sol/kvartiry-apartamenty/novostroyki)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "kvartiry-apartamenty/novostroyki",
+                    "pageTitle": "Квартиры и апартаменты в новостройках в Испании — купить новые квартиры или апартаменты в Испании недорого, цены в рублях",
+                    "metaDescription": "&#127969; Новые квартиры и апартаменты в Испании  – лучшие предложения от агентства Estate-Spain.com. &#9728; Продажа жилья в новостройках в Испании по низким ценам!",
+                    "objectId": "48782c9c449e43faa68dfbcc42b9d864",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.107Z",
+                    "modifiedDate": "2017-07-27T14:29:58.107Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "unknown",
+                    "id": "c5a9c294a79c4de08d0dfac1baf50a3a"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "48782c9c449e43faa68dfbcc42b9d864",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "kvartiry-apartamenty/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-07-28T07:21:28.007Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "48782c9c449e43faa68dfbcc42b9d864"
+        },
+        {
+            "code": "ES-COND-EST-NOVOSTROYKI-TOWNHOUSE",
+            "name": "Новые таунхаусы и бунгало в Испании",
+            "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+            "categoryId": "b2e5670ffad94288830a8c3b0489e976",
+            "outline": "b2e5670ffad94288830a8c3b0489e976",
+            "path": "Estatetype_Conditions",
+            "isBuyable": true,
+            "isActive": true,
+            "trackInventory": true,
+            "maxQuantity": 0,
+            "minQuantity": 0,
+            "productType": "Physical",
+            "priority": 0,
+            "properties": [
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "c933bd10f1d244e4b915312c15d4774e",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h1",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "c933bd10f1d244e4b915312c15d4774e",
+                            "propertyName": "h1",
+                            "propertyId": "87090ec0-08a7-442b-9700-2a0a3ea201c6",
+                            "valueType": "ShortText",
+                            "value": "Новые таунхаусы и бунгало в Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "9ad358556fd348b4929dcef8295b2dc7",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-listing",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "9ad358556fd348b4929dcef8295b2dc7",
+                            "propertyName": "h2-listing",
+                            "propertyId": "3ddc4d60-2ddb-4025-8db1-82c43df7aceb",
+                            "valueType": "ShortText",
+                            "value": "Каталог новых таунхаусов и бунгало в Испании на продажу",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                },
+                {
+                    "isReadOnly": false,
+                    "isManageable": false,
+                    "isNew": false,
+                    "id": "856c35b50fff4cb2bf9b8a8dcad326e7",
+                    "catalogId": "ddada1a8f0b14831890b6c67912442bc",
+                    "name": "h2-tip",
+                    "required": false,
+                    "dictionary": false,
+                    "multivalue": false,
+                    "multilanguage": false,
+                    "valueType": "ShortText",
+                    "type": "Product",
+                    "values": [
+                        {
+                            "id": "856c35b50fff4cb2bf9b8a8dcad326e7",
+                            "propertyName": "h2-tip",
+                            "propertyId": "695d76c4-ae70-4b84-aa11-6b0eae882398",
+                            "valueType": "ShortText",
+                            "value": "Новые таухаусы по регионам Испании",
+                            "isInherited": false,
+                            "propertyMultivalue": false
+                        }
+                    ],
+                    "isInherited": false
+                }
+            ],
+            "images": [],
+            "assets": [],
+            "reviews": [
+                {
+                    "id": "4ea0ae5f88aa48ddb46c123ef6b7df38",
+                    "content": "* [КОСТА КАЛИДА](/costa-calida/townhouse/novostroyki)",
+                    "reviewType": "linkblock-type2",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "8d6d13881e19494cb5b41c0b392b50e3",
+                    "content": "* [КОСТА БЛАНКА](/costa-blanca/townhouse/novostroyki)",
+                    "reviewType": "linkblock-type1",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                },
+                {
+                    "id": "df1220acc76a4dc084b9551731fb80f3",
+                    "content": "* [ВСЕ НОВОСТРОЙКИ В ИСПАНИИ](/novostroyki)\n* [КАТАЛОГ ТАУНХАУСОВ И БУНГАЛО](/townhouse)",
+                    "reviewType": "linkblock-type3",
+                    "languageCode": "ru-RU",
+                    "isInherited": false
+                }
+            ],
+            "seoObjectType": "Product",
+            "seoInfos": [
+                {
+                    "semanticUrl": "townhouse/novostroyki",
+                    "pageTitle": "Новые таунхаусы и бунгало в Испании — купить таунхаусы или бунгало в новостройке в Испании недорого, цены в рублях",
+                    "metaDescription": "Новые таунхаусы и бунгало в Испании – лучшие предложения от агентства Estate-Spain.com. ☀ Продажа испанских новостроек  по низким ценам!",
+                    "objectId": "e230c25c4ee74f3da45a61f4d1ee54de",
+                    "objectType": "CatalogProduct",
+                    "isActive": true,
+                    "languageCode": "ru-RU",
+                    "createdDate": "2017-07-27T14:29:58.123Z",
+                    "modifiedDate": "2017-08-09T16:16:35.48Z",
+                    "createdBy": "unknown",
+                    "modifiedBy": "admin",
+                    "id": "7be84fd7b64a4907874c1920864cc17d"
+                }
+            ],
+            "outlines": [
+                {
+                    "items": [
+                        {
+                            "id": "ddada1a8f0b14831890b6c67912442bc",
+                            "seoObjectType": "Catalog",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "b2e5670ffad94288830a8c3b0489e976",
+                            "seoObjectType": "Category",
+                            "seoInfos": [],
+                            "hasVirtualParent": false
+                        },
+                        {
+                            "id": "e230c25c4ee74f3da45a61f4d1ee54de",
+                            "seoObjectType": "CatalogProduct",
+                            "seoInfos": [
+                                {
+                                    "semanticUrl": "townhouse/novostroyki",
+                                    "isActive": true,
+                                    "languageCode": "ru-RU",
+                                    "createdDate": "0001-01-01T00:00:00Z"
+                                }
+                            ],
+                            "hasVirtualParent": false
+                        }
+                    ]
+                }
+            ],
+            "createdDate": "2017-07-23T19:49:50.557Z",
+            "modifiedDate": "2017-08-09T16:16:35.403Z",
+            "createdBy": "unknown",
+            "modifiedBy": "unknown",
+            "id": "e230c25c4ee74f3da45a61f4d1ee54de"
+        }
+    ],
+    "aggregations": []
+}
