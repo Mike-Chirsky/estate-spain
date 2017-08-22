@@ -1819,3 +1819,39 @@ ul.user-terms-list
 {
     margin-bottom: 30px;
 }
+#carousel-listing .item 
+{
+    height: 460px;
+    line-height: 460px;
+    text-align: center;
+}
+#carousel-full .item a img,
+#carousel-listing .item a img
+{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.lightbox_property_content.row
+{
+    min-height: 0;
+    max-height: 100%;
+    height: 620px;
+}
+#carousel-full .item{
+    height: 620px;
+    line-height: 620px;
+    text-align: center;
+}
+.prop_pricex{
+    text-align: left;
+}
+
+.info_details img{
+    float:none;
+    width: auto;
+}
+.info_details{
+    text-align: center;
+}
