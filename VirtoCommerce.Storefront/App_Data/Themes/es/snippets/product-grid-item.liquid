@@ -49,6 +49,9 @@
             {%- if product.product_description.size > 180 -%}
             ... <a>[{{ 'collection.read-more' | t }}]</a>
             {%- endif -%}
+            {%- if product.created_date and product.created_date != '' -%}
+            <div>{{ product.created_date }}</div>
+            {%- endif -%}
         </div>
         <div class="property_listing_details">
             <span class="inforoom">{{ product.count_bed_rooms }}</span>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -19,6 +19,8 @@ namespace VirtoCommerce.Storefront.Model.Catalog
         {
             get { return GetSquare(); }
         }
+
+        public DateTime? CreatedDate { set; get; }
 
         /// <summary>
         /// Get title for breadcrumb

@@ -599,6 +599,7 @@
         }
     },
     "product": {
+        "public-date": "Дата публикации",
         "request-price": "По запросу",
         "description": "Описание",
         "full-info": "Детальное описание",

@@ -61,3 +61,6 @@
 {%- if condition -%}
     <div class="listing_detail col-md-4"><span class="bold">{{ 'product.condition' | t }}:</span> {{ condition | capitalize }}</div>
 {%- endif -%}
+{%- if product.created_date and product.created_date != '' -%}
+    <div class="listing_detail col-md-4"><span class="bold">{{'product.public-date' | t }}:</span> {{ product.created_date | capitalize }}</div>
+{% endif %}

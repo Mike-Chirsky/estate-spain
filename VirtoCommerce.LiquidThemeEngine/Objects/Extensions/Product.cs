@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -13,6 +13,11 @@ namespace VirtoCommerce.LiquidThemeEngine.Objects
     {
 
         #region Properties
+
+        public string CreatedDate
+        {
+            set; get;
+        }
 
         /// <summary>
         /// Get H1 property

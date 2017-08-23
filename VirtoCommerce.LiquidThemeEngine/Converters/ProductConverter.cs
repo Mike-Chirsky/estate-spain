@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Microsoft.Practices.ServiceLocation;
 using PagedList;
@@ -34,6 +34,7 @@ namespace VirtoCommerce.LiquidThemeEngine.Converters
             result.Description = product.Description;
             result.IsQuotable = product.IsQuotable;
             result.TaxType = product.TaxType;
+            result.CreatedDate = product.CreatedDate >= new DateTime(2017, 8, 13) ? product.CreatedDate.Value.ToString("dd.MM.yyyy") : "";
 
             result.Variants.Add(ToLiquidVariant(product));
 

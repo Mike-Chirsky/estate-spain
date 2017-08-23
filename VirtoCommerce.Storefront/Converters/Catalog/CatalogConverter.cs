@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Markdig;
@@ -418,6 +418,7 @@ namespace VirtoCommerce.Storefront.Converters
                 Sku = productDto.Code,
                 Outline = productDto.Outlines.GetOutlinePath(store.Catalog),
                 Url = "~/" + productDto.Outlines.GetSeoPath(store, currentLanguage, "product/" + productDto.Id),
+                CreatedDate = productDto.CreatedDate
             };
 
             if (productDto.Properties != null)
