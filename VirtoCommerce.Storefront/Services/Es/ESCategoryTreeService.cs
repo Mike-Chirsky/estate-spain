@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -119,7 +119,7 @@ namespace VirtoCommerce.Storefront.Services.Es
             // load cities + estate type
             //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict)));
             await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), EstateTypeKey, tempSeoDict);
-
+            
             // Load cities + estate type + conditions
             //await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict).ContinueWith(t1 => LoadCities(t1.Result, tempSeoDict).ContinueWith(t => LoadChildrenFromCategory(t.Result, EstateTypeKey, tempSeoDict).ContinueWith(t2 => LoadChildrenFromCategory(t2.Result, ConditionKey, tempSeoDict))));
             await LoadChildrenFromCategory(await LoadChildrenFromCategory(await LoadCities(await LoadChildrenFromCategory(new Category[] { new Category() }, RegionKey, tempSeoDict), tempSeoDict), EstateTypeKey, tempSeoDict), ConditionKey, tempSeoDict);
@@ -221,11 +221,26 @@ namespace VirtoCommerce.Storefront.Services.Es
             // fill child cities
             foreach (var city in cities)
             {
-                var referIds = resultCities.Items.FirstOrDefault(x => x.Id == city.Id).ReferencedAssociations.Where(x => x.Type == "Cities").Select(x => x.AssociatedObjectId);
+                var itemCity = resultCities.Items.FirstOrDefault(x => x.Id == city.Id);
+                var referIds = itemCity.ReferencedAssociations.Where(x => x.Type == "Cities").Select(x => x.AssociatedObjectId);
                 city.ChildCategory = cities.Where(x => referIds.Contains(x.Id)).ToList();
                 foreach (var child in city.ChildCategory)
                 {
                     child.Parent = city;
+                }
+                if (city.ChildCategory.Count != referIds.Count())
+                {
+                    foreach (var cityRefId in referIds)
+                    {
+                        if (!city.ChildCategory.Any(x => x.Id == cityRefId))
+                        {
+                            city.ChildCategory.Add(new Category
+                            {
+                                ProductType = CitiesKey,
+                                Name = itemCity.ReferencedAssociations.FirstOrDefault(x => x.AssociatedObjectId == cityRefId)?.AssociatedObjectName
+                            });
+                        }
+                    }
                 }
             }
 
