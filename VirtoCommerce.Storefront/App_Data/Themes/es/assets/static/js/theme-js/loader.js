@@ -1,4 +1,4 @@
-﻿function loadListProducts(url, slideToTop) {
+function loadListProducts(url, slideToTop) {
     $(".busy-indicator-product").show();
     $("div#list-products").hide();
     $(".pagination-container.clearfix").hide();
@@ -129,24 +129,24 @@ $(document).ready(function () {
     });
     /* sort by date*/
     jQuery("#sortByDate").click(function () {
-        if (window.location.href.indexOf("created-ascending") !== -1) {
-            sortBy("created-descending");
+        if (window.location.href.indexOf("createddate-ascending") !== -1) {
+            sortBy("createddate-descending");
             setCurrentSort("#sortByDate", false, ["#sortByPrice", "#sortBySquare"]);
         }
         else {
-            sortBy("created-ascending");
+            sortBy("createddate-ascending");
             setCurrentSort("#sortByDate", true, ["#sortByPrice", "#sortBySquare"]);
         }
     });
     jQuery("#sortByDateAsc").click(function () {
-        if (window.location.href.indexOf("created-ascending") === -1) {
-            sortBy("created-ascending");
+        if (window.location.href.indexOf("createddate-ascending") === -1) {
+            sortBy("createddate-ascending");
             setCurrentSort("#sortByDate", true, ["#sortByPrice", "#sortBySquare"]);
         }
     });
     jQuery("#sortByDateDesc").click(function () {
-        if (window.location.href.indexOf("created-descending") === -1) {
-            sortBy("created-descending");
+        if (window.location.href.indexOf("createddate-descending") === -1) {
+            sortBy("createddate-descending");
             setCurrentSort("#sortByDate", false, ["#sortByPrice", "#sortBySquare"]);
         }
     });

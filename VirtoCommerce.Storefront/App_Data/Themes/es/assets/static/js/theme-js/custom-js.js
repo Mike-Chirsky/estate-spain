@@ -1,4 +1,4 @@
-﻿function slideToBlock(selector, offest) {
+function slideToBlock(selector, offest) {
     if (offest === undefined)
     {
         offest = 200;
@@ -293,11 +293,11 @@ $(document).ready(function () {
         $("#sortBySquareDesc").addClass("active");
     }
     // set active sort by date
-    if (window.location.href.indexOf("sort_by=created-ascending") > -1) {
+    if (window.location.href.indexOf("sort_by=createddate-ascending") > -1) {
         $("#sortByDate").parent().parent().addClass("active");
         $("#sortByDateAsc").addClass("active");
     }
-    if (window.location.href.indexOf("sort_by=created-descending") > -1) {
+    if (window.location.href.indexOf("sort_by=createddate-descending") > -1) {
         $("#sortByDate").parent().parent().addClass("active");
         $("#sortByDateDesc").addClass("active");
     }

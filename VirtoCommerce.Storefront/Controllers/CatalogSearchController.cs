@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +40,10 @@ namespace VirtoCommerce.Storefront.Controllers
             WorkContext.Search = search;
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
             productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, _categoryTreeService);
+            if (string.IsNullOrEmpty(WorkContext.CurrentProductSearchCriteria.SortBy))
+            {
+                WorkContext.CurrentProductSearchCriteria.SortBy = "createddate-descending";
+            }
             //For set filters value in UI
             WorkContext.CurrentCategory = new Category();
 
@@ -78,6 +82,10 @@ namespace VirtoCommerce.Storefront.Controllers
             // map filter properies to search criteria
             var productFilterCriteria = new ProductFilterCriteria(WorkContext.QueryString);
             productFilterCriteria.FillTermsFromFileterCriteria(WorkContext.CurrentProductSearchCriteria, WorkContext, _categoryTreeService, isArenda);
+            if (string.IsNullOrEmpty(WorkContext.CurrentProductSearchCriteria.SortBy))
+            {
+                WorkContext.CurrentProductSearchCriteria.SortBy = "createddate-descending";
+            }
             var criteria = WorkContext.CurrentProductSearchCriteria.Clone();
 
             criteria.Outline = string.Format("{0}*", category.Outline); // should we simply take it from current category?
