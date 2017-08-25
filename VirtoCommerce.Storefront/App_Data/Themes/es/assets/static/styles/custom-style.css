@@ -1,4 +1,4 @@
-﻿/* custom styles */
+/* custom styles */
 .request-from-license {
     margin-left: 25px;
     margin-top: auto;
@@ -1867,5 +1867,5 @@ ul.user-terms-list
     right: 0;
 }
 .gm-style img{
-    max-width: 100%;
+    max-width: 100% !important;
 }

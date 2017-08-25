@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +18,10 @@ namespace VirtoCommerce.Storefront.Services.Es.Converters
             category.CityUrl = product.SeoInfo?.Slug;
             category.RegionName = context.Parent?.Name;
             category.CityName = product.Name;
+            if (category.Images != null && category.Images.Count == 0)
+            {
+                category.Images = context.Parent.Images;
+            }
             // Generate seo
             CustomSeoCategory(context, category);
             return category;
