@@ -1,4 +1,12 @@
 <div class="row contact-us-footer">
+    {% if template containts 'product' %}
+    
+    {% else %}
+    {% endif %}
+    <div class="col-md-3">
+        {% include 'contact' %}
+    </div>
+   {% comment %} 
    {% if product == null %}
    <div class="col-md-3">
       {% include 'contact' %}
@@ -64,4 +72,5 @@
         </div>
       </div>
    </div>
+    {% endcomment %}
 </div>
