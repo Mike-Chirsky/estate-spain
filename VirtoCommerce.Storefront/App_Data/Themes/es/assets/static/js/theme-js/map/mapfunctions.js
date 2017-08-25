@@ -1,4 +1,4 @@
-﻿var pin_images=mapfunctions_vars.pin_images;
+var pin_images=mapfunctions_vars.pin_images;
 var images = jQuery.parseJSON(pin_images);
 var ipad_time=0;
 var infobox_id=0;
@@ -679,13 +679,7 @@ function   createMarker ( size, i,id,lat,lng,pin,title,counter,image,price,singl
         
         infoBox.setContent('<div class="info_details"><span id="infocloser" onClick=\'javascript:infoBox.close();\' ></span>'+info_image+'<span id="infobox_title">'+title+'</span><div class="prop_pricex">'+this.price+infosize+infobaths+inforooms+'</div></div>' );
         infoBox.open(map, this);    
-        map.setCenter(this.position);   
-
-            
-           
-    
-
-
+        map.setCenter(this.position);
         switch (infobox_width){
             case 700:
 
@@ -709,7 +703,7 @@ function   createMarker ( size, i,id,lat,lng,pin,title,counter,image,price,singl
                 map.panBy(100,-220);
                 break;
             case 200: 
-                map.panBy(20,-170);
+                map.panBy(60,-170);
                 break;               
             }
             

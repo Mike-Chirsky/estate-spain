@@ -1,4 +1,4 @@
-﻿using System.Web.Optimization;
+using System.Web.Optimization;
 
 namespace VirtoCommerce.Storefront
 {
@@ -69,7 +69,11 @@ namespace VirtoCommerce.Storefront
                     .Include("~/App_Data/Themes/es/assets/static/js/theme-js/loader.js"));
 
             bundles.Add(CreateScriptBundle("~/theme-bundler/scripts/map")
-                    .IncludeDirectory("~/App_Data/Themes/es/assets/static/js/theme-js/map", "*.js"));
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/map/google_map_code_listing.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/map/infobox.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/map/mapfunctions.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/map/markerclusterer.js")
+                    .Include("~/App_Data/Themes/es/assets/static/js/theme-js/map/oms.js"));
             #endregion
 
             #region CSS
