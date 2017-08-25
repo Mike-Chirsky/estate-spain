@@ -304,6 +304,7 @@
   <ItemGroup>
     <Content Include="App_Data\cms-content\Pages\demo\assets\news\images\dijest_news.jpg" />
     <Content Include="App_Data\cms-content\Pages\demo\assets\reviews\images\first.jpg" />
+    <Content Include="App_Data\cms-content\Pages\demo\job.md" />
     <None Include="App_Data\cms-content\Pages\demo\user-personal-data.md" />
     <Content Include="App_Data\countries.json" />
     <Content Include="App_Data\Themes\es\assets\static\css-images\apartmentsrentals.png" />
@@ -662,6 +663,7 @@
     <Content Include="App_Data\Themes\es\snippets\static\user-privace.liquid" />
     <Content Include="App_Data\Themes\es\layout\blog_article.liquid" />
     <Content Include="App_Data\server-key.json" />
+    <Content Include="App_Data\Themes\es\snippets\static\job.liquid" />
     <None Include="App_Data\Themes\es\snippets\tails-collection.liquid" />
     <Content Include="App_Data\Themes\es\social\shopify-social.svg" />
     <Content Include="App_Data\Themes\es\social\social-icons.css" />
