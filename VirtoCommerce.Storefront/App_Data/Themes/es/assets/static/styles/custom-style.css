@@ -1866,3 +1866,6 @@ ul.user-terms-list
     left: 0;
     right: 0;
 }
+.gm-style img{
+    max-width: 100%;
+}

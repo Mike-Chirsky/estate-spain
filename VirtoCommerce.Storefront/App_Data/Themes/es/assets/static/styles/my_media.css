@@ -3940,7 +3940,9 @@
     }
     
     .info_details{
-        width: 230px;
+        min-width: 300px;
+        max-width: 400px;
+        width: auto;
         height: 200px;
         margin-top: -258px;
     }
