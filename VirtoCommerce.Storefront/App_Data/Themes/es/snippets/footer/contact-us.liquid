@@ -1,4 +1,4 @@
-﻿<div class="row contact-us-footer">
+<div class="row contact-us-footer">
    {% if product == null %}
    <div class="col-md-3">
       {% include 'contact' %}
@@ -47,7 +47,7 @@
       </div>
       <div class="row">
          <div class="col-md-12">
-            <textarea cols="45" rows="6" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
+            <textarea cols="45" rows="2" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
          </div>
       </div>
       <div class="row">
