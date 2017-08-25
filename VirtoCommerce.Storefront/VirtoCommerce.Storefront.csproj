@@ -460,6 +460,7 @@
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_blog_header_img_small.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\handbook_download_img.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\header-index.png" />
+    <Content Include="App_Data\Themes\es\assets\static\images\header-vacancy.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\elitnaya.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\header.jpg" />
     <Content Include="App_Data\Themes\es\assets\static\images\index\catalonia.jpg" />
