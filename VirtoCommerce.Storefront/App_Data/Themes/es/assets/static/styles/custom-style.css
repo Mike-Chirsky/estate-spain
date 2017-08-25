@@ -1848,9 +1848,10 @@ ul.user-terms-list
     text-align: left;
 }
 
-.info_details img{
-    float:none;
+.info_details img {
+    float: none;
     width: auto;
+    max-width: 100% !important;
 }
 .info_details{
     text-align: center;
@@ -1865,7 +1866,4 @@ ul.user-terms-list
     top: 0;
     left: 0;
     right: 0;
-}
-.gm-style img{
-    max-width: 100% !important;
 }
