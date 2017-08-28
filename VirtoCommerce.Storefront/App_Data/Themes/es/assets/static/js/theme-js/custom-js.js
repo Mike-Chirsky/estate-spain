@@ -86,7 +86,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#subcribe-action").click(function () {
+    /*$("#subcribe-action").click(function () {
 
         if (valideEmail($("#subscribe-email").val())) {
             $("#subscribe-email").removeClass("error");
@@ -106,9 +106,34 @@ $(document).ready(function () {
             $("#subscribe-email").addClass("error");
         }
         return false;
+    });*/
+    document.subscribe = function (contaner) {
+        if (valideEmail($(contaner+" #subscribe-email").val())) {
+            $(contaner +" #subscribe-email").removeClass("error");
+            $(contaner +" #subscribe-form").hide();
+            $(contaner +" #subscribe-spinner").show();
+            $.post('storefrontapi/getresponse/subscribe', { email: $(contaner +" #subscribe-email").val() }, function (data) {
+                $(contaner +" #subscribe-spinner").hide();
+                $(contaner +" #subscribe-ok").show();
+                sendGAEvent("Email subscription form", "Submitted success", "Footer");
+            }).fail(function () {
+                $(contaner +" #subscribe-spinner").hide();
+                $(contaner +" #subscribe-fail").show();
+                sendGAEvent("Email subscription form", "Submitted fail", "Footer");
+            });
+        }
+        else {
+            $(contaner +" #subscribe-email").addClass("error");
+        }
+        return false;
+    }
+    $("#request-callback-product-button-mobile").click(function () {
+        slideToBlock("#show_contact", 0);
+        $(".mobilemenu-close").click();
     });
+    
     $("#request-callback-button-mobile").click(function () {
-        slideToBlock("#callback-form");
+        slideToBlock("#contact-us-form");
         $(".mobilemenu-close").click();
     });
     $("#contact-us-button-mobile").click(function () {
@@ -120,7 +145,7 @@ $(document).ready(function () {
         $(".mobilemenu-close").click();
     });
     $("#request-callback-button").click(function () {
-        slideToBlock("#callback-form");
+        slideToBlock("#contact-us-form");
     });
     $("#contact-us-button").click(function () {
         slideToBlock("#contact-us-form");
@@ -243,15 +268,26 @@ $(document).ready(function () {
         var inputs = $("#contact-us-form" + prefix).find(":input");
         var data = {};
         var isError = false;
+        var existPhone = false;
+        var existEmail = false;
         $.each(inputs, function (index, item) {
             var el = $(item);
             var prData = el.attr('data-property');
-            var prRequaired = el.attr("required");
-            if (prRequaired && (el.val() === '' || (el.attr('type') === 'email' && !valideEmail(el.val())))) {
-                el.addClass('error');
-                isError = true;
+            //var prRequaired = el.attr("required");
+            if ((prData === 'userPhone' && el.val() === '') || (el.attr('type') === 'email' && !valideEmail(el.val()))) {
+                if (!existEmail && !existPhone) {
+                    $("#contact-us-message" + prefix).text("Необходимо заполнить номер телефона или Email");
+                    el.addClass('error');
+                    isError = true;
+                }
             }
             else {
+                if (prData === "userPhone") {
+                    existPhone = true;
+                }
+                if (prData === "userEmail") {
+                    existEmail = true;
+                }
                 el.removeClass('error');
                 data[prData] = el.val();
             }

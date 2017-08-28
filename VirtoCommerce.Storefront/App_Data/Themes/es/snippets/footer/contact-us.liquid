@@ -1,76 +1,154 @@
 <div class="row contact-us-footer">
-    {% if template containts 'product' %}
-    
-    {% else %}
-    {% endif %}
-    <div class="col-md-3">
-        {% include 'contact' %}
-    </div>
-   {% comment %} 
-   {% if product == null %}
-   <div class="col-md-3">
-      {% include 'contact' %}
-   </div>
-   {% endif %}
-   {% if product == null %}
-   <div class="col-md-9">
-   {% else %}
-   <div class="col-md-12" >
-   {% endif %}
-      <div class="spinner" id="contact-us-form-spinner" style="display: none;">
+    {% if template contains 'product' %}
+    <div class="col-md-12" >
+        <div class="spinner" id="contact-us-form-spinner" style="display: none;">
             <div class="rect1"></div>
             <div class="rect2"></div>
             <div class="rect3"></div>
             <div class="rect4"></div>
             <div class="rect5"></div>
         </div>
-        <div id="contact-us-form-succes" class="text-center" style="display: none">    
+        <div id="contact-us-form-succes" class="text-center" style="display: none">
             <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
         </div>
-        <div id="contact-us-form-fail" class="text-center" style="display: none">    
+        <div id="contact-us-form-fail" class="text-center" style="display: none">
             <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
         </div>
-      <div id="contact-us-form">
-        {% if template contains 'product' %}
-          <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
-        {% else %}
-          <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
-        {% endif %}
-        <div class="row">
-         <div class="col-md-4">
-            <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-         </div>
-         <div class="col-md-4">
-            <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
-         </div>
-         <div class="col-md-4">
-            <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
-         </div>
-         {% if product %}
-            <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
-            <input type="hidden" data-property="formType" value="3" />
-        {% else %}
-            <input type="hidden" data-property="formType" value="4" />
-        {% endif %}
-      </div>
-      <div class="row">
-         <div class="col-md-12">
-            <textarea cols="45" rows="2" data-property="userMessage" aria-required="true" class="form-control">{%- if template contains 'product' -%}{{- 'request-form.message-object' | t : name: product.custom_title -}}{%- else -%}{{- 'request-form.message' | t -}}{%- endif -%}</textarea>
-         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
+        <div id="contact-us-form">
+            <h4 class="text-center">{{ 'request-form.header2' | t }}</h4>
+            <div class="row text-center" id="contact-us-message" style="color: red">
+
+            </div>
             <div class="row">
-                <div class="col-md-8">
-                    <span class="license light-text">{{ 'request-form.license' | t }}</span>
+                <div class="col-md-4">
+                    <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
                 </div>
                 <div class="col-md-4">
-                    <button class="wpresidence_button form-control btn-std margin-auto" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                    <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required="">
+                </div>
+                <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea cols="45" rows="2" data-property="userMessage" aria-required="true" class="form-control">{{- 'request-form.message-object' | t : name: product.custom_title -}}</textarea>
                 </div>
             </div>
-         </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <span class="license light-text">{{ 'request-form.license1' | t }}</span>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="wpresidence_button form-control btn-std margin-auto" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-   </div>
-    {% endcomment %}
+        <div class="col-md-12 text-center subscribe-form-call" style="margin-top:20px;">
+            <h4>Очень интересная рассылка об испанской недвижимости</h4>
+            <div class="text">
+                Только свежая и актуальная информация и объекты.<br>
+                Без спама! Подпишитесь и проверьте сами!
+            </div>
+            <div id="subscribe-form" class="row" style="padding-top:15px">
+                <div class="col-md-4 col-md-offset-3">
+                    <input type="email" class="form-control" id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}" />
+                </div>
+                <div class="col-md-3">
+                    <button onclick="document.subscribe('.subscribe-form-call')" style="width:100%" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+                </div>
+            </div>
+            <div id="subscribe-ok" style="display: none;">
+                <i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}
+            </div>
+            <div id="subscribe-fail" style="display: none;">
+                <i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}
+            </div>
+            <div class="text-center text" style="padding-bottom: 15px;">
+                {{ 'subscribe.license' | t }}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-md-3 col-sm-6 col-xs-12" style="padding-bottom:15px;">
+        {% include 'contact' %}
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="spinner" id="contact-us-form-spinner" style="display: none;">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div id="contact-us-form-succes" class="text-center" style="display: none">
+            <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+        </div>
+        <div id="contact-us-form-fail" class="text-center" style="display: none">
+            <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+        </div>
+        <div id="contact-us-form" style="padding-bottom:0px;">
+            <h4 class="text-center">{{ 'request-form.header3' | t }}</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                </div>
+            </div>
+            <div>
+                <div class="col-md-6">
+                    <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required="">
+                </div>
+                <div class="col-md-6">
+                    <textarea cols="45" rows="4" data-property="userMessage" aria-required="true" class="form-control">{{- 'request-form.message-object' | t : name: product.custom_title -}}</textarea>
+                </div>
+                <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+            </div>
+             <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <span class="license light-text">{{ 'request-form.license' | t }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="wpresidence_button form-control btn-std margin-auto" id="request-form-submit" >{{ 'request-form.send' | t }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="col-md-12 text-center subscribe-form-call" style="background-color: #fff">
+            <h4>Очень интересная рассылка об испанской недвижимости</h4>
+            <div class="text">
+                Только свежая и актуальная информация и объекты.<br>
+                Без спама! Подпишитесь и проверьте сами!
+            </div>
+            <div id="subscribe-form" style="padding-top:15px">
+                <input type="email" class="form-control"  id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}"/>
+                <button onclick="document.subscribe('.subscribe-form-call')" style="width:100%" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+            </div>
+            <div id="subscribe-ok" style="display: none;">
+                <i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}
+            </div>
+            <div id="subscribe-fail" style="display: none;">
+                <i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}
+            </div>
+            <div class="text-center text" style="padding-bottom:15px">
+                {{ 'subscribe.license' | t }}
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    {% endif %}
 </div>

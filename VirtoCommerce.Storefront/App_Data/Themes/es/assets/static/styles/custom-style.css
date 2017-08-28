@@ -594,9 +594,9 @@ body{
     margin: 0 0 15px;
 }
 
-.row.contact-us-footer h4{
+/*.row.contact-us-footer h4{
     padding-left: 15px;
-}
+}*/
 
 .about-footer .about, .about-footer .link-list-footer, .about-footer .banner{
     background: #fff;
@@ -1866,4 +1866,44 @@ ul.user-terms-list
     top: 0;
     left: 0;
     right: 0;
+}
+.subscribe-form-call {
+    border: solid 1px #EDEDED;
+    background-color: #EDEDED;
+}
+.subscribe-form-call h4 {
+    font-size:16px;
+    padding-top:15px;
+}
+.subscribe-form-call .text {
+    font-size: 13px;
+}
+.download_handbook_side {
+    float: left;
+    width: 100%;
+    border: 1px solid #dde4e9;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 13px 13px 13px;
+    margin-top: 30px;
+    border-top: 3px solid #ff9800;
+}
+.download_handbook_side h4{
+    padding:15px 0;
+    text-align: center;
+}
+
+.download_handbook_side ul {
+    list-style-type: none;
+}
+.download_handbook_side ul li {
+    margin-bottom:10px;
+}
+.download_handbook_side ul li::before{
+    content:'\2014';
+    margin-left: -20px;
+    position:absolute;
 }
