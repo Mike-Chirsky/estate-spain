@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,8 +21,10 @@ namespace VirtoCommerce.Storefront.Model.AmmoCrm.Services
         /// <summary>
         /// Create leadm in AmmmoCrm
         /// </summary>
-        /// <param name="leadModel"></param>
-        /// <returns></returns>
         Task<bool> CreateUnsorted(AmmoUnsortedModel leadModel);
+        /// <summary>
+        /// Create firts treatment lead
+        /// </summary>
+        Task<bool> CreatePrimaryTreatment(AmmoUnsortedModel leadModel);
     }
 }

@@ -30,6 +30,7 @@
                     <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required="">
                 </div>
                 <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                <input type="hidden" data-property="formType" value="3" />
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -107,9 +108,9 @@
                     <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required="">
                 </div>
                 <div class="col-md-6">
-                    <textarea cols="45" rows="4" data-property="userMessage" aria-required="true" class="form-control">{{- 'request-form.message-object' | t : name: product.custom_title -}}</textarea>
+                    <textarea cols="45" rows="4" data-property="userMessage" aria-required="true" class="form-control">{{- 'request-form.message' | t -}}</textarea>
                 </div>
-                <input type="hidden" data-property="objectName" value="{%- include 'product_name' -%}" />
+                <input type="hidden" data-property="formType" value="4" />
             </div>
              <div class="row">
                 <div class="col-md-12">

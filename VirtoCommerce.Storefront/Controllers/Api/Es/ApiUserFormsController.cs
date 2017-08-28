@@ -1,4 +1,4 @@
-﻿using System.Configuration;
+using System.Configuration;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -39,7 +39,7 @@ namespace VirtoCommerce.Storefront.Controllers.Api.Es
             {
                 if (await _ammoService.Auth(_ammoUserName, _ammoApiKey, _ammoSubdomain))
                 {
-                    await _ammoService.CreateUnsorted(new AmmoUnsortedModel
+                    await _ammoService.CreatePrimaryTreatment(new AmmoUnsortedModel
                     {
                         FormName = request.FormName,
                         FormType = request.FormType,

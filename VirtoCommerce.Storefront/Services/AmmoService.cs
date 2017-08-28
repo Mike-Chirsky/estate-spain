@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -70,7 +70,7 @@ namespace VirtoCommerce.Storefront.Services
         }
 
 
-        private object CreateUnsortedLead(AmmoUnsortedModel model)
+        private Dictionary<string, object> CreateUnsortedLead(AmmoUnsortedModel model)
         {
             var lead = new Dictionary<string, object>();
             var formTypeInfo = GetFormType(model.FormType);
@@ -80,11 +80,11 @@ namespace VirtoCommerce.Storefront.Services
             var leadName = "";
             if (!string.IsNullOrEmpty(model.UserName))
             {
-                leadName = $"{formTypeInfo.Item2} от {model.UserName} со страницы {model.FromUrl}";
+                leadName = $"{formTypeInfo.Item2} от {model.UserName}";
             }
             else
             {
-                leadName = $"{formTypeInfo.Item2} со страницы {model.FromUrl}";
+                leadName = $"{formTypeInfo.Item2}";
             }
             lead.Add("name", leadName);
             lead.Add("custom_fields", new List<object>());
@@ -293,64 +293,6 @@ namespace VirtoCommerce.Storefront.Services
             return resultString.ToString();
         }
 
-       /* private string CreateUnsortedLead(AmmoUnsortedModel model)
-        {
-            var listParams = new List<string>();
-            listParams.Add($"request[unsorted][add][0][data][leads][0][name]=Лид из формы");
-            return string.Join("&", listParams);
-        }
-
-        private string CreateUnsortedContact(AmmoUnsortedModel model, int index = 0)
-        {
-            var listParams = new List<string>();
-            listParams.Add($"request[unsorted][add][0][data][contacts][0][name]=Дядя Ваня");
-            // custom fields
-            // email
-            listParams.Add($"request[unsorted][add][0][data][contacts][0][custom_fields][0][id]=1347106");
-            listParams.Add($"request[unsorted][add][0][data][contacts][0][custom_fields][0][values][0][enum]=1347106");
-            listParams.Add($"request[unsorted][add][0][data][contacts][0][custom_fields][0][values][0][value]=asdf@ff.ru=1347106");
-            return string.Join("&", listParams);
-        }
-
-        private string CreateUnsortedSourceData(AmmoUnsortedModel model)
-        {
-            var listParams = new List<string>();
-            // custom fileds
-            // name
-            listParams.Add("request[unsorted][add][0][source_data][data][name_1][type]=text");
-            listParams.Add("request[unsorted][add][0][source_data][data][name_1][id]=name");
-            listParams.Add("request[unsorted][add][0][source_data][data][name_1][element_type]=1");
-            listParams.Add("request[unsorted][add][0][source_data][data][name_1][name]=Name");
-            listParams.Add("request[unsorted][add][0][source_data][data][name_1][value]=Some name");
-            //end name
-            // form info
-            listParams.Add("request[unsorted][add][0][source_data][form_id]=318");
-            listParams.Add("request[unsorted][add][0][source_data][form_type]=1");
-            listParams.Add($"request[unsorted][add][0][source_data][date]={GetUnixTime(DateTime.Now)}");
-            listParams.Add("request[unsorted][add][0][source_data][from]=some-url.com");
-            listParams.Add("request[unsorted][add][0][source_data][form_name]=My name for form");
-            // origin
-            listParams.Add("request[unsorted][add][0][source_data][origin][ip]=10.4.4.43");
-            // listParams.Add("request[unsorted][add][0][source_data][origin][referer]=");
-            // end origin
-            
-            return string.Join("&", listParams);
-        }
-
-        private string CreateUnsortedBasicData(AmmoUnsortedModel model)
-        {
-            var listParams = new List<string>();
-
-            listParams.Add("request[unsorted][category]=forms");
-            listParams.Add("request[unsorted][add][0][source]=www.my-awesome-site.com");
-            return string.Join("&", listParams);
-        }
-
-        private string CreateUnsortedRequest(AmmoUnsortedModel model)
-        {
-            return $"{CreateUnsortedBasicData(model)}&{CreateUnsortedLead(model)}&{CreateUnsortedContact(model)}&{CreateUnsortedSourceData(model)}";
-        }
-        */
         private int GetUnixTime(DateTime dt)
         {
             return (int)(dt - new DateTime(1970, 1, 1)).TotalSeconds;
@@ -383,6 +325,48 @@ namespace VirtoCommerce.Storefront.Services
 
             return parameters.ToArray();
         }
+        
+        public async Task<bool> CreatePrimaryTreatment(AmmoUnsortedModel leadModel)
+        {
+            if (_cookies == null)
+                throw new Exception("Call Auth before call ExistContact method");
 
+
+            var handler = new HttpClientHandler()
+            {
+                CookieContainer = _cookies
+            };
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri("https://" + _subdomain + ".amocrm.ru");
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var result = await client.PostAsJsonAsync("/private/api/v2/json/leads/set", new
+                {
+                    request = new
+                    {
+                        leads = new
+                        {
+                            add = new[] {
+                                        CreateLead(leadModel)
+                                    }
+                        }
+                    }
+                });
+
+                var content = new System.IO.StreamReader((await result.Content.ReadAsStreamAsync())).ReadToEnd();
+                return result.StatusCode == HttpStatusCode.OK;
+            }
+        }
+
+        private Dictionary<string, object> CreateLead(AmmoUnsortedModel model)
+        {
+             var lead = CreateUnsortedLead(model);
+             lead.Add("status_id", 12546192);
+             lead.Add("pipeline_id", 320355);
+             lead.Add("responsible_user_id", 1104147);
+             lead.Add("created_user_id", 1104147);
+             lead.Add("date_create", GetUnixTime(DateTime.UtcNow));
+             return lead;
+        }
     }
 }
