@@ -85,28 +85,6 @@ $(document).ready(function () {
             $('.menu .menu-item').removeClass('selected');
         }
     });
-
-    /*$("#subcribe-action").click(function () {
-
-        if (valideEmail($("#subscribe-email").val())) {
-            $("#subscribe-email").removeClass("error");
-            $("#subscribe-form").hide();
-            $("#subscribe-spinner").show();
-            $.post('storefrontapi/getresponse/subscribe', { email: $("#subscribe-email").val() }, function (data) {
-                $("#subscribe-spinner").hide();
-                $("#subscribe-ok").show();
-                sendGAEvent("Email subscription form", "Submitted success", "Footer");
-            }).fail(function () {
-                $("#subscribe-spinner").hide();
-                $("#subscribe-fail").show();
-                sendGAEvent("Email subscription form", "Submitted fail", "Footer");
-            });
-        }
-        else {
-            $("#subscribe-email").addClass("error");
-        }
-        return false;
-    });*/
     document.subscribe = function (contaner) {
         if (valideEmail($(contaner+" #subscribe-email").val())) {
             $(contaner +" #subscribe-email").removeClass("error");
@@ -266,15 +244,13 @@ $(document).ready(function () {
             prefix = "";
         }
         var inputs = $("#contact-us-form" + prefix).find(":input");
-        var data = {};
-        var isError = false;
-        var existPhone = false;
-        var existEmail = false;
+        var data = {};        
         $.each(inputs, function (index, item) {
             var el = $(item);
             var prData = el.attr('data-property');
+            data[prData] = el.val();
             //var prRequaired = el.attr("required");
-            if ((prData === 'userPhone' && el.val() === '') || (el.attr('type') === 'email' && !valideEmail(el.val()))) {
+            /*if ((prData === 'userPhone' && el.val() === '') || (el.attr('type') === 'email' && !valideEmail(el.val()))) {
                 if (!existEmail && !existPhone) {
                     $("#contact-us-message" + prefix).text("Необходимо заполнить номер телефона или Email");
                     el.addClass('error');
@@ -290,9 +266,28 @@ $(document).ready(function () {
                 }
                 el.removeClass('error');
                 data[prData] = el.val();
-            }
+            }*/
         });
-        if (isError) {
+        var hasEmail = false;
+        var hasPhone = false;
+
+        for (var prop in data)
+        {
+            if (!data.hasOwnProperty(prop))
+            {
+                continue;
+            }
+            var vl = data[prop];
+            if (prop === 'userPhone') {
+                hasPhone = vl !== '';
+            }
+            else if (prop === 'userEmail')
+            {
+                hasEmail = vl !== '' && valideEmail(vl);
+            }
+        }
+        if (!(hasEmail || hasPhone)) {
+            $("#contact-us-message" + prefix).text("Необходимо заполнить номер телефона или email");
             return;
         }
         data['fromUrl'] = window.location.href;
