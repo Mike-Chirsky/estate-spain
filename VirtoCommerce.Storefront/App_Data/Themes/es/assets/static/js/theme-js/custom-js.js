@@ -144,7 +144,8 @@ $(document).ready(function () {
     }
 
     $("#to-parthner-form").click(function () {
-        slideToBlock("#partner-form");
+        $("#formContainer").show();
+        slideToBlock("#formContainer");
     });
     // forms
     $("#partner-form-submit").click(function(){
