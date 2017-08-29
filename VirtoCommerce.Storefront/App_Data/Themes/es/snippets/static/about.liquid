@@ -1,4 +1,4 @@
-﻿<div class="header_media with_search_6">
+<div class="header_media with_search_6">
     <div class="listing_main_image" id="listing_main_image_photo" style="background-image: url('{{- 'images/about_header_img.jpg' | static_asset_url -}}')">
         <div class="description-header blog-header-container">
             <h1 class="blog-header">
@@ -397,6 +397,7 @@
         </script>            
         {{ '//maps.googleapis.com/maps/api/js?key=AIzaSyAezOvbdi_AopToL4h8xUYdxBLExUHAK54&callback=initMap' | script_tag }}
     </div>
-    {% include 'footer/contact-us' %}
-    {% include 'footer/request-call' %}
+    <div id="formContainer">
+        {% include 'footer/contact-us' %}
+    </div>
 </div>

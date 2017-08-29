@@ -1,92 +1,114 @@
-﻿<div class="container content_wrapper full-width" role="main">
-  <div class="full-img-bg" style="background-image: url('{{- 'images/parthner_header_img.jpg' | static_asset_url -}}')">
-    <div class="bg-overview">
-      <div class="container unsubscribe">
-          <h1>{{ 'parthners.header' | t }}</h1>
-          <div class="button-parthner text-center"> 
-              <a id="to-parthner-form" class="wpresidence_button">{{ 'parthners.form-button' | t }}</a> 
-          </div>
-      </div>
+<div class="container content_wrapper full-width" role="main">
+    <div class="full-img-bg" style="background-image: url('{{- 'images/parthner_header_img.jpg' | static_asset_url -}}')">
+        <div class="bg-overview">
+            <div class="container unsubscribe">
+                <h1>{{ 'parthners.header' | t }}</h1>
+                <div class="button-parthner text-center">
+                    <a id="to-parthner-form" class="wpresidence_button">{{ 'parthners.form-button' | t }}</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <main class="container content_wrapper parthner" role="main">
     <div class="row text-center block">
-        Испанское агентство недвижимости Estate Spain специализируется на продаже жилой и коммерческой недвижимости на лучших побережьях Испании клиентам из России, Украины, Казахстана и других стран. Профессиональный штат агентов, защита интересов клиентов, и юридическая чистота проводимых сделок позволяет компании занимать лидирующие позиции на рынке. 
+        Испанское агентство недвижимости Estate Spain специализируется на продаже жилой и коммерческой недвижимости на лучших побережьях Испании клиентам из России, Украины, Казахстана и других стран. Профессиональный штат агентов, защита интересов клиентов, и юридическая чистота проводимых сделок позволяет компании занимать лидирующие позиции на рынке.
     </div>
     <div style="background-image: url('{{- 'images/parthners_slide_1.jpg' | static_asset_url -}}')">
         <div class="pathner-slide">
             <div class="text">
-              Помимо стандартных услуг, которые оказывает каждое большое агентство недвижимости (покупка, продажа, обмен, аренда жилых и коммерческих объектов), Estate spain развивает направления консалтинга и девелопмента.
+                Помимо стандартных услуг, которые оказывает каждое большое агентство недвижимости (покупка, продажа, обмен, аренда жилых и коммерческих объектов), Estate spain развивает направления консалтинга и девелопмента.
             </div>
         </div>
     </div>
     <div class="row text-center block">
         База объектов Estate Spain — одна из наиболее актуальных, в ней представлены объекты всех сегментов рынка. Активно развивается партнерская сеть отделений по всей Испании, работающих по единым высоким профессиональным стандартам.
-        <br/>
-        Приглашаем к сотрудничеству риелторов, застройщиков из всех регионов Испании, таких как Коста Брава, Коста Маресме, Коста дель Соль, Коста Дорада, Балеарских и Канарских островов на условиях выгодного комиссионного вознаграждения. 
-        <br/>
-        Также будем рады принять на публикацию и продажу объекты недвижимости от частных лиц.         
+        <br/> Приглашаем к сотрудничеству риелторов, застройщиков из всех регионов Испании, таких как Коста Брава, Коста Маресме, Коста дель Соль, Коста Дорада, Балеарских и Канарских островов на условиях выгодного комиссионного вознаграждения.
+        <br/> Также будем рады принять на публикацию и продажу объекты недвижимости от частных лиц.
     </div>
     <div style="background-image: url('{{- 'images/parthners_slide_2.jpg' | static_asset_url -}}')">
         <div class="pathner-slide">
             <div class="text text-center">
-                Присоединяйтесь к нашей партнерской программе и 
-                <br/>
-                получайте доход от продажи ваших объектов уже сегодня!
+                Присоединяйтесь к нашей партнерской программе и
+                <br/> получайте доход от продажи ваших объектов уже сегодня!
             </div>
         </div>
     </div>
     <div>
-    <div class="row contact-us-footer">
-   
-   <div class="col-md-12 padding15-0">
-      <h3 class="text-center">{{'partner.header' | t}}</h3>
-      <div class="spinner" id="partner-form-spinner" style="display: none;">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-        </div>
-        <div id="partner-form-succes" class="text-center" style="display: none">    
-            <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
-        </div>
-        <div id="partner-form-fail" class="text-center" style="display: none">    
-            <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
-        </div>
-      <div id="partner-form">
-        <div class="row">
-         <div class="col-md-4">
-            <input type="text" data-property="userName"  placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
-         </div>
-         <div class="col-md-4">
-            <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
-         </div>
-         <div class="col-md-4">
-            <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required>
-         </div>
-         <input type="hidden" data-property="formType" value="4" />
-      </div>
-      <div class="row">
-         <div class="col-md-12">
-            <textarea cols="45" rows="6" data-property="userMessage" aria-required="true" class="form-control">{{- 'partner.text' | t -}}</textarea>
-         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-8">
-                    <span class="license light-text">{{ 'request-form.license' | t }}</span>
+        <div id="formContainer" class="row contact-us-footer">
+
+            <div class="col-md-12 padding15-0">
+                <h3 class="text-center">{{'partner.header' | t}}</h3>
+                <div class="spinner" id="partner-form-spinner" style="display: none;">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
                 </div>
-                <div class="col-md-4">
-                    <button class="wpresidence_button form-control btn-std margin-auto" id="partner-form-submit" >{{ 'request-form.send' | t }}</button>
+                <div id="partner-form-succes" class="text-center" style="display: none">
+                    <i class="fa fa-check" aria-hidden="true"></i> {{'callback-form.succes' | t}}
+                </div>
+                <div id="partner-form-fail" class="text-center" style="display: none">
+                    <i class="fa fa-times" aria-hidden="true"></i> {{'callback-form.fail' | t}}
+                </div>
+                <div id="partner-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" data-property="userName" placeholder="{{ 'request-form.name' | t }}" aria-required="true" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" data-property="userPhone" placeholder="{{ 'request-form.phone' | t }}" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" data-property="userEmail" aria-required="true" placeholder="{{ 'request-form.mail' | t }}" class="form-control" required="">
+                        </div>
+                        <input type="hidden" data-property="formType" value="4" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea cols="45" rows="6" data-property="userMessage" aria-required="true" class="form-control">{{- 'partner.text' | t -}}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <span class="license light-text">{{ 'request-form.license' | t }}</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="wpresidence_button form-control btn-std margin-auto" id="partner-form-submit">{{ 'request-form.send' | t }}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-         </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12 text-center subscribe-form-call" style="margin-top:20px;">
+                <h4>Очень интересная рассылка об испанской недвижимости</h4>
+                <div class="text">
+                    Только свежая и актуальная информация и объекты.<br>
+                    Без спама! Подпишитесь и проверьте сами!
+                </div>
+                <div id="subscribe-form" class="row" style="padding-top:15px">
+                    <div class="col-md-4 col-md-offset-3">
+                        <input type="email" class="form-control" id="subscribe-email" placeholder="{{ 'subscribe.email-placeholder' | t }}" />
+                    </div>
+                    <div class="col-md-3">
+                        <button onclick="document.subscribe('.subscribe-form-call')" style="width:100%" class="wpresidence_button">{{ 'subscribe.subscribe' | t }}</button>
+                    </div>
+                </div>
+                <div id="subscribe-ok" style="display: none;">
+                    <i class="fa fa-check" aria-hidden="true"></i> {{'subscribe.ok' | t }}
+                </div>
+                <div id="subscribe-fail" style="display: none;">
+                    <i class="fa fa-times" aria-hidden="true"></i> {{'subscribe.fail' | t }}
+                </div>
+                <div class="text-center text" style="padding-bottom: 15px;">
+                    {{ 'subscribe.license' | t }}
+                </div>
+            </div>
         </div>
-      </div>
-   </div>
-</div>
     </div>
 </main>

@@ -1907,3 +1907,6 @@ ul.user-terms-list
     margin-left: -20px;
     position:absolute;
 }
+#formContainer {
+    display: none;
+}

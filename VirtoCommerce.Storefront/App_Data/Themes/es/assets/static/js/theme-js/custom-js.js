@@ -106,29 +106,36 @@ $(document).ready(function () {
         return false;
     }
     $("#request-callback-product-button-mobile").click(function () {
+        $("#formContainer").show();
         slideToBlock("#show_contact", 0);
         $(".mobilemenu-close").click();
     });
     
     $("#request-callback-button-mobile").click(function () {
+        $("#formContainer").show();
         slideToBlock("#contact-us-form");
         $(".mobilemenu-close").click();
     });
     $("#contact-us-button-mobile").click(function () {
+        $("#formContainer").show();
         slideToBlock("#contact-us-form");
         $(".mobilemenu-close").click();
     });
     $("#contact-us-button-product-mobile").click(function () {
+        $("#formContainer").show();
         slideToBlock("#show_contact", 0);
         $(".mobilemenu-close").click();
     });
     $("#request-callback-button").click(function () {
+        $("#formContainer").show();
         slideToBlock("#contact-us-form");
     });
     $("#contact-us-button").click(function () {
+        $("#formContainer").show();
         slideToBlock("#contact-us-form");
     });
     $("#contact-us-button-product").click(function () {
+        $("#formContainer").show();
         slideToBlock("#show_contact", 0);
     });
 
